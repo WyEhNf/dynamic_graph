@@ -17,6 +17,7 @@ import tempfile
 from c_frontend import Compiler, walk
 from symbolic_metadata import encode_symbols,decode_symbols,encode_record_table,decode_record_table
 from metadata_wire import encode_instruction,decode_instruction
+from packed_symbolic_metadata import pack_symbols,unpack_symbols
 
 
 def _clang_version_from_verbose(stderr):
@@ -124,7 +125,7 @@ def analyze(source, output, clang="clang", function="cholesky_reference", symbol
     newline='\n' if metadata_newlines=='lf' else os.linesep
     if metadata_schema not in (2,3): raise ValueError('metadata schema must be 2 or 3')
     if metadata_schema==3 and not compact_bytecode: raise ValueError('schema 3 requires canonical compact arguments')
-    if symbolic_format not in ('dag','table','expanded'): raise ValueError('symbolic format must be dag, table or expanded')
+    if symbolic_format not in ('dag','table','expanded','packed'): raise ValueError('symbolic format must be dag, table, expanded or packed')
     if smallest_metadata and (metadata_schema!=2 or symbolic_format!='dag' or not compact_bytecode):
         raise ValueError('smallest metadata is mutually exclusive with explicit schema/format/full arguments')
     source = Path(source).resolve()
@@ -173,6 +174,11 @@ def analyze(source, output, clang="clang", function="cholesky_reference", symbol
         'dag':["symbolic_encoding=expr_dag_v1","symbolic_expr_pool="+dumps(pool),"symbolic_loops="+dumps(loops),"symbolic_accesses="+dumps(accesses)],
         'table':["symbolic_encoding=expr_dag_record_table_v1","symbolic_expr_pool="+dumps(pool),"symbolic_loop_table="+dumps(loop_table),"symbolic_access_table="+dumps(access_table)],
         'expanded':["symbolic_encoding=expr_tree_v1","symbolic_loops="+dumps(compiler.loops),"symbolic_accesses="+dumps(compiler.accesses)]}
+    if symbolic_format=='packed' or smallest_metadata:
+        ops,packed_pool,packed_loops,packed_accesses=pack_symbols(pool,loops,accesses)
+        if unpack_symbols(ops,packed_pool,packed_loops,packed_accesses)!=(pool,loops,accesses):
+            raise ValueError('packed symbolic metadata round-trip failed')
+        symbolic_fields['packed']=["symbolic_encoding=expr_dag_packed_records_v1","symbolic_expr_ops="+dumps(ops),"symbolic_expr_pool="+dumps(packed_pool),"symbolic_loop_records="+dumps(packed_loops),"symbolic_access_records="+dumps(packed_accesses)]
     task_fields=[]
     if compiler.optimized!="none":
         task_fields=["task_schema=ordered_cholesky_tiles_v1","task_dependences="+dumps({"tiles":"ceil(N/B)","P(k)":["U(k,k,k-1)"],"T(m,k)":["P(k)","U(m,k,k-1)"],"U(m,h,k)":["T(m,k)","T(h,k)","U(m,h,k-1)"],"domains":["0<=k<tiles","k<m<tiles","k<h<=m<tiles"],"arithmetic":"each output cell accumulates source columns in ascending order"})]
@@ -194,7 +200,7 @@ def analyze(source, output, clang="clang", function="cholesky_reference", symbol
         from metadata_container import encode
     if smallest_metadata:
         for schema in (2,3):
-            for mode in ('dag','table','expanded'):
+            for mode in ('dag','table','expanded','packed'):
                 payload=render(schema,mode)
                 final_payload=encode(payload) if compress_metadata else payload
                 candidate={'metadata_schema':schema,'symbolic_format':mode,'metadata_bytes':len(final_payload),'sha256':hashlib.sha256(final_payload).hexdigest()}
@@ -202,7 +208,7 @@ def analyze(source, output, clang="clang", function="cholesky_reference", symbol
                     compressed_candidates[schema,mode]=final_payload
                     candidate.update(uncompressed_metadata_bytes=len(payload),uncompressed_metadata_sha256=hashlib.sha256(payload).hexdigest())
                 candidates.append(candidate)
-        winner=min(candidates,key=lambda item:(item['metadata_bytes'],item['metadata_schema'],('dag','table','expanded').index(item['symbolic_format'])))
+        winner=min(candidates,key=lambda item:(item['metadata_bytes'],item['metadata_schema'],('dag','table','expanded','packed').index(item['symbolic_format'])))
         metadata_schema,symbolic_format=winner['metadata_schema'],winner['symbolic_format']
     # Score the exact emitted UTF-8 bytes using the selected newline convention.
     raw_metadata=render(metadata_schema,symbolic_format)
@@ -214,11 +220,11 @@ def analyze(source, output, clang="clang", function="cholesky_reference", symbol
         "source": str(source), "function": function,"source_sha256":source_sha256,"metadata_sha256":hashlib.sha256(output.read_bytes()).hexdigest(),
         "clang": clang_version if clang_version is not None else subprocess.run([clang, "--version"], capture_output=True, text=True).stdout.splitlines()[0],
         "metadata_bytes": output.stat().st_size, "instructions": len(compiler.code),
-        "symbolic_encoding":{'dag':'expr_dag_v1','table':'expr_dag_record_table_v1','expanded':'expr_tree_v1'}[symbolic_format],"symbolic_expressions":len(pool),"provenance_inline":include_provenance,
+        "symbolic_encoding":{'dag':'expr_dag_v1','table':'expr_dag_record_table_v1','expanded':'expr_tree_v1','packed':'expr_dag_packed_records_v1'}[symbolic_format],"symbolic_expressions":len(pool),"provenance_inline":include_provenance,
         "compact_bytecode":compact_bytecode,
         "metadata_schema":metadata_schema,"bytecode_encoding":'base36_opcode_v1' if metadata_schema==3 else 'named_opcodes',
         "metadata_newlines":metadata_newlines,"smallest_metadata":smallest_metadata,"encoding_candidates":candidates,
-        "minimum_cost_metric":'final_container_bytes' if compress_metadata else 'utf8_file_bytes',"minimum_tie_rule":'schema2 before schema3, then dag/table/expanded',
+        "minimum_cost_metric":'final_container_bytes' if compress_metadata else 'utf8_file_bytes',"minimum_tie_rule":'schema2 before schema3, then dag/table/expanded/packed',
         "compressed_metadata":compress_metadata,"uncompressed_metadata_bytes":len(raw_metadata),"uncompressed_metadata_sha256":hashlib.sha256(raw_metadata).hexdigest(),
         "ir": str(ir_path) if emit_ir else None, "optimized": compiler.optimized,
         "loops": compiler.loops, "accesses": compiler.accesses,
@@ -236,11 +242,11 @@ def main():
     parser.add_argument("--clang", default="clang")
     parser.add_argument("--function", default="cholesky_reference")
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument('--symbolic-format',choices=('dag','table','expanded'))
+    parser.add_argument('--symbolic-format',choices=('dag','table','expanded','packed'))
     parser.add_argument('--provenance-inline',action='store_true',help='also carry source SHA/function in executable Metadata; always preserved in analysis.json')
     parser.add_argument('--full-bytecode-args',action='store_true',help='emit explicit zero arguments for older Runtime binaries')
     parser.add_argument('--metadata-schema',type=int,choices=(2,3),help='schema 3 is opt-in and requires the updated Runtime; default 2')
-    parser.add_argument('--smallest-metadata',action='store_true',help='choose the smallest equivalent schema2/3 × dag/table/expanded; requires updated Runtime')
+    parser.add_argument('--smallest-metadata',action='store_true',help='choose the smallest equivalent schema2/3 × dag/table/expanded/packed; requires updated Runtime')
     parser.add_argument('--metadata-newlines',choices=('native','lf'),default='lf',help='LF is canonical by default; native restores the host newline convention')
     parser.add_argument('--compress-metadata',action='store_true',help='wrap complete selected Metadata in DYNCHZ01; requires CHOL_COMPRESSED_METADATA=ON Runtime')
     parser.add_argument('--skip-ir',action='store_true',help='explicit Metadata-only analysis: retain complete AST graph and compiler provenance, omit optional LLVM audit file')

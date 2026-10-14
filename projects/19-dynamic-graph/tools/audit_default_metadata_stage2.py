@@ -1,17 +1,21 @@
 """Regenerate every accepted old suite Metadata without repeating C/runtime work."""
-import hashlib,json,shutil,time
+import argparse,hashlib,json,shutil,time
 from pathlib import Path
 from analyze_source import analyze
 
 
 def main():
-    project=Path(__file__).resolve().parents[1];root=project/'artifacts/stage2-default-metadata-audit'
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--output-dir',type=Path)
+    parser.add_argument('--baseline-root',type=Path,action='append')
+    args=parser.parse_args()
+    project=Path(__file__).resolve().parents[1];root=args.output_dir.resolve() if args.output_dir else project/'artifacts/stage2-default-metadata-audit'
     if root.exists():raise SystemExit('Refusing to overwrite default audit')
     root.mkdir();started=time.perf_counter();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-    names=('tools/analyze_source.py','tools/metadata_wire.py','tools/symbolic_metadata.py','tools/audit_default_metadata_stage2.py');hashes={}
+    names=('tools/analyze_source.py','tools/metadata_wire.py','tools/symbolic_metadata.py','tools/packed_symbolic_metadata.py','tools/audit_default_metadata_stage2.py');hashes={}
     for name in names:
         path=root/'source'/name;path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(project/name,path);hashes[name]=sha(path)
-    roots=[project/'artifacts'/('build-stage2-wire-ctest-'+label) for label in ('pipeline','helpers','while','integer-selectors')]
+    roots=args.baseline_root or [project/'artifacts'/('build-stage2-wire-ctest-'+label) for label in ('pipeline','helpers','while','integer-selectors')]
     reports=sorted(path for folder in roots for path in folder.rglob('*.analysis.json'));rows=[];skips=[]
     for i,path in enumerate(reports):
         old=json.loads(path.read_text(encoding='utf-8'));source=Path(old['source']);meta=path.with_name(path.name.replace('.analysis.json','.meta'))

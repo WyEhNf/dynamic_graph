@@ -1,5 +1,13 @@
 # 参数化Metadata、源程序与任务图
 
+2026-10-14本轮新增 `--symbolic-format packed`，编码名 `expr_dag_packed_records_v1`。`--smallest-metadata`现从schema 2/3 × dag/table/expanded/packed八种完整候选选择；平局仍先schema 2，再dag/table/expanded/packed。默认schema 2/dag保持。以下早期字节数字、构建哈希是各阶段冻结记录；当前安装版本见[本轮开发验收](development-2026-10-14.md)。
+
+packed保留全部表达式和记录：`symbolic_expr_ops`存一次操作名，`symbolic_expr_pool`每节点首项改为操作名表的整数索引，其余参数与前向子引用保持。记录字段ID依次为 `id,kind,condition,increment,parent,mode,array,index,loop_ids` 的0～8；未知字段保留字符串。`symbolic_loop_records`及`symbolic_access_records`各为 `[字段ID/未知字段名数组,共享presence mask或null,行数组]`；所有行字段集合相同时共享mask，否则每行仍为 `[mask,values]`。字段缺失与显式null保持。
+
+kind的for/while、mode的read/write、array的input/output分别编码为0/1；这些字段的其他实际值以 `['=',value]` 逃逸，包括整数、bool、null或数组，防止枚举与真实字面量混淆。完整解码函数为 `tools/packed_symbolic_metadata.py` 的 `unpack_symbols`/`decode_packed_symbols`。非法mask、重复字段、越界ID、bool ID、非法枚举等拒绝。前端写文件前做完整往返相等检查，没有删除PROGRAM、task_dependences或符号依赖。
+
+运行时对schema 3的无参数单字符指令使用直接映射；带参数指令的数字文本用明确ASCII语法检查，再沿用原stream转换。浮点舍入、subnormal、参数位值与报错路径不改变。符号图在运行时仍属于受信编译器接口的审计描述，执行原完整PROGRAM或已有严格证明的Cholesky任务图；不宣称运行时重新验证全部审计图。
+
 2026-10-14 05:55当前普通CLI/core为912c9fec/e7c9dd7f，已合入调用内联合扫描与owned结构化原地分解，206源码和已测产品对齐。新编译开关、复用计数与时间口径见文末“owned结构化路径指标”；下列03:24版本描述为历史栈证明进度，其能力继续保留。
 
 2026-10-14 03:24当前普通CLI/core为4cceb9db/9b9d3e8a。`CHOL_PROVED_OPERAND_STACK`是构建开关：全局OFF、local-mingw ON、memory preset OFF。启用后只有immutable `PreparedVM`的GNU threaded session会一次认证实际完整PROGRAM的栈高度/控制流；原PROGRAM、schema、浮点参数位值和PC不重写，steps及固定预算继续逐指令检查。未知、超100k指令、分析分配失败均保留检查。认证位私有，只由owner首次发布，decode构造默认false；portable回退不运行这个无用认证。普通Metadata调用和CLI默认per-matrix不分析。编译依赖prepared+threaded VM，memory preset显式关闭该能力。

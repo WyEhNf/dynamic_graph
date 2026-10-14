@@ -1,5 +1,6 @@
 #include "cholesky/runtime.hpp"
 #include "native_input_scan.hpp"
+#include "metadata_number.hpp"
 #ifdef CHOL_PROVED_VM_BUDGET
 #include "cholesky/vm_step_bound.hpp"
 #endif
@@ -30,7 +31,6 @@
 #include <functional>
 #include <map>
 #include <mutex>
-#include <regex>
 #include <sstream>
 #include <stdexcept>
 #include <thread>
@@ -92,7 +92,6 @@ constexpr std::array<Opcode,33> wire_opcodes{
  Opcode::Bool,Opcode::Trunc,Opcode::Sqrt,Opcode::Abs,Opcode::Min,Opcode::Max,Opcode::Fma,
  Opcode::Lt,Opcode::Le,Opcode::Gt,Opcode::Ge,Opcode::Eq,Opcode::Ne,Opcode::Jump,Opcode::Jz,Opcode::Jnz,Opcode::Return};
 constexpr std::string_view wire_codes="0123456789ABCDEFGHIJKLMNOPQRSTUVW";
-const std::regex wire_number(R"([+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?)");
 
 std::size_t checked_index(double value, std::size_t bound, const char* description) {
   if (!std::isfinite(value) || value < 0 || std::trunc(value) != value || value >= static_cast<double>(bound))
@@ -399,20 +398,27 @@ Metadata read_metadata(const std::string& path) {
     if (!line.empty() && line.back() == '\r') line.pop_back();
     if (line == "PROGRAM" && !legacy) { if (program) throw std::runtime_error("duplicate PROGRAM"); program = true; continue; }
     if (program) {
-      std::istringstream row(line); std::string name, extra; double argument=0;
       Opcode opcode;
       if(compact_wire) {
         if(line.empty())throw std::runtime_error("malformed compact instruction");
         const auto id=wire_codes.find(line[0]);
         if(id==std::string_view::npos||(line.size()>1&&line[1]!=' '))throw std::runtime_error("malformed compact opcode");
         opcode=wire_opcodes[id];
-        row=std::istringstream(line.substr(1));
-      } else {
+        const bool required=opcode==Opcode::Const||opcode==Opcode::Load||opcode==Opcode::Store||opcode==Opcode::Uninit||opcode==Opcode::Read||opcode==Opcode::Write||opcode==Opcode::Jump||opcode==Opcode::Jz||opcode==Opcode::Jnz;
+        // Only canonical operand-free lines bypass the old stream parser.
+        // Noncanonical lines retain its existing rejection precedence/messages.
+        if(!required&&line.size()==1) {
+          if(metadata.program.size()>=100000)throw std::runtime_error("metadata instruction limit exceeded");
+          metadata.program.push_back({opcode,0});continue;
+        }
+      }
+      std::istringstream row(compact_wire?line.substr(1):line);std::string name,extra;double argument=0;
+      if(!compact_wire) {
         if(!(row>>name)||!opcodes.contains(name))throw std::runtime_error("malformed bytecode instruction");
         opcode=opcodes.at(name);
       }
       const bool required=opcode==Opcode::Const||opcode==Opcode::Load||opcode==Opcode::Store||opcode==Opcode::Uninit||opcode==Opcode::Read||opcode==Opcode::Write||opcode==Opcode::Jump||opcode==Opcode::Jz||opcode==Opcode::Jnz;
-      if(compact_wire&&required&&(line.size()<3||!std::regex_match(line.substr(2),wire_number)))throw std::runtime_error("noncanonical compact numeric argument");
+      if(compact_wire&&required&&(line.size()<3||!detail::canonical_metadata_number(std::string_view(line).substr(2))))throw std::runtime_error("noncanonical compact numeric argument");
       if(row>>argument) {
         if(row>>extra||!std::isfinite(argument)||(!required&&(compact_wire||argument!=0)))throw std::runtime_error("malformed bytecode argument");
       } else if(!row.eof()||required)throw std::runtime_error("missing or malformed bytecode argument");

@@ -1,9 +1,10 @@
-"""Check all six emitted candidates independently and single-compilation selection."""
+"""Check all eight emitted candidates independently and single-compilation selection."""
 import argparse,hashlib,json,shutil,subprocess,time
 from pathlib import Path
 from unittest.mock import patch
 import analyze_source
 from symbolic_metadata import decode_symbols,decode_record_table
+from packed_symbolic_metadata import decode_packed_symbols
 from metadata_wire import decode_instruction
 from evaluate_source import compile_oracle,make_input,run_runtime,exact_compare
 
@@ -14,6 +15,8 @@ def expanded(path):
     encoding=fields['symbolic_encoding']
     if encoding=='expr_tree_v1':
         graph=json.loads(fields['symbolic_loops']),json.loads(fields['symbolic_accesses'])
+    elif encoding=='expr_dag_packed_records_v1':
+        graph=decode_packed_symbols(json.loads(fields['symbolic_expr_ops']),json.loads(fields['symbolic_expr_pool']),json.loads(fields['symbolic_loop_records']),json.loads(fields['symbolic_access_records']))
     else:
         if encoding=='expr_dag_record_table_v1':
             loops=decode_record_table(json.loads(fields['symbolic_loop_table']));accesses=decode_record_table(json.loads(fields['symbolic_access_table']))
@@ -33,19 +36,19 @@ def main():
     if root.exists():raise SystemExit('Refusing to overwrite minimum evidence')
     root.mkdir();started=time.perf_counter();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
     runtime=args.runtime.resolve() if args.runtime else project/'artifacts/stage2-metadata-wire/candidate.exe';hashes={}
-    for name in ('tools/analyze_source.py','tools/metadata_wire.py','tools/symbolic_metadata.py','tools/test_smallest_metadata_stage2.py'):
+    for name in ('tools/analyze_source.py','tools/metadata_wire.py','tools/symbolic_metadata.py','tools/packed_symbolic_metadata.py','tools/test_smallest_metadata_stage2.py'):
         target=root/'source'/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(project/name,target);hashes[name]=sha(target)
     (root/'source-manifest.json').write_text(json.dumps(hashes,indent=2));shutil.copyfile(runtime,root/'candidate.exe')
     sources=[('scalar',project/'fixtures/cholesky_reference.c','cholesky_reference'),('page',project/'fixtures/official_naive_transcribed.c','cholesky'),('blocked',project/'fixtures/cholesky_blocked.c','cholesky_blocked'),('generic',project/'artifacts/stage2-metadata-wire/generic.c','transform'),('negative-zero',project/'artifacts/stage2-metadata-wire/negative-zero.c','zeros'),('noop',project/'artifacts/stage2-metadata-wire-overhead/noop.c','noop')]
-    report={'passed':False,'runtime_sha256':sha(runtime),'source_hashes':hashes,'sources':[],'scope':'Six real supported C programs; all six explicit encodings decoded losslessly, minimum selected from one AST/one LLVM-IR compilation, exact original-C whole files'}
+    report={'passed':False,'runtime_sha256':sha(runtime),'source_hashes':hashes,'sources':[],'scope':'Three primary Cholesky plus three generic compatibility controls; all eight explicit encodings decoded losslessly, minimum selected from one AST/one LLVM-IR compilation, exact original-C whole files'}
     original_run=subprocess.run;comparisons=0
     for label,source,function in sources:
         folder=root/label;folder.mkdir();shutil.copyfile(source,folder/'source.c')
         rows=[];graphs=[]
         # Separately invoking explicit options supplies independent physical byte sizes.
-        # Only this verification does six compiles; --smallest-metadata itself does one.
+        # Only this verification does eight compiles; --smallest-metadata itself does one.
         for schema in (2,3):
-            for mode in ('dag','table','expanded'):
+            for mode in ('dag','table','expanded','packed'):
                 path=folder/f'{schema}-{mode}.meta';analysis=analyze_source.analyze(source,path,'C:/Program Files/LLVM/bin/clang.exe',function,mode,metadata_schema=schema)
                 rows.append({'schema':schema,'mode':mode,'bytes':path.stat().st_size,'sha256':sha(path),'path':str(path)})
                 graphs.append(expanded(path))
@@ -59,7 +62,7 @@ def main():
             analysis=analyze_source.analyze(source,minimum,'C:/Program Files/LLVM/bin/clang.exe',function,smallest_metadata=True)
         ast_calls=sum('-ast-dump=json' in call for call in calls);llvm_calls=sum('-emit-llvm' in call for call in calls)
         assert ast_calls==1 and llvm_calls==1
-        expected=min(rows,key=lambda row:(row['bytes'],row['schema'],('dag','table','expanded').index(row['mode'])))
+        expected=min(rows,key=lambda row:(row['bytes'],row['schema'],('dag','table','expanded','packed').index(row['mode'])))
         assert minimum.read_bytes()==Path(expected['path']).read_bytes()
         assert expanded(minimum)==graphs[0] and minimum.stat().st_size<=rows[0]['bytes']
         observed={(row['schema'],row['mode']):(row['bytes'],row['sha256']) for row in rows}

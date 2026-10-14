@@ -193,6 +193,9 @@ add_executable(cholesky_runtime src/main.cpp)
 target_link_libraries(cholesky_runtime PRIVATE cholesky_core)
 include(CTest)
 if(BUILD_TESTING)
+  add_executable(metadata_number_tests tests/metadata_number_tests.cpp)
+  target_include_directories(metadata_number_tests PRIVATE "${PROJECT_SOURCE_DIR}/src")
+  add_test(NAME metadata_number_grammar COMMAND metadata_number_tests)
   if(CHOL_PROVED_VM_BUDGET)
     add_executable(vm_step_bound_tests tests/vm_step_bound_tests.cpp)
     target_link_libraries(vm_step_bound_tests PRIVATE cholesky_core)
@@ -307,34 +310,44 @@ if(BUILD_TESTING)
   get_filename_component(CHOL_BUILD_LABEL "${CMAKE_BINARY_DIR}" NAME)
   set(CHOL_TEST_ARTIFACT_LABEL "${CHOL_BUILD_LABEL}" CACHE STRING "Distinct artifact prefix for a test run; preserves prior reports")
   set(CHOL_BUILD_LABEL "${CHOL_TEST_ARTIFACT_LABEL}")
+  set(CHOL_TEST_ARTIFACT_ROOT "${PROJECT_SOURCE_DIR}/artifacts" CACHE PATH "Test evidence root; may be on a larger volume")
   if(Python3_Interpreter_FOUND AND CHOL_CLANG_EXECUTABLE)
+    add_test(NAME packed_symbolic_contract COMMAND "${Python3_EXECUTABLE}"
+      "${PROJECT_SOURCE_DIR}/tools/test_packed_symbolic_metadata.py")
+    set_tests_properties(packed_symbolic_contract PROPERTIES ENVIRONMENT "CHOL_TEST_CLANG=${CHOL_CLANG_EXECUTABLE}")
+    add_test(NAME cholesky_metadata_pipeline COMMAND "${Python3_EXECUTABLE}"
+      "${PROJECT_SOURCE_DIR}/tools/test_cholesky_metadata.py"
+      --runtime "$<TARGET_FILE:cholesky_runtime>" --gcc "${CMAKE_C_COMPILER}"
+      --clang "${CHOL_CLANG_EXECUTABLE}"
+      --output-dir "${CHOL_TEST_ARTIFACT_ROOT}/${CHOL_BUILD_LABEL}-cholesky-metadata")
+    set_tests_properties(cholesky_metadata_pipeline PROPERTIES WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}" TIMEOUT 600)
     if(CHOL_COMPRESSED_METADATA)
       add_test(NAME compressed_metadata_protocol COMMAND "${Python3_EXECUTABLE}"
         "${PROJECT_SOURCE_DIR}/tools/test_metadata_zlib_stage2.py" --protocol-only
         --build-dir "${CMAKE_BINARY_DIR}"
-        --output-dir "${PROJECT_SOURCE_DIR}/artifacts/${CHOL_BUILD_LABEL}-ctest-container")
+        --output-dir "${CHOL_TEST_ARTIFACT_ROOT}/${CHOL_BUILD_LABEL}-ctest-container")
       set_tests_properties(compressed_metadata_protocol PROPERTIES WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}" TIMEOUT 60)
     endif()
     add_test(NAME source_pipeline COMMAND "${Python3_EXECUTABLE}"
       "${PROJECT_SOURCE_DIR}/tools/test_project.py" --profile full
       --runtime "$<TARGET_FILE:cholesky_runtime>"
       --gcc "${CMAKE_C_COMPILER}" --clang "${CHOL_CLANG_EXECUTABLE}"
-      --output-dir "${PROJECT_SOURCE_DIR}/artifacts/${CHOL_BUILD_LABEL}-ctest-pipeline")
+      --output-dir "${CHOL_TEST_ARTIFACT_ROOT}/${CHOL_BUILD_LABEL}-ctest-pipeline")
     set_tests_properties(source_pipeline PROPERTIES WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}" TIMEOUT 180)
     add_test(NAME helper_source_pipeline COMMAND "${Python3_EXECUTABLE}"
       "${PROJECT_SOURCE_DIR}/tools/test_helpers.py" --runtime "$<TARGET_FILE:cholesky_runtime>"
       --gcc "${CMAKE_C_COMPILER}" --clang "${CHOL_CLANG_EXECUTABLE}"
-      --output-dir "${PROJECT_SOURCE_DIR}/artifacts/${CHOL_BUILD_LABEL}-ctest-helpers")
+      --output-dir "${CHOL_TEST_ARTIFACT_ROOT}/${CHOL_BUILD_LABEL}-ctest-helpers")
     set_tests_properties(helper_source_pipeline PROPERTIES WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}" TIMEOUT 180)
     add_test(NAME while_source_pipeline COMMAND "${Python3_EXECUTABLE}"
       "${PROJECT_SOURCE_DIR}/tools/test_while_proof.py" --runtime "$<TARGET_FILE:cholesky_runtime>"
       --gcc "${CMAKE_C_COMPILER}" --clang "${CHOL_CLANG_EXECUTABLE}"
-      --output-dir "${PROJECT_SOURCE_DIR}/artifacts/${CHOL_BUILD_LABEL}-ctest-while")
+      --output-dir "${CHOL_TEST_ARTIFACT_ROOT}/${CHOL_BUILD_LABEL}-ctest-while")
     set_tests_properties(while_source_pipeline PROPERTIES WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}" TIMEOUT 180)
     add_test(NAME integer_selector_pipeline COMMAND "${Python3_EXECUTABLE}"
       "${PROJECT_SOURCE_DIR}/tools/test_integer_selectors.py" --runtime "$<TARGET_FILE:cholesky_runtime>"
       --gcc "${CMAKE_C_COMPILER}" --clang "${CHOL_CLANG_EXECUTABLE}"
-      --output-dir "${PROJECT_SOURCE_DIR}/artifacts/${CHOL_BUILD_LABEL}-ctest-integer-selectors")
+      --output-dir "${CHOL_TEST_ARTIFACT_ROOT}/${CHOL_BUILD_LABEL}-ctest-integer-selectors")
     set_tests_properties(integer_selector_pipeline PROPERTIES WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}" TIMEOUT 180)
   else()
     message(WARNING "Python or Clang not found: source_pipeline test is unavailable")

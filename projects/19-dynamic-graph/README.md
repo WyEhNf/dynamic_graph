@@ -45,7 +45,7 @@
 build\cholesky_runtime.exe --metadata artifacts\quickstart-smallest.meta --input artifacts\synthetic-input.bin --output artifacts\quickstart-result.bin --scheduler parallel --threads 4
 ```
 
-普通`build/cholesky_runtime.exe`现已接入schema 1/2/3读取器，能够直接执行`--smallest-metadata`选择的结果，无需切换到研究构建。前端默认仍schema 2，显式最小策略从六种完整等价编码中按文件字节数选择；它减少Metadata体积，不能换算官网15分或声称kernel加速。bootstrap会生成示例输入；完整原C测试可再运行`.\scripts\test.ps1 -Profile full -LargeShape 10000`。迁移机器需先配置下文工具链和Python环境。
+普通`build/cholesky_runtime.exe`接入schema 1/2/3读取器，能够直接执行`--smallest-metadata`选择的结果。前端默认仍schema 2，显式最小策略从schema 2/3 × dag/table/expanded/packed八种完整等价编码中按实际文件字节数选择。2026-10-14新增完整图packed编码与读取器优化；本轮主测试明确为朴素/左看/分块Cholesky，题面核对及本地契约见[题面记录](docs/task19-requirements-2026-10-14.md)，最新成果见[开发验收](docs/development-2026-10-14.md)。bootstrap会生成示例输入；完整原C测试可再运行`.\scripts\test.ps1 -Profile full -LargeShape 10000`。迁移机器需先配置下文工具链和Python环境。
 
 本阶段保守配置保持`CHOL_PACKED_READY_KEYS=OFF`与原AUTO规则。B128仅作为显式可选参数`--tile-size 128`：在已测16线程fresh N6145/N8193及N10000复验中，compute中位改善约7.2%/7.7%/7.4%；范围仍有重叠且10000有一次反例，未修改AUTO或拟合新N阈值。详见[独立Shape验证](docs/stage2-grain128-holdout.md)。
 
