@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791778836.8029711,
+  "completion_sha256": "6c1eb29f34a0509488aa75fc39c2733f244417103fea863a03899166b48ff2fb",
+  "actual_exit_code": 0,
+  "original_inputs": 12,
+  "whole_before_success": 4,
+  "whole_after_success": 4,
+  "remaining_failed": 8,
+  "new_recoveries": 0,
+  "lost": 0,
+  "independent_actual_full_plan_replays": 8,
+  "common_complete_plans_identical": true,
+  "before_logical_work": 54717560,
+  "after_logical_work": 60829525,
+  "logical_work_delta": 6111965,
+  "logical_work_cases": {
+    "increase": 8,
+    "equal": 3,
+    "decrease": 1
+  },
+  "before_exhausted": 2,
+  "after_exhausted": 2,
+  "scope": "Alloriginal12 outcomes retained and all8 actual helper/whole plans independently heap-replayed. R55 branch repair proves smallcontrols but recoversnone of original8failed;common4 completeplans/T/peak identical. Logicalwork+6111965(11.17%) with no CPUmeasurement. Keep isolatednegative/defaultR51; no63/67/full/performance promotion. Next static attribution must explain missing real recovery before any expansion."
+}

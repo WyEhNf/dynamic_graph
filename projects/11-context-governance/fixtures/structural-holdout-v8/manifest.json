@@ -1,0 +1,15 @@
+{
+  "origin": "self-created",
+  "case_ids": [
+    "stable_topology",
+    "shortest_layers",
+    "interval_gaps",
+    "sparse_product",
+    "allocate_round_robin",
+    "outer_join"
+  ],
+  "version": 8,
+  "constructed_unix": 1791653260.6948082,
+  "generator_sha256": "75f2ffb2174bfbd1a4b5795a71860d2cb8d32c6a10e92a7606d17f4d24b46003",
+  "limitations": "Six synthetic pure-function tasks; not independent real-repository coverage."
+}

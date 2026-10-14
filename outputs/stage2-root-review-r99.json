@@ -1,0 +1,1008 @@
+{
+  "reviewed_unix": 1791700201.6305866,
+  "passed": true,
+  "method": "Root raw-JSON references, DFS closures, complete role coverage and Python integer arithmetic; no project imports.",
+  "scope": "Original identities executed once, ordered original operands, COPY only, pure unique/disjoint GET/SET registers. No rereads, aliases, spill, recomputation or reassociation.",
+  "checks": [
+    {
+      "sha256": "21958bf6f87f3c642023c934cbedbe8e35ca6d63d9381002c2edb688a4b88ac4",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 56,
+      "selected": 2,
+      "core_nodes": 58
+    },
+    {
+      "sha256": "42fa47b69d6af6da97e97cb724d7f97de29dd7e95399d69e7f6bc169b7226658",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 18,
+      "selected": 2,
+      "core_nodes": 58
+    },
+    {
+      "sha256": "0883f318720818e6f880dea2c0f4655998e4212e070fd473b7380c2f3bcef6b7",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 7,
+      "selected": 2,
+      "core_nodes": 58
+    },
+    {
+      "sha256": "f582a9df8395c9e9bd422d5be710fe254e6d17923d0fafdd2089ab2e1f10e275",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2,
+      "selected": 2,
+      "core_nodes": 58
+    },
+    {
+      "sha256": "6a724a2165de471926675bd889600422606c83da94635f266440b194ff10ae21",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 248,
+      "selected": 2,
+      "core_nodes": 250
+    },
+    {
+      "sha256": "9716950aac6aff7f76957a59423327d0502ec266649cd2f61da73831df7fa6f8",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 82,
+      "selected": 2,
+      "core_nodes": 250
+    },
+    {
+      "sha256": "7cdf3f6e9c7f389abdcc023685242387033a50b33e5bbf1376a4bf168d1e13cd",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 34,
+      "selected": 2,
+      "core_nodes": 250
+    },
+    {
+      "sha256": "29fb46a5298228b6b8f45e3f75e87dce8121fa35db41e45c3fd1219930435cdd",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 15,
+      "selected": 2,
+      "core_nodes": 250
+    },
+    {
+      "sha256": "def94cdb72fc15509fd9b15eef5f372e540a04c7406c754cf5a6b198c5fa3eca",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1016,
+      "selected": 2,
+      "core_nodes": 1018
+    },
+    {
+      "sha256": "c1d1d984ac095971cdbee998a74088616be16268311aa38c676be10fb3d5ce3a",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 338,
+      "selected": 2,
+      "core_nodes": 1018
+    },
+    {
+      "sha256": "ff3e3fdee70c0303434317b4fedd59b0e1f720eaeeb878b0bd7f7a198eeb0d95",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 144,
+      "selected": 2,
+      "core_nodes": 1018
+    },
+    {
+      "sha256": "c1256b707aa1d4258fc361c2ba095815d23d4528e1e6f6a4136a6eb2795afb7a",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 66,
+      "selected": 2,
+      "core_nodes": 1018
+    },
+    {
+      "sha256": "617d99ffccf444ed4a076931046e22d8b1ebaf162820b4c15ec68daaa680d0b9",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 4088,
+      "selected": 2,
+      "core_nodes": 4090
+    },
+    {
+      "sha256": "427f307d5bf6a3e91851236d024a6eb8e2b3fe711c16f21e54363e2bdd95494f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1362,
+      "selected": 2,
+      "core_nodes": 4090
+    },
+    {
+      "sha256": "1c91d30ad416b018d4ae213826fee535144e42461358ee9c9a0551984ddd097d",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 583,
+      "selected": 2,
+      "core_nodes": 4090
+    },
+    {
+      "sha256": "3ff03e8f3e7b8710cac7186199c39ee8b9cb638647850792c993a903d1629a18",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 271,
+      "selected": 2,
+      "core_nodes": 4090
+    },
+    {
+      "sha256": "8139434169daf134488e3ed1691bfb2a967e23f497efc80e5e9658eb0c784bbd",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 21,
+      "selected": 3,
+      "core_nodes": 8
+    },
+    {
+      "sha256": "6a0811fbc332668b016714a5f3b8e8c9e6263cced2bf03793d9171d41c3c912e",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 12,
+      "selected": 3,
+      "core_nodes": 24
+    },
+    {
+      "sha256": "eba8da864a868bfbd30bcdabf9bcc7a318747e74dc6a8649a21ec458f4173ded",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 4,
+      "selected": 2,
+      "core_nodes": 37
+    },
+    {
+      "sha256": "ee629711c16fc046c9395d06fb2dae9d2e45e5f82e9aa854cb0a032cb97d3d2e",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 48
+    },
+    {
+      "sha256": "36757d3c4850bd4e40ad2a1b50bd3275c8dc1d0c42fca5b4531dd63806448f08",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 510,
+      "selected": 3,
+      "core_nodes": 171
+    },
+    {
+      "sha256": "cfe03b5b79c37f3ab954199e400dc18659d91473941faac68c3afdcbef8d54de",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 99,
+      "selected": 3,
+      "core_nodes": 169
+    },
+    {
+      "sha256": "a41f6c7a7c655c68efbcfc5fc7a124b14e42315b0c11c7325715c95a717738f2",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 38,
+      "selected": 3,
+      "core_nodes": 176
+    },
+    {
+      "sha256": "f4fd0071506da1daae964ecc8001db0af74610e110e055d7296eb48c5d56cfc3",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 15,
+      "selected": 3,
+      "core_nodes": 166
+    },
+    {
+      "sha256": "df12296065f028c930710f5469903de2ff298ec6092ead7ff4fd2ce15ee268d4",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2541,
+      "selected": 3,
+      "core_nodes": 848
+    },
+    {
+      "sha256": "a9682f75ffb5d8aa9570e9f10b82e0a809a3e6b0851ababad4ace186288d7577",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 473,
+      "selected": 3,
+      "core_nodes": 792
+    },
+    {
+      "sha256": "f211e32cffdecacce0008e9fce569510b06aa2d752cc3dbf77cad70e8f141b07",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 182,
+      "selected": 3,
+      "core_nodes": 798
+    },
+    {
+      "sha256": "0fcb0a3a85bd5ea3778f4d58669a79afb7430abbd54d71712e2d8c9a6bbef519",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 80,
+      "selected": 3,
+      "core_nodes": 800
+    },
+    {
+      "sha256": "2a557a36f5624223287ec0dc9571ba843f25df115f551e2f2c1fa3692dc1bd86",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 9840,
+      "selected": 3,
+      "core_nodes": 3281
+    },
+    {
+      "sha256": "382fd3537b670916a6d8b4fb5f6f6cc880fed4b5db1243b0dd10a40405c6905a",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1975,
+      "selected": 3,
+      "core_nodes": 3296
+    },
+    {
+      "sha256": "e9d93fd231bd0b790f3196bc71ec76ffb49099b7e3bcd02f7ad9b59f5c9aaf78",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 757,
+      "selected": 3,
+      "core_nodes": 3290
+    },
+    {
+      "sha256": "3f2c338b7e00694e32e44f3ae5b315244c7845b1fef08e86d1e1fecdab238d5f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 343,
+      "selected": 3,
+      "core_nodes": 3341
+    },
+    {
+      "sha256": "f9a61429fe9084611dd0abbe0063285d0aa0f04a8cd78fd7f660a7def125b008",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 138,
+      "selected": 3,
+      "core_nodes": 47
+    },
+    {
+      "sha256": "a6f0ab0e77379cb84e03583238dc833f5fce15a6e6696ceb9c2b8953ac502bfa",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 84,
+      "selected": 6,
+      "core_nodes": 30
+    },
+    {
+      "sha256": "d2c352bf9c555a5b46ad3d974c93638376fa456ad0b9e9a3f6ecf4cc2f9ac6bd",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 11,
+      "selected": 5,
+      "core_nodes": 35
+    },
+    {
+      "sha256": "b256c8fba93be7b2beec5145c147b91d37925f20a43002e79fa2017d7c0a28ba",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 3,
+      "selected": 4,
+      "core_nodes": 43
+    },
+    {
+      "sha256": "c4ec6858aff21770576f9d072e28412961ac0ef3714caa6428d5c641b7a083e6",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 720,
+      "selected": 3,
+      "core_nodes": 241
+    },
+    {
+      "sha256": "f9e8c6429ca931d1fca92d2247dc923ef9e6dbc6000ef6dc0a2867f8b1114d47",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 684,
+      "selected": 6,
+      "core_nodes": 230
+    },
+    {
+      "sha256": "47c871b540c92e4d9f9d02445f809301f1b5fb5a83ea08ced0acd4116c35d854",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 121,
+      "selected": 6,
+      "core_nodes": 211
+    },
+    {
+      "sha256": "d8fe33d09b685035ef9929111b1688c3debd8c2df2568d952e6a3d2799d41fdf",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 46,
+      "selected": 6,
+      "core_nodes": 223
+    },
+    {
+      "sha256": "2c12deec133ddcc07650185510c468d41600dc44dafdc0456373507bc41c2743",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 3009,
+      "selected": 3,
+      "core_nodes": 1004
+    },
+    {
+      "sha256": "50f9952739cc2f0c255dc50e58879646d21aa23edb32b69478223f32dba3a295",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2964,
+      "selected": 6,
+      "core_nodes": 990
+    },
+    {
+      "sha256": "b79953b9f2af6c354590e7d16d1602a5d57453c7c3fc28abcd49d5b1040a544b",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 588,
+      "selected": 6,
+      "core_nodes": 989
+    },
+    {
+      "sha256": "fecd7f2504f41e25d712a4dd2eec8cd795caa663b324181fb5202939be219d10",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 222,
+      "selected": 6,
+      "core_nodes": 985
+    },
+    {
+      "sha256": "7ea42c0a59bf04f15eb982d54585822ae6d12523158dbadec9a9a6b3e6fbe1ef",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 12213,
+      "selected": 3,
+      "core_nodes": 4072
+    },
+    {
+      "sha256": "bb64a19b110f7624881583a45d45e9ca8f5c80d2f7cb7324d65c27cf19e36ba3",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 12210,
+      "selected": 6,
+      "core_nodes": 4072
+    },
+    {
+      "sha256": "243bb21a74123cf8bb11d4c52019cd0b21d331899aa8200812634769fc3491da",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2439,
+      "selected": 6,
+      "core_nodes": 4074
+    },
+    {
+      "sha256": "c247bb4e12a68df9c0aefe76d59665d2c46cd811094724e40261f933b1021e87",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 932,
+      "selected": 6,
+      "core_nodes": 4061
+    },
+    {
+      "sha256": "c8841796110fdf1ecaa86fc6ca17f7ad6ba66266b1237605ea620c69bcdfdaf5",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2,
+      "selected": 1,
+      "core_nodes": 8
+    },
+    {
+      "sha256": "196b65ceccd87b7003d5fa62ed2b6a0b70baaacee988f243d0a0075f3cf86f33",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 8
+    },
+    {
+      "sha256": "c428c2e8d5f22d0a96cf21ca02df35e7777462ef50a3aba60a1d3360db2f640f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 15,
+      "selected": 1,
+      "core_nodes": 48
+    },
+    {
+      "sha256": "f0ee990e65b8a713fcdcad7d2a8a680defa3d1defbca3c39c2cfffe9b94a5a8b",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 6,
+      "selected": 1,
+      "core_nodes": 48
+    },
+    {
+      "sha256": "f8a32d96930ae8136a9022459f28ee9f822f0f082bdd93661a83c7afb307104f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 3,
+      "selected": 1,
+      "core_nodes": 48
+    },
+    {
+      "sha256": "23ddb05b006f635ebdac33c5282927605f296229e52ad80f64219ab68e492405",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 48
+    },
+    {
+      "sha256": "2a0d6db3c4a6344affa9b657a56d4b83d03e25123c38c8d0ce8a5290fdedc0bf",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 79,
+      "selected": 1,
+      "core_nodes": 240
+    },
+    {
+      "sha256": "c08c03eb864f1d0c6c988955f3c8f34bccf4ce5e6a8f4e88e1053d858a9e4f38",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 34,
+      "selected": 1,
+      "core_nodes": 240
+    },
+    {
+      "sha256": "a0bbc8eeda136f93fdb63eb6ce0b24f58039ef744f83df940f354e9a586f42dc",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 15,
+      "selected": 1,
+      "core_nodes": 240
+    },
+    {
+      "sha256": "2c9d3d4fd46da3576d5db6b9990d140d9dd88c4b7264f9159542a2d25b1806e3",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 7,
+      "selected": 1,
+      "core_nodes": 240
+    },
+    {
+      "sha256": "6f58612e489e3bd0032a32908c2be2a52d3e15f70587dc9c445a37c512aa36a2",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 335,
+      "selected": 1,
+      "core_nodes": 1008
+    },
+    {
+      "sha256": "6e6242d064fe34c7f54294f45f55834b8699c8066998ac766cbb34e05aa3b4c0",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 143,
+      "selected": 1,
+      "core_nodes": 1008
+    },
+    {
+      "sha256": "6de90350bdd0d96ab04a62bd06fcb366af46ade8e815ad984832963a1a1f528e",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 67,
+      "selected": 1,
+      "core_nodes": 1008
+    },
+    {
+      "sha256": "c5146a791e9ba9013e9c20d7e0ff394e112e8e7429d0babb452b3a599a44873c",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 32,
+      "selected": 1,
+      "core_nodes": 1008
+    },
+    {
+      "sha256": "5354983f139028520ef62eb383fbaf8847f52dd6aef3fe79abb228f54c993b92",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 47,
+      "selected": 1,
+      "core_nodes": 144
+    },
+    {
+      "sha256": "aca5542a78e9418c0deadbbe247939ea5a1496a3b0ae50da8c6c3dde5481f162",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 20,
+      "selected": 1,
+      "core_nodes": 144
+    },
+    {
+      "sha256": "19d7a7e4a5324278234c9fd0f4df1b2b54339849e8f68627fa8bbc460b976ad0",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 9,
+      "selected": 1,
+      "core_nodes": 144
+    },
+    {
+      "sha256": "66e1b1dd3972275e6ff5b6b30f5895030250236e78c394a94cc43f186260990c",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 4,
+      "selected": 1,
+      "core_nodes": 144
+    },
+    {
+      "sha256": "441531add11a90844139affbddfd695949a95f676b08cc079989ca42098650bd",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 303,
+      "selected": 1,
+      "core_nodes": 912
+    },
+    {
+      "sha256": "e2bbb42dfc463aa474e7339a9af36e5b3e9c14490a957554c4aadc17c6ca36e3",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 130,
+      "selected": 1,
+      "core_nodes": 912
+    },
+    {
+      "sha256": "7acfec54be098f6614a0eca8f2d61b687d18f9605792e8d2710560ea2a05b2a3",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 60,
+      "selected": 1,
+      "core_nodes": 912
+    },
+    {
+      "sha256": "5ee9a2906b1f088481e44e8934a3af471d18fd78ce2929156a77ff628623fb71",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 29,
+      "selected": 1,
+      "core_nodes": 912
+    },
+    {
+      "sha256": "825d413fc2bc4f44793377340913e7d84af7ea834f623a896cefa92188f282c4",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1327,
+      "selected": 1,
+      "core_nodes": 3984
+    },
+    {
+      "sha256": "fff92beabf82a32d6cf31faf19b3d82d5ae352e082cd96009aba43b11fb5b19c",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 569,
+      "selected": 1,
+      "core_nodes": 3984
+    },
+    {
+      "sha256": "b92a043c95801d4ae6b676f2acb1bc5610e27b2d1385772bf7358884c0871efa",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 265,
+      "selected": 1,
+      "core_nodes": 3984
+    },
+    {
+      "sha256": "4f737977a26d4650930552d940414a1691adbf3578253d32b0d6a0e3b31e6274",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 128,
+      "selected": 1,
+      "core_nodes": 3984
+    },
+    {
+      "sha256": "09371319b929f7f4b9c5b305eeaf9c620d823eac82e4f145df154d1d08c54591",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 8,
+      "selected": 1,
+      "core_nodes": 26
+    },
+    {
+      "sha256": "3ecad73e7d9d5745dd51e029fe52298a05bf075f39ff8e9b81b80d682e21ab8e",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 4,
+      "selected": 1,
+      "core_nodes": 29
+    },
+    {
+      "sha256": "0827cf0e7cc092d5da9642f0f77fe665dc5e4118e1719576ed654877c8abf11f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 28
+    },
+    {
+      "sha256": "8ef9558435d2f0db1aadb4f7aeaeb3330a214dafac29025830bdcaf22ce44a44",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 24,
+      "selected": 1,
+      "core_nodes": 75
+    },
+    {
+      "sha256": "7c872663a21356de4f697f4cdf3ff409a69dff2fa0b8431cedd58e9ffb003c85",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 16,
+      "selected": 1,
+      "core_nodes": 116
+    },
+    {
+      "sha256": "c7ebe331801bbd7beee9cb015193bfa00fb44af7e6ed172bf9c058aec2cadcf2",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 5,
+      "selected": 1,
+      "core_nodes": 87
+    },
+    {
+      "sha256": "ceb014c71d4297870ed82510a20b6ec22248e28d934fd1aafc5fb4320378815b",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2,
+      "selected": 1,
+      "core_nodes": 78
+    },
+    {
+      "sha256": "1355bdb65fff3a38d9804ce7691591f6c3158963d94ee644088fae73c9096887",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 173,
+      "selected": 1,
+      "core_nodes": 522
+    },
+    {
+      "sha256": "962a8e47af322d85cf1110ce953c8cea092dba8326f4d6ab17c15554a9f63a42",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 47,
+      "selected": 1,
+      "core_nodes": 334
+    },
+    {
+      "sha256": "73c4ac0775d156dfa9cfb27872d497971fdfaeca3300032a94c45c603a6ca5a8",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 34,
+      "selected": 1,
+      "core_nodes": 521
+    },
+    {
+      "sha256": "b4103049e8a331584b727c7447f02cecb2026f9c38f4feba5a0f33c522858c25",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 25,
+      "selected": 1,
+      "core_nodes": 796
+    },
+    {
+      "sha256": "266de76b7ff69ab6eeaf2bb6d1790e9c66ba51bc4f87efa1c4b64890faec6650",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 546,
+      "selected": 1,
+      "core_nodes": 1641
+    },
+    {
+      "sha256": "df76a42551504c62cf28e44509b711794fd000df672c4d44b4d56594f7a57d64",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 289,
+      "selected": 1,
+      "core_nodes": 2026
+    },
+    {
+      "sha256": "d4d01dd41aea06e7741f0b3c75b572a61e96d193c1fe104ffdfccf3b9250a54c",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 132,
+      "selected": 1,
+      "core_nodes": 1991
+    },
+    {
+      "sha256": "d1cfa3ebe2ac71d4db79ef98693da8b49c296ef686ffdf513f9c9b14000a0d78",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 73,
+      "selected": 1,
+      "core_nodes": 2288
+    },
+    {
+      "sha256": "a43f5b2a247634a177620e84cc7f59512e77d4f52d283326baa45a5ea144b119",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 16,
+      "selected": 2,
+      "core_nodes": 18
+    },
+    {
+      "sha256": "1e7fa2471dc32deccc71e5fa6ed38962141a8500b0a8d69784ec019969b4bbd8",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 3,
+      "selected": 1,
+      "core_nodes": 22
+    },
+    {
+      "sha256": "2beda892f1761a2406e9517543b652e77c71868bd29fc1ba788174f373c286e3",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 22
+    },
+    {
+      "sha256": "22f8d44afe916a0872f0266c10c1594e8b7f4ec4b6cacf68036a03b1d3b15b50",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 35
+    },
+    {
+      "sha256": "e01ee264dce9b438e5bc36a4453b34c7ecba954c78b8a6c20e7041211ec37133",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 60,
+      "selected": 2,
+      "core_nodes": 62
+    },
+    {
+      "sha256": "1cc02143959f7e547f653d60fc0f23f117a88ee8e2d601492206d34adc4b21aa",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 24,
+      "selected": 1,
+      "core_nodes": 170
+    },
+    {
+      "sha256": "a1a6c4124e627364e286967c1fb6e4d41d05113355c23d40934b57c2ce45ed2e",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 7,
+      "selected": 1,
+      "core_nodes": 113
+    },
+    {
+      "sha256": "76766b7e8b72b8f68cf3914f3e6ebcb806866f3ea3e897aea77e248fb48788ec",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 6,
+      "selected": 1,
+      "core_nodes": 190
+    },
+    {
+      "sha256": "dd00cf420f5499f0d64a7142447f3d029e406081aaffa1262d305039957ff04a",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 807,
+      "selected": 3,
+      "core_nodes": 270
+    },
+    {
+      "sha256": "0af6e709d8c46fbb1252a81158ea8193a3adb3fd0dae9a308f99ea9f861b968e",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 131,
+      "selected": 3,
+      "core_nodes": 223
+    },
+    {
+      "sha256": "fb70b0fa8ce635c39af6d9cf787a3b87a4239e84de569f48ff17d3dbfc9636ee",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 233,
+      "selected": 4,
+      "core_nodes": 709
+    },
+    {
+      "sha256": "0ad6a67554a4805a01121a82a9bf66b639c75ba11fd010234aab2f584be05d07",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 57,
+      "selected": 2,
+      "core_nodes": 874
+    },
+    {
+      "sha256": "5f5dc89cdae5ba8479ae4f09233520c30c6cdf6421f2ffd26928e95880b42d92",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 3825,
+      "selected": 2,
+      "core_nodes": 3827
+    },
+    {
+      "sha256": "314060bf3a9587499574de5a9f53b21ba767c7308cb55b40073ffcdbef8beb55",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1240,
+      "selected": 2,
+      "core_nodes": 3726
+    },
+    {
+      "sha256": "96491cf4c3a331e6669525025c988ea225ddfbe86c3f6b1509a6a2badc5dbaac",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1162,
+      "selected": 5,
+      "core_nodes": 2566
+    },
+    {
+      "sha256": "28f1030c06c392461172fbe95085aea48ee72de156ab07d4146e065e4b1dca14",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 264,
+      "selected": 2,
+      "core_nodes": 3984
+    },
+    {
+      "sha256": "a7b556c92c819c739f4f4a1428a6ef893a4e126950de85cb40894eae2be5498d",
+      "kind": "shared_reduction_accumulator_age_sum",
+      "lower": 246,
+      "rows": 4,
+      "columns": 78,
+      "forced_nonrefresh_originals": 558
+    },
+    {
+      "sha256": "947f015a92288ee6f876fa04c83198c33210a1e27c5b3ca7921b9e7aa72b3d96",
+      "kind": "shared_reduction_accumulator_age_sum",
+      "lower": 1431,
+      "rows": 4,
+      "columns": 315,
+      "forced_nonrefresh_originals": 2691
+    },
+    {
+      "sha256": "3f9b7aa911d4dbb34d289ff6d8f3170784c53a9f4788544e44a3ec8cdbd578e0",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 25,
+      "selected": 2,
+      "core_nodes": 27
+    },
+    {
+      "sha256": "3e5d4aa3caa69a430b759e7f6e068612e61bd4a5cc5c771b7dafd17b73cdc25a",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 20,
+      "selected": 3,
+      "core_nodes": 38
+    },
+    {
+      "sha256": "8601da4bf00168a91f9a01663bbeb0f0279662fa6f10834204c315e63aaac3c8",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 6,
+      "selected": 2,
+      "core_nodes": 50
+    },
+    {
+      "sha256": "63b6a0fbb53fb15fca0606834fc97182fcd56e6973477c6e64394fe8b765b095",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1,
+      "selected": 1,
+      "core_nodes": 41
+    },
+    {
+      "sha256": "c58b186a01c5a2f176d49bc9f5049a23d1604900b4d24c2e235e03f3e7c2496f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 555,
+      "selected": 3,
+      "core_nodes": 186
+    },
+    {
+      "sha256": "9240e61e99a215ee4e1587bfebd789cb62dd8992f7f652d8faf7eaf7959d20a8",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 107,
+      "selected": 3,
+      "core_nodes": 182
+    },
+    {
+      "sha256": "dfc2fff59abf4b6a03d95aab1db6a0f922f9c1a56033f905d4a426262bc755f4",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 39,
+      "selected": 3,
+      "core_nodes": 180
+    },
+    {
+      "sha256": "d418c24e3740b2ae69f1e6a11137a83df58a5be553cf5dccf50aee3d7338961f",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 16,
+      "selected": 3,
+      "core_nodes": 182
+    },
+    {
+      "sha256": "f1b4aa213a368231deda1da94468ae3812b31e972b88898cf2c64efd9bf50966",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 2415,
+      "selected": 3,
+      "core_nodes": 806
+    },
+    {
+      "sha256": "1aa2263ae76a45bc7aa5c200487207ea36ae2a857a224f310ec9fa68ccb95e32",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 482,
+      "selected": 3,
+      "core_nodes": 808
+    },
+    {
+      "sha256": "b9a0fad7c7233fc0c5a317a5eb01d4c590200dc309196a537cb330c8d513b417",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 185,
+      "selected": 3,
+      "core_nodes": 814
+    },
+    {
+      "sha256": "6569ce4ec4361a8d030d8d15272e77d32c6146f6092270ace7cbe06029b2c844",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 83,
+      "selected": 3,
+      "core_nodes": 825
+    },
+    {
+      "sha256": "c93979e6851a06b2ebadadb262097f58e32bf21aa28748cf1fe56ae03d456043",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 10056,
+      "selected": 3,
+      "core_nodes": 3353
+    },
+    {
+      "sha256": "5d89d34035cf0d980f1c1cb8c348ea60626c5520129775004e74a3f9f8396075",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1968,
+      "selected": 3,
+      "core_nodes": 3285
+    },
+    {
+      "sha256": "19d01f367d7cb4fdc5de2be9f85a99b1b227657940efc236569c6f78ce25c12c",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 755,
+      "selected": 3,
+      "core_nodes": 3282
+    },
+    {
+      "sha256": "eaf97898406864b4d007e041ac08360be05bf61a16531d0840b110e29e5ad541",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 339,
+      "selected": 3,
+      "core_nodes": 3297
+    },
+    {
+      "sha256": "075e40e9c274586e24fff9922b48806963ab29aac2710e93f307d30c8019548c",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 57,
+      "selected": 2,
+      "core_nodes": 59
+    },
+    {
+      "sha256": "d3cb2bd4429f2e1dc119f02c5e667a1bd1bbcbff143f06465d2263a8f03dd2e1",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 132,
+      "selected": 6,
+      "core_nodes": 46
+    },
+    {
+      "sha256": "674b0acc0983426f7575f5da493c11d528e3605efbf58ffd5f1236c627453a23",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 11,
+      "selected": 5,
+      "core_nodes": 35
+    },
+    {
+      "sha256": "43d0f81ba04db07c3d38bf30b2379f7c81fce5fdcd453f2c8948a71347fc5f4b",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 249,
+      "selected": 2,
+      "core_nodes": 251
+    },
+    {
+      "sha256": "1bc6fb8c31b6b1c4e65b84daa83a4b9196a2fd5262b745ef5cffbf2e63784a68",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 708,
+      "selected": 6,
+      "core_nodes": 238
+    },
+    {
+      "sha256": "41653502ce03c82ba7a864d6a153ac14a147f94947258253f311e1978c0e8c93",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 100,
+      "selected": 5,
+      "core_nodes": 230
+    },
+    {
+      "sha256": "2f5f58344f1b6ee1434af862cdf6e9d9db87009cc65570a2fe92567ab477f331",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 33,
+      "selected": 5,
+      "core_nodes": 204
+    },
+    {
+      "sha256": "8784c768e3e41b84216bae9f68f90ae518e457af1c3dcba6721992d0cee1cc88",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1017,
+      "selected": 2,
+      "core_nodes": 1019
+    },
+    {
+      "sha256": "9fd453c9b99575e82a3979c68b11567f0311d6ece79ced052d5f8ca9727fef63",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 3006,
+      "selected": 6,
+      "core_nodes": 1004
+    },
+    {
+      "sha256": "01a82a0d9182dddc2be97db3bee9bc6dcb4c529586026c2ff726ef82a6a1c77d",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 448,
+      "selected": 5,
+      "core_nodes": 996
+    },
+    {
+      "sha256": "36eb7b94788dfc45483ec3c7abb49f5b4862e7d75fad1520f4c91a5320482654",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 174,
+      "selected": 5,
+      "core_nodes": 962
+    },
+    {
+      "sha256": "08c5ba00fac117d08e8ca4101878f03e7f9acdca4d0b8f94adf9314a3ed363b5",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 4089,
+      "selected": 2,
+      "core_nodes": 4091
+    },
+    {
+      "sha256": "5ee1ef5d58b0a12c3dc4d45baddbd0765daca964f86ecba80f22e328344cedf1",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 12231,
+      "selected": 6,
+      "core_nodes": 4079
+    },
+    {
+      "sha256": "52f181ce6b48f2a02f2c3d0785b1ec0f253b72bfd328d44320531a856b106f1a",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 1352,
+      "selected": 4,
+      "core_nodes": 4067
+    },
+    {
+      "sha256": "74c5af27e97dbeed6ecd6a7ae4ef51baf7d5fdddff1da60f7b78b9c72c0b8449",
+      "kind": "global_persistent_core_age_sum",
+      "lower": 574,
+      "selected": 4,
+      "core_nodes": 4046
+    }
+  ],
+  "positive_reduction_certificates": 2,
+  "independent_new_certificates": 138,
+  "successful_subset": {
+    "count": 272,
+    "exact_mean_lower_copy_output_numerator": "9631126736068417584206498035792912312067873240408394868463378710421289439646946791943803160523207470553749739858604170757608569859066679944792032779",
+    "exact_mean_lower_copy_output_denominator": "95485882399150808595905713397521190785968113607889517384799679148014236192922502053632414404436673567150136986117429942510641831403104331867460221440",
+    "mean_lower_copy_output": 0.10086440523017119
+  },
+  "mathematical_review": [
+    "Global core: each counted original is after every selected birth and strictly before a direct consumer of every selected identity. Thus all counted nodes lie within the common persistent interval; core nodes need not form a chain.",
+    "At any emission coordinate k distinct latest live identities have age-sum range k(W-k). Each non-refresh original adds k; a COPY can reduce that sum by at most W-k. Take the maximum of overlapping certificates, never their sum.",
+    "Shared reductions: before the last row starts at most W columns are born, bounding head GET/MULW by (2R+2)W. After first SET at most W not-fully-consumed weight columns remain, bounding tail GET/MULW by 2RW.",
+    "All R logical accumulator roles persist between last product0 and first SET. ADD replaces a role but does not authorize merging or deleting original operations; count all original ADD conservatively.",
+    "A legal reference may use an older COPY. Its age is at least the latest copy age; refresh delta R-d_latest >= R-d_used >= -(W-R). The proof requires an inequality, not equality with the used copy."
+  ],
+  "official_requirement_recheck": {
+    "url": "https://www.chaspark.com/#/races/competitions/1326690549003280384",
+    "observed_date_utc": "2026-10-11",
+    "page_update": "2026-10-10 09:18",
+    "method": "Actual page text read through hidden IAB AX state; SPA web fetch alone was insufficient.",
+    "requirements": "Level0 correctness, Level1 average COPY <=10 percent, Level3 <=2 percent plus complexity; no explicit Level2 or averaging/denominator definition in observed body.",
+    "transformation_scope": "Observed body explicitly describes DAG reorder plus COPY; it does not explicitly authorize extra GET/recomputation/spill/aliases/deleting original nodes."
+  },
+  "limitation": "This lower bound exceeds10 percent on the same272 self-generated successful identities under equal-block COPY/(original+COPY) averaging. It is not an official Level1 failure, an official input-distribution claim, an attainability proof or permission to weaken the identity model.",
+  "evidence": {
+    "projects\\18-isa-scheduler\\experiments\\milestone-level-r91-336\\inputs.jsonl": "7252b7ccaab17d798317ec5372aa7ea872978fd0f1d00d7033844f85d31b1c11",
+    "projects\\18-isa-scheduler\\experiments\\r99-reduction-global-audit\\report.json": "7f47d92e91a91f286af5096390487acba48775bb9e68804ddd3b9e44638dc1a5",
+    "projects\\18-isa-scheduler\\experiments\\r99-reduction-global-audit\\saved-output-audit.json": "796047c464595f5bcace9410ef2603c40a8db37df758ffdd9f423f0decfcc64a",
+    "projects\\18-isa-scheduler\\research\\level-stage\\global-core-proof.md": "c4173e8040a56e56d62dd7ec7078eafc3546b5aef6ce1928638abd72a08b2b88",
+    "projects\\18-isa-scheduler\\research\\level-stage\\shared-reduction-proof.md": "06d49d706946e51f9e11db806c74bc0ccc2cbd475bddbad2b38ec4baf4d34c10",
+    "projects\\18-isa-scheduler\\research\\level-stage\\forced-cut-proof.md": "d573b395a84d776842ed21f99981a1d50cef86c9e29251c1ef955e5e1a4c4ef8"
+  }
+}

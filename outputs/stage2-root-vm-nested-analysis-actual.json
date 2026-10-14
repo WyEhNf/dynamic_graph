@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791780256.2948413,
+  "report_sha256": "c13c7e9663c8b4b81e01caccdfa22646f1976e173c34585d5532e96c4e4a36ce",
+  "acceptance_sha256": "df2a260c49caa715a3ce1db28d9dc863d61fb6d6225faf6ec9279b14673f441e",
+  "frozen_files": 259,
+  "actual_compile_exit": 0,
+  "actual_analysis_exit": 0,
+  "observations": 25,
+  "positive_bounds": 15,
+  "unknown": 10,
+  "max_shared_work": 56353,
+  "N10000_bounds": {
+    "nested-rect-strides": 500185009,
+    "nested-triangular": 2799890009,
+    "nested-gram-three": 30002800170009
+  },
+  "scope": "Actual matchingABI probe25 raw observations/full259freeze/strictFP flags and independently recomputed highN bounds verified. No Matrix/C/VM allocation or execution; these are analysis bounds, not highN runtime correctness or performance."
+}

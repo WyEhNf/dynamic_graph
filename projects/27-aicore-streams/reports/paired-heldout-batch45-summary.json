@@ -1,0 +1,1700 @@
+{
+  "suite": "data\\projection-retention-heldout-batch45.json",
+  "suite_sha256": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+  "baseline_exe_sha256": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+  "current_exe_sha256": "3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9",
+  "current_solution_sha256": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "current_solution_path": "research\\batch45\\solution.cpp",
+  "baseline_solution_sha256": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-heldout-batch45-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.1636847999761812,
+        "peak_working_set_bytes": 31461376
+      },
+      "after": {
+        "report": "reports\\paired-heldout-batch45-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.3751489000278525,
+        "peak_working_set_bytes": 31948800
+      },
+      "comparison": {
+        "before": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "after": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "common_cases": 42,
+        "common_solve_us_before": 2082051,
+        "common_solve_us_after": 2064594,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 828,
+        "scales": [
+          {
+            "n": 41,
+            "median_us": 5001,
+            "max_us": 5001
+          },
+          {
+            "n": 42,
+            "median_us": 11199.5,
+            "max_us": 12262
+          },
+          {
+            "n": 44,
+            "median_us": 3903.0,
+            "max_us": 4299
+          },
+          {
+            "n": 45,
+            "median_us": 3174,
+            "max_us": 3174
+          },
+          {
+            "n": 46,
+            "median_us": 4444.0,
+            "max_us": 4714
+          },
+          {
+            "n": 48,
+            "median_us": 6025,
+            "max_us": 6025
+          },
+          {
+            "n": 49,
+            "median_us": 4417.0,
+            "max_us": 4772
+          },
+          {
+            "n": 52,
+            "median_us": 4846,
+            "max_us": 4846
+          },
+          {
+            "n": 65,
+            "median_us": 19585.5,
+            "max_us": 33279
+          },
+          {
+            "n": 66,
+            "median_us": 6466,
+            "max_us": 6466
+          },
+          {
+            "n": 67,
+            "median_us": 5450.5,
+            "max_us": 6195
+          },
+          {
+            "n": 68,
+            "median_us": 35945.0,
+            "max_us": 43851
+          },
+          {
+            "n": 69,
+            "median_us": 17864,
+            "max_us": 28095
+          },
+          {
+            "n": 70,
+            "median_us": 5698.0,
+            "max_us": 6595
+          },
+          {
+            "n": 121,
+            "median_us": 44459,
+            "max_us": 44459
+          },
+          {
+            "n": 123,
+            "median_us": 87390,
+            "max_us": 87390
+          },
+          {
+            "n": 128,
+            "median_us": 85125,
+            "max_us": 85125
+          },
+          {
+            "n": 131,
+            "median_us": 14573,
+            "max_us": 14573
+          },
+          {
+            "n": 132,
+            "median_us": 13571,
+            "max_us": 13571
+          },
+          {
+            "n": 133,
+            "median_us": 82686,
+            "max_us": 82686
+          },
+          {
+            "n": 134,
+            "median_us": 15911,
+            "max_us": 15911
+          },
+          {
+            "n": 139,
+            "median_us": 55321,
+            "max_us": 55321
+          },
+          {
+            "n": 141,
+            "median_us": 59937.0,
+            "max_us": 71830
+          },
+          {
+            "n": 142,
+            "median_us": 72206,
+            "max_us": 72206
+          },
+          {
+            "n": 147,
+            "median_us": 20486,
+            "max_us": 20486
+          },
+          {
+            "n": 241,
+            "median_us": 173255,
+            "max_us": 173255
+          },
+          {
+            "n": 261,
+            "median_us": 25716,
+            "max_us": 25716
+          },
+          {
+            "n": 262,
+            "median_us": 174902.5,
+            "max_us": 202756
+          },
+          {
+            "n": 263,
+            "median_us": 388040,
+            "max_us": 388040
+          },
+          {
+            "n": 265,
+            "median_us": 286880,
+            "max_us": 286880
+          },
+          {
+            "n": 266,
+            "median_us": 193413,
+            "max_us": 193413
+          },
+          {
+            "n": 269,
+            "median_us": 217550.0,
+            "max_us": 227725
+          },
+          {
+            "n": 271,
+            "median_us": 181087,
+            "max_us": 181087
+          },
+          {
+            "n": 274,
+            "median_us": 44330,
+            "max_us": 44330
+          },
+          {
+            "n": 277,
+            "median_us": 216590,
+            "max_us": 216590
+          }
+        ],
+        "common_thread_cpu_measured_cases": 42,
+        "common_thread_cpu_us_before": 1906250,
+        "common_thread_cpu_us_after": 1875000,
+        "all_solve_us_before": 2970729,
+        "all_thread_cpu_us_before": 2703125,
+        "all_solve_us_after": 3167261,
+        "all_thread_cpu_us_after": 2906250
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-heldout-batch45-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.1416634999914095,
+        "peak_working_set_bytes": 31682560
+      },
+      "after": {
+        "report": "reports\\paired-heldout-batch45-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.434454799978994,
+        "peak_working_set_bytes": 31801344
+      },
+      "comparison": {
+        "before": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "after": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "common_cases": 42,
+        "common_solve_us_before": 2102459,
+        "common_solve_us_after": 2155797,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 828,
+        "scales": [
+          {
+            "n": 41,
+            "median_us": 3264,
+            "max_us": 3264
+          },
+          {
+            "n": 42,
+            "median_us": 10157.0,
+            "max_us": 10272
+          },
+          {
+            "n": 44,
+            "median_us": 5252.0,
+            "max_us": 7486
+          },
+          {
+            "n": 45,
+            "median_us": 3974,
+            "max_us": 3974
+          },
+          {
+            "n": 46,
+            "median_us": 5168.5,
+            "max_us": 5487
+          },
+          {
+            "n": 48,
+            "median_us": 7082,
+            "max_us": 7082
+          },
+          {
+            "n": 49,
+            "median_us": 5030.5,
+            "max_us": 7022
+          },
+          {
+            "n": 52,
+            "median_us": 5715,
+            "max_us": 5715
+          },
+          {
+            "n": 65,
+            "median_us": 19860.0,
+            "max_us": 33939
+          },
+          {
+            "n": 66,
+            "median_us": 9088,
+            "max_us": 9088
+          },
+          {
+            "n": 67,
+            "median_us": 5080.0,
+            "max_us": 6106
+          },
+          {
+            "n": 68,
+            "median_us": 29252.0,
+            "max_us": 35179
+          },
+          {
+            "n": 69,
+            "median_us": 15868,
+            "max_us": 27244
+          },
+          {
+            "n": 70,
+            "median_us": 6603.5,
+            "max_us": 7313
+          },
+          {
+            "n": 121,
+            "median_us": 47316,
+            "max_us": 47316
+          },
+          {
+            "n": 123,
+            "median_us": 90676,
+            "max_us": 90676
+          },
+          {
+            "n": 128,
+            "median_us": 91741,
+            "max_us": 91741
+          },
+          {
+            "n": 131,
+            "median_us": 16969,
+            "max_us": 16969
+          },
+          {
+            "n": 132,
+            "median_us": 16046,
+            "max_us": 16046
+          },
+          {
+            "n": 133,
+            "median_us": 78628,
+            "max_us": 78628
+          },
+          {
+            "n": 134,
+            "median_us": 16047,
+            "max_us": 16047
+          },
+          {
+            "n": 139,
+            "median_us": 47548,
+            "max_us": 47548
+          },
+          {
+            "n": 141,
+            "median_us": 61293.0,
+            "max_us": 73523
+          },
+          {
+            "n": 142,
+            "median_us": 63049,
+            "max_us": 63049
+          },
+          {
+            "n": 147,
+            "median_us": 27187,
+            "max_us": 27187
+          },
+          {
+            "n": 241,
+            "median_us": 168803,
+            "max_us": 168803
+          },
+          {
+            "n": 261,
+            "median_us": 29909,
+            "max_us": 29909
+          },
+          {
+            "n": 262,
+            "median_us": 186735.5,
+            "max_us": 212940
+          },
+          {
+            "n": 263,
+            "median_us": 375427,
+            "max_us": 375427
+          },
+          {
+            "n": 265,
+            "median_us": 340911,
+            "max_us": 340911
+          },
+          {
+            "n": 266,
+            "median_us": 193832,
+            "max_us": 193832
+          },
+          {
+            "n": 269,
+            "median_us": 206535.0,
+            "max_us": 218850
+          },
+          {
+            "n": 271,
+            "median_us": 177497,
+            "max_us": 177497
+          },
+          {
+            "n": 274,
+            "median_us": 38101,
+            "max_us": 38101
+          },
+          {
+            "n": 277,
+            "median_us": 249319,
+            "max_us": 249319
+          }
+        ],
+        "common_thread_cpu_measured_cases": 42,
+        "common_thread_cpu_us_before": 1906250,
+        "common_thread_cpu_us_after": 1937500,
+        "all_solve_us_before": 2951188,
+        "all_thread_cpu_us_before": 2687500,
+        "all_solve_us_after": 3233042,
+        "all_thread_cpu_us_after": 2921875
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-heldout-batch45-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.3719198999460787,
+        "peak_working_set_bytes": 31870976
+      },
+      "after": {
+        "report": "reports\\paired-heldout-batch45-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.5724567000288516,
+        "peak_working_set_bytes": 31674368
+      },
+      "comparison": {
+        "before": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "after": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "common_cases": 42,
+        "common_solve_us_before": 2247677,
+        "common_solve_us_after": 2215894,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 828,
+        "scales": [
+          {
+            "n": 41,
+            "median_us": 4321,
+            "max_us": 4321
+          },
+          {
+            "n": 42,
+            "median_us": 13488.5,
+            "max_us": 14684
+          },
+          {
+            "n": 44,
+            "median_us": 3767.0,
+            "max_us": 4344
+          },
+          {
+            "n": 45,
+            "median_us": 2712,
+            "max_us": 2712
+          },
+          {
+            "n": 46,
+            "median_us": 5146.0,
+            "max_us": 6169
+          },
+          {
+            "n": 48,
+            "median_us": 5919,
+            "max_us": 5919
+          },
+          {
+            "n": 49,
+            "median_us": 4921.5,
+            "max_us": 5771
+          },
+          {
+            "n": 52,
+            "median_us": 4615,
+            "max_us": 4615
+          },
+          {
+            "n": 65,
+            "median_us": 21686.5,
+            "max_us": 37899
+          },
+          {
+            "n": 66,
+            "median_us": 6030,
+            "max_us": 6030
+          },
+          {
+            "n": 67,
+            "median_us": 5915.0,
+            "max_us": 7284
+          },
+          {
+            "n": 68,
+            "median_us": 31095.0,
+            "max_us": 39683
+          },
+          {
+            "n": 69,
+            "median_us": 16071,
+            "max_us": 25652
+          },
+          {
+            "n": 70,
+            "median_us": 5828.0,
+            "max_us": 6946
+          },
+          {
+            "n": 121,
+            "median_us": 59874,
+            "max_us": 59874
+          },
+          {
+            "n": 123,
+            "median_us": 102054,
+            "max_us": 102054
+          },
+          {
+            "n": 128,
+            "median_us": 106660,
+            "max_us": 106660
+          },
+          {
+            "n": 131,
+            "median_us": 14042,
+            "max_us": 14042
+          },
+          {
+            "n": 132,
+            "median_us": 14128,
+            "max_us": 14128
+          },
+          {
+            "n": 133,
+            "median_us": 114776,
+            "max_us": 114776
+          },
+          {
+            "n": 134,
+            "median_us": 16736,
+            "max_us": 16736
+          },
+          {
+            "n": 139,
+            "median_us": 45600,
+            "max_us": 45600
+          },
+          {
+            "n": 141,
+            "median_us": 68616.5,
+            "max_us": 85863
+          },
+          {
+            "n": 142,
+            "median_us": 79275,
+            "max_us": 79275
+          },
+          {
+            "n": 147,
+            "median_us": 23469,
+            "max_us": 23469
+          },
+          {
+            "n": 241,
+            "median_us": 186782,
+            "max_us": 186782
+          },
+          {
+            "n": 261,
+            "median_us": 27118,
+            "max_us": 27118
+          },
+          {
+            "n": 262,
+            "median_us": 173113.0,
+            "max_us": 204472
+          },
+          {
+            "n": 263,
+            "median_us": 405116,
+            "max_us": 405116
+          },
+          {
+            "n": 265,
+            "median_us": 343969,
+            "max_us": 343969
+          },
+          {
+            "n": 266,
+            "median_us": 200428,
+            "max_us": 200428
+          },
+          {
+            "n": 269,
+            "median_us": 208800.5,
+            "max_us": 214650
+          },
+          {
+            "n": 271,
+            "median_us": 206531,
+            "max_us": 206531
+          },
+          {
+            "n": 274,
+            "median_us": 41703,
+            "max_us": 41703
+          },
+          {
+            "n": 277,
+            "median_us": 207444,
+            "max_us": 207444
+          }
+        ],
+        "common_thread_cpu_measured_cases": 42,
+        "common_thread_cpu_us_before": 2000000,
+        "common_thread_cpu_us_after": 2062500,
+        "all_solve_us_before": 3154167,
+        "all_thread_cpu_us_before": 2843750,
+        "all_solve_us_after": 3356952,
+        "all_thread_cpu_us_after": 3109375
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch44\\solution.cpp",
+  "median_common_solve_us_before": 2102459,
+  "median_common_solve_us_after": 2155797,
+  "median_wall_seconds_before": 3.1636847999761812,
+  "median_wall_seconds_after": 3.434454799978994,
+  "maximum_cli_working_set_bytes": 31948800,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 1906250,
+  "median_all_solve_us_before": 2970729,
+  "median_all_thread_cpu_us_before": 2703125,
+  "median_common_thread_cpu_us_after": 1937500,
+  "median_all_solve_us_after": 3233042,
+  "median_all_thread_cpu_us_after": 2921875,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+  "baseline_build_provenance": {
+    "status": "validated_recovery_default_milestone",
+    "source_sha256": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+    "default_exe_sha256": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+    "measured_exe_sha256": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+    "measured_build_inputs": {
+      "research/batch44/solution.cpp": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+      "include/problem.h": "7c09de2cf92464b7209ef71333fffb06428abf320ee7a005e3dba6072da78f0a",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/simulator.cpp": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+      "include/simulator.h": "a9657897fccdb6d70ddbe450b43a7961f105647ff6170de508251e7d26117ed7",
+      "include/local_json.h": "407aac276343e315104ab63e27a887765f4a27025768ee4232a8c38d11e11c43",
+      "include/solver_metrics.h": "1e14d74fc8123763417a82335eb57cb975d49e9015bb9623468ca45d20b1dea5",
+      "CMakeLists.txt": "dbd6a242d0d669e0a86e7e897cf0c51dc9ae6ec2753a5622c631b2fb49fe5671"
+    },
+    "measured_CMake_snapshot": "research/batch44/CMakeLists-measured.txt",
+    "compile_inputs": {
+      "solution/solution.cpp": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+      "CMakeLists.txt": "85288111d5445f822d904e638c80f2d9e2a5caa4308ad074f99141d7962ec11b",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/candidate_search.cpp": "d3ad51f2b51a831d8f1b227b03fc9475cf442243faa90e0b72f5a1100542597a",
+      "src/frontier_probe.cpp": "2e67ec976cf5a61c29d13d668a144d29a5e148bd7af922960fc4017124430071",
+      "src/main.cpp": "575fc7f284a65ea51bf28f494dadb2d9682bf2e4b3c48726dd3323bc63bcc5b1",
+      "src/parallel_oracle.cpp": "81e487372b2eaa9c23df26fa66e676ab1c81ce4e0d0672484ac68e6c2346dbf7",
+      "src/simulator.cpp": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+      "include/candidate_search.h": "fa631e48fe2f8550720824cc0702ea750eaa51365ba421d8de28e3e6803e586b",
+      "include/local_json.h": "407aac276343e315104ab63e27a887765f4a27025768ee4232a8c38d11e11c43",
+      "include/problem.h": "7c09de2cf92464b7209ef71333fffb06428abf320ee7a005e3dba6072da78f0a",
+      "include/samples.h": "966bcccd47f35ef476aa818bac7ae64a76c5dd3c63b7f6c6c5475e01df8fa4ca",
+      "include/simulator.h": "a9657897fccdb6d70ddbe450b43a7961f105647ff6170de508251e7d26117ed7",
+      "include/solver_metrics.h": "1e14d74fc8123763417a82335eb57cb975d49e9015bb9623468ca45d20b1dea5"
+    },
+    "test_inputs": {
+      "tests/test_simulator.cpp": "f810c633fc0f7302c2a195e2c122357464f00868f666a1f6e47ba9d7f9ea8486",
+      "tests/test_models.cpp": "2ecbf0520c650144a3be0e17f02ffb5e498a3349d11e9f99f353c5d5eba05682",
+      "tests/test_assignment.cpp": "cde11ec1ecf5f65de50396399f22b3955078be28f285d5a8eca7a222b23e6c10",
+      "tests/test_serial_frontier.cpp": "71d7931b883352e99879ec620906c8c5860d94c5277586aab220448f0c74b29d",
+      "tests/test_numeric.cpp": "a24a1283e4494d403cf63fca9e0c7938b4bfe61c39bb8adae718c93ac95bf9ea",
+      "tests/test_numeric_priority.cpp": "a9994a19ce5a2f029d686a3d2b8ebf9a3718ca97f38c911796e492d06aece6d2",
+      "tests/test_shallow.cpp": "74f2df2ae2510ef06e64d557cb33c6e04c9549542e20c5e20dcd7a8a0e1cdf23"
+    },
+    "generation_inputs": {
+      "research/batch43/solution.cpp": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+      "research/batch44/shallow.cpp.inc": "5816293d2e17554547283fe126e277966fc3923c1ada20c1dd8b706306bdcc7e",
+      "scripts/prepare_batch44.py": "e53181a0e864613d45b92d938fc8e281b5d2f312153a96ce21f068350b6e4938",
+      "scripts/make_shallow_gold_batch44.py": "61d5f4f6f0fd5aa2e534829117738699ba1176ceba709b16fddea849dc6dc31c",
+      "scripts/make_shallow_holdout_batch44.py": "cd39fbc9d5869826db815af82aabf6154e215d45c056ef65a09c09e705cd8414"
+    },
+    "release_flags": {
+      "build/CMakeFiles/solution.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/solution.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n",
+      "build/CMakeFiles/aicore_bench.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/aicore_bench.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17\n\n",
+      "build/CMakeFiles/simulator.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/simulator.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n"
+    },
+    "independent_simulator_sha256": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+    "old_default_R43_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+    "old_default_R43_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+    "old_R43_freeze": "research/batch43/provenance.json",
+    "normal_original_records": 1229,
+    "normal_original_passed_according_to_expectation": 1168,
+    "new_heldout_records": 72,
+    "new_heldout_passed": 72,
+    "total_records": 1301,
+    "total_passed_according_to_expectation": 1240,
+    "total_expected_infeasible": 1,
+    "known_witness_unresolved": 61,
+    "count_caveat": "Parameter-repeat records are retained. 1240 expectation passes include one expected-infeasible rejection, not1240 feasible outputs. Bigint/profile controls separate. Original2 recoveries share one topology; new4 are heldout seeds.",
+    "hard_records": 202,
+    "hard_legal": 141,
+    "new_structure_records": 36,
+    "new_structure_legal": 36,
+    "recovery": {
+      "original_records": 2,
+      "original_topologies": 1,
+      "new_heldout_records": 4,
+      "lost": 0,
+      "common_243_T_peak_identical": true
+    },
+    "unresolved": [
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270617",
+        "n": 532,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270618",
+        "n": 511,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20299417",
+        "n": 2125,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20299418",
+        "n": 2139,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+        "n": 2077,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+        "n": 2085,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k24_ret1_seed20273418",
+        "n": 131,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+        "n": 129,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280617",
+        "n": 522,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280618",
+        "n": 525,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20309417",
+        "n": 2124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20309418",
+        "n": 2146,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+        "n": 2103,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+        "n": 2104,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+        "n": 71,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+        "n": 71,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+        "n": 508,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+        "n": 172,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+        "n": 547,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+        "n": 124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k64_ret1_seed20287427",
+        "n": 348,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k64_ret1_seed20287429",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+        "n": 362,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+        "n": 361,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+        "n": 651,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+        "n": 639,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+        "n": 638,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret0_seed20293826",
+        "n": 676,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret1_seed20293827",
+        "n": 712,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret0_seed20293828",
+        "n": 705,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret1_seed20293829",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+        "n": 695,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+        "n": 715,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+        "n": 700,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+        "n": 1270,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+        "n": 1284,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+        "n": 1265,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+        "n": 781,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+        "n": 798,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+        "n": 814,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+        "n": 1576,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+        "n": 1628,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+        "n": 1605,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+        "n": 1659,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+        "n": 190,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+        "n": 766,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+        "n": 140,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+        "n": 182,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      }
+    ],
+    "strict_regression_records": 979,
+    "strict_regression_wall_seconds": 56.46217849996174,
+    "strict_regression_baseline": "Historical8..22 no regression; distinct direct R43 cached979 full equality proof reports/direct-normal-r43-batch44.json",
+    "optimum_audits": 144,
+    "optimal_certificates": 33,
+    "ctest": "11/11 passed: original10 plus new profile gold; 2.64s",
+    "ctest_report_sha": "e0e11f65b74b36b46e1113aef63ba1994c399b90cec9d68c7b6e06d78deb3bde",
+    "numeric_fixed_plan_gold": 523,
+    "numeric_validation": "R44 real source Clang21 UBSan fixed plans523 all matched Python bigint; newprofile2590/160 bounded validity no runtime UB diagnostics",
+    "priority_arbitrary_precision_gold": 20180,
+    "priority_execution": "Actual new-default GCC numeric_priority_exact_gold test reran20180; no new UBSan priority claim",
+    "profile_bigint_gold": 2590,
+    "profile_search_validity": 160,
+    "exchange_controls": 756,
+    "exchange_caveat": "Constant previously live prefix required; mixed release negative control preserved",
+    "numeric_controls": {
+      "numeric-controls": {
+        "total": 11,
+        "passed": 11,
+        "report_sha": "4890ecb0ba0e68d5836ed376188474d1873febd0ae8d5d88a7937ac01fbe8dc6"
+      },
+      "numeric-parallel": {
+        "total": 320,
+        "passed": 320,
+        "report_sha": "e4d064e63f20c5fe857e1a0a64e5197955c01a4487bbd76b3dcccadf6a48428e"
+      },
+      "numeric-parallel-valid": {
+        "total": 160,
+        "passed": 160,
+        "report_sha": "5248b4fcc1e7a274683dd34b4e75815ea9403e537015a9210a4b15539c8b4c97"
+      },
+      "scaled-serial": {
+        "total": 32,
+        "passed": 32,
+        "report_sha": "04bd149872aa6c8ba29f4a538e587d7e8db2c3ea67de405c8d2325a1d777552f"
+      }
+    },
+    "functional_source_exe": "997f29db14b9987c83bc0fe2411fce3f904fa9bfdd31cf5b267c9ceffb2cc4f6",
+    "paired_plan_sha": "5fa51e27c76630ef1903bfaa0284b7eaafc9b829e99ebab074cbe791c66b7021",
+    "paired_cost": {
+      "hard": {
+        "rounds": [
+          {
+            "round": 1,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 18997815,
+                  "thread_cpu_us": 18750000
+                },
+                "after": {
+                  "wall_us": 22156215,
+                  "thread_cpu_us": 21718750
+                }
+              },
+              "common_success": {
+                "count": 139,
+                "before": {
+                  "wall_us": 6404716,
+                  "thread_cpu_us": 6328125
+                },
+                "after": {
+                  "wall_us": 6571700,
+                  "thread_cpu_us": 6484375
+                }
+              },
+              "common_failure": {
+                "count": 61,
+                "before": {
+                  "wall_us": 12377465,
+                  "thread_cpu_us": 12265625
+                },
+                "after": {
+                  "wall_us": 15364010,
+                  "thread_cpu_us": 15015625
+                }
+              },
+              "recovered": {
+                "count": 2,
+                "before": {
+                  "wall_us": 215634,
+                  "thread_cpu_us": 156250
+                },
+                "after": {
+                  "wall_us": 220505,
+                  "thread_cpu_us": 218750
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "e435bc59492ead13cc0f894cb233cff071ec70b29907e0793c0ffbce1b4d3793",
+              "after": "dd8aa6a641e734b31ac55a7150deb5388242eb1de982556037421810b2cf8c49"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 20.016425399982836,
+                "working_set_bytes": 316047360
+              },
+              "after": {
+                "wall_seconds": 23.28995780000696,
+                "working_set_bytes": 316243968
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+            ],
+            "all_cpu_ratio": 1.1583333333333334,
+            "all_wall_ratio": 1.1662506977776128
+          },
+          {
+            "round": 2,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 21983504,
+                  "thread_cpu_us": 21250000
+                },
+                "after": {
+                  "wall_us": 24210913,
+                  "thread_cpu_us": 23203125
+                }
+              },
+              "common_success": {
+                "count": 139,
+                "before": {
+                  "wall_us": 7408321,
+                  "thread_cpu_us": 7250000
+                },
+                "after": {
+                  "wall_us": 7459220,
+                  "thread_cpu_us": 7171875
+                }
+              },
+              "common_failure": {
+                "count": 61,
+                "before": {
+                  "wall_us": 14364381,
+                  "thread_cpu_us": 13812500
+                },
+                "after": {
+                  "wall_us": 16481345,
+                  "thread_cpu_us": 15796875
+                }
+              },
+              "recovered": {
+                "count": 2,
+                "before": {
+                  "wall_us": 210802,
+                  "thread_cpu_us": 187500
+                },
+                "after": {
+                  "wall_us": 270348,
+                  "thread_cpu_us": 234375
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "c9b0cf2eebaa4a290ae0372208a6c9f43930325e6b2a2d4f67cd084aecd32097",
+              "after": "8bf281e588d61d53676af4dfb6243f6a28c5d1a398c8da85fb91a466c692bebe"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 22.99850810004864,
+                "working_set_bytes": 315957248
+              },
+              "after": {
+                "wall_seconds": 25.235057300014887,
+                "working_set_bytes": 316268544
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+            ],
+            "all_cpu_ratio": 1.0919117647058822,
+            "all_wall_ratio": 1.1013218365916553
+          },
+          {
+            "round": 3,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 22156355,
+                  "thread_cpu_us": 21734375
+                },
+                "after": {
+                  "wall_us": 22445947,
+                  "thread_cpu_us": 22203125
+                }
+              },
+              "common_success": {
+                "count": 139,
+                "before": {
+                  "wall_us": 7479686,
+                  "thread_cpu_us": 7343750
+                },
+                "after": {
+                  "wall_us": 6654696,
+                  "thread_cpu_us": 6625000
+                }
+              },
+              "common_failure": {
+                "count": 61,
+                "before": {
+                  "wall_us": 14416849,
+                  "thread_cpu_us": 14140625
+                },
+                "after": {
+                  "wall_us": 15578363,
+                  "thread_cpu_us": 15359375
+                }
+              },
+              "recovered": {
+                "count": 2,
+                "before": {
+                  "wall_us": 259820,
+                  "thread_cpu_us": 250000
+                },
+                "after": {
+                  "wall_us": 212888,
+                  "thread_cpu_us": 218750
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "cb4e25939c003dabe214ec4c34373a584cd7d17ae9ce5e30ed4355080b9585c4",
+              "after": "49657f52bc395a312b55e135fbdc6823a8db5915a7bc54d316ac4647d04630ca"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 23.21390849997988,
+                "working_set_bytes": 316129280
+              },
+              "after": {
+                "wall_seconds": 23.390440999995917,
+                "working_set_bytes": 315891712
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+            ],
+            "all_cpu_ratio": 1.0215672178289001,
+            "all_wall_ratio": 1.0130703809358534
+          }
+        ],
+        "independent_side_medians": {
+          "all": {
+            "before": {
+              "wall_us": 21983504,
+              "thread_cpu_us": 21250000
+            },
+            "after": {
+              "wall_us": 22445947,
+              "thread_cpu_us": 22203125
+            }
+          },
+          "common_success": {
+            "before": {
+              "wall_us": 7408321,
+              "thread_cpu_us": 7250000
+            },
+            "after": {
+              "wall_us": 6654696,
+              "thread_cpu_us": 6625000
+            }
+          },
+          "common_failure": {
+            "before": {
+              "wall_us": 14364381,
+              "thread_cpu_us": 13812500
+            },
+            "after": {
+              "wall_us": 15578363,
+              "thread_cpu_us": 15359375
+            }
+          },
+          "recovered": {
+            "before": {
+              "wall_us": 215634,
+              "thread_cpu_us": 187500
+            },
+            "after": {
+              "wall_us": 220505,
+              "thread_cpu_us": 218750
+            }
+          }
+        },
+        "median_within_pair_all_cpu_ratio": 1.0919117647058822,
+        "ratio_of_independent_side_all_cpu_medians": 1.0448529411764707,
+        "median_within_pair_all_wall_ratio": 1.1013218365916553,
+        "cli_side_medians": {
+          "before": {
+            "wall_seconds": 22.99850810004864,
+            "maximum_working_set_bytes": 316129280
+          },
+          "after": {
+            "wall_seconds": 23.390440999995917,
+            "maximum_working_set_bytes": 316268544
+          }
+        },
+        "source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+        "exe_sha": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+        "baseline_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+        "baseline_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+        "counts": {
+          "all": 202,
+          "common_success": 139,
+          "common_failure": 61,
+          "recovered": 2
+        },
+        "timing": "same GCC Release O3; all failures included; Win32 CPU quantized; independent-side median ratio differs from median per-pair ratio; process WS includes whole JSON/witness/validators"
+      },
+      "heldout": {
+        "rounds": [
+          {
+            "round": 1,
+            "groups": {
+              "all": {
+                "count": 72,
+                "before": {
+                  "wall_us": 2343231,
+                  "thread_cpu_us": 2312500
+                },
+                "after": {
+                  "wall_us": 2420220,
+                  "thread_cpu_us": 2265625
+                }
+              },
+              "common_success": {
+                "count": 68,
+                "before": {
+                  "wall_us": 1567948,
+                  "thread_cpu_us": 1562500
+                },
+                "after": {
+                  "wall_us": 1616556,
+                  "thread_cpu_us": 1453125
+                }
+              },
+              "common_failure": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              },
+              "recovered": {
+                "count": 4,
+                "before": {
+                  "wall_us": 775283,
+                  "thread_cpu_us": 750000
+                },
+                "after": {
+                  "wall_us": 803664,
+                  "thread_cpu_us": 812500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "7b5f430f82bcd137d98b6228cc59d036f5f7eb5c5a8301e8a9fe463643e2b8cc",
+              "after": "57ed78597c7c3f93e28419bc0292cec4f3d38febb0f48071ed0541bd73ac2c66"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.529536799993366,
+                "working_set_bytes": 60030976
+              },
+              "after": {
+                "wall_seconds": 2.600687999976799,
+                "working_set_bytes": 59465728
+              }
+            },
+            "recovered": [
+              "shallow_holdout_seed20344735",
+              "shallow_holdout_seed20344737",
+              "shallow_holdout_seed20344758",
+              "shallow_holdout_seed20344770"
+            ],
+            "all_cpu_ratio": 0.9797297297297297,
+            "all_wall_ratio": 1.0328559156139536
+          },
+          {
+            "round": 2,
+            "groups": {
+              "all": {
+                "count": 72,
+                "before": {
+                  "wall_us": 2414202,
+                  "thread_cpu_us": 2437500
+                },
+                "after": {
+                  "wall_us": 2315816,
+                  "thread_cpu_us": 2296875
+                }
+              },
+              "common_success": {
+                "count": 68,
+                "before": {
+                  "wall_us": 1608375,
+                  "thread_cpu_us": 1609375
+                },
+                "after": {
+                  "wall_us": 1503603,
+                  "thread_cpu_us": 1484375
+                }
+              },
+              "common_failure": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              },
+              "recovered": {
+                "count": 4,
+                "before": {
+                  "wall_us": 805827,
+                  "thread_cpu_us": 828125
+                },
+                "after": {
+                  "wall_us": 812213,
+                  "thread_cpu_us": 812500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "8d566c6a3305c51044bd2c608ec3b7defb408386661f7272805cfabb8fd0357e",
+              "after": "c5116a90f3d1019f7e532f15544fdfcb9ba2bfa3d7dc356cba648699b55522f4"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.6068658999865875,
+                "working_set_bytes": 58990592
+              },
+              "after": {
+                "wall_seconds": 2.481631899951026,
+                "working_set_bytes": 59174912
+              }
+            },
+            "recovered": [
+              "shallow_holdout_seed20344735",
+              "shallow_holdout_seed20344737",
+              "shallow_holdout_seed20344758",
+              "shallow_holdout_seed20344770"
+            ],
+            "all_cpu_ratio": 0.9423076923076923,
+            "all_wall_ratio": 0.9592469892743026
+          },
+          {
+            "round": 3,
+            "groups": {
+              "all": {
+                "count": 72,
+                "before": {
+                  "wall_us": 2300549,
+                  "thread_cpu_us": 2296875
+                },
+                "after": {
+                  "wall_us": 2303015,
+                  "thread_cpu_us": 2218750
+                }
+              },
+              "common_success": {
+                "count": 68,
+                "before": {
+                  "wall_us": 1538135,
+                  "thread_cpu_us": 1531250
+                },
+                "after": {
+                  "wall_us": 1506039,
+                  "thread_cpu_us": 1406250
+                }
+              },
+              "common_failure": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              },
+              "recovered": {
+                "count": 4,
+                "before": {
+                  "wall_us": 762414,
+                  "thread_cpu_us": 765625
+                },
+                "after": {
+                  "wall_us": 796976,
+                  "thread_cpu_us": 812500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "51d624269ab310efbbe80fda5e8191096f14821a279bd91eb46e33235ddd1098",
+              "after": "eab42591880a7a91887c12545934ac2904df550b7f4c22ec6534b6543de60c48"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.474643900000956,
+                "working_set_bytes": 59510784
+              },
+              "after": {
+                "wall_seconds": 2.4762862999923527,
+                "working_set_bytes": 60547072
+              }
+            },
+            "recovered": [
+              "shallow_holdout_seed20344735",
+              "shallow_holdout_seed20344737",
+              "shallow_holdout_seed20344758",
+              "shallow_holdout_seed20344770"
+            ],
+            "all_cpu_ratio": 0.9659863945578231,
+            "all_wall_ratio": 1.0010719180508652
+          }
+        ],
+        "independent_side_medians": {
+          "all": {
+            "before": {
+              "wall_us": 2343231,
+              "thread_cpu_us": 2312500
+            },
+            "after": {
+              "wall_us": 2315816,
+              "thread_cpu_us": 2265625
+            }
+          },
+          "common_success": {
+            "before": {
+              "wall_us": 1567948,
+              "thread_cpu_us": 1562500
+            },
+            "after": {
+              "wall_us": 1506039,
+              "thread_cpu_us": 1453125
+            }
+          },
+          "common_failure": {
+            "before": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            },
+            "after": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            }
+          },
+          "recovered": {
+            "before": {
+              "wall_us": 775283,
+              "thread_cpu_us": 765625
+            },
+            "after": {
+              "wall_us": 803664,
+              "thread_cpu_us": 812500
+            }
+          }
+        },
+        "median_within_pair_all_cpu_ratio": 0.9659863945578231,
+        "ratio_of_independent_side_all_cpu_medians": 0.9797297297297297,
+        "median_within_pair_all_wall_ratio": 1.0010719180508652,
+        "cli_side_medians": {
+          "before": {
+            "wall_seconds": 2.529536799993366,
+            "maximum_working_set_bytes": 60030976
+          },
+          "after": {
+            "wall_seconds": 2.481631899951026,
+            "maximum_working_set_bytes": 60547072
+          }
+        },
+        "source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+        "exe_sha": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+        "baseline_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+        "baseline_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+        "counts": {
+          "all": 72,
+          "common_success": 68,
+          "common_failure": 0,
+          "recovered": 4
+        },
+        "timing": "same GCC Release O3; all failures included; Win32 CPU quantized; independent-side median ratio differs from median per-pair ratio; process WS includes whole JSON/witness/validators"
+      }
+    },
+    "timing_caveat": "Recovery portfolio costs more on full202; per-pair CPU median+9.19%, independent-side median ratio+4.49%. Retain failure costs and raw pair ratios; not an overall speedup. 72 favorable CPU does not generalize.",
+    "old_frozen_R31_tex_sha": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82",
+    "single_file": "problem.h plus standard library; .inc fully expanded, no runtime external oracle/witness/third-party dependency",
+    "support": "Original R43 portfolio preserved; additional recovery only after failed original search. n<=4096/consumer<=512, charged12M profile+affinity work, seed container/sorting/generation costs not included in charged count. No infeasibility certificate on exhaustion.",
+    "default_build_evidence": "reports/build-batch44.txt",
+    "LF_hash_note": "Preparation normalized-string SHA was corrected; all freeze and functional metadata use actual file bytes.",
+    "default_exe_path": "build/aicore_bench.exe",
+    "measured_exe_path": "research/batch44/measured-release-aicore_bench.exe",
+    "performance_executed_exe_path": "research/batch44/build/aicore_bench.exe",
+    "functional_O2_exe_path": "research/batch44/aicore_bench.exe",
+    "data_inputs": {
+      "data/hard-corpus-resumed.json": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+      "data/nested-forkjoin-new-batch38.json": "5ff191bfccddf86e0d46baa5dbafe488756ecfa7a3dfaaa282aae621cf99559b",
+      "data/shallow-profile-gold-batch44.json": "bda8317127310503366bf717c07f983826e5213ee62052c556a6454b5915878f",
+      "data/shallow-heldout-batch44.json": "c1a4ce0fcefcdcba82269e375057bc8828a30d7e04d19b1dd2ffcbaed51d2af1",
+      "data/priority-gold-batch42.txt": "022f174020e7da9632a706f77301d79b5d2591d82bdbcd9417c24d226309ae23",
+      "data/resource-cliques-batch31.json": "2d6930307fbd7a6c166212249e18b397834c930e08b4a4c423f240b9e9669747",
+      "data/numeric-controls-batch42.json": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+      "data/numeric-parallel-batch42.json": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+      "data/numeric-parallel-valid-batch42.json": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+      "data/scaled-serial-controls-batch42.json": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473"
+    }
+  }
+}

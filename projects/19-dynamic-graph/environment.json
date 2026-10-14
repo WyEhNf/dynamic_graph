@@ -1,0 +1,16 @@
+{
+  "validated_on": "2026-10-10",
+  "platform": "Windows x64",
+  "python_base": "C:/Users/admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "python_version": "3.12.14",
+  "python_environment": ".venv",
+  "python_packages": [],
+  "cmake": {"path": "C:/Program Files (x86)/CMake/bin/cmake.exe", "version": "4.2.0"},
+  "c_compiler": {"path": "E:/mingw64/bin/gcc.exe", "version": "15.2.0"},
+  "cxx_compiler": {"path": "E:/mingw64/bin/g++.exe", "version": "15.2.0", "standard": "C++20"},
+  "clang_frontend": {"path": "C:/Program Files/LLVM/bin/clang.exe", "version": "21.1.0"},
+  "runtime_dll_search_path": "E:/mingw64/bin",
+  "gpu_required": false,
+  "npu_required": false,
+  "official_toolchain_confirmed": false
+}

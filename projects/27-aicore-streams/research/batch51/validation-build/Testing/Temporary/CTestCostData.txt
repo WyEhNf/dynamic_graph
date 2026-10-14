@@ -1,0 +1,15 @@
+scheduler_semantics 1 0.47135
+submission_model_and_json 1 0.53128
+assignment_grouping_equivalence 1 0.456555
+serial_frontier_exact_equivalence 1 0.458658
+local_batch_quick 1 0.547694
+numeric-controls_int64 1 0.50964
+numeric-parallel_int64 1 0.301312
+numeric-parallel-valid_int64 1 0.259495
+scaled-serial-controls_int64 1 1.50536
+numeric_priority_exact_gold 1 0.499414
+shallow_profile_bigint_gold 1 0.491986
+workspace_projection_bigint_gold 1 0.495738
+consumer_group_bigint_gold 1 0.471277
+remaining_direct_release_cut_bigint_gold 1 0.474559
+---

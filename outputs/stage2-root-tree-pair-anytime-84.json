@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791771604.2648475,
+  "report_sha256": "5205592cbb12da0acc0fbbc43dbd0cd9fbb8ec510d4a71b67f2e15923f263956",
+  "source_provenance_sha256": "71dc7cd20fa19e237ae3687217d3251584eefcaaca2a3b44bec6d4c450d5ed1b",
+  "original_inputs": 84,
+  "legal_incumbents": 65,
+  "model_certificates_retained": 19,
+  "actual_full_output_replays": 675,
+  "complete_proposals": 480,
+  "before_copies": 11491,
+  "dp_copies": 11487,
+  "after_copies": 11456,
+  "improved_vs_initial": 32,
+  "improved_vs_dp": 30,
+  "regressions_vs_dp": [
+    {
+      "input_sha256": "ca93bf4ab93ad82421ae4da463775dc2d4c7ceb7bfdaba399a02f1588a2c0b9d",
+      "initial": 23,
+      "dp": 21,
+      "anytime": 23
+    }
+  ],
+  "actual_pairs": 64,
+  "processed_states": 509447,
+  "real_graph_reopens": 48760,
+  "real_graph_stale": 908,
+  "immutable_labels_replayed": 526036,
+  "actual_open_prefixes": 15560,
+  "actual_unfinished_prefixes": 44,
+  "outcomes": {
+    "not_attempted_zero_or_no_incumbent": 31,
+    "partial_budget": 24,
+    "partial_outlet_limit": 21,
+    "completed": 8
+  },
+  "success_only_means": {
+    "initial": {
+      "copy_output": 0.1089416849548198,
+      "copy_original": 0.1406163139470098
+    },
+    "dp": {
+      "copy_output": 0.10819217227832945,
+      "copy_original": 0.1394876996535019
+    },
+    "anytime": {
+      "copy_output": 0.1065703700395125,
+      "copy_original": 0.137713552539288
+    }
+  },
+  "scope": "All original84 retained, all480 complete proposals and65initial/best/DP outputs independently physically replayed. All saved immutable labels/OPEN/unfinished independently advanced from original operands and physical incoming prefix. Same frozen selector and initial baseline perpair, cumulative20k/500ms and16outlets eachpair. 30betterDP/one2COPY worse retained; not universal optimum/default/full336 or official Level. Diagnostic export/IO and validation outside budget; timings shared-functional only."
+}

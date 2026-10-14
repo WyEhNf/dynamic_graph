@@ -1,0 +1,1 @@
+{"method": "fresh serialized input/output; no scheduler call or internal state; alternate signed inputs", "attempted": 60, "verified": 60, "missing_success_outputs": 0, "elapsed_seconds": 5.958627599989995}

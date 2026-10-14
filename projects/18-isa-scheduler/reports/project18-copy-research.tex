@@ -1,0 +1,190 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,array}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{xurl}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{4pt}
+\title{18号赛题：共享根寿命、COPY必要界与受限搜索}
+\author{R125--R143独立研究记录}
+\date{2026年10月11日；旧报告与默认调度器均保留}
+\begin{document}
+\maketitle
+\begin{abstract}
+本轮研究共享根的真实物理COPY成本，先用固定输入与已保存合法输出定位差距，再构造连续根使用段、归一化年龄势函数和到最后消费的原发射距离下界。
+独立原JSON小图oracle完成409个初始最优实例，正必要界完成69例；进一步耗尽136个小图的物理年龄状态图，检查72744个可完结前缀，其中34514个有正剩余成本界，同时保留12个闭合不可行图与1344个无后续完成的合法前缀。
+固定原16张共享图，根段与势函数排序无新改善；寿命排序及根段组合仅减少3条COPY，未恢复失败，因此未推广至完整336或默认策略。
+新16张持出图保留15合法、1未知，候选保存集合的COPY从1249逐步降至1118；该结果不替代原分布，也不是单一预算的在线成绩。
+新必要界提高了原336等权必要COPY/输出均值至11.987\%，但该结论仅限严格身份模型和自生成分布，不是官方Level判定。
+\end{abstract}
+
+\section{规范与研究起点}
+\href{https://www.chaspark.com/\#/races/competitions/1326690549003280384}{官方18题正文}
+仍标2026年10月10日09:18更新，允许DAG重排和插入COPY，窗口$W=2^b$，$b=2,3,4,5$，$t\#W$为合法边界。
+Level条目为0、1、3；Level 2、COPY分母与block平均权重没有定义。没有额外GET、重算、spill、删除或等值依赖替换授权。
+本研究保持GET/SET/ADD/MULW原节点各一次、每个原GET身份不同、有序参数和同寄存器RAW/WAR/WAW。
+本地整数重放采用8位有符号、16位无符号、32位有符号wrap配置，均非官方机器位宽声明。
+
+冻结R109原336图记录为272合法、47已有身份模型证书、9预算失败、8启发失败；合法输出192929 COPY，成功子集等权COPY/输出13.7396\%、COPY/原41.5616\%。
+这些子集均值不能充当全部336的得分，64个未输出输入仍保留。
+前轮离线分析将其中15例追加判为严格模型不可行、2例矩阵仍未知；这改变研究证据而未改默认在线结果。
+另一新72图记录62合法、9预算失败、1启发失败，亦全部保留。
+本轮没有重跑或覆盖旧v14、R102、R109及可行性报告。
+
+\section{直接相关工作与适用边界}
+Sugita等CC2023原文\cite{sugita}讨论STRAIGHT距离ISA的生成，含spill、SSA消解、move insertion。
+其死槽交换与活身份保留帮助建立物理窗口构造；完整性依赖额外机制，不能宣称任意COPY-only图可解，也不能把固定顺序relay结论推广为全重排COPY最优。
+本文最新副本年龄而非实际COPY来源年龄的区分，也来自物理身份必须持续可用这一条件。
+
+Sethi--Ullman\cite{sethi}对表达式树寄存器需求排序，是后续树子序规划的起点；共享DAG及年龄窗口有额外约束。
+Chen的min-reg调度\cite{chen}研究消费者聚类、压力减少及精确参照，支持按消费者寿命研究调度。
+该文目标是峰值寄存器数，与本题COPY条数不同；本文所有质量结论来自真实发射及独立验证。
+先前矩阵rook minor\cite{harvey}只提供保留身份的必要容量界，不能当成已取得的COPY减少。
+
+\section{固定差距与根使用段候选}
+R124按输入SHA联接既有合法输出与已审核必要界。
+交叉共享族14合法共9755 COPY，旧必要总界6993，故2762只是潜在可减少数量的\emph{上界}，不保证可达。
+梯形族8334 COPY与8330界的差距只有4，不再以COPY总量选择优化对象。
+1024节点、W8实例实际1573 COPY全归属于5个共享GET；算术身份COPY为零。
+这说明共享根几乎长驻，而非算术carry复制导致主要成本。
+
+R125单原算术前缀beam按真实最新副本年龄、GET出生与剩余consumer计费，原16输入9755降至9739。
+R127加入同GET引用集合的连续使用段，最多16条，保留单条选择，按已经发射的原算术条数分桶比较。
+段内逐条执行真实原节点、COPY与最后消费，无合并、重算或参数交换；原16没有额外改善。
+所有匹配、状态或时间失败都是受限搜索失败，不作为无解证书。
+W1明确不支持；直接Block的W2边界另外验证，官方JSON仍要求W4及以上。
+
+纯匹配条件为唯一GET寄存器、互不相交SET寄存器、完整私有算术spine，至多16枝、64根。
+带hazard或共享算术不匹配时保留旧结果。预算从PreparedGraph之前计时，涵盖匹配、搜索、恢复与emit；外部独立校验另计完整墙时。
+每次仅以真实COPY更少且四类检查通过的候选替换已保存合法incumbent，不重跑旧250ms策略制造比较基线。
+
+\section{归一化GET年龄的必要界}
+选$S$个有消费者的原GET，$1\le S<W$。
+当前未来必需的选根数为$r$，各最新副本年龄为$a_i\in[1,W]$，定义
+\[ \Phi=\frac{\sum_i a_i}{W-r}. \]
+选根COPY的势变为$(r-d_{\rm latest})/(W-r)\ge-1$。
+引用旧副本时$d_{\rm latest}\le d_{\rm used}\le W$，不能将两者写成同一值；其它COPY的势变非负。
+原指令先使$r$个年龄增加1，贡献$r/(W-r)$；最后消费根逐个退休，临时年龄不超过$W+1$。
+一次退休势下降最多
+\[D=\frac{W(W+1)}{(W-S)(W-S+1)}.\]
+各根至多退休一次，GET新出生贡献非负，SET及未用原指令也推进物理槽。
+
+由raw原DAG定义$k_z$：选根是$z$的严格祖先，且该根某直接原consumer是$z$的严格后代。
+因此该根在发射$z$前后持续future-live，$r\ge k_z$。
+首尾$\Phi=0$给出
+\[C\ge\max\left(0,\left\lceil\sum_z\frac{k_z}{W-k_z}-SD\right\rceil\right).\]
+实现使用Fraction精确求和及ceil；不同根集合只能取max。
+祖先后代仅来自原data边，忽略内存顺序会弱化界；S达到W时拒绝该公式。
+此界不证明可达性，也不授权新GET、别名或重算。
+
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+原节点数&W&旧必要COPY界&新必要界&保存实际COPY\\
+\midrule
+1024&8&138&540&1573\\
+1024&16&233&280&321\\
+4096&16&1162&1518&1815\\
+4096&32&264&267&270\\
+\bottomrule
+\end{tabular}
+\end{center}
+旧界来自R99逐输入原件，实际COPY为R125保存对照；完整新证书在R131及R134原件。
+R134对全部336保留输入产生135非空正界、扫描4336子集，用时9.596秒。
+与旧必要界逐SHA取max，34输入加强；全部336必要COPY/输出等权均值由11.7792\%升至11.9870\%，COPY/原为44.0523\%。
+其中272已有合法输入的明确子集，必要COPY/输出10.0864\%升至10.2852\%，COPY/原35.6018\%。
+全336含模型不可行图，不能称官方有效block分布；子集也不能替代全评分。
+
+剩余前缀可用$C_{\rm future}\ge\lceil G_{\rm remaining}+\Phi_{\rm current}-TD\rceil$，其中T是尚未完成消费的选根数，包括未出生根。
+R132将其用于排序，原16仍无新改善；这说明加强必要界不自动产生更好的搜索。
+
+\section{到最后消费的原发射距离}
+对当前活身份$v$，取所有原直接consumer及其data祖先的并集$U_v$，去掉已完成原节点，令$M_v=|U_v\setminus completed|$。
+已完成consumer的所有祖先已完成；余下节点全必须在当前到最终直接消费之间发射。
+每次自身COPY最新年龄最多净减$W-1$；其它发射只增龄，最终消费之后临时年龄最多$W+1$，所以
+\[c_v\ge\max\left(0,\left\lceil\frac{a_v+M_v-W-1}{W-1}\right\rceil\right).\]
+未出生GET以严格core节点数K和最终consumer计入$K+1$条原发射，可取
+\[c_v\ge\max\left(0,\left\lceil\frac{K+1-W}{W-1}\right\rceil\right).\]
+不同身份自身COPY归属互斥，可相加；同身份多界取max，不重复加。
+候选以此界、前述势界与消费者数量界的最大值排序，未将beam说成完整最优算法。
+
+\section{独立验证、实际收益与负面证据}
+R129新400图原物理oracle为340最优、27闭合不可行、33未知；正界完成最优为0，不能据此夸大正界验证。
+R130补120长根spine，69完成最优、51未知，全部有正界，0矛盾。
+两批合计409初始最优、27否定、84未知，初始正界完成69。
+非最新来源COPY另有raw输出用例，通过原身份与符号检查；证书选根、窗口、分数及计数篡改拒绝。
+
+R136/R137对136新图显式耗尽可达物理状态图，允许原ready节点与全部活身份COPY，随后反向Dijkstra求每个可完结状态剩余最少COPY。
+parser、data/hazard、年龄转移均独立，只导入待审计floor。
+124可行图检查72744有限状态，34514状态floor为正，1344合法前缀无法继续完成；另12图完整闭合不可行。
+两批未知0、矛盾0；单元测试另外强制小state/time限制，保持unknown而非否定。
+SET没有临时身份，重复引用去重计算consumer但保持有序args；COPY旧副本与最新副本在最新年龄状态中等价归并。
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+固定比较&输入/合法&之前COPY&之后COPY&整批秒\\
+\midrule
+R127根段，原族&16/14&9739&9739&9.399\\
+R128根段，新族&16/15&1249&1129&0.869\\
+R132势排序，原族&16/14&9739&9739&7.684\\
+R133势排序，新族&16/15&1129&1124&0.672\\
+R138寿命单条，原族&16/14&9739&9738&8.901\\
+R139寿命单条，新族&16/15&1124&1120&0.556\\
+R140寿命根段，原族&16/14&9739&9736&12.380\\
+R141寿命根段，新族&16/15&1124&1120&0.988\\
+\bottomrule
+\end{tabular}
+\end{center}
+各候选beam1、4分别1000ms，原族保留1旧预算失败及1旧模型证书，新族保留1受限未知；全部0恢复。
+每成功结果独立原身份permutation、有序参数/寄存器、符号及三整数重放通过。
+新族改变真实原拓扑、opaque ID、左右参数、根段交叉、最后消费与首尾未用GET。
+离线取两个寿命候选的逐输入最低COPY，新族1118；这不是一个单1000ms在线调度器成绩。
+原大图只减少2条、新小族收益不能冒充全336达Level，因此默认auto和R109完整质量冻结不变。
+
+\section{复现、资源成本和工作余量}
+R126、R135、R142分别保存实际源码快照；R135还完整保存R129旧script及R130新增正例选项版本，按历史SHA核对。
+R136/R137审计producer均同SHA，负例wrapper另存；所有原inputs、输出、original orders及报告有SHA。
+R143为静态JSON联接汇总，不运行调度或改变旧输出。
+实验采用本机Ryzen 9 8945HX、32线程、约31.3GiB RAM、Windows 11、CPython3.12.14，标准库单Python进程，无GPU、云算力或付费扩容。
+本批未连续采样峰值RSS，不能给出实测峰值承诺；窗口内其他用户应用占用资源，未关闭或干扰。
+
+原段及寿命功能批均含独立检查，时间不是隔离性能因果结论。
+R129/R130分别6.059/12.917秒；R136/R137分别0.232/1.037秒，预声明每图500ms、最多20000状态。
+未知检查阶段分开记录；强制unknown控制另测。完整336仅新离线必要界运行9.596秒，没有扩大无收益质量benchmark。
+就本轮规模，最低建议2核、8GiB RAM，建议4核、16GiB及500MiB证据存储；这些是规划建议而非已经测出的硬下限或峰值。
+精确大图的年龄状态空间随live规模和窗口迅速增长，不能按小图吞吐估算4096节点完整精确搜索。
+
+一个开发者下一阶段估算：树形真实年龄子树序DP及独立小图对照2--3工作日；共享根激活/退休前沿研究2--3工作日；新trace接入、同源对照与完整报告1--2工作日，总5--8工作日，不承诺Level门槛。
+fixture生成、原JSON校验及报告可并行，算法和真实数据语义核实需集中评审。
+先优先padded/ragged树仍有较大弱界差距，或证明共享族差距不可达；不继续以增加预算换偶然成功，不改困难分布或分母。
+
+在项目目录中，用新的round名称保留旧证据：
+\begin{quote}\small
+\begin{verbatim}
+.venv/Scripts/python.exe -m unittest tests.test_spine_lifetime -v
+.venv/Scripts/python.exe scripts/research_lifetime_state_audit.py
+  --round user-lifetime-audit --count 120
+  --budget-ms 500 --max-states 20000
+.venv/Scripts/python.exe scripts/research_spine_lifetime_probe.py
+  --round user-lifetime-probe --span 16
+\end{verbatim}
+\end{quote}
+长命令换行处需在PowerShell中合并为同一行执行。
+不要重跑历史freeze脚本或覆盖已有round。新报告与旧用户打开的文档独立。
+
+\begin{thebibliography}{9}
+\bibitem{sugita} Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, Shuichi Sakai.
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA. CC 2023.
+\href{https://doi.org/10.1145/3578360.3580263}{DOI:10.1145/3578360.3580263}.
+\href{https://www.rsg.ci.i.u-tokyo.ac.jp/lab/en/assets/files/cc2023-sugita.pdf}{作者原PDF}.
+\bibitem{sethi} Ravi Sethi, Jeffrey D. Ullman.
+The Generation of Optimal Code for Arithmetic Expressions. JACM, 1970.
+\href{https://doi.org/10.1145/321607.321620}{DOI:10.1145/321607.321620}.
+\bibitem{chen} Gang Chen. Optimal and Heuristic Min-Reg Scheduling Algorithms for GPU Programs.
+\href{https://arxiv.org/abs/2303.06855v4}{作者预印本arXiv:2303.06855v4}.
+\bibitem{harvey} Daniel J. Harvey, David R. Wood.
+Treewidth of the Line Graph of Complete and Complete Multipartite Graphs.
+\href{https://arxiv.org/abs/1210.8205v2}{作者预印本arXiv:1210.8205v2}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,13 @@
+name,n,pass,valid,deadline,T,peak,solve_us,solve_thread_cpu_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,optimal_certificate,time_lower_bound,memory_lower_bound,error
+"resource_clique_aic-heavy_n16_seed20322631",16,1,1,8573,8573,0,84,0,1,1,1,0,1,0,0,1,8573,0,""
+"resource_clique_aiv-heavy_n16_seed20322632",16,1,1,16000000000,16000000000,0,9,0,1,1,1,0,1,0,0,1,16000000000,0,""
+"resource_clique_memory-heavy_n16_seed20322633",16,1,1,16000000000,16000000000,600000000,7,0,1,1,1,0,1,0,0,1,16000000000,600000000,""
+"resource_clique_exact-half_n16_seed20322634",16,1,1,56,56,0,303,0,6,4,1,120,126,0,0,1,56,0,""
+"resource_clique_aic-heavy_n512_seed20372231",512,1,1,267441,267441,0,67,0,1,1,1,0,1,0,0,1,267441,0,""
+"resource_clique_aiv-heavy_n512_seed20372232",512,1,1,512000000000,512000000000,0,70,0,1,1,1,0,1,0,0,1,512000000000,0,""
+"resource_clique_memory-heavy_n512_seed20372233",512,1,1,512000000000,512000000000,600000000,151,0,1,1,1,0,1,0,0,1,512000000000,600000000,""
+"resource_clique_exact-half_n512_seed20372234",512,1,1,1792,1792,0,8781,0,10,8,1,212,222,0,0,1,1792,0,""
+"resource_clique_aic-heavy_n10000_seed21321031",10000,1,1,5034350,5034350,0,2499,15625,1,1,1,0,1,0,0,1,5034350,0,""
+"resource_clique_aiv-heavy_n10000_seed21321032",10000,1,1,10000000000000,10000000000000,0,3076,15625,1,1,1,0,1,0,0,1,10000000000000,0,""
+"resource_clique_memory-heavy_n10000_seed21321033",10000,1,1,10000000000000,10000000000000,600000000,2938,0,1,1,1,0,1,0,0,1,10000000000000,600000000,""
+"resource_clique_exact-half_n10000_seed21321034",10000,1,1,35000,35000,0,108180,93750,10,8,1,66,76,0,0,1,35000,0,""

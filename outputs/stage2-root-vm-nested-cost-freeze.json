@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791780486.4799025,
+  "acceptance_sha256": "b477bfd5c88faf637fc488f63d294549fdb7abaf6b3677ae9b33a0e9ddfa318e",
+  "frozen_files": 672,
+  "actual_whole_byte_audit_sha256": "8ca98e0637198054be2ebfca1b46d7e6976794e834ef56e592a30f2f81534ae9",
+  "scope": "Final frozen sources/buildprovenance/EXE/rawlogs/reports match every origin. Separate actualroot audit independently verified all174wholeC bytes and87pairs; freeze review does not rerun performance or output comparisons."
+}

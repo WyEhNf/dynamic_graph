@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791712207.7684639,
+  "actual_C_files": 378,
+  "sources": 13,
+  "families": 63,
+  "source_files": 126,
+  "root_rerun_contracts": [
+    {
+      "name": "native-contract.exe",
+      "result": {
+        "passed": true,
+        "opcode_coverage": 33,
+        "phase1_cases": 404,
+        "original_contract_cases": 480,
+        "comparisons": 934,
+        "stack_limit": 4096,
+        "mechanism": "threaded vector stack"
+      }
+    },
+    {
+      "name": "portable-contract.exe",
+      "result": {
+        "passed": true,
+        "opcode_coverage": 33,
+        "phase1_cases": 404,
+        "original_contract_cases": 480,
+        "comparisons": 934,
+        "stack_limit": 4096,
+        "mechanism": "threaded vector stack"
+      }
+    },
+    {
+      "name": "old404-contract.exe",
+      "result": {
+        "passed": true,
+        "opcode_coverage": 33,
+        "comparisons": 404,
+        "stack_limit": 4096,
+        "decode_phase_only": true
+      }
+    },
+    {
+      "name": "old480-contract.exe",
+      "result": {
+        "passed": true,
+        "opcode_coverage": 33,
+        "phase1_cases": 404,
+        "comparisons": 480,
+        "raw_stack_operations": 100000,
+        "stack_limit": 4096,
+        "TOS2_only": true
+      }
+    },
+    {
+      "name": "ubsan-contract.exe",
+      "result": {
+        "passed": true,
+        "opcode_coverage": 33,
+        "phase1_cases": 404,
+        "original_contract_cases": 480,
+        "comparisons": 934,
+        "stack_limit": 4096,
+        "mechanism": "threaded vector stack"
+      }
+    }
+  ],
+  "CLI_error_contracts": 7,
+  "effective_GNU_and_fallback_verified": true,
+  "machine_code_observation": "GNU15.2 tailmerged to3 dispatch sites; removed inner binary table; compiler auto-inlined unchanged source poplambda; about24KiB function vs5.6KiB decoded; not isolated branch-only effect",
+  "candidate_exe_sha256": "e27cb40373ab6b76e379513fc32e4d603544eb48778518a25f2edbe81428b299",
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/small-contract-manifest.json": "ce17168a3347ec8fbc645b42857183fd12cf9d77a22a26fb7ca9d666f4d2b0b7",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/correctness/report.json": "cd113e8c70eb13caf277c031c987c1983dceb965accb344db77bf4fd15613f71"
+  },
+  "scope": "All378 complete actualC files, all original source/harness/oracle/input/Metadata SHA,63 six-backend step groups,7 six-backend CLI errors and126 frozen inputs checked; root reran all5 frozen contracts including GNU934/fallback934/old404/old480+100k/ClangUBSan934. No performance/default/N10000 or universal-correctness claim; fullCTest final terminal checkpoint pending."
+}

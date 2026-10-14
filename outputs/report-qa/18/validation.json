@@ -1,0 +1,11 @@
+{
+  "project": 18,
+  "source": "F:\\Hackathon\\projects\\18-isa-scheduler\\reports\\project18-research.tex",
+  "source_sha256": "5deb2fdc8c9cd2036f6438418a40bd465ee03d8f69c54e3ad605812175fc08a8",
+  "pdf_sha256": "3cfc281e1a277d51ff424ae2f9943ca69b2010b77eb92210d1b7e68d924a6211",
+  "pages": 25,
+  "warnings": [],
+  "compile_render_wall_seconds": 20.849480628967285,
+  "visual_review": "passed: all 25 pages inspected via contact sheets; page 21 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+  "visual_reviewed_unix": 1791667846.7648284
+}

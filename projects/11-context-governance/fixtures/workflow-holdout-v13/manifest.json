@@ -1,0 +1,13 @@
+{
+  "origin": "self-created",
+  "case_ids": [
+    "transactional_edits",
+    "merge_config",
+    "patch_text",
+    "cache_trace"
+  ],
+  "version": 13,
+  "constructed_unix": 1791656338.9102259,
+  "generator_sha256": "0120c7191b7e81dc6f6f10903ebbc1a15bc7a540ab5d6ad5ae5c050d88ca0e11",
+  "limitations": "Four synthetic dictionary/string workflows, not real-repository patch coverage"
+}

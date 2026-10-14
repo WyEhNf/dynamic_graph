@@ -1,0 +1,83 @@
+{
+  "before": "v14_auto",
+  "after": "tree_portfolio",
+  "corpus_sha256": "fb5aedc6b09ce27252444e43f26e482abe5a30407b91fa56fb593e050c1b24cd",
+  "case_count": 128,
+  "joint_successes": 94,
+  "status_pairs": {
+    "verified->verified": 94,
+    "proven_infeasible_under_model->proven_infeasible_under_model": 29,
+    "budget_exhausted->verified": 2,
+    "verified->budget_exhausted": 3
+  },
+  "quality_pairs": {
+    "better": 14,
+    "same": 80
+  },
+  "before_copies_joint": 43297,
+  "after_copies_joint": 42605,
+  "median_speedup_joint": 0.9579116507702066,
+  "families": {
+    "balanced_tree": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 14,
+        "verified->verified": 18
+      },
+      "joint_successes": 18,
+      "before_copies": 10046,
+      "after_copies": 10046,
+      "median_speedup_joint": 0.9500288030860203
+    },
+    "padded_tree": {
+      "status_pairs": {
+        "verified->verified": 26,
+        "proven_infeasible_under_model->proven_infeasible_under_model": 6
+      },
+      "joint_successes": 26,
+      "before_copies": 20138,
+      "after_copies": 19446,
+      "median_speedup_joint": 0.9011417741603925
+    },
+    "ragged_tree": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 9,
+        "verified->verified": 23
+      },
+      "joint_successes": 23,
+      "before_copies": 13113,
+      "after_copies": 13113,
+      "median_speedup_joint": 0.9509487552068984
+    },
+    "skew_tree": {
+      "status_pairs": {
+        "verified->verified": 27,
+        "budget_exhausted->verified": 2,
+        "verified->budget_exhausted": 3
+      },
+      "joint_successes": 27,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 0.9991865023644756
+    }
+  },
+  "before_metrics": {
+    "latency_all_ms": {
+      "p50": 46.47390003083274,
+      "p95": 314.0358999953605,
+      "p99": 339.3577000242658
+    },
+    "equal_weight_copy_output_success": 0.09773761838042042,
+    "equal_weight_copy_original_success": 0.12976829292847938,
+    "failure_rate": 0.2421875
+  },
+  "after_metrics": {
+    "latency_all_ms": {
+      "p50": 50.44740001903847,
+      "p95": 300.1037999638356,
+      "p99": 345.3783000004478
+    },
+    "equal_weight_copy_output_success": 0.09386191450041197,
+    "equal_weight_copy_original_success": 0.12207667032877605,
+    "failure_rate": 0.25
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "groups": {
+        "all": {
+          "count": 202,
+          "before": {
+            "wall_us": 18997815,
+            "thread_cpu_us": 18750000
+          },
+          "after": {
+            "wall_us": 22156215,
+            "thread_cpu_us": 21718750
+          }
+        },
+        "common_success": {
+          "count": 139,
+          "before": {
+            "wall_us": 6404716,
+            "thread_cpu_us": 6328125
+          },
+          "after": {
+            "wall_us": 6571700,
+            "thread_cpu_us": 6484375
+          }
+        },
+        "common_failure": {
+          "count": 61,
+          "before": {
+            "wall_us": 12377465,
+            "thread_cpu_us": 12265625
+          },
+          "after": {
+            "wall_us": 15364010,
+            "thread_cpu_us": 15015625
+          }
+        },
+        "recovered": {
+          "count": 2,
+          "before": {
+            "wall_us": 215634,
+            "thread_cpu_us": 156250
+          },
+          "after": {
+            "wall_us": 220505,
+            "thread_cpu_us": 218750
+          }
+        }
+      },
+      "raw_sha": {
+        "before": "e435bc59492ead13cc0f894cb233cff071ec70b29907e0793c0ffbce1b4d3793",
+        "after": "dd8aa6a641e734b31ac55a7150deb5388242eb1de982556037421810b2cf8c49"
+      },
+      "cli": {
+        "before": {
+          "wall_seconds": 20.016425399982836,
+          "working_set_bytes": 316047360
+        },
+        "after": {
+          "wall_seconds": 23.28995780000696,
+          "working_set_bytes": 316243968
+        }
+      },
+      "recovered": [
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+      ],
+      "all_cpu_ratio": 1.1583333333333334,
+      "all_wall_ratio": 1.1662506977776128
+    },
+    {
+      "round": 2,
+      "groups": {
+        "all": {
+          "count": 202,
+          "before": {
+            "wall_us": 21983504,
+            "thread_cpu_us": 21250000
+          },
+          "after": {
+            "wall_us": 24210913,
+            "thread_cpu_us": 23203125
+          }
+        },
+        "common_success": {
+          "count": 139,
+          "before": {
+            "wall_us": 7408321,
+            "thread_cpu_us": 7250000
+          },
+          "after": {
+            "wall_us": 7459220,
+            "thread_cpu_us": 7171875
+          }
+        },
+        "common_failure": {
+          "count": 61,
+          "before": {
+            "wall_us": 14364381,
+            "thread_cpu_us": 13812500
+          },
+          "after": {
+            "wall_us": 16481345,
+            "thread_cpu_us": 15796875
+          }
+        },
+        "recovered": {
+          "count": 2,
+          "before": {
+            "wall_us": 210802,
+            "thread_cpu_us": 187500
+          },
+          "after": {
+            "wall_us": 270348,
+            "thread_cpu_us": 234375
+          }
+        }
+      },
+      "raw_sha": {
+        "before": "c9b0cf2eebaa4a290ae0372208a6c9f43930325e6b2a2d4f67cd084aecd32097",
+        "after": "8bf281e588d61d53676af4dfb6243f6a28c5d1a398c8da85fb91a466c692bebe"
+      },
+      "cli": {
+        "before": {
+          "wall_seconds": 22.99850810004864,
+          "working_set_bytes": 315957248
+        },
+        "after": {
+          "wall_seconds": 25.235057300014887,
+          "working_set_bytes": 316268544
+        }
+      },
+      "recovered": [
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+      ],
+      "all_cpu_ratio": 1.0919117647058822,
+      "all_wall_ratio": 1.1013218365916553
+    },
+    {
+      "round": 3,
+      "groups": {
+        "all": {
+          "count": 202,
+          "before": {
+            "wall_us": 22156355,
+            "thread_cpu_us": 21734375
+          },
+          "after": {
+            "wall_us": 22445947,
+            "thread_cpu_us": 22203125
+          }
+        },
+        "common_success": {
+          "count": 139,
+          "before": {
+            "wall_us": 7479686,
+            "thread_cpu_us": 7343750
+          },
+          "after": {
+            "wall_us": 6654696,
+            "thread_cpu_us": 6625000
+          }
+        },
+        "common_failure": {
+          "count": 61,
+          "before": {
+            "wall_us": 14416849,
+            "thread_cpu_us": 14140625
+          },
+          "after": {
+            "wall_us": 15578363,
+            "thread_cpu_us": 15359375
+          }
+        },
+        "recovered": {
+          "count": 2,
+          "before": {
+            "wall_us": 259820,
+            "thread_cpu_us": 250000
+          },
+          "after": {
+            "wall_us": 212888,
+            "thread_cpu_us": 218750
+          }
+        }
+      },
+      "raw_sha": {
+        "before": "cb4e25939c003dabe214ec4c34373a584cd7d17ae9ce5e30ed4355080b9585c4",
+        "after": "49657f52bc395a312b55e135fbdc6823a8db5915a7bc54d316ac4647d04630ca"
+      },
+      "cli": {
+        "before": {
+          "wall_seconds": 23.21390849997988,
+          "working_set_bytes": 316129280
+        },
+        "after": {
+          "wall_seconds": 23.390440999995917,
+          "working_set_bytes": 315891712
+        }
+      },
+      "recovered": [
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+      ],
+      "all_cpu_ratio": 1.0215672178289001,
+      "all_wall_ratio": 1.0130703809358534
+    }
+  ],
+  "independent_side_medians": {
+    "all": {
+      "before": {
+        "wall_us": 21983504,
+        "thread_cpu_us": 21250000
+      },
+      "after": {
+        "wall_us": 22445947,
+        "thread_cpu_us": 22203125
+      }
+    },
+    "common_success": {
+      "before": {
+        "wall_us": 7408321,
+        "thread_cpu_us": 7250000
+      },
+      "after": {
+        "wall_us": 6654696,
+        "thread_cpu_us": 6625000
+      }
+    },
+    "common_failure": {
+      "before": {
+        "wall_us": 14364381,
+        "thread_cpu_us": 13812500
+      },
+      "after": {
+        "wall_us": 15578363,
+        "thread_cpu_us": 15359375
+      }
+    },
+    "recovered": {
+      "before": {
+        "wall_us": 215634,
+        "thread_cpu_us": 187500
+      },
+      "after": {
+        "wall_us": 220505,
+        "thread_cpu_us": 218750
+      }
+    }
+  },
+  "median_within_pair_all_cpu_ratio": 1.0919117647058822,
+  "ratio_of_independent_side_all_cpu_medians": 1.0448529411764707,
+  "median_within_pair_all_wall_ratio": 1.1013218365916553,
+  "cli_side_medians": {
+    "before": {
+      "wall_seconds": 22.99850810004864,
+      "maximum_working_set_bytes": 316129280
+    },
+    "after": {
+      "wall_seconds": 23.390440999995917,
+      "maximum_working_set_bytes": 316268544
+    }
+  },
+  "source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+  "exe_sha": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+  "baseline_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+  "baseline_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+  "counts": {
+    "all": 202,
+    "common_success": 139,
+    "common_failure": 61,
+    "recovered": 2
+  },
+  "timing": "same GCC Release O3; all failures included; Win32 CPU quantized; independent-side median ratio differs from median per-pair ratio; process WS includes whole JSON/witness/validators"
+}

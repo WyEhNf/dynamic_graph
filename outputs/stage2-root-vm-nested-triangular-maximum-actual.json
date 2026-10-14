@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791781537.1156588,
+  "report_sha256": "0d1d33ccda6fd618fbacdb271201750653d689399ff48e35c7daa5a54b55eb88",
+  "N": 10000,
+  "independently_compared_bytes": 800000008,
+  "full_output_sha256": "d48562724276b731c266b121148cc4181d85e509c7518ba81497f7e0a7e81ab9",
+  "actual_VM_steps": 1400030009,
+  "proved_bound": 2799890009,
+  "fixed_default_rejects": true,
+  "optin_proved_full_original_C_identical": true,
+  "ordinary_changed": false,
+  "performance_claim": false,
+  "scope": "Exact one original-C plus two same844 VM executions, all raw stdout/stderr and six live resource gates reviewed; independent full800MB streaming byte comparison. Proof restores completion for this source/shape; does not establish arbitrary-C coverage, default completion or speedup."
+}

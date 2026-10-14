@@ -1,0 +1,293 @@
+{
+  "status": "measured",
+  "sample_interval_seconds": 0.25,
+  "logical_processors": 32,
+  "processor_scope": "all processors",
+  "trial_cpu_delta": {
+    "idle_ticks": 638593750,
+    "kernel_ticks": 694218750,
+    "user_ticks": 73281250,
+    "total_ticks": 767500000,
+    "busy_ticks": 128906250,
+    "busy_fraction": 0.1679560260586319
+  },
+  "available_physical_bytes_start": 8824090624,
+  "available_physical_bytes_end": 8831709184,
+  "available_physical_bytes_min": 8796946432,
+  "total_physical_bytes_observed": [
+    33605316608
+  ],
+  "samples": [
+    {
+      "elapsed_seconds": 7.76999513618648e-05,
+      "cpu_ticks": {
+        "idle": 119078324843750,
+        "kernel": 126577877187500,
+        "user": 8143601250000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8824090624,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 0.2547015000018291,
+      "cpu_ticks": {
+        "idle": 119078390937500,
+        "kernel": 126577951562500,
+        "user": 8143609531250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8796946432,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 0.5082183000049554,
+      "cpu_ticks": {
+        "idle": 119078460312500,
+        "kernel": 126578024375000,
+        "user": 8143616093750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8805728256,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 0.7583563999505714,
+      "cpu_ticks": {
+        "idle": 119078525000000,
+        "kernel": 126578092500000,
+        "user": 8143627812500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8797925376,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 1.0103907999582589,
+      "cpu_ticks": {
+        "idle": 119078593906250,
+        "kernel": 126578166562500,
+        "user": 8143634375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8810283008,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 1.2616163999773562,
+      "cpu_ticks": {
+        "idle": 119078660468750,
+        "kernel": 126578240781250,
+        "user": 8143642031250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8812072960,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 1.514869499951601,
+      "cpu_ticks": {
+        "idle": 119078727187500,
+        "kernel": 126578314375000,
+        "user": 8143650625000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8810946560,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 1.7693738999660127,
+      "cpu_ticks": {
+        "idle": 119078794531250,
+        "kernel": 126578387812500,
+        "user": 8143658437500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8816586752,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 2.024413999984972,
+      "cpu_ticks": {
+        "idle": 119078860312500,
+        "kernel": 126578460937500,
+        "user": 8143665468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8817762304,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 2.277273299987428,
+      "cpu_ticks": {
+        "idle": 119078931093750,
+        "kernel": 126578535156250,
+        "user": 8143671406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8823934976,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 2.3990882000070997,
+      "cpu_ticks": {
+        "idle": 119078963437500,
+        "kernel": 126578571406250,
+        "user": 8143674531250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8831709184,
+        "memory_load_percent": 73
+      }
+    }
+  ],
+  "cpu_intervals": [
+    {
+      "begin_seconds": 7.76999513618648e-05,
+      "end_seconds": 0.2547015000018291,
+      "delta": {
+        "idle_ticks": 66093750,
+        "kernel_ticks": 74375000,
+        "user_ticks": 8281250,
+        "total_ticks": 82656250,
+        "busy_ticks": 16562500,
+        "busy_fraction": 0.2003780718336484
+      }
+    },
+    {
+      "begin_seconds": 0.2547015000018291,
+      "end_seconds": 0.5082183000049554,
+      "delta": {
+        "idle_ticks": 69375000,
+        "kernel_ticks": 72812500,
+        "user_ticks": 6562500,
+        "total_ticks": 79375000,
+        "busy_ticks": 10000000,
+        "busy_fraction": 0.12598425196850394
+      }
+    },
+    {
+      "begin_seconds": 0.5082183000049554,
+      "end_seconds": 0.7583563999505714,
+      "delta": {
+        "idle_ticks": 64687500,
+        "kernel_ticks": 68125000,
+        "user_ticks": 11718750,
+        "total_ticks": 79843750,
+        "busy_ticks": 15156250,
+        "busy_fraction": 0.1898238747553816
+      }
+    },
+    {
+      "begin_seconds": 0.7583563999505714,
+      "end_seconds": 1.0103907999582589,
+      "delta": {
+        "idle_ticks": 68906250,
+        "kernel_ticks": 74062500,
+        "user_ticks": 6562500,
+        "total_ticks": 80625000,
+        "busy_ticks": 11718750,
+        "busy_fraction": 0.14534883720930233
+      }
+    },
+    {
+      "begin_seconds": 1.0103907999582589,
+      "end_seconds": 1.2616163999773562,
+      "delta": {
+        "idle_ticks": 66562500,
+        "kernel_ticks": 74218750,
+        "user_ticks": 7656250,
+        "total_ticks": 81875000,
+        "busy_ticks": 15312500,
+        "busy_fraction": 0.18702290076335878
+      }
+    },
+    {
+      "begin_seconds": 1.2616163999773562,
+      "end_seconds": 1.514869499951601,
+      "delta": {
+        "idle_ticks": 66718750,
+        "kernel_ticks": 73593750,
+        "user_ticks": 8593750,
+        "total_ticks": 82187500,
+        "busy_ticks": 15468750,
+        "busy_fraction": 0.188212927756654
+      }
+    },
+    {
+      "begin_seconds": 1.514869499951601,
+      "end_seconds": 1.7693738999660127,
+      "delta": {
+        "idle_ticks": 67343750,
+        "kernel_ticks": 73437500,
+        "user_ticks": 7812500,
+        "total_ticks": 81250000,
+        "busy_ticks": 13906250,
+        "busy_fraction": 0.17115384615384616
+      }
+    },
+    {
+      "begin_seconds": 1.7693738999660127,
+      "end_seconds": 2.024413999984972,
+      "delta": {
+        "idle_ticks": 65781250,
+        "kernel_ticks": 73125000,
+        "user_ticks": 7031250,
+        "total_ticks": 80156250,
+        "busy_ticks": 14375000,
+        "busy_fraction": 0.1793372319688109
+      }
+    },
+    {
+      "begin_seconds": 2.024413999984972,
+      "end_seconds": 2.277273299987428,
+      "delta": {
+        "idle_ticks": 70781250,
+        "kernel_ticks": 74218750,
+        "user_ticks": 5937500,
+        "total_ticks": 80156250,
+        "busy_ticks": 9375000,
+        "busy_fraction": 0.11695906432748537
+      }
+    },
+    {
+      "begin_seconds": 2.277273299987428,
+      "end_seconds": 2.3990882000070997,
+      "delta": {
+        "idle_ticks": 32343750,
+        "kernel_ticks": 36250000,
+        "user_ticks": 3125000,
+        "total_ticks": 39375000,
+        "busy_ticks": 7031250,
+        "busy_fraction": 0.17857142857142858
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+  "sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+    "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+  ]
+}

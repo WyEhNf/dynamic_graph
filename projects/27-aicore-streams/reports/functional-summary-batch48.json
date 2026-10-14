@@ -1,0 +1,52 @@
+{
+  "status": "isolated candidate functional only;not default",
+  "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "benchmark_sha": "7f89627af8fbb418a5a80a2fdb3c27c9bad2bffbb79ab4d69820c277959f1d0d",
+  "default_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "diagnostic_freeze_sha": "e23d21950e7a7b36bfc3472fbebf9d1fc1ab418b75684a23f26c6a3e216324be",
+  "independent_simulator_sha": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+  "wall_seconds": 29.393490499991458,
+  "jobs": [
+    {
+      "label": "hard",
+      "input_sha": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+      "actual_exit_code": 1,
+      "wall_seconds": 27.129440199991222
+    },
+    {
+      "label": "heldout",
+      "input_sha": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+      "actual_exit_code": 1,
+      "wall_seconds": 2.173251000000164
+    }
+  ],
+  "comparisons": {
+    "hard": {
+      "records": 202,
+      "before_legal": 143,
+      "after_legal": 144,
+      "recovered": [
+        "irregular_consumers_local_k24_ret1_seed20273418"
+      ],
+      "lost": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "04272ce2658fb85ec7a136cde4f4b35107ab1ba64759bf34b403d8766a005b20",
+      "after_sha": "0607350f4ac622013bb55ec9c61eb206763e6561ad3b968ecc793a4b573bd8c0",
+      "all_failure_wall_us": 18277216,
+      "all_failure_thread_cpu_us": 17593750
+    },
+    "heldout": {
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "recovered": [],
+      "lost": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "260df9d93ba59cc97f4b5dffc8179097ef12565451e4866f107f3d0246ff0f02",
+      "after_sha": "d8b707ca8eaf6ff7fe3234bc224ac1afca598c87b590ea4363332888210a262c",
+      "all_failure_wall_us": 701348,
+      "all_failure_thread_cpu_us": 703125
+    }
+  },
+  "timing": "Shared functional O2, no paired performance or speed claim"
+}

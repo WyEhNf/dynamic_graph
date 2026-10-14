@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791719815.6511078,
+  "manifest_sha256": "f5c1dd8825b933624415367d67a8724aa517a3e4f090c970d6e7fe02a90a04aa",
+  "frozen_sources": 139,
+  "actual_whole_C_outputs": 469,
+  "source_count": 15,
+  "input_families": 67,
+  "GNU_full_ctest": 15,
+  "portable_small_ctest": 11,
+  "disabled_small_ctest": 9,
+  "original_C_error_comparisons": 49,
+  "CLI_contracts": 9,
+  "root_actual_contract_executions": [
+    {
+      "family": "gnu",
+      "name": "vm_step_bound_tests.exe",
+      "exe_sha256": "8c5bb6ebf2aea2cf9fe18b2c209bdf380d4a5fbef4072953e6bc130e4031f924",
+      "actual_exit_code": 0,
+      "stdout": "{\"passed\":true,\"exhaustive_goldens\":517,\"unknown_mutations\":119,\"exact_and_one_short_boundaries\":1030,\"adversarial_program_mutations\":6358,\"proved_mutations\":416,\"actual_mutation_VM_executions\":832,\"ordinary_runtime_changed\":false,\"N10000_execution_started\":false}"
+    },
+    {
+      "family": "gnu",
+      "name": "vm_proved_budget_tests.exe",
+      "exe_sha256": "c07eda8ee18e4d8290d49bd35616f027c9c79861e7dbc4dc7858138a273f2573",
+      "actual_exit_code": 0,
+      "stdout": "{\"passed\":true,\"proved_feature_enabled\":true,\"fixed_default\":true,\"original_steps_and_errors_comparisons\":80,\"backends\":5,\"native_bypass\":true,\"N10000_execution_started\":false}"
+    },
+    {
+      "family": "gnu",
+      "name": "threaded_vm_proved_tests.exe",
+      "exe_sha256": "ba091988d9d88ea0eb43cf1772cca1856d4bed7446f754ffecf2da966b388eac",
+      "actual_exit_code": 0,
+      "stdout": "{\"passed\":true,\"opcode_coverage\":33,\"phase1_cases\":404,\"original_contract_cases\":480,\"comparisons\":934,\"stack_limit\":4096,\"mechanism\":\"threaded vector stack\"}"
+    },
+    {
+      "family": "portable",
+      "name": "vm_step_bound_tests.exe",
+      "exe_sha256": "e0b788ad2cd43a5ecfeb0ff6dc8005f892a441cfaf8a23941c1c81b939f141f3",
+      "actual_exit_code": 0,
+      "stdout": "{\"passed\":true,\"exhaustive_goldens\":517,\"unknown_mutations\":119,\"exact_and_one_short_boundaries\":1030,\"adversarial_program_mutations\":6358,\"proved_mutations\":416,\"actual_mutation_VM_executions\":832,\"ordinary_runtime_changed\":false,\"N10000_execution_started\":false}"
+    },
+    {
+      "family": "portable",
+      "name": "vm_proved_budget_tests.exe",
+      "exe_sha256": "01a7bddb0e4534a185a9b5aacabbdf09b4f3ef4bbec8002106dd9b9f27fc452d",
+      "actual_exit_code": 0,
+      "stdout": "{\"passed\":true,\"proved_feature_enabled\":true,\"fixed_default\":true,\"original_steps_and_errors_comparisons\":80,\"backends\":5,\"native_bypass\":true,\"N10000_execution_started\":false}"
+    },
+    {
+      "family": "portable",
+      "name": "threaded_vm_proved_tests.exe",
+      "exe_sha256": "658bfc2bc79f2686e1cf5c95ea90dbf33e5ae9ebaec8f4eed996fe98dec69533",
+      "actual_exit_code": 0,
+      "stdout": "{\"passed\":true,\"opcode_coverage\":33,\"phase1_cases\":404,\"original_contract_cases\":480,\"comparisons\":934,\"stack_limit\":4096,\"mechanism\":\"threaded vector stack\"}"
+    }
+  ],
+  "proved_auto_matrices": 306,
+  "unknown_auto_matrices": 260,
+  "actual_raised_budget_cases": 0,
+  "candidate_sha256": "b9a65378905b9d4355466a530aa7f5cc7f0b90051389cf5a3d5922ddcce4c923",
+  "portable_sha256": "6c7d6b8000e1962ef656117ec78915274b781d8511449c29dcd8d936dfa97f9a",
+  "ordinary_runtime_sha256": "99a87d135378406a15efd930d58941291683ca799f91bd5dcc0ca77ceadef448",
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/runtime-integration/acceptance/manifest.json": "f5c1dd8825b933624415367d67a8724aa517a3e4f090c970d6e7fe02a90a04aa",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-acceptance/manifest.json": "07481fb2fc9c6cdbe4a197230907c07dbd6a828feb29e7bf6431c1508954db48",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/runtime-integration/correctness/report.json": "c88ad7c3523bd3e411638c09cdff9a6ab12241a6d903e9462f01fede1272752c",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/correctness/report.json": "4869362868547e5e26fcffd66754c3f2cd6c838df66a83d3b5f1664397b54f0f",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/runtime-integration/contracts-evidence-v2/report.json": "d1f7e06eca77837e86a888f70372032f40657f1394a0e25db84b73915f665d7e",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/runtime-integration/ctest-evidence/report.json": "d4326915fe80f9228559c2805dae8328cc5b0c610c8fd7a82069b4a74a6ca3c6",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/runtime-integration/ubsan/report.json": "2f7a30f267a1ec95543ce1f286c2ccf559e95b1e3a8e84336a277e0d4feb0ff5",
+    "outputs/stage2-root-vm-proved-integration/gnu-vm_step_bound_tests.exe-stdout.txt": "d590ce1e953593ea77f105f2c62810e04542a0180df26361f0479f82ebc4e62f",
+    "outputs/stage2-root-vm-proved-integration/gnu-vm_step_bound_tests.exe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proved-integration/gnu-vm_proved_budget_tests.exe-stdout.txt": "1e543f3485f655b90c397de31d90513f933e3d25da5348d8307a27e38ce7c48a",
+    "outputs/stage2-root-vm-proved-integration/gnu-vm_proved_budget_tests.exe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proved-integration/gnu-threaded_vm_proved_tests.exe-stdout.txt": "2cf0ca6b7d2db929b6f3f3456e6799e2622a0d38b7f9d364c24b91c241b7a7bf",
+    "outputs/stage2-root-vm-proved-integration/gnu-threaded_vm_proved_tests.exe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proved-integration/portable-vm_step_bound_tests.exe-stdout.txt": "d590ce1e953593ea77f105f2c62810e04542a0180df26361f0479f82ebc4e62f",
+    "outputs/stage2-root-vm-proved-integration/portable-vm_step_bound_tests.exe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proved-integration/portable-vm_proved_budget_tests.exe-stdout.txt": "1e543f3485f655b90c397de31d90513f933e3d25da5348d8307a27e38ce7c48a",
+    "outputs/stage2-root-vm-proved-integration/portable-vm_proved_budget_tests.exe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proved-integration/portable-threaded_vm_proved_tests.exe-stdout.txt": "2cf0ca6b7d2db929b6f3f3456e6799e2622a0d38b7f9d364c24b91c241b7a7bf",
+    "outputs/stage2-root-vm-proved-integration/portable-threaded_vm_proved_tests.exe-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "469 complete originalC outputs/inputs/metadata/source/harness/exe SHA independently compared;67x7 full groups retain exactly originalVM steps,49 originalerrors and9CLI contracts. Six actual frozen proof/policy/derived contract executables rerun under GNU+portable;15/11/9CTest and UBSan evidence frozen. Allsmall effectivebudgets remain1e9;306proved/260unknown respect scoped fallback. Ordinary99a fixeddefault unchanged. Actual N10000 raisedbudget and broader arbitraryC not proven."
+}

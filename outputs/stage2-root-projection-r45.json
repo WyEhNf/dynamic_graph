@@ -1,0 +1,34 @@
+{
+  "reviewed_unix": 1791706409.6565514,
+  "passed": true,
+  "records": 61,
+  "applicable": 35,
+  "recovered_records": 2,
+  "recovered": [
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "nodes": 71,
+      "T": 1487053,
+      "peak": 1745,
+      "capacity": 1747,
+      "stream_count": 1
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "nodes": 71,
+      "T": 1487053,
+      "peak": 1760,
+      "capacity": 1762,
+      "stream_count": 1
+    }
+  ],
+  "evidence": {
+    "outputs/stage2-projection-r45-root-snapshot/diagnostic.exe": "274f3f341c9741851c4253b05615c432e96f5836d9d928063fd2ba232e867934",
+    "outputs/stage2-projection-r45-root-snapshot/diagnostic.json": "c7510be8f85ed812937c0199de66c4796773e8529b4ba848b296a365f1cc5f6d",
+    "outputs/stage2-projection-r45-root-snapshot/inputs.json": "fe0bcdce1b2d28dde606e95f235e95df23a665448de516e4da7df7a9b2da998e",
+    "outputs/stage2-projection-r45-root-snapshot/projection.cpp.inc": "2931f2dd9da53a2f7623aaa9d3460a1c79eb07eb457f3091c65525a0a58491f1",
+    "outputs/stage2-projection-r45-root-snapshot/solution.cpp": "0317c09ee7a7efc0e95224f1afb1557259bcd6191c4e878328bccb7e1df393b2"
+  },
+  "verifier_sha256": "a6f864f8236e8aafb8b3ec00ad557affea99ce0671c1b9d2a3a90d5b08412498",
+  "scope": "Root independent Python bigint heap-event replay of2 actual complete serial plans, same original nodes/hardware/deadline. Input-only61 subset contains no witness/generation fields. Both were previously unresolved in frozenR44. One topology with2 root-memory parameter settings; no default promotion, broad solver validity, performance or official score claim. All61 statuses retained."
+}

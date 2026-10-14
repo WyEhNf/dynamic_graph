@@ -1,0 +1,4002 @@
+{
+  "suite": "data\\projection-retention-heldout-batch45.json",
+  "suite_sha256": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+  "baseline_exe_sha256": "54fc7e9b2257f1edcd6925126f32e969826a5d6ba93bc2f9b3e8fd5dd5538c10",
+  "current_exe_sha256": "25ac71bc389e62f512d7597d40048e97b88783c21e895524cdba3311c6067742",
+  "current_solution_sha256": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+  "current_solution_path": "research\\batch51\\solution.cpp",
+  "baseline_solution_sha256": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-heldout-batch51-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.3990870999987237,
+        "peak_working_set_bytes": 31752192,
+        "host_load": {
+          "status": "measured",
+          "sample_interval_seconds": 0.25,
+          "logical_processors": 32,
+          "processor_scope": "all processors",
+          "trial_cpu_delta": {
+            "idle_ticks": 638593750,
+            "kernel_ticks": 694218750,
+            "user_ticks": 73281250,
+            "total_ticks": 767500000,
+            "busy_ticks": 128906250,
+            "busy_fraction": 0.1679560260586319
+          },
+          "available_physical_bytes_start": 8824090624,
+          "available_physical_bytes_end": 8831709184,
+          "available_physical_bytes_min": 8796946432,
+          "total_physical_bytes_observed": [
+            33605316608
+          ],
+          "samples": [
+            {
+              "elapsed_seconds": 7.76999513618648e-05,
+              "cpu_ticks": {
+                "idle": 119078324843750,
+                "kernel": 126577877187500,
+                "user": 8143601250000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8824090624,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.2547015000018291,
+              "cpu_ticks": {
+                "idle": 119078390937500,
+                "kernel": 126577951562500,
+                "user": 8143609531250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8796946432,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.5082183000049554,
+              "cpu_ticks": {
+                "idle": 119078460312500,
+                "kernel": 126578024375000,
+                "user": 8143616093750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8805728256,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.7583563999505714,
+              "cpu_ticks": {
+                "idle": 119078525000000,
+                "kernel": 126578092500000,
+                "user": 8143627812500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8797925376,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.0103907999582589,
+              "cpu_ticks": {
+                "idle": 119078593906250,
+                "kernel": 126578166562500,
+                "user": 8143634375000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8810283008,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.2616163999773562,
+              "cpu_ticks": {
+                "idle": 119078660468750,
+                "kernel": 126578240781250,
+                "user": 8143642031250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8812072960,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.514869499951601,
+              "cpu_ticks": {
+                "idle": 119078727187500,
+                "kernel": 126578314375000,
+                "user": 8143650625000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8810946560,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.7693738999660127,
+              "cpu_ticks": {
+                "idle": 119078794531250,
+                "kernel": 126578387812500,
+                "user": 8143658437500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8816586752,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.024413999984972,
+              "cpu_ticks": {
+                "idle": 119078860312500,
+                "kernel": 126578460937500,
+                "user": 8143665468750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8817762304,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.277273299987428,
+              "cpu_ticks": {
+                "idle": 119078931093750,
+                "kernel": 126578535156250,
+                "user": 8143671406250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8823934976,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.3990882000070997,
+              "cpu_ticks": {
+                "idle": 119078963437500,
+                "kernel": 126578571406250,
+                "user": 8143674531250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8831709184,
+                "memory_load_percent": 73
+              }
+            }
+          ],
+          "cpu_intervals": [
+            {
+              "begin_seconds": 7.76999513618648e-05,
+              "end_seconds": 0.2547015000018291,
+              "delta": {
+                "idle_ticks": 66093750,
+                "kernel_ticks": 74375000,
+                "user_ticks": 8281250,
+                "total_ticks": 82656250,
+                "busy_ticks": 16562500,
+                "busy_fraction": 0.2003780718336484
+              }
+            },
+            {
+              "begin_seconds": 0.2547015000018291,
+              "end_seconds": 0.5082183000049554,
+              "delta": {
+                "idle_ticks": 69375000,
+                "kernel_ticks": 72812500,
+                "user_ticks": 6562500,
+                "total_ticks": 79375000,
+                "busy_ticks": 10000000,
+                "busy_fraction": 0.12598425196850394
+              }
+            },
+            {
+              "begin_seconds": 0.5082183000049554,
+              "end_seconds": 0.7583563999505714,
+              "delta": {
+                "idle_ticks": 64687500,
+                "kernel_ticks": 68125000,
+                "user_ticks": 11718750,
+                "total_ticks": 79843750,
+                "busy_ticks": 15156250,
+                "busy_fraction": 0.1898238747553816
+              }
+            },
+            {
+              "begin_seconds": 0.7583563999505714,
+              "end_seconds": 1.0103907999582589,
+              "delta": {
+                "idle_ticks": 68906250,
+                "kernel_ticks": 74062500,
+                "user_ticks": 6562500,
+                "total_ticks": 80625000,
+                "busy_ticks": 11718750,
+                "busy_fraction": 0.14534883720930233
+              }
+            },
+            {
+              "begin_seconds": 1.0103907999582589,
+              "end_seconds": 1.2616163999773562,
+              "delta": {
+                "idle_ticks": 66562500,
+                "kernel_ticks": 74218750,
+                "user_ticks": 7656250,
+                "total_ticks": 81875000,
+                "busy_ticks": 15312500,
+                "busy_fraction": 0.18702290076335878
+              }
+            },
+            {
+              "begin_seconds": 1.2616163999773562,
+              "end_seconds": 1.514869499951601,
+              "delta": {
+                "idle_ticks": 66718750,
+                "kernel_ticks": 73593750,
+                "user_ticks": 8593750,
+                "total_ticks": 82187500,
+                "busy_ticks": 15468750,
+                "busy_fraction": 0.188212927756654
+              }
+            },
+            {
+              "begin_seconds": 1.514869499951601,
+              "end_seconds": 1.7693738999660127,
+              "delta": {
+                "idle_ticks": 67343750,
+                "kernel_ticks": 73437500,
+                "user_ticks": 7812500,
+                "total_ticks": 81250000,
+                "busy_ticks": 13906250,
+                "busy_fraction": 0.17115384615384616
+              }
+            },
+            {
+              "begin_seconds": 1.7693738999660127,
+              "end_seconds": 2.024413999984972,
+              "delta": {
+                "idle_ticks": 65781250,
+                "kernel_ticks": 73125000,
+                "user_ticks": 7031250,
+                "total_ticks": 80156250,
+                "busy_ticks": 14375000,
+                "busy_fraction": 0.1793372319688109
+              }
+            },
+            {
+              "begin_seconds": 2.024413999984972,
+              "end_seconds": 2.277273299987428,
+              "delta": {
+                "idle_ticks": 70781250,
+                "kernel_ticks": 74218750,
+                "user_ticks": 5937500,
+                "total_ticks": 80156250,
+                "busy_ticks": 9375000,
+                "busy_fraction": 0.11695906432748537
+              }
+            },
+            {
+              "begin_seconds": 2.277273299987428,
+              "end_seconds": 2.3990882000070997,
+              "delta": {
+                "idle_ticks": 32343750,
+                "kernel_ticks": 36250000,
+                "user_ticks": 3125000,
+                "total_ticks": 39375000,
+                "busy_ticks": 7031250,
+                "busy_fraction": 0.17857142857142858
+              }
+            }
+          ],
+          "errors": [],
+          "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+          "sources": [
+            "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+            "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+          ]
+        },
+        "host_report": "reports\\paired-heldout-batch51-1-before.host.json",
+        "host_report_sha256": "fa40b3f2e9e25e375d88aea0020c724077ea9f14d670043bd74e786501b490b8"
+      },
+      "after": {
+        "report": "reports\\paired-heldout-batch51-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.404613499995321,
+        "peak_working_set_bytes": 31793152,
+        "host_load": {
+          "status": "measured",
+          "sample_interval_seconds": 0.25,
+          "logical_processors": 32,
+          "processor_scope": "all processors",
+          "trial_cpu_delta": {
+            "idle_ticks": 654531250,
+            "kernel_ticks": 710468750,
+            "user_ticks": 60312500,
+            "total_ticks": 770781250,
+            "busy_ticks": 116250000,
+            "busy_fraction": 0.1508210014190148
+          },
+          "available_physical_bytes_start": 8831959040,
+          "available_physical_bytes_end": 8820875264,
+          "available_physical_bytes_min": 8794324992,
+          "total_physical_bytes_observed": [
+            33605316608
+          ],
+          "samples": [
+            {
+              "elapsed_seconds": 7.27999722585082e-05,
+              "cpu_ticks": {
+                "idle": 119078967656250,
+                "kernel": 126578575781250,
+                "user": 8143674843750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8831959040,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.25433019996853545,
+              "cpu_ticks": {
+                "idle": 119079037500000,
+                "kernel": 126578650937500,
+                "user": 8143684843750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8796307456,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.5044741999590769,
+              "cpu_ticks": {
+                "idle": 119079105625000,
+                "kernel": 126578723593750,
+                "user": 8143688906250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8798339072,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.7593016999890096,
+              "cpu_ticks": {
+                "idle": 119079178125000,
+                "kernel": 126578802343750,
+                "user": 8143694062500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8800784384,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.0148026999668218,
+              "cpu_ticks": {
+                "idle": 119079242500000,
+                "kernel": 126578874687500,
+                "user": 8143700156250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8796688384,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.2648567999713123,
+              "cpu_ticks": {
+                "idle": 119079310937500,
+                "kernel": 126578949531250,
+                "user": 8143706875000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8794382336,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.5185135999927297,
+              "cpu_ticks": {
+                "idle": 119079378437500,
+                "kernel": 126579023593750,
+                "user": 8143712187500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8798519296,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.7707894999766722,
+              "cpu_ticks": {
+                "idle": 119079449375000,
+                "kernel": 126579100312500,
+                "user": 8143717656250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8807956480,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.0227212999598123,
+              "cpu_ticks": {
+                "idle": 119079521718750,
+                "kernel": 126579177500000,
+                "user": 8143722343750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8812949504,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.27556119998917,
+              "cpu_ticks": {
+                "idle": 119079587187500,
+                "kernel": 126579248750000,
+                "user": 8143730625000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8794324992,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.4046143000014126,
+              "cpu_ticks": {
+                "idle": 119079622187500,
+                "kernel": 126579286250000,
+                "user": 8143735156250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8820875264,
+                "memory_load_percent": 73
+              }
+            }
+          ],
+          "cpu_intervals": [
+            {
+              "begin_seconds": 7.27999722585082e-05,
+              "end_seconds": 0.25433019996853545,
+              "delta": {
+                "idle_ticks": 69843750,
+                "kernel_ticks": 75156250,
+                "user_ticks": 10000000,
+                "total_ticks": 85156250,
+                "busy_ticks": 15312500,
+                "busy_fraction": 0.1798165137614679
+              }
+            },
+            {
+              "begin_seconds": 0.25433019996853545,
+              "end_seconds": 0.5044741999590769,
+              "delta": {
+                "idle_ticks": 68125000,
+                "kernel_ticks": 72656250,
+                "user_ticks": 4062500,
+                "total_ticks": 76718750,
+                "busy_ticks": 8593750,
+                "busy_fraction": 0.1120162932790224
+              }
+            },
+            {
+              "begin_seconds": 0.5044741999590769,
+              "end_seconds": 0.7593016999890096,
+              "delta": {
+                "idle_ticks": 72500000,
+                "kernel_ticks": 78750000,
+                "user_ticks": 5156250,
+                "total_ticks": 83906250,
+                "busy_ticks": 11406250,
+                "busy_fraction": 0.13594040968342644
+              }
+            },
+            {
+              "begin_seconds": 0.7593016999890096,
+              "end_seconds": 1.0148026999668218,
+              "delta": {
+                "idle_ticks": 64375000,
+                "kernel_ticks": 72343750,
+                "user_ticks": 6093750,
+                "total_ticks": 78437500,
+                "busy_ticks": 14062500,
+                "busy_fraction": 0.17928286852589642
+              }
+            },
+            {
+              "begin_seconds": 1.0148026999668218,
+              "end_seconds": 1.2648567999713123,
+              "delta": {
+                "idle_ticks": 68437500,
+                "kernel_ticks": 74843750,
+                "user_ticks": 6718750,
+                "total_ticks": 81562500,
+                "busy_ticks": 13125000,
+                "busy_fraction": 0.16091954022988506
+              }
+            },
+            {
+              "begin_seconds": 1.2648567999713123,
+              "end_seconds": 1.5185135999927297,
+              "delta": {
+                "idle_ticks": 67500000,
+                "kernel_ticks": 74062500,
+                "user_ticks": 5312500,
+                "total_ticks": 79375000,
+                "busy_ticks": 11875000,
+                "busy_fraction": 0.14960629921259844
+              }
+            },
+            {
+              "begin_seconds": 1.5185135999927297,
+              "end_seconds": 1.7707894999766722,
+              "delta": {
+                "idle_ticks": 70937500,
+                "kernel_ticks": 76718750,
+                "user_ticks": 5468750,
+                "total_ticks": 82187500,
+                "busy_ticks": 11250000,
+                "busy_fraction": 0.13688212927756654
+              }
+            },
+            {
+              "begin_seconds": 1.7707894999766722,
+              "end_seconds": 2.0227212999598123,
+              "delta": {
+                "idle_ticks": 72343750,
+                "kernel_ticks": 77187500,
+                "user_ticks": 4687500,
+                "total_ticks": 81875000,
+                "busy_ticks": 9531250,
+                "busy_fraction": 0.11641221374045801
+              }
+            },
+            {
+              "begin_seconds": 2.0227212999598123,
+              "end_seconds": 2.27556119998917,
+              "delta": {
+                "idle_ticks": 65468750,
+                "kernel_ticks": 71250000,
+                "user_ticks": 8281250,
+                "total_ticks": 79531250,
+                "busy_ticks": 14062500,
+                "busy_fraction": 0.17681728880157171
+              }
+            },
+            {
+              "begin_seconds": 2.27556119998917,
+              "end_seconds": 2.4046143000014126,
+              "delta": {
+                "idle_ticks": 35000000,
+                "kernel_ticks": 37500000,
+                "user_ticks": 4531250,
+                "total_ticks": 42031250,
+                "busy_ticks": 7031250,
+                "busy_fraction": 0.16728624535315986
+              }
+            }
+          ],
+          "errors": [],
+          "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+          "sources": [
+            "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+            "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+          ]
+        },
+        "host_report": "reports\\paired-heldout-batch51-1-after.host.json",
+        "host_report_sha256": "f09192f5e9b7e51e59ebbf600b4840f931aec5099cd1ab8a403fa340b589daa1"
+      },
+      "comparison": {
+        "before": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "after": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "common_cases": 42,
+        "common_solve_us_before": 1403163,
+        "common_solve_us_after": 1399944,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 828,
+        "scales": [
+          {
+            "n": 41,
+            "median_us": 2982,
+            "max_us": 2982
+          },
+          {
+            "n": 42,
+            "median_us": 7559.0,
+            "max_us": 7908
+          },
+          {
+            "n": 44,
+            "median_us": 2692.0,
+            "max_us": 3081
+          },
+          {
+            "n": 45,
+            "median_us": 2349,
+            "max_us": 2349
+          },
+          {
+            "n": 46,
+            "median_us": 3489.0,
+            "max_us": 3705
+          },
+          {
+            "n": 48,
+            "median_us": 3991,
+            "max_us": 3991
+          },
+          {
+            "n": 49,
+            "median_us": 3181.0,
+            "max_us": 3989
+          },
+          {
+            "n": 52,
+            "median_us": 3364,
+            "max_us": 3364
+          },
+          {
+            "n": 65,
+            "median_us": 16253.0,
+            "max_us": 27858
+          },
+          {
+            "n": 66,
+            "median_us": 4003,
+            "max_us": 4003
+          },
+          {
+            "n": 67,
+            "median_us": 3997.0,
+            "max_us": 4790
+          },
+          {
+            "n": 68,
+            "median_us": 22026.0,
+            "max_us": 29766
+          },
+          {
+            "n": 69,
+            "median_us": 12502,
+            "max_us": 17826
+          },
+          {
+            "n": 70,
+            "median_us": 3941.0,
+            "max_us": 4533
+          },
+          {
+            "n": 121,
+            "median_us": 29092,
+            "max_us": 29092
+          },
+          {
+            "n": 123,
+            "median_us": 67720,
+            "max_us": 67720
+          },
+          {
+            "n": 128,
+            "median_us": 69276,
+            "max_us": 69276
+          },
+          {
+            "n": 131,
+            "median_us": 11872,
+            "max_us": 11872
+          },
+          {
+            "n": 132,
+            "median_us": 9606,
+            "max_us": 9606
+          },
+          {
+            "n": 133,
+            "median_us": 61895,
+            "max_us": 61895
+          },
+          {
+            "n": 134,
+            "median_us": 11798,
+            "max_us": 11798
+          },
+          {
+            "n": 139,
+            "median_us": 34436,
+            "max_us": 34436
+          },
+          {
+            "n": 141,
+            "median_us": 44449.0,
+            "max_us": 56788
+          },
+          {
+            "n": 142,
+            "median_us": 43175,
+            "max_us": 43175
+          },
+          {
+            "n": 147,
+            "median_us": 13540,
+            "max_us": 13540
+          },
+          {
+            "n": 241,
+            "median_us": 128437,
+            "max_us": 128437
+          },
+          {
+            "n": 261,
+            "median_us": 18530,
+            "max_us": 18530
+          },
+          {
+            "n": 262,
+            "median_us": 110273.0,
+            "max_us": 133395
+          },
+          {
+            "n": 263,
+            "median_us": 285334,
+            "max_us": 285334
+          },
+          {
+            "n": 265,
+            "median_us": 201169,
+            "max_us": 201169
+          },
+          {
+            "n": 266,
+            "median_us": 129904,
+            "max_us": 129904
+          },
+          {
+            "n": 269,
+            "median_us": 140719.5,
+            "max_us": 143616
+          },
+          {
+            "n": 271,
+            "median_us": 121351,
+            "max_us": 121351
+          },
+          {
+            "n": 274,
+            "median_us": 30350,
+            "max_us": 30350
+          },
+          {
+            "n": 277,
+            "median_us": 143921,
+            "max_us": 143921
+          }
+        ],
+        "common_thread_cpu_measured_cases": 42,
+        "common_thread_cpu_us_before": 1390625,
+        "common_thread_cpu_us_after": 1312500,
+        "all_solve_us_before": 2172375,
+        "all_thread_cpu_us_before": 2125000,
+        "all_solve_us_after": 2182419,
+        "all_thread_cpu_us_after": 2093750
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-heldout-batch51-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.398897400009446,
+        "peak_working_set_bytes": 31887360,
+        "host_load": {
+          "status": "measured",
+          "sample_interval_seconds": 0.25,
+          "logical_processors": 32,
+          "processor_scope": "all processors",
+          "trial_cpu_delta": {
+            "idle_ticks": 679062500,
+            "kernel_ticks": 722187500,
+            "user_ticks": 45468750,
+            "total_ticks": 767656250,
+            "busy_ticks": 88593750,
+            "busy_fraction": 0.11540810095664564
+          },
+          "available_physical_bytes_start": 8811028480,
+          "available_physical_bytes_end": 8837128192,
+          "available_physical_bytes_min": 8795308032,
+          "total_physical_bytes_observed": [
+            33605316608
+          ],
+          "samples": [
+            {
+              "elapsed_seconds": 8.420000085607171e-05,
+              "cpu_ticks": {
+                "idle": 119080305468750,
+                "kernel": 126580035937500,
+                "user": 8143782031250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8811028480,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.2525395999546163,
+              "cpu_ticks": {
+                "idle": 119080372500000,
+                "kernel": 126580109375000,
+                "user": 8143789062500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8805990400,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.5039553999667987,
+              "cpu_ticks": {
+                "idle": 119080445000000,
+                "kernel": 126580185312500,
+                "user": 8143792812500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8795308032,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.7578078999649733,
+              "cpu_ticks": {
+                "idle": 119080518750000,
+                "kernel": 126580263125000,
+                "user": 8143798281250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8810946560,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.0082619999884628,
+              "cpu_ticks": {
+                "idle": 119080592500000,
+                "kernel": 126580338125000,
+                "user": 8143802031250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8808357888,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.2602758999564685,
+              "cpu_ticks": {
+                "idle": 119080664843750,
+                "kernel": 126580413281250,
+                "user": 8143806406250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8818270208,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.5105750999646261,
+              "cpu_ticks": {
+                "idle": 119080734687500,
+                "kernel": 126580487968750,
+                "user": 8143811250000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8822124544,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.762938399973791,
+              "cpu_ticks": {
+                "idle": 119080805468750,
+                "kernel": 126580565312500,
+                "user": 8143816093750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8815685632,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.017063000006601,
+              "cpu_ticks": {
+                "idle": 119080876406250,
+                "kernel": 126580642343750,
+                "user": 8143820468750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8811606016,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.2678786999895237,
+              "cpu_ticks": {
+                "idle": 119080946875000,
+                "kernel": 126580718281250,
+                "user": 8143824531250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8817025024,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.3988985999603756,
+              "cpu_ticks": {
+                "idle": 119080984531250,
+                "kernel": 126580758125000,
+                "user": 8143827500000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8837128192,
+                "memory_load_percent": 73
+              }
+            }
+          ],
+          "cpu_intervals": [
+            {
+              "begin_seconds": 8.420000085607171e-05,
+              "end_seconds": 0.2525395999546163,
+              "delta": {
+                "idle_ticks": 67031250,
+                "kernel_ticks": 73437500,
+                "user_ticks": 7031250,
+                "total_ticks": 80468750,
+                "busy_ticks": 13437500,
+                "busy_fraction": 0.1669902912621359
+              }
+            },
+            {
+              "begin_seconds": 0.2525395999546163,
+              "end_seconds": 0.5039553999667987,
+              "delta": {
+                "idle_ticks": 72500000,
+                "kernel_ticks": 75937500,
+                "user_ticks": 3750000,
+                "total_ticks": 79687500,
+                "busy_ticks": 7187500,
+                "busy_fraction": 0.09019607843137255
+              }
+            },
+            {
+              "begin_seconds": 0.5039553999667987,
+              "end_seconds": 0.7578078999649733,
+              "delta": {
+                "idle_ticks": 73750000,
+                "kernel_ticks": 77812500,
+                "user_ticks": 5468750,
+                "total_ticks": 83281250,
+                "busy_ticks": 9531250,
+                "busy_fraction": 0.11444652908067542
+              }
+            },
+            {
+              "begin_seconds": 0.7578078999649733,
+              "end_seconds": 1.0082619999884628,
+              "delta": {
+                "idle_ticks": 73750000,
+                "kernel_ticks": 75000000,
+                "user_ticks": 3750000,
+                "total_ticks": 78750000,
+                "busy_ticks": 5000000,
+                "busy_fraction": 0.06349206349206349
+              }
+            },
+            {
+              "begin_seconds": 1.0082619999884628,
+              "end_seconds": 1.2602758999564685,
+              "delta": {
+                "idle_ticks": 72343750,
+                "kernel_ticks": 75156250,
+                "user_ticks": 4375000,
+                "total_ticks": 79531250,
+                "busy_ticks": 7187500,
+                "busy_fraction": 0.09037328094302555
+              }
+            },
+            {
+              "begin_seconds": 1.2602758999564685,
+              "end_seconds": 1.5105750999646261,
+              "delta": {
+                "idle_ticks": 69843750,
+                "kernel_ticks": 74687500,
+                "user_ticks": 4843750,
+                "total_ticks": 79531250,
+                "busy_ticks": 9687500,
+                "busy_fraction": 0.12180746561886051
+              }
+            },
+            {
+              "begin_seconds": 1.5105750999646261,
+              "end_seconds": 1.762938399973791,
+              "delta": {
+                "idle_ticks": 70781250,
+                "kernel_ticks": 77343750,
+                "user_ticks": 4843750,
+                "total_ticks": 82187500,
+                "busy_ticks": 11406250,
+                "busy_fraction": 0.13878326996197718
+              }
+            },
+            {
+              "begin_seconds": 1.762938399973791,
+              "end_seconds": 2.017063000006601,
+              "delta": {
+                "idle_ticks": 70937500,
+                "kernel_ticks": 77031250,
+                "user_ticks": 4375000,
+                "total_ticks": 81406250,
+                "busy_ticks": 10468750,
+                "busy_fraction": 0.12859884836852206
+              }
+            },
+            {
+              "begin_seconds": 2.017063000006601,
+              "end_seconds": 2.2678786999895237,
+              "delta": {
+                "idle_ticks": 70468750,
+                "kernel_ticks": 75937500,
+                "user_ticks": 4062500,
+                "total_ticks": 80000000,
+                "busy_ticks": 9531250,
+                "busy_fraction": 0.119140625
+              }
+            },
+            {
+              "begin_seconds": 2.2678786999895237,
+              "end_seconds": 2.3988985999603756,
+              "delta": {
+                "idle_ticks": 37656250,
+                "kernel_ticks": 39843750,
+                "user_ticks": 2968750,
+                "total_ticks": 42812500,
+                "busy_ticks": 5156250,
+                "busy_fraction": 0.12043795620437957
+              }
+            }
+          ],
+          "errors": [],
+          "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+          "sources": [
+            "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+            "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+          ]
+        },
+        "host_report": "reports\\paired-heldout-batch51-2-before.host.json",
+        "host_report_sha256": "6857d10d425c9de06e2cbb6f923bf5fe5e6b0375bd46453e6be8bd8806dc6c8c"
+      },
+      "after": {
+        "report": "reports\\paired-heldout-batch51-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.4520529999863356,
+        "peak_working_set_bytes": 31854592,
+        "host_load": {
+          "status": "measured",
+          "sample_interval_seconds": 0.25,
+          "logical_processors": 32,
+          "processor_scope": "all processors",
+          "trial_cpu_delta": {
+            "idle_ticks": 674687500,
+            "kernel_ticks": 739218750,
+            "user_ticks": 46093750,
+            "total_ticks": 785312500,
+            "busy_ticks": 110625000,
+            "busy_fraction": 0.1408674890569041
+          },
+          "available_physical_bytes_start": 8822779904,
+          "available_physical_bytes_end": 8810364928,
+          "available_physical_bytes_min": 8756510720,
+          "total_physical_bytes_observed": [
+            33605316608
+          ],
+          "samples": [
+            {
+              "elapsed_seconds": 0.00010899995686486363,
+              "cpu_ticks": {
+                "idle": 119079626562500,
+                "kernel": 126579290625000,
+                "user": 8143735468750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8822779904,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.2525478999596089,
+              "cpu_ticks": {
+                "idle": 119079692187500,
+                "kernel": 126579364218750,
+                "user": 8143742187500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8784699392,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.5061994999996386,
+              "cpu_ticks": {
+                "idle": 119079758750000,
+                "kernel": 126579442500000,
+                "user": 8143747500000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8784756736,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.760564099997282,
+              "cpu_ticks": {
+                "idle": 119079823281250,
+                "kernel": 126579517656250,
+                "user": 8143752343750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8761368576,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.0126926999655552,
+              "cpu_ticks": {
+                "idle": 119079891093750,
+                "kernel": 126579594062500,
+                "user": 8143756875000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8756510720,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.2661353999865241,
+              "cpu_ticks": {
+                "idle": 119079960468750,
+                "kernel": 126579668906250,
+                "user": 8143760000000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8772333568,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.5162385999574326,
+              "cpu_ticks": {
+                "idle": 119080035781250,
+                "kernel": 126579748437500,
+                "user": 8143762031250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8763039744,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.768589899991639,
+              "cpu_ticks": {
+                "idle": 119080106718750,
+                "kernel": 126579822968750,
+                "user": 8143767500000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8775331840,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.0207419999642298,
+              "cpu_ticks": {
+                "idle": 119080180000000,
+                "kernel": 126579900156250,
+                "user": 8143771718750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8770793472,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.2727847999776714,
+              "cpu_ticks": {
+                "idle": 119080255000000,
+                "kernel": 126579978906250,
+                "user": 8143777500000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8777932800,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.4520533999893814,
+              "cpu_ticks": {
+                "idle": 119080301250000,
+                "kernel": 126580029843750,
+                "user": 8143781562500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8810364928,
+                "memory_load_percent": 73
+              }
+            }
+          ],
+          "cpu_intervals": [
+            {
+              "begin_seconds": 0.00010899995686486363,
+              "end_seconds": 0.2525478999596089,
+              "delta": {
+                "idle_ticks": 65625000,
+                "kernel_ticks": 73593750,
+                "user_ticks": 6718750,
+                "total_ticks": 80312500,
+                "busy_ticks": 14687500,
+                "busy_fraction": 0.1828793774319066
+              }
+            },
+            {
+              "begin_seconds": 0.2525478999596089,
+              "end_seconds": 0.5061994999996386,
+              "delta": {
+                "idle_ticks": 66562500,
+                "kernel_ticks": 78281250,
+                "user_ticks": 5312500,
+                "total_ticks": 83593750,
+                "busy_ticks": 17031250,
+                "busy_fraction": 0.20373831775700935
+              }
+            },
+            {
+              "begin_seconds": 0.5061994999996386,
+              "end_seconds": 0.760564099997282,
+              "delta": {
+                "idle_ticks": 64531250,
+                "kernel_ticks": 75156250,
+                "user_ticks": 4843750,
+                "total_ticks": 80000000,
+                "busy_ticks": 15468750,
+                "busy_fraction": 0.193359375
+              }
+            },
+            {
+              "begin_seconds": 0.760564099997282,
+              "end_seconds": 1.0126926999655552,
+              "delta": {
+                "idle_ticks": 67812500,
+                "kernel_ticks": 76406250,
+                "user_ticks": 4531250,
+                "total_ticks": 80937500,
+                "busy_ticks": 13125000,
+                "busy_fraction": 0.16216216216216217
+              }
+            },
+            {
+              "begin_seconds": 1.0126926999655552,
+              "end_seconds": 1.2661353999865241,
+              "delta": {
+                "idle_ticks": 69375000,
+                "kernel_ticks": 74843750,
+                "user_ticks": 3125000,
+                "total_ticks": 77968750,
+                "busy_ticks": 8593750,
+                "busy_fraction": 0.11022044088176353
+              }
+            },
+            {
+              "begin_seconds": 1.2661353999865241,
+              "end_seconds": 1.5162385999574326,
+              "delta": {
+                "idle_ticks": 75312500,
+                "kernel_ticks": 79531250,
+                "user_ticks": 2031250,
+                "total_ticks": 81562500,
+                "busy_ticks": 6250000,
+                "busy_fraction": 0.07662835249042145
+              }
+            },
+            {
+              "begin_seconds": 1.5162385999574326,
+              "end_seconds": 1.768589899991639,
+              "delta": {
+                "idle_ticks": 70937500,
+                "kernel_ticks": 74531250,
+                "user_ticks": 5468750,
+                "total_ticks": 80000000,
+                "busy_ticks": 9062500,
+                "busy_fraction": 0.11328125
+              }
+            },
+            {
+              "begin_seconds": 1.768589899991639,
+              "end_seconds": 2.0207419999642298,
+              "delta": {
+                "idle_ticks": 73281250,
+                "kernel_ticks": 77187500,
+                "user_ticks": 4218750,
+                "total_ticks": 81406250,
+                "busy_ticks": 8125000,
+                "busy_fraction": 0.09980806142034548
+              }
+            },
+            {
+              "begin_seconds": 2.0207419999642298,
+              "end_seconds": 2.2727847999776714,
+              "delta": {
+                "idle_ticks": 75000000,
+                "kernel_ticks": 78750000,
+                "user_ticks": 5781250,
+                "total_ticks": 84531250,
+                "busy_ticks": 9531250,
+                "busy_fraction": 0.11275415896487985
+              }
+            },
+            {
+              "begin_seconds": 2.2727847999776714,
+              "end_seconds": 2.4520533999893814,
+              "delta": {
+                "idle_ticks": 46250000,
+                "kernel_ticks": 50937500,
+                "user_ticks": 4062500,
+                "total_ticks": 55000000,
+                "busy_ticks": 8750000,
+                "busy_fraction": 0.1590909090909091
+              }
+            }
+          ],
+          "errors": [],
+          "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+          "sources": [
+            "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+            "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+          ]
+        },
+        "host_report": "reports\\paired-heldout-batch51-2-after.host.json",
+        "host_report_sha256": "7d0b0e80cb54a4db44ab47bfcbc8e11e57a558d8d7957a463abc8760bdb5d386"
+      },
+      "comparison": {
+        "before": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "after": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "common_cases": 42,
+        "common_solve_us_before": 1400700,
+        "common_solve_us_after": 1434642,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 828,
+        "scales": [
+          {
+            "n": 41,
+            "median_us": 2886,
+            "max_us": 2886
+          },
+          {
+            "n": 42,
+            "median_us": 7931.5,
+            "max_us": 8082
+          },
+          {
+            "n": 44,
+            "median_us": 2660.5,
+            "max_us": 3100
+          },
+          {
+            "n": 45,
+            "median_us": 2338,
+            "max_us": 2338
+          },
+          {
+            "n": 46,
+            "median_us": 3355.5,
+            "max_us": 3490
+          },
+          {
+            "n": 48,
+            "median_us": 4103,
+            "max_us": 4103
+          },
+          {
+            "n": 49,
+            "median_us": 2969.5,
+            "max_us": 3675
+          },
+          {
+            "n": 52,
+            "median_us": 3552,
+            "max_us": 3552
+          },
+          {
+            "n": 65,
+            "median_us": 14775.0,
+            "max_us": 25085
+          },
+          {
+            "n": 66,
+            "median_us": 4409,
+            "max_us": 4409
+          },
+          {
+            "n": 67,
+            "median_us": 3881.5,
+            "max_us": 4381
+          },
+          {
+            "n": 68,
+            "median_us": 22083.0,
+            "max_us": 29068
+          },
+          {
+            "n": 69,
+            "median_us": 10848,
+            "max_us": 17265
+          },
+          {
+            "n": 70,
+            "median_us": 4127.0,
+            "max_us": 4556
+          },
+          {
+            "n": 121,
+            "median_us": 29352,
+            "max_us": 29352
+          },
+          {
+            "n": 123,
+            "median_us": 80073,
+            "max_us": 80073
+          },
+          {
+            "n": 128,
+            "median_us": 61512,
+            "max_us": 61512
+          },
+          {
+            "n": 131,
+            "median_us": 11430,
+            "max_us": 11430
+          },
+          {
+            "n": 132,
+            "median_us": 9665,
+            "max_us": 9665
+          },
+          {
+            "n": 133,
+            "median_us": 65330,
+            "max_us": 65330
+          },
+          {
+            "n": 134,
+            "median_us": 11227,
+            "max_us": 11227
+          },
+          {
+            "n": 139,
+            "median_us": 34076,
+            "max_us": 34076
+          },
+          {
+            "n": 141,
+            "median_us": 41807.0,
+            "max_us": 52214
+          },
+          {
+            "n": 142,
+            "median_us": 43387,
+            "max_us": 43387
+          },
+          {
+            "n": 147,
+            "median_us": 13527,
+            "max_us": 13527
+          },
+          {
+            "n": 241,
+            "median_us": 125649,
+            "max_us": 125649
+          },
+          {
+            "n": 261,
+            "median_us": 18549,
+            "max_us": 18549
+          },
+          {
+            "n": 262,
+            "median_us": 111350.5,
+            "max_us": 130251
+          },
+          {
+            "n": 263,
+            "median_us": 280526,
+            "max_us": 280526
+          },
+          {
+            "n": 265,
+            "median_us": 234275,
+            "max_us": 234275
+          },
+          {
+            "n": 266,
+            "median_us": 129388,
+            "max_us": 129388
+          },
+          {
+            "n": 269,
+            "median_us": 139052.0,
+            "max_us": 145277
+          },
+          {
+            "n": 271,
+            "median_us": 134813,
+            "max_us": 134813
+          },
+          {
+            "n": 274,
+            "median_us": 26436,
+            "max_us": 26436
+          },
+          {
+            "n": 277,
+            "median_us": 143572,
+            "max_us": 143572
+          }
+        ],
+        "common_thread_cpu_measured_cases": 42,
+        "common_thread_cpu_us_before": 1390625,
+        "common_thread_cpu_us_after": 1296875,
+        "all_solve_us_before": 2156114,
+        "all_thread_cpu_us_before": 2140625,
+        "all_solve_us_after": 2213036,
+        "all_thread_cpu_us_after": 2015625
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-heldout-batch51-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.492089700012002,
+        "peak_working_set_bytes": 31838208,
+        "host_load": {
+          "status": "measured",
+          "sample_interval_seconds": 0.25,
+          "logical_processors": 32,
+          "processor_scope": "all processors",
+          "trial_cpu_delta": {
+            "idle_ticks": 664218750,
+            "kernel_ticks": 728593750,
+            "user_ticks": 70156250,
+            "total_ticks": 798750000,
+            "busy_ticks": 134531250,
+            "busy_fraction": 0.16842723004694835
+          },
+          "available_physical_bytes_start": 8849604608,
+          "available_physical_bytes_end": 8719208448,
+          "available_physical_bytes_min": 8711471104,
+          "total_physical_bytes_observed": [
+            33605316608
+          ],
+          "samples": [
+            {
+              "elapsed_seconds": 7.989996811375022e-05,
+              "cpu_ticks": {
+                "idle": 119080989687500,
+                "kernel": 126580764218750,
+                "user": 8143828125000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8849604608,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.2508747999672778,
+              "cpu_ticks": {
+                "idle": 119081063437500,
+                "kernel": 126580841562500,
+                "user": 8143831875000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8823857152,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.5049848999478854,
+              "cpu_ticks": {
+                "idle": 119081139375000,
+                "kernel": 126580919687500,
+                "user": 8143836406250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8820011008,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.7574272999772802,
+              "cpu_ticks": {
+                "idle": 119081211406250,
+                "kernel": 126580995000000,
+                "user": 8143840937500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8824606720,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.0091812000027858,
+              "cpu_ticks": {
+                "idle": 119081284062500,
+                "kernel": 126581070781250,
+                "user": 8143845625000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8834633728,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.2615109999896958,
+              "cpu_ticks": {
+                "idle": 119081349218750,
+                "kernel": 126581144062500,
+                "user": 8143852343750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8828608512,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.511868899979163,
+              "cpu_ticks": {
+                "idle": 119081417968750,
+                "kernel": 126581219062500,
+                "user": 8143857343750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8819163136,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.7629379999707453,
+              "cpu_ticks": {
+                "idle": 119081482968750,
+                "kernel": 126581291562500,
+                "user": 8143864843750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8792907776,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.018010100000538,
+              "cpu_ticks": {
+                "idle": 119081545312500,
+                "kernel": 126581364062500,
+                "user": 8143876562500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8761614336,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.2719592999783345,
+              "cpu_ticks": {
+                "idle": 119081607812500,
+                "kernel": 126581433593750,
+                "user": 8143887812500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8711471104,
+                "memory_load_percent": 74
+              }
+            },
+            {
+              "elapsed_seconds": 2.4920898999553174,
+              "cpu_ticks": {
+                "idle": 119081653906250,
+                "kernel": 126581492812500,
+                "user": 8143898281250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8719208448,
+                "memory_load_percent": 74
+              }
+            }
+          ],
+          "cpu_intervals": [
+            {
+              "begin_seconds": 7.989996811375022e-05,
+              "end_seconds": 0.2508747999672778,
+              "delta": {
+                "idle_ticks": 73750000,
+                "kernel_ticks": 77343750,
+                "user_ticks": 3750000,
+                "total_ticks": 81093750,
+                "busy_ticks": 7343750,
+                "busy_fraction": 0.0905587668593449
+              }
+            },
+            {
+              "begin_seconds": 0.2508747999672778,
+              "end_seconds": 0.5049848999478854,
+              "delta": {
+                "idle_ticks": 75937500,
+                "kernel_ticks": 78125000,
+                "user_ticks": 4531250,
+                "total_ticks": 82656250,
+                "busy_ticks": 6718750,
+                "busy_fraction": 0.08128544423440454
+              }
+            },
+            {
+              "begin_seconds": 0.5049848999478854,
+              "end_seconds": 0.7574272999772802,
+              "delta": {
+                "idle_ticks": 72031250,
+                "kernel_ticks": 75312500,
+                "user_ticks": 4531250,
+                "total_ticks": 79843750,
+                "busy_ticks": 7812500,
+                "busy_fraction": 0.09784735812133072
+              }
+            },
+            {
+              "begin_seconds": 0.7574272999772802,
+              "end_seconds": 1.0091812000027858,
+              "delta": {
+                "idle_ticks": 72656250,
+                "kernel_ticks": 75781250,
+                "user_ticks": 4687500,
+                "total_ticks": 80468750,
+                "busy_ticks": 7812500,
+                "busy_fraction": 0.0970873786407767
+              }
+            },
+            {
+              "begin_seconds": 1.0091812000027858,
+              "end_seconds": 1.2615109999896958,
+              "delta": {
+                "idle_ticks": 65156250,
+                "kernel_ticks": 73281250,
+                "user_ticks": 6718750,
+                "total_ticks": 80000000,
+                "busy_ticks": 14843750,
+                "busy_fraction": 0.185546875
+              }
+            },
+            {
+              "begin_seconds": 1.2615109999896958,
+              "end_seconds": 1.511868899979163,
+              "delta": {
+                "idle_ticks": 68750000,
+                "kernel_ticks": 75000000,
+                "user_ticks": 5000000,
+                "total_ticks": 80000000,
+                "busy_ticks": 11250000,
+                "busy_fraction": 0.140625
+              }
+            },
+            {
+              "begin_seconds": 1.511868899979163,
+              "end_seconds": 1.7629379999707453,
+              "delta": {
+                "idle_ticks": 65000000,
+                "kernel_ticks": 72500000,
+                "user_ticks": 7500000,
+                "total_ticks": 80000000,
+                "busy_ticks": 15000000,
+                "busy_fraction": 0.1875
+              }
+            },
+            {
+              "begin_seconds": 1.7629379999707453,
+              "end_seconds": 2.018010100000538,
+              "delta": {
+                "idle_ticks": 62343750,
+                "kernel_ticks": 72500000,
+                "user_ticks": 11718750,
+                "total_ticks": 84218750,
+                "busy_ticks": 21875000,
+                "busy_fraction": 0.2597402597402597
+              }
+            },
+            {
+              "begin_seconds": 2.018010100000538,
+              "end_seconds": 2.2719592999783345,
+              "delta": {
+                "idle_ticks": 62500000,
+                "kernel_ticks": 69531250,
+                "user_ticks": 11250000,
+                "total_ticks": 80781250,
+                "busy_ticks": 18281250,
+                "busy_fraction": 0.2263056092843327
+              }
+            },
+            {
+              "begin_seconds": 2.2719592999783345,
+              "end_seconds": 2.4920898999553174,
+              "delta": {
+                "idle_ticks": 46093750,
+                "kernel_ticks": 59218750,
+                "user_ticks": 10468750,
+                "total_ticks": 69687500,
+                "busy_ticks": 23593750,
+                "busy_fraction": 0.33856502242152464
+              }
+            }
+          ],
+          "errors": [],
+          "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+          "sources": [
+            "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+            "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+          ]
+        },
+        "host_report": "reports\\paired-heldout-batch51-3-before.host.json",
+        "host_report_sha256": "dc450e65a4006832563962784748729ae387b039375d3de49f7cbaa58911c9b6"
+      },
+      "after": {
+        "report": "reports\\paired-heldout-batch51-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.3511725999996997,
+        "peak_working_set_bytes": 31797248,
+        "host_load": {
+          "status": "measured",
+          "sample_interval_seconds": 0.25,
+          "logical_processors": 32,
+          "processor_scope": "all processors",
+          "trial_cpu_delta": {
+            "idle_ticks": 651250000,
+            "kernel_ticks": 700625000,
+            "user_ticks": 52812500,
+            "total_ticks": 753437500,
+            "busy_ticks": 102187500,
+            "busy_fraction": 0.13562836997096642
+          },
+          "available_physical_bytes_start": 8723832832,
+          "available_physical_bytes_end": 8786624512,
+          "available_physical_bytes_min": 8723832832,
+          "total_physical_bytes_observed": [
+            33605316608
+          ],
+          "samples": [
+            {
+              "elapsed_seconds": 9.53000271692872e-05,
+              "cpu_ticks": {
+                "idle": 119081657656250,
+                "kernel": 126581497187500,
+                "user": 8143898437500
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8723832832,
+                "memory_load_percent": 74
+              }
+            },
+            {
+              "elapsed_seconds": 0.2512212000438012,
+              "cpu_ticks": {
+                "idle": 119081721406250,
+                "kernel": 126581568281250,
+                "user": 8143905781250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8800264192,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.5053576999926008,
+              "cpu_ticks": {
+                "idle": 119081796093750,
+                "kernel": 126581647031250,
+                "user": 8143911875000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8799911936,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 0.7571103000082076,
+              "cpu_ticks": {
+                "idle": 119081866562500,
+                "kernel": 126581722500000,
+                "user": 8143916406250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8807849984,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.0106790999998339,
+              "cpu_ticks": {
+                "idle": 119081939687500,
+                "kernel": 126581799062500,
+                "user": 8143920468750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8802144256,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.2651701000286266,
+              "cpu_ticks": {
+                "idle": 119082009218750,
+                "kernel": 126581875781250,
+                "user": 8143925468750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8811573248,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.5159017000114545,
+              "cpu_ticks": {
+                "idle": 119082076406250,
+                "kernel": 126581950468750,
+                "user": 8143930781250
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8812822528,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 1.7710924000130035,
+              "cpu_ticks": {
+                "idle": 119082142187500,
+                "kernel": 126582023281250,
+                "user": 8143939843750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8760844288,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.0234722000313923,
+              "cpu_ticks": {
+                "idle": 119082210000000,
+                "kernel": 126582095468750,
+                "user": 8143945468750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8755343360,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.274411600024905,
+              "cpu_ticks": {
+                "idle": 119082288906250,
+                "kernel": 126582176406250,
+                "user": 8143949218750
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8760061952,
+                "memory_load_percent": 73
+              }
+            },
+            {
+              "elapsed_seconds": 2.3511732000042684,
+              "cpu_ticks": {
+                "idle": 119082308906250,
+                "kernel": 126582197812500,
+                "user": 8143951250000
+              },
+              "memory": {
+                "total_physical_bytes": 33605316608,
+                "available_physical_bytes": 8786624512,
+                "memory_load_percent": 73
+              }
+            }
+          ],
+          "cpu_intervals": [
+            {
+              "begin_seconds": 9.53000271692872e-05,
+              "end_seconds": 0.2512212000438012,
+              "delta": {
+                "idle_ticks": 63750000,
+                "kernel_ticks": 71093750,
+                "user_ticks": 7343750,
+                "total_ticks": 78437500,
+                "busy_ticks": 14687500,
+                "busy_fraction": 0.18725099601593626
+              }
+            },
+            {
+              "begin_seconds": 0.2512212000438012,
+              "end_seconds": 0.5053576999926008,
+              "delta": {
+                "idle_ticks": 74687500,
+                "kernel_ticks": 78750000,
+                "user_ticks": 6093750,
+                "total_ticks": 84843750,
+                "busy_ticks": 10156250,
+                "busy_fraction": 0.11970534069981584
+              }
+            },
+            {
+              "begin_seconds": 0.5053576999926008,
+              "end_seconds": 0.7571103000082076,
+              "delta": {
+                "idle_ticks": 70468750,
+                "kernel_ticks": 75468750,
+                "user_ticks": 4531250,
+                "total_ticks": 80000000,
+                "busy_ticks": 9531250,
+                "busy_fraction": 0.119140625
+              }
+            },
+            {
+              "begin_seconds": 0.7571103000082076,
+              "end_seconds": 1.0106790999998339,
+              "delta": {
+                "idle_ticks": 73125000,
+                "kernel_ticks": 76562500,
+                "user_ticks": 4062500,
+                "total_ticks": 80625000,
+                "busy_ticks": 7500000,
+                "busy_fraction": 0.09302325581395349
+              }
+            },
+            {
+              "begin_seconds": 1.0106790999998339,
+              "end_seconds": 1.2651701000286266,
+              "delta": {
+                "idle_ticks": 69531250,
+                "kernel_ticks": 76718750,
+                "user_ticks": 5000000,
+                "total_ticks": 81718750,
+                "busy_ticks": 12187500,
+                "busy_fraction": 0.1491395793499044
+              }
+            },
+            {
+              "begin_seconds": 1.2651701000286266,
+              "end_seconds": 1.5159017000114545,
+              "delta": {
+                "idle_ticks": 67187500,
+                "kernel_ticks": 74687500,
+                "user_ticks": 5312500,
+                "total_ticks": 80000000,
+                "busy_ticks": 12812500,
+                "busy_fraction": 0.16015625
+              }
+            },
+            {
+              "begin_seconds": 1.5159017000114545,
+              "end_seconds": 1.7710924000130035,
+              "delta": {
+                "idle_ticks": 65781250,
+                "kernel_ticks": 72812500,
+                "user_ticks": 9062500,
+                "total_ticks": 81875000,
+                "busy_ticks": 16093750,
+                "busy_fraction": 0.1965648854961832
+              }
+            },
+            {
+              "begin_seconds": 1.7710924000130035,
+              "end_seconds": 2.0234722000313923,
+              "delta": {
+                "idle_ticks": 67812500,
+                "kernel_ticks": 72187500,
+                "user_ticks": 5625000,
+                "total_ticks": 77812500,
+                "busy_ticks": 10000000,
+                "busy_fraction": 0.1285140562248996
+              }
+            },
+            {
+              "begin_seconds": 2.0234722000313923,
+              "end_seconds": 2.274411600024905,
+              "delta": {
+                "idle_ticks": 78906250,
+                "kernel_ticks": 80937500,
+                "user_ticks": 3750000,
+                "total_ticks": 84687500,
+                "busy_ticks": 5781250,
+                "busy_fraction": 0.06826568265682657
+              }
+            },
+            {
+              "begin_seconds": 2.274411600024905,
+              "end_seconds": 2.3511732000042684,
+              "delta": {
+                "idle_ticks": 20000000,
+                "kernel_ticks": 21406250,
+                "user_ticks": 2031250,
+                "total_ticks": 23437500,
+                "busy_ticks": 3437500,
+                "busy_fraction": 0.14666666666666667
+              }
+            }
+          ],
+          "errors": [],
+          "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+          "sources": [
+            "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+            "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+          ]
+        },
+        "host_report": "reports\\paired-heldout-batch51-3-after.host.json",
+        "host_report_sha256": "62f21a1ddab984175ca22ebbb809d820553e60a6dc2ef250bd134620acde5e86"
+      },
+      "comparison": {
+        "before": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "after": {
+          "total": 48,
+          "passed": 42,
+          "failed": 6
+        },
+        "common_cases": 42,
+        "common_solve_us_before": 1497479,
+        "common_solve_us_after": 1383763,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 828,
+        "scales": [
+          {
+            "n": 41,
+            "median_us": 2698,
+            "max_us": 2698
+          },
+          {
+            "n": 42,
+            "median_us": 7679.5,
+            "max_us": 8221
+          },
+          {
+            "n": 44,
+            "median_us": 2709.0,
+            "max_us": 3074
+          },
+          {
+            "n": 45,
+            "median_us": 2624,
+            "max_us": 2624
+          },
+          {
+            "n": 46,
+            "median_us": 3498.5,
+            "max_us": 3718
+          },
+          {
+            "n": 48,
+            "median_us": 4782,
+            "max_us": 4782
+          },
+          {
+            "n": 49,
+            "median_us": 2913.0,
+            "max_us": 3499
+          },
+          {
+            "n": 52,
+            "median_us": 3543,
+            "max_us": 3543
+          },
+          {
+            "n": 65,
+            "median_us": 13869.0,
+            "max_us": 23273
+          },
+          {
+            "n": 66,
+            "median_us": 4147,
+            "max_us": 4147
+          },
+          {
+            "n": 67,
+            "median_us": 3950.5,
+            "max_us": 4666
+          },
+          {
+            "n": 68,
+            "median_us": 21304.0,
+            "max_us": 28139
+          },
+          {
+            "n": 69,
+            "median_us": 10515,
+            "max_us": 19383
+          },
+          {
+            "n": 70,
+            "median_us": 4081.5,
+            "max_us": 4743
+          },
+          {
+            "n": 121,
+            "median_us": 30250,
+            "max_us": 30250
+          },
+          {
+            "n": 123,
+            "median_us": 67459,
+            "max_us": 67459
+          },
+          {
+            "n": 128,
+            "median_us": 59986,
+            "max_us": 59986
+          },
+          {
+            "n": 131,
+            "median_us": 11461,
+            "max_us": 11461
+          },
+          {
+            "n": 132,
+            "median_us": 10011,
+            "max_us": 10011
+          },
+          {
+            "n": 133,
+            "median_us": 60407,
+            "max_us": 60407
+          },
+          {
+            "n": 134,
+            "median_us": 11662,
+            "max_us": 11662
+          },
+          {
+            "n": 139,
+            "median_us": 35303,
+            "max_us": 35303
+          },
+          {
+            "n": 141,
+            "median_us": 41223.0,
+            "max_us": 50981
+          },
+          {
+            "n": 142,
+            "median_us": 43785,
+            "max_us": 43785
+          },
+          {
+            "n": 147,
+            "median_us": 14186,
+            "max_us": 14186
+          },
+          {
+            "n": 241,
+            "median_us": 114501,
+            "max_us": 114501
+          },
+          {
+            "n": 261,
+            "median_us": 19091,
+            "max_us": 19091
+          },
+          {
+            "n": 262,
+            "median_us": 109647.0,
+            "max_us": 132736
+          },
+          {
+            "n": 263,
+            "median_us": 266133,
+            "max_us": 266133
+          },
+          {
+            "n": 265,
+            "median_us": 200811,
+            "max_us": 200811
+          },
+          {
+            "n": 266,
+            "median_us": 131666,
+            "max_us": 131666
+          },
+          {
+            "n": 269,
+            "median_us": 142624.0,
+            "max_us": 147283
+          },
+          {
+            "n": 271,
+            "median_us": 124636,
+            "max_us": 124636
+          },
+          {
+            "n": 274,
+            "median_us": 26228,
+            "max_us": 26228
+          },
+          {
+            "n": 277,
+            "median_us": 141538,
+            "max_us": 141538
+          }
+        ],
+        "common_thread_cpu_measured_cases": 42,
+        "common_thread_cpu_us_before": 1390625,
+        "common_thread_cpu_us_after": 1343750,
+        "all_solve_us_before": 2275220,
+        "all_thread_cpu_us_before": 2156250,
+        "all_solve_us_after": 2130696,
+        "all_thread_cpu_us_after": 2093750
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch48\\solution.cpp",
+  "median_common_solve_us_before": 1403163,
+  "median_common_solve_us_after": 1399944,
+  "median_wall_seconds_before": 2.3990870999987237,
+  "median_wall_seconds_after": 2.404613499995321,
+  "maximum_cli_working_set_bytes": 31854592,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 1390625,
+  "median_all_solve_us_before": 2172375,
+  "median_all_thread_cpu_us_before": 2140625,
+  "median_common_thread_cpu_us_after": 1312500,
+  "median_all_solve_us_after": 2182419,
+  "median_all_thread_cpu_us_after": 2093750,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+  "measurement_driver_sha256": "f7f28641c6fdaa03bff7a9b463146eb890dd6b8316170347a5591098b685d31c",
+  "host_sampler_sha256": "362791ca914434ecd91a423ba0272358516370461d75e8a8e775bce3c415ae9c",
+  "host_load_scope": "Pertrial raw host CPU ticks/RAM samples including user background; sampled 0.25 seconds, same monitor both sides; no background subtraction or empty-host claim",
+  "baseline_build_provenance": {
+    "status": "validated_consumer_group_recovery_default_milestone",
+    "source_sha256": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+    "default_exe_path": "build/aicore_bench.exe",
+    "default_exe_sha256": "54fc7e9b2257f1edcd6925126f32e969826a5d6ba93bc2f9b3e8fd5dd5538c10",
+    "default_archive": "research/batch48/default-aicore_bench.exe",
+    "measured_exe_path": "research/batch48/release-candidate-frozen-aicore_bench.exe",
+    "measured_exe_sha256": "991e18cdde3d7e803bc7a10c6d5e2910312e8485417eceab01c6767a717dfd64",
+    "performance_baseline_exe_path": "research/batch45/default-aicore_bench.exe",
+    "performance_baseline_exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+    "old_default_R45_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+    "old_default_R45_exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+    "old_R45_freeze": "research/batch45/provenance.json",
+    "rollback_manifest_path": "research/batch45/rollback/manifest.json",
+    "rollback_manifest_sha": "559107ab44724836b438a26fdcc7ec141dd21b1eed8497d7060762e2d0b8e624",
+    "compile_inputs": {
+      "solution/solution.cpp": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+      "CMakeLists.txt": "9881ed3b7146e9c205742ec9a6ce5320be8da385145e2a0c94a12bc31a42a3a9",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/candidate_search.cpp": "d3ad51f2b51a831d8f1b227b03fc9475cf442243faa90e0b72f5a1100542597a",
+      "src/frontier_probe.cpp": "2e67ec976cf5a61c29d13d668a144d29a5e148bd7af922960fc4017124430071",
+      "src/main.cpp": "575fc7f284a65ea51bf28f494dadb2d9682bf2e4b3c48726dd3323bc63bcc5b1",
+      "src/parallel_oracle.cpp": "81e487372b2eaa9c23df26fa66e676ab1c81ce4e0d0672484ac68e6c2346dbf7",
+      "src/simulator.cpp": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+      "include/candidate_search.h": "fa631e48fe2f8550720824cc0702ea750eaa51365ba421d8de28e3e6803e586b",
+      "include/local_json.h": "407aac276343e315104ab63e27a887765f4a27025768ee4232a8c38d11e11c43",
+      "include/problem.h": "7c09de2cf92464b7209ef71333fffb06428abf320ee7a005e3dba6072da78f0a",
+      "include/samples.h": "966bcccd47f35ef476aa818bac7ae64a76c5dd3c63b7f6c6c5475e01df8fa4ca",
+      "include/simulator.h": "a9657897fccdb6d70ddbe450b43a7961f105647ff6170de508251e7d26117ed7",
+      "include/solver_metrics.h": "1e14d74fc8123763417a82335eb57cb975d49e9015bb9623468ca45d20b1dea5"
+    },
+    "test_inputs": {
+      "tests/test_assignment.cpp": "cde11ec1ecf5f65de50396399f22b3955078be28f285d5a8eca7a222b23e6c10",
+      "tests/test_group.cpp": "014cff53d712e7032e03c738f80902ad0ab236d8148dd9b39c97b25c1c44b314",
+      "tests/test_models.cpp": "2ecbf0520c650144a3be0e17f02ffb5e498a3349d11e9f99f353c5d5eba05682",
+      "tests/test_numeric.cpp": "a24a1283e4494d403cf63fca9e0c7938b4bfe61c39bb8adae718c93ac95bf9ea",
+      "tests/test_numeric_priority.cpp": "a9994a19ce5a2f029d686a3d2b8ebf9a3718ca97f38c911796e492d06aece6d2",
+      "tests/test_projection.cpp": "494267c1e6f7fcc7f8b7766ae96031b16745101d42eda8107373ff8ca57614dc",
+      "tests/test_serial_frontier.cpp": "71d7931b883352e99879ec620906c8c5860d94c5277586aab220448f0c74b29d",
+      "tests/test_shallow.cpp": "74f2df2ae2510ef06e64d557cb33c6e04c9549542e20c5e20dcd7a8a0e1cdf23",
+      "tests/test_simulator.cpp": "f810c633fc0f7302c2a195e2c122357464f00868f666a1f6e47ba9d7f9ea8486"
+    },
+    "generation_inputs": {
+      "solution/projection.cpp.inc": "f5130f280e0b0ed4425f526d613d2460050f6106882c9faf3a1a8031dab142c0",
+      "research/batch48/projection.cpp.inc": "f5130f280e0b0ed4425f526d613d2460050f6106882c9faf3a1a8031dab142c0",
+      "scripts/prepare_batch48.py": "a2981b697d3d84ceecf1692c9e1231068466df4f933ed35704ac95df5af03ecf",
+      "scripts/make_group_gold_batch48.py": "965336cbf88944f94dbe2427d899a0ddbd012e3d0238cbe3cd900dd212e6c83b",
+      "scripts/promote_batch48.py": "584debe5867c5c7b2251d46cf0e06bb38cfada1d8dcf8d63cd8c5c57c6e3fcfe"
+    },
+    "release_flags": {
+      "build/CMakeFiles/solution.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/solution.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n",
+      "build/CMakeFiles/aicore_bench.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/aicore_bench.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17\n\n",
+      "build/CMakeFiles/simulator.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/simulator.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n"
+    },
+    "candidate_acceptance_sha": "67790b5804a2440acd21b9646ce38184b2b4164bc12c38c0646a8266b909aec4",
+    "candidate_acceptance": {
+      "status": "complete isolated candidate quality/numeric gate passed;performance pending;not default",
+      "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+      "compile_inputs": {
+        "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+        "src/candidate_search.cpp": "d3ad51f2b51a831d8f1b227b03fc9475cf442243faa90e0b72f5a1100542597a",
+        "src/frontier_probe.cpp": "2e67ec976cf5a61c29d13d668a144d29a5e148bd7af922960fc4017124430071",
+        "src/main.cpp": "575fc7f284a65ea51bf28f494dadb2d9682bf2e4b3c48726dd3323bc63bcc5b1",
+        "src/parallel_oracle.cpp": "81e487372b2eaa9c23df26fa66e676ab1c81ce4e0d0672484ac68e6c2346dbf7",
+        "src/simulator.cpp": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+        "include/candidate_search.h": "fa631e48fe2f8550720824cc0702ea750eaa51365ba421d8de28e3e6803e586b",
+        "include/local_json.h": "407aac276343e315104ab63e27a887765f4a27025768ee4232a8c38d11e11c43",
+        "include/problem.h": "7c09de2cf92464b7209ef71333fffb06428abf320ee7a005e3dba6072da78f0a",
+        "include/samples.h": "966bcccd47f35ef476aa818bac7ae64a76c5dd3c63b7f6c6c5475e01df8fa4ca",
+        "include/simulator.h": "a9657897fccdb6d70ddbe450b43a7961f105647ff6170de508251e7d26117ed7",
+        "include/solver_metrics.h": "1e14d74fc8123763417a82335eb57cb975d49e9015bb9623468ca45d20b1dea5",
+        "research/batch48/solution.cpp": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+        "research/batch48/projection.cpp.inc": "f5130f280e0b0ed4425f526d613d2460050f6106882c9faf3a1a8031dab142c0",
+        "research/batch48/cmake/CMakeLists.txt": "799ab4d52f1252c53906e044512a1105dcdd287ba3ab3e5703d3d8e8e539fb34",
+        "research/batch48/numeric_checks.cpp": "7b1f1cd4990f315d2b35e4b03ce1d46c5ccf5ba0764e29d902f6d127bde27ac8",
+        "research/batch48/test_projection.cpp": "48d1b6186100155830c49f66066e9520a5092afaad5ae6bb70151c81eb3ccdd2",
+        "research/batch48/test_group_template.cpp": "97659850996fd12153298c08495154c06d5da18aa8c4c3815e1f5227c1b91267",
+        "research/batch48/tests/test_assignment.cpp": "72b12ef4112e481202cb7b058ee73182d026aa5cd62dc639904e06c6a47585c8",
+        "research/batch48/tests/test_group.cpp": "bbef29a7ec372b63a2eca1b357627bdce5cb9803c2a7e0fa8f463ea4dce7bdd9",
+        "research/batch48/tests/test_models.cpp": "12a88d7e91831573839194fca44a41e723e3f71b716517d14e45d413c92e8b87",
+        "research/batch48/tests/test_numeric.cpp": "f887649db764b8be878757fdbeb460117697db16aea5f3616c8cad752864956a",
+        "research/batch48/tests/test_numeric_priority.cpp": "20f219c404bb7809758714f7aff584f2c871aea149b09550989385b101803ebb",
+        "research/batch48/tests/test_projection.cpp": "489627e41b1e8e622993b0021933b22934ca3b667ace06d0c8bb55ef79df2a40",
+        "research/batch48/tests/test_serial_frontier.cpp": "087b4cdc94f48a7e493e36d5736c65ce48b52daa76490cabc184a7b0cd98d224",
+        "research/batch48/tests/test_shallow.cpp": "c8bd084af9840071d773067ea80f7e5ad4d098f8a862e246347c17736f318a7b",
+        "research/batch48/tests/test_simulator.cpp": "e25060ad6dc57fbb5f92ad6614efa83ffab015becb8eb22a003abe0df43e6d69"
+      },
+      "generation_inputs": {
+        "scripts/prepare_batch48.py": "a2981b697d3d84ceecf1692c9e1231068466df4f933ed35704ac95df5af03ecf",
+        "scripts/make_group_gold_batch48.py": "965336cbf88944f94dbe2427d899a0ddbd012e3d0238cbe3cd900dd212e6c83b",
+        "scripts/review_projection_plans_batch48.py": "9a09b2bfaeef701dba7a4667fe9ab684a0378b190c7c751c938b593e9f286b10",
+        "scripts/prepare_validation_build_batch48.py": "56b71d92068823aa752a75c5b633c4f7f03c817d13bbb693fb95107a559ebb12",
+        "scripts/run_validation_build_batch48.py": "c56c367b5be470b95bbf9aac5b970bd37b7e70690e596b881f812efbcf7d3fe0",
+        "scripts/verify_candidate_batch48.py": "5eb5d1662bea7a9130f6e0e876a3ce1a4ed6b5c2394ce477cfcf98ce6c90b249",
+        "scripts/verify_numeric_batch48.py": "2d399d01fc057a1b8eab94024ca355b2f87f60a4e0f80356e14ed0530c1562c6"
+      },
+      "data_inputs": {
+        "data/group-gold-batch48.json": "566f4797237b1a5d3051a26a88e3beebbf1c2c12afd1b48a19b9db7dc882284e",
+        "data/projection-gold-batch45.json": "e21a0198f35ddfb94cac9b459f82b49ca0094076ce829d81705dc0ea874b8b68",
+        "data/hard-corpus-resumed.json": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+        "data/projection-retention-heldout-batch45.json": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+        "data/unresolved-r44-input-only-batch45.json": "fe0bcdce1b2d28dde606e95f235e95df23a665448de516e4da7df7a9b2da998e",
+        "data/projection-heldout-unresolved-input-only-batch45.json": "d1ed96e322e8a458098c96fdd927852b2a9e305ef897f611cc8963ea1450fe59",
+        "data/numeric-controls-batch42.json": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+        "data/numeric-parallel-batch42.json": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+        "data/numeric-parallel-valid-batch42.json": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+        "data/scaled-serial-controls-batch42.json": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473"
+      },
+      "compile_flags": {
+        "research/batch48/validation-build/CMakeFiles/solution.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/solution.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n",
+        "research/batch48/validation-build/CMakeFiles/aicore_bench.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/aicore_bench.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17\n\n",
+        "research/batch48/validation-build/CMakeFiles/simulator.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/simulator.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n"
+      },
+      "executables": {
+        "research/batch48/aicore_bench.exe": "7f89627af8fbb418a5a80a2fdb3c27c9bad2bffbb79ab4d69820c277959f1d0d",
+        "research/batch48/validation-build/aicore_bench.exe": "991e18cdde3d7e803bc7a10c6d5e2910312e8485417eceab01c6767a717dfd64",
+        "research/batch48/release-candidate-frozen-aicore_bench.exe": "991e18cdde3d7e803bc7a10c6d5e2910312e8485417eceab01c6767a717dfd64",
+        "research/batch48/numeric-validation-ubsan.exe": "c20e294f78fc25a0b150ce6d47e06356e9dbe6dc27379f426bc375d98b2bf3b4",
+        "research/batch48/projection-validation-ubsan.exe": "2c16890ebabcb1c95d3d8904eb524ddbf0cdac4f066c58a87bc4b3a18fc9a5d5",
+        "research/batch48/group-validation-ubsan.exe": "16d3eb804370a100a93eb2cf385047c45649aacc2824e61ca74341450db6d17f"
+      },
+      "reports": {
+        "reports/full-verification-batch48.json": "1cb237980c605f0c0bd03f6dcaf9f53655b4f4bd5c944f14d7d243aea09afcd8",
+        "reports/full-numeric-verification-batch48.json": "b88ad2707e942d456f081f6fb522968bf5e8f8758399a635683dbebca89bb3f3",
+        "reports/functional-summary-batch48.json": "bb0641aff33741cf1d745551a373d9a00177d2e6c612b20c31d594a7649ebf6b",
+        "reports/validation-ctest-batch48.txt": "b54792ccca12a0b3476c002cdd0bd8384220535ec4791e2040f214be4041048b",
+        "reports/validation-build-batch48.txt": "ca06e0d82c57852adc7a6ee3133b19906cea6cdfbdc534687075f9b4ec2a47a7",
+        "reports/group-profile-ubsan-batch48.txt": "4392a76cd4f5ef03e82375476f5ab90a884caa186afeffb5622242cdd1fdc5ba",
+        "reports/projection-profile-ubsan-batch48.txt": "08d299ba2e31c52b1268d394ef3fede85db87202059a9889d4df1a554a30ed4d",
+        "reports/projection-actual-plan-bigint-batch48.json": "7328fa385435227193a8075dea3bbf09a4c6cf248d6e3ac3ed0292a13e0a84c0"
+      },
+      "diagnostic_checkpoint_sha": "e23d21950e7a7b36bfc3472fbebf9d1fc1ab418b75684a23f26c6a3e216324be",
+      "normal979_direct_R45_same_every_record": true,
+      "prior_structure36_same": true,
+      "prior_heldout72_same": true,
+      "resource_cliques12_same": true,
+      "numeric_gold523": true,
+      "workspace_gold495": true,
+      "shallow_gold2590": true,
+      "priority_gold20180": true,
+      "group_recognition_gold83": true,
+      "group_moved_profiles210": true,
+      "ctest13_actual_exit0": true,
+      "ctest_shared_wall_seconds": 6.62,
+      "quality": {
+        "status": "passed candidate full functional regression",
+        "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+        "bench_sha": "7f89627af8fbb418a5a80a2fdb3c27c9bad2bffbb79ab4d69820c277959f1d0d",
+        "normal979_direct_R45_same_every_record": true,
+        "equal_suites": [
+          {
+            "suite": "stress",
+            "records": 153,
+            "before": "reports\\stress-batch45.json",
+            "after": "reports\\stress-batch48.json",
+            "before_sha": "8a1e75a0471597d3b9b6c47b68a1b54b1ba1ef178092fdaf3b2245231179a1c7",
+            "after_sha": "40bcab0187df40c4f10bb861046575d56a17421259465406b9194591aab761c2"
+          },
+          {
+            "suite": "development",
+            "records": 143,
+            "before": "reports\\development-batch45.json",
+            "after": "reports\\development-batch48.json",
+            "before_sha": "488ad1381cd0777f0ea3470ad0cc6c6d72cb5eecc730c9830d51bedb638de25f",
+            "after_sha": "e40b7036c9533e1deffdda9f09cc6f2db9dc94c14f9c3b34ecdbe336744704e3"
+          },
+          {
+            "suite": "holdout",
+            "records": 143,
+            "before": "reports\\holdout-batch45.json",
+            "after": "reports\\holdout-batch48.json",
+            "before_sha": "4ccba1190bb09c397c5d1f74c27bdcb71d8995fe205fb3cb5ab0c133045cb029",
+            "after_sha": "9c1f78dae2d9a086f7c085b695085a033d7a54346a76e78baddebf95f6e08451"
+          },
+          {
+            "suite": "frontier",
+            "records": 72,
+            "before": "reports\\frontier-batch45.json",
+            "after": "reports\\frontier-batch48.json",
+            "before_sha": "07cea3bb1b1fb5b55e656a0e0cf5195b4bde1182030e7ff8e62a048a16277b13",
+            "after_sha": "c5ebd4a0aef686ecb74f59b7d537df89b5a82a0c515d9f4d4febcb192ee29121"
+          },
+          {
+            "suite": "frontier-holdout",
+            "records": 72,
+            "before": "reports\\frontier-holdout-batch45.json",
+            "after": "reports\\frontier-holdout-batch48.json",
+            "before_sha": "fe6c9416192e8c5b4e8d33d68facde864cfe6823de12b5d44af0056080575a55",
+            "after_sha": "d3ebf6d4ffd36a2cba2cc066b7e42ce9fc7e3aa8bb95241b5b099ab430509596"
+          },
+          {
+            "suite": "oracle4",
+            "records": 24,
+            "before": "reports\\oracle4-batch45.json",
+            "after": "reports\\oracle4-batch48.json",
+            "before_sha": "9e9466f5dff128d6c06577737687dd6c89aa066fe649e1669793eeea4d632b38",
+            "after_sha": "b1d7e0533c445e2e1dc5930d660949744867ca58d8b96b2bb470e162b89f283c"
+          },
+          {
+            "suite": "oracle4-holdout",
+            "records": 24,
+            "before": "reports\\oracle4-holdout-batch45.json",
+            "after": "reports\\oracle4-holdout-batch48.json",
+            "before_sha": "84c67fd8957091301465d8bbbf5e7ccb02579fd828fdd1c158cdaca4cca64fb0",
+            "after_sha": "aa14d156f25086272a8292f3544f31e689094a6544f403665b1c152ddb2338cf"
+          },
+          {
+            "suite": "oracle5",
+            "records": 24,
+            "before": "reports\\oracle5-batch45.json",
+            "after": "reports\\oracle5-batch48.json",
+            "before_sha": "1d26ac8b03c58572188647ed58e8d4e0d2edac2730f825b0ce4a76b7102e7622",
+            "after_sha": "3754e9dfdcd257f7007e92f75628fc2c8ea2b8655035c2289b21e7037146f1d9"
+          },
+          {
+            "suite": "oracle5-holdout",
+            "records": 24,
+            "before": "reports\\oracle5-holdout-batch45.json",
+            "after": "reports\\oracle5-holdout-batch48.json",
+            "before_sha": "85138f1855b3e627e00794969b65d70b86d325ee8d728bfd04d99badaebd16e9",
+            "after_sha": "ebf0415db0ccd12c409883f241b17431f65194aa8ef69af3d44320753f4379bb"
+          },
+          {
+            "suite": "overlap",
+            "records": 30,
+            "before": "reports\\overlap-batch45.json",
+            "after": "reports\\overlap-batch48.json",
+            "before_sha": "87935560c6383f21fdc064d6e0849a0ffa158ca8e9c87ef7d2189c4668ecc3d2",
+            "after_sha": "d665cbc97a7027f8961cfe7de0a2a150d37a527be880f9930ac56a7e7082cb27"
+          },
+          {
+            "suite": "overlap-holdout",
+            "records": 30,
+            "before": "reports\\overlap-holdout-batch45.json",
+            "after": "reports\\overlap-holdout-batch48.json",
+            "before_sha": "f0fc153c455707593f8811fa5ecfd9f6862a07dd81f48630fa4f648986cf1152",
+            "after_sha": "a474bbb80d94dcd257b811f7bce4959e2ed131295e62b986f2a395492f0b8335"
+          },
+          {
+            "suite": "resource-quality",
+            "records": 18,
+            "before": "reports\\resource-quality-batch45.json",
+            "after": "reports\\resource-quality-batch48.json",
+            "before_sha": "e65a52b8474e855423c15264fa1079f7b959faf129d1baa2fa561ffd929e8459",
+            "after_sha": "d48f35167c55e0c6b45e41eb40aa0986076635f17e9caff9d71c7453447e6e4e"
+          },
+          {
+            "suite": "resource-quality-holdout",
+            "records": 18,
+            "before": "reports\\resource-quality-holdout-batch45.json",
+            "after": "reports\\resource-quality-holdout-batch48.json",
+            "before_sha": "915d90c4003050231b31da3f6f3a03d2d710a125a60ea731f5112a2cb34e933e",
+            "after_sha": "a416a3a906298cef12cbd5b02967c963bfb21c7e9e59e4fd63cdf4d399b3bacf"
+          },
+          {
+            "suite": "weighted-overlap",
+            "records": 30,
+            "before": "reports\\weighted-overlap-batch45.json",
+            "after": "reports\\weighted-overlap-batch48.json",
+            "before_sha": "a4dda3628698ff55da1744e5cb225a6f2a2039012af555fbd7070f1c1c3cf6ac",
+            "after_sha": "e5ded53d21ac121df156f0156b0d60ed90c84e2c3785c7f992998dd034577729"
+          },
+          {
+            "suite": "weighted-overlap-holdout",
+            "records": 30,
+            "before": "reports\\weighted-overlap-holdout-batch45.json",
+            "after": "reports\\weighted-overlap-holdout-batch48.json",
+            "before_sha": "03d16adde5d2589a1bcfe5f0428216dbff06b6878d130fd080ead9db25421077",
+            "after_sha": "a4ebd264c5bcfcb6c9240f7701760ad5517e5d99a21d24050e45ca05e5966eee"
+          },
+          {
+            "suite": "oracle6",
+            "records": 12,
+            "before": "reports\\oracle6-batch45.json",
+            "after": "reports\\oracle6-batch48.json",
+            "before_sha": "588fe680ef93710863ad3b1255d7d4188ade2f139d20ee53dc266f9e3f1a1869",
+            "after_sha": "95b7ec4a13d895c04a18fb754c0861e2058e1c572b4093f4860a5314b3bdf776"
+          },
+          {
+            "suite": "oracle6-holdout",
+            "records": 12,
+            "before": "reports\\oracle6-holdout-batch45.json",
+            "after": "reports\\oracle6-holdout-batch48.json",
+            "before_sha": "4f4e5921f5847c147190151b76e115344e713379ada0563b3b34a5a4540cb36e",
+            "after_sha": "0cba0ad23a9b67453dcfd7bd53ecced30fd8ac0b03dc6326be58be26c9eb178e"
+          },
+          {
+            "suite": "irregular-small",
+            "records": 12,
+            "before": "reports\\irregular-small-batch45.json",
+            "after": "reports\\irregular-small-batch48.json",
+            "before_sha": "0f40b4180fcde858138c2a05fab1f9c14b3549cde112d0bb40da36bb5c08b578",
+            "after_sha": "3eccab49a94769a29d7d05a7f7e8619f0d3d91809d3d9ec4e31d8e058a845de3"
+          },
+          {
+            "suite": "irregular-small-holdout",
+            "records": 12,
+            "before": "reports\\irregular-small-holdout-batch45.json",
+            "after": "reports\\irregular-small-holdout-batch48.json",
+            "before_sha": "1c36d0d4d1f67366cc7a3d659c7eea01e25e8ebc94fcb2c73ca079ba8fd80d75",
+            "after_sha": "2702fb0b789577d64da297815a98e691fe9eb4e2a2fa5b54b37818da7896bae9"
+          },
+          {
+            "suite": "corepacking",
+            "records": 18,
+            "before": "reports\\corepacking-batch45.json",
+            "after": "reports\\corepacking-batch48.json",
+            "before_sha": "cfd74f2b48c5850b883fe802685b1554de4327d80e0af9e75f61053de89fe725",
+            "after_sha": "dc5f3fe85e5d5e12ae83f91287a0c432c99999598eae21cd5d5a03494db33bbd"
+          },
+          {
+            "suite": "corepacking-holdout",
+            "records": 18,
+            "before": "reports\\corepacking-holdout-batch45.json",
+            "after": "reports\\corepacking-holdout-batch48.json",
+            "before_sha": "581f97b251524b75bd14cc1bc98ac8f0db3eb4aec616a4f0321e6fc4a0023402",
+            "after_sha": "b85c7c7e17d9e58dffab4f2fcadbc091aa416707a35917e4096069a682f62c11"
+          },
+          {
+            "suite": "wait-overlap",
+            "records": 18,
+            "before": "reports\\wait-overlap-batch45.json",
+            "after": "reports\\wait-overlap-batch48.json",
+            "before_sha": "d1839f7e6d99f8ae257e4987ff3c90e6a974c962949ff7c19cda1c63f36c37ff",
+            "after_sha": "82aa9eeea0ddead135aa72df186e476415bf7eab1c71f39a8d11f75c92f7a99d"
+          },
+          {
+            "suite": "wait-overlap-holdout",
+            "records": 18,
+            "before": "reports\\wait-overlap-holdout-batch45.json",
+            "after": "reports\\wait-overlap-holdout-batch48.json",
+            "before_sha": "d57f265c7918832631e4573730d7c8491f6eeb88a4cd868132222f79873931b7",
+            "after_sha": "de63ba16e85520b154fb88137317c07efb1d6d118965274b96c2c313e13d6acf"
+          },
+          {
+            "suite": "certificate-controls",
+            "records": 12,
+            "before": "reports\\certificate-controls-batch45.json",
+            "after": "reports\\certificate-controls-batch48.json",
+            "before_sha": "4889b35cba66c36113411b84d2b49a8496ee87f95daa7a443347292d99254396",
+            "after_sha": "f336ee61856ae6e2e999c5bf600578bced36373e45d088a9952b6d8a26b019a7"
+          },
+          {
+            "suite": "dense",
+            "records": 6,
+            "before": "reports\\dense-batch45.json",
+            "after": "reports\\dense-batch48.json",
+            "before_sha": "a4073ea2cc1fb0f3eb9c48740ac6270914890206ae7d942197e3a3e28ae4e817",
+            "after_sha": "471db38f27b2fdacd5e5db5493ff73852ea7a2d2dc1c9b5cd77dda0ee42528b6"
+          },
+          {
+            "suite": "dense-holdout",
+            "records": 6,
+            "before": "reports\\dense-holdout-batch45.json",
+            "after": "reports\\dense-holdout-batch48.json",
+            "before_sha": "6010453e22352f1122edeb3b1b6ef5fa480b824236577d42c7eeac59cb16d8d3",
+            "after_sha": "6b3a55e6e29779a37d0ca5c27328afdaee89a108d5a827f67a55f67641ea3a7e"
+          }
+        ],
+        "statuses": [
+          {
+            "command": [
+              "C:/Users/admin/miniconda3/python.exe",
+              "scripts/regress_current.py",
+              "--label",
+              "batch48",
+              "--bench",
+              "research/batch48/aicore_bench.exe",
+              "--source",
+              "research/batch48/solution.cpp"
+            ],
+            "actual_exit_code": 0,
+            "wall_seconds": 39.96015449997503
+          },
+          {
+            "command": [
+              "C:/Users/admin/miniconda3/python.exe",
+              "scripts/audit_certificates.py"
+            ],
+            "actual_exit_code": 0,
+            "wall_seconds": 0.8280132000218146
+          },
+          {
+            "label": "forkjoin",
+            "actual_exit_code": 0,
+            "records": 36,
+            "before_sha": "10376873402c848a8dee1655ca9811623502b832bd72d3650f86440a80ea9f26",
+            "after_sha": "55c51ea3e20f793a16f42235baa5695ff45a3e1e0dc6fda46b90778e488eceab",
+            "all_fields_equal": true
+          },
+          {
+            "label": "shallow-heldout",
+            "actual_exit_code": 0,
+            "records": 72,
+            "before_sha": "1634dfe96dc44ab3cb44e1c4a7ade879c9ca292938a67a953703f8e264754263",
+            "after_sha": "922ae2d555b4289752e8ab9ad67dba560d11a814a12dfff08661db5ef7f9f375",
+            "all_fields_equal": true
+          },
+          {
+            "label": "resource-cliques",
+            "actual_exit_code": 0,
+            "records": 12,
+            "before_sha": "8a2ee5604754f210b6a6ffa290ba7e4ff093716770f8d0c1c13a26f430968391",
+            "after_sha": "9f533474019b13db43effebc2f917e63961cab76880291407cd835eb849ac00d",
+            "all_fields_equal": true
+          }
+        ],
+        "wall_seconds": 47.343616700032726,
+        "timing": "Shared functional only; no paired cost conclusion"
+      },
+      "numeric": {
+        "status": "passed",
+        "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+        "fixed_plan_controls": 523,
+        "workspace_profiles": 495,
+        "group_recognition_controls": 83,
+        "group_moved_profiles": 210,
+        "runs": [
+          {
+            "label": "numeric-controls",
+            "actual_exit_code": 0,
+            "controls": 11,
+            "input_sha": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+            "output_sha": "4890ecb0ba0e68d5836ed376188474d1873febd0ae8d5d88a7937ac01fbe8dc6",
+            "log_sha": "0199575fcc7be723b9e759e8ecd722bef5661e95b7a56bbc88317765e3eea9f1"
+          },
+          {
+            "label": "numeric-parallel",
+            "actual_exit_code": 0,
+            "controls": 320,
+            "input_sha": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+            "output_sha": "e4d064e63f20c5fe857e1a0a64e5197955c01a4487bbd76b3dcccadf6a48428e",
+            "log_sha": "6fe5d200bfc952456a65d338bf13b5c1006a0bdba98f86549b3b9f3f24bf10c7"
+          },
+          {
+            "label": "numeric-parallel-valid",
+            "actual_exit_code": 0,
+            "controls": 160,
+            "input_sha": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+            "output_sha": "5248b4fcc1e7a274683dd34b4e75815ea9403e537015a9210a4b15539c8b4c97",
+            "log_sha": "118bef34db849b3f1ca52e4d6d9d3d11aaa2e57f71466aed4ef2357e71ca887a"
+          },
+          {
+            "label": "scaled-serial-controls",
+            "actual_exit_code": 0,
+            "controls": 32,
+            "input_sha": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473",
+            "output_sha": "754c7f05bea3ccf08ae3e0a64901a482d8d29db112885b05f38ab56fd5d03f01",
+            "log_sha": "5eaa3ec41310ee51242cc78913c6c29367d763e98ef5c52c65f8e4631003c478"
+          },
+          {
+            "label": "projection",
+            "actual_exit_code": 0,
+            "input_sha": "e21a0198f35ddfb94cac9b459f82b49ca0094076ce829d81705dc0ea874b8b68",
+            "log_sha": "08d299ba2e31c52b1268d394ef3fede85db87202059a9889d4df1a554a30ed4d",
+            "output": "495 independent full-ancestor/live-set bigint controls passed"
+          },
+          {
+            "label": "group",
+            "actual_exit_code": 0,
+            "input_sha": "566f4797237b1a5d3051a26a88e3beebbf1c2c12afd1b48a19b9db7dc882284e",
+            "log_sha": "4392a76cd4f5ef03e82375476f5ab90a884caa186afeffb5622242cdd1fdc5ba",
+            "output": "83 recognition controls / 210 group moves: independent bigint passed"
+          }
+        ],
+        "UBSan_runtime_errors": 0,
+        "exe_sha": {
+          "numeric": "c20e294f78fc25a0b150ce6d47e06356e9dbe6dc27379f426bc375d98b2bf3b4",
+          "projection": "2c16890ebabcb1c95d3d8904eb524ddbf0cdac4f066c58a87bc4b3a18fc9a5d5",
+          "group": "16d3eb804370a100a93eb2cf385047c45649aacc2824e61ca74341450db6d17f"
+        },
+        "compiler": "Clang21.1 -O1 -g -fsanitize=undefined -fno-sanitize-recover=undefined",
+        "link_warnings": "UCRT LNK4217 logged separately from runtime UB",
+        "shared_functional_wall_seconds": 3.7118000999907963,
+        "default45_preserved": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9"
+      },
+      "functional": {
+        "status": "isolated candidate functional only;not default",
+        "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+        "benchmark_sha": "7f89627af8fbb418a5a80a2fdb3c27c9bad2bffbb79ab4d69820c277959f1d0d",
+        "default_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+        "diagnostic_freeze_sha": "e23d21950e7a7b36bfc3472fbebf9d1fc1ab418b75684a23f26c6a3e216324be",
+        "independent_simulator_sha": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+        "wall_seconds": 29.393490499991458,
+        "jobs": [
+          {
+            "label": "hard",
+            "input_sha": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+            "actual_exit_code": 1,
+            "wall_seconds": 27.129440199991222
+          },
+          {
+            "label": "heldout",
+            "input_sha": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+            "actual_exit_code": 1,
+            "wall_seconds": 2.173251000000164
+          }
+        ],
+        "comparisons": {
+          "hard": {
+            "records": 202,
+            "before_legal": 143,
+            "after_legal": 144,
+            "recovered": [
+              "irregular_consumers_local_k24_ret1_seed20273418"
+            ],
+            "lost": [],
+            "common_all_T_peak_identical": true,
+            "before_sha": "04272ce2658fb85ec7a136cde4f4b35107ab1ba64759bf34b403d8766a005b20",
+            "after_sha": "0607350f4ac622013bb55ec9c61eb206763e6561ad3b968ecc793a4b573bd8c0",
+            "all_failure_wall_us": 18277216,
+            "all_failure_thread_cpu_us": 17593750
+          },
+          "heldout": {
+            "records": 48,
+            "before_legal": 42,
+            "after_legal": 42,
+            "recovered": [],
+            "lost": [],
+            "common_all_T_peak_identical": true,
+            "before_sha": "260df9d93ba59cc97f4b5dffc8179097ef12565451e4866f107f3d0246ff0f02",
+            "after_sha": "d8b707ca8eaf6ff7fe3234bc224ac1afca598c87b590ea4363332888210a262c",
+            "all_failure_wall_us": 701348,
+            "all_failure_thread_cpu_us": 703125
+          }
+        },
+        "timing": "Shared functional O2, no paired performance or speed claim"
+      },
+      "baseline45_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+      "baseline45_exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+      "no_promotion": true,
+      "known_witness_unresolved_original": 58,
+      "known_witness_unresolved_heldout": 6,
+      "scope": "One additional original input-only topology recovery;fresh48 no new recovery;all previous successful T/P unchanged;no performance claim",
+      "launch_repair": "Release13 actual succeeded once; next cmd forward-slash launch failed before Clang, repaired with Path Windows separators and --clang-only without redoing CTest; Clang523/495/210 all fresh actual runs"
+    },
+    "paired_plan_sha": "e034ca827207af7eb57842313f3a3372d682e2797f69fba5afb6d36908ab1b56",
+    "paired_completion_sha": "61f5cfc93a20b90a222659cff2e885a6aa79f68a6cc326f8f449592d2ae8ccc8",
+    "paired_cost": {
+      "hard": {
+        "rounds": [
+          {
+            "round": 1,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 26839814,
+                  "thread_cpu_us": 26437500
+                },
+                "after": {
+                  "wall_us": 26303100,
+                  "thread_cpu_us": 25765625
+                }
+              },
+              "common_success": {
+                "count": 143,
+                "before": {
+                  "wall_us": 7901731,
+                  "thread_cpu_us": 7828125
+                },
+                "after": {
+                  "wall_us": 7802561,
+                  "thread_cpu_us": 7593750
+                }
+              },
+              "common_failure": {
+                "count": 58,
+                "before": {
+                  "wall_us": 18891669,
+                  "thread_cpu_us": 18562500
+                },
+                "after": {
+                  "wall_us": 18453976,
+                  "thread_cpu_us": 18125000
+                }
+              },
+              "recovered": {
+                "count": 1,
+                "before": {
+                  "wall_us": 46414,
+                  "thread_cpu_us": 46875
+                },
+                "after": {
+                  "wall_us": 46563,
+                  "thread_cpu_us": 46875
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "a4df4a8185c9225595b92245563459d9e044d6f556cc3df730804f0cd2b70a21",
+              "after": "f994015dc8a4ff7f4c28e1ed6e59d6a91114a909242f5a95fa7895d55987b81d"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 28.32896770001389,
+                "working_set_bytes": 316600320
+              },
+              "after": {
+                "wall_seconds": 27.65099370002281,
+                "working_set_bytes": 317050880
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k24_ret1_seed20273418"
+            ],
+            "all_cpu_ratio": 0.9745862884160756,
+            "all_wall_ratio": 0.9800030655950149
+          },
+          {
+            "round": 2,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 26317265,
+                  "thread_cpu_us": 25734375
+                },
+                "after": {
+                  "wall_us": 26268028,
+                  "thread_cpu_us": 25656250
+                }
+              },
+              "common_success": {
+                "count": 143,
+                "before": {
+                  "wall_us": 7697239,
+                  "thread_cpu_us": 7468750
+                },
+                "after": {
+                  "wall_us": 7752543,
+                  "thread_cpu_us": 7593750
+                }
+              },
+              "common_failure": {
+                "count": 58,
+                "before": {
+                  "wall_us": 18572347,
+                  "thread_cpu_us": 18218750
+                },
+                "after": {
+                  "wall_us": 18465466,
+                  "thread_cpu_us": 18015625
+                }
+              },
+              "recovered": {
+                "count": 1,
+                "before": {
+                  "wall_us": 47679,
+                  "thread_cpu_us": 46875
+                },
+                "after": {
+                  "wall_us": 50019,
+                  "thread_cpu_us": 46875
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "519d8532ff5ade752a7099337241f62771d578006b66e33e6a4289b2728483ed",
+              "after": "b64bfa2b9400ad76cbe6bfe0be50c155b4b844d5b1457329b28737a79fa5fd41"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 27.52713549998589,
+                "working_set_bytes": 316878848
+              },
+              "after": {
+                "wall_seconds": 27.461280899995472,
+                "working_set_bytes": 316469248
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k24_ret1_seed20273418"
+            ],
+            "all_cpu_ratio": 0.9969641772920461,
+            "all_wall_ratio": 0.9981290989014246
+          },
+          {
+            "round": 3,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 26343960,
+                  "thread_cpu_us": 25984375
+                },
+                "after": {
+                  "wall_us": 29045159,
+                  "thread_cpu_us": 28421875
+                }
+              },
+              "common_success": {
+                "count": 143,
+                "before": {
+                  "wall_us": 7730548,
+                  "thread_cpu_us": 7562500
+                },
+                "after": {
+                  "wall_us": 8580634,
+                  "thread_cpu_us": 8421875
+                }
+              },
+              "common_failure": {
+                "count": 58,
+                "before": {
+                  "wall_us": 18566877,
+                  "thread_cpu_us": 18375000
+                },
+                "after": {
+                  "wall_us": 20403156,
+                  "thread_cpu_us": 19937500
+                }
+              },
+              "recovered": {
+                "count": 1,
+                "before": {
+                  "wall_us": 46535,
+                  "thread_cpu_us": 46875
+                },
+                "after": {
+                  "wall_us": 61369,
+                  "thread_cpu_us": 62500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "82669505bcf9096377e7b625237e421730293a97b74dd51283f31ffca24d78d0",
+              "after": "e2933564148442fb509e505837f22783c6d7dae82f66bcec2147de3d83ed80bb"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 27.531781999976374,
+                "working_set_bytes": 315883520
+              },
+              "after": {
+                "wall_seconds": 30.361807900015265,
+                "working_set_bytes": 316915712
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k24_ret1_seed20273418"
+            ],
+            "all_cpu_ratio": 1.0938063740228503,
+            "all_wall_ratio": 1.1025357994773755
+          }
+        ],
+        "independent_side_medians": {
+          "all": {
+            "before": {
+              "wall_us": 26343960,
+              "thread_cpu_us": 25984375
+            },
+            "after": {
+              "wall_us": 26303100,
+              "thread_cpu_us": 25765625
+            }
+          },
+          "common_success": {
+            "before": {
+              "wall_us": 7730548,
+              "thread_cpu_us": 7562500
+            },
+            "after": {
+              "wall_us": 7802561,
+              "thread_cpu_us": 7593750
+            }
+          },
+          "common_failure": {
+            "before": {
+              "wall_us": 18572347,
+              "thread_cpu_us": 18375000
+            },
+            "after": {
+              "wall_us": 18465466,
+              "thread_cpu_us": 18125000
+            }
+          },
+          "recovered": {
+            "before": {
+              "wall_us": 46535,
+              "thread_cpu_us": 46875
+            },
+            "after": {
+              "wall_us": 50019,
+              "thread_cpu_us": 46875
+            }
+          }
+        },
+        "median_within_pair_all_cpu_ratio": 0.9969641772920461,
+        "ratio_of_independent_side_all_cpu_medians": 0.9915814792543596,
+        "median_within_pair_all_wall_ratio": 0.9981290989014246,
+        "cli_side_medians": {
+          "before": {
+            "wall_seconds": 27.531781999976374,
+            "maximum_working_set_bytes": 316878848
+          },
+          "after": {
+            "wall_seconds": 27.65099370002281,
+            "maximum_working_set_bytes": 317050880
+          }
+        },
+        "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+        "exe_sha": "991e18cdde3d7e803bc7a10c6d5e2910312e8485417eceab01c6767a717dfd64",
+        "baseline_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+        "baseline_exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+        "counts": {
+          "all": 202,
+          "common_success": 143,
+          "common_failure": 58,
+          "recovered": 1
+        },
+        "timing": "Same GCC Release O3; complete failures included; original record order retained; Win32 thread CPU quantized; process WS includes JSON/plans/validators; background user applications remain; side-median and median-paired ratios distinguished",
+        "host_load": {
+          "trial_host_busy": "unmeasured",
+          "trial_host_available_ram": "unmeasured",
+          "pre_window_observation": "User applications remain;trial availability and busy fraction unmeasured by unchanged harness;no empty-host claim",
+          "harness_modified_during_run": false,
+          "extra_runs_for_background": false
+        },
+        "paired_plan_path": "research/batch48/paired-plan.json",
+        "paired_plan_sha": "e034ca827207af7eb57842313f3a3372d682e2797f69fba5afb6d36908ab1b56",
+        "baseline_executed_path": "research/batch45/default-aicore_bench.exe",
+        "candidate_executed_path": "research/batch48/release-candidate-frozen-aicore_bench.exe"
+      },
+      "heldout": {
+        "rounds": [
+          {
+            "round": 1,
+            "groups": {
+              "all": {
+                "count": 48,
+                "before": {
+                  "wall_us": 2138245,
+                  "thread_cpu_us": 2125000
+                },
+                "after": {
+                  "wall_us": 2108293,
+                  "thread_cpu_us": 2093750
+                }
+              },
+              "common_success": {
+                "count": 42,
+                "before": {
+                  "wall_us": 1383025,
+                  "thread_cpu_us": 1343750
+                },
+                "after": {
+                  "wall_us": 1358308,
+                  "thread_cpu_us": 1359375
+                }
+              },
+              "common_failure": {
+                "count": 6,
+                "before": {
+                  "wall_us": 755220,
+                  "thread_cpu_us": 781250
+                },
+                "after": {
+                  "wall_us": 749985,
+                  "thread_cpu_us": 734375
+                }
+              },
+              "recovered": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "769b0a9c1af09938ed0bf4f2cceafcdd191007cba378e6e3dfa88d3c5818a33e",
+              "after": "03afbfc47ff8ba7c8af503a94e601ef24670fb29de5e11a4a75efac05fea44a9"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.3605455000069924,
+                "working_set_bytes": 31793152
+              },
+              "after": {
+                "wall_seconds": 2.3484093999722973,
+                "working_set_bytes": 31899648
+              }
+            },
+            "recovered": [],
+            "all_cpu_ratio": 0.9852941176470589,
+            "all_wall_ratio": 0.985992250654158
+          },
+          {
+            "round": 2,
+            "groups": {
+              "all": {
+                "count": 48,
+                "before": {
+                  "wall_us": 2046821,
+                  "thread_cpu_us": 2031250
+                },
+                "after": {
+                  "wall_us": 2175762,
+                  "thread_cpu_us": 2156250
+                }
+              },
+              "common_success": {
+                "count": 42,
+                "before": {
+                  "wall_us": 1333965,
+                  "thread_cpu_us": 1312500
+                },
+                "after": {
+                  "wall_us": 1425599,
+                  "thread_cpu_us": 1421875
+                }
+              },
+              "common_failure": {
+                "count": 6,
+                "before": {
+                  "wall_us": 712856,
+                  "thread_cpu_us": 718750
+                },
+                "after": {
+                  "wall_us": 750163,
+                  "thread_cpu_us": 734375
+                }
+              },
+              "recovered": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "19b1c0f3e46b2c717f871edbabbbe2fae083555fbb3c8c81ac5fbe8e62faa9bc",
+              "after": "d3025b477bb597e5636ab462392b052698295c13796b317d6a724f98bcb000b4"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.246666399994865,
+                "working_set_bytes": 31666176
+              },
+              "after": {
+                "wall_seconds": 2.407799699984025,
+                "working_set_bytes": 31600640
+              }
+            },
+            "recovered": [],
+            "all_cpu_ratio": 1.0615384615384615,
+            "all_wall_ratio": 1.0629957382692479
+          },
+          {
+            "round": 3,
+            "groups": {
+              "all": {
+                "count": 48,
+                "before": {
+                  "wall_us": 2097460,
+                  "thread_cpu_us": 2046875
+                },
+                "after": {
+                  "wall_us": 2112464,
+                  "thread_cpu_us": 2093750
+                }
+              },
+              "common_success": {
+                "count": 42,
+                "before": {
+                  "wall_us": 1362698,
+                  "thread_cpu_us": 1359375
+                },
+                "after": {
+                  "wall_us": 1361015,
+                  "thread_cpu_us": 1343750
+                }
+              },
+              "common_failure": {
+                "count": 6,
+                "before": {
+                  "wall_us": 734762,
+                  "thread_cpu_us": 687500
+                },
+                "after": {
+                  "wall_us": 751449,
+                  "thread_cpu_us": 750000
+                }
+              },
+              "recovered": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "43cc66d7832e2ad960169db50797cb48b6a48cd6ded7074d7198b3e87adf02f1",
+              "after": "797aceea05b83ddc5189b25bae87f2195091b7eccb23548e2f32e99e20d3817f"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.3100523999892175,
+                "working_set_bytes": 31834112
+              },
+              "after": {
+                "wall_seconds": 2.313521300035063,
+                "working_set_bytes": 31735808
+              }
+            },
+            "recovered": [],
+            "all_cpu_ratio": 1.0229007633587786,
+            "all_wall_ratio": 1.007153414129471
+          }
+        ],
+        "independent_side_medians": {
+          "all": {
+            "before": {
+              "wall_us": 2097460,
+              "thread_cpu_us": 2046875
+            },
+            "after": {
+              "wall_us": 2112464,
+              "thread_cpu_us": 2093750
+            }
+          },
+          "common_success": {
+            "before": {
+              "wall_us": 1362698,
+              "thread_cpu_us": 1343750
+            },
+            "after": {
+              "wall_us": 1361015,
+              "thread_cpu_us": 1359375
+            }
+          },
+          "common_failure": {
+            "before": {
+              "wall_us": 734762,
+              "thread_cpu_us": 718750
+            },
+            "after": {
+              "wall_us": 750163,
+              "thread_cpu_us": 734375
+            }
+          },
+          "recovered": {
+            "before": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            },
+            "after": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            }
+          }
+        },
+        "median_within_pair_all_cpu_ratio": 1.0229007633587786,
+        "ratio_of_independent_side_all_cpu_medians": 1.0229007633587786,
+        "median_within_pair_all_wall_ratio": 1.007153414129471,
+        "cli_side_medians": {
+          "before": {
+            "wall_seconds": 2.3100523999892175,
+            "maximum_working_set_bytes": 31834112
+          },
+          "after": {
+            "wall_seconds": 2.3484093999722973,
+            "maximum_working_set_bytes": 31899648
+          }
+        },
+        "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+        "exe_sha": "991e18cdde3d7e803bc7a10c6d5e2910312e8485417eceab01c6767a717dfd64",
+        "baseline_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+        "baseline_exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+        "counts": {
+          "all": 48,
+          "common_success": 42,
+          "common_failure": 6,
+          "recovered": 0
+        },
+        "timing": "Same GCC Release O3; complete failures included; original record order retained; Win32 thread CPU quantized; process WS includes JSON/plans/validators; background user applications remain; side-median and median-paired ratios distinguished",
+        "host_load": {
+          "trial_host_busy": "unmeasured",
+          "trial_host_available_ram": "unmeasured",
+          "pre_window_observation": "User applications remain;trial availability and busy fraction unmeasured by unchanged harness;no empty-host claim",
+          "harness_modified_during_run": false,
+          "extra_runs_for_background": false
+        },
+        "paired_plan_path": "research/batch48/paired-plan.json",
+        "paired_plan_sha": "e034ca827207af7eb57842313f3a3372d682e2797f69fba5afb6d36908ab1b56",
+        "baseline_executed_path": "research/batch45/default-aicore_bench.exe",
+        "candidate_executed_path": "research/batch48/release-candidate-frozen-aicore_bench.exe"
+      }
+    },
+    "reports": {
+      "reports/full-verification-batch48.json": "1cb237980c605f0c0bd03f6dcaf9f53655b4f4bd5c944f14d7d243aea09afcd8",
+      "reports/full-numeric-verification-batch48.json": "b88ad2707e942d456f081f6fb522968bf5e8f8758399a635683dbebca89bb3f3",
+      "reports/functional-summary-batch48.json": "bb0641aff33741cf1d745551a373d9a00177d2e6c612b20c31d594a7649ebf6b",
+      "reports/ctest-default-batch48.txt": "a5e04b7cec25ca7afa5788c7fbd8e66e4fdac5bc932789f829de6bba7a541cdd",
+      "reports/build-default-batch48.txt": "617035ecbcab88256d013611b5ac8668bc9b3456342e1b220c1dd7ff8b2da3ad",
+      "reports/default-smoke-summary-batch48.json": "df71e0b6ea82454a41c711a93d982c9cbc91bc34f54a32fe6338babc0b115f04",
+      "reports/default-smoke-batch48.json": "6cc0b55ff13c064569fddfbe8bd7831591b37e316635a0b9e674cb547c132ffc",
+      "reports/resource-cost-summary-batch48.json": "1996f38b2654a0766af23f61419f3436f39753bbf5543039f7086a240a97b9ec"
+    },
+    "independent_simulator_sha256": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+    "original_records": 1229,
+    "original_passed_according_to_expectation": 1171,
+    "prior_heldout_records": 72,
+    "prior_heldout_passed": 72,
+    "new_heldout_records": 48,
+    "new_heldout_passed": 42,
+    "total_records": 1349,
+    "total_passed_according_to_expectation": 1285,
+    "total_expected_infeasible": 1,
+    "known_witness_unresolved_original": 58,
+    "known_witness_unresolved_new": 6,
+    "known_witness_unresolved": 64,
+    "count_caveat": "Parameter repeats and one expected-infeasible rejection retained;1285 expectation passes are not1285 feasible outputs. One newly recovered131-node original topology;fresh48 still42/48.",
+    "hard_records": 202,
+    "hard_legal": 144,
+    "normal979_direct_R45_same_every_record": true,
+    "prior_structure36_same": true,
+    "prior_heldout72_same": true,
+    "resource_cliques12_same": true,
+    "recovery": {
+      "original_records": 1,
+      "original_topologies": 1,
+      "new_heldout_records": 0,
+      "lost": 0,
+      "common185_T_peak_identical": true
+    },
+    "unresolved": [
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270617",
+        "n": 532,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270618",
+        "n": 511,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20299417",
+        "n": 2125,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20299418",
+        "n": 2139,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+        "n": 2077,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+        "n": 2085,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+        "n": 129,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280617",
+        "n": 522,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280618",
+        "n": 525,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20309417",
+        "n": 2124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20309418",
+        "n": 2146,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+        "n": 2103,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+        "n": 2104,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+        "n": 508,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+        "n": 172,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+        "n": 547,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+        "n": 124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k64_ret1_seed20287427",
+        "n": 348,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k64_ret1_seed20287429",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+        "n": 362,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+        "n": 361,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+        "n": 651,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+        "n": 639,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+        "n": 638,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret0_seed20293826",
+        "n": 676,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret1_seed20293827",
+        "n": 712,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret0_seed20293828",
+        "n": 705,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret1_seed20293829",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+        "n": 695,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+        "n": 715,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+        "n": 700,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+        "n": 1270,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+        "n": 1284,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+        "n": 1265,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+        "n": 781,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+        "n": 798,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+        "n": 814,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+        "n": 1576,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+        "n": 1628,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+        "n": 1605,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+        "n": 1659,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+        "n": 190,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+        "n": 766,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+        "n": 140,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+        "n": 182,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      }
+    ],
+    "heldout_unresolved": [
+      {
+        "name": "projection_retention_seed203451004",
+        "n": 269,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_retention_seed203451008",
+        "n": 263,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_retention_seed203451016",
+        "n": 241,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_retention_seed203451018",
+        "n": 68,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_retention_seed203451023",
+        "n": 123,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_retention_seed203451040",
+        "n": 262,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      }
+    ],
+    "optimum_audits": 144,
+    "optimal_certificates": 33,
+    "ctest": "13/13 actual exit0;direct include tests target default48",
+    "ctest_shared_wall_seconds": 2.8,
+    "numeric_fixed_plan_gold": 523,
+    "numeric_source": "Same actualda5dc candidate bytes Clang21 new523/495/83+210 previously executed;actual defaultGCC CTest reran all numeric/profile/group controls",
+    "workspace_profile_gold": 495,
+    "shallow_profile_gold": 2590,
+    "priority_gold": 20180,
+    "group_recognition_gold": 83,
+    "group_moved_profile_gold": 210,
+    "default_smoke": {
+      "status": "actual default9 unchanged vs fully accepted candidate;three witness-feasible failures remain explicit",
+      "actual_exit_code": 1,
+      "count": 9,
+      "passing": 6,
+      "unresolved": 3,
+      "three_recoveries": [
+        "irregular_consumers_local_k24_ret1_seed20273418",
+        "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+        "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+      ],
+      "selection": [
+        [
+          "hard",
+          31
+        ],
+        [
+          "hard",
+          54
+        ],
+        [
+          "hard",
+          55
+        ],
+        [
+          "heldout",
+          0
+        ],
+        [
+          "heldout",
+          26
+        ],
+        [
+          "heldout",
+          47
+        ],
+        [
+          "heldout",
+          3
+        ],
+        [
+          "heldout",
+          7
+        ],
+        [
+          "hard",
+          129
+        ]
+      ],
+      "input_sha": "7202552dc03da4b6ca4ba084d17ba38dfa9f58a94a1565d2c69aa8aa8bd55462",
+      "report_sha": "6cc0b55ff13c064569fddfbe8bd7831591b37e316635a0b9e674cb547c132ffc",
+      "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+      "exe_sha": "54fc7e9b2257f1edcd6925126f32e969826a5d6ba93bc2f9b3e8fd5dd5538c10",
+      "timing": "Shared functionality;no new full979 or performance inference",
+      "witness_or_generation_passed_to_solver": false
+    },
+    "single_file": "problem.h plus standard library;fragment fully expanded. solution/projection.cpp.inc is unused reference,not submission dependency.",
+    "support": "Failed-only original DIRECT target-user groups2..4 after single-node local minimum;no graph rewrite/early release;same16Mcharged cap and seeds. Remaining known-feasible failure explicit,no infeasibility certificate.",
+    "timing_caveat": "Hard whole-record pairedmedianCPU-.30% but round3+9.38%,no stable speedup;side median-.84% different estimator. Fresh48 no recovery/CPU+2.29%;all failures retained;hostbusy/availableRAM unmeasured.",
+    "old_frozen_R31_tex_sha": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82"
+  }
+}

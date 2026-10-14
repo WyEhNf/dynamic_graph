@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791714156.1309767,
+  "summaries": {
+    "all336_necessary_only": {
+      "count": 336,
+      "statuses": {
+        "proven_infeasible_under_model": 47,
+        "verified": 272,
+        "scheduling_failure": 8,
+        "budget_exhausted": 9
+      },
+      "old_mean_lower_output_pct": 11.7792018646677,
+      "joint_mean_lower_output_pct": 11.986950679066014,
+      "joint_mean_lower_original_pct": 44.05228376694013,
+      "lower_improved_inputs": 34
+    },
+    "measured272_necessary_only": {
+      "count": 272,
+      "statuses": {
+        "verified": 272
+      },
+      "old_mean_lower_output_pct": 10.086440523017119,
+      "joint_mean_lower_output_pct": 10.285229311249013,
+      "joint_mean_lower_original_pct": 35.6018331406064,
+      "lower_improved_inputs": 31
+    }
+  },
+  "evidence": {
+    "projects/18-isa-scheduler/experiments/r143-root-lifetime-summary/report.json": "6a6c2f92e340105e0fcb9e0201f5de1a0082dc0a4cd556bb1053853dc0391407"
+  },
+  "scope": "Independent SHA/status/identity join and rational-floor summary denominators over all336 and explicit272 subset. Old necessary floors were previously reviewed; new root certificates independently recomputed separately. Take maximum, never sum. No actual COPY reduction, achievable optimum, official dataset or Level verdict."
+}

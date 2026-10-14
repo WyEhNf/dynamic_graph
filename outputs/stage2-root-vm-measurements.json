@@ -1,0 +1,71 @@
+{
+  "reviewed_unix": 1791707847.9406958,
+  "passed": true,
+  "maximum_shape": 10000,
+  "full_maximum_outputs": 4,
+  "bytes_per_maximum_output": 800000008,
+  "maximum_vm_steps": 1700000012,
+  "explicit_maximum_step_limit": 10000000000,
+  "max_peak_working_set": 1605713920,
+  "performance_records": 90,
+  "paired_comparisons": 45,
+  "negative_pairs": 2,
+  "summaries": [
+    {
+      "source": "changed-arithmetic",
+      "median_paired_ratio": 0.9022822729393986,
+      "negative_pairs": 0
+    },
+    {
+      "source": "changed-SSA",
+      "median_paired_ratio": 0.9054840602027535,
+      "negative_pairs": 0
+    },
+    {
+      "source": "generic-if-while",
+      "median_paired_ratio": 0.927862367830958,
+      "negative_pairs": 0
+    },
+    {
+      "source": "int-arithmetic",
+      "median_paired_ratio": 0.9763738340761839,
+      "negative_pairs": 2
+    },
+    {
+      "source": "int-conversion",
+      "median_paired_ratio": 0.9231873507181888,
+      "negative_pairs": 0
+    },
+    {
+      "source": "deep-SSA40",
+      "median_paired_ratio": 0.858391315203983,
+      "negative_pairs": 0
+    },
+    {
+      "source": "nested-helpers",
+      "median_paired_ratio": 0.8121201174789151,
+      "negative_pairs": 0
+    },
+    {
+      "source": "SSA-conditional",
+      "median_paired_ratio": 0.8877059083894584,
+      "negative_pairs": 0
+    },
+    {
+      "source": "unused-double",
+      "median_paired_ratio": 0.8873568399270626,
+      "negative_pairs": 0
+    }
+  ],
+  "host_busy_percent_range": [
+    26.524390243902438,
+    53.072625698324025
+  ],
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/maximum-shape/report.json": "fe2e09eed22d04abed51c472e4f6ab37b3df0e2b9d2365ffa0000632272afa8c",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/maximum-shape/plan.json": "1d488c10a0c9fe0d2377e86d36ce8f1e090d4bb261271f2f998e5b6f466d51e1",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/performance-v3/report.json": "7ab7ba1fdcaea7f6937cbc0b770ab4832d8f593e313bbc9ffc7e2ad531cbfb05",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/performance-v3/run-plan.json": "7d365e83e2f484dc4ee9d03b9153f7a9859c0b2ba991bc8da2db070c0ca83cff"
+  },
+  "scope": "Root streaming comparison of all4 full N10000 outputs against input identity semantics and actualC; bounded buffers. All90 wholeC output comparisons and45 paired ratios recomputed, cached originalC stream repeats verified. Compute includes decoding. N10000 VM copy fixture needs explicit1e10 steps; default1e9 does not support its1.7b steps. Backgroundhost CPU26\u201353percent active, so evidence is local paired performance under that recorded load, not idle-machine or universal speed. Candidate remains optional."
+}

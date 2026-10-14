@@ -1,0 +1,3622 @@
+{
+  "input_sha": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+  "recognition": "Only original nodes and input IDs; no witness/order or family-name triggers",
+  "summary": {
+    "all": {
+      "records": 202,
+      "direct_shallow": 84,
+      "block_shallow": 84,
+      "newly_supported": 0,
+      "chain_internal_nodes": 0
+    },
+    "failed": {
+      "records": 61,
+      "direct_shallow": 18,
+      "block_shallow": 18,
+      "newly_supported": 0,
+      "chain_internal_nodes": 0
+    }
+  },
+  "cases": [
+    {
+      "name": "irregular_consumers_local_k8_ret0_seed20261817",
+      "failed": false,
+      "n": 48,
+      "edges": 121,
+      "blocks": 48,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 29,
+          "3": 18
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 29,
+          "3": 18
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k8_ret1_seed20261818",
+      "failed": false,
+      "n": 42,
+      "edges": 113,
+      "blocks": 42,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k8_ret0_seed20261827",
+      "failed": false,
+      "n": 49,
+      "edges": 139,
+      "blocks": 49,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 29,
+          "3": 18
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 29,
+          "3": 18
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k8_ret1_seed20261828",
+      "failed": false,
+      "n": 43,
+      "edges": 127,
+      "blocks": 43,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k8_ret0_seed20261837",
+      "failed": false,
+      "n": 51,
+      "edges": 118,
+      "blocks": 51,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 32,
+          "3": 18
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 32,
+          "3": 18
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k8_ret1_seed20261838",
+      "failed": false,
+      "n": 46,
+      "edges": 128,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret0_seed20263417",
+      "failed": false,
+      "n": 139,
+      "edges": 416,
+      "blocks": 139,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 80,
+          "3": 56
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 80,
+          "3": 56
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20263418",
+      "failed": false,
+      "n": 137,
+      "edges": 402,
+      "blocks": 137,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k24_ret0_seed20263427",
+      "failed": false,
+      "n": 131,
+      "edges": 487,
+      "blocks": 131,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 83,
+          "3": 45
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 83,
+          "3": 45
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k24_ret1_seed20263428",
+      "failed": false,
+      "n": 136,
+      "edges": 495,
+      "blocks": 136,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k24_ret0_seed20263437",
+      "failed": false,
+      "n": 128,
+      "edges": 289,
+      "blocks": 128,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 82,
+          "3": 45
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 82,
+          "3": 45
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k24_ret1_seed20263438",
+      "failed": false,
+      "n": 137,
+      "edges": 407,
+      "blocks": 137,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270617",
+      "failed": true,
+      "n": 532,
+      "edges": 1281,
+      "blocks": 532,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 343,
+          "3": 188
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 343,
+          "3": 188
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270618",
+      "failed": true,
+      "n": 511,
+      "edges": 1657,
+      "blocks": 511,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270627",
+      "failed": false,
+      "n": 526,
+      "edges": 1848,
+      "blocks": 526,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 325,
+          "3": 199
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 325,
+          "3": 199
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "failed": true,
+      "n": 512,
+      "edges": 2304,
+      "blocks": 512,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret0_seed20270637",
+      "failed": false,
+      "n": 524,
+      "edges": 1582,
+      "blocks": 524,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 328,
+          "3": 193
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 328,
+          "3": 193
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret1_seed20270638",
+      "failed": false,
+      "n": 514,
+      "edges": 1670,
+      "blocks": 514,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret0_seed20299417",
+      "failed": true,
+      "n": 2125,
+      "edges": 5228,
+      "blocks": 2125,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret1_seed20299418",
+      "failed": true,
+      "n": 2139,
+      "edges": 6526,
+      "blocks": 2139,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "failed": true,
+      "n": 2077,
+      "edges": 8348,
+      "blocks": 2077,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+      "failed": true,
+      "n": 2085,
+      "edges": 9410,
+      "blocks": 2085,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k384_ret0_seed20299437",
+      "failed": false,
+      "n": 2069,
+      "edges": 6268,
+      "blocks": 2069,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k384_ret1_seed20299438",
+      "failed": false,
+      "n": 2095,
+      "edges": 6407,
+      "blocks": 2095,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k8_ret0_seed20271817",
+      "failed": false,
+      "n": 58,
+      "edges": 181,
+      "blocks": 58,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 34,
+          "3": 20
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 34,
+          "3": 20
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k8_ret1_seed20271818",
+      "failed": false,
+      "n": 48,
+      "edges": 145,
+      "blocks": 48,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k8_ret0_seed20271827",
+      "failed": false,
+      "n": 46,
+      "edges": 114,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 28,
+          "3": 15
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 28,
+          "3": 15
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k8_ret1_seed20271828",
+      "failed": false,
+      "n": 50,
+      "edges": 170,
+      "blocks": 50,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k8_ret0_seed20271837",
+      "failed": false,
+      "n": 49,
+      "edges": 149,
+      "blocks": 49,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 29,
+          "3": 17
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 29,
+          "3": 17
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k8_ret1_seed20271838",
+      "failed": false,
+      "n": 47,
+      "edges": 133,
+      "blocks": 47,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret0_seed20273417",
+      "failed": false,
+      "n": 127,
+      "edges": 372,
+      "blocks": 127,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 79,
+          "3": 45
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 79,
+          "3": 45
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "failed": true,
+      "n": 131,
+      "edges": 409,
+      "blocks": 131,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k24_ret0_seed20273427",
+      "failed": false,
+      "n": 133,
+      "edges": 402,
+      "blocks": 133,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 85,
+          "3": 47
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 85,
+          "3": 47
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+      "failed": true,
+      "n": 129,
+      "edges": 437,
+      "blocks": 129,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k24_ret0_seed20273437",
+      "failed": false,
+      "n": 140,
+      "edges": 437,
+      "blocks": 140,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 88,
+          "3": 49
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 88,
+          "3": 49
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k24_ret1_seed20273438",
+      "failed": false,
+      "n": 133,
+      "edges": 357,
+      "blocks": 133,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280617",
+      "failed": true,
+      "n": 522,
+      "edges": 1239,
+      "blocks": 522,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 323,
+          "3": 198
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 323,
+          "3": 198
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280618",
+      "failed": true,
+      "n": 525,
+      "edges": 1849,
+      "blocks": 525,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280627",
+      "failed": false,
+      "n": 535,
+      "edges": 1749,
+      "blocks": 535,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 339,
+          "3": 195
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 339,
+          "3": 195
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20280628",
+      "failed": false,
+      "n": 525,
+      "edges": 2130,
+      "blocks": 525,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret0_seed20280637",
+      "failed": false,
+      "n": 540,
+      "edges": 1326,
+      "blocks": 540,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 348,
+          "3": 191
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 348,
+          "3": 191
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret1_seed20280638",
+      "failed": false,
+      "n": 517,
+      "edges": 1367,
+      "blocks": 517,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret0_seed20309417",
+      "failed": true,
+      "n": 2124,
+      "edges": 5165,
+      "blocks": 2124,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret1_seed20309418",
+      "failed": true,
+      "n": 2146,
+      "edges": 7270,
+      "blocks": 2146,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+      "failed": true,
+      "n": 2103,
+      "edges": 8291,
+      "blocks": 2103,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "failed": true,
+      "n": 2104,
+      "edges": 9674,
+      "blocks": 2104,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k384_ret0_seed20309437",
+      "failed": false,
+      "n": 2116,
+      "edges": 5250,
+      "blocks": 2116,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k384_ret1_seed20309438",
+      "failed": false,
+      "n": 2151,
+      "edges": 7201,
+      "blocks": 2151,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret0_seed20262224_rootmem0",
+      "failed": false,
+      "n": 70,
+      "edges": 203,
+      "blocks": 70,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 40,
+          "3": 27
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 40,
+          "3": 27
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret0_seed20262224_rootmem5",
+      "failed": false,
+      "n": 70,
+      "edges": 203,
+      "blocks": 70,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 40,
+          "3": 27
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 40,
+          "3": 27
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret1_seed20262225_rootmem0",
+      "failed": false,
+      "n": 75,
+      "edges": 205,
+      "blocks": 75,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret1_seed20262225_rootmem5",
+      "failed": false,
+      "n": 75,
+      "edges": 205,
+      "blocks": 75,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret0_seed20262234_rootmem0",
+      "failed": false,
+      "n": 64,
+      "edges": 197,
+      "blocks": 64,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 46,
+          "3": 17
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 46,
+          "3": 17
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret0_seed20262234_rootmem5",
+      "failed": false,
+      "n": 64,
+      "edges": 197,
+      "blocks": 64,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 46,
+          "3": 17
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 46,
+          "3": 17
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "failed": true,
+      "n": 71,
+      "edges": 284,
+      "blocks": 71,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "failed": true,
+      "n": 71,
+      "edges": 284,
+      "blocks": 71,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret0_seed20262244_rootmem0",
+      "failed": false,
+      "n": 67,
+      "edges": 152,
+      "blocks": 67,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 24
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 24
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret0_seed20262244_rootmem5",
+      "failed": false,
+      "n": 67,
+      "edges": 152,
+      "blocks": 67,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 24
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 24
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret1_seed20262245_rootmem0",
+      "failed": false,
+      "n": 62,
+      "edges": 155,
+      "blocks": 62,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret1_seed20262245_rootmem5",
+      "failed": false,
+      "n": 62,
+      "edges": 155,
+      "blocks": 62,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret0_seed20264224_rootmem0",
+      "failed": false,
+      "n": 179,
+      "edges": 474,
+      "blocks": 179,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 117,
+          "3": 60
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 117,
+          "3": 60
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret0_seed20264224_rootmem5",
+      "failed": false,
+      "n": 179,
+      "edges": 474,
+      "blocks": 179,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 117,
+          "3": 60
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 117,
+          "3": 60
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret1_seed20264225_rootmem0",
+      "failed": false,
+      "n": 179,
+      "edges": 591,
+      "blocks": 179,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret1_seed20264225_rootmem5",
+      "failed": false,
+      "n": 179,
+      "edges": 591,
+      "blocks": 179,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret0_seed20264234_rootmem0",
+      "failed": false,
+      "n": 185,
+      "edges": 585,
+      "blocks": 185,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 110,
+          "3": 74
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 110,
+          "3": 74
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret0_seed20264234_rootmem5",
+      "failed": false,
+      "n": 185,
+      "edges": 585,
+      "blocks": 185,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 110,
+          "3": 74
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 110,
+          "3": 74
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret1_seed20264235_rootmem0",
+      "failed": false,
+      "n": 166,
+      "edges": 646,
+      "blocks": 166,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret1_seed20264235_rootmem5",
+      "failed": false,
+      "n": 166,
+      "edges": 646,
+      "blocks": 166,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret0_seed20264244_rootmem0",
+      "failed": false,
+      "n": 178,
+      "edges": 525,
+      "blocks": 178,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 109,
+          "3": 66
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 109,
+          "3": 66
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret0_seed20264244_rootmem5",
+      "failed": false,
+      "n": 178,
+      "edges": 525,
+      "blocks": 178,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 109,
+          "3": 66
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 109,
+          "3": 66
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret1_seed20264245_rootmem0",
+      "failed": false,
+      "n": 173,
+      "edges": 520,
+      "blocks": 173,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret1_seed20264245_rootmem5",
+      "failed": false,
+      "n": 173,
+      "edges": 520,
+      "blocks": 173,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+      "failed": true,
+      "n": 536,
+      "edges": 1637,
+      "blocks": 536,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 352,
+          "3": 181
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 352,
+          "3": 181
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+      "failed": true,
+      "n": 536,
+      "edges": 1637,
+      "blocks": 536,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 352,
+          "3": 181
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 352,
+          "3": 181
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem0",
+      "failed": false,
+      "n": 508,
+      "edges": 1863,
+      "blocks": 508,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+      "failed": true,
+      "n": 508,
+      "edges": 1863,
+      "blocks": 508,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+      "failed": true,
+      "n": 539,
+      "edges": 1702,
+      "blocks": 539,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 337,
+          "3": 201
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 337,
+          "3": 201
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+      "failed": true,
+      "n": 539,
+      "edges": 1702,
+      "blocks": 539,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 337,
+          "3": 201
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 337,
+          "3": 201
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+      "failed": true,
+      "n": 563,
+      "edges": 2416,
+      "blocks": 563,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+      "failed": true,
+      "n": 563,
+      "edges": 2416,
+      "blocks": 563,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret0_seed20270644_rootmem0",
+      "failed": false,
+      "n": 519,
+      "edges": 1277,
+      "blocks": 519,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 336,
+          "3": 182
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 336,
+          "3": 182
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret0_seed20270644_rootmem5",
+      "failed": false,
+      "n": 519,
+      "edges": 1277,
+      "blocks": 519,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 336,
+          "3": 182
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 336,
+          "3": 182
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret1_seed20270645_rootmem0",
+      "failed": false,
+      "n": 552,
+      "edges": 1801,
+      "blocks": 552,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret1_seed20270645_rootmem5",
+      "failed": false,
+      "n": 552,
+      "edges": 1801,
+      "blocks": 552,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret0_seed20272224_rootmem0",
+      "failed": false,
+      "n": 69,
+      "edges": 170,
+      "blocks": 69,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 42,
+          "3": 24
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 42,
+          "3": 24
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret0_seed20272224_rootmem5",
+      "failed": false,
+      "n": 69,
+      "edges": 170,
+      "blocks": 69,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 42,
+          "3": 24
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 42,
+          "3": 24
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret1_seed20272225_rootmem0",
+      "failed": false,
+      "n": 70,
+      "edges": 186,
+      "blocks": 70,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k12_ret1_seed20272225_rootmem5",
+      "failed": false,
+      "n": 70,
+      "edges": 186,
+      "blocks": 70,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret0_seed20272234_rootmem0",
+      "failed": false,
+      "n": 59,
+      "edges": 161,
+      "blocks": 59,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 34,
+          "3": 23
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 34,
+          "3": 23
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret0_seed20272234_rootmem5",
+      "failed": false,
+      "n": 59,
+      "edges": 161,
+      "blocks": 59,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 34,
+          "3": 23
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 34,
+          "3": 23
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20272235_rootmem0",
+      "failed": false,
+      "n": 74,
+      "edges": 305,
+      "blocks": 74,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20272235_rootmem5",
+      "failed": false,
+      "n": 74,
+      "edges": 305,
+      "blocks": 74,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret0_seed20272244_rootmem0",
+      "failed": false,
+      "n": 71,
+      "edges": 186,
+      "blocks": 71,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 28
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 28
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret0_seed20272244_rootmem5",
+      "failed": false,
+      "n": 71,
+      "edges": 186,
+      "blocks": 71,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 28
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 28
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret1_seed20272245_rootmem0",
+      "failed": false,
+      "n": 63,
+      "edges": 186,
+      "blocks": 63,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k12_ret1_seed20272245_rootmem5",
+      "failed": false,
+      "n": 63,
+      "edges": 186,
+      "blocks": 63,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+      "failed": false,
+      "n": 196,
+      "edges": 664,
+      "blocks": 196,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 123,
+          "3": 69
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 123,
+          "3": 69
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem5",
+      "failed": false,
+      "n": 196,
+      "edges": 664,
+      "blocks": 196,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 123,
+          "3": 69
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 123,
+          "3": 69
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+      "failed": true,
+      "n": 172,
+      "edges": 552,
+      "blocks": 172,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem5",
+      "failed": false,
+      "n": 172,
+      "edges": 552,
+      "blocks": 172,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret0_seed20274234_rootmem0",
+      "failed": false,
+      "n": 176,
+      "edges": 695,
+      "blocks": 176,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 109,
+          "3": 63
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 109,
+          "3": 63
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret0_seed20274234_rootmem5",
+      "failed": false,
+      "n": 176,
+      "edges": 695,
+      "blocks": 176,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 109,
+          "3": 63
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 109,
+          "3": 63
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret1_seed20274235_rootmem0",
+      "failed": false,
+      "n": 184,
+      "edges": 772,
+      "blocks": 184,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k32_ret1_seed20274235_rootmem5",
+      "failed": false,
+      "n": 184,
+      "edges": 772,
+      "blocks": 184,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret0_seed20274244_rootmem0",
+      "failed": false,
+      "n": 180,
+      "edges": 522,
+      "blocks": 180,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 111,
+          "3": 67
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 111,
+          "3": 67
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret0_seed20274244_rootmem5",
+      "failed": false,
+      "n": 180,
+      "edges": 522,
+      "blocks": 180,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 111,
+          "3": 67
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 111,
+          "3": 67
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret1_seed20274245_rootmem0",
+      "failed": false,
+      "n": 165,
+      "edges": 542,
+      "blocks": 165,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k32_ret1_seed20274245_rootmem5",
+      "failed": false,
+      "n": 165,
+      "edges": 542,
+      "blocks": 165,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+      "failed": true,
+      "n": 516,
+      "edges": 1547,
+      "blocks": 516,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 327,
+          "3": 186
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 327,
+          "3": 186
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+      "failed": true,
+      "n": 516,
+      "edges": 1547,
+      "blocks": 516,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 327,
+          "3": 186
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 327,
+          "3": 186
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+      "failed": true,
+      "n": 512,
+      "edges": 1470,
+      "blocks": 512,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+      "failed": true,
+      "n": 512,
+      "edges": 1470,
+      "blocks": 512,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem0",
+      "failed": false,
+      "n": 547,
+      "edges": 1805,
+      "blocks": 547,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 345,
+          "3": 201
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 345,
+          "3": 201
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+      "failed": true,
+      "n": 547,
+      "edges": 1805,
+      "blocks": 547,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 345,
+          "3": 201
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 345,
+          "3": 201
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20280635_rootmem0",
+      "failed": false,
+      "n": 534,
+      "edges": 1959,
+      "blocks": 534,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20280635_rootmem5",
+      "failed": false,
+      "n": 534,
+      "edges": 1959,
+      "blocks": 534,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret0_seed20280644_rootmem0",
+      "failed": false,
+      "n": 522,
+      "edges": 1309,
+      "blocks": 522,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 333,
+          "3": 188
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 333,
+          "3": 188
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret0_seed20280644_rootmem5",
+      "failed": false,
+      "n": 522,
+      "edges": 1309,
+      "blocks": 522,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 333,
+          "3": 188
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 333,
+          "3": 188
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret1_seed20280645_rootmem0",
+      "failed": false,
+      "n": 521,
+      "edges": 1386,
+      "blocks": 521,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "irregular_consumers_global_k96_ret1_seed20280645_rootmem5",
+      "failed": false,
+      "n": 521,
+      "edges": 1386,
+      "blocks": 521,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_irregular_local_k12_ret0_seed20282226",
+      "failed": false,
+      "n": 72,
+      "edges": 176,
+      "blocks": 72,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 42,
+          "3": 29
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 42,
+          "3": 29
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_irregular_local_k12_ret1_seed20282227",
+      "failed": false,
+      "n": 60,
+      "edges": 158,
+      "blocks": 60,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_irregular_dense_k12_ret0_seed20282228",
+      "failed": false,
+      "n": 70,
+      "edges": 216,
+      "blocks": 70,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 44,
+          "3": 24
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 44,
+          "3": 24
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_irregular_dense_k12_ret1_seed20282229",
+      "failed": false,
+      "n": 69,
+      "edges": 261,
+      "blocks": 69,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_equal-duration_local_k12_ret0_seed20282236",
+      "failed": false,
+      "n": 71,
+      "edges": 230,
+      "blocks": 71,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 40,
+          "3": 28
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 40,
+          "3": 28
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k12_ret1_seed20282237",
+      "failed": false,
+      "n": 64,
+      "edges": 202,
+      "blocks": 64,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_equal-duration_dense_k12_ret0_seed20282238",
+      "failed": false,
+      "n": 68,
+      "edges": 188,
+      "blocks": 68,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 44,
+          "3": 23
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 44,
+          "3": 23
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_dense_k12_ret1_seed20282239",
+      "failed": false,
+      "n": 63,
+      "edges": 235,
+      "blocks": 63,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret0_seed20282246",
+      "failed": false,
+      "n": 118,
+      "edges": 342,
+      "blocks": 118,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 75
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 41,
+          "3": 75
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "failed": true,
+      "n": 124,
+      "edges": 375,
+      "blocks": 124,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_high-fanout_dense_k12_ret0_seed20282248",
+      "failed": false,
+      "n": 127,
+      "edges": 473,
+      "blocks": 127,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 47,
+          "3": 78
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 47,
+          "3": 78
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_dense_k12_ret1_seed20282249",
+      "failed": false,
+      "n": 122,
+      "edges": 424,
+      "blocks": 122,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_irregular_local_k64_ret0_seed20287426",
+      "failed": false,
+      "n": 353,
+      "edges": 1116,
+      "blocks": 353,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 233,
+          "3": 117
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 233,
+          "3": 117
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_irregular_local_k64_ret1_seed20287427",
+      "failed": true,
+      "n": 348,
+      "edges": 1141,
+      "blocks": 348,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_irregular_dense_k64_ret0_seed20287428",
+      "failed": false,
+      "n": 352,
+      "edges": 1231,
+      "blocks": 352,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 221,
+          "3": 129
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 221,
+          "3": 129
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_irregular_dense_k64_ret1_seed20287429",
+      "failed": true,
+      "n": 353,
+      "edges": 1613,
+      "blocks": 353,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+      "failed": true,
+      "n": 362,
+      "edges": 907,
+      "blocks": 362,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 224,
+          "3": 137
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 224,
+          "3": 137
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+      "failed": true,
+      "n": 353,
+      "edges": 1068,
+      "blocks": 353,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_equal-duration_dense_k64_ret0_seed20287438",
+      "failed": false,
+      "n": 341,
+      "edges": 1093,
+      "blocks": 341,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 211,
+          "3": 128
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 211,
+          "3": 128
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+      "failed": true,
+      "n": 361,
+      "edges": 1661,
+      "blocks": 361,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+      "failed": true,
+      "n": 651,
+      "edges": 2321,
+      "blocks": 651,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 231,
+          "3": 416
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 231,
+          "3": 416
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+      "failed": true,
+      "n": 639,
+      "edges": 2167,
+      "blocks": 639,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_high-fanout_dense_k64_ret0_seed20287448",
+      "failed": false,
+      "n": 639,
+      "edges": 2082,
+      "blocks": 639,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 217,
+          "3": 421
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 217,
+          "3": 421
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+      "failed": true,
+      "n": 638,
+      "edges": 2377,
+      "blocks": 638,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_irregular_local_k128_ret0_seed20293826",
+      "failed": true,
+      "n": 676,
+      "edges": 2049,
+      "blocks": 676,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 432,
+          "3": 241
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 432,
+          "3": 241
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_irregular_local_k128_ret1_seed20293827",
+      "failed": true,
+      "n": 712,
+      "edges": 2319,
+      "blocks": 712,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_irregular_dense_k128_ret0_seed20293828",
+      "failed": true,
+      "n": 705,
+      "edges": 2250,
+      "blocks": 705,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 438,
+          "3": 266
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 438,
+          "3": 266
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_irregular_dense_k128_ret1_seed20293829",
+      "failed": true,
+      "n": 704,
+      "edges": 2474,
+      "blocks": 704,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+      "failed": true,
+      "n": 695,
+      "edges": 1867,
+      "blocks": 695,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 434,
+          "3": 259
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 434,
+          "3": 259
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+      "failed": true,
+      "n": 715,
+      "edges": 2395,
+      "blocks": 715,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+      "failed": true,
+      "n": 704,
+      "edges": 2371,
+      "blocks": 704,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 453,
+          "3": 250
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 453,
+          "3": 250
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+      "failed": true,
+      "n": 700,
+      "edges": 3038,
+      "blocks": 700,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+      "failed": true,
+      "n": 1270,
+      "edges": 3720,
+      "blocks": 1270,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "2": 1,
+          "3": 452,
+          "4": 817
+        },
+        "prefix": false
+      },
+      "block_shallow": {
+        "roles": {
+          "2": 1,
+          "3": 452,
+          "4": 817
+        },
+        "prefix": false
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+      "failed": true,
+      "n": 1284,
+      "edges": 3885,
+      "blocks": 1284,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+      "failed": true,
+      "n": 1265,
+      "edges": 4478,
+      "blocks": 1265,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "2": 2,
+          "3": 447,
+          "4": 816
+        },
+        "prefix": false
+      },
+      "block_shallow": {
+        "roles": {
+          "2": 2,
+          "3": 447,
+          "4": 816
+        },
+        "prefix": false
+      }
+    },
+    {
+      "name": "blind_high-fanout_dense_k128_ret1_seed20293849",
+      "failed": false,
+      "n": 1292,
+      "edges": 4767,
+      "blocks": 1292,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k16_ret0_seed20292628",
+      "failed": false,
+      "n": 169,
+      "edges": 551,
+      "blocks": 169,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 56,
+          "3": 109
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 56,
+          "3": 109
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k16_ret1_seed20292629",
+      "failed": false,
+      "n": 160,
+      "edges": 477,
+      "blocks": 160,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k16_ret0_seed20292638",
+      "failed": false,
+      "n": 168,
+      "edges": 623,
+      "blocks": 168,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 59,
+          "3": 106
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 59,
+          "3": 106
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k16_ret1_seed20292639",
+      "failed": false,
+      "n": 164,
+      "edges": 614,
+      "blocks": 164,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+      "failed": true,
+      "n": 781,
+      "edges": 2676,
+      "blocks": 781,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 275,
+          "3": 502
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 275,
+          "3": 502
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+      "failed": true,
+      "n": 798,
+      "edges": 2444,
+      "blocks": 798,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k80_ret0_seed20299038",
+      "failed": false,
+      "n": 813,
+      "edges": 3200,
+      "blocks": 813,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "2": 4,
+          "3": 287,
+          "4": 522
+        },
+        "prefix": false
+      },
+      "block_shallow": {
+        "roles": {
+          "2": 4,
+          "3": 287,
+          "4": 522
+        },
+        "prefix": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+      "failed": true,
+      "n": 814,
+      "edges": 3303,
+      "blocks": 814,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+      "failed": true,
+      "n": 1576,
+      "edges": 4785,
+      "blocks": 1576,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+      "failed": true,
+      "n": 1628,
+      "edges": 5597,
+      "blocks": 1628,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+      "failed": true,
+      "n": 1605,
+      "edges": 6509,
+      "blocks": 1605,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+      "failed": true,
+      "n": 1659,
+      "edges": 6945,
+      "blocks": 1659,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_balanced_leaves16_ret0_seed20302629",
+      "failed": false,
+      "n": 46,
+      "edges": 75,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_balanced_leaves16_ret1_seed20302630",
+      "failed": false,
+      "n": 46,
+      "edges": 75,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_random-split_leaves16_ret0_seed20302639",
+      "failed": false,
+      "n": 46,
+      "edges": 75,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_random-split_leaves16_ret1_seed20302640",
+      "failed": false,
+      "n": 46,
+      "edges": 75,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_nonlocal_leaves16_ret0_seed20302649",
+      "failed": false,
+      "n": 46,
+      "edges": 157,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_nonlocal_leaves16_ret1_seed20302650",
+      "failed": false,
+      "n": 46,
+      "edges": 155,
+      "blocks": 46,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_balanced_leaves64_ret0_seed20307429",
+      "failed": false,
+      "n": 190,
+      "edges": 315,
+      "blocks": 190,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_balanced_leaves64_ret1_seed20307430",
+      "failed": false,
+      "n": 190,
+      "edges": 315,
+      "blocks": 190,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_random-split_leaves64_ret0_seed20307439",
+      "failed": false,
+      "n": 190,
+      "edges": 315,
+      "blocks": 190,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_random-split_leaves64_ret1_seed20307440",
+      "failed": false,
+      "n": 190,
+      "edges": 315,
+      "blocks": 190,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "failed": true,
+      "n": 190,
+      "edges": 628,
+      "blocks": 190,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret1_seed20307450",
+      "failed": false,
+      "n": 190,
+      "edges": 615,
+      "blocks": 190,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_balanced_leaves256_ret0_seed20326629",
+      "failed": false,
+      "n": 766,
+      "edges": 1275,
+      "blocks": 766,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_balanced_leaves256_ret1_seed20326630",
+      "failed": false,
+      "n": 766,
+      "edges": 1275,
+      "blocks": 766,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_random-split_leaves256_ret0_seed20326639",
+      "failed": false,
+      "n": 766,
+      "edges": 1275,
+      "blocks": 766,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_random-split_leaves256_ret1_seed20326640",
+      "failed": false,
+      "n": 766,
+      "edges": 1275,
+      "blocks": 766,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_nonlocal_leaves256_ret0_seed20326649",
+      "failed": false,
+      "n": 766,
+      "edges": 2539,
+      "blocks": 766,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+      "failed": true,
+      "n": 766,
+      "edges": 2546,
+      "blocks": 766,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k14_ret0_seed20312430_role-duration",
+      "failed": false,
+      "n": 142,
+      "edges": 421,
+      "blocks": 142,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 50,
+          "3": 90
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 50,
+          "3": 90
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k14_ret0_seed20314430_random-duration",
+      "failed": false,
+      "n": 138,
+      "edges": 389,
+      "blocks": 138,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 43,
+          "3": 93
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 2,
+          "2": 43,
+          "3": 93
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k14_ret1_seed20312431_role-duration",
+      "failed": false,
+      "n": 141,
+      "edges": 472,
+      "blocks": 141,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k14_ret1_seed20314431_random-duration",
+      "failed": false,
+      "n": 148,
+      "edges": 523,
+      "blocks": 148,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret0_seed20312440_role-duration",
+      "failed": false,
+      "n": 137,
+      "edges": 484,
+      "blocks": 137,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 49,
+          "3": 84
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 49,
+          "3": 84
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret0_seed20314440_random-duration",
+      "failed": false,
+      "n": 146,
+      "edges": 556,
+      "blocks": 146,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 51,
+          "3": 91
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 51,
+          "3": 91
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "failed": true,
+      "n": 140,
+      "edges": 545,
+      "blocks": 140,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20314441_random-duration",
+      "failed": false,
+      "n": 142,
+      "edges": 450,
+      "blocks": 142,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k18_ret0_seed20312830_role-duration",
+      "failed": false,
+      "n": 188,
+      "edges": 616,
+      "blocks": 188,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 65,
+          "3": 120
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 3,
+          "2": 65,
+          "3": 120
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k18_ret0_seed20314830_random-duration",
+      "failed": false,
+      "n": 196,
+      "edges": 631,
+      "blocks": 196,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 76,
+          "3": 119
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 76,
+          "3": 119
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k18_ret1_seed20312831_role-duration",
+      "failed": false,
+      "n": 179,
+      "edges": 576,
+      "blocks": 179,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+      "failed": true,
+      "n": 182,
+      "edges": 565,
+      "blocks": 182,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k18_ret0_seed20312840_role-duration",
+      "failed": false,
+      "n": 185,
+      "edges": 635,
+      "blocks": 185,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 61,
+          "3": 120
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 4,
+          "2": 61,
+          "3": 120
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k18_ret0_seed20314840_random-duration",
+      "failed": false,
+      "n": 183,
+      "edges": 614,
+      "blocks": 183,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 64,
+          "3": 118
+        },
+        "prefix": true
+      },
+      "block_shallow": {
+        "roles": {
+          "1": 1,
+          "2": 64,
+          "3": 118
+        },
+        "prefix": true
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k18_ret1_seed20312841_role-duration",
+      "failed": false,
+      "n": 170,
+      "edges": 534,
+      "blocks": 170,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k18_ret1_seed20314841_random-duration",
+      "failed": false,
+      "n": 180,
+      "edges": 656,
+      "blocks": 180,
+      "maximum_block_length": 1,
+      "nontrivial_blocks": 0,
+      "chain_internal_nodes": 0,
+      "direct_shallow": null,
+      "block_shallow": null
+    }
+  ]
+}

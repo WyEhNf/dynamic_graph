@@ -1,0 +1,91 @@
+{
+  "version": 25,
+  "case_ids": [
+    "clamp",
+    "allocate_round_robin"
+  ],
+  "scope": "Synthetic long engineering extensions of known DEV tasks, not new holdouts or model quality evidence",
+  "constructed_unix": 1791670278.9975588,
+  "script_sha256": "290fe29aff9bff76c050fb6e1230208f7c13eb5e27a04042c2ca3ec71d346cac",
+  "provenance_sha256": "bf856a91eee1fefa95c3ca846e5bc2c3f37774935aeafcf07e9b60abe597647b",
+  "frozen_parameters": {
+    "input_prompt_target_tokens": [
+      31000,
+      31500
+    ],
+    "max_new_tokens": 512,
+    "model_position_limit": 32768,
+    "budget_context_tokens": 650,
+    "prompt_policy": "concise-v3",
+    "predeclared_model_followup": {
+      "repeats": 1,
+      "timed_calls": 4,
+      "stages": "single",
+      "modes": [
+        "baseline",
+        "compressed"
+      ],
+      "model": "Qwen2.5-Coder-7B-Instruct",
+      "weight_quantization": "nf4",
+      "kv_cache_policy": "reclaimed",
+      "kv_offload_min_tokens": 16384,
+      "prefill_chunk_tokens": 1024,
+      "max_new_tokens": 512,
+      "order": {
+        "clamp": [
+          "baseline",
+          "compressed"
+        ],
+        "allocate_round_robin": [
+          "compressed",
+          "baseline"
+        ]
+      },
+      "scope": "One pair per known DEV task; no repeat stability or independent holdout claim"
+    }
+  },
+  "file_sha256": {
+    "metadata/allocate_round_robin.json": "d08bfab119009575355ae11a7c3cbc4e6fabfcdb003d7ae1f62223afea660815",
+    "metadata/clamp.json": "daf06063ccacb8921d5d874409be4646a0b9245b9ead2765472577e8f50f3d47",
+    "oracle/allocate_round_robin.py": "7f7771ae4818906dfda26131b4464571c5d088ba6ac915fa9332dd309b6292e0",
+    "oracle/clamp.py": "7e97e4872bf95192613f25f0a6f79cedca4ed3a866c1ac4faf6f8c92706558eb",
+    "provenance.json": "bf856a91eee1fefa95c3ca846e5bc2c3f37774935aeafcf07e9b60abe597647b",
+    "repo_bundles/allocate_round_robin/legacy_0.py": "c9677c8fdcfa52156485f7738ad252b86ef5498e16f174067701936187d8e025",
+    "repo_bundles/allocate_round_robin/legacy_1.py": "bc8a0f17ac4d070efa7245f22829574c19edf21f2f087d54ddb131d99af2fe01",
+    "repo_bundles/allocate_round_robin/legacy_2.py": "1a1dbe601ad2f0bda81a0b8ca53e14f2a2a539c8c0e07efc15bacad5e68d6a4d",
+    "repo_bundles/allocate_round_robin/legacy_3.py": "75c276bd995c929736926e87da77eb17a55d10cc36cc7278a21b477816bc7550",
+    "repo_bundles/allocate_round_robin/solution.py": "8e52e9fe0de25d9bafc22442745b2fd3d0d7dc480956903b68d9bcd36a70e4c7",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_000.py": "e2e471e28b23c6aa5467a40a7c8f3aaec9f944850945f81812aabad17af38fb4",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_001.py": "8aa86ae9e0e2903aea69c16e895ba8eec482736f36b46509cfb85500cd07086d",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_002.py": "792a68f0bff96bc27c5613b798ee51c8c4437e8a98e00350a9f0963dce6597ea",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_003.py": "87fbf036b0ec81fc6f46756380f4202dc3210708aaa9ea48c708bcfe84b03696",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_004.py": "f61e0ea9866ae8d580f8dd9f3fe9440dd706487d1526543d34ee22d4bcb55b86",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_005.py": "41a593f4a85e99e018559734047d6d151a917dd59863b152d4f021ea406530a0",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_006.py": "fb374ae4bea2ae4a5b2b829b7be3dc66819f34152feeea74c610d52f5375a6e7",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_007.py": "e5ca9f7537c64597857564e87fbd2addc085335f88d0e656a6262ac97495e516",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_008.py": "c6d7b3541c1bfb0c06a15919fab0b78c56054ed8c3656e3b073b02148e462886",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_009.py": "20b568a937786f83192ca4862c4ee4d20ad44e7436b2b3555e88fe9bd0df2b54",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_010.py": "4f8c042968ff4d676a66438a68f89cd445ee2cc4e304b41194b3732c40320a46",
+    "repo_bundles/allocate_round_robin/zz_v25_archive_011.py": "efac3f96a225409b7db6883c6d3efcf83180c229c18edcf06b29549418c1000a",
+    "repo_bundles/clamp/legacy_0.py": "c9677c8fdcfa52156485f7738ad252b86ef5498e16f174067701936187d8e025",
+    "repo_bundles/clamp/solution.py": "59b0d1ce69e4a24970bf85c9e49b85e0574d7cfaad9c0dd7aa1e515a7640b310",
+    "repo_bundles/clamp/zz_v25_archive_000.py": "99b641dd9b6c1be3ba3c64ca22267997394a1b04b0ede0938f2a7e2e5077fc3e",
+    "repo_bundles/clamp/zz_v25_archive_001.py": "ff337b30a01e575d6b2c8c4e0ef4e7bf4728312d4fd7afc30e180a7494cbed6b",
+    "repo_bundles/clamp/zz_v25_archive_002.py": "cdb8874895ed29b5ea476ad6f83c0f925ccc9eb36bce6e98e5be594653f9396f",
+    "repo_bundles/clamp/zz_v25_archive_003.py": "a8925258e0ad231b0297cd13d2c63cbf24a82faf2c834ffda64354c80d07e586",
+    "repo_bundles/clamp/zz_v25_archive_004.py": "08eb7ccad6b87a569e70658c67199315d964deaeec5a7e32e0fddac2668ad58e",
+    "repo_bundles/clamp/zz_v25_archive_005.py": "4d623765da2a38c3b692bafdc2d66953c33813c048d3b11e5088d9891b494cba",
+    "repo_bundles/clamp/zz_v25_archive_006.py": "92a8d74566d89fd4f0c83f9a060c8e839f5ed4afa35e7f47597799a4bc6f7bed",
+    "repo_bundles/clamp/zz_v25_archive_007.py": "737fee68b437bdee672984f229f9bdd5c6623a5d67257aa4e84cd6255c6ef7ae",
+    "repo_bundles/clamp/zz_v25_archive_008.py": "a9e49c7d764a6cf4fb0a129eb4cb2c4e3fd26f043881a575df0f0d9ae1448d66",
+    "repo_bundles/clamp/zz_v25_archive_009.py": "b321c894fbdcd6bfde2fa79f6f6b35965b186e3b0da458909e3577483b3566ec",
+    "repo_bundles/clamp/zz_v25_archive_010.py": "ecdf9e93d1cb26d687ad6a80b8596fb9bb08192ff0d3d15d6028e64914eb9d17",
+    "repo_bundles/clamp/zz_v25_archive_011.py": "0ae9fc5778d4e390448b27e00a658a77e4812379252f179e3d8329e176dac599",
+    "repo_bundles/clamp/zz_v25_archive_012.py": "9543ed13b2490184cb74beb43b0a62ad2712c2342b689da86ab5b25f1f5704a6",
+    "spec/allocate_round_robin.md": "496eb1fcad416b0a909e37b2e26916a3df45beb922c828b5e76a887529c1128c",
+    "spec/clamp.md": "4ae78bc19ce6d06dd7f6490bc241412572bef212842c6c3e8bbe6fa1358b15b3",
+    "templates/generation.txt": "d7a08c3fe80962f7be8c3a44ef28b85600f3dfb6bd4519d5eb7440d3e2889eb1",
+    "tests/allocate_round_robin.py": "4cfe894c97a1abd97ec317fe1a25c29af1ef1e2adfcb8b2b3d508ce0f8807c61",
+    "tests/clamp.py": "4eeebbc8a683ed94e63ffddb413e04c5e245ec17c34499c28d35ea52a25ca722"
+  }
+}

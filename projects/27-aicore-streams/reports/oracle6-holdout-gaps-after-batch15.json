@@ -1,0 +1,129 @@
+{
+  "total": 12,
+  "feasible": 12,
+  "exact_T_and_peak": 12,
+  "independent_oracle_plans": 5575620,
+  "scope": "exhaustive n<=6, <=2 streams, explicit direct synchronization only",
+  "rows": [
+    {
+      "name": "parallel_oracle_n6_seed20271018",
+      "returned_feasible": true,
+      "oracle_T": 117,
+      "oracle_peak": 32,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 5877,
+      "plans_evaluated": 7410
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271019",
+      "returned_feasible": true,
+      "oracle_T": 105,
+      "oracle_peak": 26,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 38750,
+      "plans_evaluated": 116550
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271020",
+      "returned_feasible": true,
+      "oracle_T": 57,
+      "oracle_peak": 32,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 56530,
+      "plans_evaluated": 584820
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271021",
+      "returned_feasible": true,
+      "oracle_T": 53,
+      "oracle_peak": 38,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 79126,
+      "plans_evaluated": 622944
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271022",
+      "returned_feasible": true,
+      "oracle_T": 82,
+      "oracle_peak": 46,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 39005,
+      "plans_evaluated": 149472
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271023",
+      "returned_feasible": true,
+      "oracle_T": 94,
+      "oracle_peak": 17,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 59766,
+      "plans_evaluated": 409860
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271024",
+      "returned_feasible": true,
+      "oracle_T": 75,
+      "oracle_peak": 35,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 90824,
+      "plans_evaluated": 2216160
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271025",
+      "returned_feasible": true,
+      "oracle_T": 93,
+      "oracle_peak": 19,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 47634,
+      "plans_evaluated": 404280
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271026",
+      "returned_feasible": true,
+      "oracle_T": 54,
+      "oracle_peak": 24,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 8152,
+      "plans_evaluated": 27756
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271027",
+      "returned_feasible": true,
+      "oracle_T": 74,
+      "oracle_peak": 37,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 37680,
+      "plans_evaluated": 189252
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271028",
+      "returned_feasible": true,
+      "oracle_T": 103,
+      "oracle_peak": 32,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 20382,
+      "plans_evaluated": 38556
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271029",
+      "returned_feasible": true,
+      "oracle_T": 65,
+      "oracle_peak": 27,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 73355,
+      "plans_evaluated": 808560
+    }
+  ]
+}

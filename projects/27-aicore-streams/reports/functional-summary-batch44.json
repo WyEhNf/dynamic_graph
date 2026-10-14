@@ -1,0 +1,87 @@
+{
+  "status": "functional_candidate_only",
+  "source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+  "benchmark_sha": "997f29db14b9987c83bc0fe2411fce3f904fa9bfdd31cf5b267c9ceffb2cc4f6",
+  "independent_simulator_sha": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+  "timing": "shared CPU functional run; old O3/default and new O2; no speed ratio or default promotion claim",
+  "wall_seconds": 43.119095299975015,
+  "jobs": [
+    {
+      "suite": "hard",
+      "exit_code": 1,
+      "wall_seconds": 33.11629040003754,
+      "input_sha": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+      "bench_sha": "997f29db14b9987c83bc0fe2411fce3f904fa9bfdd31cf5b267c9ceffb2cc4f6"
+    },
+    {
+      "suite": "forkjoin",
+      "exit_code": 0,
+      "wall_seconds": 2.215591099986341,
+      "input_sha": "5ff191bfccddf86e0d46baa5dbafe488756ecfa7a3dfaaa282aae621cf99559b",
+      "bench_sha": "997f29db14b9987c83bc0fe2411fce3f904fa9bfdd31cf5b267c9ceffb2cc4f6"
+    },
+    {
+      "suite": "heldout-before",
+      "exit_code": 1,
+      "wall_seconds": 3.891485200030729,
+      "input_sha": "c1a4ce0fcefcdcba82269e375057bc8828a30d7e04d19b1dd2ffcbaed51d2af1",
+      "bench_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0"
+    },
+    {
+      "suite": "heldout-after",
+      "exit_code": 0,
+      "wall_seconds": 3.7024722999776714,
+      "input_sha": "c1a4ce0fcefcdcba82269e375057bc8828a30d7e04d19b1dd2ffcbaed51d2af1",
+      "bench_sha": "997f29db14b9987c83bc0fe2411fce3f904fa9bfdd31cf5b267c9ceffb2cc4f6"
+    }
+  ],
+  "comparisons": {
+    "hard": {
+      "records": 202,
+      "before_legal": 139,
+      "after_legal": 141,
+      "recovered": [
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+        "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+      ],
+      "lost": [],
+      "common_quality_regression": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "7a6a76736e26fb2dd5016df21400f58ed6781819f7d9e117ae8a1b8c75d5b743",
+      "after_sha": "81ed6a870abfed443d8a74fe83d407116cc5a99844e6baed55dbb71d7d278f28",
+      "all_failure_wall_us": 21270854,
+      "all_failure_thread_cpu_us": 20796875
+    },
+    "forkjoin": {
+      "records": 36,
+      "before_legal": 36,
+      "after_legal": 36,
+      "recovered": [],
+      "lost": [],
+      "common_quality_regression": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "fb80c2f8911415ad73edaab906e240140a26e660fca8a18d46da5513a5b6ec8c",
+      "after_sha": "9bb1d8a86102fc4617b49977486eed486947e150e50423d570e6f366c706bd77",
+      "all_failure_wall_us": 0,
+      "all_failure_thread_cpu_us": 0
+    },
+    "heldout": {
+      "records": 72,
+      "before_legal": 68,
+      "after_legal": 72,
+      "recovered": [
+        "shallow_holdout_seed20344735",
+        "shallow_holdout_seed20344737",
+        "shallow_holdout_seed20344758",
+        "shallow_holdout_seed20344770"
+      ],
+      "lost": [],
+      "common_quality_regression": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "8c0c02455f0553eb0f2a939ddbb595fffb927945bc395d8f3433c0a3da781e0f",
+      "after_sha": "99003a03e64986fa476bc589b742759bc4463f147349ce20ba0b57567670015a",
+      "all_failure_wall_us": 0,
+      "all_failure_thread_cpu_us": 0
+    }
+  }
+}

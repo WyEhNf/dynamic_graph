@@ -1,0 +1,13 @@
+{
+  "input_sha256": "e6c5d646cba516ca31b70eb5941a373ab50dd601f76b42610b15972b04b33efd",
+  "generator_sha256": "8264700227c3c2439dc1c3f7700c59d803e8c039082fb5f6faa5c0cdcf54f4fd",
+  "shared_generator_sha256": "ddabb669bbb4680ca78c3b79475e47e7caafbca2b9e3538e8fa54805987ae90a",
+  "baseline_source_sha256": "77ef67341e91a00a8b0357b43741d62838a54da7ee68c2bfec3d606ea2a70f2e",
+  "after_source_sha256": "b52f3b8e2b54e0f8bb4d1f0a896018e0139b38f2b8a0f65a7c1048d2c9477925",
+  "records": 12,
+  "nodes_range": [
+    160,
+    1659
+  ],
+  "witness": "unchanged serial tasks; core clamp within pool; no events on one stream"
+}

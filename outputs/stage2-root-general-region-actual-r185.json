@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791780554.6658337,
+  "report_sha256": "c3fd2d274f756b14cdf26909e9718ee307adb385c4d437eafad03479b61e3d9b",
+  "actual_exit_code": 0,
+  "fixed_inputs": 81,
+  "actual_search_inputs": 8,
+  "initial_zero_COPY_inputs": 73,
+  "whole_outputs_checked": 239,
+  "complete_proposals": 10,
+  "immutable_labels_physically_replayed": 184,
+  "frontier_bytes": 23322,
+  "before_COPY": 24,
+  "after_COPY": 0,
+  "improved_inputs": 8,
+  "oracle_statuses": {
+    "unknown_discovery_budget": 13,
+    "optimal": 67,
+    "not_applicable_N11": 1
+  },
+  "hand11_COPY_before": 3,
+  "hand11_COPY_after": 0,
+  "authorization": "Prepare exact same336 R178-incumbent general-region refinement scope for all272legal and retain64nonlegal; freeze whole-corpus inputs/baselines/oldstatuses/resource/runner before execution. No default/official score claim.",
+  "scope": "All81 outputs legal,239actual wholeoutputs physically/symbolically/sixinteger replayed and184immutable labels reconstructed from original physicalhistories. 73initialzeroCOPY inputs do not test search quality. All regions start0/fullsmallblock; no actual unfinished/negative/resourcehalt coverage in this batch beyond separate tencontracts. Oracle13unknown retained. hand11 actual3to0, not Level or full336 improvement."
+}

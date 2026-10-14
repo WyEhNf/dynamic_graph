@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791714293.0967646,
+  "suites": {
+    "unresolved": {
+      "inputs": 61,
+      "legal": 3,
+      "newly_recovered": 0,
+      "lost": 0,
+      "budget_exhausted": 31
+    },
+    "heldout-unresolved": {
+      "inputs": 6,
+      "legal": 0,
+      "newly_recovered": 0,
+      "lost": 0,
+      "budget_exhausted": 4
+    }
+  },
+  "independent_actual_heap_plans": 3,
+  "evidence": {
+    "projects/27-aicore-streams/research/batch49/functional-checkpoint.json": "271a52cdf84385a9bc9f01012ab614d94617c65f92cd1ec7f6464a8cca381f7f"
+  },
+  "scope": "All67 input-only records retained and all3 passing actual plans independently replayed. Candidate source/producer/data/executable/report SHA and recorded real exit codes inspected. No recovery from group upper limit4to16; do not promote or spend full performance window. Independent root did not recompute all342 group-move gold values; those remain producer tests."
+}

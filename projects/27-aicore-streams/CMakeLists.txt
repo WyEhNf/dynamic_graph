@@ -1,0 +1,96 @@
+cmake_minimum_required(VERSION 3.20)
+project(aicore_streams LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(AICORE_SOLUTION_SOURCE "solution/solution.cpp" CACHE FILEPATH "Single-file implementation used by local harness")
+set(AICORE_MACRO_RECOVERY_WORK_LIMIT "160000000" CACHE STRING "Logical work for recovery after existing searches fail; 0 disables")
+if(NOT AICORE_MACRO_RECOVERY_WORK_LIMIT MATCHES "^[0-9]+$")
+  message(FATAL_ERROR "AICORE_MACRO_RECOVERY_WORK_LIMIT must be a nonnegative integer")
+endif()
+add_library(solution STATIC "${AICORE_SOLUTION_SOURCE}")
+target_compile_definitions(solution PRIVATE AICORE_MACRO_RECOVERY_WORK_LIMIT=${AICORE_MACRO_RECOVERY_WORK_LIMIT}LL)
+target_include_directories(solution PUBLIC include)
+add_library(simulator STATIC src/simulator.cpp)
+target_include_directories(simulator PUBLIC include)
+add_library(candidate_search STATIC src/candidate_search.cpp)
+target_include_directories(candidate_search PUBLIC include)
+target_link_libraries(candidate_search PUBLIC solution simulator)
+foreach(t solution simulator)
+  if(MSVC)
+    target_compile_options(${t} PRIVATE /W4)
+  else()
+    target_compile_options(${t} PRIVATE -Wall -Wextra -Wpedantic)
+  endif()
+endforeach()
+add_executable(aicore_demo src/main.cpp)
+target_link_libraries(aicore_demo PRIVATE candidate_search)
+add_executable(aicore_bench src/benchmark.cpp)
+target_link_libraries(aicore_bench PRIVATE solution simulator)
+add_executable(aicore_oracle src/parallel_oracle.cpp)
+target_link_libraries(aicore_oracle PRIVATE simulator)
+add_executable(frontier_probe EXCLUDE_FROM_ALL src/frontier_probe.cpp)
+target_include_directories(frontier_probe PRIVATE include)
+target_link_libraries(frontier_probe PRIVATE simulator)
+enable_testing()
+add_executable(simulator_tests tests/test_simulator.cpp)
+target_link_libraries(simulator_tests PRIVATE candidate_search)
+add_test(NAME scheduler_semantics COMMAND simulator_tests)
+add_executable(model_tests tests/test_models.cpp)
+target_link_libraries(model_tests PRIVATE solution simulator)
+add_test(NAME submission_model_and_json COMMAND model_tests)
+add_executable(assignment_tests tests/test_assignment.cpp)
+target_include_directories(assignment_tests PRIVATE include)
+add_test(NAME assignment_grouping_equivalence COMMAND assignment_tests)
+add_executable(serial_frontier_tests tests/test_serial_frontier.cpp)
+target_include_directories(serial_frontier_tests PRIVATE include)
+target_link_libraries(serial_frontier_tests PRIVATE simulator)
+add_test(NAME serial_frontier_exact_equivalence COMMAND serial_frontier_tests)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/test-reports)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/data/quick.json)
+  add_test(NAME local_batch_quick COMMAND aicore_bench --input ${CMAKE_CURRENT_SOURCE_DIR}/data/quick.json --output ${CMAKE_CURRENT_BINARY_DIR}/test-reports/quick-results.json --failures ${CMAKE_CURRENT_BINARY_DIR}/test-reports/quick-failures.json)
+endif()
+
+# Arbitrary-precision Python gold, independent from both C++ state machines.
+add_executable(numeric_boundary_tests tests/test_numeric.cpp)
+target_include_directories(numeric_boundary_tests PRIVATE include)
+target_link_libraries(numeric_boundary_tests PRIVATE simulator)
+foreach(suite numeric-controls numeric-parallel numeric-parallel-valid scaled-serial-controls)
+  add_test(NAME ${suite}_int64 COMMAND numeric_boundary_tests
+    ${CMAKE_CURRENT_SOURCE_DIR}/data/${suite}-batch42.json
+    ${CMAKE_CURRENT_BINARY_DIR}/test-reports/${suite}-numeric.json)
+endforeach()
+add_executable(numeric_priority_tests tests/test_numeric_priority.cpp)
+target_include_directories(numeric_priority_tests PRIVATE include)
+add_test(NAME numeric_priority_exact_gold COMMAND numeric_priority_tests ${CMAKE_CURRENT_SOURCE_DIR}/data/priority-gold-batch42.txt)
+
+# Actual default implementation compared to independently generated Python
+# bigint lifetime profiles, including multiple retained/released prefixes.
+add_executable(shallow_profile_tests tests/test_shallow.cpp)
+target_include_directories(shallow_profile_tests PRIVATE include)
+add_test(NAME shallow_profile_bigint_gold COMMAND shallow_profile_tests
+  ${CMAKE_CURRENT_SOURCE_DIR}/data/shallow-profile-gold-batch44.json)
+
+# Actual default source against full-ancestor/prefix-live-set bigint gold.
+add_executable(workspace_projection_tests tests/test_projection.cpp)
+target_include_directories(workspace_projection_tests PRIVATE include)
+add_test(NAME workspace_projection_bigint_gold COMMAND workspace_projection_tests
+  ${CMAKE_CURRENT_SOURCE_DIR}/data/projection-gold-batch45.json)
+
+# Independent direct-user groups, stable moves and wide lifetime profile.
+add_executable(consumer_group_tests tests/test_group.cpp)
+target_include_directories(consumer_group_tests PRIVATE include)
+add_test(NAME consumer_group_bigint_gold COMMAND consumer_group_tests
+  ${CMAKE_CURRENT_SOURCE_DIR}/data/group-gold-batch48.json)
+
+# Complete remaining original DIRECT consumers plus ancestor cut; actual default.
+add_executable(release_cut_tests tests/test_release_cut.cpp)
+target_include_directories(release_cut_tests PRIVATE include)
+target_link_libraries(release_cut_tests PRIVATE simulator)
+add_test(NAME remaining_direct_release_cut_bigint_gold COMMAND release_cut_tests
+  ${CMAKE_CURRENT_SOURCE_DIR}/data/release-cut-gold-batch51.json)
+
+add_executable(macro_recovery_budget_tests tests/test_macro_recovery_budget.cpp)
+target_include_directories(macro_recovery_budget_tests PRIVATE include)
+target_link_libraries(macro_recovery_budget_tests PRIVATE simulator)
+add_test(NAME macro_recovery_work_bounds COMMAND macro_recovery_budget_tests)

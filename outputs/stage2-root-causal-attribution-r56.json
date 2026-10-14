@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791779857.1966853,
+  "static_report_sha256": "95ce1c438e08ec26f4110f2d6c296eb322d625fa0c1b8ef33d857841454b9bbe",
+  "negative_frozen_files": 73,
+  "original_inputs": 12,
+  "prefix_rows_replayed": 1011,
+  "probes": 22,
+  "one_outside_step_assists": 0,
+  "strict_irreversible_prefix_proofs": [
+    {
+      "name": "projection_retention_seed203451023",
+      "step": 57,
+      "producer": 629842833,
+      "blocked_original": 1570508042,
+      "necessary_bound": 2469,
+      "memory_cap": 2450,
+      "producer_rank": 13,
+      "closure_size": 7,
+      "diagnostic_only_witness_j_before_p": true
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "step": 42,
+      "producer": 1348661544,
+      "blocked_original": 1399095202,
+      "necessary_bound": 1656,
+      "memory_cap": 1547,
+      "producer_rank": 1,
+      "closure_size": 6,
+      "diagnostic_only_witness_j_before_p": true
+    }
+  ],
+  "original_witnesses_replayed": 12,
+  "authorization": "Review frozen input-only causal producer-deferral/restart design and full original small counterexamples before implementation. No solver/compile/63-input expansion or default promotion.",
+  "scope": "Original recorded prefixes, original direct-user lifetimes and workspace+output BEGIN arithmetic independently replayed. Two failed prefixes cannot complete under unchanged memory cap; zero one-step assists in only22 recorded probes. Other failures remain unresolved. Diagnostic serial witnesses are never solver input; no new recovery/performance claim."
+}

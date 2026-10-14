@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791775718.532731,
+  "saved_no_fit_states": 22,
+  "last_step_preserving_alternatives": 0,
+  "necessary_overlap_first_irreversible_states": 2,
+  "failed_case_early_alternatives": 0,
+  "source_reports_sha256": [
+    "053b796a0480ac7ad793df3668bbee835466e07e2d6d279346357fa17f480049",
+    "e6ca484a91203a628e8590631302450adf720c0038ffc84d9261e3cf575c4adf"
+  ],
+  "scope": "Root independent original-direct-edge/set arithmetic and DFS matches saved22 snapshots. One-step substitution has no next-fit alternative here; two necessary-overlap transitions occur only in already-recovered controls. Snapshot subset does not rule out earlier/deeper choices or all63 recovery. No solver/new graph/search/default/performance execution."
+}

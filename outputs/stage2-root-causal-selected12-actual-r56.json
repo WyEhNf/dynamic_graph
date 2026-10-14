@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "actual_terminal_exit_code": 0,
+  "actual_owner_PID": 118676,
+  "actual_tool_chunk": "c7e2fe",
+  "original_inputs": 12,
+  "whole_before_success": 4,
+  "whole_after_success": 4,
+  "remaining_failed": 8,
+  "new_recoveries": 0,
+  "lost": 0,
+  "independent_actual_full_plan_replays": 8,
+  "common_complete_plans_identical": true,
+  "before_logical_work": 54717560,
+  "after_logical_work": 55988059,
+  "logical_work_delta": 1270499,
+  "logical_work_increase_percent": 2.3219218839436553,
+  "exhausted_before_after": [
+    2,
+    2
+  ],
+  "records": [
+    {
+      "name": "projection_retention_seed203451023",
+      "new_valid": false,
+      "work_delta": 460862,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "new_valid": false,
+      "work_delta": 140094,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "new_valid": false,
+      "work_delta": 119122,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "new_valid": false,
+      "work_delta": 0,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "new_valid": false,
+      "work_delta": 0,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "new_valid": false,
+      "work_delta": 43679,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "projection_retention_seed203451016",
+      "new_valid": false,
+      "work_delta": -851,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "new_valid": false,
+      "work_delta": 0,
+      "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "new_valid": true,
+      "work_delta": 49657,
+      "error": ""
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "new_valid": true,
+      "work_delta": 171197,
+      "error": ""
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "new_valid": true,
+      "work_delta": 286739,
+      "error": ""
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "new_valid": true,
+      "work_delta": 0,
+      "error": ""
+    }
+  ],
+  "completion_freeze_sha256": "03bd41c183530df2b447df66c1f02e724c9f0a214e6d958835174f869abae8c7",
+  "source_sha256": "3a4f184de2759fdcd1cbfd899c5f8029e2f7f2691743ec214a895123db19c21a",
+  "scope": "Actual original12 negative: all8 failed retained; eight complete helper/whole plans independently heap-replayed. Single causal deferral did not recover real cases and adds2.32% chargedwork; no CPU speed or63/full/default promotion claim. Freeze and diagnose this negative before further expansion."
+}

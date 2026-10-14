@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "report_sha256": "d2d994c1ce23a0c8c1dcc13f8baf4724abc9c2c74b4c302fe2bb6e9c54a26209",
+  "actual_tool_chunk": "6337d3",
+  "actual_terminal_exit_code": 0,
+  "contracts_passed": 15,
+  "inputs": 84,
+  "totals": {
+    "whole_outputs": 362,
+    "before_COPY": 123,
+    "proposals": 127,
+    "after_COPY": 87,
+    "improved": 9,
+    "processed": 6471,
+    "attempted": 9277
+  },
+  "frontier": {
+    "header": 91,
+    "immutable_label": 7143,
+    "open": 350,
+    "unfinished_expansion": 8
+  },
+  "regions": 91,
+  "nonzero_prefix_regions": 9,
+  "reference": {
+    "unknown_transition_or_time_budget": 3,
+    "optimal_neighborhood": 67,
+    "unknown_discovery_budget": 11,
+    "not_applicable_N_gt_9": 3
+  },
+  "search_outcomes": {
+    "exhausted_improvement_search": 81,
+    "completed": 2,
+    "partial_total_deadline": 1
+  },
+  "extra_cases": [
+    {
+      "kind": "hand45",
+      "input_sha256": "854d0b75e348d050cf114f6b84d8f9ee34925be08cc4097177e30b594f0913f1",
+      "before": 13,
+      "after": 0,
+      "proposals": 1,
+      "outcome": "completed"
+    },
+    {
+      "kind": "matrix160_saved",
+      "input_sha256": "06f7a8423ed40df172993cfa526190076a3f5a2a168e901ea1e61459685002bf",
+      "before": 64,
+      "after": 62,
+      "proposals": 118,
+      "outcome": "partial_total_deadline"
+    },
+    {
+      "kind": "hazard6",
+      "input_sha256": "66533c2a5d4f9551df76916a4b81c219ab796811f7930a57e982a3244f9b7be9",
+      "before": 0,
+      "after": 0,
+      "proposals": 0,
+      "outcome": "exhausted_improvement_search"
+    },
+    {
+      "kind": "shared_fanout40",
+      "input_sha256": "e519ad84e9c9e16f5025887bf1088ad937db6aa6368636f6da0c9ecbe7c7c27f",
+      "before": 25,
+      "after": 25,
+      "proposals": 0,
+      "outcome": "completed"
+    }
+  ],
+  "scope": "Root original identities, ordered operands, RAW/WAR/WAW, physical COPY, symbolic/sixinteger outputs and every immutable/OPEN/unfinished mobile mask+backbone cursor reconstructed independently. Each whole proposal preserves fixed prefix/suffix and backbone order, and uses the same initial. Isolated84 finite functionality does not prove official Level1-3 or full336 gains; all missing old64 remain unchanged."
+}

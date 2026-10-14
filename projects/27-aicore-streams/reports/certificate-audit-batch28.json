@@ -1,0 +1,1196 @@
+{
+  "checked": 132,
+  "certified": 21,
+  "oracle_scope": "complete <=6 nodes/<=2 flows/explicit direct sync; analytic total chains and two-task controls",
+  "source_sha256": "b52f3b8e2b54e0f8bb4d1f0a896018e0139b38f2b8a0f65a7c1048d2c9477925",
+  "rows": [
+    {
+      "name": "parallel_oracle_n3_seed20261012",
+      "n": 3,
+      "certificate": false,
+      "time_bound": 20,
+      "memory_bound": 16,
+      "optimal_T": 35,
+      "optimal_peak": 16
+    },
+    {
+      "name": "parallel_oracle_n3_seed20261013",
+      "n": 3,
+      "certificate": true,
+      "time_bound": 12,
+      "memory_bound": 22,
+      "optimal_T": 12,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n3_seed20261014",
+      "n": 3,
+      "certificate": false,
+      "time_bound": 48,
+      "memory_bound": 20,
+      "optimal_T": 49,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n3_seed20261015",
+      "n": 3,
+      "certificate": false,
+      "time_bound": 29,
+      "memory_bound": 14,
+      "optimal_T": 37,
+      "optimal_peak": 16
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261016",
+      "n": 4,
+      "certificate": true,
+      "time_bound": 46,
+      "memory_bound": 13,
+      "optimal_T": 46,
+      "optimal_peak": 13
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261017",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 52,
+      "memory_bound": 20,
+      "optimal_T": 68,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261018",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 46,
+      "memory_bound": 19,
+      "optimal_T": 74,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261019",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 30,
+      "memory_bound": 15,
+      "optimal_T": 39,
+      "optimal_peak": 15
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261020",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 20,
+      "memory_bound": 20,
+      "optimal_T": 23,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261021",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 33,
+      "memory_bound": 10,
+      "optimal_T": 35,
+      "optimal_peak": 13
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261022",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 56,
+      "memory_bound": 13,
+      "optimal_T": 71,
+      "optimal_peak": 14
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261023",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 52,
+      "memory_bound": 9,
+      "optimal_T": 71,
+      "optimal_peak": 9
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261024",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 41,
+      "memory_bound": 17,
+      "optimal_T": 65,
+      "optimal_peak": 17
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261025",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 25,
+      "memory_bound": 17,
+      "optimal_T": 26,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261026",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 46,
+      "memory_bound": 22,
+      "optimal_T": 59,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261027",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 40,
+      "memory_bound": 13,
+      "optimal_T": 53,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261028",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 34,
+      "memory_bound": 18,
+      "optimal_T": 37,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261029",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 45,
+      "memory_bound": 16,
+      "optimal_T": 60,
+      "optimal_peak": 17
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261030",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 46,
+      "memory_bound": 20,
+      "optimal_T": 58,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261031",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 43,
+      "memory_bound": 15,
+      "optimal_T": 59,
+      "optimal_peak": 17
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261032",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 58,
+      "memory_bound": 17,
+      "optimal_T": 71,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261033",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 39,
+      "memory_bound": 26,
+      "optimal_T": 40,
+      "optimal_peak": 36
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261034",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 56,
+      "memory_bound": 17,
+      "optimal_T": 65,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261035",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 65,
+      "memory_bound": 13,
+      "optimal_T": 77,
+      "optimal_peak": 13
+    },
+    {
+      "name": "parallel_oracle_n3_seed20271012",
+      "n": 3,
+      "certificate": false,
+      "time_bound": 22,
+      "memory_bound": 18,
+      "optimal_T": 37,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n3_seed20271013",
+      "n": 3,
+      "certificate": true,
+      "time_bound": 35,
+      "memory_bound": 19,
+      "optimal_T": 35,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n3_seed20271014",
+      "n": 3,
+      "certificate": false,
+      "time_bound": 38,
+      "memory_bound": 17,
+      "optimal_T": 60,
+      "optimal_peak": 17
+    },
+    {
+      "name": "parallel_oracle_n3_seed20271015",
+      "n": 3,
+      "certificate": false,
+      "time_bound": 31,
+      "memory_bound": 14,
+      "optimal_T": 44,
+      "optimal_peak": 15
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271016",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 39,
+      "memory_bound": 19,
+      "optimal_T": 50,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271017",
+      "n": 4,
+      "certificate": true,
+      "time_bound": 50,
+      "memory_bound": 23,
+      "optimal_T": 50,
+      "optimal_peak": 23
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271018",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 44,
+      "memory_bound": 30,
+      "optimal_T": 61,
+      "optimal_peak": 30
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271019",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 41,
+      "memory_bound": 25,
+      "optimal_T": 58,
+      "optimal_peak": 25
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271020",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 45,
+      "memory_bound": 23,
+      "optimal_T": 63,
+      "optimal_peak": 23
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271021",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 37,
+      "memory_bound": 18,
+      "optimal_T": 44,
+      "optimal_peak": 25
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271022",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 26,
+      "memory_bound": 27,
+      "optimal_T": 27,
+      "optimal_peak": 33
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271023",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 56,
+      "memory_bound": 18,
+      "optimal_T": 60,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271024",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 53,
+      "memory_bound": 23,
+      "optimal_T": 76,
+      "optimal_peak": 23
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271025",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 43,
+      "memory_bound": 15,
+      "optimal_T": 44,
+      "optimal_peak": 24
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271026",
+      "n": 4,
+      "certificate": true,
+      "time_bound": 29,
+      "memory_bound": 24,
+      "optimal_T": 29,
+      "optimal_peak": 24
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271027",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 56,
+      "memory_bound": 22,
+      "optimal_T": 96,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271028",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 72,
+      "memory_bound": 19,
+      "optimal_T": 72,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271029",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 36,
+      "memory_bound": 23,
+      "optimal_T": 68,
+      "optimal_peak": 28
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271030",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 57,
+      "memory_bound": 15,
+      "optimal_T": 75,
+      "optimal_peak": 15
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271031",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 48,
+      "memory_bound": 22,
+      "optimal_T": 48,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271032",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 53,
+      "memory_bound": 30,
+      "optimal_T": 59,
+      "optimal_peak": 30
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271033",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 48,
+      "memory_bound": 27,
+      "optimal_T": 51,
+      "optimal_peak": 27
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271034",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 26,
+      "memory_bound": 18,
+      "optimal_T": 39,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n4_seed20271035",
+      "n": 4,
+      "certificate": false,
+      "time_bound": 73,
+      "memory_bound": 25,
+      "optimal_T": 85,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261013",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 24,
+      "memory_bound": 25,
+      "optimal_T": 47,
+      "optimal_peak": 25
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261014",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 68,
+      "memory_bound": 23,
+      "optimal_T": 93,
+      "optimal_peak": 27
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261015",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 55,
+      "memory_bound": 16,
+      "optimal_T": 64,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261016",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 46,
+      "memory_bound": 14,
+      "optimal_T": 61,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261017",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 58,
+      "memory_bound": 20,
+      "optimal_T": 75,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261018",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 55,
+      "memory_bound": 24,
+      "optimal_T": 101,
+      "optimal_peak": 24
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261019",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 23,
+      "memory_bound": 19,
+      "optimal_T": 32,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261020",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 50,
+      "memory_bound": 20,
+      "optimal_T": 53,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261021",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 37,
+      "memory_bound": 13,
+      "optimal_T": 39,
+      "optimal_peak": 13
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261022",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 56,
+      "memory_bound": 13,
+      "optimal_T": 73,
+      "optimal_peak": 14
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261023",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 52,
+      "memory_bound": 9,
+      "optimal_T": 73,
+      "optimal_peak": 9
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261024",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 57,
+      "memory_bound": 20,
+      "optimal_T": 86,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261025",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 30,
+      "memory_bound": 24,
+      "optimal_T": 31,
+      "optimal_peak": 29
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261026",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 59,
+      "memory_bound": 19,
+      "optimal_T": 67,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261027",
+      "n": 5,
+      "certificate": true,
+      "time_bound": 39,
+      "memory_bound": 19,
+      "optimal_T": 39,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261028",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 39,
+      "memory_bound": 20,
+      "optimal_T": 40,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261029",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 45,
+      "memory_bound": 21,
+      "optimal_T": 60,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261030",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 61,
+      "memory_bound": 20,
+      "optimal_T": 87,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261031",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 23,
+      "memory_bound": 19,
+      "optimal_T": 46,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261032",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 58,
+      "memory_bound": 19,
+      "optimal_T": 80,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261033",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 61,
+      "memory_bound": 28,
+      "optimal_T": 64,
+      "optimal_peak": 30
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261034",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 68,
+      "memory_bound": 17,
+      "optimal_T": 81,
+      "optimal_peak": 23
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261035",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 65,
+      "memory_bound": 13,
+      "optimal_T": 101,
+      "optimal_peak": 13
+    },
+    {
+      "name": "parallel_oracle_n5_seed20261036",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 59,
+      "memory_bound": 16,
+      "optimal_T": 75,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271013",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 73,
+      "memory_bound": 19,
+      "optimal_T": 82,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271014",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 50,
+      "memory_bound": 18,
+      "optimal_T": 92,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271015",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 67,
+      "memory_bound": 24,
+      "optimal_T": 69,
+      "optimal_peak": 35
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271016",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 45,
+      "memory_bound": 19,
+      "optimal_T": 56,
+      "optimal_peak": 29
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271017",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 64,
+      "memory_bound": 23,
+      "optimal_T": 80,
+      "optimal_peak": 25
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271018",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 78,
+      "memory_bound": 28,
+      "optimal_T": 95,
+      "optimal_peak": 30
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271019",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 49,
+      "memory_bound": 19,
+      "optimal_T": 59,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271020",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 53,
+      "memory_bound": 20,
+      "optimal_T": 56,
+      "optimal_peak": 30
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271021",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 51,
+      "memory_bound": 23,
+      "optimal_T": 58,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271022",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 55,
+      "memory_bound": 27,
+      "optimal_T": 56,
+      "optimal_peak": 35
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271023",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 47,
+      "memory_bound": 17,
+      "optimal_T": 66,
+      "optimal_peak": 17
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271024",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 53,
+      "memory_bound": 19,
+      "optimal_T": 76,
+      "optimal_peak": 24
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271025",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 57,
+      "memory_bound": 17,
+      "optimal_T": 75,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271026",
+      "n": 5,
+      "certificate": true,
+      "time_bound": 47,
+      "memory_bound": 24,
+      "optimal_T": 47,
+      "optimal_peak": 24
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271027",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 74,
+      "memory_bound": 13,
+      "optimal_T": 74,
+      "optimal_peak": 15
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271028",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 72,
+      "memory_bound": 19,
+      "optimal_T": 75,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271029",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 40,
+      "memory_bound": 23,
+      "optimal_T": 65,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271030",
+      "n": 5,
+      "certificate": true,
+      "time_bound": 73,
+      "memory_bound": 16,
+      "optimal_T": 73,
+      "optimal_peak": 16
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271031",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 62,
+      "memory_bound": 24,
+      "optimal_T": 75,
+      "optimal_peak": 27
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271032",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 53,
+      "memory_bound": 38,
+      "optimal_T": 59,
+      "optimal_peak": 39
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271033",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 48,
+      "memory_bound": 27,
+      "optimal_T": 51,
+      "optimal_peak": 27
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271034",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 40,
+      "memory_bound": 25,
+      "optimal_T": 48,
+      "optimal_peak": 25
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271035",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 73,
+      "memory_bound": 25,
+      "optimal_T": 85,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n5_seed20271036",
+      "n": 5,
+      "certificate": false,
+      "time_bound": 49,
+      "memory_bound": 14,
+      "optimal_T": 64,
+      "optimal_peak": 20
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261018",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 74,
+      "memory_bound": 25,
+      "optimal_T": 88,
+      "optimal_peak": 35
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261019",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 52,
+      "memory_bound": 18,
+      "optimal_T": 61,
+      "optimal_peak": 27
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261020",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 51,
+      "memory_bound": 20,
+      "optimal_T": 54,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261021",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 73,
+      "memory_bound": 13,
+      "optimal_T": 78,
+      "optimal_peak": 13
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261022",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 36,
+      "memory_bound": 17,
+      "optimal_T": 52,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261023",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 18,
+      "memory_bound": 18,
+      "optimal_T": 35,
+      "optimal_peak": 22
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261024",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 63,
+      "memory_bound": 24,
+      "optimal_T": 85,
+      "optimal_peak": 29
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261025",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 40,
+      "memory_bound": 18,
+      "optimal_T": 41,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261026",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 71,
+      "memory_bound": 19,
+      "optimal_T": 79,
+      "optimal_peak": 21
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261027",
+      "n": 6,
+      "certificate": true,
+      "time_bound": 42,
+      "memory_bound": 19,
+      "optimal_T": 42,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261028",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 28,
+      "memory_bound": 18,
+      "optimal_T": 40,
+      "optimal_peak": 25
+    },
+    {
+      "name": "parallel_oracle_n6_seed20261029",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 63,
+      "memory_bound": 18,
+      "optimal_T": 91,
+      "optimal_peak": 18
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271018",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 98,
+      "memory_bound": 27,
+      "optimal_T": 117,
+      "optimal_peak": 32
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271019",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 67,
+      "memory_bound": 19,
+      "optimal_T": 105,
+      "optimal_peak": 26
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271020",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 52,
+      "memory_bound": 23,
+      "optimal_T": 57,
+      "optimal_peak": 32
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271021",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 36,
+      "memory_bound": 37,
+      "optimal_T": 53,
+      "optimal_peak": 38
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271022",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 63,
+      "memory_bound": 30,
+      "optimal_T": 82,
+      "optimal_peak": 46
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271023",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 75,
+      "memory_bound": 17,
+      "optimal_T": 94,
+      "optimal_peak": 17
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271024",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 53,
+      "memory_bound": 23,
+      "optimal_T": 75,
+      "optimal_peak": 35
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271025",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 66,
+      "memory_bound": 17,
+      "optimal_T": 93,
+      "optimal_peak": 19
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271026",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 51,
+      "memory_bound": 24,
+      "optimal_T": 54,
+      "optimal_peak": 24
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271027",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 70,
+      "memory_bound": 28,
+      "optimal_T": 74,
+      "optimal_peak": 37
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271028",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 78,
+      "memory_bound": 32,
+      "optimal_T": 103,
+      "optimal_peak": 32
+    },
+    {
+      "name": "parallel_oracle_n6_seed20271029",
+      "n": 6,
+      "certificate": false,
+      "time_bound": 57,
+      "memory_bound": 23,
+      "optimal_T": 65,
+      "optimal_peak": 27
+    },
+    {
+      "name": "analytic_chain_n1_seed20261022",
+      "n": 1,
+      "certificate": true,
+      "time_bound": 916849892,
+      "memory_bound": 225,
+      "optimal_T": 916849892,
+      "optimal_peak": 225
+    },
+    {
+      "name": "analytic_chain_n2_seed20261022",
+      "n": 2,
+      "certificate": true,
+      "time_bound": 216657075,
+      "memory_bound": 1575,
+      "optimal_T": 216657075,
+      "optimal_peak": 1575
+    },
+    {
+      "name": "analytic_chain_n32_seed20261022",
+      "n": 32,
+      "certificate": true,
+      "time_bound": 19095552842,
+      "memory_bound": 2727,
+      "optimal_T": 19095552842,
+      "optimal_peak": 2727
+    },
+    {
+      "name": "analytic_chain_n512_seed20261022",
+      "n": 512,
+      "certificate": true,
+      "time_bound": 247982984764,
+      "memory_bound": 2748,
+      "optimal_T": 247982984764,
+      "optimal_peak": 2748
+    },
+    {
+      "name": "analytic_chain_n10000_seed20261022",
+      "n": 10000,
+      "certificate": true,
+      "time_bound": 5030403326851,
+      "memory_bound": 2924,
+      "optimal_T": 5030403326851,
+      "optimal_peak": 2924
+    },
+    {
+      "name": "analytic_chain_n1_seed20271022",
+      "n": 1,
+      "certificate": true,
+      "time_bound": 460258450,
+      "memory_bound": 1378,
+      "optimal_T": 460258450,
+      "optimal_peak": 1378
+    },
+    {
+      "name": "analytic_chain_n2_seed20271022",
+      "n": 2,
+      "certificate": true,
+      "time_bound": 1379787775,
+      "memory_bound": 807,
+      "optimal_T": 1379787775,
+      "optimal_peak": 807
+    },
+    {
+      "name": "analytic_chain_n32_seed20271022",
+      "n": 32,
+      "certificate": true,
+      "time_bound": 16927213152,
+      "memory_bound": 2333,
+      "optimal_T": 16927213152,
+      "optimal_peak": 2333
+    },
+    {
+      "name": "analytic_chain_n512_seed20271022",
+      "n": 512,
+      "certificate": true,
+      "time_bound": 246632479391,
+      "memory_bound": 2813,
+      "optimal_T": 246632479391,
+      "optimal_peak": 2813
+    },
+    {
+      "name": "analytic_chain_n10000_seed20271022",
+      "n": 10000,
+      "certificate": true,
+      "time_bound": 5019167942965,
+      "memory_bound": 2878,
+      "optimal_T": 5019167942965,
+      "optimal_peak": 2878
+    },
+    {
+      "name": "analytic_pair_AIC_AIC",
+      "n": 2,
+      "certificate": true,
+      "time_bound": 5,
+      "memory_bound": 3,
+      "optimal_T": 5,
+      "optimal_peak": 3
+    },
+    {
+      "name": "analytic_pair_AIC_AIV",
+      "n": 2,
+      "certificate": true,
+      "time_bound": 3,
+      "memory_bound": 4,
+      "optimal_T": 3,
+      "optimal_peak": 4
+    }
+  ]
+}

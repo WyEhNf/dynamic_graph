@@ -1,0 +1,45 @@
+{
+  "origin": "self-created; not official Hackathon fixture",
+  "case_id": "clamp",
+  "base_commit": null,
+  "baseline_bundle": "clamp",
+  "snapshot_sha256": "5145e5d11701becf78cffc6336075bea40ec7800f42ba5442e032f61924915ae",
+  "target_file": "solution.py",
+  "pinned_files": [
+    "solution.py"
+  ],
+  "history": [
+    {
+      "kind": "tool",
+      "text": "INFO telemetry partition 0 finished normally\nINFO telemetry partition 1 finished normally\nINFO telemetry partition 2 finished normally\nINFO telemetry partition 3 finished normally\nINFO telemetry partition 4 finished normally\nINFO telemetry partition 5 finished normally\nINFO telemetry partition 6 finished normally\nINFO telemetry partition 7 finished normally\nINFO telemetry partition 8 finished normally\nINFO telemetry partition 9 finished normally\nINFO telemetry partition 10 finished normally\nINFO telemetry partition 11 finished normally"
+    },
+    {
+      "kind": "tool",
+      "text": "INFO telemetry partition 0 finished normally\nINFO telemetry partition 1 finished normally\nINFO telemetry partition 2 finished normally\nINFO telemetry partition 3 finished normally\nINFO telemetry partition 4 finished normally\nINFO telemetry partition 5 finished normally\nINFO telemetry partition 6 finished normally\nINFO telemetry partition 7 finished normally\nINFO telemetry partition 8 finished normally\nINFO telemetry partition 9 finished normally\nINFO telemetry partition 10 finished normally\nINFO telemetry partition 11 finished normally"
+    },
+    {
+      "kind": "memory",
+      "text": "Historical request: migrate telemetry dashboards. Already completed."
+    },
+    {
+      "kind": "tool",
+      "text": "FAILED current tests: requested function is missing in solution.py",
+      "protected": true
+    }
+  ],
+  "seed": 1100,
+  "noise_modules": 1,
+  "dependencies": {
+    "python": ">=3.12",
+    "external": []
+  },
+  "context_dependencies": {},
+  "split": "Existing DEV task with synthetic long-context extension; not a new holdout",
+  "long_context_extension": {
+    "version": 25,
+    "seed": 252500,
+    "added_modules": 13,
+    "added_functions": 146,
+    "original_snapshot_sha256": "4c68d7386d6a73aab29dfc60b52504ce8edee84dc98cfa867f598bb250f777e0"
+  }
+}

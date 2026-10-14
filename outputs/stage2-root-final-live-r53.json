@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "physical_and_numeric_replay_passed": true,
+  "qualification_failures": [],
+  "reviewed_unix": 1791771776.6172593,
+  "execution_plan_sha256": "babc11a093c643139b339e4d67d9f23944699204ce1ccc724d777e23198b5127",
+  "original_gold_cases": 176,
+  "probe_requests": 347,
+  "independently_enumerated_cut_orders": 558,
+  "full_original_physical_plans": 347,
+  "legal_fixed_plans": 311,
+  "expected_invalid_fixed_plans": 36,
+  "GCC_and_UBSan_control_checks": 352,
+  "strict_dominance_controls": 87,
+  "independent_budget_boundaries": 32,
+  "selected12_actual_legal_plans": 4,
+  "comparison": [
+    {
+      "name": "projection_retention_seed203451023",
+      "before": false,
+      "after": false,
+      "old_work": 13888844,
+      "new_work": 13874848,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "before": false,
+      "after": false,
+      "old_work": 115612,
+      "new_work": 117531,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "before": false,
+      "after": false,
+      "old_work": 419195,
+      "new_work": 460989,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "before": false,
+      "after": false,
+      "old_work": 15968139,
+      "new_work": 15968139,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "before": false,
+      "after": false,
+      "old_work": 2000000,
+      "new_work": 2000000,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "before": false,
+      "after": false,
+      "old_work": 162593,
+      "new_work": 168932,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "projection_retention_seed203451016",
+      "before": false,
+      "after": false,
+      "old_work": 15996808,
+      "new_work": 15994830,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "before": false,
+      "after": false,
+      "old_work": 2000000,
+      "new_work": 2000000,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "before": true,
+      "after": true,
+      "old_work": 1155913,
+      "new_work": 1172070,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "before": true,
+      "after": true,
+      "old_work": 1231870,
+      "new_work": 1231209,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "before": true,
+      "after": true,
+      "old_work": 1306736,
+      "new_work": 1303136,
+      "whole_plan_equal": true
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "before": true,
+      "after": true,
+      "old_work": 471850,
+      "new_work": 483219,
+      "whole_plan_equal": true
+    }
+  ],
+  "recovered": 0,
+  "lost": 0,
+  "scope": "Corrected176 controls: same original graphs/hardware/deadlines/seed and only7 fixture prefixes changed; all64 random held-producer prerequisites satisfied.347 H(D union C) and complete original plans/558 exact cutorders/87strict prunes/32 charged boundaries independently reviewed; actual reused GCC/UBSan EXEs agree. Initial7qualification failures preserved. Same12 actual plans/work verified0recoveries/0loss. No full63/250/1099/default/performance or universal proof.",
+  "initial_qualification_failed": 7,
+  "corrected_prefixes": 7,
+  "qualified_random_controls": 64,
+  "corrected_checkpoint_sha256": "29d79cad8079af521c72a33049c5c192be86354fdb0b6357a7bceed7f1255a61",
+  "revision_map_sha256": "88cb3d4b085614e616d08deed15ae150ea76243429812e63a93da984066a0e8d"
+}

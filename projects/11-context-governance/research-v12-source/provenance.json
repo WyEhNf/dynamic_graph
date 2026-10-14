@@ -1,0 +1,30 @@
+{
+  "frozen_unix": 1791656491.1102219,
+  "intent": "26 fixed development cases; NF4 7B draft, public critique, correction; no hidden feedback",
+  "source_sha256_at_start": {
+    "benchmark.py": "99c49db9fcc5d6947553739dbe8e0c76923b1ad01d03d49649d76084acf4883c",
+    "bundles.py": "71b8ada36cc5ee67f1c741ac4dd98127e56b55847c0bc8339447721922f10941",
+    "cli.py": "2a2c0dafcb5a5a25cb22bd6ca44e785843492b0baa420ba3d8cc2816bd22e3a4",
+    "contract_audit.py": "02b129db5bc262b9bd8e801453f741c400de24ad744375215fd347f6b790d396",
+    "core.py": "cbc0b5bc14b83e3d085a0f4ffb58ee7b2a573dcde2457101fb52bcd97de8b717",
+    "engineering_suite.py": "999c1a8a42b645d55388c9d82d89c7d5225d1cb2e1c8200ee4f5c0d220ca88e8",
+    "evaluation.py": "43aa62ccb83af17d56f598eac710847f2d5d703b8facdfd7f0e0655ee464a449",
+    "holdout_suite.py": "75f2ffb2174bfbd1a4b5795a71860d2cb8d32c6a10e92a7606d17f4d24b46003",
+    "incremental_benchmark.py": "34ae3efa4fa2d639de8c8399be339de284890f2ccaa4fcb3bf821c20cce1284e",
+    "local_model.py": "e42fe3bc42e8967f8bf4345c511f4c68992c163bd0d9fe535e9aaf1bd90e57eb",
+    "prepare_model.py": "597744b82ae6b8bfcb0bfe1f82967297b71f493cbd5f155bae3a1648eca25b92",
+    "quality.py": "6f515055f75c5471baa8edeaccc7382af96ae8cde535ed07bfdcf3495db26088",
+    "research_benchmark.py": "85c6a0afbf9432d0709dd81a291a98e2d849b7a8dc2e026d2c809ba1115b39ba",
+    "research_suite.py": "f80b5e7d54566fe3a6683700f2bd46f9893367f8a789ddcd555fbc61a38d6099",
+    "resources.py": "f20dee7ca880c1962b10b73e537038729e2c31ebb115f77565594cf5189da0e5",
+    "run_local_eval.py": "a1a55e11dc0fbd0266b960f55722542e8bc8c747679a26ec3a455e02c4b69bca",
+    "selftest_suite.py": "aba27c45684bab6056d2739d65006931517746a426aedbf4ac8f8da6aba26b5f",
+    "session_benchmark.py": "8bd1bc5cc8ae2ad5448a9d468ed02253a24bb4b91fbc4932eb7fda8b36c6e2af",
+    "session_metrics.py": "cf48aad0cd5634b12c368df81a3b26be6d141e9a899d2866947eb2f02026fde1",
+    "token_benchmark.py": "17ee5e1bd324a4b07947cb0b817264f43aae2b1929cf9bf293dbe03789709fd1",
+    "verify_recorded_eval.py": "bcfc3de045085b27806ec780ad57a898efad636525c1bdc7a8bee25fdd16169f",
+    "workflow_suite.py": "07f0f10dfa26c3f2746d95ad262736626030f9cd5eed5564e3e86839ab1a3999",
+    "__init__.py": "e885d538068a3d6b86ec95ca3951feade57e835545969a0d12253af74d83d987"
+  },
+  "missing": []
+}

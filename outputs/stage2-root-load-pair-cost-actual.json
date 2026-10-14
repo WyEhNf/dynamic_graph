@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "actual_owner_session": 82170,
+  "actual_owner_PID": 131232,
+  "actual_tool_chunk": "72a964",
+  "actual_terminal_exit_code": 0,
+  "report_sha256": "113f42451561df72e8b429e6b9eb46beea809b31d5dc8d20d589cc24ed053ca4",
+  "archive_sha256": "57c4f608e5394ae9b3b93151f64adc04a727b1cfdaa599dab0ab3f9a126776cd",
+  "archive_files": 3402,
+  "archive_bytes": 1293593233,
+  "actual_originalC_outputs": 190,
+  "independent_full_C_bytes": 817390840,
+  "planned_pairs": 95,
+  "continuous_pairs": 94,
+  "first_interrupted_pair_retained": true,
+  "all_planned_outcomes": {
+    "win": 49,
+    "negative": 45,
+    "tie": 1
+  },
+  "continuous_outcomes": {
+    "negative": 45,
+    "win": 48,
+    "tie": 1
+  },
+  "continuous_VM_outcomes": {
+    "negative": 42,
+    "win": 46,
+    "tie": 1
+  },
+  "continuous_native_outcomes": {
+    "win": 2,
+    "negative": 3
+  },
+  "fresh_continuation_resource_gates": 379,
+  "host_busy_percent_range": [
+    2.73972602739726,
+    48.125
+  ],
+  "measured_cli_peak_working_set_max_bytes": 7499776,
+  "summaries": [
+    {
+      "identity": "changed-arithmetic",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 4,
+      "continuous_median_ratio": 0.9803919830591299,
+      "all_planned_ratios": [
+        0.9382612403720584,
+        1.054341133004926,
+        0.9406567357164023,
+        0.9933757286698462,
+        0.9674082374484135
+      ]
+    },
+    {
+      "identity": "changed-SSA",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9886426240623808,
+      "all_planned_ratios": [
+        0.974493089682613,
+        0.9886426240623808,
+        0.9567827787579152,
+        1.0541046108152101,
+        1.0025539686389773
+      ]
+    },
+    {
+      "identity": "generic-if-while",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9210567885633046,
+      "all_planned_ratios": [
+        0.9127429630330985,
+        0.8905235151420299,
+        0.9987018776880312,
+        0.9940625650273982,
+        0.9210567885633046
+      ]
+    },
+    {
+      "identity": "int-arithmetic",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0610352723314274,
+      "all_planned_ratios": [
+        1.0610352723314274,
+        1.0351285632986704,
+        0.980022266204849,
+        1.0617590547270184,
+        1.0878724788549121
+      ]
+    },
+    {
+      "identity": "int-conversion",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0207937038058867,
+      "all_planned_ratios": [
+        1.0087660928685087,
+        0.9942038669940004,
+        1.0207937038058867,
+        1.0666323377960865,
+        1.0456605288820053
+      ]
+    },
+    {
+      "identity": "deep-SSA40",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.951611418653272,
+      "all_planned_ratios": [
+        0.899664505145089,
+        0.951611418653272,
+        1.011687393420122,
+        0.9799166453109615,
+        0.9422720751271684
+      ]
+    },
+    {
+      "identity": "nested-helpers",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9692759323386487,
+      "all_planned_ratios": [
+        0.9692759323386487,
+        0.8907771040774323,
+        1.0222651031616445,
+        1.0220421442215855,
+        0.874243627303343
+      ]
+    },
+    {
+      "identity": "SSA-conditional",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9834825194193703,
+      "all_planned_ratios": [
+        0.9616686630904641,
+        0.9950817947504077,
+        0.9834825194193703,
+        0.995903372449519,
+        0.9190541096595001
+      ]
+    },
+    {
+      "identity": "unused-double",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9558297547254986,
+      "all_planned_ratios": [
+        1.0911371342854623,
+        0.9392002289830529,
+        0.9558297547254986,
+        1.1242662902147262,
+        0.9106405615755571
+      ]
+    },
+    {
+      "identity": "fresh-fma-control",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0653560751654922,
+      "all_planned_ratios": [
+        1.0165766240611411,
+        1.0653560751654922,
+        1.087624221040474,
+        1.0864370870889692,
+        1.0538592831405273
+      ]
+    },
+    {
+      "identity": "fresh-dependent-branches",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0083267082304699,
+      "all_planned_ratios": [
+        1.0083267082304699,
+        1.052118632580584,
+        0.9122420179925912,
+        1.054598748983198,
+        0.9576008928797909
+      ]
+    },
+    {
+      "identity": "original-fp-builtin",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9364886343029645,
+      "all_planned_ratios": [
+        0.9779644149907593,
+        0.9473043571928691,
+        0.9364886343029645,
+        0.9317759378168299,
+        0.9274755488393569
+      ]
+    },
+    {
+      "identity": "fresh-carry-fma-plain",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0693437068640983,
+      "all_planned_ratios": [
+        0.9767447401653602,
+        1.0693437068640983,
+        1.1347636354490236,
+        1.0143386216906058,
+        1.08224856557895
+      ]
+    },
+    {
+      "identity": "nested-rect-strides-dense",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0147058823529411,
+      "all_planned_ratios": [
+        1.072463768115942,
+        1.0,
+        1.0869565217391304,
+        0.8795180722891566,
+        1.0147058823529411
+      ]
+    },
+    {
+      "identity": "nested-triangular-dense",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.024793388429752,
+      "all_planned_ratios": [
+        0.9682539682539683,
+        1.0551181102362206,
+        1.024793388429752,
+        1.008130081300813,
+        1.0661157024793388
+      ]
+    },
+    {
+      "identity": "nested-gram-three-dense",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9860012823252832,
+      "all_planned_ratios": [
+        1.0285946881042027,
+        1.0134558582212012,
+        0.9597808105872621,
+        0.9860012823252832,
+        0.9642891894521748
+      ]
+    },
+    {
+      "identity": "strict-cholesky-control-dense",
+      "scope": "native-control",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0588235294117645,
+      "all_planned_ratios": [
+        0.9268292682926829,
+        0.9729729729729729,
+        1.1818181818181817,
+        1.0588235294117645,
+        1.1944444444444444
+      ]
+    },
+    {
+      "identity": "unknown-data-step-dense",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 0.9163179916317992,
+      "all_planned_ratios": [
+        1.061611374407583,
+        0.8999999999999999,
+        0.7765567765567765,
+        1.050925925925926,
+        0.9163179916317992
+      ]
+    },
+    {
+      "identity": "unknown-parent-bound-write-dense",
+      "scope": "genuine-default-VM",
+      "continuous_pairs": 5,
+      "continuous_median_ratio": 1.0225563909774436,
+      "all_planned_ratios": [
+        0.9266666666666667,
+        0.9925925925925926,
+        1.126984126984127,
+        1.0225563909774436,
+        1.0390625
+      ]
+    }
+  ],
+  "scope": "Actual exactsamea95/backend-only comparison, strictFP and all190 originalC full streams independently checked. First runner classification failure preserved; first noncontiguous pair separate from94 continuous. Mixed46wins42negative1tie VM means no uniform speed improvement/default promotion; whole-host contention and short cases remain. No official85 compute or arbitraryC claim.",
+  "authorized_next": "Freeze mixed costs; inspect per-source dynamic hot opcode coverage/entry-safety/discovery overhead from actualPROGRAM/metrics before choosing an execution mechanism. No automatic promotion or repeat ofsame95 benchmark."
+}

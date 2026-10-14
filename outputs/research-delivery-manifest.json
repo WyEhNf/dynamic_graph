@@ -1,0 +1,72 @@
+{
+  "verified_unix": 1791672067.5709558,
+  "scope": "Delivery evidence and final document consistency; no new optimizer or model benchmark",
+  "optimization_gate_closed": "2026-10-11 06:30 Asia/Shanghai; remaining quota reached 35 percent",
+  "reports": [
+    {
+      "project": 11,
+      "source": "F:\\Hackathon\\projects\\11-context-governance\\reports\\project11-research.tex",
+      "source_sha256": "3d0699cd4c17fbbf92c134fc9da4282e7852cf27427c7e7af94826fc5b4f553c",
+      "pdf_sha256": "b7f1e03ab5447141fd78ff5f6395055d285a0f10872b8a1282ebba13df17c516",
+      "pages": 16,
+      "warnings": [],
+      "compile_render_wall_seconds": 13.986260652542114,
+      "visual_review": "passed: all 16 pages inspected via four contact sheets; pages 11 and 12 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+      "visual_reviewed_unix": 1791672067.468517
+    },
+    {
+      "project": 18,
+      "source": "F:\\Hackathon\\projects\\18-isa-scheduler\\reports\\project18-research.tex",
+      "source_sha256": "5deb2fdc8c9cd2036f6438418a40bd465ee03d8f69c54e3ad605812175fc08a8",
+      "pdf_sha256": "3cfc281e1a277d51ff424ae2f9943ca69b2010b77eb92210d1b7e68d924a6211",
+      "pages": 25,
+      "warnings": [],
+      "compile_render_wall_seconds": 20.849480628967285,
+      "visual_review": "passed: all 25 pages inspected via contact sheets; page 21 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+      "visual_reviewed_unix": 1791667846.7648284
+    },
+    {
+      "project": 19,
+      "source": "F:\\Hackathon\\projects\\19-dynamic-graph\\reports\\project19-research.tex",
+      "source_sha256": "e34faaedb8eebcfe932298b76a37744a6ed5183d9a2461b1c88b7871eb160728",
+      "pdf_sha256": "d2bbedfd2b4e4cdfa2d2df0f80dbd0f2d8b1a634ee20e7b636cc418032e5c9b8",
+      "pages": 27,
+      "warnings": [],
+      "compile_render_wall_seconds": 12.76745057106018,
+      "visual_review": "passed: all 27 pages inspected via seven contact sheets; page 20 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+      "visual_reviewed_unix": 1791666374.4337053
+    },
+    {
+      "project": 27,
+      "source": "F:\\Hackathon\\projects\\27-aicore-streams\\reports\\project27-research.tex",
+      "source_sha256": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82",
+      "pdf_sha256": "bcd1677b11b2877fabeb6161f9d3eb7de0d556d422a573c8cf312a031562f3ff",
+      "pages": 23,
+      "warnings": [],
+      "compile_render_wall_seconds": 18.364083766937256,
+      "visual_review": "passed: all 23 pages inspected via contact sheets; page 19 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+      "visual_reviewed_unix": 1791667846.776878
+    }
+  ],
+  "project11_promoted_modules": 25,
+  "project11_core_tests": 48,
+  "project11_core_test_seconds": 157.667,
+  "project11_v22_report_sha256": "eb8386e2bb7e539293b88e988f9618b1602e866beadc9ea2005ed2dfc8be8f0a",
+  "project11_v22_reference_audit_summary": {
+    "model_flows": 60,
+    "unique_case_response_audits": 56,
+    "valid_example_flows": 51,
+    "protocol_rejected_flows": 9,
+    "protocol_rejection_feedback_counts": {
+      "Public examples could not be parsed: invalid syntax (<unknown>, line 0)": 3,
+      "Public examples could not be parsed: literal must be bounded text": 2,
+      "Public examples could not be parsed: Expecting value: line 1 column 1 (char 0)": 2,
+      "Public examples could not be parsed: expected one to six examples": 1,
+      "Public examples could not be parsed: '[' was never closed (<unknown>, line 1)": 1
+    },
+    "reference_accepted_flows": 14,
+    "reference_rejected_flows": 37,
+    "scope": "Counts are per recorded model flow, not independent test sets or model quality scores."
+  },
+  "official_score_claimed": false
+}

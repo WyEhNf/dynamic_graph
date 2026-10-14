@@ -1,0 +1,13 @@
+name,n,pass,valid,deadline,T,peak,solve_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,error
+"irregular_consumers_local_k6_ret0_seed20271619",31,1,1,544550,544550,1006,2819,122,2,1,10,132,1109,8,""
+"irregular_consumers_local_k6_ret1_seed20271620",37,1,1,685527,685527,1341,3493,115,1,1,12,127,1391,8,""
+"irregular_consumers_dense_k6_ret0_seed20271629",39,1,1,664289,664289,1903,3304,123,1,1,4,127,900,8,""
+"irregular_consumers_dense_k6_ret1_seed20271630",37,1,1,777595,777595,1463,3641,125,1,1,2,127,1365,8,""
+"irregular_consumers_global_k6_ret0_seed20271639",36,1,1,689740,689740,1639,3142,115,1,1,12,127,1364,8,""
+"irregular_consumers_global_k6_ret1_seed20271640",36,1,1,730526,730526,1288,3192,123,1,1,4,127,1336,8,""
+"irregular_consumers_local_k8_ret0_seed20271819",44,1,1,603547,473576,1489,3965,119,3,1,13,132,1837,8,""
+"irregular_consumers_local_k8_ret1_seed20271820",43,1,1,520921,448518,1442,3917,119,2,1,6,125,1086,8,""
+"irregular_consumers_dense_k8_ret0_seed20271829",48,1,1,609494,609494,1405,16780,119,1,1,6,125,19793,32,""
+"irregular_consumers_dense_k8_ret1_seed20271830",43,1,1,650142,650142,1342,3810,123,1,1,4,127,1702,8,""
+"irregular_consumers_global_k8_ret0_seed20271839",42,1,1,601007,601007,1004,3402,123,1,1,4,127,1661,8,""
+"irregular_consumers_global_k8_ret1_seed20271840",48,0,0,922952,0,0,18228,106,0,1,16,122,19943,32,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"

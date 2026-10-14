@@ -1,0 +1,41 @@
+{
+  "reviewed_unix": 1791707214.9469311,
+  "passed": true,
+  "actual_constructed_outputs": 2118,
+  "comparisons": 2240,
+  "suites": [
+    {
+      "folder": "r116-cpsat-oracle",
+      "comparisons": 2000,
+      "actual_outputs": 1970,
+      "statuses": {
+        "constructive_original_order": 1970,
+        "solver_proved_infeasible_stated_model": 30
+      },
+      "copies": 1374,
+      "evidence": {
+        "projects/18-isa-scheduler/experiments/r116-cpsat-oracle/report.json": "a1be5028779709a309b97e3d00299baaba3af955f00e39080dc4901b4ebcc6bd",
+        "projects/18-isa-scheduler/experiments/r116-cpsat-oracle/inputs.jsonl": "6792862d3902919f877bb911f8e2bf58b445dfc688f3b78727c503bd1ff8950a",
+        "projects/18-isa-scheduler/experiments/r116-cpsat-oracle/optimized_outputs.jsonl": "0402018f6f2ab64c4bbc6680e3f295af5dbd7b7ffe3756fcd96e2d05a2be803c"
+      }
+    },
+    {
+      "folder": "r117-cpsat-negative",
+      "comparisons": 240,
+      "actual_outputs": 148,
+      "statuses": {
+        "constructive_original_order": 148,
+        "solver_proved_infeasible_stated_model": 92
+      },
+      "copies": 472,
+      "evidence": {
+        "projects/18-isa-scheduler/experiments/r117-cpsat-negative/report.json": "539d4d8bc938dbdbfdbfdd2314c4e7e17f70f661de8d14830a7fbff8999b9595",
+        "projects/18-isa-scheduler/experiments/r117-cpsat-negative/inputs.jsonl": "b6072548171b1ff2c4f62a5e93607edad81f72eb7b5dc683ae8926a730a41dff",
+        "projects/18-isa-scheduler/experiments/r117-cpsat-negative/optimized_outputs.jsonl": "11e12cc9150a3ea36ea34061bc39b118f5b02e0aa1d2e6a60a43e2bbffd6ca89"
+      }
+    }
+  ],
+  "matrix_unknown": 2,
+  "matrix_report_sha256": "7f6c85cdd2ae638024ab7ad3d87cb0a0123fff3668b3830bb2bc152a60465706",
+  "scope": "Root independently rebuilds exact ordered original identities, data and GET/SET RAW/WAR/WAW hazards, physicalCOPY window and integer after-live/dead-slot occupancy for all2118 saved schedules. No project imports or solver execution.122 backend INFEASIBLE results agree with prior exhausted raw oracle; portable proof not asserted. Both actual30s matrix attempts remain UNKNOWN, no new full-corpus legal output or COPY optimum/official Level claim."
+}

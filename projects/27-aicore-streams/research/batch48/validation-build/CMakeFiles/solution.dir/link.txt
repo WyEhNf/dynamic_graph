@@ -1,0 +1,2 @@
+E:\mingw64\bin\ar.exe qc libsolution.a "CMakeFiles/solution.dir/F_/Hackathon/projects/27-aicore-streams/research/batch48/solution.cpp.obj"
+E:\mingw64\bin\ranlib.exe libsolution.a

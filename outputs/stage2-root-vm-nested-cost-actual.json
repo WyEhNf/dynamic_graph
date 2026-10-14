@@ -1,0 +1,167 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791780258.4157455,
+  "report_sha256": "12b4f66ed52857dd14aa5b2bfb9d623c2c393cb2634bbfed3d63d87ab751ec84",
+  "actual_exit_code": 0,
+  "actual_session": 54561,
+  "whole_C_outputs": 174,
+  "paired_comparisons": 87,
+  "VM_pairs": 69,
+  "native_pairs": 18,
+  "negative_pairs": 73,
+  "VM_negative_pairs": 63,
+  "native_negative_pairs": 10,
+  "independently_compared_bytes": 495920904,
+  "summaries": [
+    {
+      "source": "changed-arithmetic",
+      "kind": "vm",
+      "median_compute_ratio": 0.993815439700537
+    },
+    {
+      "source": "changed-SSA",
+      "kind": "vm",
+      "median_compute_ratio": 0.9624289222445468
+    },
+    {
+      "source": "generic-if-while",
+      "kind": "vm",
+      "median_compute_ratio": 1.1001907097125734
+    },
+    {
+      "source": "int-arithmetic",
+      "kind": "vm",
+      "median_compute_ratio": 1.050229657950784
+    },
+    {
+      "source": "int-conversion",
+      "kind": "vm",
+      "median_compute_ratio": 1.0348313125988402
+    },
+    {
+      "source": "deep-SSA40",
+      "kind": "vm",
+      "median_compute_ratio": 1.0885957701218145
+    },
+    {
+      "source": "nested-helpers",
+      "kind": "vm",
+      "median_compute_ratio": 1.0649428907940508
+    },
+    {
+      "source": "SSA-conditional",
+      "kind": "vm",
+      "median_compute_ratio": 1.0703676173336982
+    },
+    {
+      "source": "unused-double",
+      "kind": "vm",
+      "median_compute_ratio": 1.0047500145171593
+    },
+    {
+      "source": "fresh-fma-control",
+      "kind": "vm",
+      "median_compute_ratio": 1.0710993557848427
+    },
+    {
+      "source": "fresh-dependent-branches",
+      "kind": "vm",
+      "median_compute_ratio": 1.0292484476482762
+    },
+    {
+      "source": "original-fp-builtin",
+      "kind": "vm",
+      "median_compute_ratio": 1.1039056409792911
+    },
+    {
+      "source": "fresh-carry-fma-plain",
+      "kind": "vm",
+      "median_compute_ratio": 1.067086931854
+    },
+    {
+      "source": "control-scalar-auto-dense",
+      "kind": "native",
+      "median_compute_ratio": 0.7183098591549296
+    },
+    {
+      "source": "control-scalar-auto-diagonal",
+      "kind": "native",
+      "median_compute_ratio": 1.0273972602739727
+    },
+    {
+      "source": "control-page-tiled-dense",
+      "kind": "native",
+      "median_compute_ratio": 1.1691065118626955
+    },
+    {
+      "source": "control-blocked-auto-dense",
+      "kind": "native",
+      "median_compute_ratio": 1.030736240171551
+    },
+    {
+      "source": "nested-rect-strides-dense",
+      "kind": "vm",
+      "median_compute_ratio": 7.1515151515151505
+    },
+    {
+      "source": "nested-rect-strides-signedzero",
+      "kind": "vm",
+      "median_compute_ratio": 7.12121212121212
+    },
+    {
+      "source": "nested-triangular-dense",
+      "kind": "vm",
+      "median_compute_ratio": 3.9918032786885247
+    },
+    {
+      "source": "nested-triangular-signedzero",
+      "kind": "vm",
+      "median_compute_ratio": 3.6466165413533833
+    },
+    {
+      "source": "nested-gram-three-dense",
+      "kind": "vm",
+      "median_compute_ratio": 1.0666599839615076
+    },
+    {
+      "source": "nested-gram-three-signedzero",
+      "kind": "vm",
+      "median_compute_ratio": 1.0866714475975823
+    },
+    {
+      "source": "strict-cholesky-control-dense",
+      "kind": "native",
+      "median_compute_ratio": 0.9411764705882353
+    },
+    {
+      "source": "strict-cholesky-control-signedzero",
+      "kind": "native",
+      "median_compute_ratio": 1.2
+    },
+    {
+      "source": "unknown-data-step-dense",
+      "kind": "vm",
+      "median_compute_ratio": 2.197969543147208
+    },
+    {
+      "source": "unknown-data-step-signedzero",
+      "kind": "vm",
+      "median_compute_ratio": 2.2464454976303316
+    },
+    {
+      "source": "unknown-parent-bound-write-dense",
+      "kind": "vm",
+      "median_compute_ratio": 3.1796874999999996
+    },
+    {
+      "source": "unknown-parent-bound-write-signedzero",
+      "kind": "vm",
+      "median_compute_ratio": 3.0615384615384618
+    }
+  ],
+  "host_busy_percent_range": [
+    3.361344537815126,
+    33.13609467455621
+  ],
+  "scope": "All174 realC fullbytes/rawmetrics/commands/nativebypass/proofwork and87 alternatingsamebinary compute/wall pairs independently verified. Proof can extend safe semantic coverage but is additional compute; allnegatives retained. Sharedhost timings, no kernel/official speedup or default promotion."
+}

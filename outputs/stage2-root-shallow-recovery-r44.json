@@ -1,0 +1,53 @@
+{
+  "reviewed_unix": 1791703198.3658154,
+  "passed": true,
+  "recovered_records": 2,
+  "recovered_topologies": 1,
+  "checks": [
+    {
+      "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+      "nodes": 196,
+      "T": 3779533,
+      "peak": 2356,
+      "capacity": 2375,
+      "final_sink_memory": 0,
+      "old_default_pass": false
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem5",
+      "nodes": 196,
+      "T": 3779533,
+      "peak": 2376,
+      "capacity": 2395,
+      "final_sink_memory": 0,
+      "old_default_pass": false
+    }
+  ],
+  "exchange_checks": 4116,
+  "method": "Root reads actual saved serial plans and raw unchanged hard-corpus inputs, uses arbitrary-precision integers to reconstruct every BEGIN allocation/END release, direct parent lifetime, sinks retained through T, core pools, exact node permutation and deadline. No C++ simulator or project code imported.",
+  "producer_exchange_proof": "For constant initial live memory and independent newly opened producers whose outputs remain until consumer execution, W_a>=W_b makes both a,b peaks <= L+O_a+O_b+W_a, itself a lower bound on the b,a peak. Adjacent exchanges establish descending workspace order for that fixed segment only.",
+  "prefix_counterexample": {
+    "descending_W_peak": 121,
+    "reverse_peak": 111,
+    "implication": "Prefix outputs released between producer executions invalidate constant-live exchange premise; no global optimality claim for that case."
+  },
+  "limitation": "Two recovered parameter records of one topology in an isolated preliminary26-input diagnostic. This is not complete202 regression, default promotion, throughput evidence, universal solvability, or official scoring.",
+  "evidence": {
+    "inputs": {
+      "path": "outputs/stage2-shallow-r44-root-snapshot/inputs.json",
+      "sha256": "96dd813ade9172c5fb40dd039bd9095ecfce8a1ef99aced94241b590d8825252"
+    },
+    "diagnostic": {
+      "path": "outputs/stage2-shallow-r44-root-snapshot/diagnostic.json",
+      "sha256": "13a4f768a0e74242812249dc6aed3092605af2da54bf296583f4ac3f79843da8"
+    },
+    "hard_corpus": {
+      "path": "projects/27-aicore-streams/data/hard-corpus-resumed.json",
+      "sha256": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325"
+    },
+    "old_default": {
+      "path": "projects/27-aicore-streams/reports/paired-hard-batch43-1-after.json",
+      "sha256": "7a6a76736e26fb2dd5016df21400f58ed6781819f7d9e117ae8a1b8c75d5b743"
+    }
+  }
+}

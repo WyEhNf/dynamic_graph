@@ -1,0 +1,21 @@
+{
+  "seed": 203449001,
+  "cases": 95,
+  "requests": 342,
+  "no_group_controls": 62,
+  "large_groups": 12,
+  "input_sha": "e09e4a739f0cec366df104a4ca13917d0db65a7eb0fbf350dcbf7c448d0b3532",
+  "reference": "Original full DIRECT-user set2..16;stable boundary slicing;full ancestors and prefix/future live-set bigint profile",
+  "explicit": [
+    "size4 old boundary",
+    "size5 new",
+    "size16 inclusive",
+    "size17 rejected whole-user set",
+    "dependency crossings",
+    "overlaps",
+    "outside direct consumer",
+    "MAX and saturated priority",
+    "O0",
+    "all original roots/sinks"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "frozen_unix": 1791662247.9223073,
+  "threshold_key_tokens": 16384,
+  "scope": "Isolated candidate only. Original dispatch at <=16384 KV tokens; longer contexts serialize KV-head groups. No new quality results yet; active package unchanged.",
+  "sha256": {
+    "baseline-local-model.py": "4b33707a68a1ce1f3e28e3ee84ea27bda9cbfc9f3d44abe82bc245faa16a68c6",
+    "local_model.py": "3b552ebee14a23db969a1eacf3bfb3725a148a450d0a1e10567291d56e5f6f4a"
+  },
+  "generator_sha256": "4d0abddf51e6481f1d38d87e8f5943a4ef04dbf52e4e5f7099667df9d1599026"
+}

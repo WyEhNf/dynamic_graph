@@ -1,0 +1,152 @@
+{
+  "suite": "data\\parallel-oracle5-holdout.json",
+  "suite_sha256": "7f8c47e2c8f032f2c93eedf4cce14f09216e4139443ecc1461c925fb6b06b1fb",
+  "baseline_exe_sha256": "bfad822e4b25c49bd80dc825642df033100be648f58de88dd6573a2a437aae9d",
+  "current_exe_sha256": "5fc205bd0a302ae808a144aa8ba9557ba8b580f14929b975e1e00014adab3b12",
+  "current_solution_sha256": "d4dcbeaacf60f0bc2108f2031be68e5d69dd769e07aab24d5419280d93068cc4",
+  "baseline_solution_sha256": "f9395bc3175ee0ee1729cc5c9433bef7a2d24be12d7e1522460785157e85ec2f",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-pruning-holdout-batch10-1-before.json",
+        "exit_code": 0,
+        "wall_seconds": 0.16879859997425228,
+        "peak_working_set_bytes": 7036928
+      },
+      "after": {
+        "report": "reports\\paired-pruning-holdout-batch10-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.16158149996772408,
+        "peak_working_set_bytes": 7127040
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "after": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "common_cases": 24,
+        "common_solve_us_before": 111300,
+        "common_solve_us_after": 109744,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108402,
+        "scales": [
+          {
+            "n": 5,
+            "median_us": 2809.0,
+            "max_us": 17349
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-pruning-holdout-batch10-2-before.json",
+        "exit_code": 0,
+        "wall_seconds": 0.1592038000235334,
+        "peak_working_set_bytes": 7004160
+      },
+      "after": {
+        "report": "reports\\paired-pruning-holdout-batch10-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.16179209999972954,
+        "peak_working_set_bytes": 7139328
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "after": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "common_cases": 24,
+        "common_solve_us_before": 111338,
+        "common_solve_us_after": 107394,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108402,
+        "scales": [
+          {
+            "n": 5,
+            "median_us": 2701.5,
+            "max_us": 17055
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-pruning-holdout-batch10-3-before.json",
+        "exit_code": 0,
+        "wall_seconds": 0.16016279999166727,
+        "peak_working_set_bytes": 7041024
+      },
+      "after": {
+        "report": "reports\\paired-pruning-holdout-batch10-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.16140089998953044,
+        "peak_working_set_bytes": 7139328
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "after": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "common_cases": 24,
+        "common_solve_us_before": 112341,
+        "common_solve_us_after": 107446,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108402,
+        "scales": [
+          {
+            "n": 5,
+            "median_us": 2704.0,
+            "max_us": 16328
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch9\\solution.cpp",
+  "median_common_solve_us_before": 111338,
+  "median_common_solve_us_after": 107446,
+  "median_wall_seconds_before": 0.16016279999166727,
+  "median_wall_seconds_after": 0.16158149996772408,
+  "maximum_cli_working_set_bytes": 7139328,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation"
+}

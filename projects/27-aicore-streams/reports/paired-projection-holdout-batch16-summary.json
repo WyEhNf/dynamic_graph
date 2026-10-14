@@ -1,0 +1,474 @@
+{
+  "suite": "data\\irregular-consumers-holdout.json",
+  "suite_sha256": "a1750b629ced2aeb7fbfa1b39b7d04d98511d65d01e8868858bf3fdae7dfa9d7",
+  "baseline_exe_sha256": "4b8f2d70616fe7206539a244ba3132fb8bf0d8c2e9758dbbc3f77b9f8b05aa71",
+  "current_exe_sha256": "09c503c51f5d9d016f493100d1f161b4d769de7359f3e1f4c4de0368cdd28000",
+  "current_solution_sha256": "6921067fb0f8c567d6edb49255207f87db65d3e19a8e7ba0891ff17b442b7d5f",
+  "baseline_solution_sha256": "9e4a633813a59b088436e1c8a74257fd703edd0dcd89cc3803d1687c7d3276bd",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-projection-holdout-batch16-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.2276134999701753,
+        "peak_working_set_bytes": 68747264
+      },
+      "after": {
+        "report": "reports\\paired-projection-holdout-batch16-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.340594799956307,
+        "peak_working_set_bytes": 69218304
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 12,
+          "failed": 12
+        },
+        "after": {
+          "total": 24,
+          "passed": 13,
+          "failed": 11
+        },
+        "common_cases": 12,
+        "common_solve_us_before": 890890,
+        "common_solve_us_after": 1005579,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_local_k8_ret1_seed20271818"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 32,
+        "scales": [
+          {
+            "n": 46,
+            "median_us": 3565,
+            "max_us": 3565
+          },
+          {
+            "n": 47,
+            "median_us": 4020,
+            "max_us": 4020
+          },
+          {
+            "n": 48,
+            "median_us": 8526,
+            "max_us": 8526
+          },
+          {
+            "n": 49,
+            "median_us": 3832,
+            "max_us": 3832
+          },
+          {
+            "n": 50,
+            "median_us": 3971,
+            "max_us": 3971
+          },
+          {
+            "n": 58,
+            "median_us": 22390,
+            "max_us": 22390
+          },
+          {
+            "n": 127,
+            "median_us": 55272,
+            "max_us": 55272
+          },
+          {
+            "n": 129,
+            "median_us": 36497,
+            "max_us": 36497
+          },
+          {
+            "n": 131,
+            "median_us": 23838,
+            "max_us": 23838
+          },
+          {
+            "n": 133,
+            "median_us": 36113.5,
+            "max_us": 60592
+          },
+          {
+            "n": 140,
+            "median_us": 10803,
+            "max_us": 10803
+          },
+          {
+            "n": 517,
+            "median_us": 42384,
+            "max_us": 42384
+          },
+          {
+            "n": 522,
+            "median_us": 25146,
+            "max_us": 25146
+          },
+          {
+            "n": 525,
+            "median_us": 32800.0,
+            "max_us": 40608
+          },
+          {
+            "n": 535,
+            "median_us": 39240,
+            "max_us": 39240
+          },
+          {
+            "n": 540,
+            "median_us": 13049,
+            "max_us": 13049
+          },
+          {
+            "n": 2103,
+            "median_us": 214516,
+            "max_us": 214516
+          },
+          {
+            "n": 2104,
+            "median_us": 278366,
+            "max_us": 278366
+          },
+          {
+            "n": 2116,
+            "median_us": 36744,
+            "max_us": 36744
+          },
+          {
+            "n": 2124,
+            "median_us": 195104,
+            "max_us": 195104
+          },
+          {
+            "n": 2146,
+            "median_us": 141400,
+            "max_us": 141400
+          },
+          {
+            "n": 2151,
+            "median_us": 797914,
+            "max_us": 797914
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-projection-holdout-batch16-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.5751325000310317,
+        "peak_working_set_bytes": 68509696
+      },
+      "after": {
+        "report": "reports\\paired-projection-holdout-batch16-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.608343400002923,
+        "peak_working_set_bytes": 68558848
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 12,
+          "failed": 12
+        },
+        "after": {
+          "total": 24,
+          "passed": 13,
+          "failed": 11
+        },
+        "common_cases": 12,
+        "common_solve_us_before": 960266,
+        "common_solve_us_after": 951499,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_local_k8_ret1_seed20271818"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 32,
+        "scales": [
+          {
+            "n": 46,
+            "median_us": 4014,
+            "max_us": 4014
+          },
+          {
+            "n": 47,
+            "median_us": 5031,
+            "max_us": 5031
+          },
+          {
+            "n": 48,
+            "median_us": 10270,
+            "max_us": 10270
+          },
+          {
+            "n": 49,
+            "median_us": 4974,
+            "max_us": 4974
+          },
+          {
+            "n": 50,
+            "median_us": 4675,
+            "max_us": 4675
+          },
+          {
+            "n": 58,
+            "median_us": 27029,
+            "max_us": 27029
+          },
+          {
+            "n": 127,
+            "median_us": 67474,
+            "max_us": 67474
+          },
+          {
+            "n": 129,
+            "median_us": 64181,
+            "max_us": 64181
+          },
+          {
+            "n": 131,
+            "median_us": 29515,
+            "max_us": 29515
+          },
+          {
+            "n": 133,
+            "median_us": 56099.0,
+            "max_us": 92532
+          },
+          {
+            "n": 140,
+            "median_us": 19452,
+            "max_us": 19452
+          },
+          {
+            "n": 517,
+            "median_us": 66209,
+            "max_us": 66209
+          },
+          {
+            "n": 522,
+            "median_us": 42249,
+            "max_us": 42249
+          },
+          {
+            "n": 525,
+            "median_us": 52632.5,
+            "max_us": 63139
+          },
+          {
+            "n": 535,
+            "median_us": 62383,
+            "max_us": 62383
+          },
+          {
+            "n": 540,
+            "median_us": 19721,
+            "max_us": 19721
+          },
+          {
+            "n": 2103,
+            "median_us": 288843,
+            "max_us": 288843
+          },
+          {
+            "n": 2104,
+            "median_us": 275203,
+            "max_us": 275203
+          },
+          {
+            "n": 2116,
+            "median_us": 36345,
+            "max_us": 36345
+          },
+          {
+            "n": 2124,
+            "median_us": 245505,
+            "max_us": 245505
+          },
+          {
+            "n": 2146,
+            "median_us": 162395,
+            "max_us": 162395
+          },
+          {
+            "n": 2151,
+            "median_us": 676909,
+            "max_us": 676909
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-projection-holdout-batch16-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.485199899994768,
+        "peak_working_set_bytes": 68714496
+      },
+      "after": {
+        "report": "reports\\paired-projection-holdout-batch16-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.624626300006639,
+        "peak_working_set_bytes": 68927488
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 12,
+          "failed": 12
+        },
+        "after": {
+          "total": 24,
+          "passed": 13,
+          "failed": 11
+        },
+        "common_cases": 12,
+        "common_solve_us_before": 901374,
+        "common_solve_us_after": 1254421,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_local_k8_ret1_seed20271818"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 32,
+        "scales": [
+          {
+            "n": 46,
+            "median_us": 3729,
+            "max_us": 3729
+          },
+          {
+            "n": 47,
+            "median_us": 4103,
+            "max_us": 4103
+          },
+          {
+            "n": 48,
+            "median_us": 8710,
+            "max_us": 8710
+          },
+          {
+            "n": 49,
+            "median_us": 3990,
+            "max_us": 3990
+          },
+          {
+            "n": 50,
+            "median_us": 4245,
+            "max_us": 4245
+          },
+          {
+            "n": 58,
+            "median_us": 22930,
+            "max_us": 22930
+          },
+          {
+            "n": 127,
+            "median_us": 57236,
+            "max_us": 57236
+          },
+          {
+            "n": 129,
+            "median_us": 36810,
+            "max_us": 36810
+          },
+          {
+            "n": 131,
+            "median_us": 26114,
+            "max_us": 26114
+          },
+          {
+            "n": 133,
+            "median_us": 35679.0,
+            "max_us": 59665
+          },
+          {
+            "n": 140,
+            "median_us": 10866,
+            "max_us": 10866
+          },
+          {
+            "n": 517,
+            "median_us": 42950,
+            "max_us": 42950
+          },
+          {
+            "n": 522,
+            "median_us": 26442,
+            "max_us": 26442
+          },
+          {
+            "n": 525,
+            "median_us": 33920.5,
+            "max_us": 41728
+          },
+          {
+            "n": 535,
+            "median_us": 41550,
+            "max_us": 41550
+          },
+          {
+            "n": 540,
+            "median_us": 13291,
+            "max_us": 13291
+          },
+          {
+            "n": 2103,
+            "median_us": 215882,
+            "max_us": 215882
+          },
+          {
+            "n": 2104,
+            "median_us": 286507,
+            "max_us": 286507
+          },
+          {
+            "n": 2116,
+            "median_us": 62115,
+            "max_us": 62115
+          },
+          {
+            "n": 2124,
+            "median_us": 200723,
+            "max_us": 200723
+          },
+          {
+            "n": 2146,
+            "median_us": 146249,
+            "max_us": 146249
+          },
+          {
+            "n": 2151,
+            "median_us": 1017273,
+            "max_us": 1017273
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch15\\solution.cpp",
+  "median_common_solve_us_before": 901374,
+  "median_common_solve_us_after": 1005579,
+  "median_wall_seconds_before": 2.5751325000310317,
+  "median_wall_seconds_after": 2.608343400002923,
+  "maximum_cli_working_set_bytes": 69218304,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true
+}

@@ -1,0 +1,2 @@
+{"block_id":"jsonl-known-example","bit_width":2,"instructions":[{"id":0,"op":"GET","reg":"r1"},{"id":1,"op":"GET","reg":"r2"},{"id":2,"op":"MULW","inputs":["t#1","t#2"]}]}
+{"block_id":"jsonl-register-hazard","bit_width":2,"instructions":[{"id":0,"op":"GET","reg":"a"},{"id":1,"op":"ADD","inputs":["t#1","t#1"]},{"id":2,"op":"SET","reg":"a","inputs":["t#1"]},{"id":3,"op":"GET","reg":"a"},{"id":4,"op":"MULW","inputs":["t#1","t#1"]},{"id":5,"op":"SET","reg":"out","inputs":["t#1"]}]}

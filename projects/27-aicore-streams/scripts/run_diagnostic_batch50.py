@@ -1,0 +1,17 @@
+"""Freeze complete statuses/inputs/output; all original61 include3recoveries."""
+import hashlib,json,subprocess,time
+from pathlib import Path
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+commands=[('counterexample-group',['research/batch50/test_group.exe','data/first-pivot-group-gold-batch50.json']),('group',['research/batch50/test_group.exe','data/group-gold-batch48.json']),('profile',['research/batch50/test_projection.exe','data/projection-gold-batch45.json']),('hard',['research/batch50/diagnostic.exe','data/unresolved-r44-input-only-batch45.json','reports/projection-unresolved-diagnostic-batch50.json']),('heldout',['research/batch50/diagnostic.exe','data/projection-heldout-unresolved-input-only-batch45.json','reports/projection-heldout-unresolved-diagnostic-batch50.json'])]
+statuses=[]
+for label,cmd in commands:
+    start=time.perf_counter();r=subprocess.run(cmd,capture_output=True,text=True);Path(f'reports/projection-{label}-status-batch50.txt').write_text(r.stdout+r.stderr,encoding='utf-8');print(label,r.returncode,r.stdout.strip(),flush=True);statuses.append(dict(label=label,command=cmd,actual_exit_code=r.returncode,shared_functional_wall_seconds=time.perf_counter()-start));assert r.returncode==0
+summary={}
+for label in ('unresolved','heldout-unresolved'):
+    before=json.loads(Path(f'reports/projection-{label}-diagnostic-batch48.json').read_text());after=json.loads(Path(f'reports/projection-{label}-diagnostic-batch50.json').read_text());a,b=before['cases'],after['cases'];assert len(a)==len(b) and all(x['name']==y['name'] for x,y in zip(a,b))
+    summary[label]=dict(before=before['summary'],after=after['summary'],newly_recovered=[x['name'] for x,y in zip(a,b) if not x['pass'] and y['pass']],lost=[x['name'] for x,y in zip(a,b) if x['pass'] and not y['pass']],after_exhausted=sum(x['exhausted'] for x in b))
+paths=['research/batch50/'+x for x in ('solution.cpp','projection.cpp.inc','diagnostic.cpp','test_projection.cpp','test_group_template.cpp','diagnostic.exe','test_projection.exe','test_group.exe','first-pivot-counterexample.json')]
+paths+=['scripts/'+x for x in ('prepare_batch50.py','make_first_pivot_gold_batch50.py','build_batch50.py','run_diagnostic_batch50.py')]
+paths+=['include/problem.h','include/local_json.h','src/benchmark.cpp','src/simulator.cpp','include/simulator.h','include/solver_metrics.h','data/first-pivot-fixed-gold-batch50.json','data/first-pivot-group-gold-batch50.json','data/group-gold-batch48.json','data/projection-gold-batch45.json','data/unresolved-r44-input-only-batch45.json','data/projection-heldout-unresolved-input-only-batch45.json','reports/first-pivot-fixed-result-batch50.json','research/batch48/numeric-validation-ubsan.exe','reports/projection-unresolved-diagnostic-batch50.json','reports/projection-heldout-unresolved-diagnostic-batch50.json']
+m=dict(status='isolated first-member pivot;not default',source_sha=sha('research/batch50/solution.cpp'),change='Only add third first-member pivot to frozen R48;group2..4,priorities24groupcap/interface/seeds/profile/16Mchargedcap unchanged',statuses=statuses,sha256={x:sha(x) for x in paths},summary=summary,default48_source_sha=sha('solution/solution.cpp'),timing='Shared functional only;no performance measurements',fixed_plan_driver='Existing frozen R48 Clang UBSan driver replayed6 new complete-plan bigint controls;not newly compiled R50 numeric driver')
+Path('research/batch50/functional-checkpoint.json').write_text(json.dumps(m,indent=2));print(json.dumps(summary,indent=2),flush=True)

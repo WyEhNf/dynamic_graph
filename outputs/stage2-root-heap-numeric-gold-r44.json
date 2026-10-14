@@ -1,0 +1,33 @@
+{
+  "reviewed_unix": 1791705105.9432845,
+  "passed": true,
+  "total": 523,
+  "results": [
+    {
+      "path": "projects/27-aicore-streams/data/numeric-controls-batch42.json",
+      "sha256": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+      "valid": 6,
+      "rejected": 5
+    },
+    {
+      "path": "projects/27-aicore-streams/data/numeric-parallel-batch42.json",
+      "sha256": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+      "valid": 11,
+      "rejected": 309
+    },
+    {
+      "path": "projects/27-aicore-streams/data/numeric-parallel-valid-batch42.json",
+      "sha256": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+      "valid": 160,
+      "rejected": 0
+    },
+    {
+      "path": "outputs/stage2-memory-structure/scaled-serial-controls.json",
+      "sha256": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473",
+      "valid": 32,
+      "rejected": 0
+    }
+  ],
+  "checker_sha256": "a6f864f8236e8aafb8b3ec00ad557affea99ce0671c1b9d2a3a90d5b08412498",
+  "scope": "Root heap-event model vs independently generated exact bigint fixed-plan gold.11 crafted,320 independent parallel plans,160 valid parallel plans,32 uniformly scaled serial. All int64 endpoint/overflow/state outcomes preserved. No solver completeness claim."
+}

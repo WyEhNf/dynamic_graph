@@ -1,0 +1,47 @@
+{
+  "before": {
+    "total": 18,
+    "passed": 15,
+    "failed": 3
+  },
+  "after": {
+    "total": 18,
+    "passed": 15,
+    "failed": 3
+  },
+  "common_cases": 15,
+  "common_solve_us_before": 207172,
+  "common_solve_us_after": 255099,
+  "improved_T": 0,
+  "regressed_T": 0,
+  "improved_peak_at_equal_T": 0,
+  "regressed_peak_at_equal_T": 0,
+  "recovered": [],
+  "lost": [],
+  "model_disagreements": 0,
+  "duplicates": 56,
+  "scales": [
+    {
+      "n": 46,
+      "median_us": 1842.5,
+      "max_us": 5174
+    },
+    {
+      "n": 190,
+      "median_us": 6113.5,
+      "max_us": 78305
+    },
+    {
+      "n": 766,
+      "median_us": 58353.0,
+      "max_us": 174552
+    }
+  ],
+  "common_thread_cpu_measured_cases": 15,
+  "common_thread_cpu_us_before": 203125,
+  "common_thread_cpu_us_after": 187500,
+  "all_solve_us_before": 512326,
+  "all_thread_cpu_us_before": 515625,
+  "all_solve_us_after": 589265,
+  "all_thread_cpu_us_after": 500000
+}

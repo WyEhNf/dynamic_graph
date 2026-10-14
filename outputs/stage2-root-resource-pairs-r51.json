@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791718693.5876515,
+  "groups": {
+    "hard": {
+      "records": 202,
+      "before_legal": 144,
+      "after_legal": 145,
+      "round_cpu_ratios": [
+        0.8578028747433265,
+        0.9376053962900506,
+        1.06069200226886
+      ],
+      "median_paired_cpu_ratio": 0.9376053962900506,
+      "median_paired_solve_wall_ratio": 0.9536766857096105,
+      "ratio_of_independent_cpu_medians": 0.93929173693086,
+      "medians": {
+        "all": {
+          "before": {
+            "wall_us": 28673963,
+            "thread_cpu_us": 27796875
+          },
+          "after": {
+            "wall_us": 27345690,
+            "thread_cpu_us": 26109375
+          }
+        },
+        "common_success": {
+          "before": {
+            "wall_us": 8630249,
+            "thread_cpu_us": 8500000
+          },
+          "after": {
+            "wall_us": 8033188,
+            "thread_cpu_us": 7843750
+          }
+        },
+        "common_failure": {
+          "before": {
+            "wall_us": 19941639,
+            "thread_cpu_us": 19203125
+          },
+          "after": {
+            "wall_us": 19240722,
+            "thread_cpu_us": 18265625
+          }
+        },
+        "recovered": {
+          "before": {
+            "wall_us": 102075,
+            "thread_cpu_us": 109375
+          },
+          "after": {
+            "wall_us": 71780,
+            "thread_cpu_us": 78125
+          }
+        }
+      }
+    },
+    "heldout": {
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "round_cpu_ratios": [
+        0.9852941176470589,
+        0.9416058394160584,
+        0.9710144927536232
+      ],
+      "median_paired_cpu_ratio": 0.9710144927536232,
+      "median_paired_solve_wall_ratio": 1.0046235111341273,
+      "ratio_of_independent_cpu_medians": 0.9781021897810219,
+      "medians": {
+        "all": {
+          "before": {
+            "wall_us": 2172375,
+            "thread_cpu_us": 2140625
+          },
+          "after": {
+            "wall_us": 2182419,
+            "thread_cpu_us": 2093750
+          }
+        },
+        "common_success": {
+          "before": {
+            "wall_us": 1403163,
+            "thread_cpu_us": 1390625
+          },
+          "after": {
+            "wall_us": 1399944,
+            "thread_cpu_us": 1312500
+          }
+        },
+        "common_failure": {
+          "before": {
+            "wall_us": 769212,
+            "thread_cpu_us": 750000
+          },
+          "after": {
+            "wall_us": 778394,
+            "thread_cpu_us": 750000
+          }
+        },
+        "recovered": {
+          "before": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          },
+          "after": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          }
+        }
+      }
+    }
+  },
+  "actual_case_records": 1500,
+  "independent_actual_full_plan_replays": 1119,
+  "host_trials": [
+    {
+      "family": "hard",
+      "round": 1,
+      "side": "before",
+      "host_busy_fraction": 0.2836345607788345,
+      "sampled_free_ram_min_bytes": 6334910464
+    },
+    {
+      "family": "hard",
+      "round": 1,
+      "side": "after",
+      "host_busy_fraction": 0.1407194782254229,
+      "sampled_free_ram_min_bytes": 7858561024
+    },
+    {
+      "family": "hard",
+      "round": 2,
+      "side": "before",
+      "host_busy_fraction": 0.2098247306640939,
+      "sampled_free_ram_min_bytes": 8229421056
+    },
+    {
+      "family": "hard",
+      "round": 2,
+      "side": "after",
+      "host_busy_fraction": 0.1372173377578598,
+      "sampled_free_ram_min_bytes": 8452038656
+    },
+    {
+      "family": "hard",
+      "round": 3,
+      "side": "before",
+      "host_busy_fraction": 0.20910581008609302,
+      "sampled_free_ram_min_bytes": 8524701696
+    },
+    {
+      "family": "hard",
+      "round": 3,
+      "side": "after",
+      "host_busy_fraction": 0.2392458384879187,
+      "sampled_free_ram_min_bytes": 8245682176
+    },
+    {
+      "family": "heldout",
+      "round": 1,
+      "side": "before",
+      "host_busy_fraction": 0.1679560260586319,
+      "sampled_free_ram_min_bytes": 8796946432
+    },
+    {
+      "family": "heldout",
+      "round": 1,
+      "side": "after",
+      "host_busy_fraction": 0.1508210014190148,
+      "sampled_free_ram_min_bytes": 8794324992
+    },
+    {
+      "family": "heldout",
+      "round": 2,
+      "side": "before",
+      "host_busy_fraction": 0.11540810095664564,
+      "sampled_free_ram_min_bytes": 8795308032
+    },
+    {
+      "family": "heldout",
+      "round": 2,
+      "side": "after",
+      "host_busy_fraction": 0.1408674890569041,
+      "sampled_free_ram_min_bytes": 8756510720
+    },
+    {
+      "family": "heldout",
+      "round": 3,
+      "side": "before",
+      "host_busy_fraction": 0.16842723004694835,
+      "sampled_free_ram_min_bytes": 8711471104
+    },
+    {
+      "family": "heldout",
+      "round": 3,
+      "side": "after",
+      "host_busy_fraction": 0.13562836997096642,
+      "sampled_free_ram_min_bytes": 8723832832
+    }
+  ],
+  "evidence": {
+    "projects/27-aicore-streams/reports/paired-hard-batch51-1-before.json": "2d6f144bc8748e87dc75cf0eed1150adf7f5f380fd16d3a5b2dc84df1c663872",
+    "projects/27-aicore-streams/reports/paired-hard-batch51-1-after.json": "fb796b8bd9cbc8cf3d1ca99f13581a19b133858ef5df92ffe315291a4d311b5b",
+    "projects/27-aicore-streams/reports/paired-hard-batch51-2-before.json": "4c12b8c9502ff7f9b520fdadb031d10a8426f40f8fd20df57a237af9d20671b9",
+    "projects/27-aicore-streams/reports/paired-hard-batch51-2-after.json": "f206e42242c6234a6f9baa33b7b1d51e819593b688d9950c4effea3f664f4a0d",
+    "projects/27-aicore-streams/reports/paired-hard-batch51-3-before.json": "7b54bb45f19c22d30078c62f9bd7a46c9f8881a861b5e0ad852c3232877a2989",
+    "projects/27-aicore-streams/reports/paired-hard-batch51-3-after.json": "44624012740b3e4db7fab9e2b504e5f0ff75f7b29e8af23cfda2f66ab3671f83",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-1-before.json": "d6cfa849b35555c409a24d77ba6dc01513ba4990639416bcd596e6174cac897d",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-1-after.json": "0eb7c26d13b9895d3a8070408286e59b5ae609d26fdf6983b645909c04bc73db",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-2-before.json": "20f923b10828290207306e52571f50a5ca6a8d11bd8b8965e555c18519c67ef9",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-2-after.json": "cea469c4745638a01ebf52e8224de22bdc98bfb5cefc048c0b67f8871b4532e5",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-3-before.json": "2d0dfd398d74f58c8156ff2b83b2155136f8b6c8cf1fcb8b64fb615bc87de082",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-3-after.json": "51e7a551c304e8471e6d6c97b6e4ac956b412ea2d231a7d38ae372ff9a987db4",
+    "projects/27-aicore-streams/research/batch51/paired-completion.json": "5ea14780ba5c41c8b1b9c7cd8731395908d76698f3ce80f1bdeecedd12486271"
+  },
+  "interpretation": "All202+48 x two actual Release EXEs x three alternating rounds; all failure costs included. Root1119 full actual plans replayed, raw integer host ticks/intervals/RAM recomputed. Hard medianCPU -6.24percent but third+6.07percent; fresh medianCPU -2.90percent and median solvewall+0.46percent. Active background recorded, no idle/general stable acceleration or universal feasibility claim. Default remains R48 pending actual integration."
+}

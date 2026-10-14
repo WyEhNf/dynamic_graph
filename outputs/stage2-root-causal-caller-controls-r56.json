@@ -1,0 +1,618 @@
+{
+  "passed": true,
+  "scope": "static independent original-DAG model; no candidate/compiler invocation",
+  "frozen_files": 54,
+  "caller_controls": 16,
+  "guard_work": 69,
+  "restart_work": 207,
+  "initial_shared7_total": 214,
+  "shared_external_probe_work": 67,
+  "records": [
+    {
+      "name": "caller129-complete-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 129,
+        "order": []
+      }
+    },
+    {
+      "name": "caller130-status-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 130,
+        "order": []
+      }
+    },
+    {
+      "name": "caller132-dispatch-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 132,
+        "order": []
+      }
+    },
+    {
+      "name": "caller134-guardinit-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 134,
+        "order": []
+      }
+    },
+    {
+      "name": "caller202-guardapply-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 202,
+        "order": []
+      }
+    },
+    {
+      "name": "caller203-fullguard-merge-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 203,
+        "order": []
+      }
+    },
+    {
+      "name": "caller206-fullguard-merge-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 206,
+        "order": []
+      }
+    },
+    {
+      "name": "caller207-paid",
+      "derived": {
+        "valid": true,
+        "exhausted": false,
+        "work": 207,
+        "order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "T": 4,
+        "peak": 100
+      }
+    },
+    {
+      "name": "caller208-unused-unit",
+      "derived": {
+        "valid": true,
+        "exhausted": false,
+        "work": 207,
+        "order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "T": 4,
+        "peak": 100
+      }
+    },
+    {
+      "name": "sharedwork7-limit213",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 213,
+        "order": []
+      }
+    },
+    {
+      "name": "sharedwork7-limit214",
+      "derived": {
+        "valid": true,
+        "exhausted": false,
+        "work": 214,
+        "order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "T": 4,
+        "peak": 100
+      }
+    },
+    {
+      "name": "sharedwork7-limit215",
+      "derived": {
+        "valid": true,
+        "exhausted": false,
+        "work": 214,
+        "order": [
+          1,
+          2,
+          0,
+          3
+        ],
+        "T": 4,
+        "peak": 100
+      }
+    },
+    {
+      "name": "guardprobe36-topo-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 36,
+        "order": [],
+        "peak": 5,
+        "final_live": 5
+      }
+    },
+    {
+      "name": "guardprobe37-readycheck-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 37,
+        "order": [],
+        "peak": 5,
+        "final_live": 5
+      }
+    },
+    {
+      "name": "guardprobe66-final-edge-unpaid",
+      "derived": {
+        "valid": false,
+        "exhausted": true,
+        "work": 66,
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "peak": 100,
+        "final_live": 5
+      }
+    },
+    {
+      "name": "guardprobe67-paid-external-held",
+      "derived": {
+        "valid": true,
+        "exhausted": false,
+        "work": 67,
+        "order": [
+          1,
+          2,
+          0
+        ],
+        "peak": 100,
+        "final_live": 30
+      }
+    }
+  ],
+  "basic_events": [
+    [
+      "initialize",
+      12
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "apply_original",
+      2
+    ],
+    [
+      "apply_guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "impact",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "apply_original",
+      3
+    ],
+    [
+      "apply_guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "apply_original",
+      2
+    ],
+    [
+      "apply_guard",
+      2
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "visit",
+      1
+    ],
+    [
+      "guard",
+      2
+    ],
+    [
+      "impact",
+      1
+    ],
+    [
+      "impact",
+      1
+    ],
+    [
+      "apply_original",
+      3
+    ],
+    [
+      "apply_guard",
+      2
+    ]
+  ],
+  "probe_events": [
+    {
+      "operation": "entry",
+      "amount": 1,
+      "work_before": 0,
+      "paid": true
+    },
+    {
+      "operation": "copy",
+      "amount": 20,
+      "work_before": 1,
+      "paid": true
+    },
+    {
+      "operation": "direct_user",
+      "amount": 1,
+      "work_before": 21,
+      "paid": true
+    },
+    {
+      "operation": "direct_user",
+      "amount": 1,
+      "work_before": 22,
+      "paid": true
+    },
+    {
+      "operation": "direct_user",
+      "amount": 1,
+      "work_before": 23,
+      "paid": true
+    },
+    {
+      "operation": "closure_pop",
+      "amount": 1,
+      "work_before": 24,
+      "paid": true
+    },
+    {
+      "operation": "closure_parent",
+      "amount": 1,
+      "work_before": 25,
+      "paid": true
+    },
+    {
+      "operation": "closure_parent",
+      "amount": 1,
+      "work_before": 26,
+      "paid": true
+    },
+    {
+      "operation": "closure_pop",
+      "amount": 1,
+      "work_before": 27,
+      "paid": true
+    },
+    {
+      "operation": "closure_parent",
+      "amount": 1,
+      "work_before": 28,
+      "paid": true
+    },
+    {
+      "operation": "closure_pop",
+      "amount": 1,
+      "work_before": 29,
+      "paid": true
+    },
+    {
+      "operation": "closure_pop",
+      "amount": 1,
+      "work_before": 30,
+      "paid": true
+    },
+    {
+      "operation": "closure_parent",
+      "amount": 1,
+      "work_before": 31,
+      "paid": true
+    },
+    {
+      "operation": "topo_visit",
+      "amount": 1,
+      "work_before": 32,
+      "paid": true
+    },
+    {
+      "operation": "topo_visit",
+      "amount": 1,
+      "work_before": 33,
+      "paid": true
+    },
+    {
+      "operation": "topo_visit",
+      "amount": 1,
+      "work_before": 34,
+      "paid": true
+    },
+    {
+      "operation": "topo_visit",
+      "amount": 1,
+      "work_before": 35,
+      "paid": true
+    },
+    {
+      "operation": "topo_visit",
+      "amount": 1,
+      "work_before": 36,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 37,
+      "paid": true
+    },
+    {
+      "operation": "guard",
+      "amount": 2,
+      "work_before": 38,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 40,
+      "paid": true
+    },
+    {
+      "operation": "guard",
+      "amount": 2,
+      "work_before": 41,
+      "paid": true
+    },
+    {
+      "operation": "impact_parent",
+      "amount": 1,
+      "work_before": 43,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 44,
+      "paid": true
+    },
+    {
+      "operation": "apply_parent",
+      "amount": 1,
+      "work_before": 45,
+      "paid": true
+    },
+    {
+      "operation": "apply_original_successor",
+      "amount": 1,
+      "work_before": 46,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 47,
+      "paid": true
+    },
+    {
+      "operation": "guard",
+      "amount": 2,
+      "work_before": 48,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 50,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 51,
+      "paid": true
+    },
+    {
+      "operation": "guard",
+      "amount": 2,
+      "work_before": 52,
+      "paid": true
+    },
+    {
+      "operation": "impact_parent",
+      "amount": 1,
+      "work_before": 54,
+      "paid": true
+    },
+    {
+      "operation": "impact_parent",
+      "amount": 1,
+      "work_before": 55,
+      "paid": true
+    },
+    {
+      "operation": "apply_parent",
+      "amount": 1,
+      "work_before": 56,
+      "paid": true
+    },
+    {
+      "operation": "apply_parent",
+      "amount": 1,
+      "work_before": 57,
+      "paid": true
+    },
+    {
+      "operation": "apply_original_successor",
+      "amount": 1,
+      "work_before": 58,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 59,
+      "paid": true
+    },
+    {
+      "operation": "guard",
+      "amount": 2,
+      "work_before": 60,
+      "paid": true
+    },
+    {
+      "operation": "impact_parent",
+      "amount": 1,
+      "work_before": 62,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 63,
+      "paid": true
+    },
+    {
+      "operation": "pending_visit",
+      "amount": 1,
+      "work_before": 64,
+      "paid": true
+    },
+    {
+      "operation": "apply_parent",
+      "amount": 1,
+      "work_before": 65,
+      "paid": true
+    },
+    {
+      "operation": "apply_original_successor",
+      "amount": 1,
+      "work_before": 66,
+      "paid": true
+    }
+  ],
+  "controls_sha256": "280ddf7500954c0dfc069dc6cb9119191a1be76f6f68277d8e692b0f6f1dafcd",
+  "source_sha256": "3a4f184de2759fdcd1cbfd899c5f8029e2f7f2691743ec214a895123db19c21a",
+  "freeze_sha256": "433993db601ffdf6f8a30201904836e54a49ecdfbe3db21da573de45141eb3b1",
+  "compiler_gate_not_executed": true
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791711397.2350135,
+  "source_sha256": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "default_exe_sha256": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+  "measured_exe_sha256": "3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9",
+  "checked_inputs": 35,
+  "ctest": 12,
+  "actual_default_cases": 8,
+  "independent_heap_replays": 5,
+  "explicit_unresolved": 3,
+  "hard_legal": 143,
+  "hard_unresolved": 59,
+  "fresh48_legal": 42,
+  "fresh48_unresolved": 6,
+  "evidence": {
+    "projects/27-aicore-streams/reports/final-checkpoint-batch45.json": "a2b2aa5561eb951eab49fff2dcd1339c97b5931e96b9caf00be6b8fb29d70700",
+    "projects/27-aicore-streams/data/default-smoke-batch45.json": "68060637e76c8e592418529aa1bf039d85d8a75b613ec07d88b54a013af3a48d",
+    "projects/27-aicore-streams/reports/default-smoke-batch45.json": "14baee01beaad55e36a858c078cccb4165fbe6cbe416bc568554e7fc39a9ceca"
+  },
+  "scope": "Actual default source/binary/archive/Release flags/tests/input provenance,12 default CTest and8 actual representative records checked against accepted candidate. Root arbitrary-precision heap independently replays5 passing actual default outputs,3 known feasible failures explicit. Measured3e827 remains distinct from default5acc; R44 rollback intact, open old TeX unchanged. Full979/numeric/185-plan evidence from frozen candidate is not claimed rerun on this default executable."
+}

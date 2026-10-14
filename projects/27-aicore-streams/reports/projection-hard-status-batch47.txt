@@ -1,0 +1,1 @@
+61 inputs, 35 workspace projections, 0 independently validated deadline-legal serial orders

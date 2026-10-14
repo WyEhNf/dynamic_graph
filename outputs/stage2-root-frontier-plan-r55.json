@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791776557.8543777,
+  "static_plan_freeze_sha256": "323ebf431c516e58a35a068ab0be15409c2f8c8b5d7075d448fad4f1ed62cb55",
+  "frozen_files": 22,
+  "predeclared_gold_controls": 160,
+  "charge_table_rows": 23,
+  "manual_original_controls": 8,
+  "independent_manual_topological_orders": 52,
+  "authorization": "Implement sole failed-cut width2/branch2 repair from R51 and generate/freeze160 original controls with literal charge expectations before compilation/execution. Root source/charge/fixtures audit before GCC/UBSan/same12 functional.",
+  "scope": "Same original prefix and completeC<=128, full externalDIRECT hold/user counts, exact two-word completed-mask only dedup with lower attained peak. Same2M/16M/128/top24 and old greedy successes retained; extra work may displace old successful whole candidates. Smallmanual counterexamples support order branching, not actual63 recovery or global feasibility/optimality; ordinaryR51/useropenTeX unchanged."
+}

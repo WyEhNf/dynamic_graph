@@ -1,0 +1,41 @@
+{
+  "reviewed_unix": 1791706862.232979,
+  "passed": true,
+  "independently_validated": 185,
+  "suites": [
+    {
+      "suite": "hard",
+      "records": 202,
+      "before_legal": 141,
+      "after_legal": 143,
+      "remaining_unknown": 59,
+      "recovered": [
+        "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+        "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+      ],
+      "lost": 0,
+      "common_T_peak_identical": true,
+      "evidence": {
+        "projects/27-aicore-streams/data/hard-corpus-resumed.json": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+        "projects/27-aicore-streams/reports/hard-functional-batch44.json": "81ed6a870abfed443d8a74fe83d407116cc5a99844e6baed55dbb71d7d278f28",
+        "projects/27-aicore-streams/reports/hard-functional-batch45.json": "04272ce2658fb85ec7a136cde4f4b35107ab1ba64759bf34b403d8766a005b20"
+      }
+    },
+    {
+      "suite": "retention-heldout",
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "remaining_unknown": 6,
+      "recovered": [],
+      "lost": 0,
+      "common_T_peak_identical": true,
+      "evidence": {
+        "projects/27-aicore-streams/data/projection-retention-heldout-batch45.json": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+        "projects/27-aicore-streams/reports/heldout-before-functional-batch45.json": "2689ecba2769ae52031f77e405dabe0fe13da25d5f0722b21b2048c71e623ba4",
+        "projects/27-aicore-streams/reports/heldout-after-functional-batch45.json": "260df9d93ba59cc97f4b5dffc8179097ef12565451e4866f107f3d0246ff0f02"
+      }
+    }
+  ],
+  "scope": "All actual143+42 plans independently replayed by root bigint heap model. Two old hard failures recovered, same topology/2 parameter settings; fresh48 seeds retain42 legal/6 unresolved, zero fresh recovery. Candidate remains isolated; original default44 remains141/202. DifferentO2/O3 and shared functionalCPU timings cannot support speed/cost/promotion claims."
+}

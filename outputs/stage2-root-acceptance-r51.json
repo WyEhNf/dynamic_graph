@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791717933.5526302,
+  "same_regression_records": 1099,
+  "numeric_fixed_controls": 625,
+  "release_ctest": 14,
+  "workspace_profile_controls": 495,
+  "group_recognition_controls": 83,
+  "group_moved_profiles": 210,
+  "release_cut_controls": 102,
+  "independent_actual_full_candidate_plans": 187,
+  "suites": [
+    {
+      "suite": "stress",
+      "records": 153
+    },
+    {
+      "suite": "development",
+      "records": 143
+    },
+    {
+      "suite": "holdout",
+      "records": 143
+    },
+    {
+      "suite": "frontier",
+      "records": 72
+    },
+    {
+      "suite": "frontier-holdout",
+      "records": 72
+    },
+    {
+      "suite": "oracle4",
+      "records": 24
+    },
+    {
+      "suite": "oracle4-holdout",
+      "records": 24
+    },
+    {
+      "suite": "oracle5",
+      "records": 24
+    },
+    {
+      "suite": "oracle5-holdout",
+      "records": 24
+    },
+    {
+      "suite": "overlap",
+      "records": 30
+    },
+    {
+      "suite": "overlap-holdout",
+      "records": 30
+    },
+    {
+      "suite": "resource-quality",
+      "records": 18
+    },
+    {
+      "suite": "resource-quality-holdout",
+      "records": 18
+    },
+    {
+      "suite": "weighted-overlap",
+      "records": 30
+    },
+    {
+      "suite": "weighted-overlap-holdout",
+      "records": 30
+    },
+    {
+      "suite": "oracle6",
+      "records": 12
+    },
+    {
+      "suite": "oracle6-holdout",
+      "records": 12
+    },
+    {
+      "suite": "irregular-small",
+      "records": 12
+    },
+    {
+      "suite": "irregular-small-holdout",
+      "records": 12
+    },
+    {
+      "suite": "corepacking",
+      "records": 18
+    },
+    {
+      "suite": "corepacking-holdout",
+      "records": 18
+    },
+    {
+      "suite": "wait-overlap",
+      "records": 18
+    },
+    {
+      "suite": "wait-overlap-holdout",
+      "records": 18
+    },
+    {
+      "suite": "certificate-controls",
+      "records": 12
+    },
+    {
+      "suite": "dense",
+      "records": 6
+    },
+    {
+      "suite": "dense-holdout",
+      "records": 6
+    },
+    {
+      "suite": "forkjoin",
+      "records": 36
+    },
+    {
+      "suite": "shallow-heldout",
+      "records": 72
+    },
+    {
+      "suite": "resource-cliques",
+      "records": 12
+    }
+  ],
+  "candidate_source_sha256": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+  "frozen_release_sha256": "25ac71bc389e62f512d7597d40048e97b88783c21e895524cdba3311c6067742",
+  "environment_initial_failure_preserved": true,
+  "evidence": {
+    "projects/27-aicore-streams/research/batch51/acceptance-checkpoint.json": "5d302ad593c744d54f76f879f6268b4ec8eeb453c7a1f1e49f869138aecffa63",
+    "projects/27-aicore-streams/reports/full-verification-batch51.json": "a0890b3ca73fd69d651f92de350942edb705b916ccdb7c97ac1ac60d23901da5",
+    "projects/27-aicore-streams/reports/full-numeric-verification-batch51.json": "23d5b32829cc3d5e3660588eda9385b5bb5f9fc9183801fa5ab9dd9e4e1a7b75",
+    "projects/27-aicore-streams/research/batch51/environment-repair.json": "cb467c10a35c43f397195cfc41306999b31784461ea0564e605401d84126bf16"
+  },
+  "scope": "All1099 before/after records and625 actual Clang sanitizer fixed-plan results verified; 102 new cut gold/full plans separately independently recomputed by root. All frozen source/flags/data/executable/report hashes and actual14CTest terminal log checked. Original ENOSPC retained; process-local F temp repair only. Default R48 and open historical TeX preserved. Paired resources and promotion pending."
+}

@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791711742.8863337,
+  "inputs": 16,
+  "independent_actual_outputs": 14,
+  "before_copies": 9755,
+  "after_copies": 9739,
+  "improved": 6,
+  "recovered": 0,
+  "checks": [
+    {
+      "input_sha256": "a43f5b2a247634a177620e84cc7f59512e77d4f52d283326baa45a5ea144b119",
+      "copies": 40,
+      "before": 41,
+      "output_sha256": "a055d300263aa877836ea84081073a144b12b2571fa1cd98e52ef7f48b44cbd1"
+    },
+    {
+      "input_sha256": "1e7fa2471dc32deccc71e5fa6ed38962141a8500b0a8d69784ec019969b4bbd8",
+      "copies": 10,
+      "before": 10,
+      "output_sha256": "87ddecaec5582d0b984e803dcb443e44c04a38b404f6b38237743b2b5ceab701"
+    },
+    {
+      "input_sha256": "2beda892f1761a2406e9517543b652e77c71868bd29fc1ba788174f373c286e3",
+      "copies": 5,
+      "before": 7,
+      "output_sha256": "c093af547262208df3277288d0d124a07e23b36c1f2fc279004ef5e1590b19a7"
+    },
+    {
+      "input_sha256": "22f8d44afe916a0872f0266c10c1594e8b7f4ec4b6cacf68036a03b1d3b15b50",
+      "copies": 2,
+      "before": 2,
+      "output_sha256": "ee37e35a42c3e54d884c5ab811b2c10e7cdd3f9b66710c63782fe1d5453cb1d9"
+    },
+    {
+      "input_sha256": "1cc02143959f7e547f653d60fc0f23f117a88ee8e2d601492206d34adc4b21aa",
+      "copies": 134,
+      "before": 134,
+      "output_sha256": "03bb64922feebcc6b1b646d0604566441fbdbdc8d65ec6d928c7f7ea00e91b79"
+    },
+    {
+      "input_sha256": "a1a6c4124e627364e286967c1fb6e4d41d05113355c23d40934b57c2ce45ed2e",
+      "copies": 80,
+      "before": 80,
+      "output_sha256": "eb1a2917b9d46485c606f64a9ce81f44c29a1324e157fe2b51ea3a63ac3e0050"
+    },
+    {
+      "input_sha256": "76766b7e8b72b8f68cf3914f3e6ebcb806866f3ea3e897aea77e248fb48788ec",
+      "copies": 14,
+      "before": 14,
+      "output_sha256": "4948ca97432248e8d638191068dcb3e66598970062d607ff3e20b833d9ce4472"
+    },
+    {
+      "input_sha256": "0af6e709d8c46fbb1252a81158ea8193a3adb3fd0dae9a308f99ea9f861b968e",
+      "copies": 1573,
+      "before": 1573,
+      "output_sha256": "48e8f586c568064d152e77b8c5d1eb11814c9209f88814b779dc0b0e3b912970"
+    },
+    {
+      "input_sha256": "fb70b0fa8ce635c39af6d9cf787a3b87a4239e84de569f48ff17d3dbfc9636ee",
+      "copies": 321,
+      "before": 327,
+      "output_sha256": "309fd681786e7092884707d3302b5e73ab12f21eb62a67dcde622e0e500e2145"
+    },
+    {
+      "input_sha256": "0ad6a67554a4805a01121a82a9bf66b639c75ba11fd010234aab2f584be05d07",
+      "copies": 65,
+      "before": 66,
+      "output_sha256": "4b6f077b7e6ef724ba10ecee3f6602546299065872e3a3164d73d6e3c0b0dd39"
+    },
+    {
+      "input_sha256": "5f5dc89cdae5ba8479ae4f09233520c30c6cdf6421f2ffd26928e95880b42d92",
+      "copies": 4059,
+      "before": 4063,
+      "output_sha256": "92fa019c21690f0ed906e4262788e324492166c54edbefa40f06730e8975331f"
+    },
+    {
+      "input_sha256": "314060bf3a9587499574de5a9f53b21ba767c7308cb55b40073ffcdbef8beb55",
+      "copies": 1351,
+      "before": 1353,
+      "output_sha256": "58e4bb8873131aefbe7b442aef5d3af45ea7cc475522e72053a407479cc60983"
+    },
+    {
+      "input_sha256": "96491cf4c3a331e6669525025c988ea225ddfbe86c3f6b1509a6a2badc5dbaac",
+      "copies": 1815,
+      "before": 1815,
+      "output_sha256": "e5f5536c31d8c3b327ac838f835c7f7275836e4ea2f031a43d1dc75c7bab4dc6"
+    },
+    {
+      "input_sha256": "28f1030c06c392461172fbe95085aea48ee72de156ab07d4146e065e4b1dca14",
+      "copies": 270,
+      "before": 270,
+      "output_sha256": "33000c2b6112c47530b00a72ebba5b7369c92de15b80e4a98ab2e5e35129f8a1"
+    }
+  ],
+  "evidence": {
+    "projects/18-isa-scheduler/experiments/r125-spine-age-cross/report.json": "b88e27cc961740af1bf5bd3006fc89d3a9e753dcffa24b057e9c22c3fe1c5588",
+    "projects/18-isa-scheduler/experiments/r125-spine-age-cross/inputs.jsonl": "85a1501a11b146d7fff038888016c3f9d599b080346ec37f459c093b907ea54f"
+  },
+  "scope": "All16 original cross-group inputs/statuses retained; all14 selected actual outputs checked by raw identity, physical COPY/window, exact ordered args and rebuilt register hazards.6 improvements total16COPY only; no default/whole336 score/official Level/optimality claim. Current and frozen R126 source/evidence SHA verified;14 actual outputs include complete original orders."
+}

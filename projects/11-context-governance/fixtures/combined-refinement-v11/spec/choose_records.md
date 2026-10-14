@@ -1,0 +1,2 @@
+Implement choose_records(records). Records are (name, priority) tuples. Call qualifies from helpers.py on each priority and return a new list of the original records for which it returns True. Preserve order and duplicates; empty input returns []. Never modify records. Preserve the existing RELEASE_TAG constant and compatibility(value) function unchanged. Return only the complete target file.
+Target file: solution.py. Return its complete content. Existing dependencies must stay available.

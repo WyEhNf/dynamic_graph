@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791781640.842751,
+  "max_triangle_freeze_sha256": "8224a4058ce7b1ba19d89b8f31c50c34f8fa8317598f9c50d81610996f4147ab",
+  "max_triangle_frozen_files": 219,
+  "design_sha256": "945a8c810bcd7e8db6c59ebe43dd159e811b16298d47ebe722cb87bad028a26f",
+  "source_count": 19,
+  "static_LOAD_LOAD_sites": 175,
+  "scope": "Independent full19 PROGRAM CFG/reachability/entry/safe-pair recount and219-file maximum actual acceptance freeze. Static175sites are not measured dynamic hotness or speed.",
+  "authorization": "Isolated source-only opt-in LOAD+LOAD implementation, preserving all original PC/step/error/stack checks and perexecution discovery insidecompute. No compilation/runtime/performance/default change until source and test-driver review."
+}

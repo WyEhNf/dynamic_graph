@@ -1,0 +1,355 @@
+{
+  "suite": "data\\wide-unseen-batch28.json",
+  "suite_sha256": "e6c5d646cba516ca31b70eb5941a373ab50dd601f76b42610b15972b04b33efd",
+  "baseline_exe_sha256": "2e55958e79c4ad8becb44e1f56e9303ea472ed50b26133b62f8828fa2cb073d0",
+  "current_exe_sha256": "3effeb693487764479a6866db9d513470423b7c12ade6c479332e9c4de273e5a",
+  "current_solution_sha256": "6c9ea2d3b557c88ab8bb8f87922018fb204bd247643dd25ba10eeba52893bd57",
+  "baseline_solution_sha256": "1df00a5d1e229337dea657a946a1378a09d4eacdbf203425f6a1a0485938d7bd",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-wide-projection-wide-batch30-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 5.680067100038286,
+        "peak_working_set_bytes": 45752320
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-wide-batch30-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.8835461999988183,
+        "peak_working_set_bytes": 46403584
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 3,
+          "failed": 9
+        },
+        "after": {
+          "total": 12,
+          "passed": 5,
+          "failed": 7
+        },
+        "common_cases": 3,
+        "common_solve_us_before": 287708,
+        "common_solve_us_after": 425281,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "wide_unseen_high-fanout_local_k16_ret0_seed20292628",
+          "wide_unseen_high-fanout_local_k16_ret1_seed20292629"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108,
+        "scales": [
+          {
+            "n": 160,
+            "median_us": 54494,
+            "max_us": 54494
+          },
+          {
+            "n": 164,
+            "median_us": 22398,
+            "max_us": 22398
+          },
+          {
+            "n": 168,
+            "median_us": 27141,
+            "max_us": 27141
+          },
+          {
+            "n": 169,
+            "median_us": 74370,
+            "max_us": 74370
+          },
+          {
+            "n": 781,
+            "median_us": 101977,
+            "max_us": 101977
+          },
+          {
+            "n": 798,
+            "median_us": 148743,
+            "max_us": 148743
+          },
+          {
+            "n": 813,
+            "median_us": 375742,
+            "max_us": 375742
+          },
+          {
+            "n": 814,
+            "median_us": 369285,
+            "max_us": 369285
+          },
+          {
+            "n": 1576,
+            "median_us": 302424,
+            "max_us": 302424
+          },
+          {
+            "n": 1605,
+            "median_us": 680583,
+            "max_us": 680583
+          },
+          {
+            "n": 1628,
+            "median_us": 643776,
+            "max_us": 643776
+          },
+          {
+            "n": 1659,
+            "median_us": 885303,
+            "max_us": 885303
+          }
+        ],
+        "common_thread_cpu_measured_cases": 3,
+        "common_thread_cpu_us_before": 281250,
+        "common_thread_cpu_us_after": 312500,
+        "all_solve_us_before": 3489125,
+        "all_thread_cpu_us_before": 3171875,
+        "all_solve_us_after": 3686236,
+        "all_thread_cpu_us_after": 3359375
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-wide-projection-wide-batch30-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.928156499983743,
+        "peak_working_set_bytes": 45842432
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-wide-batch30-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.428538399981335,
+        "peak_working_set_bytes": 46137344
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 3,
+          "failed": 9
+        },
+        "after": {
+          "total": 12,
+          "passed": 5,
+          "failed": 7
+        },
+        "common_cases": 3,
+        "common_solve_us_before": 302743,
+        "common_solve_us_after": 284633,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "wide_unseen_high-fanout_local_k16_ret0_seed20292628",
+          "wide_unseen_high-fanout_local_k16_ret1_seed20292629"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108,
+        "scales": [
+          {
+            "n": 160,
+            "median_us": 46002,
+            "max_us": 46002
+          },
+          {
+            "n": 164,
+            "median_us": 17065,
+            "max_us": 17065
+          },
+          {
+            "n": 168,
+            "median_us": 23012,
+            "max_us": 23012
+          },
+          {
+            "n": 169,
+            "median_us": 62919,
+            "max_us": 62919
+          },
+          {
+            "n": 781,
+            "median_us": 98569,
+            "max_us": 98569
+          },
+          {
+            "n": 798,
+            "median_us": 126803,
+            "max_us": 126803
+          },
+          {
+            "n": 813,
+            "median_us": 244556,
+            "max_us": 244556
+          },
+          {
+            "n": 814,
+            "median_us": 286897,
+            "max_us": 286897
+          },
+          {
+            "n": 1576,
+            "median_us": 269811,
+            "max_us": 269811
+          },
+          {
+            "n": 1605,
+            "median_us": 572825,
+            "max_us": 572825
+          },
+          {
+            "n": 1628,
+            "median_us": 619326,
+            "max_us": 619326
+          },
+          {
+            "n": 1659,
+            "median_us": 889952,
+            "max_us": 889952
+          }
+        ],
+        "common_thread_cpu_measured_cases": 3,
+        "common_thread_cpu_us_before": 296875,
+        "common_thread_cpu_us_after": 265625,
+        "all_solve_us_before": 3607661,
+        "all_thread_cpu_us_before": 3375000,
+        "all_solve_us_after": 3257737,
+        "all_thread_cpu_us_after": 3171875
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-wide-projection-wide-batch30-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 4.317835099995136,
+        "peak_working_set_bytes": 45883392
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-wide-batch30-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.808415200037416,
+        "peak_working_set_bytes": 46145536
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 3,
+          "failed": 9
+        },
+        "after": {
+          "total": 12,
+          "passed": 5,
+          "failed": 7
+        },
+        "common_cases": 3,
+        "common_solve_us_before": 343369,
+        "common_solve_us_after": 380032,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "wide_unseen_high-fanout_local_k16_ret0_seed20292628",
+          "wide_unseen_high-fanout_local_k16_ret1_seed20292629"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108,
+        "scales": [
+          {
+            "n": 160,
+            "median_us": 67779,
+            "max_us": 67779
+          },
+          {
+            "n": 164,
+            "median_us": 25189,
+            "max_us": 25189
+          },
+          {
+            "n": 168,
+            "median_us": 32269,
+            "max_us": 32269
+          },
+          {
+            "n": 169,
+            "median_us": 84137,
+            "max_us": 84137
+          },
+          {
+            "n": 781,
+            "median_us": 140141,
+            "max_us": 140141
+          },
+          {
+            "n": 798,
+            "median_us": 161180,
+            "max_us": 161180
+          },
+          {
+            "n": 813,
+            "median_us": 322574,
+            "max_us": 322574
+          },
+          {
+            "n": 814,
+            "median_us": 352116,
+            "max_us": 352116
+          },
+          {
+            "n": 1576,
+            "median_us": 370985,
+            "max_us": 370985
+          },
+          {
+            "n": 1605,
+            "median_us": 556049,
+            "max_us": 556049
+          },
+          {
+            "n": 1628,
+            "median_us": 701582,
+            "max_us": 701582
+          },
+          {
+            "n": 1659,
+            "median_us": 801846,
+            "max_us": 801846
+          }
+        ],
+        "common_thread_cpu_measured_cases": 3,
+        "common_thread_cpu_us_before": 312500,
+        "common_thread_cpu_us_after": 250000,
+        "all_solve_us_before": 4036330,
+        "all_thread_cpu_us_before": 3062500,
+        "all_solve_us_after": 3615847,
+        "all_thread_cpu_us_after": 3140625
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch29\\solution.cpp",
+  "median_common_solve_us_before": 302743,
+  "median_common_solve_us_after": 380032,
+  "median_wall_seconds_before": 4.317835099995136,
+  "median_wall_seconds_after": 3.808415200037416,
+  "maximum_cli_working_set_bytes": 46403584,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 296875,
+  "median_all_solve_us_before": 3607661,
+  "median_all_thread_cpu_us_before": 3171875,
+  "median_common_thread_cpu_us_after": 265625,
+  "median_all_solve_us_after": 3615847,
+  "median_all_thread_cpu_us_after": 3171875,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5"
+}

@@ -1,0 +1,457 @@
+{
+  "format": "aicore-local-group-gold-v1",
+  "cases": [
+    {
+      "name": "first_member_counterexample",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 301,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "groups": [
+        {
+          "members": [
+            201,
+            203
+          ],
+          "weight": "80"
+        }
+      ],
+      "requests": [
+        {
+          "permutation": [
+            201,
+            207,
+            209,
+            211,
+            203
+          ],
+          "members": [
+            201,
+            203
+          ],
+          "pivot": 3,
+          "moved": [
+            207,
+            209,
+            201,
+            203,
+            211
+          ],
+          "gold": {
+            "targets": [
+              207,
+              209,
+              201,
+              203,
+              211
+            ],
+            "desired": [
+              207,
+              209,
+              201,
+              203,
+              211
+            ],
+            "order": [
+              11,
+              13,
+              207,
+              209,
+              101,
+              103,
+              201,
+              105,
+              203,
+              211,
+              10001,
+              10002,
+              10003,
+              10004,
+              10005,
+              10006,
+              10007,
+              10008,
+              10009,
+              10010,
+              301
+            ],
+            "permutation": [
+              207,
+              209,
+              201,
+              203,
+              211
+            ],
+            "peak": "381",
+            "area": "4526",
+            "excess": "239",
+            "critical": 2
+          }
+        },
+        {
+          "permutation": [
+            201,
+            207,
+            209,
+            211,
+            203
+          ],
+          "members": [
+            201,
+            203
+          ],
+          "pivot": 4,
+          "moved": [
+            207,
+            209,
+            211,
+            201,
+            203
+          ],
+          "gold": {
+            "targets": [
+              207,
+              209,
+              201,
+              203,
+              211
+            ],
+            "desired": [
+              207,
+              209,
+              211,
+              201,
+              203
+            ],
+            "order": [
+              11,
+              13,
+              207,
+              209,
+              211,
+              101,
+              103,
+              201,
+              105,
+              203,
+              10001,
+              10002,
+              10003,
+              10004,
+              10005,
+              10006,
+              10007,
+              10008,
+              10009,
+              10010,
+              301
+            ],
+            "permutation": [
+              207,
+              209,
+              211,
+              201,
+              203
+            ],
+            "peak": "381",
+            "area": "4526",
+            "excess": "239",
+            "critical": 3
+          }
+        },
+        {
+          "permutation": [
+            201,
+            207,
+            209,
+            211,
+            203
+          ],
+          "members": [
+            201,
+            203
+          ],
+          "pivot": 0,
+          "moved": [
+            201,
+            203,
+            207,
+            209,
+            211
+          ],
+          "gold": {
+            "targets": [
+              207,
+              209,
+              201,
+              203,
+              211
+            ],
+            "desired": [
+              201,
+              203,
+              207,
+              209,
+              211
+            ],
+            "order": [
+              11,
+              13,
+              101,
+              103,
+              201,
+              105,
+              203,
+              207,
+              209,
+              211,
+              10001,
+              10002,
+              10003,
+              10004,
+              10005,
+              10006,
+              10007,
+              10008,
+              10009,
+              10010,
+              301
+            ],
+            "permutation": [
+              201,
+              203,
+              207,
+              209,
+              211
+            ],
+            "peak": "301",
+            "area": "3526",
+            "excess": "0",
+            "critical": 4
+          }
+        }
+      ]
+    }
+  ]
+}

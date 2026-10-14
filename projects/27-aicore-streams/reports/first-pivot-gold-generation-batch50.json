@@ -1,0 +1,15 @@
+{
+  "cases": 6,
+  "T": 21,
+  "capacity": 301,
+  "critical_peak": 381,
+  "after_critical_peak": 381,
+  "first_member_peak": 301,
+  "first_member_full_schedule_feasible": true,
+  "sha256": {
+    "data/first-pivot-fixed-gold-batch50.json": "3ec14b5b1cc6d86ec0ab1808d688637603bc9e528880d418115c9e7d5f43dd86",
+    "data/first-pivot-group-gold-batch50.json": "a090ebdc658a1931a12da4be3176bd09004f98279a25560306e93da8a61793b9",
+    "research/batch50/first-pivot-counterexample.json": "6a573366a35763bc4fff89bd3c44ec2b6e425791dca45508be0362fc6d1f86f4"
+  },
+  "reference": "Independent prefix/future DIRECT-user sets, complete BEGIN/END original-DAG timeline; no C++ profile arithmetic reuse"
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791780962.6997514,
+  "plan_sha256": "315f51596e989490378e85d1766039f3d84c23608a966fdfe06f7a843036255e",
+  "frozen_files": 207,
+  "N": 10000,
+  "expected_steps": 1400030009,
+  "expected_bound": 2799890009,
+  "full_output_bytes": 800000008,
+  "authorization": "Execute exactly one frozen sequential originalC/newtriangle800MB reference, fixed1e9 rejection and sameGNUauto-proved full800MB run; fresh2.5GiBRAM and remaining-output+512MiB disk gates at everylaunch. Preserve failures, no restart/Gram/backend expansion/default change.",
+  "scope": "Actual original source/harness/accepted GCC binary, fullPROGRAM48 metadata/same844 and207 frozen artifacts verified. HighN25pureanalysis bounds do not replace this run. Actuallarge outputs/fixed rejection remain unproven; no compute speedup claim from reject-vs-success."
+}

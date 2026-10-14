@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791720366.0760646,
+  "plan_sha256": "5d88d2bfb7f0de61a81d941854aeccbaf12dfa7108b32b804adbe29de79696c1",
+  "actual_report_sha256": "b5d986a6379306bf0a48074bb8d3bb161ad6520b25b688e3d231c61ee794f15b",
+  "n": 10000,
+  "actual_original_C_rerun": false,
+  "complete_files_stream_compared": 4,
+  "full_bytes_per_file": 800000008,
+  "automatic_proved_backends": [
+    {
+      "backend": "GNUauto",
+      "vm_backend": "decoded-threaded",
+      "vm_steps": 1700000012,
+      "vm_budget_bound_peak": 1700000012,
+      "vm_effective_step_limit_max": 1700000012,
+      "vm_budget_work": 822,
+      "vm_budget_proof_ms": 0.079,
+      "compute_ms": 3703.43,
+      "available_ram_before_bytes": 5900951552,
+      "process_peak_working_set_bytes": 1605816320,
+      "process_peak_commit_bytes": 1604050944,
+      "host_available_ram_min_bytes": 4279545856,
+      "host_busy_percent_during_process": 19.574294734698036
+    },
+    {
+      "backend": "GNUdecoded",
+      "vm_backend": "decoded",
+      "vm_steps": 1700000012,
+      "vm_budget_bound_peak": 1700000012,
+      "vm_effective_step_limit_max": 1700000012,
+      "vm_budget_work": 822,
+      "vm_budget_proof_ms": 0.078,
+      "compute_ms": 8319.68,
+      "available_ram_before_bytes": 5887037440,
+      "process_peak_working_set_bytes": 1605791744,
+      "process_peak_commit_bytes": 1604022272,
+      "host_available_ram_min_bytes": 4278689792,
+      "host_busy_percent_during_process": 23.322502449842695
+    },
+    {
+      "backend": "portableauto",
+      "vm_backend": "decoded-fallback",
+      "vm_steps": 1700000012,
+      "vm_budget_bound_peak": 1700000012,
+      "vm_effective_step_limit_max": 1700000012,
+      "vm_budget_work": 822,
+      "vm_budget_proof_ms": 0.113,
+      "compute_ms": 8397.29,
+      "available_ram_before_bytes": 6016528384,
+      "process_peak_working_set_bytes": 1605976064,
+      "process_peak_commit_bytes": 1604038656,
+      "host_available_ram_min_bytes": 4387311616,
+      "host_busy_percent_during_process": 23.447712418300654
+    }
+  ],
+  "actual_explicit_limit_used": false,
+  "fixed_default_budget_passed": false,
+  "optin_proved_budget_passed": true,
+  "final_freeze_sha256": "3e523ff256197ad9eeac1d80ff0d78289c4061310a64cbf4bf8ce4f4e0f2c326",
+  "final_frozen_sources": 6,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/maximum-shape/run-plan.json": "5d88d2bfb7f0de61a81d941854aeccbaf12dfa7108b32b804adbe29de79696c1",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/maximum-shape/report.json": "b5d986a6379306bf0a48074bb8d3bb161ad6520b25b688e3d231c61ee794f15b",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/maximum-shape/final-evidence/manifest.json": "3e523ff256197ad9eeac1d80ff0d78289c4061310a64cbf4bf8ce4f4e0f2c326"
+  },
+  "scope": "Root streamed full frozen originalC plus three actual800000008byte output files; SHA/header and source/Metadata/oracle/harness/exe rechecked. Each backend executed original1700000012steps with exactly derived1700000012 effectivecap, no explicitlimit. Fresh>=2.5GiB gates/negative fixed1e9 refusal/hostresources and actualstdout verified. OriginalC reused, not rerun. This proves one N10000 copy source under opt-in policy, not arbitraryC/default installation/paired performance."
+}

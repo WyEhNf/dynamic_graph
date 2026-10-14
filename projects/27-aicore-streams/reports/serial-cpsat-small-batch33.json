@@ -1,0 +1,778 @@
+{
+  "passed": true,
+  "checks": 96,
+  "graphs": 32,
+  "ortools_version": "9.15.6755",
+  "elapsed_wall_seconds": 3.6009013999719173,
+  "oracle_source_sha256": "2100ea01d588ec5a8f9b02c2f04d8d239e98bcafd22b7d120ffe67afdf1b40df",
+  "rows": [
+    {
+      "seed": 0,
+      "n": 4,
+      "memory_limit": 11,
+      "independent_minimum_peak": 12,
+      "status": "INFEASIBLE",
+      "wall": 0.005142299982253462
+    },
+    {
+      "seed": 0,
+      "n": 4,
+      "memory_limit": 12,
+      "independent_minimum_peak": 12,
+      "status": "OPTIMAL",
+      "wall": 0.003740800020750612
+    },
+    {
+      "seed": 0,
+      "n": 4,
+      "memory_limit": 17,
+      "independent_minimum_peak": 12,
+      "status": "OPTIMAL",
+      "wall": 0.0011634999536909163
+    },
+    {
+      "seed": 1,
+      "n": 5,
+      "memory_limit": 29,
+      "independent_minimum_peak": 30,
+      "status": "INFEASIBLE",
+      "wall": 0.0004940999788232148
+    },
+    {
+      "seed": 1,
+      "n": 5,
+      "memory_limit": 30,
+      "independent_minimum_peak": 30,
+      "status": "OPTIMAL",
+      "wall": 0.0010406000073999166
+    },
+    {
+      "seed": 1,
+      "n": 5,
+      "memory_limit": 35,
+      "independent_minimum_peak": 30,
+      "status": "OPTIMAL",
+      "wall": 0.004525700001977384
+    },
+    {
+      "seed": 2,
+      "n": 6,
+      "memory_limit": 36,
+      "independent_minimum_peak": 37,
+      "status": "INFEASIBLE",
+      "wall": 0.00037949997931718826
+    },
+    {
+      "seed": 2,
+      "n": 6,
+      "memory_limit": 37,
+      "independent_minimum_peak": 37,
+      "status": "OPTIMAL",
+      "wall": 0.005072599975392222
+    },
+    {
+      "seed": 2,
+      "n": 6,
+      "memory_limit": 42,
+      "independent_minimum_peak": 37,
+      "status": "OPTIMAL",
+      "wall": 0.005023600009735674
+    },
+    {
+      "seed": 3,
+      "n": 7,
+      "memory_limit": 43,
+      "independent_minimum_peak": 44,
+      "status": "INFEASIBLE",
+      "wall": 0.0005871000466868281
+    },
+    {
+      "seed": 3,
+      "n": 7,
+      "memory_limit": 44,
+      "independent_minimum_peak": 44,
+      "status": "OPTIMAL",
+      "wall": 0.004813099978491664
+    },
+    {
+      "seed": 3,
+      "n": 7,
+      "memory_limit": 49,
+      "independent_minimum_peak": 44,
+      "status": "OPTIMAL",
+      "wall": 0.005721900030039251
+    },
+    {
+      "seed": 4,
+      "n": 8,
+      "memory_limit": 45,
+      "independent_minimum_peak": 46,
+      "status": "INFEASIBLE",
+      "wall": 0.0003554000286385417
+    },
+    {
+      "seed": 4,
+      "n": 8,
+      "memory_limit": 46,
+      "independent_minimum_peak": 46,
+      "status": "OPTIMAL",
+      "wall": 0.002239900000859052
+    },
+    {
+      "seed": 4,
+      "n": 8,
+      "memory_limit": 51,
+      "independent_minimum_peak": 46,
+      "status": "OPTIMAL",
+      "wall": 0.005335800000466406
+    },
+    {
+      "seed": 5,
+      "n": 4,
+      "memory_limit": 10,
+      "independent_minimum_peak": 11,
+      "status": "INFEASIBLE",
+      "wall": 0.00010549998842179775
+    },
+    {
+      "seed": 5,
+      "n": 4,
+      "memory_limit": 11,
+      "independent_minimum_peak": 11,
+      "status": "OPTIMAL",
+      "wall": 0.003008600033354014
+    },
+    {
+      "seed": 5,
+      "n": 4,
+      "memory_limit": 16,
+      "independent_minimum_peak": 11,
+      "status": "OPTIMAL",
+      "wall": 0.002771100029349327
+    },
+    {
+      "seed": 6,
+      "n": 5,
+      "memory_limit": 29,
+      "independent_minimum_peak": 30,
+      "status": "INFEASIBLE",
+      "wall": 0.00037619995418936014
+    },
+    {
+      "seed": 6,
+      "n": 5,
+      "memory_limit": 30,
+      "independent_minimum_peak": 30,
+      "status": "OPTIMAL",
+      "wall": 0.0010886999662034214
+    },
+    {
+      "seed": 6,
+      "n": 5,
+      "memory_limit": 35,
+      "independent_minimum_peak": 30,
+      "status": "OPTIMAL",
+      "wall": 0.005321800010278821
+    },
+    {
+      "seed": 7,
+      "n": 6,
+      "memory_limit": 66,
+      "independent_minimum_peak": 67,
+      "status": "INFEASIBLE",
+      "wall": 0.0002725999802350998
+    },
+    {
+      "seed": 7,
+      "n": 6,
+      "memory_limit": 67,
+      "independent_minimum_peak": 67,
+      "status": "OPTIMAL",
+      "wall": 0.004027099988888949
+    },
+    {
+      "seed": 7,
+      "n": 6,
+      "memory_limit": 72,
+      "independent_minimum_peak": 67,
+      "status": "OPTIMAL",
+      "wall": 0.00514109997311607
+    },
+    {
+      "seed": 8,
+      "n": 7,
+      "memory_limit": 25,
+      "independent_minimum_peak": 26,
+      "status": "INFEASIBLE",
+      "wall": 0.0004391000256873667
+    },
+    {
+      "seed": 8,
+      "n": 7,
+      "memory_limit": 26,
+      "independent_minimum_peak": 26,
+      "status": "OPTIMAL",
+      "wall": 0.003474900033324957
+    },
+    {
+      "seed": 8,
+      "n": 7,
+      "memory_limit": 31,
+      "independent_minimum_peak": 26,
+      "status": "OPTIMAL",
+      "wall": 0.005198200000450015
+    },
+    {
+      "seed": 9,
+      "n": 8,
+      "memory_limit": 40,
+      "independent_minimum_peak": 41,
+      "status": "INFEASIBLE",
+      "wall": 0.0016206000000238419
+    },
+    {
+      "seed": 9,
+      "n": 8,
+      "memory_limit": 41,
+      "independent_minimum_peak": 41,
+      "status": "OPTIMAL",
+      "wall": 0.008566199976485223
+    },
+    {
+      "seed": 9,
+      "n": 8,
+      "memory_limit": 46,
+      "independent_minimum_peak": 41,
+      "status": "OPTIMAL",
+      "wall": 0.010200000018812716
+    },
+    {
+      "seed": 10,
+      "n": 4,
+      "memory_limit": 8,
+      "independent_minimum_peak": 9,
+      "status": "INFEASIBLE",
+      "wall": 0.000146100006531924
+    },
+    {
+      "seed": 10,
+      "n": 4,
+      "memory_limit": 9,
+      "independent_minimum_peak": 9,
+      "status": "OPTIMAL",
+      "wall": 0.0038482999661937356
+    },
+    {
+      "seed": 10,
+      "n": 4,
+      "memory_limit": 14,
+      "independent_minimum_peak": 9,
+      "status": "OPTIMAL",
+      "wall": 0.003951899998355657
+    },
+    {
+      "seed": 11,
+      "n": 5,
+      "memory_limit": 33,
+      "independent_minimum_peak": 34,
+      "status": "INFEASIBLE",
+      "wall": 0.00028119998751208186
+    },
+    {
+      "seed": 11,
+      "n": 5,
+      "memory_limit": 34,
+      "independent_minimum_peak": 34,
+      "status": "OPTIMAL",
+      "wall": 0.003520500031299889
+    },
+    {
+      "seed": 11,
+      "n": 5,
+      "memory_limit": 39,
+      "independent_minimum_peak": 34,
+      "status": "OPTIMAL",
+      "wall": 0.004873499972745776
+    },
+    {
+      "seed": 12,
+      "n": 6,
+      "memory_limit": 43,
+      "independent_minimum_peak": 44,
+      "status": "INFEASIBLE",
+      "wall": 0.0011852000025101006
+    },
+    {
+      "seed": 12,
+      "n": 6,
+      "memory_limit": 44,
+      "independent_minimum_peak": 44,
+      "status": "OPTIMAL",
+      "wall": 0.006535099993925542
+    },
+    {
+      "seed": 12,
+      "n": 6,
+      "memory_limit": 49,
+      "independent_minimum_peak": 44,
+      "status": "OPTIMAL",
+      "wall": 0.005613199959043413
+    },
+    {
+      "seed": 13,
+      "n": 7,
+      "memory_limit": 38,
+      "independent_minimum_peak": 39,
+      "status": "INFEASIBLE",
+      "wall": 0.001360399997793138
+    },
+    {
+      "seed": 13,
+      "n": 7,
+      "memory_limit": 39,
+      "independent_minimum_peak": 39,
+      "status": "OPTIMAL",
+      "wall": 0.0044071999727748334
+    },
+    {
+      "seed": 13,
+      "n": 7,
+      "memory_limit": 44,
+      "independent_minimum_peak": 39,
+      "status": "OPTIMAL",
+      "wall": 0.007409700017888099
+    },
+    {
+      "seed": 14,
+      "n": 8,
+      "memory_limit": 34,
+      "independent_minimum_peak": 35,
+      "status": "INFEASIBLE",
+      "wall": 0.0017493999912403524
+    },
+    {
+      "seed": 14,
+      "n": 8,
+      "memory_limit": 35,
+      "independent_minimum_peak": 35,
+      "status": "OPTIMAL",
+      "wall": 0.004433900001458824
+    },
+    {
+      "seed": 14,
+      "n": 8,
+      "memory_limit": 40,
+      "independent_minimum_peak": 35,
+      "status": "OPTIMAL",
+      "wall": 0.006184800004120916
+    },
+    {
+      "seed": 15,
+      "n": 4,
+      "memory_limit": 7,
+      "independent_minimum_peak": 8,
+      "status": "INFEASIBLE",
+      "wall": 0.00010140001541003585
+    },
+    {
+      "seed": 15,
+      "n": 4,
+      "memory_limit": 8,
+      "independent_minimum_peak": 8,
+      "status": "OPTIMAL",
+      "wall": 0.0034241999965161085
+    },
+    {
+      "seed": 15,
+      "n": 4,
+      "memory_limit": 13,
+      "independent_minimum_peak": 8,
+      "status": "OPTIMAL",
+      "wall": 0.003426100010983646
+    },
+    {
+      "seed": 16,
+      "n": 5,
+      "memory_limit": 28,
+      "independent_minimum_peak": 29,
+      "status": "INFEASIBLE",
+      "wall": 0.001069399993866682
+    },
+    {
+      "seed": 16,
+      "n": 5,
+      "memory_limit": 29,
+      "independent_minimum_peak": 29,
+      "status": "OPTIMAL",
+      "wall": 0.0038557000225409865
+    },
+    {
+      "seed": 16,
+      "n": 5,
+      "memory_limit": 34,
+      "independent_minimum_peak": 29,
+      "status": "OPTIMAL",
+      "wall": 0.0063655999838374555
+    },
+    {
+      "seed": 17,
+      "n": 6,
+      "memory_limit": 46,
+      "independent_minimum_peak": 47,
+      "status": "INFEASIBLE",
+      "wall": 0.0014619000139646232
+    },
+    {
+      "seed": 17,
+      "n": 6,
+      "memory_limit": 47,
+      "independent_minimum_peak": 47,
+      "status": "OPTIMAL",
+      "wall": 0.0019922000356018543
+    },
+    {
+      "seed": 17,
+      "n": 6,
+      "memory_limit": 52,
+      "independent_minimum_peak": 47,
+      "status": "OPTIMAL",
+      "wall": 0.0018808000022545457
+    },
+    {
+      "seed": 18,
+      "n": 7,
+      "memory_limit": 49,
+      "independent_minimum_peak": 50,
+      "status": "INFEASIBLE",
+      "wall": 0.001416300015989691
+    },
+    {
+      "seed": 18,
+      "n": 7,
+      "memory_limit": 50,
+      "independent_minimum_peak": 50,
+      "status": "OPTIMAL",
+      "wall": 0.006630499963648617
+    },
+    {
+      "seed": 18,
+      "n": 7,
+      "memory_limit": 55,
+      "independent_minimum_peak": 50,
+      "status": "OPTIMAL",
+      "wall": 0.007067999977152795
+    },
+    {
+      "seed": 19,
+      "n": 8,
+      "memory_limit": 40,
+      "independent_minimum_peak": 41,
+      "status": "INFEASIBLE",
+      "wall": 0.0018321999814361334
+    },
+    {
+      "seed": 19,
+      "n": 8,
+      "memory_limit": 41,
+      "independent_minimum_peak": 41,
+      "status": "OPTIMAL",
+      "wall": 0.006720100005622953
+    },
+    {
+      "seed": 19,
+      "n": 8,
+      "memory_limit": 46,
+      "independent_minimum_peak": 41,
+      "status": "OPTIMAL",
+      "wall": 0.01274779997766018
+    },
+    {
+      "seed": 20,
+      "n": 4,
+      "memory_limit": 8,
+      "independent_minimum_peak": 9,
+      "status": "INFEASIBLE",
+      "wall": 0.00014430005103349686
+    },
+    {
+      "seed": 20,
+      "n": 4,
+      "memory_limit": 9,
+      "independent_minimum_peak": 9,
+      "status": "OPTIMAL",
+      "wall": 0.003882799996063113
+    },
+    {
+      "seed": 20,
+      "n": 4,
+      "memory_limit": 14,
+      "independent_minimum_peak": 9,
+      "status": "OPTIMAL",
+      "wall": 0.0044932999880984426
+    },
+    {
+      "seed": 21,
+      "n": 5,
+      "memory_limit": 41,
+      "independent_minimum_peak": 42,
+      "status": "INFEASIBLE",
+      "wall": 0.0004915000172331929
+    },
+    {
+      "seed": 21,
+      "n": 5,
+      "memory_limit": 42,
+      "independent_minimum_peak": 42,
+      "status": "OPTIMAL",
+      "wall": 0.004822799994144589
+    },
+    {
+      "seed": 21,
+      "n": 5,
+      "memory_limit": 47,
+      "independent_minimum_peak": 42,
+      "status": "OPTIMAL",
+      "wall": 0.0049659000360406935
+    },
+    {
+      "seed": 22,
+      "n": 6,
+      "memory_limit": 50,
+      "independent_minimum_peak": 51,
+      "status": "INFEASIBLE",
+      "wall": 0.001352099992800504
+    },
+    {
+      "seed": 22,
+      "n": 6,
+      "memory_limit": 51,
+      "independent_minimum_peak": 51,
+      "status": "OPTIMAL",
+      "wall": 0.002012500015553087
+    },
+    {
+      "seed": 22,
+      "n": 6,
+      "memory_limit": 56,
+      "independent_minimum_peak": 51,
+      "status": "OPTIMAL",
+      "wall": 0.0015791000332683325
+    },
+    {
+      "seed": 23,
+      "n": 7,
+      "memory_limit": 28,
+      "independent_minimum_peak": 29,
+      "status": "INFEASIBLE",
+      "wall": 0.0014429999864660203
+    },
+    {
+      "seed": 23,
+      "n": 7,
+      "memory_limit": 29,
+      "independent_minimum_peak": 29,
+      "status": "OPTIMAL",
+      "wall": 0.002356800017878413
+    },
+    {
+      "seed": 23,
+      "n": 7,
+      "memory_limit": 34,
+      "independent_minimum_peak": 29,
+      "status": "OPTIMAL",
+      "wall": 0.006084199994802475
+    },
+    {
+      "seed": 24,
+      "n": 8,
+      "memory_limit": 38,
+      "independent_minimum_peak": 39,
+      "status": "INFEASIBLE",
+      "wall": 0.00219580001430586
+    },
+    {
+      "seed": 24,
+      "n": 8,
+      "memory_limit": 39,
+      "independent_minimum_peak": 39,
+      "status": "OPTIMAL",
+      "wall": 0.006045499991159886
+    },
+    {
+      "seed": 24,
+      "n": 8,
+      "memory_limit": 44,
+      "independent_minimum_peak": 39,
+      "status": "OPTIMAL",
+      "wall": 0.012615400017239153
+    },
+    {
+      "seed": 25,
+      "n": 4,
+      "memory_limit": 11,
+      "independent_minimum_peak": 12,
+      "status": "INFEASIBLE",
+      "wall": 0.00019340001745149493
+    },
+    {
+      "seed": 25,
+      "n": 4,
+      "memory_limit": 12,
+      "independent_minimum_peak": 12,
+      "status": "OPTIMAL",
+      "wall": 0.0015118999872356653
+    },
+    {
+      "seed": 25,
+      "n": 4,
+      "memory_limit": 17,
+      "independent_minimum_peak": 12,
+      "status": "OPTIMAL",
+      "wall": 0.0006305999704636633
+    },
+    {
+      "seed": 26,
+      "n": 5,
+      "memory_limit": 22,
+      "independent_minimum_peak": 23,
+      "status": "INFEASIBLE",
+      "wall": 0.0007310000364668667
+    },
+    {
+      "seed": 26,
+      "n": 5,
+      "memory_limit": 23,
+      "independent_minimum_peak": 23,
+      "status": "OPTIMAL",
+      "wall": 0.003719499974977225
+    },
+    {
+      "seed": 26,
+      "n": 5,
+      "memory_limit": 28,
+      "independent_minimum_peak": 23,
+      "status": "OPTIMAL",
+      "wall": 0.004419400007463992
+    },
+    {
+      "seed": 27,
+      "n": 6,
+      "memory_limit": 26,
+      "independent_minimum_peak": 27,
+      "status": "INFEASIBLE",
+      "wall": 0.00029939995147287846
+    },
+    {
+      "seed": 27,
+      "n": 6,
+      "memory_limit": 27,
+      "independent_minimum_peak": 27,
+      "status": "OPTIMAL",
+      "wall": 0.0036853000055998564
+    },
+    {
+      "seed": 27,
+      "n": 6,
+      "memory_limit": 32,
+      "independent_minimum_peak": 27,
+      "status": "OPTIMAL",
+      "wall": 0.006505900004412979
+    },
+    {
+      "seed": 28,
+      "n": 7,
+      "memory_limit": 48,
+      "independent_minimum_peak": 49,
+      "status": "INFEASIBLE",
+      "wall": 0.00197789998492226
+    },
+    {
+      "seed": 28,
+      "n": 7,
+      "memory_limit": 49,
+      "independent_minimum_peak": 49,
+      "status": "OPTIMAL",
+      "wall": 0.004801700008101761
+    },
+    {
+      "seed": 28,
+      "n": 7,
+      "memory_limit": 54,
+      "independent_minimum_peak": 49,
+      "status": "OPTIMAL",
+      "wall": 0.0077597000054083765
+    },
+    {
+      "seed": 29,
+      "n": 8,
+      "memory_limit": 71,
+      "independent_minimum_peak": 72,
+      "status": "INFEASIBLE",
+      "wall": 0.001921400020364672
+    },
+    {
+      "seed": 29,
+      "n": 8,
+      "memory_limit": 72,
+      "independent_minimum_peak": 72,
+      "status": "OPTIMAL",
+      "wall": 0.007135200023185462
+    },
+    {
+      "seed": 29,
+      "n": 8,
+      "memory_limit": 77,
+      "independent_minimum_peak": 72,
+      "status": "OPTIMAL",
+      "wall": 0.005548799992538989
+    },
+    {
+      "seed": 30,
+      "n": 4,
+      "memory_limit": 11,
+      "independent_minimum_peak": 12,
+      "status": "INFEASIBLE",
+      "wall": 0.00018239999189972878
+    },
+    {
+      "seed": 30,
+      "n": 4,
+      "memory_limit": 12,
+      "independent_minimum_peak": 12,
+      "status": "OPTIMAL",
+      "wall": 0.0024145999923348427
+    },
+    {
+      "seed": 30,
+      "n": 4,
+      "memory_limit": 17,
+      "independent_minimum_peak": 12,
+      "status": "OPTIMAL",
+      "wall": 0.0018550999811850488
+    },
+    {
+      "seed": 31,
+      "n": 5,
+      "memory_limit": 30,
+      "independent_minimum_peak": 31,
+      "status": "INFEASIBLE",
+      "wall": 0.0004444999503903091
+    },
+    {
+      "seed": 31,
+      "n": 5,
+      "memory_limit": 31,
+      "independent_minimum_peak": 31,
+      "status": "OPTIMAL",
+      "wall": 0.0031172999879345298
+    },
+    {
+      "seed": 31,
+      "n": 5,
+      "memory_limit": 36,
+      "independent_minimum_peak": 31,
+      "status": "OPTIMAL",
+      "wall": 0.0026458000065758824
+    }
+  ]
+}

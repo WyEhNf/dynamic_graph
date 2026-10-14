@@ -1,0 +1,435 @@
+{
+  "summary": {
+    "degree11": 1721,
+    "eligible": 35
+  },
+  "cases": [
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270617",
+      "n": 532,
+      "anchors": 188,
+      "threshold": 20,
+      "degree11": 73
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270618",
+      "n": 511,
+      "anchors": 192,
+      "threshold": 20,
+      "degree11": 19
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "n": 512,
+      "anchors": 188,
+      "threshold": 20,
+      "degree11": 4
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret0_seed20299417",
+      "n": 2125,
+      "anchors": 766,
+      "threshold": 20,
+      "degree11": 249
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret1_seed20299418",
+      "n": 2139,
+      "anchors": 778,
+      "threshold": 20,
+      "degree11": 69
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "n": 2077,
+      "anchors": 758,
+      "threshold": 20,
+      "degree11": 70
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+      "n": 2085,
+      "anchors": 764,
+      "threshold": 20,
+      "degree11": 47
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "n": 131,
+      "anchors": 43,
+      "threshold": 16,
+      "degree11": 4
+    },
+    {
+      "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+      "n": 129,
+      "anchors": 47,
+      "threshold": 20,
+      "degree11": 7
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280617",
+      "n": 522,
+      "anchors": 198,
+      "threshold": 20,
+      "degree11": 59
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280618",
+      "n": 525,
+      "anchors": 188,
+      "threshold": 20,
+      "degree11": 16
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret0_seed20309417",
+      "n": 2124,
+      "anchors": 765,
+      "threshold": 20,
+      "degree11": 263
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret1_seed20309418",
+      "n": 2146,
+      "anchors": 776,
+      "threshold": 20,
+      "degree11": 38
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+      "n": 2103,
+      "anchors": 752,
+      "threshold": 20,
+      "degree11": 65
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "n": 2104,
+      "anchors": 750,
+      "threshold": 20,
+      "degree11": 32
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "n": 71,
+      "anchors": 21,
+      "threshold": 20,
+      "degree11": 0
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "n": 71,
+      "anchors": 21,
+      "threshold": 20,
+      "degree11": 0
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+      "n": 536,
+      "anchors": 181,
+      "threshold": 20,
+      "degree11": 31
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+      "n": 536,
+      "anchors": 181,
+      "threshold": 20,
+      "degree11": 31
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+      "n": 508,
+      "anchors": 177,
+      "threshold": 16,
+      "degree11": 15
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+      "n": 539,
+      "anchors": 201,
+      "threshold": 20,
+      "degree11": 58
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+      "n": 539,
+      "anchors": 201,
+      "threshold": 20,
+      "degree11": 58
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+      "n": 563,
+      "anchors": 213,
+      "threshold": 20,
+      "degree11": 2
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+      "n": 563,
+      "anchors": 213,
+      "threshold": 20,
+      "degree11": 2
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+      "n": 172,
+      "anchors": 62,
+      "threshold": 16,
+      "degree11": 0
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+      "n": 516,
+      "anchors": 186,
+      "threshold": 20,
+      "degree11": 28
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+      "n": 516,
+      "anchors": 186,
+      "threshold": 20,
+      "degree11": 28
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+      "n": 512,
+      "anchors": 182,
+      "threshold": 20,
+      "degree11": 24
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+      "n": 512,
+      "anchors": 182,
+      "threshold": 20,
+      "degree11": 24
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+      "n": 547,
+      "anchors": 201,
+      "threshold": 20,
+      "degree11": 47
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "n": 124,
+      "anchors": 0,
+      "threshold": 1056,
+      "degree11": 0
+    },
+    {
+      "name": "blind_irregular_local_k64_ret1_seed20287427",
+      "n": 348,
+      "anchors": 122,
+      "threshold": 20,
+      "degree11": 8
+    },
+    {
+      "name": "blind_irregular_dense_k64_ret1_seed20287429",
+      "n": 353,
+      "anchors": 121,
+      "threshold": 20,
+      "degree11": 3
+    },
+    {
+      "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+      "n": 362,
+      "anchors": 137,
+      "threshold": 16,
+      "degree11": 26
+    },
+    {
+      "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+      "n": 353,
+      "anchors": 129,
+      "threshold": 20,
+      "degree11": 16
+    },
+    {
+      "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+      "n": 361,
+      "anchors": 134,
+      "threshold": 20,
+      "degree11": 1
+    },
+    {
+      "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+      "n": 651,
+      "anchors": 0,
+      "threshold": 936,
+      "degree11": 0
+    },
+    {
+      "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+      "n": 639,
+      "anchors": 0,
+      "threshold": 932,
+      "degree11": 0
+    },
+    {
+      "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+      "n": 638,
+      "anchors": 0,
+      "threshold": 996,
+      "degree11": 0
+    },
+    {
+      "name": "blind_irregular_local_k128_ret0_seed20293826",
+      "n": 676,
+      "anchors": 241,
+      "threshold": 20,
+      "degree11": 20
+    },
+    {
+      "name": "blind_irregular_local_k128_ret1_seed20293827",
+      "n": 712,
+      "anchors": 265,
+      "threshold": 20,
+      "degree11": 17
+    },
+    {
+      "name": "blind_irregular_dense_k128_ret0_seed20293828",
+      "n": 705,
+      "anchors": 266,
+      "threshold": 20,
+      "degree11": 67
+    },
+    {
+      "name": "blind_irregular_dense_k128_ret1_seed20293829",
+      "n": 704,
+      "anchors": 251,
+      "threshold": 16,
+      "degree11": 44
+    },
+    {
+      "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+      "n": 695,
+      "anchors": 259,
+      "threshold": 20,
+      "degree11": 52
+    },
+    {
+      "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+      "n": 715,
+      "anchors": 270,
+      "threshold": 20,
+      "degree11": 14
+    },
+    {
+      "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+      "n": 704,
+      "anchors": 250,
+      "threshold": 20,
+      "degree11": 71
+    },
+    {
+      "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+      "n": 700,
+      "anchors": 249,
+      "threshold": 20,
+      "degree11": 19
+    },
+    {
+      "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+      "n": 1270,
+      "anchors": 0,
+      "threshold": 960,
+      "degree11": 0
+    },
+    {
+      "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+      "n": 1284,
+      "anchors": 0,
+      "threshold": 1008,
+      "degree11": 0
+    },
+    {
+      "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+      "n": 1265,
+      "anchors": 0,
+      "threshold": 976,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+      "n": 781,
+      "anchors": 0,
+      "threshold": 932,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+      "n": 798,
+      "anchors": 0,
+      "threshold": 976,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+      "n": 814,
+      "anchors": 0,
+      "threshold": 980,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+      "n": 1576,
+      "anchors": 0,
+      "threshold": 984,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+      "n": 1628,
+      "anchors": 0,
+      "threshold": 956,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+      "n": 1605,
+      "anchors": 0,
+      "threshold": 972,
+      "degree11": 0
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+      "n": 1659,
+      "anchors": 0,
+      "threshold": 984,
+      "degree11": 0
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "n": 190,
+      "anchors": 0,
+      "threshold": 812,
+      "degree11": 0
+    },
+    {
+      "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+      "n": 766,
+      "anchors": 0,
+      "threshold": 948,
+      "degree11": 0
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "n": 140,
+      "anchors": 0,
+      "threshold": 928,
+      "degree11": 0
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+      "n": 182,
+      "anchors": 0,
+      "threshold": 1008,
+      "degree11": 0
+    }
+  ]
+}

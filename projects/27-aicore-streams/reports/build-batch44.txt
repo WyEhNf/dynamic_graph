@@ -1,0 +1,32 @@
+-- Configuring done (0.1s)
+-- Generating done (0.6s)
+-- Build files have been written to: F:/Hackathon/projects/27-aicore-streams/build
+[  3%] Building CXX object CMakeFiles/solution.dir/solution/solution.cpp.obj
+[ 11%] Built target simulator
+[ 15%] Building CXX object CMakeFiles/assignment_tests.dir/tests/test_assignment.cpp.obj
+[ 19%] Linking CXX static library libsolution.a
+[ 23%] Linking CXX executable assignment_tests.exe
+[ 23%] Built target solution
+[ 26%] Building CXX object CMakeFiles/serial_frontier_tests.dir/tests/test_serial_frontier.cpp.obj
+[ 26%] Built target assignment_tests
+[ 30%] Building CXX object CMakeFiles/numeric_boundary_tests.dir/tests/test_numeric.cpp.obj
+[ 34%] Linking CXX executable serial_frontier_tests.exe
+[ 34%] Built target serial_frontier_tests
+[ 38%] Building CXX object CMakeFiles/numeric_priority_tests.dir/tests/test_numeric_priority.cpp.obj
+[ 42%] Linking CXX executable numeric_boundary_tests.exe
+[ 42%] Built target numeric_boundary_tests
+[ 46%] Building CXX object CMakeFiles/shallow_profile_tests.dir/tests/test_shallow.cpp.obj
+[ 50%] Linking CXX executable numeric_priority_tests.exe
+[ 50%] Built target numeric_priority_tests
+[ 57%] Built target candidate_search
+[ 61%] Linking CXX executable aicore_bench.exe
+[ 65%] Built target aicore_bench
+[ 73%] Built target aicore_oracle
+[ 76%] Linking CXX executable simulator_tests.exe
+[ 80%] Built target simulator_tests
+[ 84%] Linking CXX executable model_tests.exe
+[ 88%] Linking CXX executable shallow_profile_tests.exe
+[ 92%] Built target model_tests
+[ 92%] Built target shallow_profile_tests
+[ 96%] Linking CXX executable aicore_demo.exe
+[100%] Built target aicore_demo

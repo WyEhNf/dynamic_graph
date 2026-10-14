@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791777663.9876027,
+  "report_sha256": "67d52c60fb716096422caf5adfce274cb32cece338e648e9a4c57afc032b1f80",
+  "original_inputs": 336,
+  "legal_subset": 272,
+  "retained_statuses": {
+    "proven_infeasible_under_model": 47,
+    "verified": 272,
+    "scheduling_failure": 8,
+    "budget_exhausted": 9
+  },
+  "current_COPY": 192902,
+  "families": 21,
+  "legal_necessary_mean_output_pct": 10.285229311249013,
+  "top_families": [
+    {
+      "family": "padded_tree",
+      "reduction_upper_bound_pp": 0.5989667334232964,
+      "COPY": 3892
+    },
+    {
+      "family": "ragged_tree",
+      "reduction_upper_bound_pp": 0.5743088770555123,
+      "COPY": 4039
+    },
+    {
+      "family": "balanced_tree",
+      "reduction_upper_bound_pp": 0.4296214913823676,
+      "COPY": 2195
+    },
+    {
+      "family": "cross_group_shared",
+      "reduction_upper_bound_pp": 0.3697894439986834,
+      "COPY": 9755
+    },
+    {
+      "family": "dot_product_many",
+      "reduction_upper_bound_pp": 0.3099044227058222,
+      "COPY": 2876
+    },
+    {
+      "family": "stencil_1d",
+      "reduction_upper_bound_pp": 0.2891852248324874,
+      "COPY": 1356
+    }
+  ],
+  "scope": "All saved272 outputs COPY origins independently decoded, all336 status/current lower-bound joins and21family sums rechecked. Necessary lower10.285% only applies this self-generated equal-weight strict original-node/COPY-only subset; no official grade/distribution or reachable quality claim. New32window design/algorithm not accepted here."
+}

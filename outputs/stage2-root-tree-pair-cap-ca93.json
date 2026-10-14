@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791775547.894666,
+  "report_sha256": "dac78f9a55b6e5d456e2663b5727f48e59ba960122ff1cde676ffee42358cd5f",
+  "actual_original_inputs": 1,
+  "actual_complete_proposals": 119,
+  "actual_pairs": 19,
+  "processed_states": 10722,
+  "before_copies": 23,
+  "after_copies": 22,
+  "historical_dp_copies": 21,
+  "relative_DP_regression_retained": true,
+  "actual_full_output_replays": 122,
+  "synthetic_witness_replays": 98,
+  "total_full_replays": 220,
+  "immutable_labels_replayed": 10727,
+  "actual_open_prefixes": 5,
+  "actual_unfinished_prefixes": 2,
+  "root_contract_tests": 6,
+  "root_contract_exit": 0,
+  "wrapper_diff_hunks": 3,
+  "outlet_limited_parents": [
+    61,
+    59
+  ],
+  "scope": "Only wrapper dispatch/statistics changed. All119 real proposals+baseline/best/oldDP and98 clearly synthetic witnesses independently replayed; all10727 real labels/5OPEN/2unfinished advanced from original physical prefix. Actual ca93 improves23to22, remains worse than old21, all19pairs tried and cap partial retained. No336/default/officialLevel or timing speedup claim."
+}

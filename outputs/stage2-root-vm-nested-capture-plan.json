@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791771370.0370278,
+  "capture_plan_sha256": "a853c83a17aef8f77617d6a06f468bc86573ddc4556e95ee7dd4c0ce6e367059",
+  "retained_source_files": 194,
+  "first_compile_tool_session": 71641,
+  "first_compile_tool_exit": 1,
+  "first_compile_process_exit": 4294967295,
+  "original_VM_test_executions": 0,
+  "second_attempt_executions": 0,
+  "scope": "Only file stdout/stderr capture replaces undrained PIPE. Original resource method/gates/candidate/gold/ABI/flags retained; sole command change output filename. First owned compiler blocked and was controlled-terminated; saved stderr is only bytes written before termination, not natural complete diagnostics. Authorizes second isolated compile/small tests, no Runtime/largeN/default/performance."
+}

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791713747.8213482,
+  "suites": {
+    "r136-lifetime-state-oracle": {
+      "inputs": 120,
+      "statuses": {
+        "complete_all_reachable_states": 120
+      },
+      "finite_states": 29912,
+      "positive_floor_states": 12242,
+      "dead_states": 0,
+      "contradictions": 0
+    },
+    "r137-lifetime-negative-state": {
+      "inputs": 16,
+      "statuses": {
+        "complete_all_reachable_states": 4,
+        "closed_identity_infeasible": 12
+      },
+      "finite_states": 42832,
+      "positive_floor_states": 22272,
+      "dead_states": 1344,
+      "contradictions": 0
+    }
+  },
+  "evidence": {
+    "projects/18-isa-scheduler/experiments/r136-lifetime-state-oracle/report.json": "936988b76f116e75e3e49812c501e6c72ee3fc50eb009eb915e3867a76c10d47",
+    "projects/18-isa-scheduler/experiments/r136-lifetime-state-oracle/inputs.jsonl": "2e3cec35dbd30fdace29065335946fae3ccb125c5568d2efa38fd7a43f7c6539",
+    "projects/18-isa-scheduler/experiments/r137-lifetime-negative-state/report.json": "f6f3dc4866af4c29eb40ac609e965c0a3478d44f3e165c35e239414983916b85",
+    "projects/18-isa-scheduler/experiments/r137-lifetime-negative-state/inputs.jsonl": "b2d82e8ca7e2e6d0007dab00452cdbd71c61eeb1ba43465c5bae667fa7b21bc7"
+  },
+  "oracle_source_sha256": "dd132ce576537c2833c4870bd196e8ec0d9e68c5d72bdf04e1c11bfafe914fea",
+  "scope": "Actual oracle reexecution with independently constructed raw ancestor sets, consumer cones, strict GET cores and replacement floor arithmetic. All finite remaining states compared to reverse exact COPY costs; same reviewed physical-age transition oracle reused, not an independent second transition engine.12 closed-infeasible graphs and1344 dead prefixes retained. Necessary remaining-COPY floor only; no real corpus quality or official Level result."
+}

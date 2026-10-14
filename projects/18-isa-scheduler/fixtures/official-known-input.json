@@ -1,0 +1,10 @@
+{
+  "block_id": "official-page-known-example",
+  "bit_width": 2,
+  "instructions": [
+    {"id": 0, "op": "GET", "reg": "r1"},
+    {"id": 1, "op": "GET", "reg": "r2"},
+    {"id": 2, "op": "MULW", "inputs": ["t#1", "t#2"]}
+  ]
+}
+

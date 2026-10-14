@@ -1,0 +1,59 @@
+{
+  "input_sha256": "0af6e709d8c46fbb1252a81158ea8193a3adb3fd0dae9a308f99ea9f861b968e",
+  "original_nodes": 1024,
+  "window": 8,
+  "actual_copies": 1573,
+  "copies_by_op": {
+    "GET": 1573,
+    "ADD": 0,
+    "MULW": 0
+  },
+  "copies_by_identity": [
+    {
+      "original_index": 1,
+      "op": "GET",
+      "reg": "common1",
+      "copies": 323,
+      "direct_users": 218,
+      "birth_output_slot": 0
+    },
+    {
+      "original_index": 3,
+      "op": "GET",
+      "reg": "common3",
+      "copies": 318,
+      "direct_users": 103,
+      "birth_output_slot": 36
+    },
+    {
+      "original_index": 4,
+      "op": "GET",
+      "reg": "common4",
+      "copies": 318,
+      "direct_users": 207,
+      "birth_output_slot": 47
+    },
+    {
+      "original_index": 0,
+      "op": "GET",
+      "reg": "common0",
+      "copies": 308,
+      "direct_users": 298,
+      "birth_output_slot": 105
+    },
+    {
+      "original_index": 2,
+      "op": "GET",
+      "reg": "common2",
+      "copies": 306,
+      "direct_users": 167,
+      "birth_output_slot": 29
+    }
+  ],
+  "evidence": {
+    "inputs.jsonl": "7252b7ccaab17d798317ec5372aa7ea872978fd0f1d00d7033844f85d31b1c11",
+    "optimized_outputs.jsonl": "3f0e449213417fdeb3589a4eb4207b89c22dbd926d1874cdee4f148863cd5603",
+    "original_orders.jsonl": "4e3a5496fc35d27a8b6776897a82095e1057ffd44f349e140dc2b351927ae947"
+  },
+  "scope": "Static attribution through actual physical output slots and original identity order. No new solver output, lowerbound, optimum, or official Level claim."
+}

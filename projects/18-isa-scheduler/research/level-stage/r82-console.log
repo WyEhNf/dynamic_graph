@@ -1,0 +1,11 @@
+{"progress": 32, "total": 336, "elapsed_s": 8.702624999976251}
+{"progress": 64, "total": 336, "elapsed_s": 20.449464799952693}
+{"progress": 96, "total": 336, "elapsed_s": 25.96638489997713}
+{"progress": 128, "total": 336, "elapsed_s": 33.96552119997796}
+{"progress": 160, "total": 336, "elapsed_s": 45.7463058999856}
+{"progress": 192, "total": 336, "elapsed_s": 60.7400053999736}
+{"progress": 224, "total": 336, "elapsed_s": 69.7095051999786}
+{"progress": 256, "total": 336, "elapsed_s": 78.35842629999388}
+{"progress": 288, "total": 336, "elapsed_s": 86.59490419999929}
+{"progress": 320, "total": 336, "elapsed_s": 102.07402739999816}
+{"report": "F:\\Hackathon\\projects\\18-isa-scheduler\\experiments\\r82-reverse-proposals\\report.json", "summary": {"v14_auto": {"attempted": 336, "verified": 271, "statuses": {"budget_exhausted": 10, "proven_infeasible_under_model": 47, "scheduling_failure": 8, "verified": 271}, "total_inserted_copies_successes": 196456, "total_output_count_successes": 547192, "optimizer_ms_all_inputs": {"p50": 34.759400004986674, "p95": 258.8829000014812, "p99": 315.2432999922894}}, "reverse_pressure": {"attempted": 336, "verified": 248, "statuses": {"scheduling_failure": 88, "verified": 248}, "total_inserted_copies_successes": 203435, "total_output_count_successes": 517245, "optimizer_ms_all_inputs": {"p50": 10.918500018306077, "p95": 139.17080004466698, "p99": 206.71759999822825}}, "reverse_cluster": {"attempted": 336, "verified": 232, "statuses": {"budget_exhausted": 1, "scheduling_failure": 103, "verified": 232}, "total_inserted_copies_successes": 198522, "total_output_count_successes": 490394, "optimizer_ms_all_inputs": {"p50": 10.083600005600601, "p95": 179.41680003423244, "p99": 234.0015000081621}}, "reverse_span": {"attempted": 336, "verified": 227, "statuses": {"scheduling_failure": 109, "verified": 227}, "total_inserted_copies_successes": 184109, "total_output_count_successes": 460108, "optimizer_ms_all_inputs": {"p50": 10.735200019553304, "p95": 138.1165999919176, "p99": 192.12829996831715}}}}

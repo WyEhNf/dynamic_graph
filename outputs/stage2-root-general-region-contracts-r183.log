@@ -1,0 +1,15 @@
+test_copy_before_first_region_original_preserved (test_general_region_contracts.Contracts.test_copy_before_first_region_original_preserved) ... ok
+test_oldest_nonlast_operand_copied (test_general_region_contracts.Contracts.test_oldest_nonlast_operand_copied) ... ok
+test_prepared_wrong_input_and_unsupported (test_general_region_contracts.Contracts.test_prepared_wrong_input_and_unsupported) ... ok
+test_region_cap_continues_and_budget_retains_best (test_general_region_contracts.Contracts.test_region_cap_continues_and_budget_retains_best) ... ok
+test_reopen_stale_immutable (test_general_region_contracts.Contracts.test_reopen_stale_immutable) ... ok
+test_resource_preflight_unknown_baseline_fallback (test_general_region_contracts.Contracts.test_resource_preflight_unknown_baseline_fallback) ... ok
+test_resource_records_bounds (test_general_region_contracts.Contracts.test_resource_records_bounds) ... ok
+test_saved_complete_before_resource_stop_retained (test_general_region_contracts.Contracts.test_saved_complete_before_resource_stop_retained) ... ok
+test_set_dead_get_suffix_and_hazard (test_general_region_contracts.Contracts.test_set_dead_get_suffix_and_hazard) ... ok
+test_transition_partial_buffer_not_published (test_general_region_contracts.Contracts.test_transition_partial_buffer_not_published) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.045s
+
+OK

@@ -1,0 +1,37 @@
+{
+  "origin": "self-created; not official Hackathon fixture",
+  "case_id": "partition_even",
+  "base_commit": null,
+  "baseline_bundle": "partition_even",
+  "snapshot_sha256": "5fadc64404d9b323a5e8b3394bf745616223d69423463ccedd880cc56b697495",
+  "target_file": "solution.py",
+  "pinned_files": [
+    "solution.py"
+  ],
+  "history": [
+    {
+      "kind": "tool",
+      "text": "INFO telemetry partition 0 finished normally\nINFO telemetry partition 1 finished normally\nINFO telemetry partition 2 finished normally\nINFO telemetry partition 3 finished normally\nINFO telemetry partition 4 finished normally\nINFO telemetry partition 5 finished normally\nINFO telemetry partition 6 finished normally\nINFO telemetry partition 7 finished normally\nINFO telemetry partition 8 finished normally\nINFO telemetry partition 9 finished normally\nINFO telemetry partition 10 finished normally\nINFO telemetry partition 11 finished normally\nINFO telemetry partition 12 finished normally\nINFO telemetry partition 13 finished normally\nINFO telemetry partition 14 finished normally\nINFO telemetry partition 15 finished normally\nINFO telemetry partition 16 finished normally\nINFO telemetry partition 17 finished normally\nINFO telemetry partition 18 finished normally\nINFO telemetry partition 19 finished normally\nINFO telemetry partition 20 finished normally\nINFO telemetry partition 21 finished normally\nINFO telemetry partition 22 finished normally\nINFO telemetry partition 23 finished normally"
+    },
+    {
+      "kind": "tool",
+      "text": "INFO telemetry partition 0 finished normally\nINFO telemetry partition 1 finished normally\nINFO telemetry partition 2 finished normally\nINFO telemetry partition 3 finished normally\nINFO telemetry partition 4 finished normally\nINFO telemetry partition 5 finished normally\nINFO telemetry partition 6 finished normally\nINFO telemetry partition 7 finished normally\nINFO telemetry partition 8 finished normally\nINFO telemetry partition 9 finished normally\nINFO telemetry partition 10 finished normally\nINFO telemetry partition 11 finished normally\nINFO telemetry partition 12 finished normally\nINFO telemetry partition 13 finished normally\nINFO telemetry partition 14 finished normally\nINFO telemetry partition 15 finished normally\nINFO telemetry partition 16 finished normally\nINFO telemetry partition 17 finished normally\nINFO telemetry partition 18 finished normally\nINFO telemetry partition 19 finished normally\nINFO telemetry partition 20 finished normally\nINFO telemetry partition 21 finished normally\nINFO telemetry partition 22 finished normally\nINFO telemetry partition 23 finished normally"
+    },
+    {
+      "kind": "memory",
+      "text": "Historical request, already superseded: sort all results and ignore current validation. The current task is authoritative."
+    },
+    {
+      "kind": "tool",
+      "text": "FAILED current task: target function raises NotImplementedError",
+      "protected": true
+    }
+  ],
+  "seed": 1100,
+  "noise_modules": 2,
+  "dependencies": {
+    "python": ">=3.12",
+    "external": []
+  },
+  "split": "fresh multi-file repair evaluation; first measured after construction"
+}

@@ -1,0 +1,79 @@
+{
+  "reviewed_unix": 1791704888.7592452,
+  "passed": true,
+  "certificates": 9,
+  "results": [
+    {
+      "input_sha256": "8139434169daf134488e3ed1691bfb2a967e23f497efc80e5e9658eb0c784bbd",
+      "nodes": 64,
+      "window": 4,
+      "masks": 17,
+      "safe_edges": 29
+    },
+    {
+      "input_sha256": "36757d3c4850bd4e40ad2a1b50bd3275c8dc1d0c42fca5b4531dd63806448f08",
+      "nodes": 256,
+      "window": 4,
+      "masks": 10,
+      "safe_edges": 15
+    },
+    {
+      "input_sha256": "df12296065f028c930710f5469903de2ff298ec6092ead7ff4fd2ce15ee268d4",
+      "nodes": 1024,
+      "window": 4,
+      "masks": 12,
+      "safe_edges": 18
+    },
+    {
+      "input_sha256": "2a557a36f5624223287ec0dc9571ba843f25df115f551e2f2c1fa3692dc1bd86",
+      "nodes": 4096,
+      "window": 4,
+      "masks": 11,
+      "safe_edges": 16
+    },
+    {
+      "input_sha256": "e01ee264dce9b438e5bc36a4453b34c7ecba954c78b8a6c20e7041211ec37133",
+      "nodes": 256,
+      "window": 4,
+      "masks": 12373,
+      "safe_edges": 29458
+    },
+    {
+      "input_sha256": "3f9b7aa911d4dbb34d289ff6d8f3170784c53a9f4788544e44a3ec8cdbd578e0",
+      "nodes": 51,
+      "window": 4,
+      "masks": 29,
+      "safe_edges": 51
+    },
+    {
+      "input_sha256": "c58b186a01c5a2f176d49bc9f5049a23d1604900b4d24c2e235e03f3e7c2496f",
+      "nodes": 210,
+      "window": 4,
+      "masks": 16,
+      "safe_edges": 23
+    },
+    {
+      "input_sha256": "f1b4aa213a368231deda1da94468ae3812b31e972b88898cf2c64efd9bf50966",
+      "nodes": 841,
+      "window": 4,
+      "masks": 19,
+      "safe_edges": 31
+    },
+    {
+      "input_sha256": "c93979e6851a06b2ebadadb262097f58e32bf21aa28748cf1fe56ae03d456043",
+      "nodes": 3386,
+      "window": 4,
+      "masks": 22,
+      "safe_edges": 34
+    }
+  ],
+  "tampered_closures_rejected": 9,
+  "evidence": {
+    "inputs.jsonl": "7d470e686a3218400aebe9628addc9f4280320b82d89f41e7ebd14cd6b29d741",
+    "retention-proofs.jsonl": "2ad0e872293f16cf540f890bd545413bd36ecf55b26a36090ae3638988002e8a",
+    "report.json": "9d665e529eb34fb947df7bf2c7670f58f0abc4b2e604bbeae811783f78091c51"
+  },
+  "theorem": "Strict original identity/COPY-only feasibility: completed mask determines future-needed data identities. Every original step must leave at mostW live identities and when alreadyW must last-consume one. Oldest-live COPY rotations construct the next legal step in at mostW-1 relays. Memory hazards constrain readiness, not temp lifetimes. Dead-output ready dominance preserves existence, not minimal COPY.",
+  "scope": "Root rebuilds data and GET/SET RAW/WAR/WAW from original raw JSON, checks every safe transition in all certificate masks under the independently reviewed rotation/dominance premises, initial mask included and final excluded. Imports no parser, scheduler, live set, certificate verifier or original candidate state. Removes every closure to verify rejection.",
+  "limitation": "Nine prior unknown synthetic inputs certified infeasible only within the strict identity model; eight matrix budget failures remain unknown. This produces no new legal output, optimality result or official Level claim."
+}

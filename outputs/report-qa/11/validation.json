@@ -1,0 +1,11 @@
+{
+  "project": 11,
+  "source": "F:\\Hackathon\\projects\\11-context-governance\\reports\\project11-research.tex",
+  "source_sha256": "3d0699cd4c17fbbf92c134fc9da4282e7852cf27427c7e7af94826fc5b4f553c",
+  "pdf_sha256": "b7f1e03ab5447141fd78ff5f6395055d285a0f10872b8a1282ebba13df17c516",
+  "pages": 16,
+  "warnings": [],
+  "compile_render_wall_seconds": 13.986260652542114,
+  "visual_review": "passed: all 16 pages inspected via four contact sheets; pages 11 and 12 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+  "visual_reviewed_unix": 1791672067.468517
+}

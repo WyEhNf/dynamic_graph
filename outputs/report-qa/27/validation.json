@@ -1,0 +1,11 @@
+{
+  "project": 27,
+  "source": "F:\\Hackathon\\projects\\27-aicore-streams\\reports\\project27-research.tex",
+  "source_sha256": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82",
+  "pdf_sha256": "bcd1677b11b2877fabeb6161f9d3eb7de0d556d422a573c8cf312a031562f3ff",
+  "pages": 23,
+  "warnings": [],
+  "compile_render_wall_seconds": 18.364083766937256,
+  "visual_review": "passed: all 23 pages inspected via contact sheets; page 19 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+  "visual_reviewed_unix": 1791667846.776878
+}

@@ -1,0 +1,12 @@
+{
+  "seed": 20271013,
+  "nodes": 5,
+  "cases": 24,
+  "oracle_generation_wall_seconds": 1.9529710999922827,
+  "oracle_candidate_evaluations": 737316,
+  "oracle_exe_sha256": "5898efd94555025e997677d1718839b2cae2aba748aa4932282511dbc1f6e30b",
+  "oracle_source_sha256": "91093cc9e4cbcd56ffe8b17dc69fb84b7bbcbae48e92fe5273964a0d250828fc",
+  "input_sha256": "de236dc40a0b00508e914a26c995a2ef0abfe5b7ff86e8621beb0afba20f16b3",
+  "suite_sha256": "7f8c47e2c8f032f2c93eedf4cce14f09216e4139443ecc1461c925fb6b06b1fb",
+  "scope": "exhaustive explicit direct synchronization model, not official transitive model"
+}

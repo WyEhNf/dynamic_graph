@@ -1,0 +1,110 @@
+{
+  "before": {
+    "total": 111,
+    "passed": 80,
+    "failed": 31
+  },
+  "after": {
+    "total": 111,
+    "passed": 104,
+    "failed": 7
+  },
+  "common_cases": 80,
+  "common_solve_us_before": 1824803,
+  "common_solve_us_after": 1639740,
+  "improved_T": 9,
+  "regressed_T": 0,
+  "improved_peak_at_equal_T": 8,
+  "regressed_peak_at_equal_T": 0,
+  "recovered": [
+    "oracle_n8_d0.08_seed20261811",
+    "oracle_n8_d0.2_seed20261812",
+    "oracle_n8_d0.08_seed20261814",
+    "oracle_n8_d0.2_seed20261815",
+    "oracle_n8_d0.08_seed20261817",
+    "oracle_n8_d0.2_seed20261818",
+    "oracle_n8_d0.08_seed20261820",
+    "oracle_n8_d0.2_seed20261821",
+    "oracle_n12_d0.08_seed20262211",
+    "oracle_n12_d0.2_seed20262212",
+    "oracle_n12_d0.08_seed20262214",
+    "oracle_n12_d0.08_seed20262217",
+    "oracle_n12_d0.2_seed20262218",
+    "oracle_n12_d0.45_seed20262219",
+    "oracle_n12_d0.2_seed20262221",
+    "oracle_n12_d0.45_seed20262222",
+    "oracle_n16_d0.08_seed20262611",
+    "oracle_n16_d0.2_seed20262612",
+    "oracle_n16_d0.08_seed20262614",
+    "oracle_n16_d0.2_seed20262615",
+    "oracle_n16_d0.08_seed20262617",
+    "oracle_n16_d0.2_seed20262618",
+    "oracle_n16_d0.08_seed20262620",
+    "oracle_n16_d0.2_seed20262621"
+  ],
+  "lost": [],
+  "model_disagreements": 0,
+  "duplicates": 2717,
+  "scales": [
+    {
+      "n": 3,
+      "median_us": 30.5,
+      "max_us": 34
+    },
+    {
+      "n": 6,
+      "median_us": 99,
+      "max_us": 99
+    },
+    {
+      "n": 8,
+      "median_us": 27.0,
+      "max_us": 41
+    },
+    {
+      "n": 12,
+      "median_us": 49.0,
+      "max_us": 151
+    },
+    {
+      "n": 16,
+      "median_us": 108.0,
+      "max_us": 940
+    },
+    {
+      "n": 32,
+      "median_us": 1133,
+      "max_us": 2133
+    },
+    {
+      "n": 128,
+      "median_us": 9769,
+      "max_us": 16738
+    },
+    {
+      "n": 512,
+      "median_us": 26946,
+      "max_us": 65636
+    },
+    {
+      "n": 1024,
+      "median_us": 15176.5,
+      "max_us": 23526
+    },
+    {
+      "n": 2048,
+      "median_us": 38245,
+      "max_us": 74690
+    },
+    {
+      "n": 4096,
+      "median_us": 37372.0,
+      "max_us": 61544
+    },
+    {
+      "n": 10000,
+      "median_us": 96807.0,
+      "max_us": 160155
+    }
+  ]
+}

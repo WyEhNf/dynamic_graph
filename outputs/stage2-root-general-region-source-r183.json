@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791779639.7574852,
+  "source_manifest_sha256": "0971100964e84d5194d65b9a6dd68df98fb80d37b3ef752a50d209662ee63d50",
+  "source_files": 13,
+  "source_aggregate_sha256": "c68ea5e48f4fd7a8158f5e6e368f579b0f9370acd00e202cb192b105ec0cbfc2",
+  "input_sha256": "3111d7a4282ac0d58756ec2aa6540f1e7de06e3016654b18604de2e417c99182",
+  "frozen_inputs": 80,
+  "contracts": 10,
+  "actual_contract_exit": 0,
+  "actual_command": [
+    "C:\\Users\\admin\\miniconda3\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_general_region_contracts.py",
+    "-v"
+  ],
+  "contract_log_sha256": "24a47de7b200d9655af8698ea8b85c28471b7bedb5450dd3dfde988f6ad66dc6",
+  "code_review": [
+    "full original identities and RAW/WAR/WAW readiness",
+    "latest-age roles include all future consumers",
+    "fixed physical prefix and full suffix restoration before sink",
+    "immutable low-g labels and separately charged transitions",
+    "independent all-history old/early COPY raw oracle",
+    "actual input UTF8 sizes and disk preflight/after-saved-complete reserve"
+  ],
+  "authorization": "Prepare runner for only frozen80 tiny raw-oracle inputs plus hand11, all complete proposal physical/symbolic/integer checks and independent label/frontier replay; rootreview runner before actual solver/oracle execution. No full336/default integration.",
+  "scope": "Implementation source review and ten actual contract tests only. No new algorithm quality, raw-oracle result, official Level or RSS/performance claim."
+}

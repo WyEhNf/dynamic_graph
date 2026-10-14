@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791709233.0896535,
+  "same_regression_records": 1099,
+  "normal_records": 979,
+  "additional_structure_records": 120,
+  "numeric_controls": 523,
+  "source_files": 24,
+  "ctest": 12,
+  "suites": [
+    {
+      "suite": "stress",
+      "records": 153
+    },
+    {
+      "suite": "development",
+      "records": 143
+    },
+    {
+      "suite": "holdout",
+      "records": 143
+    },
+    {
+      "suite": "frontier",
+      "records": 72
+    },
+    {
+      "suite": "frontier-holdout",
+      "records": 72
+    },
+    {
+      "suite": "oracle4",
+      "records": 24
+    },
+    {
+      "suite": "oracle4-holdout",
+      "records": 24
+    },
+    {
+      "suite": "oracle5",
+      "records": 24
+    },
+    {
+      "suite": "oracle5-holdout",
+      "records": 24
+    },
+    {
+      "suite": "overlap",
+      "records": 30
+    },
+    {
+      "suite": "overlap-holdout",
+      "records": 30
+    },
+    {
+      "suite": "resource-quality",
+      "records": 18
+    },
+    {
+      "suite": "resource-quality-holdout",
+      "records": 18
+    },
+    {
+      "suite": "weighted-overlap",
+      "records": 30
+    },
+    {
+      "suite": "weighted-overlap-holdout",
+      "records": 30
+    },
+    {
+      "suite": "oracle6",
+      "records": 12
+    },
+    {
+      "suite": "oracle6-holdout",
+      "records": 12
+    },
+    {
+      "suite": "irregular-small",
+      "records": 12
+    },
+    {
+      "suite": "irregular-small-holdout",
+      "records": 12
+    },
+    {
+      "suite": "corepacking",
+      "records": 18
+    },
+    {
+      "suite": "corepacking-holdout",
+      "records": 18
+    },
+    {
+      "suite": "wait-overlap",
+      "records": 18
+    },
+    {
+      "suite": "wait-overlap-holdout",
+      "records": 18
+    },
+    {
+      "suite": "certificate-controls",
+      "records": 12
+    },
+    {
+      "suite": "dense",
+      "records": 6
+    },
+    {
+      "suite": "dense-holdout",
+      "records": 6
+    },
+    {
+      "suite": "forkjoin",
+      "records": 36
+    },
+    {
+      "suite": "shallow-heldout",
+      "records": 72
+    },
+    {
+      "suite": "resource-cliques",
+      "records": 12
+    }
+  ],
+  "candidate_source_sha256": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "measured_release_sha256": "3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9",
+  "evidence": {
+    "projects/27-aicore-streams/research/batch45/acceptance-checkpoint.json": "4720682c975a17f5cf1cda4b73f2e4c9d9b8fe9af5e6a4d0d288d78bf02a3ff8",
+    "projects/27-aicore-streams/reports/full-verification-batch45.json": "d06e5e96cfc7231894643defa837da4c6c63fe5f3c71c66f46b0845d9a6726c6",
+    "projects/27-aicore-streams/reports/full-numeric-verification-batch45.json": "ff844a0f01e8ac2d056697888323395571061a96b160e2c1f23c34a02cbb7582"
+  },
+  "scope": "Every1099 actual before/after name/pass/valid/T/peak record,523 actual sanitizer outputs vs previously independent bigint gold, frozen compile/source/binary/report hashes and12 terminal CTest log checked. Root185 independent heap-plan replay remains separate. R45 is isolated, defaultR44 and open TeX unchanged; no performance or universal feasibility claim."
+}

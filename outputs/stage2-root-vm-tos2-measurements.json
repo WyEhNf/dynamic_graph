@@ -1,0 +1,78 @@
+{
+  "reviewed_unix": 1791709289.3638098,
+  "passed": true,
+  "performance_records": 120,
+  "paired_comparisons": 60,
+  "negative_pairs": 60,
+  "summaries": [
+    {
+      "source": "changed-arithmetic",
+      "median_paired_ratio": 1.1678081402052347,
+      "negative_pairs": 5
+    },
+    {
+      "source": "changed-SSA",
+      "median_paired_ratio": 1.1980500851190956,
+      "negative_pairs": 5
+    },
+    {
+      "source": "generic-if-while",
+      "median_paired_ratio": 1.118885105233945,
+      "negative_pairs": 5
+    },
+    {
+      "source": "int-arithmetic",
+      "median_paired_ratio": 1.1314990296823382,
+      "negative_pairs": 5
+    },
+    {
+      "source": "int-conversion",
+      "median_paired_ratio": 1.1697046189274167,
+      "negative_pairs": 5
+    },
+    {
+      "source": "deep-SSA40",
+      "median_paired_ratio": 1.262912807967849,
+      "negative_pairs": 5
+    },
+    {
+      "source": "nested-helpers",
+      "median_paired_ratio": 1.126786428519205,
+      "negative_pairs": 5
+    },
+    {
+      "source": "SSA-conditional",
+      "median_paired_ratio": 1.2012674131242147,
+      "negative_pairs": 5
+    },
+    {
+      "source": "unused-double",
+      "median_paired_ratio": 1.2585003487845572,
+      "negative_pairs": 5
+    },
+    {
+      "source": "fresh-fma-control",
+      "median_paired_ratio": 1.1828346659174354,
+      "negative_pairs": 5
+    },
+    {
+      "source": "fresh-dependent-branches",
+      "median_paired_ratio": 1.1659962281564111,
+      "negative_pairs": 5
+    },
+    {
+      "source": "original-fp-builtin",
+      "median_paired_ratio": 1.1331483565524467,
+      "negative_pairs": 5
+    }
+  ],
+  "host_busy_percent_range": [
+    19.602272727272727,
+    50.0
+  ],
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase2/performance/report.json": "8e76f4098974a6ee568f60aaf6ae8f2ec60a9910d0e112d277ed322e8d8bad4b",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase2/performance/run-plan.json": "77501a71459508a7a9beb77a8723382e18262d7c4f91119876f7c3d96f12ee5b"
+  },
+  "scope": "Root streaming comparison of all120 whole actualC output files and60 recomputed sameEXE decoded/TOS2 ratios, cached originalC input/output stream repeats and original source/Metadata/oracle/harness SHA verified. All60 TOS2 pairs slower, candidate rejected for performance and not default promoted. Decode included in compute; backgroundhost activity recorded, no idle or universal result. No TOS2 N10000 acceptance claim."
+}

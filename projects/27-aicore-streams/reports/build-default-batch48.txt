@@ -1,0 +1,45 @@
+-- Configuring done (0.3s)
+-- Generating done (0.6s)
+-- Build files have been written to: F:/Hackathon/projects/27-aicore-streams/build
+[  3%] Building CXX object CMakeFiles/solution.dir/solution/solution.cpp.obj
+F:\Hackathon\projects\27-aicore-streams\solution\solution.cpp: In function 'std::vector<std::pair<std::vector<int>, long long int> > aicore_detail::direct_consumer_groups(const Graph&, const WorkspaceProjection&, I&, I, bool&)':
+F:\Hackathon\projects\27-aicore-streams\solution\solution.cpp:803:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  803 |     if(!all)continue;std::sort(members.begin(),members.end());
+      |     ^~
+F:\Hackathon\projects\27-aicore-streams\solution\solution.cpp:803:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  803 |     if(!all)continue;std::sort(members.begin(),members.end());
+      |                      ^~~
+[  6%] Linking CXX static library libsolution.a
+[  6%] Built target solution
+[ 13%] Built target simulator
+[ 20%] Built target candidate_search
+[ 23%] Linking CXX executable aicore_demo.exe
+[ 26%] Built target aicore_demo
+[ 30%] Linking CXX executable aicore_bench.exe
+[ 33%] Built target aicore_bench
+[ 40%] Built target aicore_oracle
+[ 43%] Linking CXX executable simulator_tests.exe
+[ 46%] Built target simulator_tests
+[ 50%] Linking CXX executable model_tests.exe
+[ 53%] Built target model_tests
+[ 56%] Building CXX object CMakeFiles/assignment_tests.dir/tests/test_assignment.cpp.obj
+[ 60%] Linking CXX executable assignment_tests.exe
+[ 60%] Built target assignment_tests
+[ 63%] Building CXX object CMakeFiles/serial_frontier_tests.dir/tests/test_serial_frontier.cpp.obj
+[ 66%] Linking CXX executable serial_frontier_tests.exe
+[ 66%] Built target serial_frontier_tests
+[ 70%] Building CXX object CMakeFiles/numeric_boundary_tests.dir/tests/test_numeric.cpp.obj
+[ 73%] Linking CXX executable numeric_boundary_tests.exe
+[ 73%] Built target numeric_boundary_tests
+[ 76%] Building CXX object CMakeFiles/numeric_priority_tests.dir/tests/test_numeric_priority.cpp.obj
+[ 80%] Linking CXX executable numeric_priority_tests.exe
+[ 80%] Built target numeric_priority_tests
+[ 83%] Building CXX object CMakeFiles/shallow_profile_tests.dir/tests/test_shallow.cpp.obj
+[ 86%] Linking CXX executable shallow_profile_tests.exe
+[ 86%] Built target shallow_profile_tests
+[ 90%] Building CXX object CMakeFiles/workspace_projection_tests.dir/tests/test_projection.cpp.obj
+[ 93%] Linking CXX executable workspace_projection_tests.exe
+[ 93%] Built target workspace_projection_tests
+[ 96%] Building CXX object CMakeFiles/consumer_group_tests.dir/tests/test_group.cpp.obj
+[100%] Linking CXX executable consumer_group_tests.exe
+[100%] Built target consumer_group_tests

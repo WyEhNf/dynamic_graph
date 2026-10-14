@@ -1,0 +1,585 @@
+                                                    Optimal and Heuristic Min-Reg Scheduling
+                                                         Algorithms for GPU Programs
+                                                                                                      Gang Chen
+                                                                                      Intel Corporation, Santa Clara, CA, USA
+                                                                                                gang.y.chen@intel.com
+
+
+                                            Abstract—Given a basic block of instructions, finding a sched-     two phases: first a min-reg scheduler then a register-limited
+arXiv:2303.06855v4 [cs.PL] 21 Nov 2023
+
+
+
+
+                                         ule that requires the minimum number of registers for evaluation      latency-hiding scheduler. The register pressure is kept under
+                                         is a well-known problem. The problem is NP-complete when the          the limit for a greedy latency-hiding scheduler by subdividing
+                                         dependences among instructions form a directed-acyclic graph
+                                         instead of a tree. We are striving to find efficient approximation    a basic block into sub-blocks. The outcome of this subdividing
+                                         algorithms for this problem not simply because it is an interesting   algorithm is based upon the instruction order after min-reg
+                                         graph optimization problem in theory. A good solution to this         scheduling. A better min-reg schedule helps create larger
+                                         problem is also an essential component in solving the more            sub-blocks for latency-hiding scheduling. Readers who are
+                                         complex instruction scheduling problem on GPU.                        interested can refer to [1] for details.
+                                            In this paper, we start with explanations on why this problem is
+                                         important in GPU instruction scheduling. We then explore two             Also modern CPUs use hardware instruction scheduler to
+                                         different approaches to tackling this problem. First we model         exploit instruction-level parallelism. Therefore there is less
+                                         this problem as a constraint-programming problem. Using a             emphasis on compile-time scheduling for latency hiding. In-
+                                         state-of-the-art CP-SAT solver, we can find optimal answers for       stead the compiler needs to focus on how to utilize the
+                                         much larger cases than previous works on a modest desktop
+                                         PC. Second, guided by the optimal answers, we design and              architectural registers efficiently, and minimize spill code.
+                                         evaluate heuristics that can be applied to the polynomial-time           However an efficient algorithm to find the optimal min-reg
+                                         list scheduling algorithms. A combination of those heuristics can     schedule only exists when the data-dependence graph formed
+                                         achieve the register-pressure results that are about 17% higher       by instructions is a tree. In other words, the output of every
+                                         than the optimal minimum on average. However, there are still
+                                         near 6% cases in which the register pressure by the heuristic         instruction can only have single use. See [2] and [3]. Looking
+                                         approach is 50% higher than the optimal minimum.                      at the min-reg scheduling problem from a different angle,
+                                                                                                               we can model it as an integer or constraint programming
+                                                                I. I NTRODUCTION                               problem. Even though modeling the problem as an operations
+                                            Given a basic block of instructions, we want to find               research (OR) problem does not change its NP-completeness,
+                                         one sequential order that satisfies all the data-dependence           the recent advance of OR tools enables us to find the optimal
+                                         constraints yet minimizes the number of registers required.           solution for much larger cases with a very modest amount
+                                         In this paper, we call this problem the min-reg scheduling            of computing power. We are looking for effective min-reg
+                                         problem. A good algorithm to min-reg scheduling has multiple          scheduling algorithms for basic blocks with hundreds of in-
+                                         practical applications. For example, many modern GPUs come            structions because basic blocks of such size are very common
+                                         with compute-core design in which the register file can be            in GPU programs as the results of aggressive function inlining
+                                         flexibly allocated among multiple active threads. The number          and loop unrolling. Figure 1 shows the distribution of basic-
+                                         of active threads running on one core is limited by the number        block sizes in a collection of pixel-shaders. Larger basic blocks
+                                         of registers each thread requires. When compiler generates            tend to need a higher number of registers. The need to find
+                                         code that uses less registers, more active threads can be             the min-reg schedule for them is therefore more acute.
+                                         launched in parallel to achieve higher computing throughput.             In this paper, we first present a constraint-programming
+                                         Of course, simply minimizing registers is not always the best         model for the min-reg scheduling problem. Using Google OR-
+                                         performing solution. The number of active threads can be              Tools [4], we can find optimal solutions for basic blocks with
+                                         limited by other hardware resources. In reality, we need to pick      several hundreds instructions on a 4-core Intel I7-7700 desktop
+                                         the best performing solution among a spectrum of solutions:           within two hours. With the guidance of the optimal solutions,
+                                         between a solution that maximizes thread-level parallelism to         we explore heuristics that we can apply to a list scheduler for
+                                         a solution that maximizes instruction-level parallelism. The          finding the min-reg schedule. All the heuristics that we have
+                                         min-reg schedule is important because it sits at one end of this      considered are practical to implement in production compilers.
+                                         spectrum. In GPU instruction scheduling, we can use it as the         In this paper, we incorporate these heuristics into the list
+                                         starting point of searching the spectrum. Even on GPUs with           scheduler one-by-one, and present the experimental results
+                                         a fixed number of registers per thread, one practical approach        after adding each heuristic.
+                                         to implement a register-limited prepass scheduler is using               The rest of the paper is organized as follows. Section II
+                                                                       •  It works for trees because a tree can be subdivided into
+                                                                          disjoint subtrees.
+                                                                        • The optimal solution for a tree is derived from the optimal
+                                                                          solutions of its subtrees.
+                                                                     Essentially the generalized Sethi-Ullmman algorithm is a
+                                                                     dynamic-programming algorithm. Let’s denote the M axRPi
+                                                                     as the the maximum registers required to evaluate all children
+                                                                     of tree node i, Def SZi as the output size of tree node i.
+                                                                     Deriving M axRPi from its children’s results is a two-step
+                                                                     approach:
+                                                                        • sort the children of node i into a descending order so that
+     Fig. 1: Distribution of Basic Block Size in Pixel Shaders
+                                                                                         M axRPc1 − Def SZc1 ≥
+gives a brief overview of the min-reg scheduling problem and
+                                                                                         M axRPc2 − Def SZc2 ≥
+the major previous works on it. Section III describes in detail
+how to model the min-reg scheduling problem as a constraint-                            ... ≥ M axRPck − Def SZck
+programming problem. Section IV presents the heuristics that
+are effective in building a min-reg list scheduler. Section V          •   compute M axRPi as follows
+shows experimental results of applying our algorithm in a                        M axRPi = max(M axRPc1 , Def SZc1 +
+graphics compiler. Section VIII presents related works and
+Section VII concludes the paper.                                                   max(M axRPc2 , Def SZc2 + max(...,
+
+                   II. P ROBLEM OVERVIEW                                      Def SZc(k−1) + max(Def SZck , M axRPck ))...)
+   The execution constraints among a list of instructions can        The sorting order implies all instructions in SubTree(c1 ) are
+be described using a directed-acyclic graph (DAG) with nodes         executed before all instructions in SubTree(c2 ) and so on.
+representing instructions and edges representing data depen-            The generalized Sethi-Ullman algorithm cannot produce the
+dencies. Every node consumes some source operands stored in          optimal solution on an instruction sequence that forms a more
+register file, then produces some destination operands that are      general directed-acyclic graph. The fundamental difference
+also stored in register file. A linear order of DAG nodes that       between a DAG and a tree is that the output of a DAG node
+satisfies all the constraints is called an instruction schedule.     can be used by multiple nodes. Therefore, a DAG cannot be
+For a given schedule of N nodes, there are N time-steps, one         subdivided into disjoint subtrees on a single def-use edge per
+node per time-step. At any time-step, we need a certain amount       subtree.
+of storage in the register file to store all the operands that are      The min-reg scheduling for DAG is NP-complete. Govin-
+still needed for later usage. We say an operand is live at time-     darajan et al [6] proposed a way to model the problem as
+step t when its producer is scheduled before time-step t, and        an integer-programming problem. Their integer-programming
+at least one of it consumer is scheduled at or after time-step       model starts with defining integer variables f1 , ..., fn rep-
+t. The total amount of register-file storage needed at time-         resenting the time-step of each instruction. Modeling the
+step t is called the register pressure at time-step t, RPt . The     data-dependence constraints using f1 , ..., fn is relatively
+maximum register pressure of a given schedule, MaxRP, is the         straightforward. The challenging parts are on modeling the
+maximum of all RPt for all t from 1 to N. The goal of the            live-ranges and deriving the register pressure at each time-
+min-reg scheduling is to find the schedule with the minimum          step. We would not go into those details of their model. Using
+MaxRP.                                                               their integer-programming model, they reported solving the
+   There is an efficient algorithm for the min-reg scheduling        min-reg scheduling problem with very limited size (median of
+problem when the DAG is limited to be a computation tree.            10 nodes, a geometric mean of 12 nodes, and an arithmetic
+The initial algorithm for arranging computation trees was            mean of 19 nodes). The size limit may be related to their
+proposed by Sethi and Ullman. That algorithm has several             model design. It could also be partially due to the computation
+limitations [5]: The tree must be a binary tree; Each internal       power available at that time and the integer-programming tools
+node has exactly two child nodes; Each node must output              available at that time.
+exactly one register; Finally all registers must be the same            We propose a different model to formulate the min-reg
+size. Later one, Appel and Supowit extended the algorithm            scheduling problem as a constraint-programming problem.
+to handle the more general computation trees [3], allowing           Starting with a matrix of boolean variables to describe the
+instructions with arbitrary number of source operands and            schedule, we can come up with a much simpler model with all
+allowing instructions with arbitrary destination size.               boolean variables except the objective function. With the aid of
+   To summarize the generalized Sethi-Ullman algorithm by            award-winning Google OR-Tools, our model can find optimal
+Appel and Supowit in a very brief way:                               solutions for the min-reg scheduling problems of much larger
+sizes. Our data set includes 4437 DAGs that can be solved          In Figure 2, we use a simple example to illustrate the afore-
+optimally using our CP-SAT solver, in which the smallest           mentioned process of deriving the live-bit matrix from the
+DAG has 48 nodes, the largest DAG has 511 nodes, and the           schedule matrix. Given a schedule represented by the matrix
+average is around 90 nodes. Another significant difference is      in Figure 2(b), The result of the per-row suffix-or should be as
+that our DAGs are all from GPU programs while DAGs in the          Figure 2(c), and the live-bit matrix should be as Figure 2(d).
+previous work are all from CPU programs. In the next section,
+we describe this CP-SAT model in detail.
+                    III. CP-SAT S OLVER
+   The CP-SAT formulation of the min-reg scheduling problem
+involves several N × N matrices of boolean variables. First
+we define a matrix of boolean xik that describes the schedule.
+When xik is set to one, it means node i is scheduled at time-
+step k. The constraints are there should be only a single bit
+set to one per row and per column.
+                           n
+                           X
+                                 xik ≡ 1
+                           i=1
+                           n
+                           X
+                                 xik ≡ 1
+                           k=1
+
+To model all the ordering constraints, we need to introduce
+a sequence of intermediate integer variables ti , which means
+node i is scheduled at time-step ti . ti can be derived from a
+dot-product of row xi with the constant vector of (1, ..., n)
+                                n
+                                X
+                         ti =         xik × k                      Fig. 2: Three matrices of boolean variables used in CP-SAT solver
+                                k=1
+
+Hence an ordering constraint dictates node i must be executed        With the live-bit matrix, we can model the register pressure
+before j can be added as                                           zk at every time-step k
+                                                                                                 n
+                                                                                                 X
+                                ti < tj                                                   zk =         lik × si
+                                                                                                 i=1
+To avoid intermediate integer variables, we do not really intro-
+duce ti in the implementation. We simply add the inequality        in which si is a constant representing the output size of node
+between two dot-products.                                          i. In real implementation, we do not really introduce zk in the
+                   n
+                                                                   model. We only have one integer variable Z which represents
+                   X
+                       (xik − xjk ) × k < 0                        the MaxRP. For every time step k, we add the following
+                   k=1
+                                                                   inequality:
+                                                                                               Xn
+   Next, we define a matrix of boolean oxik , in which every                              Z≥       lik × si
+element is a suffix-or of xik per row.                                                           i=1
+
+                                                                      Finally, the objective function is to minimize Z.
+                   oxik = xik when k ≡ N
+                                                                      Comparing to the integer-programming model defined in
+             oxik = xik ∨ oxi(k+1) when k < N                      [6], this model is much simpler, only needs 3 N × N boolean
+                                                                   variables and one integer object variable. We use Google OR-
+Defining oxik is the critical step towards modeling the live-      Tools to implement this model. The per-basic-block DAGs
+range of node i When the output of node i is live at time-step     are dumped from a GPU compiler that compiles shader
+k because it is used by node j, the following equality must        programs used for rendering. We have tried both the integer-
+hold:                                                              programming solver and the CP-SAT solver in the OR-Tools
+                      oxjk − oxik ≡ 1                              on those DAGs. The CP-SAT solver turns out to be much more
+With that, we can derive a matrix of live-bit lik , which stands   effective: solving much larger problems in the same amount
+for the output of node i is live at time-step k                    of time. We have accumulated 4437 DAGs that the CP-SAT
+                                                                   solver can prove it has found the optimal answers. The smallest
+                lik = ∨j∈uses(i) (oxjk − oxik )                    DAGs have 48 nodes because we have filtered out DAGs with
+less than 48 nodes. We think the smaller problems are less            this paper, we call (M axRPi - Def SZi ) the SU-number
+interesting for this study. The largest DAG has 511 nodes,            for convenience. We call the base algorithm bottom-up list-
+and the average is around 90 nodes. In this process, we have          scheduling with the SU heuristic. The time-complexity of
+encountered many large DAGs in which the CP-SAT solver                updating the ready queue as a priority heap is O(log(n)) per
+only finds non-optimal solutions or cannot find a solution            step. Therefore the overall complexity of this algorithm is
+within the two-hour limit. Those are excluded as well.                O(nlog(n)). Table I shows the results on our test set. We use
+   In the next section, we describe the heuristic algorithm for       3 metrics to compare the list-scheduling results against the
+the min-reg scheduling. Using the optimal results obtained            optimal results:
+from the CP-SAT solver as the baseline, We are able to                   • The number of cases that reach the optimal.
+understand how well those heuristics can achieve.                        • The number of outlier cases in which the MaxRP found
+                                                                           by the list-scheduler (LS) is 50% over the optimal result.
+                 IV. H EURISTIC S CHEDULER
+                                                                         • The average ratio between the list-scheduling MaxRP and
+   Even with all recent advances in OR-Tools, the CP-SAT                   the optimal result.
+solver for min-reg scheduling is still too slow to use in a
+programming-language compiler. From our experience, the in-             Data: DAG, a DAG to schedule
+struction scheduling algorithm in production compilers should           Data: N, the number of nodes in DAG
+strive for a time-complexity of O(nlog(n)). A time complexity           Data: MaxRPi , the MaxRP of node i
+of O(n2 ) starts having scaling issue with program size. A time         Data: DefSZi , the output size of node i
+complexity of O(n3 ) should be avoided whenever it is possible.         Data: Q, the ready queue with the minimum(MaxRPi
+Graphics shader compilation also has its unique application                     - DefSZi ) on top
+environment: our compiler is used to compile thousands of               Data: t, the time-step tracker
+shaders during game loading time. Slow game-loading time                Compute MaxRPi for every node i in DAG;
+would be a severe user-experience issue, hence a serious                Add all nodes without successors into Q;
+competitive disadvantage for a GPU vendor. Also CP-SAT                  t = N;
+solver is very CPU-intensive. On a 4-core 8-thread I7 CPU,              while Q not empty do
+it constantly reaches over 90% CPU utilization. 3D Gaming                   i = pop Q;
+itself tends to be both CPU and GPU intensive, so it would                  SCHEDULE[t] = i;
+be hard to apply such CPU-hungry techniques on background                   for every predecessor j of i do
+compilation during game play.                                                    add j to Q if all successors of j are scheduled;
+   Our shader compiler has a typical code generation flow with              end
+separated instruction scheduling and register allocation phases.            t = t - 1;
+Instruction scheduling happens before register allocation in            end
+order to exploit ILP. Instruction scheduler itself is also splitted    Algorithm 1: bottom-up list scheduling with the SU
+into two phases: first min-reg scheduling then register-limited        heuristic
+latency-hiding scheduling. At the beginning of the latency-
+hiding scheduling, we divide the basic block into sub-blocks
+                                                                                                                        Ave
+based upon a worst-case estimation of register pressure that                                 Num Cases
+                                                                                                          Ave. Nodes
+                                                                                                                        Edge:Node
+can potentially be created by greedy latency-hiding scheduling.                                           Per Case
+                                                                                                                        Ratio
+This block-subdivision process is based upon the instruction           Total   Number   of
+                                                                                             4437         90.8          1.63
+                                                                       DAGs
+sequence after the min-reg scheduling result: better min-reg           Cases that MaxRP
+scheduling result enables larger sub-blocks for latency-hiding         by LS == Optimal      623          73.7          1.59
+scheduling. In the extreme case, if the register pressure is           MaxRP
+                                                                       Cases that MaxRP by
+still high (above a given threshold) after min-reg scheduling,         LS >= 1.5 * Optimal   1246         99.5          1.63
+we simply skip the latency-hiding scheduling because it only           MaxRP
+exacerbates the spilling. For details on how to estimate the           Average    ratio of
+register pressure and sub-divide the basic block before latency-       MaxRP by LS over      1.437
+                                                                       Optimal MaxRP
+hiding scheduling, please refer to the Section IV-B of [1].
+In this paper, we focus on how to achieve good min-reg                            TABLE I: Generic Sethi-Ullman on DAG
+scheduling results with a polynomial-time algorithm.
+                                                                         In Table I, we also collect two simple statistic features of
+A. Sethi-Ullman on DAG                                                DDGs: Column 3 is the average sizes of the DDGs; Column
+   First, we have tried to apply the generalized Sethi-Ullman         4 is the average edge/node ratio fo the DDGs. The edge count
+algorithm directly on DAG, and see how well it can per-               includes all kinds of dependences that restricts instruction
+form. Algorithm 1 shows a bottom-up list scheduler that               execution order. It shows that the heuristic approach tends
+uses (M axRPi - Def SZi ) to prioritize the ready queue. In           to work better on the DDGs that are smaller and sparser.
+When we investigate the cases in which the SU heuristic                Data: DAG, a DAG to schedule
+does not work well, one observation is that the SU-numbers             Data: N, the number of nodes in DAG
+i.e. (M axRPi - Def SZi ), become less meaningful on DAGs              Data: MaxRPi , the MaxRP of node i
+with many nodes having multiple uses. For example, the ready           Data: DefSZi , the output size of node i
+queue tends to have multiple nodes with the equal SU-number.           Data: LiveTSi , the time-step for the last use of node i
+So we should rely less on prioritizing the ready nodes with the        Data: Q, the ready queue with the minimum(MaxRPi
+SU-number. Without the reliable SU-numbers, which encode                       - DefSZi ) on top
+some sort of global register-usage information, We try to rely         Data: W, the set of nodes selected to be scheduled
+more on local information. For example, when a node becomes            Data: t, the time-step tracker
+ready, we can immediately see that, for some node, adding it to        Compute MaxRPi for every node i in DAG;
+the schedule does not increase register pressure because either        Initialize LiveTSi to -1 for every node in DAG;
+it has a large DefSize or its source operands are already in the       Add all nodes without successors into Q;
+live operand set, i.e. not the last uses of those operands. If so,     t = N;
+we schedule this kind of nodes immediately instead of adding           while Q not empty do
+them to the ready queue. In essence, we make the algorithm                  i = pop Q;
+more like a greedy algorithm. We call this the RP-reduction                 add i to W;
+heuristic. Table II shows the result of adding the RP-reduction             while W not empty do
+heuristic. We get some significant improvements: 107 more                       i = pop W;
+optimal cases and 122 less outlier cases when comparing to                      SCHEDULE[t] = i;
+the generic Sethi-Ullman result. The average ratio is reduced                   for every source-operand j of i do
+by 1.9 percentage point.                                                            LiveTSj = max(t, LiveTSj );
+                                                                                end
+                                                                                for every predecessor j of i do
+ Total Number of DAGs                              4437
+ Cases that MaxRP by LS == Optimal MaxRP           730
+                                                                                    if all successors of j are scheduled then
+ Cases that MaxRP by LS >= 1.5 * Optimal MaxRP     1124                                 d = DefSZi if LiveTSi >0 else 0;
+ Average ratio of MaxRP by LS over Optimal MaxRP   1.418                                for every source-operand m of j do
+                                                                                             d = (d - DefSZm ) if LiveTSm < 0;
+       TABLE II: Sethi-Ullman and RP-reduction heuristic                                end
+                                                                                        if d ≥ 0 then
+                                                                                             add j to W;
+   For better clarity, we present the improved list-scheduler in
+                                                                                        else
+Algorithm 2, which incorporates the RP-reduction heuristics.
+                                                                                             add j to Q;
+Because it is a bottom-up scheduling algorithm, an operand’s
+                                                                                        end
+live-range starts when we schedule the last use of that operand
+                                                                                    end
+("last" in the sense of execution order). An operand’s live-
+                                                                                end
+range ends when we schedule its defining node. We use
+                                                                                t = t - 1;
+LiveT Si to denote the time-step at which the last use of
+                                                                            end
+node i is scheduled. We can use LiveT S array to evaluate
+                                                                       end
+the register-pressure change caused by a node-scheduling              Algorithm 2: Improved SU scheduler with RP-reduction
+action. Notice that, in our algorithm, if a node that becomes         heuristics
+ready and does not increase register-pressure, we schedule it
+immediately. By doing so, we avoid the extra complexity of            Total Number of DAGs                              4437
+searching such instructions from the ready queue. The time-           Cases that MaxRP by LS == Optimal MaxRP           841
+                                                                      Cases that MaxRP by LS >= 1.5 * Optimal MaxRP     1075
+complexity of the algorithm should still be at O(nlog(n))             Average ratio of MaxRP by LS over Optimal MaxRP   1.376
+   Looking at the cases that our algorithm is still not effective,
+we notice that issues seem always related to those nodes with          TABLE III: With both RP-reduction and M axRPi adjustment
+multiple uses. So we also try to adjust the M axRPi : dividing       B. Scheduling DAG in clusters
+it by the number of its uses. Table III shows the result after
+                                                                       Graphics shaders tend to have the following kind of se-
+adding the M axRPi adjustment. Looks like this adjustment
+                                                                     quence:
+is quite effective in improving Sethi-Ullman scheduling on
+DAG. 111 more optimal cases and 49 less outlier cases. More          u = ALUOp ( . . . )
+important, the average ratio is reduced by 4.2 percentage point.     v = ALUOp ( . . . )
+Therefore we think that the treatment of those multi-use nodes       ( r , g , b ) = TextureSample ( u , v )
+is critical for further improvement. That is what we are going       x = ALUOp( r , . . . )
+to address in the next sub-section.                                  y = ALUOp( g , . . . )
+z = ALUOp( b ,         ...)                                                DAG that have common source operands with the top node.
+GPU instruction-set requires our register allocator must allo-             These nodes form a cluster. If all the nodes in the cluster are in
+cate (r, g, b) together into consecutive registers, (u, v) together        the ready queue, we schedule the cluster together. If any node
+in consecutive registers. However, ALU operations on those                 in the cluster is not in the ready queue, we follow this node’s
+values have to be scalarized. When we build a data-dependence              successors, and its successor’s successor and so on(since we
+graph for this example, that texture-sample instruction has 3              are doing bottom-up scheduling) until we find a node in the
+uses. Live range (u, v) also has 2 uses: first as a partial-write          ready queue. We schedule that node next. Essentially, we
+input of "v= ...", then as the input of texture-sample. The GPU            hold the unscheduled cluster, and try to schedule those nodes
+programs we deal with tend to have a lot of multi-use nodes                that prevent the cluster from becoming ready. Adding the
+due to prevailing usage of short-vector operands. Therefore,               clustering heuristic definitely increases the time-complexity
+the clustering situation shown in Figure 3 is fairly typical.              from O(nlog(n)) to O(n2 ) due to the extra work for finding
+So we use Figure 3 as the motivating example for the next                  the ready node that unblocks the cluster. Looking at the results
+improvement we describe in this subsection. In this example,
+                                                                             Data: all items declared in Alg2
+there are 4 chains of computation: (q, l, g, ..., b), (r, m, h, ...,
+                                                                             Data: cluster, the set of nodes sharing common
+c), (s, n, i, ..., d), and (t, o, j, ..., e). However, these 4 chains of
+                                                                                      sources
+computation are tied together by those multi-use nodes (v, u, p,
+                                                                             Initialization parts are the same as Alg2;
+k, ..., f). If we apply the generic SU-scheduling. Algorithm 1,
+                                                                             while Q not empty do
+to this example, since it favors the node with the minimum SU
+                                                                                  i = the top of Q;
+number at each step. It schedules these four chains separately,
+                                                                                  add i to cluster;
+i.e. first schedule (b, ..., g, l, q) then (c, ..., h, m, r) and so on.
+                                                                                  add other unscheduled nodes that share common
+Scheduling in this order, we end up with very high MaxRP
+                                                                                    source operands with the cluster;
+because the live ranges of all the multi-use nodes (f, ..., k,
+                                                                                  if all nodes in cluster are ready then
+p, u, v) are overlapped. The right strategy is to schedule (b,
+                                                                                       add nodes in cluster to W;
+c, d, e) together then schedule f immediately, schedule (g, h,
+                                                                                       remove nodes in cluster from Q;
+i, j) together then schedule k, and so on. Scheduling in this
+                                                                                  else
+order, we only need 5 registers at each level. We call a set of
+                                                                                       j = a node in cluster that is not ready;
+nodes that share some common source operands as a cluster.
+                                                                                       k = find a node in the ready queue that blocks
+Therefore, in Figure 3, (b, c, d, e) is a cluster, (g, h, i, j) is a
+                                                                                         j;
+cluster and so on.
+                                                                                       add k to W;
+                                                                                       remove k from Q;
+                                                                                  end
+                                                                                  while W not empty do
+                                                                                       Loop body inside While-W is the same as
+                                                                                         Alg2;
+                                                                                  end
+                                                                             end
+                                                                              Algorithm 3: Scheduling with Clustering Heuristic
+
+                                                                           after adding the clustering heuristic in Table IV, we can see
+                                                                           that scheduling by clusters is very important for achieving
+                                                                           good min-reg result on those GPU programs. Compared with
+                                                                           Table III, all three indicators are improved significantly. The
+                                                                           average ratio decreases from 1.376 to 1.171 (20 percentage
+                                                                           points). The number of outlier cases decreases from 1075 to
+                                                                           266. The number of optimal cases increases from 841 to 1427.
+                                                                           Looking at the statistics on two graph features, the cluster
+                   Fig. 3: A tightly-coupled DAG                           heuristic can handle larger and denser graphs. The outlier cases
+                                                                           still tend to be larger, however, there is no longer a correlation
+   We have modified our scheduler to recognize those nodes                 between the edge/node ratio and the resulting MaxRP.
+that form a cluster and try to schedule them together. Algo-                  Finally, in Table V, we try to add the M axRPi adjustment
+rithm 3 is built upon Algorithm 2. So we have skipped many                 to the cluster-scheduling algorithm as well. Looks like the
+repeated lines in the algorithm description, and focus on the              clustering heuristic and the M axRPi adjustment are not quite
+cluster-handling part. The cluster-forming starts with the top             compatible. Combining them ends up with worse results than
+node on the ready queue. We find other unscheduled nodes in                Table IV.
+                                                      Ave
+                                       Ave. Nodes
+                         Num Cases                    Edge:Node
+                                       Per Case
+                                                      Ratio
+ Total   Number     of
+                         4437          90.8           1.63
+ DAGs
+ Cases that MaxRP by
+ LS-cluster == Optimal   1427          78.1           1.64
+ MaxRP
+ Cases that MaxRP by
+ LS-cluster >= 1.5 *     266           115.9          1.58
+ Optimal MaxRP
+ Average     ratio  of
+ MaxRP by LS-cluster     1.171
+ over Optimal MaxRP
+
+        TABLE IV: Clustering Heuristic plus RP-reduction
+ Total Number of DAGs                                        4437
+ Cases that MaxRP by LS-cluster == Optimal MaxRP             1136
+ Cases that MaxRP by LS-cluster >= 1.5 * Optimal MaxRP       273
+ Average ratio of MaxRP by LS-cluster over Optimal MaxRP     1.194
+                                                                        Fig. 4: Register pressure before and after min-reg scheduling
+ TABLE V: Clustering plus MaxRP adjustment and RP-reduction
+V. A PPLYING M IN -R EG S CHEDULING I N I NTEL G RAPHICS
+                       C OMPILER
+   We have implemented those heuristic min-reg scheduling
+algorithms described in the previous section in Intel Graphics
+Compiler(IGC) [1]. Our target GPU is Intel ARC™GPU,
+which has 128 registers per thread. IGC uses a two-phase
+scheduling approach before the register allocation: first min-
+reg scheduling then register-limited latency scheduling. The
+purpose of min-reg scheduling is to set a good base for
+register-limited latency scheduling. Therefore the performance
+contribution of min-reg scheduling is indirect. Also IGC
+employs an empirical way to filter out the outlier effect of
+min-reg scheduling: it compares the min-reg schedule with
+the original sequence. If the register pressure is higher after
+min-reg scheduling than the original sequence, it simply uses
+the original sequence as the input for latency scheduling. The          Fig. 5: Register pressure before and after latency scheduling
+original sequence is just another point in the solution space
+that we can utilize even though we do not know its quality.          operations at the beginning of every loop iteration. After
+However incorporating this empirical technique does make it          register allocation and post-RA instruction scheduling, IGC
+even more subtle to demonstrate the contribution of min-reg          estimates the time to execute the final sequence is 2350 cycles.
+scheduling to the final performance.                                 For the same case, if we apply the generic Sethi-Ullman
+   In this section, we start with one case we have encountered       scheduling, we are not able to reduce the M axRP of the input
+in a real application to demonstrate how more effective min-         sequence. The M axRP of 118 is above the threshold that
+reg scheduling can result in better final code sequence.             we allow for applying latency-hiding scheduling. Therefore
+   The example we selected is a compute-shader that has              the latency-hiding scheduling step is skipped. Without pre-RA
+only one large basic block (after a loop is fully unrolled 4         latency-hiding scheduling, after register allocation and post-
+times). Figure 4 plots the register-pressure change along the        RA scheduling, IGC estimates the execution time for that final
+instruction sequence before and after the min-reg scheduling.        sequence is 4359 cycles. Note that IGC’s cycle estimation
+As it is shown, the clustering-based min-reg scheduling is           is after considering the latency-hiding effect of simultaneous
+able to reduce the M axRP in this case from 118 registers            multithreading on GPU. In some other more extreme cases,
+to 94 registers. That gives some room to allow latency-hiding        we have observed that, without effective min-reg scheduling,
+scheduling. Figure 5 plots the register-pressure change along        register allocator needs to insert spill code, which incurs even
+the instruction sequence before and after the latency-hiding         larger cycle penalties. On the other hand, effective min-reg
+scheduling. The M axRP after latency-hiding scheduling is            scheduling successfully avoids spilling, and leads to a final
+102. The sharp peaks in the plot after latency-hiding schedul-       sequence with much short cycle estimation.
+ing are the results of scheduling multiple long-latency memory          As we have indicated with the example, we evaluate two
+min-reg scheduling algorithms, which are described as Algo-      These results indicate that, even though the vast majority
+rithm 4 and Algorithm 5. Also Note that, in IGC, we only         of blocks do not need min-reg scheduling, there are cases
+apply these min-reg scheduling algorithms under the following    in which min-reg scheduling is essential because it can re-
+conditions:                                                      duce spills. These results also demonstrate that our cluster-
+   • The original M axRP for a block is greater than 64.         ing heuristic is an improvement to the generic Sethi-Ullman
+   • The M axRP is not at the block-entry or block-exit be-      algorithm because it can reduce register pressure on more
+     cause, otherwise, instruction reordering within the basic   blocks (2854 versus 2516), and it reduces the spilling shaders
+     block does not help.                                        from 823 to 815. The summary data only counts the shaders
+   The baseline we use for evaluation is the IGC without any     with spills versus the shaders without spills. It does not show
+min-reg scheduling before latency-hiding scheduling.             the cases in which spills are reduced (but not to zero) or
+                                                                 the cases in which there is no spill but latency hiding is
+ Data: B, a basic block to schedule                              improved because of adding min-reg scheduling. We can see
+ OldMaxRP = Compute register pressure rp of B;                   these effects by examining the cycle estimation from IGC for
+ NewMaxRP = GenericSethiUllmanScheduling(B);                     each shader. IGC reports an estimated cycle for each shader
+ if NewMaxRP < OldMaxRP then                                     by doing a weighted sum of the estimated cycles for all
+     Commit min-reg schedule;                                    basic blocks in the shader(weighted by the loop-nesting level).
+ end                                                             Figure 6 plots two s-curves. Each s-curve demonstrates the
+Algorithm 4: Generic Sehti-Ullman Scheduling in IGC
+
+
+  Data: B, a basic block to schedule
+  OldMaxRP = Compute register pressure rp of B;
+  NewMaxRP =
+    SethiUllmanSchedulingWithClusters(B);
+  if NewMaxRP < OldMaxRP then
+      Commit min-reg schedule;
+  else
+      NewMaxRP =
+        GenericSethiUllmanScheduling(B);
+      if NewMaxRP < OldMaxRP then
+          Commit min-reg schedule;
+      end
+  end
+ Algorithm 5: Sethi-Ullman Scheduling With Clustering in
+ IGC                                                                 Fig. 6: Impact on estimated cycles by Algorithm 4 and 5
+
+  We conduct our experiment on a set of compute-shaders          effect of one min-reg scheduling algorithm in terms of cycle
+and pixel-shaders that we have collected from popular games      estimation when comparing to the baseline result, which is
+running on Windows. This set of shaders are newer than those     the cycle estimation without any min-reg scheduling. The Y-
+shaders that we have found optimal solution using the CP-SAT     axis value is formulated as ln(baseline-cycles/min-reg-cycles).
+solver. There are a total of 3383 shaders. When we break         The X-axis points represent shader cases that are sorted by
+shaders into basic blocks, there are a total of 53049 basic      their corresponding Y-value. Since the cases are sorted by
+blocks.                                                          the Y-values, the points further away from the origin are the
+  First let’s look at some summary data for big picture:         cases with improvement, and the points closer to the origin
+   • Applying the baseline compiler(without any min-reg          are the cases with degradation. There are only about 1200
+     scheduling), 873 out of 3383 shaders have spill code        shaders because we have filtered out those cases that are not
+     inserted by register allocator.                             affected by any sort of min-reg scheduling. We can draw
+   • Applying the compiler with the Algorithm 4, 2561 out        several conclusions from these two curves:
+     of 53049 basic blocks have picked the SU scheduling            • The net effect of min-reg scheduling on cycle reduction is
+     output, then 823 shaders end up with spill code.                 positive because the means of both s-curves are positive.
+   • Applying the compiler with the Algorithm 5, 2854 out of        • The Algorithm 5 is more effective than the Algorithm 4
+     53049 blocks have picked the clustering-based scheduling         because its mean is more positive.
+     output. Beyond that, 344 blocks have picked the SU             • There are cases in which we have reduced register
+     scheduling output. Finally 815 shaders end up with spill         pressure in some blocks, yet ended up with higher cycle
+     code.                                                            estimation.
+We have examined one case in which min-reg scheduling leads        constraints. Lozano et al [9] proposed a constraint program-
+to higher cycle estimation. Figure 7 shows the register-pressure   ming model that solves the instruction scheduling and register
+traces before and after min-reg scheduling for that case. As it    allocation problem together. Their model should have the most
+is shown, the clustering-based min-reg scheduling is able to       comprehensive formulation of the constraints. Also they have
+reduce the M axRP from 217 to 176. somehow, our register           integrated their solver into the LLVM compiler to generate
+allocator ends up generating more spill code for the trace         code for several CPUs. Comparing to their work, we are
+after min-reg scheduling. We attribute this result to the less-    studying a simpler graph optimization problem. The problem
+than-perfect heuristics used by our graph-coloring algorithm.      is simpler in terms of the number of constraints we need to
+Another potential issue we have realized is that, when we          model, however these are all NP-complete problems. Also we
+estimate register pressure during instruction scheduling, we       do not use our CP-SAT solver in actual code generation due
+have omitted many architectural restrictions in register assign-   to compilation-time requirements in our application. We only
+ment. These restrictions can cause unused fragments in the         use our constraint programming model to help develop and
+register file, however they are not modeled during instruction     evaluate polynomial-time approximation algorithms.
+scheduling. In other words, we believe that there are places          On the second topic of developing polynomial-time ap-
+that need improvement in both our instruction scheduler and        proximation algorithm, there are also works that try to solve
+register allocator, which may fix many of those negative cases     the problem by integrating instruction scheduling with the
+that get exposed by this experiment.                               register allocation [10]–[13]. The heuristic min-reg algorithm
+                                                                   proposed by Govindarajan et al [6] can be classified into this
+                                                                   category as well because it involves building an interference
+                                                                   graph among node-lineages in a DAG then applying the graph-
+                                                                   coloring algorithm. Due to the complexity of implementing
+                                                                   integrated approaches, we have not seen much adoption in the
+                                                                   modern production compilers including LLVM. For scheduling
+                                                                   large basic blocks, Goodman and Hsu proposed the heuristic
+                                                                   of picking instructions that reduces register pressure in [10].
+                                                                   In this paper, we have adopted their idea in our RP-reduction
+                                                                   heuristic. Even though some heuristics that are similar to
+                                                                   ours may have already been tried in production or research
+                                                                   compilers, We have not seen studies published to evaluate
+                                                                   their effectiveness for the min-reg scheduling problem. That
+                                                                   is one question that this paper tries to answer. In this pa-
+                                                                   per, we demonstrate that a combination of several heuris-
+                                                                   tics can achieve a more effective min-reg schedule than the
+                                                                   generic Sethi-Ullman algorithm. Furthermore, by comparing
+   Fig. 7: Another example before and after min-reg scheduling     our heuristic algorithms with the CP-SAT solver, we provide
+                                                                   better insights on how much headroom there is for further
+                                                                   improvement.
+                    VI. R ELATED W ORK
+                                                                                        VII. C ONCLUSION
+   In this section, we discuss prior works in two related areas:     The min-reg scheduling problem may have other appli-
+First, works on using integer programming or constraint pro-       cations beyond the CPU and GPU code generation. For
+gramming to model instruction scheduling and register allo-        example, in the machine-learning compiler, there may be
+cation problems. Second, works on polynomial-time heuristic        similar problems for scheduling data-flow graphs to minimize
+scheduling algorithms for reducing register pressures.             the intermediate buffers. The constraint-programming model
+   On the first topic, Govindarajan et al [6] proposed an          we have proposed may become more applicable in those
+integer-programming model to find the min-reg sequence.            applications where compilation-time becomes less of an issue.
+We have described the difference between their work and            Regarding the next step of this work, it is natural to consider
+ours in the previous sections. Wilken et al [7] proposed an        exploring the machine-learning techniques for more effective
+integer-programming model for instruction scheduling. Ma-          min-reg scheduler, especially, after we can obtain a large set
+lik et al [8] proposed a constraint-programming model for          of optimal answers using the SP-SAT solver.
+instruction scheduling. Both of these models are targeted to
+minimize the overall execution time of a basic block. Similar                    VIII. ACKNOWLEDGMENT
+to our model, they all model the ordering constraints based          We thank Wei-Chung Hsu and anonymous reviewers for
+upon data dependences. Different from our model, they model        reviewing this paper and giving many constructive suggestions.
+latency and function-unit constraints but do not model register    We also thank Wei Pan who designed and implemented the
+original instruction scheduler in IGC, and all the colleagues                     ser. PLDI ’00. New York, NY, USA: Association for Computing
+who worked on IGC over the past years.                                            Machinery, 2000, p. 121–133. [Online]. Available: https://doi.org/10.
+                                                                                  1145/349299.349318
+                            R EFERENCES                                       [8] A. M. Malik, J. McInnes, and P. van Beek, “Optimal basic block
+                                                                                  instruction scheduling for multiple-issue processors using constraing
+[1] A. Chandrasekhar, G. Chen, P.-Y. Chen, W.-Y. Chen, J. Gu, P. Guo,             programming,” in 2006 18th IEEE International Conference on Tools
+    S. H. P. Kumar, G.-Y. Lueh, P. Mistry, W. Pan, T. Raoux, and                  with Artificial Intelligence (ICTAI’06), 2006, pp. 279–287.
+    K. Trifunovic, “Igc: The open source intel graphics compiler,” in
+    2019 IEEE/ACM International Symposium on Code Generation and              [9] R. C. n. Lozano, M. Carlsson, G. H. Blindell, and C. Schulte,
+    Optimization (CGO), 2019, pp. 254–265.                                        “Combinatorial register allocation and instruction scheduling,” ACM
+[2] R. Sethi and J. D. Ullman, “The generation of optimal code for                Trans. Program. Lang. Syst., vol. 41, no. 3, jul 2019. [Online].
+    arithmetic expressions,” J. ACM, vol. 17, no. 4, pp. 715–728, Oct.            Available: https://doi.org/10.1145/3332373
+    1970. [Online]. Available: http://doi.acm.org/10.1145/321607.321620      [10] J. R. Goodman and W.-C. Hsu, “Code scheduling and register
+[3] A. W. Appel and K. J. Supowit, “Generalizations of the sethi-ullman           allocation in large basic blocks,” in Proceedings of the 2Nd
+    algorithm for register allocation,” Software: Practice and Experience,        International Conference on Supercomputing, ser. ICS ’88. New
+    vol. 17, no. 6, pp. 417–421, 1987.                                            York, NY, USA: ACM, 1988, pp. 442–452. [Online]. Available:
+[4] L. Perron and V. Furnon, “Or-tools,” Google. [Online]. Available:             http://doi.acm.org/10.1145/55364.55407
+    https://developers.google.com/optimization/                              [11] K. V. Palem and B. B. Simons, “Scheduling time-critical instructions
+[5] A. V. Aho, S. C. Johnson, and J. D. Ullman, “Code generation for              on risc machines,” ACM Trans. Program. Lang. Syst., vol. 15, no. 4, pp.
+    expressions with common subexpressions,” J. ACM, vol. 24, no. 1, pp.          632–658, Sep. 1993. [Online]. Available: http://doi.acm.org/10.1145/
+    146–160, Jan. 1977. [Online]. Available: http://doi.acm.org/10.1145/          155183.155190
+    321992.322001
+[6] R. Govindarajan, H. Yang, J. N. Amaral, C. Zhang, and G. R.              [12] S. S. Pinter, “Register allocation with instruction scheduling,” in
+    Gao, “Minimum register instruction sequencing to reduce register              Proceedings of the ACM SIGPLAN 1993 Conference on Programming
+    spills in out-of-order issue superscalar architectures,” IEEE Trans.          Language Design and Implementation, ser. PLDI ’93. New York,
+    Comput., vol. 52, no. 1, pp. 4–20, Jan. 2003. [Online]. Available:            NY, USA: ACM, 1993, pp. 248–257. [Online]. Available: http:
+    https://doi.org/10.1109/TC.2003.1159750                                       //doi.acm.org/10.1145/155090.155114
+[7] K. Wilken, J. Liu, and M. Heffernan, “Optimal instruction scheduling     [13] W.-C. Hsu, C. N. Fischer, and J. R. Goodman, “On the minimization of
+    using integer programming,” in Proceedings of the ACM SIGPLAN 2000            loads/stores in local register allocation,” IEEE Transactions on Software
+    Conference on Programming Language Design and Implementation,                 Engineering, vol. 15, pp. 1252–1260, 1989.
+

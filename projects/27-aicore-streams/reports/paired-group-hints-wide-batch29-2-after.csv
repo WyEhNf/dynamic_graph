@@ -1,0 +1,13 @@
+name,n,pass,valid,deadline,T,peak,solve_us,solve_thread_cpu_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,optimal_certificate,time_lower_bound,memory_lower_bound,error
+"wide_unseen_high-fanout_local_k16_ret0_seed20292628",169,0,0,1364805,0,0,64963,62500,54,0,1,36,90,39253,32,0,620492,1161,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_local_k16_ret1_seed20292629",160,0,0,1854018,0,0,57923,62500,122,0,1,0,122,22781,32,0,608226,1265,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_dense_k16_ret0_seed20292638",168,1,1,1575730,1575730,3648,30082,31250,149,1,1,0,149,3966,8,0,311869,1788,""
+"wide_unseen_high-fanout_dense_k16_ret1_seed20292639",164,1,1,1718547,1718547,3618,29008,31250,57,2,1,36,93,3526,8,0,429637,1453,""
+"wide_unseen_high-fanout_local_k80_ret0_seed20299028",781,0,0,7259679,0,0,132543,140625,74,0,1,0,74,0,0,0,4529880,1243,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_local_k80_ret1_seed20299029",798,0,0,7470098,0,0,145109,140625,86,0,1,0,86,0,0,0,3029196,1491,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_dense_k80_ret0_seed20299038",813,1,1,7629902,4889034,6537,325981,296875,38,2,1,18,56,0,0,0,1907476,1518,""
+"wide_unseen_high-fanout_dense_k80_ret1_seed20299039",814,0,0,8528044,0,0,319461,312500,74,0,1,0,74,0,0,0,1809135,1887,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_local_k160_ret0_seed20307028",1576,0,0,15672103,0,0,321910,265625,86,0,1,0,86,0,0,0,9517282,1273,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_local_k160_ret1_seed20307029",1628,0,0,17960301,0,0,701383,593750,36,0,1,18,54,0,0,0,5769425,2875,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_dense_k160_ret0_seed20307038",1605,0,0,16804694,0,0,677036,578125,74,0,1,0,74,0,0,0,4031523,1871,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"wide_unseen_high-fanout_dense_k160_ret1_seed20307039",1659,0,0,16788065,0,0,947224,890625,86,0,1,0,86,0,0,0,3983397,2667,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"

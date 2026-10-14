@@ -1,0 +1,230 @@
+Start testing: Oct 11 19:13 中国标准时间
+----------------------------------------------------------
+1/14 Testing: scheduler_semantics
+1/14 Test: scheduler_semantics
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/simulator_tests.exe"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"scheduler_semantics" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+sample1_reference T=365 peak=320 baseline_T=365 baseline_peak=320
+sample2_reference T=124 peak=55
+sample3_reference T=152 peak=45
+PASS 72 semantic checks
+<end of output>
+Test time =   0.47 sec
+----------------------------------------------------------
+Test Passed.
+"scheduler_semantics" end time: Oct 11 19:13 中国标准时间
+"scheduler_semantics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/14 Testing: submission_model_and_json
+2/14 Test: submission_model_and_json
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/model_tests.exe"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"submission_model_and_json" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+PASS 269 model/parser/priority checks
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Passed.
+"submission_model_and_json" end time: Oct 11 19:13 中国标准时间
+"submission_model_and_json" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/14 Testing: assignment_grouping_equivalence
+3/14 Test: assignment_grouping_equivalence
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/assignment_tests.exe"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"assignment_grouping_equivalence" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+288 frozen-recurrence comparisons, 24 ordering checks, 3 wide closure checks, and 6 resource bound cases passed
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"assignment_grouping_equivalence" end time: Oct 11 19:13 中国标准时间
+"assignment_grouping_equivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/14 Testing: serial_frontier_exact_equivalence
+4/14 Test: serial_frontier_exact_equivalence
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/serial_frontier_tests.exe"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"serial_frontier_exact_equivalence" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+1120 serial-frontier checks; 960 independently optimized capacities (outer/inner normalization) plus 160 budget controls
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"serial_frontier_exact_equivalence" end time: Oct 11 19:13 中国标准时间
+"serial_frontier_exact_equivalence" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/14 Testing: local_batch_quick
+5/14 Test: local_batch_quick
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/aicore_bench.exe" "--input" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/quick.json" "--output" "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/test-reports/quick-results.json" "--failures" "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/test-reports/quick-failures.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"local_batch_quick" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+cases=81 passed=81 failed=0
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"local_batch_quick" end time: Oct 11 19:13 中国标准时间
+"local_batch_quick" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/14 Testing: numeric-controls_int64
+6/14 Test: numeric-controls_int64
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/numeric_boundary_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/numeric-controls-batch42.json" "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/test-reports/numeric-controls-numeric.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"numeric-controls_int64" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+11/11 fixed-plan bigint gold checks
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"numeric-controls_int64" end time: Oct 11 19:13 中国标准时间
+"numeric-controls_int64" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/14 Testing: numeric-parallel_int64
+7/14 Test: numeric-parallel_int64
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/numeric_boundary_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/numeric-parallel-batch42.json" "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/test-reports/numeric-parallel-numeric.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"numeric-parallel_int64" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+320/320 fixed-plan bigint gold checks
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"numeric-parallel_int64" end time: Oct 11 19:13 中国标准时间
+"numeric-parallel_int64" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/14 Testing: numeric-parallel-valid_int64
+8/14 Test: numeric-parallel-valid_int64
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/numeric_boundary_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/numeric-parallel-valid-batch42.json" "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/test-reports/numeric-parallel-valid-numeric.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"numeric-parallel-valid_int64" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+160/160 fixed-plan bigint gold checks
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Passed.
+"numeric-parallel-valid_int64" end time: Oct 11 19:13 中国标准时间
+"numeric-parallel-valid_int64" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/14 Testing: scaled-serial-controls_int64
+9/14 Test: scaled-serial-controls_int64
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/numeric_boundary_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/scaled-serial-controls-batch42.json" "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/test-reports/scaled-serial-controls-numeric.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"scaled-serial-controls_int64" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+32/32 fixed-plan bigint gold checks
+<end of output>
+Test time =   1.51 sec
+----------------------------------------------------------
+Test Passed.
+"scaled-serial-controls_int64" end time: Oct 11 19:13 中国标准时间
+"scaled-serial-controls_int64" time elapsed: 00:00:01
+----------------------------------------------------------
+
+10/14 Testing: numeric_priority_exact_gold
+10/14 Test: numeric_priority_exact_gold
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/numeric_priority_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/priority-gold-batch42.txt"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"numeric_priority_exact_gold" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+20180 exact priority arithmetic checks
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Passed.
+"numeric_priority_exact_gold" end time: Oct 11 19:13 中国标准时间
+"numeric_priority_exact_gold" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/14 Testing: shallow_profile_bigint_gold
+11/14 Test: shallow_profile_bigint_gold
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/shallow_profile_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/shallow-profile-gold-batch44.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"shallow_profile_bigint_gold" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+2590 independent Python-bigint profiles/order/capacity controls and 160 bounded search validity checks passed
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Passed.
+"shallow_profile_bigint_gold" end time: Oct 11 19:13 中国标准时间
+"shallow_profile_bigint_gold" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/14 Testing: workspace_projection_bigint_gold
+12/14 Test: workspace_projection_bigint_gold
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/workspace_projection_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/projection-gold-batch45.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"workspace_projection_bigint_gold" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+495 independent full-ancestor/live-set bigint controls passed
+<end of output>
+Test time =   0.50 sec
+----------------------------------------------------------
+Test Passed.
+"workspace_projection_bigint_gold" end time: Oct 11 19:13 中国标准时间
+"workspace_projection_bigint_gold" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/14 Testing: consumer_group_bigint_gold
+13/14 Test: consumer_group_bigint_gold
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/consumer_group_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/group-gold-batch48.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"consumer_group_bigint_gold" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+83 recognition controls / 210 group moves: independent bigint passed
+<end of output>
+Test time =   0.47 sec
+----------------------------------------------------------
+Test Passed.
+"consumer_group_bigint_gold" end time: Oct 11 19:13 中国标准时间
+"consumer_group_bigint_gold" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/14 Testing: remaining_direct_release_cut_bigint_gold
+14/14 Test: remaining_direct_release_cut_bigint_gold
+Command: "F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build/release_cut_tests.exe" "F:/Hackathon/projects/27-aicore-streams/research/batch51/cmake/../../../data/release-cut-gold-batch51.json"
+Directory: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+"remaining_direct_release_cut_bigint_gold" start time: Oct 11 19:13 中国标准时间
+Output:
+----------------------------------------------------------
+102 original remaining-DIRECT/ancestor cut bigint controls passed
+<end of output>
+Test time =   0.47 sec
+----------------------------------------------------------
+Test Passed.
+"remaining_direct_release_cut_bigint_gold" end time: Oct 11 19:13 中国标准时间
+"remaining_direct_release_cut_bigint_gold" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 11 19:13 中国标准时间

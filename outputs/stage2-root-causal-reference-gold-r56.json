@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791782172.0077717,
+  "gold_sha256": "7aa2fa78a2a1282da1d2c0df34a80ccdb5348f9c871ba9a852171a5f0fa8c756",
+  "reference_freeze_sha256": "08e72f01a55acf9ec3838310c891d32686f429d7f6ed799ea25d48be4fab3daa",
+  "controls": 160,
+  "qualified_pairs": 96,
+  "exhausted": 12,
+  "fixed_whole_legal": 144,
+  "fixed_whole_expected_invalid": 16,
+  "root_original_physics_replays": 320,
+  "scope": "All160 original-DAG independent index-based FIFO/LIFO charged scans rebuilt, raw budget saturation/cleared partial pair and bigint original direct lifetime BEGIN/END verified. Driver carries no expected pair into candidate. Old hand and environmental preflight errors retained. No candidate execution or recovery claim.",
+  "authorization": "Prepare file-backed GCC/Clang-UBSan isolated160-control build/test run plan, exactsource/driver/ABI/ownedG compiler/output/temp paths and freshresources freeze. No compile/solver before plan review; default/oldTeX unchanged. Validate literalerrors/partial scan, whole real plans, shared2M/16M budget before original12 expansion."
+}

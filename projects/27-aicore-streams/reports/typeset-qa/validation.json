@@ -1,0 +1,11 @@
+{
+  "tex_sha256": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82",
+  "solution_sha256": "b68148bfed40aa1cd3e587efa4162c134e622b31ff2beac5425991de98e15b88",
+  "compiler": "XeLaTeX TeX Live 2025",
+  "runs": 2,
+  "pages": 23,
+  "overfull": 0,
+  "missing_character": 0,
+  "compile_log": "reports/typeset-qa/project27-research.log",
+  "scope": "Compile verification only; final visual rendering handled by root"
+}

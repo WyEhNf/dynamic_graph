@@ -1,0 +1,49 @@
+{
+  "before": "v14_auto",
+  "after": "research_portfolio",
+  "corpus_sha256": "d3220af4cab32e55c12d4e9dcd68d8d3171b916fdeb08a3a638bbee6ccc43364",
+  "case_count": 48,
+  "joint_successes": 29,
+  "status_pairs": {
+    "verified->verified": 29,
+    "budget_exhausted->verified": 19
+  },
+  "quality_pairs": {
+    "same": 29
+  },
+  "before_copies_joint": 0,
+  "after_copies_joint": 0,
+  "median_speedup_joint": 2.025748274799553,
+  "families": {
+    "skew_tree": {
+      "status_pairs": {
+        "verified->verified": 29,
+        "budget_exhausted->verified": 19
+      },
+      "joint_successes": 29,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 2.025748274799553
+    }
+  },
+  "before_metrics": {
+    "latency_all_ms": {
+      "p50": 104.06079998938367,
+      "p95": 461.4298000233248,
+      "p99": 496.4200999820605
+    },
+    "equal_weight_copy_output_success": 0.0,
+    "equal_weight_copy_original_success": 0.0,
+    "failure_rate": 0.39583333333333337
+  },
+  "after_metrics": {
+    "latency_all_ms": {
+      "p50": 66.82929996168241,
+      "p95": 603.5754999611527,
+      "p99": 611.9478000327945
+    },
+    "equal_weight_copy_output_success": 0.0,
+    "equal_weight_copy_original_success": 0.0,
+    "failure_rate": 0.0
+  }
+}

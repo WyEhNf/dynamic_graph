@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791781536.4373689,
+  "manifest_sha256": "dd49a1c7a5a92f8cb05cdcc73e3dd64372613cdbe120aed159185c125028b7f8",
+  "source_aggregate_sha256": "af6c935389e1f0ec397cdcd03d5209db3b78b9b17aef8490f4558e80e08066c0",
+  "source_files": 70,
+  "original_inputs": 336,
+  "families": 21,
+  "legal_initials": 272,
+  "initial_COPY": 192902,
+  "search_routes": 164,
+  "zero_COPY_retained": 108,
+  "no_incumbent_statuses": {
+    "proven_infeasible_under_model": 47,
+    "scheduling_failure": 8,
+    "budget_exhausted": 9
+  },
+  "large_absolute_directory": "G:\\Hackathon-stage2-artifacts\\project18\\r187-general-region-full336",
+  "small_report_directory": "F:\\Hackathon\\projects\\18-isa-scheduler\\experiments\\r187-general-region-full336",
+  "actual_G_free_bytes": 515572948992,
+  "static_scope": "Launcher and incremental raw-ring replay reviewed: original source/dependency/COPY identity and all labels/OPEN/unfinished retained; actual full proposal and best verified. Only output volume changed; no claim of solver execution or official Level.",
+  "authorization": "Exactly one frozen full336 G-volume --run. Retain all 336 including 64 original no-incumbent statuses, all proposals/frontier labels/best and partial failure. Actual G/RAM/F-small gates; no restart, sampling, default promotion or old-evidence deletion."
+}

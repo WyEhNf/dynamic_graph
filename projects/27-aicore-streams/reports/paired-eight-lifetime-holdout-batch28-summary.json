@@ -1,0 +1,436 @@
+{
+  "suite": "data\\lifetime-locality-holdout.json",
+  "suite_sha256": "0a91a91ac847d35c45a0a0375ab48d7df5b4928d4b469d3854784d8dfc07f4fd",
+  "baseline_exe_sha256": "a2753bb1ee6f9ad838ca6fb7e2623642378ba29e739d7d4059320ce61bed9898",
+  "current_exe_sha256": "f94074b8101fbf432828686b1db671b11ffed84d515f1ac3ad60185fa0e59831",
+  "current_solution_sha256": "b52f3b8e2b54e0f8bb4d1f0a896018e0139b38f2b8a0f65a7c1048d2c9477925",
+  "baseline_solution_sha256": "77ef67341e91a00a8b0357b43741d62838a54da7ee68c2bfec3d606ea2a70f2e",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-eight-lifetime-holdout-batch28-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 4.2240402000024915,
+        "peak_working_set_bytes": 43433984
+      },
+      "after": {
+        "report": "reports\\paired-eight-lifetime-holdout-batch28-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.0903229999821633,
+        "peak_working_set_bytes": 43315200
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "after": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "common_cases": 27,
+        "common_solve_us_before": 1044199,
+        "common_solve_us_after": 1243233,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 72,
+        "scales": [
+          {
+            "n": 59,
+            "median_us": 7150.5,
+            "max_us": 8428
+          },
+          {
+            "n": 63,
+            "median_us": 10600.5,
+            "max_us": 11280
+          },
+          {
+            "n": 69,
+            "median_us": 4668.5,
+            "max_us": 4746
+          },
+          {
+            "n": 70,
+            "median_us": 11507.0,
+            "max_us": 18107
+          },
+          {
+            "n": 71,
+            "median_us": 10412.0,
+            "max_us": 10510
+          },
+          {
+            "n": 74,
+            "median_us": 46679.0,
+            "max_us": 78529
+          },
+          {
+            "n": 165,
+            "median_us": 50357.5,
+            "max_us": 77195
+          },
+          {
+            "n": 172,
+            "median_us": 81779.5,
+            "max_us": 82163
+          },
+          {
+            "n": 176,
+            "median_us": 35608.0,
+            "max_us": 36423
+          },
+          {
+            "n": 180,
+            "median_us": 24821.0,
+            "max_us": 25024
+          },
+          {
+            "n": 184,
+            "median_us": 141952.5,
+            "max_us": 147796
+          },
+          {
+            "n": 196,
+            "median_us": 150040.5,
+            "max_us": 195375
+          },
+          {
+            "n": 512,
+            "median_us": 315373.5,
+            "max_us": 345558
+          },
+          {
+            "n": 516,
+            "median_us": 75883.5,
+            "max_us": 80054
+          },
+          {
+            "n": 521,
+            "median_us": 63474.5,
+            "max_us": 63794
+          },
+          {
+            "n": 522,
+            "median_us": 62202.0,
+            "max_us": 63246
+          },
+          {
+            "n": 534,
+            "median_us": 111102.0,
+            "max_us": 111798
+          },
+          {
+            "n": 547,
+            "median_us": 119896.0,
+            "max_us": 127468
+          }
+        ],
+        "common_thread_cpu_measured_cases": 27,
+        "common_thread_cpu_us_before": 1031250,
+        "common_thread_cpu_us_after": 1171875,
+        "all_solve_us_before": 2044190,
+        "all_thread_cpu_us_before": 2062500,
+        "all_solve_us_after": 2647016,
+        "all_thread_cpu_us_after": 2484375
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-eight-lifetime-holdout-batch28-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.2664565999875776,
+        "peak_working_set_bytes": 43384832
+      },
+      "after": {
+        "report": "reports\\paired-eight-lifetime-holdout-batch28-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.362734400026966,
+        "peak_working_set_bytes": 44318720
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "after": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "common_cases": 27,
+        "common_solve_us_before": 1434783,
+        "common_solve_us_after": 927052,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 72,
+        "scales": [
+          {
+            "n": 59,
+            "median_us": 5869.5,
+            "max_us": 6223
+          },
+          {
+            "n": 63,
+            "median_us": 6997.0,
+            "max_us": 7323
+          },
+          {
+            "n": 69,
+            "median_us": 6681.0,
+            "max_us": 6742
+          },
+          {
+            "n": 70,
+            "median_us": 15724.0,
+            "max_us": 24947
+          },
+          {
+            "n": 71,
+            "median_us": 7589.0,
+            "max_us": 7861
+          },
+          {
+            "n": 74,
+            "median_us": 36450.0,
+            "max_us": 62001
+          },
+          {
+            "n": 165,
+            "median_us": 33759.5,
+            "max_us": 51022
+          },
+          {
+            "n": 172,
+            "median_us": 51772.5,
+            "max_us": 53459
+          },
+          {
+            "n": 176,
+            "median_us": 21905.0,
+            "max_us": 22143
+          },
+          {
+            "n": 180,
+            "median_us": 18374.0,
+            "max_us": 18458
+          },
+          {
+            "n": 184,
+            "median_us": 106483.5,
+            "max_us": 111428
+          },
+          {
+            "n": 196,
+            "median_us": 108144.5,
+            "max_us": 139114
+          },
+          {
+            "n": 512,
+            "median_us": 192898.5,
+            "max_us": 202372
+          },
+          {
+            "n": 516,
+            "median_us": 50385.5,
+            "max_us": 52313
+          },
+          {
+            "n": 521,
+            "median_us": 45916.5,
+            "max_us": 46027
+          },
+          {
+            "n": 522,
+            "median_us": 47139.5,
+            "max_us": 47431
+          },
+          {
+            "n": 534,
+            "median_us": 85594.5,
+            "max_us": 85920
+          },
+          {
+            "n": 547,
+            "median_us": 87822.0,
+            "max_us": 89361
+          }
+        ],
+        "common_thread_cpu_measured_cases": 27,
+        "common_thread_cpu_us_before": 1156250,
+        "common_thread_cpu_us_after": 937500,
+        "all_solve_us_before": 2839071,
+        "all_thread_cpu_us_before": 2375000,
+        "all_solve_us_after": 1859012,
+        "all_thread_cpu_us_after": 1859375
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-eight-lifetime-holdout-batch28-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.63385569996899,
+        "peak_working_set_bytes": 43372544
+      },
+      "after": {
+        "report": "reports\\paired-eight-lifetime-holdout-batch28-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 4.614902899949811,
+        "peak_working_set_bytes": 43761664
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "after": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "common_cases": 27,
+        "common_solve_us_before": 887798,
+        "common_solve_us_after": 1337911,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 72,
+        "scales": [
+          {
+            "n": 59,
+            "median_us": 4671.5,
+            "max_us": 4725
+          },
+          {
+            "n": 63,
+            "median_us": 5957.0,
+            "max_us": 6005
+          },
+          {
+            "n": 69,
+            "median_us": 5712.0,
+            "max_us": 5741
+          },
+          {
+            "n": 70,
+            "median_us": 13651.0,
+            "max_us": 21649
+          },
+          {
+            "n": 71,
+            "median_us": 6147.0,
+            "max_us": 6421
+          },
+          {
+            "n": 74,
+            "median_us": 29896.0,
+            "max_us": 51256
+          },
+          {
+            "n": 165,
+            "median_us": 34627.5,
+            "max_us": 52189
+          },
+          {
+            "n": 172,
+            "median_us": 52609.0,
+            "max_us": 54502
+          },
+          {
+            "n": 176,
+            "median_us": 23322.0,
+            "max_us": 24712
+          },
+          {
+            "n": 180,
+            "median_us": 19302.5,
+            "max_us": 19447
+          },
+          {
+            "n": 184,
+            "median_us": 113087.0,
+            "max_us": 118832
+          },
+          {
+            "n": 196,
+            "median_us": 93366.0,
+            "max_us": 105830
+          },
+          {
+            "n": 512,
+            "median_us": 234890.5,
+            "max_us": 237329
+          },
+          {
+            "n": 516,
+            "median_us": 52583.0,
+            "max_us": 52984
+          },
+          {
+            "n": 521,
+            "median_us": 226497.5,
+            "max_us": 263050
+          },
+          {
+            "n": 522,
+            "median_us": 60504.0,
+            "max_us": 66131
+          },
+          {
+            "n": 534,
+            "median_us": 100222.5,
+            "max_us": 103450
+          },
+          {
+            "n": 547,
+            "median_us": 91228.5,
+            "max_us": 93534
+          }
+        ],
+        "common_thread_cpu_measured_cases": 27,
+        "common_thread_cpu_us_before": 875000,
+        "common_thread_cpu_us_after": 1296875,
+        "all_solve_us_before": 1799681,
+        "all_thread_cpu_us_before": 1765625,
+        "all_solve_us_after": 2336549,
+        "all_thread_cpu_us_after": 2312500
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch27\\solution.cpp",
+  "median_common_solve_us_before": 1044199,
+  "median_common_solve_us_after": 1243233,
+  "median_wall_seconds_before": 3.63385569996899,
+  "median_wall_seconds_after": 3.0903229999821633,
+  "maximum_cli_working_set_bytes": 44318720,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 1031250,
+  "median_all_solve_us_before": 2044190,
+  "median_all_thread_cpu_us_before": 2062500,
+  "median_common_thread_cpu_us_after": 1171875,
+  "median_all_solve_us_after": 2336549,
+  "median_all_thread_cpu_us_after": 2312500,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5"
+}

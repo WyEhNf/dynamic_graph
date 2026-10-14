@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Core LOCAL adapter v1 - not the organizer .case format",
+  "type": "object",
+  "required": ["format", "cases"],
+  "properties": {
+    "format": {"const": "aicore-local-v1"},
+    "cases": {"type": "array", "items": {"$ref": "#/$defs/case"}}
+  },
+  "$defs": {
+    "task": {"type": "object", "required": ["op_id", "wait_before", "record_after"], "properties": {"op_id": {"type": "integer"}, "wait_before": {"type": "array", "uniqueItems": true, "items": {"type": "integer", "minimum": 0}}, "record_after": {"type": "integer", "minimum": -1}}},
+    "plan": {"type": "object", "required": ["streams"], "properties": {"streams": {"type": "array", "items": {"type": "object", "required": ["tasks"], "properties": {"tasks": {"type": "array", "items": {"$ref": "#/$defs/task"}}}}}}},
+    "node": {"type": "object", "required": ["id", "core_type", "core_num", "exec_time", "workspace_memory", "output_memory", "inputs"], "properties": {"id": {"type": "integer"}, "core_type": {"enum": ["AIC", "AIV"]}, "core_num": {"type": "integer", "minimum": 1, "maximum": 128}, "exec_time": {"type": "integer", "minimum": 1, "maximum": 1000000000}, "workspace_memory": {"type": "integer", "minimum": 0, "maximum": 1000000000}, "output_memory": {"type": "integer", "minimum": 0, "maximum": 1000000000}, "inputs": {"type": "array", "uniqueItems": true, "items": {"type": "integer"}}}},
+    "hardware": {"type": "object", "required": ["aic_core_num", "aiv_core_num", "stream_num", "memory_limit", "event_record_time", "event_wait_time"], "properties": {"aic_core_num": {"type": "integer", "minimum": 1, "maximum": 128}, "aiv_core_num": {"type": "integer", "minimum": 1, "maximum": 128}, "stream_num": {"type": "integer", "minimum": 1}, "memory_limit": {"type": "integer", "minimum": 0, "maximum": 1000000000}, "event_record_time": {"type": "integer", "minimum": 0, "maximum": 1000000}, "event_wait_time": {"type": "integer", "minimum": 0, "maximum": 1000000}}},
+    "case": {"type": "object", "required": ["name", "hardware", "nodes", "deadline_us"], "properties": {"name": {"type": "string"}, "hardware": {"$ref": "#/$defs/hardware"}, "nodes": {"type": "array", "items": {"$ref": "#/$defs/node"}}, "deadline_us": {"type": "integer", "minimum": 0}, "expected_feasible": {"type": "boolean"}, "witness_plan": {"$ref": "#/$defs/plan"}}}
+  }
+}

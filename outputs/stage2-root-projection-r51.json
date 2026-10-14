@@ -1,0 +1,50 @@
+{
+  "reviewed_unix": 1791715928.5893602,
+  "passed": true,
+  "records": 61,
+  "applicable": 35,
+  "recovered_records": 4,
+  "recovered": [
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "nodes": 131,
+      "T": 2421486,
+      "peak": 1946,
+      "capacity": 1964,
+      "stream_count": 1
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "nodes": 71,
+      "T": 1487053,
+      "peak": 1745,
+      "capacity": 1747,
+      "stream_count": 1
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "nodes": 71,
+      "T": 1487053,
+      "peak": 1760,
+      "capacity": 1762,
+      "stream_count": 1
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "nodes": 140,
+      "T": 1430270,
+      "peak": 2481,
+      "capacity": 2483,
+      "stream_count": 1
+    }
+  ],
+  "evidence": {
+    "outputs/stage2-projection-r51-root-snapshot/diagnostic.exe": "d160f9da2d9f725cd2f57763b41aa60ea169c088705336d73a3fb1f3200e941f",
+    "outputs/stage2-projection-r51-root-snapshot/diagnostic.json": "e45ee90cbf5f5f983160f06c956e698dcf219eacb328135e47809cb2c27beafb",
+    "outputs/stage2-projection-r51-root-snapshot/inputs.json": "fe0bcdce1b2d28dde606e95f235e95df23a665448de516e4da7df7a9b2da998e",
+    "outputs/stage2-projection-r51-root-snapshot/projection.cpp.inc": "9df768d1eae709715ff29b9b9b9c2f30796f7fa420f1a707962ed0c150e095b2",
+    "outputs/stage2-projection-r51-root-snapshot/solution.cpp": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b"
+  },
+  "verifier_sha256": "a6f864f8236e8aafb8b3ec00ad557affea99ce0671c1b9d2a3a90d5b08412498",
+  "scope": "Root independent Python bigint heap-event replay of4 actual complete serial plans, same original nodes/hardware/deadline. Input-only61 subset contains no witness/generation fields. All were previously unresolved in frozenR44. Three preserve R48 recoveries and one new140-node topology was unresolved in R48; no default promotion, broad solver validity, performance or official score claim. All61 statuses retained."
+}

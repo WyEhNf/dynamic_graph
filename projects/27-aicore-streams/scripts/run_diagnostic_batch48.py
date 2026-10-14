@@ -1,0 +1,16 @@
+"""One isolated semantic+quality batch; no performance or default promotion."""
+import hashlib,json,subprocess,time
+from pathlib import Path
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+commands=[('group',['research/batch48/test_group.exe','data/group-gold-batch48.json']),('profile',['research/batch48/test_projection.exe','data/projection-gold-batch45.json']),('hard',['research/batch48/diagnostic.exe','data/unresolved-r44-input-only-batch45.json','reports/projection-unresolved-diagnostic-batch48.json']),('heldout',['research/batch48/diagnostic.exe','data/projection-heldout-unresolved-input-only-batch45.json','reports/projection-heldout-unresolved-diagnostic-batch48.json'])]
+statuses=[]
+for label,cmd in commands:
+    begin=time.perf_counter();r=subprocess.run(cmd,capture_output=True,text=True);Path(f'reports/projection-{label}-status-batch48.txt').write_text(r.stdout+r.stderr,encoding='utf-8');print(label,r.returncode,r.stdout.strip(),flush=True)
+    statuses.append(dict(label=label,command=cmd,actual_exit_code=r.returncode,shared_functional_wall_seconds=time.perf_counter()-begin));assert r.returncode==0
+comparisons={}
+for label in ('unresolved','heldout-unresolved'):
+    before=json.loads(Path(f'reports/projection-{label}-diagnostic-batch45.json').read_text());after=json.loads(Path(f'reports/projection-{label}-diagnostic-batch48.json').read_text());a,b=before['cases'],after['cases'];assert len(a)==len(b) and all(x['name']==y['name'] for x,y in zip(a,b))
+    comparisons[label]=dict(before=before['summary'],after=after['summary'],newly_recovered=[x['name'] for x,y in zip(a,b) if not x['pass'] and y['pass']],lost=[x['name'] for x,y in zip(a,b) if x['pass'] and not y['pass']],after_exhausted=sum(x['exhausted'] for x in b))
+paths=['research/batch48/solution.cpp','research/batch48/projection.cpp.inc','research/batch48/diagnostic.cpp','research/batch48/test_projection.cpp','research/batch48/test_group_template.cpp','research/batch48/diagnostic.exe','research/batch48/test_projection.exe','research/batch48/test_group.exe','scripts/prepare_batch48.py','scripts/make_group_gold_batch48.py','scripts/build_batch48.py','scripts/run_diagnostic_batch48.py','include/problem.h','include/local_json.h','src/benchmark.cpp','src/simulator.cpp','include/simulator.h','include/solver_metrics.h','data/group-gold-batch48.json','data/projection-gold-batch45.json','data/unresolved-r44-input-only-batch45.json','data/projection-heldout-unresolved-input-only-batch45.json','reports/projection-unresolved-diagnostic-batch48.json','reports/projection-heldout-unresolved-diagnostic-batch48.json']
+report=dict(status='isolated functional only',source_sha=sha('research/batch48/solution.cpp'),change='R45 seeds/threshold/profile/cap preserved; input direct-user sets propose stable group insertion only after single-node local minimum',statuses=statuses,sha256={p:sha(p) for p in paths},summary=comparisons,timing='Shared functional costs; no timing pairs or performance inference',default45_source_sha=sha('solution/solution.cpp'))
+Path('research/batch48/functional-checkpoint.json').write_text(json.dumps(report,indent=2),encoding='utf-8');print(json.dumps(comparisons,indent=2),flush=True)

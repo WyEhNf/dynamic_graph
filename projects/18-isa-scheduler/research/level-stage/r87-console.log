@@ -1,0 +1,11 @@
+{"progress": 32, "total": 336, "elapsed_s": 5.449443400022574}
+{"progress": 64, "total": 336, "elapsed_s": 11.883688000030816}
+{"progress": 96, "total": 336, "elapsed_s": 15.793154900020454}
+{"progress": 128, "total": 336, "elapsed_s": 19.416722499998286}
+{"progress": 160, "total": 336, "elapsed_s": 27.72748490003869}
+{"progress": 192, "total": 336, "elapsed_s": 37.3616399000166}
+{"progress": 224, "total": 336, "elapsed_s": 44.22628270002315}
+{"progress": 256, "total": 336, "elapsed_s": 49.67837189999409}
+{"progress": 288, "total": 336, "elapsed_s": 57.419223900011275}
+{"progress": 320, "total": 336, "elapsed_s": 65.80844310001703}
+{"report": "F:\\Hackathon\\projects\\18-isa-scheduler\\experiments\\r87-research-portfolio-336\\report.json", "summary": {"v14_auto": {"attempted": 336, "verified": 272, "statuses": {"budget_exhausted": 10, "proven_infeasible_under_model": 47, "scheduling_failure": 7, "verified": 272}, "total_inserted_copies_successes": 227676, "total_output_count_successes": 582496, "optimizer_ms_all_inputs": {"p50": 32.03379997285083, "p95": 257.03639996936545, "p99": 293.3185999863781}}, "research_portfolio": {"attempted": 336, "verified": 272, "statuses": {"budget_exhausted": 9, "proven_infeasible_under_model": 47, "scheduling_failure": 8, "verified": 272}, "total_inserted_copies_successes": 194610, "total_output_count_successes": 549430, "optimizer_ms_all_inputs": {"p50": 32.462799979839474, "p95": 256.4703999669291, "p99": 279.31519999401644}}}}

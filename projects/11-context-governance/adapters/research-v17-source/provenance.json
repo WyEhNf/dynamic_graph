@@ -1,0 +1,33 @@
+{
+  "frozen_unix": 1791658983.708311,
+  "intent": "public-examples-from-public-context-only-guarded-literal-execution-review-hidden-tests-after-all-calls",
+  "source_sha256_at_freeze": {
+    "__init__.py": "e885d538068a3d6b86ec95ca3951feade57e835545969a0d12253af74d83d987",
+    "benchmark.py": "99c49db9fcc5d6947553739dbe8e0c76923b1ad01d03d49649d76084acf4883c",
+    "bundles.py": "71b8ada36cc5ee67f1c741ac4dd98127e56b55847c0bc8339447721922f10941",
+    "cli.py": "2a2c0dafcb5a5a25cb22bd6ca44e785843492b0baa420ba3d8cc2816bd22e3a4",
+    "contract_audit.py": "02b129db5bc262b9bd8e801453f741c400de24ad744375215fd347f6b790d396",
+    "core.py": "cbc0b5bc14b83e3d085a0f4ffb58ee7b2a573dcde2457101fb52bcd97de8b717",
+    "engineering_suite.py": "999c1a8a42b645d55388c9d82d89c7d5225d1cb2e1c8200ee4f5c0d220ca88e8",
+    "evaluation.py": "43aa62ccb83af17d56f598eac710847f2d5d703b8facdfd7f0e0655ee464a449",
+    "holdout_suite.py": "75f2ffb2174bfbd1a4b5795a71860d2cb8d32c6a10e92a7606d17f4d24b46003",
+    "incremental_benchmark.py": "34ae3efa4fa2d639de8c8399be339de284890f2ccaa4fcb3bf821c20cce1284e",
+    "local_model.py": "4b33707a68a1ce1f3e28e3ee84ea27bda9cbfc9f3d44abe82bc245faa16a68c6",
+    "prepare_model.py": "597744b82ae6b8bfcb0bfe1f82967297b71f493cbd5f155bae3a1648eca25b92",
+    "public_examples.py": "af7b12dafceda223c8c86458b31316957dfa263ff6c89e5834500f6083c6528c",
+    "quality.py": "6f515055f75c5471baa8edeaccc7382af96ae8cde535ed07bfdcf3495db26088",
+    "research_benchmark.py": "85c6a0afbf9432d0709dd81a291a98e2d849b7a8dc2e026d2c809ba1115b39ba",
+    "research_suite.py": "f80b5e7d54566fe3a6683700f2bd46f9893367f8a789ddcd555fbc61a38d6099",
+    "resources.py": "f20dee7ca880c1962b10b73e537038729e2c31ebb115f77565594cf5189da0e5",
+    "run_local_eval.py": "e0405d650290e941b0e5411156e15fa983f38fc286a50842e14c43e8b29c8cc5",
+    "selftest_suite.py": "aba27c45684bab6056d2739d65006931517746a426aedbf4ac8f8da6aba26b5f",
+    "session_benchmark.py": "8bd1bc5cc8ae2ad5448a9d468ed02253a24bb4b91fbc4932eb7fda8b36c6e2af",
+    "session_metrics.py": "cf48aad0cd5634b12c368df81a3b26be6d141e9a899d2866947eb2f02026fde1",
+    "token_benchmark.py": "17ee5e1bd324a4b07947cb0b817264f43aae2b1929cf9bf293dbe03789709fd1",
+    "typescript_context.py": "4514d29482d42fe803ff05465b27f81a22d8a34b0625f89e2fabe9e6b1670aae",
+    "verify_recorded_eval.py": "c2c8475ed09c5f143b227f347e9d0e97956081bcf6e9a5dc36763377a36fa99e",
+    "workflow_suite.py": "07f0f10dfa26c3f2746d95ad262736626030f9cd5eed5564e3e86839ab1a3999"
+  },
+  "script_sha256": "a21e52453929ca46a8857a3b103c239549d8e7bcf2a57b70405b2d0aa9b320e2",
+  "scope": "Python modules only; evaluation also records fixtures, model files and invocation."
+}

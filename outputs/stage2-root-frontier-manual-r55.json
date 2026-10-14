@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791775972.8950372,
+  "manual_controls": 8,
+  "legal_supplied_orders": 5,
+  "expected_invalid_supplied_orders": 3,
+  "original_topological_orders_enumerated": 52,
+  "controls": [
+    {
+      "name": "outside-user-obstruction-correct",
+      "supplied_valid": true,
+      "supplied_peak": 100,
+      "legal_serial_orders": 3,
+      "minimum_legal_serial_peak": 100
+    },
+    {
+      "name": "outside-user-obstruction-wrong",
+      "supplied_valid": false,
+      "supplied_peak": 120,
+      "legal_serial_orders": 3,
+      "minimum_legal_serial_peak": 100
+    },
+    {
+      "name": "equal-live-distinct-identity-correct",
+      "supplied_valid": true,
+      "supplied_peak": 110,
+      "legal_serial_orders": 3,
+      "minimum_legal_serial_peak": 110
+    },
+    {
+      "name": "equal-live-distinct-identity-wrong",
+      "supplied_valid": false,
+      "supplied_peak": 130,
+      "legal_serial_orders": 3,
+      "minimum_legal_serial_peak": 110
+    },
+    {
+      "name": "wide-capacity-original-cut-legal",
+      "supplied_valid": true,
+      "supplied_peak": 120,
+      "legal_serial_orders": 6,
+      "minimum_legal_serial_peak": 100
+    },
+    {
+      "name": "one-below-minimum-peak",
+      "supplied_valid": false,
+      "supplied_peak": 100,
+      "legal_serial_orders": 0,
+      "minimum_legal_serial_peak": null
+    },
+    {
+      "name": "two-sinks-retained",
+      "supplied_valid": true,
+      "supplied_peak": 100,
+      "legal_serial_orders": 2,
+      "minimum_legal_serial_peak": 100
+    },
+    {
+      "name": "two-external-direct-users",
+      "supplied_valid": true,
+      "supplied_peak": 100,
+      "legal_serial_orders": 4,
+      "minimum_legal_serial_peak": 100
+    }
+  ],
+  "manual_inputs_sha256": "afe4c3615d9d175fcdec3d2a02147ef2c522178625e8f90f39404fa813b37e29",
+  "manual_physics_sha256": "c75aaa8fd4647c2c4eb54ed0844c27f6eead8bad942225b6aac9f22b17da7342",
+  "scope": "Root independently enumerated original topological serial orders with bigint BEGIN W+O and last originalDIRECT END release/sink retention. Equal-live70 distinct completed identities have different continuation feasibility. FullDAG manual counterexamples support branching within failed cut, not actual failed63 recovery or production wholedefault failure."
+}

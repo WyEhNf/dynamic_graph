@@ -1,0 +1,183 @@
+{
+  "suite": "data\\resource-quality-holdout.json",
+  "suite_sha256": "e767cd15bf0a9160610104ffb78b430e0bd17914e5fbd7339d32d5d2d153039d",
+  "baseline_exe_sha256": "bc5ef0e666c6bf85ece3bce24cc44e175d45e6214e3bb06780e040e39e83360f",
+  "current_exe_sha256": "46dc296822bb19b48a23dfa47e9a0c0fb227b8f69e3baa6023ec439262949571",
+  "current_solution_sha256": "6e66b643ef5a58d879e1c8bbf3602f404977a34a0c4d4536a09d63d019b99a79",
+  "baseline_solution_sha256": "87cade82e33518fe6176e0ff01b43f033748cc8a563ca539d9de9b6bf2021151",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-resource-corepriority-holdout-batch18-1-before.json",
+        "exit_code": 0,
+        "wall_seconds": 0.6733099999837577,
+        "peak_working_set_bytes": 46505984
+      },
+      "after": {
+        "report": "reports\\paired-resource-corepriority-holdout-batch18-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.7229402000084519,
+        "peak_working_set_bytes": 46813184
+      },
+      "comparison": {
+        "before": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "after": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "common_cases": 18,
+        "common_solve_us_before": 437522,
+        "common_solve_us_after": 486986,
+        "improved_T": 7,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 483,
+        "scales": [
+          {
+            "n": 64,
+            "median_us": 5151.5,
+            "max_us": 7056
+          },
+          {
+            "n": 256,
+            "median_us": 26517.5,
+            "max_us": 36455
+          },
+          {
+            "n": 1024,
+            "median_us": 52936.0,
+            "max_us": 57475
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-resource-corepriority-holdout-batch18-2-before.json",
+        "exit_code": 0,
+        "wall_seconds": 2.6827079000067897,
+        "peak_working_set_bytes": 47034368
+      },
+      "after": {
+        "report": "reports\\paired-resource-corepriority-holdout-batch18-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.836100299959071,
+        "peak_working_set_bytes": 46936064
+      },
+      "comparison": {
+        "before": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "after": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "common_cases": 18,
+        "common_solve_us_before": 493810,
+        "common_solve_us_after": 528278,
+        "improved_T": 7,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 483,
+        "scales": [
+          {
+            "n": 64,
+            "median_us": 5507.5,
+            "max_us": 7785
+          },
+          {
+            "n": 256,
+            "median_us": 28236.0,
+            "max_us": 40846
+          },
+          {
+            "n": 1024,
+            "median_us": 55086.5,
+            "max_us": 62815
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-resource-corepriority-holdout-batch18-3-before.json",
+        "exit_code": 0,
+        "wall_seconds": 0.889909399964381,
+        "peak_working_set_bytes": 47161344
+      },
+      "after": {
+        "report": "reports\\paired-resource-corepriority-holdout-batch18-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 1.2598563999636099,
+        "peak_working_set_bytes": 46931968
+      },
+      "comparison": {
+        "before": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "after": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0
+        },
+        "common_cases": 18,
+        "common_solve_us_before": 442042,
+        "common_solve_us_after": 571006,
+        "improved_T": 7,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 483,
+        "scales": [
+          {
+            "n": 64,
+            "median_us": 5813.5,
+            "max_us": 7875
+          },
+          {
+            "n": 256,
+            "median_us": 30753.0,
+            "max_us": 42708
+          },
+          {
+            "n": 1024,
+            "median_us": 57518.5,
+            "max_us": 79367
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch17\\solution.cpp",
+  "median_common_solve_us_before": 442042,
+  "median_common_solve_us_after": 528278,
+  "median_wall_seconds_before": 0.889909399964381,
+  "median_wall_seconds_after": 0.836100299959071,
+  "maximum_cli_working_set_bytes": 46936064,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": false
+}

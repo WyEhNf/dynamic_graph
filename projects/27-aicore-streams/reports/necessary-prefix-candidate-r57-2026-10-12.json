@@ -1,0 +1,177 @@
+{
+  "records": [
+    {
+      "name": "projection_retention_seed203451023",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 5101,
+      "necessary_bound_prunes": 8781,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 1999911,
+      "states": 6684,
+      "necessary_bound_prunes": 2451,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 4758,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 861,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 0,
+      "states": 0,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 0,
+      "budget_exhausted": false
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 5547,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "projection_retention_seed203451016",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 2242,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "before_whole_valid": false,
+      "after_whole_valid": false,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 0,
+      "states": 0,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 0,
+      "budget_exhausted": false
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "before_whole_valid": true,
+      "after_whole_valid": true,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 5193,
+      "necessary_bound_prunes": 12556,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "before_whole_valid": true,
+      "after_whole_valid": true,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 5579,
+      "necessary_bound_prunes": 43796,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "before_whole_valid": true,
+      "after_whole_valid": true,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 5556,
+      "necessary_bound_prunes": 43740,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "before_whole_valid": true,
+      "after_whole_valid": true,
+      "recovered": false,
+      "new_helper_valid": false,
+      "new_helper_work": 2000000,
+      "states": 4945,
+      "necessary_bound_prunes": 0,
+      "monitored_targets": 64,
+      "budget_exhausted": true
+    }
+  ],
+  "all_original12_preserved": true,
+  "before_whole_success": 4,
+  "after_whole_success": 4,
+  "recoveries": 0,
+  "pruned_producer_decisions": 111324,
+  "default_changed": false,
+  "driver_metric_translation": "R57 helper evaluations=states, peak_lo=prunes, peak_hi=monitored targets; these fields are NOT memory peaks",
+  "controls": {
+    "passed": true,
+    "controls": 98,
+    "feasible_controls": 41,
+    "integer_model": "Python bigint",
+    "oracle": "all ID permutations, original DIRECT edges and original BEGIN lifetime",
+    "scope": "serial small controls only; selected12 failures remain unknown",
+    "sha256": {
+      "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\controls-input.json": "09b3bcfcf37d1011badc3ebed9e701765909228caf15b19bf836c56ee8550623",
+      "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\controls-output.json": "83484b1435a9a90ba8a83c24d811f2693e059cb5f607229fb7c37fc53c21fab4",
+      "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\validate_necessary_prefix_candidate.py": "bec93cf1c3063ca8087dc98caf6ebfc15edd2cfa466ffe464c1f713dc5799179"
+    }
+  },
+  "failure_semantics": "search unknown; branch8, top64 and node512 bounds are not global infeasibility certificates",
+  "performance_measured": false,
+  "sha256": {
+    "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\selected12.json": "aa7c943d249069514c76a0a99e0e9cb69bc8381119bc39d701ab8866968948f3",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\reports\\observer-baseline-batch52.json": "91272eb1a05f0ed0758b836a1f40feceeb1e3adb7fc4e9f8240788686252b350",
+    "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\selected-driver.exe": "ae0a56c418f7ca34410edb1cbd8073d83ed13edaf8b29220147e17a7983c748d",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\research\\batch57\\necessary_prefix_search.inc": "446d363424cfbf5931762abf493a7e6b1530a8b0621d6b69a5bf871fbcb803a3",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\summarize_necessary_prefix_candidate.py": "4d0de0ec6907bbe77012fcaa16a97a64592ecb503283d5114e971787fcd887c1"
+  }
+}

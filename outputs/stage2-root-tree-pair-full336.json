@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791776678.7974765,
+  "report_sha256": "9f70d8709d90be3f5b7a02b0fa022a60f03781ccba19d2528bcf3d73bb98b201",
+  "original_inputs": 336,
+  "retained_statuses": {
+    "proven_infeasible_under_model": 47,
+    "verified": 272,
+    "scheduling_failure": 8,
+    "budget_exhausted": 9
+  },
+  "before_copies": 192929,
+  "after_copies": 192902,
+  "improved_inputs": 18,
+  "complete_proposals": 837,
+  "actual_full_output_replays": 1381,
+  "actual_pairs": 86,
+  "processed_states": 368149,
+  "immutable_labels_replayed": 386672,
+  "actual_open_prefixes": 18088,
+  "actual_unfinished_prefixes": 65,
+  "graph_reopens": 32768,
+  "graph_stale": 352,
+  "after_success_copy_output_mean": 0.13714672532911917,
+  "whole336_quality_mean": null,
+  "candidate_outcomes": {
+    "no_incumbent_proven_infeasible_under_model": 47,
+    "partial_budget": 23,
+    "verified_zero_copy_retained": 108,
+    "verified_incumbent_retained_unsupported": 133,
+    "no_incumbent_scheduling_failure": 8,
+    "no_incumbent_budget_exhausted": 9,
+    "partial_outlet_limit": 2,
+    "verified_incumbent_retained_no_pair": 6
+  },
+  "scope": "All original336 status/21family coverage retained, all272 baselines/finals+837proposals independently physically replayed; every386672savedlabel/18088OPEN/65unfinished advanced from original operands/physicalprefix. Sameinitial/core/selector/500ms20k16/96.18gains27COPY,272success-only mean13.7147%,64missing outputs leavewhole quality undefined.25searches partial, notLevel/default/universaloptimum or timing improvement."
+}

@@ -1,0 +1,4 @@
+# Runtime and tests use only the Python standard library.
+# No third-party packages are required or implicitly downloaded.
+# Verified environment: CPython 3.12.14, Windows x64.
+

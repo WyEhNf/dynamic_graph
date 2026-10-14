@@ -1,0 +1,27 @@
+{
+  "observed_utc": "2026-10-11T05:51:06Z",
+  "project11": {"status": "paused_by_user", "resume_authorized": false},
+  "project18_forced_cut_review": {
+    "source": "projects/18-isa-scheduler/research/level-stage/forced-cut-proof.md",
+    "kind": "independent mathematical inspection, not an official feasibility proof",
+    "reviewed_steps": [
+      "Selected identities are strict ancestors of A and have a direct consumer strictly after B, so they remain live throughout the forced interval.",
+      "Latest identity copies occupy distinct result positions, making their next-instruction ages distinct integers from 1 through W.",
+      "The sum of k ages varies within a range of width k*(W-k).",
+      "Each forced intervening original instruction raises the sum by k; each selected COPY changes it by k-d, at least -(W-k).",
+      "The resulting necessary COPY bound is max(0, ceil(k*L/(W-k)-k)); overlapping certificates are combined by maximum, never sum."
+    ],
+    "assumptions": "Original instructions execute once, distinct original identity is preserved, only COPY is inserted, k<W, pure uniquely named and disjoint GET/SET registers, no original COPY, recomputation, reread, spill or value aliasing.",
+    "limitation": "The full 336 corpus includes identity-model infeasible cases. Its aggregate necessary bound does not establish the official valid-block distribution or Level1 failure. Successful-subset bounds are not achieved ratios."
+  },
+  "project27_resumed_document": {
+    "path": "F:/Hackathon/projects/27-aicore-streams/reports/project27-research-resumed.tex",
+    "sha256": "d6744fdcd7e3bac26908f5582a55d77584842a3b93e4e26baa2ec52b222354d5",
+    "compiler": "built-in desktop compile_latex_document",
+    "result": "success",
+    "repair": "Added amssymb for varnothing after the initial compile diagnostic.",
+    "visual_layout_reviewed": false,
+    "opened_new_editor_tab": false,
+    "open_original_document_sha256": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82"
+  }
+}

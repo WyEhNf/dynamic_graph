@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791776371.672082,
+  "prepared_provenance_sha256": "6b2c56128c2915a795462a68e651a23cdbf6ce9ce58cd47c714d60515e781311",
+  "source_aggregate": "a914cda38333a2d544db4bb868180ee008acfbf6d49c21ac73e0af9a7c9b5b56",
+  "original_input_count": 336,
+  "retained_legal": 272,
+  "retained_model_certificates": 47,
+  "retained_budget_failures": 9,
+  "retained_scheduler_failures": 8,
+  "initial_total_copies": 192929,
+  "original_families": 21,
+  "eligible_inputs": 25,
+  "reserve_bytes": 536870912,
+  "current_input_diagnostic_envelope": 130799616,
+  "complete_file_envelope": 17493120,
+  "authorization": "One original whole336 --run with frozen wrapper/core/parameters and all272 baseline prechecks, complete proposals/finals independently checked. Preserve actual failure/partial evidence, no automatic rerun/default.",
+  "scope": "Root read complete producer/resource contract and verified source/historical freezes. Existing core Stop used only after saving actual completed output; resource_unknown separately marks interruption, not infeasibility/timeout proof. Current-input diagnostic reserve bound does not guarantee global worst-case storage; timings are functional. No actual full336 candidate result yet."
+}

@@ -1,0 +1,235 @@
+{
+  "records": 34,
+  "categories": [
+    {
+      "name": "网络与通信",
+      "count": 4,
+      "ids": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "name": "数据库、向量检索与压缩",
+      "count": 5,
+      "ids": [
+        4,
+        7,
+        14,
+        15,
+        20
+      ]
+    },
+    {
+      "name": "语音与嵌入式音频",
+      "count": 2,
+      "ids": [
+        6,
+        12
+      ]
+    },
+    {
+      "name": "图形、图像与视频",
+      "count": 5,
+      "ids": [
+        8,
+        9,
+        16,
+        28,
+        34
+      ]
+    },
+    {
+      "name": "操作系统与运行时",
+      "count": 3,
+      "ids": [
+        10,
+        32,
+        33
+      ]
+    },
+    {
+      "name": "计算图调度与AI基础设施",
+      "count": 8,
+      "ids": [
+        17,
+        18,
+        19,
+        21,
+        22,
+        24,
+        27,
+        29
+      ]
+    },
+    {
+      "name": "智能体、决策与模型路由",
+      "count": 6,
+      "ids": [
+        11,
+        13,
+        23,
+        25,
+        26,
+        30
+      ]
+    },
+    {
+      "name": "传感器与运动估计",
+      "count": 1,
+      "ids": [
+        31
+      ]
+    }
+  ],
+  "blankBody": [],
+  "reviewDate": "2026-10-10",
+  "updatedTopics": [
+    18,
+    21
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.chaspark.com/#/races/competitions/1326610123207241728"
+    },
+    {
+      "id": 2,
+      "url": "https://www.chaspark.com/#/races/competitions/1326612402953629696"
+    },
+    {
+      "id": 3,
+      "url": "https://www.chaspark.com/#/races/competitions/1326623932680531968"
+    },
+    {
+      "id": 4,
+      "url": "https://www.chaspark.com/#/races/competitions/1326626892794638336"
+    },
+    {
+      "id": 5,
+      "url": "https://www.chaspark.com/#/races/competitions/1326633389497626624"
+    },
+    {
+      "id": 6,
+      "url": "https://www.chaspark.com/#/races/competitions/1326633963903365120"
+    },
+    {
+      "id": 7,
+      "url": "https://www.chaspark.com/#/races/competitions/1326635204541243392"
+    },
+    {
+      "id": 8,
+      "url": "https://www.chaspark.com/#/races/competitions/1326636080202805248"
+    },
+    {
+      "id": 9,
+      "url": "https://www.chaspark.com/#/races/competitions/1326636746605965312"
+    },
+    {
+      "id": 10,
+      "url": "https://www.chaspark.com/#/races/competitions/1326637827747045376"
+    },
+    {
+      "id": 11,
+      "url": "https://www.chaspark.com/#/races/competitions/1326644835083431936"
+    },
+    {
+      "id": 12,
+      "url": "https://www.chaspark.com/#/races/competitions/1326645380061933568"
+    },
+    {
+      "id": 13,
+      "url": "https://www.chaspark.com/#/races/competitions/1326646677767008256"
+    },
+    {
+      "id": 14,
+      "url": "https://www.chaspark.com/#/races/competitions/1326647897176236032"
+    },
+    {
+      "id": 15,
+      "url": "https://www.chaspark.com/#/races/competitions/1326688890680274944"
+    },
+    {
+      "id": 16,
+      "url": "https://www.chaspark.com/#/races/competitions/1326689437612879872"
+    },
+    {
+      "id": 17,
+      "url": "https://www.chaspark.com/#/races/competitions/1326690139802284032"
+    },
+    {
+      "id": 18,
+      "url": "https://www.chaspark.com/#/races/competitions/1326690549003280384"
+    },
+    {
+      "id": 19,
+      "url": "https://www.chaspark.com/#/races/competitions/1326691788365586432"
+    },
+    {
+      "id": 20,
+      "url": "https://www.chaspark.com/#/races/competitions/1326693349800046592"
+    },
+    {
+      "id": 21,
+      "url": "https://www.chaspark.com/#/races/competitions/1326695443235893248"
+    },
+    {
+      "id": 22,
+      "url": "https://www.chaspark.com/#/races/competitions/1326696276665131008"
+    },
+    {
+      "id": 23,
+      "url": "https://www.chaspark.com/#/races/competitions/1326698984818110464"
+    },
+    {
+      "id": 24,
+      "url": "https://www.chaspark.com/#/races/competitions/1326700933119291392"
+    },
+    {
+      "id": 25,
+      "url": "https://www.chaspark.com/#/races/competitions/1326709772098297856"
+    },
+    {
+      "id": 26,
+      "url": "https://www.chaspark.com/#/races/competitions/1326710344658481152"
+    },
+    {
+      "id": 27,
+      "url": "https://www.chaspark.com/#/races/competitions/1326715227709140992"
+    },
+    {
+      "id": 28,
+      "url": "https://www.chaspark.com/#/races/competitions/1326716026519367680"
+    },
+    {
+      "id": 29,
+      "url": "https://www.chaspark.com/#/races/competitions/1326718525036126208"
+    },
+    {
+      "id": 30,
+      "url": "https://www.chaspark.com/#/races/competitions/1326718923356090368"
+    },
+    {
+      "id": 31,
+      "url": "https://www.chaspark.com/#/races/competitions/1326719372298055680"
+    },
+    {
+      "id": 32,
+      "url": "https://www.chaspark.com/#/races/competitions/1326724286017466368"
+    },
+    {
+      "id": 33,
+      "url": "https://www.chaspark.com/#/races/competitions/1326726924167634944"
+    },
+    {
+      "id": 34,
+      "url": "https://www.chaspark.com/#/races/competitions/1326727307262779392"
+    }
+  ],
+  "files": [
+    "赛题与资源清单.xlsx",
+    "赛题技术分析.html"
+  ]
+}

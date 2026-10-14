@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "artifact_index_sha256": "fb66810ddd76ae33dbb4faf04d29c738f2b673c81027ebc57ddc93448b9ab6ed",
+  "actual_contracts_tool_chunk": "01f83d",
+  "actual_batch_tool_chunk": "6337d3",
+  "terminal_exit_code": 0,
+  "gzip_files": 259,
+  "compressed_bytes": 445528,
+  "decoded_bytes": 3305854,
+  "measured_process_lifetime_peak_RSS_bytes": 40783872,
+  "scope": "All259 actual gzip artifacts independently hashed compressed and decoded, owner logs and84 report bound; RSS is measured process lifetime peak, not a generic memory guarantee."
+}

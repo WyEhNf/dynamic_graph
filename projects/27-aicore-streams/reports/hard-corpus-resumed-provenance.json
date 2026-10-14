@@ -1,0 +1,16 @@
+{
+  "records": 202,
+  "case_policy": "Exact objects of all old difficult suites; no generator changes, deleted cases or deadline/witness modification",
+  "sources": {
+    "data/irregular-consumers.json": "e599343645da0a960b412bab4b278aa9ee13b134f58a4e8f7495350b167f716d",
+    "data/irregular-consumers-holdout.json": "a1750b629ced2aeb7fbfa1b39b7d04d98511d65d01e8868858bf3fdae7dfa9d7",
+    "data/lifetime-locality.json": "db658820627631f662b518b48f068976d75acc6c7388ec99d2901af19b543be3",
+    "data/lifetime-locality-holdout.json": "0a91a91ac847d35c45a0a0375ab48d7df5b4928d4b469d3854784d8dfc07f4fd",
+    "data/structural-blind-batch26.json": "e327a93fda0a1728a8e03b8d1f8666b303df1a5120c4f2f5c46ea4985119d1e7",
+    "data/wide-unseen-batch28.json": "e6c5d646cba516ca31b70eb5941a373ab50dd601f76b42610b15972b04b33efd",
+    "data/recursive-sharing-unseen-batch29.json": "06b21c4ef2f6d63fa69d77bcf90838434b510e74a50c722452f928f439d26a01",
+    "data/projection-unseen-batch30.json": "0d68886004dc3e2e6e86b5e6184aa9054a6cf6af8e8e4e73fcd1d04a54b48950"
+  },
+  "input_sha256": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+  "prior_report_sha256": "0ff25c23e2de7dd586a4f5a9484bde7102245faf975bc5786a818334f0e2ab77"
+}

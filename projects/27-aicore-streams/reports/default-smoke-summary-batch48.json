@@ -1,0 +1,56 @@
+{
+  "status": "actual default9 unchanged vs fully accepted candidate;three witness-feasible failures remain explicit",
+  "actual_exit_code": 1,
+  "count": 9,
+  "passing": 6,
+  "unresolved": 3,
+  "three_recoveries": [
+    "irregular_consumers_local_k24_ret1_seed20273418",
+    "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+    "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+  ],
+  "selection": [
+    [
+      "hard",
+      31
+    ],
+    [
+      "hard",
+      54
+    ],
+    [
+      "hard",
+      55
+    ],
+    [
+      "heldout",
+      0
+    ],
+    [
+      "heldout",
+      26
+    ],
+    [
+      "heldout",
+      47
+    ],
+    [
+      "heldout",
+      3
+    ],
+    [
+      "heldout",
+      7
+    ],
+    [
+      "hard",
+      129
+    ]
+  ],
+  "input_sha": "7202552dc03da4b6ca4ba084d17ba38dfa9f58a94a1565d2c69aa8aa8bd55462",
+  "report_sha": "6cc0b55ff13c064569fddfbe8bd7831591b37e316635a0b9e674cb547c132ffc",
+  "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "exe_sha": "54fc7e9b2257f1edcd6925126f32e969826a5d6ba93bc2f9b3e8fd5dd5538c10",
+  "timing": "Shared functionality;no new full979 or performance inference",
+  "witness_or_generation_passed_to_solver": false
+}

@@ -1,0 +1,2 @@
+E:\mingw64\bin\ar.exe qc libcandidate_search.a CMakeFiles/candidate_search.dir/src/candidate_search.cpp.obj
+E:\mingw64\bin\ranlib.exe libcandidate_search.a

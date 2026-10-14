@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791719882.249827,
+  "plan_sha256": "5d88d2bfb7f0de61a81d941854aeccbaf12dfa7108b32b804adbe29de79696c1",
+  "accepted_runtime_sha256": "f5c1dd8825b933624415367d67a8724aa517a3e4f090c970d6e7fe02a90a04aa",
+  "minimum_free_ram_bytes": 2684354560,
+  "executable_cases": 4,
+  "full_success_cases": 3,
+  "expected_actual_steps": 1700000012,
+  "scope": "Frozen runner/host helpers and scoped integration hashes verified; historical originalC small source/Metadata/oracle/harness and large headers/sizes verified. Large hashes to be verified by actual launch; N10000 proof mathgold does not claim execution. Plan fixeddefault refusal then three opt-in raised-budget whole outputs, each freshRAM gate/sequential and fullC comparison; no performance or ordinarydefault promotion."
+}

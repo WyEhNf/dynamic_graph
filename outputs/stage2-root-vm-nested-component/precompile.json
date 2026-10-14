@@ -1,0 +1,38 @@
+{
+  "observation_only": true,
+  "test_sha256": "8f8b07c6405c8e673b0364b455307202201b5a8c1ab123afb61d3c9b763e9a72",
+  "candidate_sha256": "e4174798ec482c474c4bcf0ef3e602c02e339804c5413594cb5755fb68de7dea",
+  "command": [
+    "E:\\mingw64\\bin\\g++.exe",
+    "-std=gnu++20",
+    "-O2",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-DCHOL_HAVE_THREADED_DISPATCH=1",
+    "-DCHOL_PREPARED_VM=1",
+    "-DCHOL_THREADED_VM=1",
+    "-DCHOL_PROVED_VM_BUDGET=1",
+    "-I",
+    "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-nested-budget\\accounting-supplement\\candidate-source\\include",
+    "-I",
+    "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-nested-budget\\initial-freeze\\dependencies\\accepted-source\\include",
+    "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-nested-budget\\accounting-supplement\\candidate-source\\src\\vm_nested_step_bound.cpp",
+    "F:\\Hackathon\\outputs\\stage2-root-vm-nested-component\\observed-tests.cpp",
+    "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-nested-budget\\initial-freeze\\dependencies\\libcholesky_core.a",
+    "-o",
+    "F:\\Hackathon\\outputs\\stage2-root-vm-nested-component\\vm-nested-root.exe"
+  ],
+  "resource_gate": {
+    "available_RAM_bytes": 6765555712,
+    "F_free_bytes": 4104732672
+  },
+  "environment": {
+    "TEMP": "F:\\Hackathon\\outputs\\stage2-root-vm-nested-component\\compiler-temp",
+    "TMP": "F:\\Hackathon\\outputs\\stage2-root-vm-nested-component\\compiler-temp",
+    "TMPDIR": "F:\\Hackathon\\outputs\\stage2-root-vm-nested-component\\compiler-temp"
+  }
+}

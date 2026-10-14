@@ -1,0 +1,1 @@
+{"passed":true,"opcode_coverage":33,"phase1_cases":404,"original_contract_cases":480,"comparisons":934,"stack_limit":4096,"mechanism":"threaded vector stack"}

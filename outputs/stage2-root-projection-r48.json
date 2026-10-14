@@ -1,0 +1,42 @@
+{
+  "reviewed_unix": 1791711882.0464292,
+  "passed": true,
+  "records": 61,
+  "applicable": 35,
+  "recovered_records": 3,
+  "recovered": [
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "nodes": 131,
+      "T": 2421486,
+      "peak": 1946,
+      "capacity": 1964,
+      "stream_count": 1
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "nodes": 71,
+      "T": 1487053,
+      "peak": 1745,
+      "capacity": 1747,
+      "stream_count": 1
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "nodes": 71,
+      "T": 1487053,
+      "peak": 1760,
+      "capacity": 1762,
+      "stream_count": 1
+    }
+  ],
+  "evidence": {
+    "outputs/stage2-projection-r48-root-snapshot/diagnostic.exe": "11b9325528770acaf7b714c8a93f5b50fe22884021e43577296ae9d20e5617c1",
+    "outputs/stage2-projection-r48-root-snapshot/diagnostic.json": "1c8cefd68adc2cb2dcab0d0e97f12e8b3fc0dd41ff9576e9e7a627d0fdfc095e",
+    "outputs/stage2-projection-r48-root-snapshot/inputs.json": "fe0bcdce1b2d28dde606e95f235e95df23a665448de516e4da7df7a9b2da998e",
+    "outputs/stage2-projection-r48-root-snapshot/projection.cpp.inc": "f5130f280e0b0ed4425f526d613d2460050f6106882c9faf3a1a8031dab142c0",
+    "outputs/stage2-projection-r48-root-snapshot/solution.cpp": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3"
+  },
+  "verifier_sha256": "a6f864f8236e8aafb8b3ec00ad557affea99ce0671c1b9d2a3a90d5b08412498",
+  "scope": "Root independent Python bigint heap-event replay of3 actual complete serial plans, same original nodes/hardware/deadline. Input-only61 subset contains no witness/generation fields. All were previously unresolved in frozenR44. Two preserve R45 recoveries and one new topology was unresolved in R45; no default promotion, broad solver validity, performance or official score claim. All61 statuses retained."
+}

@@ -1,0 +1,46 @@
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: E:/mingw64/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (7.3s)
+-- Generating done (0.7s)
+-- Build files have been written to: F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+[  3%] Building CXX object CMakeFiles/solution.dir/F_/Hackathon/projects/27-aicore-streams/research/batch51/solution.cpp.obj
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp: In function 'aicore_detail::ReleaseCut aicore_detail::release_cut_probe(const HardwareInfo&, const Graph&, int, const std::vector<unsigned char>&, const std::vector<int>&, const std::vector<int>&, I, I&, I)':
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:760:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  760 |     if(done[i] || included[i])continue;included[i]=1;
+      |     ^~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:760:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  760 |     if(done[i] || included[i])continue;included[i]=1;
+      |                                        ^~~~~~~~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp: In lambda function:
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:806:5: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+  806 |     for(int c:g.out[i])--degree[c];return true;
+      |     ^~~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:806:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+  806 |     for(int c:g.out[i])--degree[c];return true;
+      |                                    ^~~~~~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp: In function 'aicore_detail::ShallowResult aicore_detail::release_cut_order(const HardwareInfo&, const Graph&, I)':
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:823:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  823 |     if(!sort_budget)return r;if(held.size()>24)held.resize(24);
+      |     ^~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:823:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  823 |     if(!sort_budget)return r;if(held.size()>24)held.resize(24);
+      |                              ^~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp: In function 'std::vector<std::pair<std::vector<int>, long long int> > aicore_detail::direct_consumer_groups(const Graph&, const WorkspaceProjection&, I&, I, bool&)':
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:905:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  905 |     if(!all)continue;std::sort(members.begin(),members.end());
+      |     ^~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:905:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  905 |     if(!all)continue;std::sort(members.begin(),members.end());
+      |                      ^~~
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp: At global scope:
+F:\Hackathon\projects\27-aicore-streams\research\batch51\solution.cpp:2014:1: fatal error: error writing to C:\Users\admin\AppData\Local\Temp\ccMx5uPM.s: No space left on device
+ 2014 | }
+      | ^
+compilation terminated.
+mingw32-make[2]: *** [CMakeFiles\solution.dir\build.make:79: CMakeFiles/solution.dir/F_/Hackathon/projects/27-aicore-streams/research/batch51/solution.cpp.obj] Error 1
+mingw32-make[1]: *** [CMakeFiles\Makefile2:132: CMakeFiles/solution.dir/all] Error 2
+mingw32-make: *** [Makefile:100: all] Error 2

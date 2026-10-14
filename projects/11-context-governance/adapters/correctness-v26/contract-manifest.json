@@ -1,0 +1,50 @@
+{
+  "version": "public-contracts-v26",
+  "origin": "Manually derived from public natural-language DEV requirements; not official; development-informed; not holdout",
+  "scope": "Finite public checks, not full-domain proofs. No hidden tests were copied.",
+  "cases": {
+    "cache_trace": {
+      "spec_sha256": "0082a462cb17cfaf4e827c1278c065c6a3dbe8d055bea066c64969b8129bb07a",
+      "test_sha256": "030fe33c91888606fd15496fab9a467e898f2ae704bb12c07ca95ee152d0cb4e"
+    },
+    "interval_gaps": {
+      "spec_sha256": "268aaa6e4c04e64c02b9fc1051777ce15837ba0a8c7166adf25ca0d2b5b91625",
+      "test_sha256": "85fca5cef3cecd21782584c226c1eb514791577bb74d3f56f9d3ff984cb8fa0b"
+    },
+    "intervals": {
+      "spec_sha256": "24c0c09f7c1d16e06917701e7a137146a15776e2019e515f60a0eda59ef6dc04",
+      "test_sha256": "ff9e2aef48607b2682b2b2918d7bd3eddc97c2534e13dbc12d4a1b23932d6799"
+    },
+    "merge_config": {
+      "spec_sha256": "b96b4e0ee18a7ba70a99b078d5d28bb1ad3c8fe413026b534992abca6f25475d",
+      "test_sha256": "04da5e46f7a2f5202c9fb9b79b51a16d93b8ab2eb46867950a495464f5514eba"
+    },
+    "normalize": {
+      "spec_sha256": "0bf1e55aa142fdf3e7f6a07504a2349755bb1ef6fb4d2b1ad8f749d14421e489",
+      "test_sha256": "585eb7257bfc3f26de733867b005dbd340825761c87238369f815d2d7fb67253"
+    },
+    "outer_join": {
+      "spec_sha256": "8159c99d0d5e264eb1e18d950d1c965a1e5ac70cec1949b0e79bc01123c117ac",
+      "test_sha256": "8f2be900d48191da893e89c066473cbf2e7f7627d37855445189009ce4390f5a"
+    },
+    "patch_text": {
+      "spec_sha256": "87c6acc46b6211c9f62d7eb5e5ec17f046d6684752da5a2a9806558f6bf2e3f7",
+      "test_sha256": "b5ea7a8c873a48779743d5819d4a3f3aaa5a511d77f21a3b065c22f46fbf900c"
+    },
+    "sparse_product": {
+      "spec_sha256": "6c9aa9b18f77b696d60ae6f030b87cb969b588c134e0db9817c810a5f9f7319b",
+      "test_sha256": "cf82d3db2c65a9e9dd1b7778a65db0974b5dcdb12ec17b37f04560c4a8129d79"
+    },
+    "stable_topology": {
+      "spec_sha256": "7ee64cd5c24a583c9dba0a3d2054b412c6a9965f18dbdd5e82f34467795ae4b7",
+      "test_sha256": "4632e78404be4297907acdd6f46854f7fb4b741d65d6b6545d6def6a5ab2046c"
+    },
+    "transactional_edits": {
+      "spec_sha256": "28b47598f1068f3c4f04447cabf810dd79019138ac5dbe3ef23eaf708cc39c87",
+      "test_sha256": "9a400f67217b60d62f7bdac958eb2b6247fc2000491440aa9d72651660806c90"
+    }
+  },
+  "suite_manifest_sha256": "f0a77a74835718451d8e027f18f9306b034f8da3c3a063260463ffdc222e61ad",
+  "script_sha256": "516be32274f3d67a83d2041b23f1673784b7ea8a2fd0fd0e6c69b8997f620f12",
+  "protocol_sha256": "95563465a697bccb6632498b136a6db0bef7e45c32db89cbf4f79b88a3c1d95a"
+}

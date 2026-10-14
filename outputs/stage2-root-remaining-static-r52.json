@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791720463.2888029,
+  "original_input_records": 63,
+  "eligible_producer_envelopes": 29382,
+  "all_upper_closures_fit128_cases": 28,
+  "any_immediate_lower_over128_cases": 28,
+  "all_immediate_lower_over128_cases": 0,
+  "serial_deadline_satisfied_cases": 63,
+  "evidence": {
+    "projects/27-aicore-streams/reports/remaining-static-classification-batch52.json": "3ec7ce95df78784cce8873108ad18bffff66b5726ee55fb2c99334d4f54f0e3f"
+  },
+  "scope": "Root independent ID-set recursive ancestor/descendant envelopes agree with every eligible producer and original57+6 full unchanged inputs. At any completed-p prefix all p ancestors are done, so remaining DIRECT-user closure is a subset of this upper envelope:128 cap cannot explain28 cases. Immediate lower bound can shrink later; upper>128 is not actual rejection. No static result proves infeasibility, greedy cause, runtime budget or recovery; witness/generation excluded from candidate inputs."
+}

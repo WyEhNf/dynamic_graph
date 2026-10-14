@@ -1,0 +1,6 @@
+.venv/
+.venv-cpsat/
+__pycache__/
+*.pyc
+outputs/
+

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791779056.5137184,
+  "plan_sha256": "c39c4ff7352e522d9de795008cbb8f4f80b3960f589d4df2e05c159c2d9bd59f",
+  "cost_cases": 29,
+  "VM_cases": 23,
+  "native_cases": 6,
+  "planned_actual_records": 174,
+  "planned_pairs": 87,
+  "existing_paths_checked": 150,
+  "small_shapes": [
+    3,
+    7,
+    13,
+    29,
+    53
+  ],
+  "predicted_tri_N10000_actual_steps": 1400030009,
+  "predicted_tri_N10000_bound": 2799890009,
+  "authorization": "Prepare frozen samebinary29case3round alternating cost runner and matchingABI analysis-only proof probe/scope first. Do not execute performance or highN VM/C/allocation until actualrunner/resource review; nolargeGram/default promotion.",
+  "scope": "All original cached source/metadata/input/trueC/reference paths and matrix headers rechecked. Three fullPROGRAM count formulas independently match six actual dense/signedzero streams comprising30matrices; highN bounds remain predictions until analysis-only compiled proof. Maximumtri resource gate includes two800MBoutputs+512MiB reserve; omitted extra backendoutputs not authorized. Cost results must retain allnegative and proofwork, not infer official85speedup."
+}

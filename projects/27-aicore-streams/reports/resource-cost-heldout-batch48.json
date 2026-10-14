@@ -1,0 +1,279 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "groups": {
+        "all": {
+          "count": 48,
+          "before": {
+            "wall_us": 2138245,
+            "thread_cpu_us": 2125000
+          },
+          "after": {
+            "wall_us": 2108293,
+            "thread_cpu_us": 2093750
+          }
+        },
+        "common_success": {
+          "count": 42,
+          "before": {
+            "wall_us": 1383025,
+            "thread_cpu_us": 1343750
+          },
+          "after": {
+            "wall_us": 1358308,
+            "thread_cpu_us": 1359375
+          }
+        },
+        "common_failure": {
+          "count": 6,
+          "before": {
+            "wall_us": 755220,
+            "thread_cpu_us": 781250
+          },
+          "after": {
+            "wall_us": 749985,
+            "thread_cpu_us": 734375
+          }
+        },
+        "recovered": {
+          "count": 0,
+          "before": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          },
+          "after": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          }
+        }
+      },
+      "raw_sha": {
+        "before": "769b0a9c1af09938ed0bf4f2cceafcdd191007cba378e6e3dfa88d3c5818a33e",
+        "after": "03afbfc47ff8ba7c8af503a94e601ef24670fb29de5e11a4a75efac05fea44a9"
+      },
+      "cli": {
+        "before": {
+          "wall_seconds": 2.3605455000069924,
+          "working_set_bytes": 31793152
+        },
+        "after": {
+          "wall_seconds": 2.3484093999722973,
+          "working_set_bytes": 31899648
+        }
+      },
+      "recovered": [],
+      "all_cpu_ratio": 0.9852941176470589,
+      "all_wall_ratio": 0.985992250654158
+    },
+    {
+      "round": 2,
+      "groups": {
+        "all": {
+          "count": 48,
+          "before": {
+            "wall_us": 2046821,
+            "thread_cpu_us": 2031250
+          },
+          "after": {
+            "wall_us": 2175762,
+            "thread_cpu_us": 2156250
+          }
+        },
+        "common_success": {
+          "count": 42,
+          "before": {
+            "wall_us": 1333965,
+            "thread_cpu_us": 1312500
+          },
+          "after": {
+            "wall_us": 1425599,
+            "thread_cpu_us": 1421875
+          }
+        },
+        "common_failure": {
+          "count": 6,
+          "before": {
+            "wall_us": 712856,
+            "thread_cpu_us": 718750
+          },
+          "after": {
+            "wall_us": 750163,
+            "thread_cpu_us": 734375
+          }
+        },
+        "recovered": {
+          "count": 0,
+          "before": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          },
+          "after": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          }
+        }
+      },
+      "raw_sha": {
+        "before": "19b1c0f3e46b2c717f871edbabbbe2fae083555fbb3c8c81ac5fbe8e62faa9bc",
+        "after": "d3025b477bb597e5636ab462392b052698295c13796b317d6a724f98bcb000b4"
+      },
+      "cli": {
+        "before": {
+          "wall_seconds": 2.246666399994865,
+          "working_set_bytes": 31666176
+        },
+        "after": {
+          "wall_seconds": 2.407799699984025,
+          "working_set_bytes": 31600640
+        }
+      },
+      "recovered": [],
+      "all_cpu_ratio": 1.0615384615384615,
+      "all_wall_ratio": 1.0629957382692479
+    },
+    {
+      "round": 3,
+      "groups": {
+        "all": {
+          "count": 48,
+          "before": {
+            "wall_us": 2097460,
+            "thread_cpu_us": 2046875
+          },
+          "after": {
+            "wall_us": 2112464,
+            "thread_cpu_us": 2093750
+          }
+        },
+        "common_success": {
+          "count": 42,
+          "before": {
+            "wall_us": 1362698,
+            "thread_cpu_us": 1359375
+          },
+          "after": {
+            "wall_us": 1361015,
+            "thread_cpu_us": 1343750
+          }
+        },
+        "common_failure": {
+          "count": 6,
+          "before": {
+            "wall_us": 734762,
+            "thread_cpu_us": 687500
+          },
+          "after": {
+            "wall_us": 751449,
+            "thread_cpu_us": 750000
+          }
+        },
+        "recovered": {
+          "count": 0,
+          "before": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          },
+          "after": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          }
+        }
+      },
+      "raw_sha": {
+        "before": "43cc66d7832e2ad960169db50797cb48b6a48cd6ded7074d7198b3e87adf02f1",
+        "after": "797aceea05b83ddc5189b25bae87f2195091b7eccb23548e2f32e99e20d3817f"
+      },
+      "cli": {
+        "before": {
+          "wall_seconds": 2.3100523999892175,
+          "working_set_bytes": 31834112
+        },
+        "after": {
+          "wall_seconds": 2.313521300035063,
+          "working_set_bytes": 31735808
+        }
+      },
+      "recovered": [],
+      "all_cpu_ratio": 1.0229007633587786,
+      "all_wall_ratio": 1.007153414129471
+    }
+  ],
+  "independent_side_medians": {
+    "all": {
+      "before": {
+        "wall_us": 2097460,
+        "thread_cpu_us": 2046875
+      },
+      "after": {
+        "wall_us": 2112464,
+        "thread_cpu_us": 2093750
+      }
+    },
+    "common_success": {
+      "before": {
+        "wall_us": 1362698,
+        "thread_cpu_us": 1343750
+      },
+      "after": {
+        "wall_us": 1361015,
+        "thread_cpu_us": 1359375
+      }
+    },
+    "common_failure": {
+      "before": {
+        "wall_us": 734762,
+        "thread_cpu_us": 718750
+      },
+      "after": {
+        "wall_us": 750163,
+        "thread_cpu_us": 734375
+      }
+    },
+    "recovered": {
+      "before": {
+        "wall_us": 0,
+        "thread_cpu_us": 0
+      },
+      "after": {
+        "wall_us": 0,
+        "thread_cpu_us": 0
+      }
+    }
+  },
+  "median_within_pair_all_cpu_ratio": 1.0229007633587786,
+  "ratio_of_independent_side_all_cpu_medians": 1.0229007633587786,
+  "median_within_pair_all_wall_ratio": 1.007153414129471,
+  "cli_side_medians": {
+    "before": {
+      "wall_seconds": 2.3100523999892175,
+      "maximum_working_set_bytes": 31834112
+    },
+    "after": {
+      "wall_seconds": 2.3484093999722973,
+      "maximum_working_set_bytes": 31899648
+    }
+  },
+  "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "exe_sha": "991e18cdde3d7e803bc7a10c6d5e2910312e8485417eceab01c6767a717dfd64",
+  "baseline_source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "baseline_exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+  "counts": {
+    "all": 48,
+    "common_success": 42,
+    "common_failure": 6,
+    "recovered": 0
+  },
+  "timing": "Same GCC Release O3; complete failures included; original record order retained; Win32 thread CPU quantized; process WS includes JSON/plans/validators; background user applications remain; side-median and median-paired ratios distinguished",
+  "host_load": {
+    "trial_host_busy": "unmeasured",
+    "trial_host_available_ram": "unmeasured",
+    "pre_window_observation": "User applications remain;trial availability and busy fraction unmeasured by unchanged harness;no empty-host claim",
+    "harness_modified_during_run": false,
+    "extra_runs_for_background": false
+  },
+  "paired_plan_path": "research/batch48/paired-plan.json",
+  "paired_plan_sha": "e034ca827207af7eb57842313f3a3372d682e2797f69fba5afb6d36908ab1b56",
+  "baseline_executed_path": "research/batch45/default-aicore_bench.exe",
+  "candidate_executed_path": "research/batch48/release-candidate-frozen-aicore_bench.exe"
+}

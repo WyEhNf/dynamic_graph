@@ -1,0 +1,2 @@
+Implement partition_even(values). Call is_even from helpers.py for each integer. Return a tuple (even_values, other_values) of two new lists, using that predicate to choose each element. Keep order and duplicate values within both lists. Empty input returns ([], []). Do not modify values. Preserve the existing RELEASE_TAG constant and compatibility(value) function unchanged. Return only the complete target file.
+Target file: solution.py. Return its complete content. Existing dependencies must stay available.

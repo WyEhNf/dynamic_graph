@@ -1,0 +1,9 @@
+{
+  "count": 576,
+  "seed": 203445001,
+  "input_sha": "282d1042bb9f9f73cce850b9b0a7424f8546abd0f4137654365c5b7d6e3385e9",
+  "reference": "Full original ancestor sets and prefix/future live-set bigint sum, independent from target-stop closures and mutable C++ users",
+  "explicit_controls": 36,
+  "empty_projection": 76,
+  "over_int64": 42
+}

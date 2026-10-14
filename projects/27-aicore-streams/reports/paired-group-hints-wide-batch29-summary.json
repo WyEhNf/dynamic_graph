@@ -1,0 +1,352 @@
+{
+  "suite": "data\\wide-unseen-batch28.json",
+  "suite_sha256": "e6c5d646cba516ca31b70eb5941a373ab50dd601f76b42610b15972b04b33efd",
+  "baseline_exe_sha256": "f94074b8101fbf432828686b1db671b11ffed84d515f1ac3ad60185fa0e59831",
+  "current_exe_sha256": "2e55958e79c4ad8becb44e1f56e9303ea472ed50b26133b62f8828fa2cb073d0",
+  "current_solution_sha256": "1df00a5d1e229337dea657a946a1378a09d4eacdbf203425f6a1a0485938d7bd",
+  "baseline_solution_sha256": "b52f3b8e2b54e0f8bb4d1f0a896018e0139b38f2b8a0f65a7c1048d2c9477925",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-group-hints-wide-batch29-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.365750199998729,
+        "peak_working_set_bytes": 46329856
+      },
+      "after": {
+        "report": "reports\\paired-group-hints-wide-batch29-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.9796347999945283,
+        "peak_working_set_bytes": 45600768
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 2,
+          "failed": 10
+        },
+        "after": {
+          "total": 12,
+          "passed": 3,
+          "failed": 9
+        },
+        "common_cases": 2,
+        "common_solve_us_before": 42211,
+        "common_solve_us_after": 63401,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "wide_unseen_high-fanout_dense_k80_ret0_seed20299038"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108,
+        "scales": [
+          {
+            "n": 160,
+            "median_us": 77125,
+            "max_us": 77125
+          },
+          {
+            "n": 164,
+            "median_us": 26656,
+            "max_us": 26656
+          },
+          {
+            "n": 168,
+            "median_us": 36745,
+            "max_us": 36745
+          },
+          {
+            "n": 169,
+            "median_us": 80829,
+            "max_us": 80829
+          },
+          {
+            "n": 781,
+            "median_us": 161727,
+            "max_us": 161727
+          },
+          {
+            "n": 798,
+            "median_us": 217343,
+            "max_us": 217343
+          },
+          {
+            "n": 813,
+            "median_us": 406090,
+            "max_us": 406090
+          },
+          {
+            "n": 814,
+            "median_us": 317491,
+            "max_us": 317491
+          },
+          {
+            "n": 1576,
+            "median_us": 268691,
+            "max_us": 268691
+          },
+          {
+            "n": 1605,
+            "median_us": 598033,
+            "max_us": 598033
+          },
+          {
+            "n": 1628,
+            "median_us": 715016,
+            "max_us": 715016
+          },
+          {
+            "n": 1659,
+            "median_us": 888809,
+            "max_us": 888809
+          }
+        ],
+        "common_thread_cpu_measured_cases": 2,
+        "common_thread_cpu_us_before": 46875,
+        "common_thread_cpu_us_after": 46875,
+        "all_solve_us_before": 3184500,
+        "all_thread_cpu_us_before": 2953125,
+        "all_solve_us_after": 3794555,
+        "all_thread_cpu_us_after": 3312500
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-group-hints-wide-batch29-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.6230644999886863,
+        "peak_working_set_bytes": 46264320
+      },
+      "after": {
+        "report": "reports\\paired-group-hints-wide-batch29-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.941225000016857,
+        "peak_working_set_bytes": 45670400
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 2,
+          "failed": 10
+        },
+        "after": {
+          "total": 12,
+          "passed": 3,
+          "failed": 9
+        },
+        "common_cases": 2,
+        "common_solve_us_before": 43514,
+        "common_solve_us_after": 59090,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "wide_unseen_high-fanout_dense_k80_ret0_seed20299038"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108,
+        "scales": [
+          {
+            "n": 160,
+            "median_us": 57923,
+            "max_us": 57923
+          },
+          {
+            "n": 164,
+            "median_us": 29008,
+            "max_us": 29008
+          },
+          {
+            "n": 168,
+            "median_us": 30082,
+            "max_us": 30082
+          },
+          {
+            "n": 169,
+            "median_us": 64963,
+            "max_us": 64963
+          },
+          {
+            "n": 781,
+            "median_us": 132543,
+            "max_us": 132543
+          },
+          {
+            "n": 798,
+            "median_us": 145109,
+            "max_us": 145109
+          },
+          {
+            "n": 813,
+            "median_us": 325981,
+            "max_us": 325981
+          },
+          {
+            "n": 814,
+            "median_us": 319461,
+            "max_us": 319461
+          },
+          {
+            "n": 1576,
+            "median_us": 321910,
+            "max_us": 321910
+          },
+          {
+            "n": 1605,
+            "median_us": 677036,
+            "max_us": 677036
+          },
+          {
+            "n": 1628,
+            "median_us": 701383,
+            "max_us": 701383
+          },
+          {
+            "n": 1659,
+            "median_us": 947224,
+            "max_us": 947224
+          }
+        ],
+        "common_thread_cpu_measured_cases": 2,
+        "common_thread_cpu_us_before": 31250,
+        "common_thread_cpu_us_after": 62500,
+        "all_solve_us_before": 3429454,
+        "all_thread_cpu_us_before": 2671875,
+        "all_solve_us_after": 3752623,
+        "all_thread_cpu_us_after": 3406250
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-group-hints-wide-batch29-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.2401699000038207,
+        "peak_working_set_bytes": 46006272
+      },
+      "after": {
+        "report": "reports\\paired-group-hints-wide-batch29-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.8916841999744065,
+        "peak_working_set_bytes": 45641728
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 2,
+          "failed": 10
+        },
+        "after": {
+          "total": 12,
+          "passed": 3,
+          "failed": 9
+        },
+        "common_cases": 2,
+        "common_solve_us_before": 42130,
+        "common_solve_us_after": 51033,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "wide_unseen_high-fanout_dense_k80_ret0_seed20299038"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 108,
+        "scales": [
+          {
+            "n": 160,
+            "median_us": 56489,
+            "max_us": 56489
+          },
+          {
+            "n": 164,
+            "median_us": 22611,
+            "max_us": 22611
+          },
+          {
+            "n": 168,
+            "median_us": 28422,
+            "max_us": 28422
+          },
+          {
+            "n": 169,
+            "median_us": 95322,
+            "max_us": 95322
+          },
+          {
+            "n": 781,
+            "median_us": 128130,
+            "max_us": 128130
+          },
+          {
+            "n": 798,
+            "median_us": 127842,
+            "max_us": 127842
+          },
+          {
+            "n": 813,
+            "median_us": 249421,
+            "max_us": 249421
+          },
+          {
+            "n": 814,
+            "median_us": 301502,
+            "max_us": 301502
+          },
+          {
+            "n": 1576,
+            "median_us": 268136,
+            "max_us": 268136
+          },
+          {
+            "n": 1605,
+            "median_us": 577780,
+            "max_us": 577780
+          },
+          {
+            "n": 1628,
+            "median_us": 604582,
+            "max_us": 604582
+          },
+          {
+            "n": 1659,
+            "median_us": 1244770,
+            "max_us": 1244770
+          }
+        ],
+        "common_thread_cpu_measured_cases": 2,
+        "common_thread_cpu_us_before": 46875,
+        "common_thread_cpu_us_after": 62500,
+        "all_solve_us_before": 3061732,
+        "all_thread_cpu_us_before": 2843750,
+        "all_solve_us_after": 3705007,
+        "all_thread_cpu_us_after": 3203125
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch28\\solution.cpp",
+  "median_common_solve_us_before": 42211,
+  "median_common_solve_us_after": 59090,
+  "median_wall_seconds_before": 3.365750199998729,
+  "median_wall_seconds_after": 3.941225000016857,
+  "maximum_cli_working_set_bytes": 45670400,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 46875,
+  "median_all_solve_us_before": 3184500,
+  "median_all_thread_cpu_us_before": 2843750,
+  "median_common_thread_cpu_us_after": 62500,
+  "median_all_solve_us_after": 3752623,
+  "median_all_thread_cpu_us_after": 3312500,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5"
+}

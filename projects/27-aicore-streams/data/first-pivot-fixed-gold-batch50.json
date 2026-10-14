@@ -1,0 +1,2075 @@
+{
+  "format": "aicore-local-fixed-plan-bigint-v1",
+  "cases": [
+    {
+      "name": "first_pivot_critical_capacity301",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 301,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "deadline_us": 21,
+      "fixed_plan": {
+        "streams": [
+          {
+            "tasks": [
+              {
+                "op_id": 11,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 13,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 207,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 209,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 101,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 103,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 201,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 105,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 203,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 211,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10001,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10002,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10003,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10004,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10005,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10006,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10007,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10008,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10009,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10010,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 301,
+                "wait_before": [],
+                "record_after": -1
+              }
+            ]
+          }
+        ]
+      },
+      "gold_valid": false,
+      "gold_T": "21",
+      "gold_peak": "381"
+    },
+    {
+      "name": "first_pivot_critical_capacity381",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 381,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "deadline_us": 21,
+      "fixed_plan": {
+        "streams": [
+          {
+            "tasks": [
+              {
+                "op_id": 11,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 13,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 207,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 209,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 101,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 103,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 201,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 105,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 203,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 211,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10001,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10002,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10003,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10004,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10005,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10006,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10007,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10008,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10009,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10010,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 301,
+                "wait_before": [],
+                "record_after": -1
+              }
+            ]
+          }
+        ]
+      },
+      "gold_valid": true,
+      "gold_T": "21",
+      "gold_peak": "381"
+    },
+    {
+      "name": "first_pivot_after-critical_capacity301",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 301,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "deadline_us": 21,
+      "fixed_plan": {
+        "streams": [
+          {
+            "tasks": [
+              {
+                "op_id": 11,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 13,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 207,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 209,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 211,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 101,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 103,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 201,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 105,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 203,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10001,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10002,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10003,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10004,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10005,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10006,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10007,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10008,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10009,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10010,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 301,
+                "wait_before": [],
+                "record_after": -1
+              }
+            ]
+          }
+        ]
+      },
+      "gold_valid": false,
+      "gold_T": "21",
+      "gold_peak": "381"
+    },
+    {
+      "name": "first_pivot_after-critical_capacity381",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 381,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "deadline_us": 21,
+      "fixed_plan": {
+        "streams": [
+          {
+            "tasks": [
+              {
+                "op_id": 11,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 13,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 207,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 209,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 211,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 101,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 103,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 201,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 105,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 203,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10001,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10002,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10003,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10004,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10005,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10006,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10007,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10008,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10009,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10010,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 301,
+                "wait_before": [],
+                "record_after": -1
+              }
+            ]
+          }
+        ]
+      },
+      "gold_valid": true,
+      "gold_T": "21",
+      "gold_peak": "381"
+    },
+    {
+      "name": "first_pivot_first-member_capacity301",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 301,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "deadline_us": 21,
+      "fixed_plan": {
+        "streams": [
+          {
+            "tasks": [
+              {
+                "op_id": 11,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 13,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 101,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 103,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 201,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 105,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 203,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 207,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 209,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 211,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10001,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10002,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10003,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10004,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10005,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10006,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10007,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10008,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10009,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10010,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 301,
+                "wait_before": [],
+                "record_after": -1
+              }
+            ]
+          }
+        ]
+      },
+      "gold_valid": true,
+      "gold_T": "21",
+      "gold_peak": "301"
+    },
+    {
+      "name": "first_pivot_first-member_capacity381",
+      "hardware": {
+        "aic_core_num": 2,
+        "aiv_core_num": 2,
+        "stream_num": 2,
+        "memory_limit": 381,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "nodes": [
+        {
+          "id": 11,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 13,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 0,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 101,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 100,
+          "output_memory": 80,
+          "inputs": [
+            11
+          ]
+        },
+        {
+          "id": 103,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 105,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            13
+          ]
+        },
+        {
+          "id": 201,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            103
+          ]
+        },
+        {
+          "id": 203,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            101,
+            105
+          ]
+        },
+        {
+          "id": 207,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 209,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 5,
+          "output_memory": 100,
+          "inputs": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": 211,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 101,
+          "output_memory": 0,
+          "inputs": [
+            207,
+            209
+          ]
+        },
+        {
+          "id": 301,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": [
+            203,
+            211,
+            207,
+            209
+          ]
+        },
+        {
+          "id": 10001,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10002,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10003,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10004,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10005,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10006,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10007,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10008,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10009,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        },
+        {
+          "id": 10010,
+          "core_type": "AIV",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 1,
+          "output_memory": 0,
+          "inputs": []
+        }
+      ],
+      "deadline_us": 21,
+      "fixed_plan": {
+        "streams": [
+          {
+            "tasks": [
+              {
+                "op_id": 11,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 13,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 101,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 103,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 201,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 105,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 203,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 207,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 209,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 211,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10001,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10002,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10003,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10004,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10005,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10006,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10007,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10008,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10009,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 10010,
+                "wait_before": [],
+                "record_after": -1
+              },
+              {
+                "op_id": 301,
+                "wait_before": [],
+                "record_after": -1
+              }
+            ]
+          }
+        ]
+      },
+      "gold_valid": true,
+      "gold_T": "21",
+      "gold_peak": "301"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "origin": "self-created",
+  "case_ids": [
+    "clamp",
+    "chunks",
+    "dedupe",
+    "slug",
+    "shipping",
+    "csv_sum",
+    "runs",
+    "rotate",
+    "intervals",
+    "normalize",
+    "histogram",
+    "prefix",
+    "window",
+    "threshold",
+    "priced_total",
+    "parse_records",
+    "bounded_mean",
+    "choose_records",
+    "partition_even",
+    "summarize_pairs"
+  ],
+  "version": 5
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "records": 7,
+  "before_copies": 331,
+  "after_copies": 324,
+  "totals": {
+    "whole_outputs": 327,
+    "proposals": 310,
+    "rounds": 10,
+    "improved_graphs": 3
+  },
+  "frontier": {
+    "header": 37,
+    "immutable_label": 77046,
+    "open": 2998,
+    "unfinished_expansion": 21
+  },
+  "default_changed": false,
+  "scope": "selected previously used DEV, larger search budget, no full336 replacement or official Level claim",
+  "report_sha256": "a8d3b2b94bee84ab86382ebddfdb71354e3cdc49fcbb2ef010e7c40cf933fe35",
+  "audit_sha256": "b68cbebf4b210efb9147696c29687024d3930e6d1040cb03ad87b30766c7979a"
+}

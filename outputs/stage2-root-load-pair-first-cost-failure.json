@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "first_runner_terminal_exit_code": 1,
+  "first_tool_chunk": "9e2aaf",
+  "actual_first_CLI_exit_code": 0,
+  "first_originalC_bytes_independently_compared": 379700,
+  "first_actual_compute_ms": 75.042,
+  "failed_report_sha256": "070392af398496ac4884a7889bf0b65017c1d4231a6387dc986a30d8e7b06804",
+  "cause": "Runner asserted not-run count equalsmatrices for fixed genericVM; runtime sets fixed so count0; native bypass staysnot-run.",
+  "next": "Source-only corrected assertion and missing189 continuation; preserve original raw/trace. Pair0 must be marked interrupted, separately from94 continuous comparisons. No favorable-only source selection."
+}

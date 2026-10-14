@@ -1,0 +1,62 @@
+{
+  "status": "functional_candidate_only",
+  "source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "benchmark_sha": "6568a4543f212eb047cb88ed47c4cc28ebb737897f98439d6cba9dae16ebed88",
+  "independent_simulator_sha": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+  "timing": "Shared CPU functional; old O3/default and new O2. No speed ratio or promotion.",
+  "wall_seconds": 46.18953580001835,
+  "jobs": [
+    {
+      "suite": "hard",
+      "exit_code": 1,
+      "wall_seconds": 38.77591060003033,
+      "input_sha": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+      "bench_sha": "6568a4543f212eb047cb88ed47c4cc28ebb737897f98439d6cba9dae16ebed88"
+    },
+    {
+      "suite": "heldout-before",
+      "exit_code": 1,
+      "wall_seconds": 3.4618105000117794,
+      "input_sha": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+      "bench_sha": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56"
+    },
+    {
+      "suite": "heldout-after",
+      "exit_code": 1,
+      "wall_seconds": 3.767264000023715,
+      "input_sha": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+      "bench_sha": "6568a4543f212eb047cb88ed47c4cc28ebb737897f98439d6cba9dae16ebed88"
+    }
+  ],
+  "comparisons": {
+    "hard": {
+      "records": 202,
+      "before_legal": 141,
+      "after_legal": 143,
+      "recovered": [
+        "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+        "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+      ],
+      "lost": [],
+      "common_quality_regression": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "81ed6a870abfed443d8a74fe83d407116cc5a99844e6baed55dbb71d7d278f28",
+      "after_sha": "04272ce2658fb85ec7a136cde4f4b35107ab1ba64759bf34b403d8766a005b20",
+      "all_failure_wall_us": 26163856,
+      "all_failure_thread_cpu_us": 23468750
+    },
+    "heldout": {
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "recovered": [],
+      "lost": [],
+      "common_quality_regression": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "2689ecba2769ae52031f77e405dabe0fe13da25d5f0722b21b2048c71e623ba4",
+      "after_sha": "260df9d93ba59cc97f4b5dffc8179097ef12565451e4866f107f3d0246ff0f02",
+      "all_failure_wall_us": 1169793,
+      "all_failure_thread_cpu_us": 906250
+    }
+  }
+}

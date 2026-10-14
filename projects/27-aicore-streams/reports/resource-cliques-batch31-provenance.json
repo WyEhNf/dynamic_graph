@@ -1,0 +1,7 @@
+{
+  "input_sha256": "2d6930307fbd7a6c166212249e18b397834c930e08b4a4c423f240b9e9669747",
+  "generator_sha256": "bc5899e348be34ee6e966ba9e7eef7c6f283374275fba8884ed1b877295c09ae",
+  "records": 12,
+  "baseline_source_sha256": "6c9ea2d3b557c88ab8bb8f87922018fb204bd247643dd25ba10eeba52893bd57",
+  "source_freeze_scope": "planned analytic controls, constructed from theorem before examining solver outcomes; not random unseen performance distribution"
+}

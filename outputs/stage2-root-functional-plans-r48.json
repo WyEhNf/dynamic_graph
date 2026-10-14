@@ -1,0 +1,40 @@
+{
+  "reviewed_unix": 1791712273.400154,
+  "passed": true,
+  "independently_validated": 186,
+  "suites": [
+    {
+      "suite": "hard",
+      "records": 202,
+      "before_legal": 143,
+      "after_legal": 144,
+      "remaining_unknown": 58,
+      "recovered": [
+        "irregular_consumers_local_k24_ret1_seed20273418"
+      ],
+      "lost": 0,
+      "common_T_peak_identical": true,
+      "evidence": {
+        "projects/27-aicore-streams/data/hard-corpus-resumed.json": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+        "projects/27-aicore-streams/reports/hard-functional-batch45.json": "04272ce2658fb85ec7a136cde4f4b35107ab1ba64759bf34b403d8766a005b20",
+        "projects/27-aicore-streams/reports/hard-functional-batch48.json": "0607350f4ac622013bb55ec9c61eb206763e6561ad3b968ecc793a4b573bd8c0"
+      }
+    },
+    {
+      "suite": "retention-heldout",
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "remaining_unknown": 6,
+      "recovered": [],
+      "lost": 0,
+      "common_T_peak_identical": true,
+      "evidence": {
+        "projects/27-aicore-streams/data/projection-retention-heldout-batch45.json": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+        "projects/27-aicore-streams/reports/heldout-after-functional-batch45.json": "260df9d93ba59cc97f4b5dffc8179097ef12565451e4866f107f3d0246ff0f02",
+        "projects/27-aicore-streams/reports/heldout-functional-batch48.json": "d8b707ca8eaf6ff7fe3234bc224ac1afca598c87b590ea4363332888210a262c"
+      }
+    }
+  ],
+  "scope": "All actual144+42 plans independently replayed by root bigint heap model. One further old hard failure recovered, distinct131-node topology; prior two R45 recoveries preserved; fresh48 seeds retain42 legal/6 unresolved, zero fresh recovery. Candidate remains isolated; actual default45 remains143/202. DifferentO2/O3 and shared functionalCPU timings cannot support speed/cost/promotion claims."
+}

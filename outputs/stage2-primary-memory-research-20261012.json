@@ -1,0 +1,47 @@
+{
+  "status": "primary_sources_rechecked_abstract_scope_not_fullpaper_implementation",
+  "read_date": "2026-10-12",
+  "project11": "paused_by_user; no research or execution that resumes project11",
+  "sources": [
+    {
+      "title": "New Tools for Peak Memory Scheduling",
+      "year": 2023,
+      "primary_url": "https://arxiv.org/abs/2312.13526",
+      "read_scope": "primary abstract and submission history; v1 Dec21 2023",
+      "findings": "Weighted one-shot black pebbling; dominant schedules and series-parallel FPT by outdegree. Strong NP-completeness even for out-trees/pumpkins.",
+      "inference_for_27": "Do not infer arbitrary-DAG feasibility or a polynomial exact solver from tree structure. A dominant subgraph schedule needs compatibility with original external direct consumers, workspace, sinks and deadlines. Prior final-live filter negatives remain frozen."
+    },
+    {
+      "title": "Graph Transformations for Memory Peak Minimization by Scheduling",
+      "year": 2025,
+      "primary_url": "https://pop-art.inrialpes.fr/~fradet/abstracts.html",
+      "bibliographic_url": "https://pop-art.inrialpes.fr/people/fradet/publications.html",
+      "read_scope": "author abstract and Jan2025 corrected-version listing; no fullpaper algorithm read",
+      "findings": "Peak-preserving task graph reductions; SP-DAG composition and branch-and-bound on reduced graphs.",
+      "inference_for_27": "Investigate compositional scheduling only after checking exact shared-output lifetime and workspace semantics; do not merge original vertices, drop outside consumers or claim its reductions preserve contest AIC/AIV/time constraints without proof."
+    },
+    {
+      "title": "Parallel Scheduling of Task Graphs with Minimal Memory Requirements",
+      "year": 2025,
+      "primary_url": "https://pop-art.inrialpes.fr/~fradet/abstracts.html",
+      "bibliographic_url": "https://pop-art.inrialpes.fr/people/fradet/publications.html",
+      "read_scope": "author abstract; IPDPS2025 pp395-406 June2025",
+      "findings": "Find a sequential memory-minimal schedule for supported graph classes, then memory-aware parallel list scheduling. Its stated memory guarantee is conditional on its model and sequential-peak constraint.",
+      "inference_for_27": "Separate finding an original-DAG feasible sequential order from parallel/time scheduling diagnostics. Does not prove our heterogeneous AIC/AIV/deadline model. First collect actual candidate failure stages rather than infer them from total work."
+    },
+    {
+      "title": "FusionRCG: Orchestrating Recursive Computation Graphs across GPU Memory Hierarchies",
+      "year": 2026,
+      "primary_url": "https://arxiv.org/abs/2605.10312",
+      "read_scope": "primary abstract and v1 May11/v2 May13 submission history",
+      "findings": "Liveness-aware ordering, algebraic dimensionality reduction and GPU hierarchy mapping in electron-repulsion integral recurrences.",
+      "inference_for_18_27": "Only liveness-aware ordering is a plausible conceptual transfer. Algebraic fusion changes identities and GPU hierarchy choices change the problem; neither is authorized by the strict original-operation/window or graph resource requirements. Reported A100 benefits do not support local contest speed claims."
+    }
+  ],
+  "decisions": [
+    "18: run isolated mobile/backbone source after independent review; preserve original operation identity, physical W, read/write hazards, and full-output checks.",
+    "19: classic interpreter fusion is already researched; next prove real-C full bytes and actual steps/PC equivalence before measuring same-binary95 pairs.",
+    "27: actual original12 negative remains4 success/8 failure; source-only stage observer must remove byte-for-byte to3a4f before any new actual run."
+  ],
+  "scope": "Research informs next experiments; no official grades, general feasibility, Level1-3 or measured speed achievement."
+}

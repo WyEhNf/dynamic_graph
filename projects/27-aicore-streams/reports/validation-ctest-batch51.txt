@@ -1,0 +1,33 @@
+Test project F:/Hackathon/projects/27-aicore-streams/research/batch51/validation-build
+      Start  1: scheduler_semantics
+ 1/14 Test  #1: scheduler_semantics ........................   Passed    0.47 sec
+      Start  2: submission_model_and_json
+ 2/14 Test  #2: submission_model_and_json ..................   Passed    0.53 sec
+      Start  3: assignment_grouping_equivalence
+ 3/14 Test  #3: assignment_grouping_equivalence ............   Passed    0.46 sec
+      Start  4: serial_frontier_exact_equivalence
+ 4/14 Test  #4: serial_frontier_exact_equivalence ..........   Passed    0.46 sec
+      Start  5: local_batch_quick
+ 5/14 Test  #5: local_batch_quick ..........................   Passed    0.55 sec
+      Start  6: numeric-controls_int64
+ 6/14 Test  #6: numeric-controls_int64 .....................   Passed    0.51 sec
+      Start  7: numeric-parallel_int64
+ 7/14 Test  #7: numeric-parallel_int64 .....................   Passed    0.30 sec
+      Start  8: numeric-parallel-valid_int64
+ 8/14 Test  #8: numeric-parallel-valid_int64 ...............   Passed    0.26 sec
+      Start  9: scaled-serial-controls_int64
+ 9/14 Test  #9: scaled-serial-controls_int64 ...............   Passed    1.51 sec
+      Start 10: numeric_priority_exact_gold
+10/14 Test #10: numeric_priority_exact_gold ................   Passed    0.50 sec
+      Start 11: shallow_profile_bigint_gold
+11/14 Test #11: shallow_profile_bigint_gold ................   Passed    0.49 sec
+      Start 12: workspace_projection_bigint_gold
+12/14 Test #12: workspace_projection_bigint_gold ...........   Passed    0.50 sec
+      Start 13: consumer_group_bigint_gold
+13/14 Test #13: consumer_group_bigint_gold .................   Passed    0.47 sec
+      Start 14: remaining_direct_release_cut_bigint_gold
+14/14 Test #14: remaining_direct_release_cut_bigint_gold ...   Passed    0.47 sec
+
+100% tests passed, 0 tests failed out of 14
+
+Total Test time (real) =   7.52 sec

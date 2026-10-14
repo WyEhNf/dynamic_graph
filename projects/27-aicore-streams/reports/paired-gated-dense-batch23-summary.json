@@ -1,0 +1,206 @@
+{
+  "suite": "data\\dense-assignment-holdout.json",
+  "suite_sha256": "cacfc9fdff65606614adf6bd2b31dd0b71b9c7de633aec81f044b373eb1a207b",
+  "baseline_exe_sha256": "45be8acab39a255fe248dc1a949329d503c38e6987996109aa66cb82e6b86c46",
+  "current_exe_sha256": "5899132d4897e185f0d2197ec8ad9269cde454a469b29cebddbc1e6c0adf1cda",
+  "current_solution_sha256": "4c5b2c6a32b72331b0fbbf6065ae5623911e7f85660699c3ee9958a7075ff7b8",
+  "baseline_solution_sha256": "ef3797e37fe6c776aff134efbaf86dc07237bb358a21b3dac752b935359533ff",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-gated-dense-batch23-1-before.json",
+        "exit_code": 0,
+        "wall_seconds": 5.302783100050874,
+        "peak_working_set_bytes": 132796416
+      },
+      "after": {
+        "report": "reports\\paired-gated-dense-batch23-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.598602000041865,
+        "peak_working_set_bytes": 132440064
+      },
+      "comparison": {
+        "before": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "after": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "common_cases": 6,
+        "common_solve_us_before": 1720641,
+        "common_solve_us_after": 1777633,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 89,
+        "scales": [
+          {
+            "n": 256,
+            "median_us": 49459.5,
+            "max_us": 50331
+          },
+          {
+            "n": 1024,
+            "median_us": 196330.0,
+            "max_us": 231086
+          },
+          {
+            "n": 4096,
+            "median_us": 643027.0,
+            "max_us": 738114
+          }
+        ],
+        "common_thread_cpu_measured_cases": 6,
+        "common_thread_cpu_us_before": 1687500,
+        "common_thread_cpu_us_after": 1765625
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-gated-dense-batch23-2-before.json",
+        "exit_code": 0,
+        "wall_seconds": 4.612107100023422,
+        "peak_working_set_bytes": 132648960
+      },
+      "after": {
+        "report": "reports\\paired-gated-dense-batch23-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.460395400004927,
+        "peak_working_set_bytes": 132603904
+      },
+      "comparison": {
+        "before": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "after": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "common_cases": 6,
+        "common_solve_us_before": 1816151,
+        "common_solve_us_after": 1786866,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 89,
+        "scales": [
+          {
+            "n": 256,
+            "median_us": 50119.5,
+            "max_us": 50228
+          },
+          {
+            "n": 1024,
+            "median_us": 195627.0,
+            "max_us": 235765
+          },
+          {
+            "n": 4096,
+            "median_us": 647686.5,
+            "max_us": 714892
+          }
+        ],
+        "common_thread_cpu_measured_cases": 6,
+        "common_thread_cpu_us_before": 1796875,
+        "common_thread_cpu_us_after": 1734375
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-gated-dense-batch23-3-before.json",
+        "exit_code": 0,
+        "wall_seconds": 4.437110700004268,
+        "peak_working_set_bytes": 132820992
+      },
+      "after": {
+        "report": "reports\\paired-gated-dense-batch23-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.538747499987949,
+        "peak_working_set_bytes": 132657152
+      },
+      "comparison": {
+        "before": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "after": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "common_cases": 6,
+        "common_solve_us_before": 1785155,
+        "common_solve_us_after": 1797868,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 89,
+        "scales": [
+          {
+            "n": 256,
+            "median_us": 48775.5,
+            "max_us": 50064
+          },
+          {
+            "n": 1024,
+            "median_us": 200552.0,
+            "max_us": 237680
+          },
+          {
+            "n": 4096,
+            "median_us": 649606.5,
+            "max_us": 718270
+          }
+        ],
+        "common_thread_cpu_measured_cases": 6,
+        "common_thread_cpu_us_before": 1765625,
+        "common_thread_cpu_us_after": 1578125
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch22-instrumented\\solution.cpp",
+  "median_common_solve_us_before": 1785155,
+  "median_common_solve_us_after": 1786866,
+  "median_wall_seconds_before": 4.612107100023422,
+  "median_wall_seconds_after": 4.538747499987949,
+  "maximum_cli_working_set_bytes": 132657152,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": false,
+  "median_common_thread_cpu_us_before": 1765625,
+  "median_common_thread_cpu_us_after": 1734375,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+  "baseline_build_provenance": {
+    "scope": "frozen batch22 submission plus identical current local thread-CPU instrumented harness",
+    "compiler": "GCC15.2.0 Release O3 DNDEBUG",
+    "sha256": {
+      "research/batch22-instrumented/solution.cpp": "ef3797e37fe6c776aff134efbaf86dc07237bb358a21b3dac752b935359533ff",
+      "research/batch22-instrumented/aicore_bench.exe": "45be8acab39a255fe248dc1a949329d503c38e6987996109aa66cb82e6b86c46",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/simulator.cpp": "e0934aa4fa379544eb2f8b07ed54a527e8c0b5ef5ab8d281f00c1ad4c7760df8",
+      "research/batch22-instrumented-build/CMakeCache.txt": "c15357a6dd9ce6d774b987824d6079cece8d5c91dcae5c8ab74c971d71f61031"
+    }
+  }
+}

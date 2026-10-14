@@ -1,0 +1,3143 @@
+{
+  "status": "measured",
+  "sample_interval_seconds": 0.25,
+  "logical_processors": 32,
+  "processor_scope": "all processors",
+  "trial_cpu_delta": {
+    "idle_ticks": 7590781250,
+    "kernel_ticks": 8805937500,
+    "user_ticks": 1172031250,
+    "total_ticks": 9977968750,
+    "busy_ticks": 2387187500,
+    "busy_fraction": 0.2392458384879187
+  },
+  "available_physical_bytes_start": 8829218816,
+  "available_physical_bytes_end": 8800010240,
+  "available_physical_bytes_min": 8245682176,
+  "total_physical_bytes_observed": [
+    33605316608
+  ],
+  "samples": [
+    {
+      "elapsed_seconds": 9.14999982342124e-05,
+      "cpu_ticks": {
+        "idle": 119070347968750,
+        "kernel": 126568651562500,
+        "user": 8142398906250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8829218816,
+        "memory_load_percent": 73
+      }
+    },
+    {
+      "elapsed_seconds": 0.2510280000278726,
+      "cpu_ticks": {
+        "idle": 119070405625000,
+        "kernel": 126568722968750,
+        "user": 8142406875000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8601739264,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 0.5035480000078678,
+      "cpu_ticks": {
+        "idle": 119070446406250,
+        "kernel": 126568784218750,
+        "user": 8142427187500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8533164032,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 0.7546358000254259,
+      "cpu_ticks": {
+        "idle": 119070499062500,
+        "kernel": 126568851093750,
+        "user": 8142439062500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8528240640,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 1.0095053000259213,
+      "cpu_ticks": {
+        "idle": 119070565937500,
+        "kernel": 126568926562500,
+        "user": 8142444843750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8525807616,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 1.2646240000030957,
+      "cpu_ticks": {
+        "idle": 119070634687500,
+        "kernel": 126569005937500,
+        "user": 8142450468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8521310208,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 1.519102499994915,
+      "cpu_ticks": {
+        "idle": 119070699218750,
+        "kernel": 126569078906250,
+        "user": 8142457500000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8523014144,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 1.7712739999988116,
+      "cpu_ticks": {
+        "idle": 119070763437500,
+        "kernel": 126569149375000,
+        "user": 8142463125000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8536711168,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 2.0252057000179775,
+      "cpu_ticks": {
+        "idle": 119070835781250,
+        "kernel": 126569227968750,
+        "user": 8142468437500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8535580672,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 2.276711400016211,
+      "cpu_ticks": {
+        "idle": 119070902187500,
+        "kernel": 126569303281250,
+        "user": 8142474375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8511438848,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 2.5297243000240996,
+      "cpu_ticks": {
+        "idle": 119070968593750,
+        "kernel": 126569379687500,
+        "user": 8142481718750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8492609536,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 2.7826848000404425,
+      "cpu_ticks": {
+        "idle": 119071032343750,
+        "kernel": 126569452500000,
+        "user": 8142488750000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8507453440,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 3.034588500042446,
+      "cpu_ticks": {
+        "idle": 119071097343750,
+        "kernel": 126569527656250,
+        "user": 8142493750000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8492834816,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 3.2887795999995433,
+      "cpu_ticks": {
+        "idle": 119071157656250,
+        "kernel": 126569600468750,
+        "user": 8142500937500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8506224640,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 3.5430190000333823,
+      "cpu_ticks": {
+        "idle": 119071213437500,
+        "kernel": 126569673906250,
+        "user": 8142512187500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8502149120,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 3.7976046000258066,
+      "cpu_ticks": {
+        "idle": 119071275781250,
+        "kernel": 126569746562500,
+        "user": 8142519687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8492941312,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 4.052902700030245,
+      "cpu_ticks": {
+        "idle": 119071335312500,
+        "kernel": 126569815312500,
+        "user": 8142530625000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8451252224,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 4.307774699991569,
+      "cpu_ticks": {
+        "idle": 119071393593750,
+        "kernel": 126569884843750,
+        "user": 8142545937500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8346329088,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 4.562229900038801,
+      "cpu_ticks": {
+        "idle": 119071449375000,
+        "kernel": 126569947812500,
+        "user": 8142562656250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8517431296,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 4.816716900037136,
+      "cpu_ticks": {
+        "idle": 119071517968750,
+        "kernel": 126570019843750,
+        "user": 8142571562500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8522928128,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 5.070205399999395,
+      "cpu_ticks": {
+        "idle": 119071574531250,
+        "kernel": 126570091406250,
+        "user": 8142580000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8491143168,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 5.3207893000217155,
+      "cpu_ticks": {
+        "idle": 119071632656250,
+        "kernel": 126570161875000,
+        "user": 8142589531250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8493240320,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 5.571500100020785,
+      "cpu_ticks": {
+        "idle": 119071690312500,
+        "kernel": 126570232031250,
+        "user": 8142599375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8509796352,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 5.824072299990803,
+      "cpu_ticks": {
+        "idle": 119071749375000,
+        "kernel": 126570304218750,
+        "user": 8142610781250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8508768256,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 6.076987500011455,
+      "cpu_ticks": {
+        "idle": 119071815000000,
+        "kernel": 126570375468750,
+        "user": 8142618281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8523137024,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 6.33025560004171,
+      "cpu_ticks": {
+        "idle": 119071878281250,
+        "kernel": 126570449375000,
+        "user": 8142627031250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8513495040,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 6.584265600016806,
+      "cpu_ticks": {
+        "idle": 119071942187500,
+        "kernel": 126570521875000,
+        "user": 8142634062500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8519766016,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 6.8377794999978505,
+      "cpu_ticks": {
+        "idle": 119072007968750,
+        "kernel": 126570595000000,
+        "user": 8142641406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8518320128,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 7.088348000019323,
+      "cpu_ticks": {
+        "idle": 119072071250000,
+        "kernel": 126570670625000,
+        "user": 8142647343750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8506540032,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 7.339282800036017,
+      "cpu_ticks": {
+        "idle": 119072129062500,
+        "kernel": 126570744531250,
+        "user": 8142654375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8469819392,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 7.593196300033014,
+      "cpu_ticks": {
+        "idle": 119072193906250,
+        "kernel": 126570818750000,
+        "user": 8142662656250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8476708864,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 7.845817200024612,
+      "cpu_ticks": {
+        "idle": 119072250781250,
+        "kernel": 126570885312500,
+        "user": 8142675312500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8491573248,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 8.097748300002422,
+      "cpu_ticks": {
+        "idle": 119072312968750,
+        "kernel": 126570956562500,
+        "user": 8142683281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8495058944,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 8.349073400022462,
+      "cpu_ticks": {
+        "idle": 119072381718750,
+        "kernel": 126571031250000,
+        "user": 8142690156250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8496988160,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 8.600499099993613,
+      "cpu_ticks": {
+        "idle": 119072452187500,
+        "kernel": 126571105625000,
+        "user": 8142695000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8490557440,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 8.853526899998542,
+      "cpu_ticks": {
+        "idle": 119072521406250,
+        "kernel": 126571181562500,
+        "user": 8142699843750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8531148800,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 9.103805000020657,
+      "cpu_ticks": {
+        "idle": 119072581875000,
+        "kernel": 126571254062500,
+        "user": 8142709843750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8494448640,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 9.358299800020177,
+      "cpu_ticks": {
+        "idle": 119072644062500,
+        "kernel": 126571326718750,
+        "user": 8142719687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8477761536,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 9.611106300028041,
+      "cpu_ticks": {
+        "idle": 119072704375000,
+        "kernel": 126571398281250,
+        "user": 8142727812500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8478330880,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 9.865554600022733,
+      "cpu_ticks": {
+        "idle": 119072770312500,
+        "kernel": 126571471875000,
+        "user": 8142734531250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8505790464,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 10.116984000022057,
+      "cpu_ticks": {
+        "idle": 119072833593750,
+        "kernel": 126571543906250,
+        "user": 8142740937500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8521048064,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 10.368868399993517,
+      "cpu_ticks": {
+        "idle": 119072903281250,
+        "kernel": 126571618437500,
+        "user": 8142747187500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8528982016,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 10.620343599992339,
+      "cpu_ticks": {
+        "idle": 119072975312500,
+        "kernel": 126571696250000,
+        "user": 8142753906250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8512077824,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 10.872608600009698,
+      "cpu_ticks": {
+        "idle": 119073043750000,
+        "kernel": 126571769218750,
+        "user": 8142758750000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8495636480,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 11.12385400000494,
+      "cpu_ticks": {
+        "idle": 119073111250000,
+        "kernel": 126571844843750,
+        "user": 8142765625000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8505430016,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 11.374380199995358,
+      "cpu_ticks": {
+        "idle": 119073176718750,
+        "kernel": 126571920000000,
+        "user": 8142771406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8494399488,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 11.628352700034156,
+      "cpu_ticks": {
+        "idle": 119073239062500,
+        "kernel": 126571992031250,
+        "user": 8142779375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8502796288,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 11.879350400005933,
+      "cpu_ticks": {
+        "idle": 119073295625000,
+        "kernel": 126572063593750,
+        "user": 8142787812500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8492335104,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 12.131056300015189,
+      "cpu_ticks": {
+        "idle": 119073351718750,
+        "kernel": 126572132343750,
+        "user": 8142796406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8504766464,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 12.382503900036681,
+      "cpu_ticks": {
+        "idle": 119073423906250,
+        "kernel": 126572209218750,
+        "user": 8142801875000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8499580928,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 12.634285200037993,
+      "cpu_ticks": {
+        "idle": 119073495312500,
+        "kernel": 126572284375000,
+        "user": 8142806875000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8489865216,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 12.886260300001595,
+      "cpu_ticks": {
+        "idle": 119073555000000,
+        "kernel": 126572357968750,
+        "user": 8142816093750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8527872000,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 13.13754239998525,
+      "cpu_ticks": {
+        "idle": 119073605937500,
+        "kernel": 126572422656250,
+        "user": 8142832500000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8620060672,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 13.388321800041012,
+      "cpu_ticks": {
+        "idle": 119073661250000,
+        "kernel": 126572487031250,
+        "user": 8142849375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8585019392,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 13.640575600031298,
+      "cpu_ticks": {
+        "idle": 119073710468750,
+        "kernel": 126572547656250,
+        "user": 8142868750000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8603066368,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 13.894974399998318,
+      "cpu_ticks": {
+        "idle": 119073762031250,
+        "kernel": 126572613906250,
+        "user": 8142882500000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8641392640,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 14.14995250001084,
+      "cpu_ticks": {
+        "idle": 119073815937500,
+        "kernel": 126572681718750,
+        "user": 8142894687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8652976128,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 14.401362900040112,
+      "cpu_ticks": {
+        "idle": 119073872656250,
+        "kernel": 126572750937500,
+        "user": 8142907656250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8626925568,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 14.653267499990761,
+      "cpu_ticks": {
+        "idle": 119073934375000,
+        "kernel": 126572821093750,
+        "user": 8142919843750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8657317888,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 14.905960600008257,
+      "cpu_ticks": {
+        "idle": 119073989218750,
+        "kernel": 126572888750000,
+        "user": 8142932187500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8642887680,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 15.158360600005835,
+      "cpu_ticks": {
+        "idle": 119074041562500,
+        "kernel": 126572954687500,
+        "user": 8142946718750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8646066176,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 15.413064400025178,
+      "cpu_ticks": {
+        "idle": 119074085625000,
+        "kernel": 126573017656250,
+        "user": 8142963750000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8651644928,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 15.66532329999609,
+      "cpu_ticks": {
+        "idle": 119074139062500,
+        "kernel": 126573085000000,
+        "user": 8142976406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8645795840,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 15.918399300018791,
+      "cpu_ticks": {
+        "idle": 119074196250000,
+        "kernel": 126573155156250,
+        "user": 8142989843750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8658849792,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 16.17244540003594,
+      "cpu_ticks": {
+        "idle": 119074259843750,
+        "kernel": 126573226875000,
+        "user": 8142999531250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8677396480,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 16.426660900004208,
+      "cpu_ticks": {
+        "idle": 119074325937500,
+        "kernel": 126573298281250,
+        "user": 8143008125000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8655585280,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 16.679692500038072,
+      "cpu_ticks": {
+        "idle": 119074380156250,
+        "kernel": 126573362500000,
+        "user": 8143023906250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8646479872,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 16.92975790001219,
+      "cpu_ticks": {
+        "idle": 119074442968750,
+        "kernel": 126573432656250,
+        "user": 8143033281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8637100032,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 17.183264299994335,
+      "cpu_ticks": {
+        "idle": 119074511875000,
+        "kernel": 126573510156250,
+        "user": 8143041250000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8647327744,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 17.437729199999012,
+      "cpu_ticks": {
+        "idle": 119074572656250,
+        "kernel": 126573581718750,
+        "user": 8143049687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8621953024,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 17.6893115999992,
+      "cpu_ticks": {
+        "idle": 119074627343750,
+        "kernel": 126573650937500,
+        "user": 8143060468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8619958272,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 17.939332999987528,
+      "cpu_ticks": {
+        "idle": 119074684375000,
+        "kernel": 126573722031250,
+        "user": 8143069375000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8590360576,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 18.18933810002636,
+      "cpu_ticks": {
+        "idle": 119074742343750,
+        "kernel": 126573792812500,
+        "user": 8143078281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8575963136,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 18.44226580002578,
+      "cpu_ticks": {
+        "idle": 119074798593750,
+        "kernel": 126573861093750,
+        "user": 8143090000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8572407808,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 18.69606730004307,
+      "cpu_ticks": {
+        "idle": 119074861875000,
+        "kernel": 126573932187500,
+        "user": 8143099062500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8557842432,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 18.949804300034884,
+      "cpu_ticks": {
+        "idle": 119074923906250,
+        "kernel": 126574004843750,
+        "user": 8143110000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8527089664,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 19.201499800023157,
+      "cpu_ticks": {
+        "idle": 119074986875000,
+        "kernel": 126574079218750,
+        "user": 8143116875000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8516505600,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 19.456570699985605,
+      "cpu_ticks": {
+        "idle": 119075050156250,
+        "kernel": 126574151250000,
+        "user": 8143125156250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8462901248,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 19.70715850003762,
+      "cpu_ticks": {
+        "idle": 119075111250000,
+        "kernel": 126574221718750,
+        "user": 8143134687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8402808832,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 19.95739080000203,
+      "cpu_ticks": {
+        "idle": 119075154375000,
+        "kernel": 126574285312500,
+        "user": 8143151093750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8333484032,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 20.210949300031643,
+      "cpu_ticks": {
+        "idle": 119075206250000,
+        "kernel": 126574353437500,
+        "user": 8143162968750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8307494912,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 20.461260300013237,
+      "cpu_ticks": {
+        "idle": 119075259843750,
+        "kernel": 126574420781250,
+        "user": 8143175468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8310005760,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 20.71475520002423,
+      "cpu_ticks": {
+        "idle": 119075324218750,
+        "kernel": 126574493281250,
+        "user": 8143186406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8317132800,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 20.9688729000045,
+      "cpu_ticks": {
+        "idle": 119075390781250,
+        "kernel": 126574566406250,
+        "user": 8143194531250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8286326784,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 21.221063300035894,
+      "cpu_ticks": {
+        "idle": 119075461875000,
+        "kernel": 126574640000000,
+        "user": 8143201406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8279302144,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 21.4736583000049,
+      "cpu_ticks": {
+        "idle": 119075523125000,
+        "kernel": 126574707968750,
+        "user": 8143213437500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8275079168,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 21.728142600040883,
+      "cpu_ticks": {
+        "idle": 119075583281250,
+        "kernel": 126574776718750,
+        "user": 8143224687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8256352256,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 21.98015940003097,
+      "cpu_ticks": {
+        "idle": 119075644218750,
+        "kernel": 126574847500000,
+        "user": 8143237656250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8583770112,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 22.230688100040425,
+      "cpu_ticks": {
+        "idle": 119075694062500,
+        "kernel": 126574915625000,
+        "user": 8143250468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8549113856,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 22.48202759999549,
+      "cpu_ticks": {
+        "idle": 119075750156250,
+        "kernel": 126574985781250,
+        "user": 8143260468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8563822592,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 22.736814600008074,
+      "cpu_ticks": {
+        "idle": 119075805312500,
+        "kernel": 126575053906250,
+        "user": 8143272187500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8547753984,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 22.98951240000315,
+      "cpu_ticks": {
+        "idle": 119075865000000,
+        "kernel": 126575123593750,
+        "user": 8143282031250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8539406336,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 23.241662900021765,
+      "cpu_ticks": {
+        "idle": 119075930468750,
+        "kernel": 126575195937500,
+        "user": 8143290468750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8529948672,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 23.49520720000146,
+      "cpu_ticks": {
+        "idle": 119075992187500,
+        "kernel": 126575267031250,
+        "user": 8143301875000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8534192128,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 23.748711900028866,
+      "cpu_ticks": {
+        "idle": 119076053906250,
+        "kernel": 126575335000000,
+        "user": 8143315000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8528719872,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 23.999638400040567,
+      "cpu_ticks": {
+        "idle": 119076117031250,
+        "kernel": 126575408593750,
+        "user": 8143322812500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8502263808,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 24.251767500012647,
+      "cpu_ticks": {
+        "idle": 119076183750000,
+        "kernel": 126575482187500,
+        "user": 8143329062500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8468586496,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 24.504016900027636,
+      "cpu_ticks": {
+        "idle": 119076246250000,
+        "kernel": 126575552656250,
+        "user": 8143337968750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8417775616,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 24.757487900031265,
+      "cpu_ticks": {
+        "idle": 119076296718750,
+        "kernel": 126575617968750,
+        "user": 8143353281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8355463168,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 25.009973900043406,
+      "cpu_ticks": {
+        "idle": 119076364218750,
+        "kernel": 126575688593750,
+        "user": 8143363281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8324476928,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 25.264494200004265,
+      "cpu_ticks": {
+        "idle": 119076421718750,
+        "kernel": 126575759375000,
+        "user": 8143376406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8268476416,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 25.516745700035244,
+      "cpu_ticks": {
+        "idle": 119076485781250,
+        "kernel": 126575830468750,
+        "user": 8143385781250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8279420928,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 25.767118600022513,
+      "cpu_ticks": {
+        "idle": 119076546250000,
+        "kernel": 126575901406250,
+        "user": 8143395000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8263286784,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 26.021559900022112,
+      "cpu_ticks": {
+        "idle": 119076612031250,
+        "kernel": 126575972656250,
+        "user": 8143403750000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8248643584,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 26.2716245999909,
+      "cpu_ticks": {
+        "idle": 119076670625000,
+        "kernel": 126576042500000,
+        "user": 8143413906250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8245682176,
+        "memory_load_percent": 75
+      }
+    },
+    {
+      "elapsed_seconds": 26.522891100030392,
+      "cpu_ticks": {
+        "idle": 119076730156250,
+        "kernel": 126576112812500,
+        "user": 8143423593750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8543535104,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 26.776951999985613,
+      "cpu_ticks": {
+        "idle": 119076792343750,
+        "kernel": 126576184062500,
+        "user": 8143434062500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8543727616,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 27.02888019999955,
+      "cpu_ticks": {
+        "idle": 119076858593750,
+        "kernel": 126576257812500,
+        "user": 8143443593750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8526077952,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 27.282694199995603,
+      "cpu_ticks": {
+        "idle": 119076917968750,
+        "kernel": 126576326875000,
+        "user": 8143453281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8504242176,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 27.53308260004269,
+      "cpu_ticks": {
+        "idle": 119076978125000,
+        "kernel": 126576397812500,
+        "user": 8143461875000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8455192576,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 27.78529490000801,
+      "cpu_ticks": {
+        "idle": 119077040000000,
+        "kernel": 126576471406250,
+        "user": 8143470000000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8478552064,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 28.040278600004967,
+      "cpu_ticks": {
+        "idle": 119077107343750,
+        "kernel": 126576546250000,
+        "user": 8143475156250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8472723456,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 28.29171950003365,
+      "cpu_ticks": {
+        "idle": 119077176718750,
+        "kernel": 126576621406250,
+        "user": 8143480781250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8469794816,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 28.546798499999568,
+      "cpu_ticks": {
+        "idle": 119077244062500,
+        "kernel": 126576695000000,
+        "user": 8143487656250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8473300992,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 28.79698250000365,
+      "cpu_ticks": {
+        "idle": 119077315000000,
+        "kernel": 126576770468750,
+        "user": 8143492968750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8486031360,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 29.051715400011744,
+      "cpu_ticks": {
+        "idle": 119077386562500,
+        "kernel": 126576844687500,
+        "user": 8143501406250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8484524032,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 29.305679200042505,
+      "cpu_ticks": {
+        "idle": 119077453750000,
+        "kernel": 126576916718750,
+        "user": 8143508906250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8483823616,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 29.56042699998943,
+      "cpu_ticks": {
+        "idle": 119077527656250,
+        "kernel": 126576993125000,
+        "user": 8143516562500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8485920768,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 29.810552300012205,
+      "cpu_ticks": {
+        "idle": 119077596250000,
+        "kernel": 126577065312500,
+        "user": 8143524687500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8484200448,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 30.064751700032502,
+      "cpu_ticks": {
+        "idle": 119077664531250,
+        "kernel": 126577138281250,
+        "user": 8143531093750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8498753536,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 30.318313500029035,
+      "cpu_ticks": {
+        "idle": 119077729062500,
+        "kernel": 126577212812500,
+        "user": 8143537187500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8502165504,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 30.56859949999489,
+      "cpu_ticks": {
+        "idle": 119077783906250,
+        "kernel": 126577282968750,
+        "user": 8143548281250
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8488677376,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 30.81924360000994,
+      "cpu_ticks": {
+        "idle": 119077841718750,
+        "kernel": 126577352187500,
+        "user": 8143558593750
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8517611520,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 31.074718300020322,
+      "cpu_ticks": {
+        "idle": 119077908281250,
+        "kernel": 126577424375000,
+        "user": 8143567500000
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8512786432,
+        "memory_load_percent": 74
+      }
+    },
+    {
+      "elapsed_seconds": 31.183582000026945,
+      "cpu_ticks": {
+        "idle": 119077938750000,
+        "kernel": 126577457500000,
+        "user": 8143570937500
+      },
+      "memory": {
+        "total_physical_bytes": 33605316608,
+        "available_physical_bytes": 8800010240,
+        "memory_load_percent": 73
+      }
+    }
+  ],
+  "cpu_intervals": [
+    {
+      "begin_seconds": 9.14999982342124e-05,
+      "end_seconds": 0.2510280000278726,
+      "delta": {
+        "idle_ticks": 57656250,
+        "kernel_ticks": 71406250,
+        "user_ticks": 7968750,
+        "total_ticks": 79375000,
+        "busy_ticks": 21718750,
+        "busy_fraction": 0.2736220472440945
+      }
+    },
+    {
+      "begin_seconds": 0.2510280000278726,
+      "end_seconds": 0.5035480000078678,
+      "delta": {
+        "idle_ticks": 40781250,
+        "kernel_ticks": 61250000,
+        "user_ticks": 20312500,
+        "total_ticks": 81562500,
+        "busy_ticks": 40781250,
+        "busy_fraction": 0.5
+      }
+    },
+    {
+      "begin_seconds": 0.5035480000078678,
+      "end_seconds": 0.7546358000254259,
+      "delta": {
+        "idle_ticks": 52656250,
+        "kernel_ticks": 66875000,
+        "user_ticks": 11875000,
+        "total_ticks": 78750000,
+        "busy_ticks": 26093750,
+        "busy_fraction": 0.33134920634920634
+      }
+    },
+    {
+      "begin_seconds": 0.7546358000254259,
+      "end_seconds": 1.0095053000259213,
+      "delta": {
+        "idle_ticks": 66875000,
+        "kernel_ticks": 75468750,
+        "user_ticks": 5781250,
+        "total_ticks": 81250000,
+        "busy_ticks": 14375000,
+        "busy_fraction": 0.17692307692307693
+      }
+    },
+    {
+      "begin_seconds": 1.0095053000259213,
+      "end_seconds": 1.2646240000030957,
+      "delta": {
+        "idle_ticks": 68750000,
+        "kernel_ticks": 79375000,
+        "user_ticks": 5625000,
+        "total_ticks": 85000000,
+        "busy_ticks": 16250000,
+        "busy_fraction": 0.19117647058823528
+      }
+    },
+    {
+      "begin_seconds": 1.2646240000030957,
+      "end_seconds": 1.519102499994915,
+      "delta": {
+        "idle_ticks": 64531250,
+        "kernel_ticks": 72968750,
+        "user_ticks": 7031250,
+        "total_ticks": 80000000,
+        "busy_ticks": 15468750,
+        "busy_fraction": 0.193359375
+      }
+    },
+    {
+      "begin_seconds": 1.519102499994915,
+      "end_seconds": 1.7712739999988116,
+      "delta": {
+        "idle_ticks": 64218750,
+        "kernel_ticks": 70468750,
+        "user_ticks": 5625000,
+        "total_ticks": 76093750,
+        "busy_ticks": 11875000,
+        "busy_fraction": 0.15605749486652978
+      }
+    },
+    {
+      "begin_seconds": 1.7712739999988116,
+      "end_seconds": 2.0252057000179775,
+      "delta": {
+        "idle_ticks": 72343750,
+        "kernel_ticks": 78593750,
+        "user_ticks": 5312500,
+        "total_ticks": 83906250,
+        "busy_ticks": 11562500,
+        "busy_fraction": 0.1378026070763501
+      }
+    },
+    {
+      "begin_seconds": 2.0252057000179775,
+      "end_seconds": 2.276711400016211,
+      "delta": {
+        "idle_ticks": 66406250,
+        "kernel_ticks": 75312500,
+        "user_ticks": 5937500,
+        "total_ticks": 81250000,
+        "busy_ticks": 14843750,
+        "busy_fraction": 0.18269230769230768
+      }
+    },
+    {
+      "begin_seconds": 2.276711400016211,
+      "end_seconds": 2.5297243000240996,
+      "delta": {
+        "idle_ticks": 66406250,
+        "kernel_ticks": 76406250,
+        "user_ticks": 7343750,
+        "total_ticks": 83750000,
+        "busy_ticks": 17343750,
+        "busy_fraction": 0.20708955223880596
+      }
+    },
+    {
+      "begin_seconds": 2.5297243000240996,
+      "end_seconds": 2.7826848000404425,
+      "delta": {
+        "idle_ticks": 63750000,
+        "kernel_ticks": 72812500,
+        "user_ticks": 7031250,
+        "total_ticks": 79843750,
+        "busy_ticks": 16093750,
+        "busy_fraction": 0.20156555772994128
+      }
+    },
+    {
+      "begin_seconds": 2.7826848000404425,
+      "end_seconds": 3.034588500042446,
+      "delta": {
+        "idle_ticks": 65000000,
+        "kernel_ticks": 75156250,
+        "user_ticks": 5000000,
+        "total_ticks": 80156250,
+        "busy_ticks": 15156250,
+        "busy_fraction": 0.18908382066276802
+      }
+    },
+    {
+      "begin_seconds": 3.034588500042446,
+      "end_seconds": 3.2887795999995433,
+      "delta": {
+        "idle_ticks": 60312500,
+        "kernel_ticks": 72812500,
+        "user_ticks": 7187500,
+        "total_ticks": 80000000,
+        "busy_ticks": 19687500,
+        "busy_fraction": 0.24609375
+      }
+    },
+    {
+      "begin_seconds": 3.2887795999995433,
+      "end_seconds": 3.5430190000333823,
+      "delta": {
+        "idle_ticks": 55781250,
+        "kernel_ticks": 73437500,
+        "user_ticks": 11250000,
+        "total_ticks": 84687500,
+        "busy_ticks": 28906250,
+        "busy_fraction": 0.3413284132841328
+      }
+    },
+    {
+      "begin_seconds": 3.5430190000333823,
+      "end_seconds": 3.7976046000258066,
+      "delta": {
+        "idle_ticks": 62343750,
+        "kernel_ticks": 72656250,
+        "user_ticks": 7500000,
+        "total_ticks": 80156250,
+        "busy_ticks": 17812500,
+        "busy_fraction": 0.2222222222222222
+      }
+    },
+    {
+      "begin_seconds": 3.7976046000258066,
+      "end_seconds": 4.052902700030245,
+      "delta": {
+        "idle_ticks": 59531250,
+        "kernel_ticks": 68750000,
+        "user_ticks": 10937500,
+        "total_ticks": 79687500,
+        "busy_ticks": 20156250,
+        "busy_fraction": 0.2529411764705882
+      }
+    },
+    {
+      "begin_seconds": 4.052902700030245,
+      "end_seconds": 4.307774699991569,
+      "delta": {
+        "idle_ticks": 58281250,
+        "kernel_ticks": 69531250,
+        "user_ticks": 15312500,
+        "total_ticks": 84843750,
+        "busy_ticks": 26562500,
+        "busy_fraction": 0.31307550644567217
+      }
+    },
+    {
+      "begin_seconds": 4.307774699991569,
+      "end_seconds": 4.562229900038801,
+      "delta": {
+        "idle_ticks": 55781250,
+        "kernel_ticks": 62968750,
+        "user_ticks": 16718750,
+        "total_ticks": 79687500,
+        "busy_ticks": 23906250,
+        "busy_fraction": 0.3
+      }
+    },
+    {
+      "begin_seconds": 4.562229900038801,
+      "end_seconds": 4.816716900037136,
+      "delta": {
+        "idle_ticks": 68593750,
+        "kernel_ticks": 72031250,
+        "user_ticks": 8906250,
+        "total_ticks": 80937500,
+        "busy_ticks": 12343750,
+        "busy_fraction": 0.1525096525096525
+      }
+    },
+    {
+      "begin_seconds": 4.816716900037136,
+      "end_seconds": 5.070205399999395,
+      "delta": {
+        "idle_ticks": 56562500,
+        "kernel_ticks": 71562500,
+        "user_ticks": 8437500,
+        "total_ticks": 80000000,
+        "busy_ticks": 23437500,
+        "busy_fraction": 0.29296875
+      }
+    },
+    {
+      "begin_seconds": 5.070205399999395,
+      "end_seconds": 5.3207893000217155,
+      "delta": {
+        "idle_ticks": 58125000,
+        "kernel_ticks": 70468750,
+        "user_ticks": 9531250,
+        "total_ticks": 80000000,
+        "busy_ticks": 21875000,
+        "busy_fraction": 0.2734375
+      }
+    },
+    {
+      "begin_seconds": 5.3207893000217155,
+      "end_seconds": 5.571500100020785,
+      "delta": {
+        "idle_ticks": 57656250,
+        "kernel_ticks": 70156250,
+        "user_ticks": 9843750,
+        "total_ticks": 80000000,
+        "busy_ticks": 22343750,
+        "busy_fraction": 0.279296875
+      }
+    },
+    {
+      "begin_seconds": 5.571500100020785,
+      "end_seconds": 5.824072299990803,
+      "delta": {
+        "idle_ticks": 59062500,
+        "kernel_ticks": 72187500,
+        "user_ticks": 11406250,
+        "total_ticks": 83593750,
+        "busy_ticks": 24531250,
+        "busy_fraction": 0.29345794392523367
+      }
+    },
+    {
+      "begin_seconds": 5.824072299990803,
+      "end_seconds": 6.076987500011455,
+      "delta": {
+        "idle_ticks": 65625000,
+        "kernel_ticks": 71250000,
+        "user_ticks": 7500000,
+        "total_ticks": 78750000,
+        "busy_ticks": 13125000,
+        "busy_fraction": 0.16666666666666666
+      }
+    },
+    {
+      "begin_seconds": 6.076987500011455,
+      "end_seconds": 6.33025560004171,
+      "delta": {
+        "idle_ticks": 63281250,
+        "kernel_ticks": 73906250,
+        "user_ticks": 8750000,
+        "total_ticks": 82656250,
+        "busy_ticks": 19375000,
+        "busy_fraction": 0.23440453686200377
+      }
+    },
+    {
+      "begin_seconds": 6.33025560004171,
+      "end_seconds": 6.584265600016806,
+      "delta": {
+        "idle_ticks": 63906250,
+        "kernel_ticks": 72500000,
+        "user_ticks": 7031250,
+        "total_ticks": 79531250,
+        "busy_ticks": 15625000,
+        "busy_fraction": 0.19646365422396855
+      }
+    },
+    {
+      "begin_seconds": 6.584265600016806,
+      "end_seconds": 6.8377794999978505,
+      "delta": {
+        "idle_ticks": 65781250,
+        "kernel_ticks": 73125000,
+        "user_ticks": 7343750,
+        "total_ticks": 80468750,
+        "busy_ticks": 14687500,
+        "busy_fraction": 0.1825242718446602
+      }
+    },
+    {
+      "begin_seconds": 6.8377794999978505,
+      "end_seconds": 7.088348000019323,
+      "delta": {
+        "idle_ticks": 63281250,
+        "kernel_ticks": 75625000,
+        "user_ticks": 5937500,
+        "total_ticks": 81562500,
+        "busy_ticks": 18281250,
+        "busy_fraction": 0.22413793103448276
+      }
+    },
+    {
+      "begin_seconds": 7.088348000019323,
+      "end_seconds": 7.339282800036017,
+      "delta": {
+        "idle_ticks": 57812500,
+        "kernel_ticks": 73906250,
+        "user_ticks": 7031250,
+        "total_ticks": 80937500,
+        "busy_ticks": 23125000,
+        "busy_fraction": 0.2857142857142857
+      }
+    },
+    {
+      "begin_seconds": 7.339282800036017,
+      "end_seconds": 7.593196300033014,
+      "delta": {
+        "idle_ticks": 64843750,
+        "kernel_ticks": 74218750,
+        "user_ticks": 8281250,
+        "total_ticks": 82500000,
+        "busy_ticks": 17656250,
+        "busy_fraction": 0.21401515151515152
+      }
+    },
+    {
+      "begin_seconds": 7.593196300033014,
+      "end_seconds": 7.845817200024612,
+      "delta": {
+        "idle_ticks": 56875000,
+        "kernel_ticks": 66562500,
+        "user_ticks": 12656250,
+        "total_ticks": 79218750,
+        "busy_ticks": 22343750,
+        "busy_fraction": 0.28205128205128205
+      }
+    },
+    {
+      "begin_seconds": 7.845817200024612,
+      "end_seconds": 8.097748300002422,
+      "delta": {
+        "idle_ticks": 62187500,
+        "kernel_ticks": 71250000,
+        "user_ticks": 7968750,
+        "total_ticks": 79218750,
+        "busy_ticks": 17031250,
+        "busy_fraction": 0.21499013806706113
+      }
+    },
+    {
+      "begin_seconds": 8.097748300002422,
+      "end_seconds": 8.349073400022462,
+      "delta": {
+        "idle_ticks": 68750000,
+        "kernel_ticks": 74687500,
+        "user_ticks": 6875000,
+        "total_ticks": 81562500,
+        "busy_ticks": 12812500,
+        "busy_fraction": 0.15708812260536398
+      }
+    },
+    {
+      "begin_seconds": 8.349073400022462,
+      "end_seconds": 8.600499099993613,
+      "delta": {
+        "idle_ticks": 70468750,
+        "kernel_ticks": 74375000,
+        "user_ticks": 4843750,
+        "total_ticks": 79218750,
+        "busy_ticks": 8750000,
+        "busy_fraction": 0.11045364891518737
+      }
+    },
+    {
+      "begin_seconds": 8.600499099993613,
+      "end_seconds": 8.853526899998542,
+      "delta": {
+        "idle_ticks": 69218750,
+        "kernel_ticks": 75937500,
+        "user_ticks": 4843750,
+        "total_ticks": 80781250,
+        "busy_ticks": 11562500,
+        "busy_fraction": 0.14313346228239845
+      }
+    },
+    {
+      "begin_seconds": 8.853526899998542,
+      "end_seconds": 9.103805000020657,
+      "delta": {
+        "idle_ticks": 60468750,
+        "kernel_ticks": 72500000,
+        "user_ticks": 10000000,
+        "total_ticks": 82500000,
+        "busy_ticks": 22031250,
+        "busy_fraction": 0.26704545454545453
+      }
+    },
+    {
+      "begin_seconds": 9.103805000020657,
+      "end_seconds": 9.358299800020177,
+      "delta": {
+        "idle_ticks": 62187500,
+        "kernel_ticks": 72656250,
+        "user_ticks": 9843750,
+        "total_ticks": 82500000,
+        "busy_ticks": 20312500,
+        "busy_fraction": 0.24621212121212122
+      }
+    },
+    {
+      "begin_seconds": 9.358299800020177,
+      "end_seconds": 9.611106300028041,
+      "delta": {
+        "idle_ticks": 60312500,
+        "kernel_ticks": 71562500,
+        "user_ticks": 8125000,
+        "total_ticks": 79687500,
+        "busy_ticks": 19375000,
+        "busy_fraction": 0.24313725490196078
+      }
+    },
+    {
+      "begin_seconds": 9.611106300028041,
+      "end_seconds": 9.865554600022733,
+      "delta": {
+        "idle_ticks": 65937500,
+        "kernel_ticks": 73593750,
+        "user_ticks": 6718750,
+        "total_ticks": 80312500,
+        "busy_ticks": 14375000,
+        "busy_fraction": 0.17898832684824903
+      }
+    },
+    {
+      "begin_seconds": 9.865554600022733,
+      "end_seconds": 10.116984000022057,
+      "delta": {
+        "idle_ticks": 63281250,
+        "kernel_ticks": 72031250,
+        "user_ticks": 6406250,
+        "total_ticks": 78437500,
+        "busy_ticks": 15156250,
+        "busy_fraction": 0.19322709163346613
+      }
+    },
+    {
+      "begin_seconds": 10.116984000022057,
+      "end_seconds": 10.368868399993517,
+      "delta": {
+        "idle_ticks": 69687500,
+        "kernel_ticks": 74531250,
+        "user_ticks": 6250000,
+        "total_ticks": 80781250,
+        "busy_ticks": 11093750,
+        "busy_fraction": 0.13733075435203096
+      }
+    },
+    {
+      "begin_seconds": 10.368868399993517,
+      "end_seconds": 10.620343599992339,
+      "delta": {
+        "idle_ticks": 72031250,
+        "kernel_ticks": 77812500,
+        "user_ticks": 6718750,
+        "total_ticks": 84531250,
+        "busy_ticks": 12500000,
+        "busy_fraction": 0.1478743068391867
+      }
+    },
+    {
+      "begin_seconds": 10.620343599992339,
+      "end_seconds": 10.872608600009698,
+      "delta": {
+        "idle_ticks": 68437500,
+        "kernel_ticks": 72968750,
+        "user_ticks": 4843750,
+        "total_ticks": 77812500,
+        "busy_ticks": 9375000,
+        "busy_fraction": 0.12048192771084337
+      }
+    },
+    {
+      "begin_seconds": 10.872608600009698,
+      "end_seconds": 11.12385400000494,
+      "delta": {
+        "idle_ticks": 67500000,
+        "kernel_ticks": 75625000,
+        "user_ticks": 6875000,
+        "total_ticks": 82500000,
+        "busy_ticks": 15000000,
+        "busy_fraction": 0.18181818181818182
+      }
+    },
+    {
+      "begin_seconds": 11.12385400000494,
+      "end_seconds": 11.374380199995358,
+      "delta": {
+        "idle_ticks": 65468750,
+        "kernel_ticks": 75156250,
+        "user_ticks": 5781250,
+        "total_ticks": 80937500,
+        "busy_ticks": 15468750,
+        "busy_fraction": 0.19111969111969113
+      }
+    },
+    {
+      "begin_seconds": 11.374380199995358,
+      "end_seconds": 11.628352700034156,
+      "delta": {
+        "idle_ticks": 62343750,
+        "kernel_ticks": 72031250,
+        "user_ticks": 7968750,
+        "total_ticks": 80000000,
+        "busy_ticks": 17656250,
+        "busy_fraction": 0.220703125
+      }
+    },
+    {
+      "begin_seconds": 11.628352700034156,
+      "end_seconds": 11.879350400005933,
+      "delta": {
+        "idle_ticks": 56562500,
+        "kernel_ticks": 71562500,
+        "user_ticks": 8437500,
+        "total_ticks": 80000000,
+        "busy_ticks": 23437500,
+        "busy_fraction": 0.29296875
+      }
+    },
+    {
+      "begin_seconds": 11.879350400005933,
+      "end_seconds": 12.131056300015189,
+      "delta": {
+        "idle_ticks": 56093750,
+        "kernel_ticks": 68750000,
+        "user_ticks": 8593750,
+        "total_ticks": 77343750,
+        "busy_ticks": 21250000,
+        "busy_fraction": 0.27474747474747474
+      }
+    },
+    {
+      "begin_seconds": 12.131056300015189,
+      "end_seconds": 12.382503900036681,
+      "delta": {
+        "idle_ticks": 72187500,
+        "kernel_ticks": 76875000,
+        "user_ticks": 5468750,
+        "total_ticks": 82343750,
+        "busy_ticks": 10156250,
+        "busy_fraction": 0.12333965844402277
+      }
+    },
+    {
+      "begin_seconds": 12.382503900036681,
+      "end_seconds": 12.634285200037993,
+      "delta": {
+        "idle_ticks": 71406250,
+        "kernel_ticks": 75156250,
+        "user_ticks": 5000000,
+        "total_ticks": 80156250,
+        "busy_ticks": 8750000,
+        "busy_fraction": 0.10916179337231968
+      }
+    },
+    {
+      "begin_seconds": 12.634285200037993,
+      "end_seconds": 12.886260300001595,
+      "delta": {
+        "idle_ticks": 59687500,
+        "kernel_ticks": 73593750,
+        "user_ticks": 9218750,
+        "total_ticks": 82812500,
+        "busy_ticks": 23125000,
+        "busy_fraction": 0.2792452830188679
+      }
+    },
+    {
+      "begin_seconds": 12.886260300001595,
+      "end_seconds": 13.13754239998525,
+      "delta": {
+        "idle_ticks": 50937500,
+        "kernel_ticks": 64687500,
+        "user_ticks": 16406250,
+        "total_ticks": 81093750,
+        "busy_ticks": 30156250,
+        "busy_fraction": 0.371868978805395
+      }
+    },
+    {
+      "begin_seconds": 13.13754239998525,
+      "end_seconds": 13.388321800041012,
+      "delta": {
+        "idle_ticks": 55312500,
+        "kernel_ticks": 64375000,
+        "user_ticks": 16875000,
+        "total_ticks": 81250000,
+        "busy_ticks": 25937500,
+        "busy_fraction": 0.3192307692307692
+      }
+    },
+    {
+      "begin_seconds": 13.388321800041012,
+      "end_seconds": 13.640575600031298,
+      "delta": {
+        "idle_ticks": 49218750,
+        "kernel_ticks": 60625000,
+        "user_ticks": 19375000,
+        "total_ticks": 80000000,
+        "busy_ticks": 30781250,
+        "busy_fraction": 0.384765625
+      }
+    },
+    {
+      "begin_seconds": 13.640575600031298,
+      "end_seconds": 13.894974399998318,
+      "delta": {
+        "idle_ticks": 51562500,
+        "kernel_ticks": 66250000,
+        "user_ticks": 13750000,
+        "total_ticks": 80000000,
+        "busy_ticks": 28437500,
+        "busy_fraction": 0.35546875
+      }
+    },
+    {
+      "begin_seconds": 13.894974399998318,
+      "end_seconds": 14.14995250001084,
+      "delta": {
+        "idle_ticks": 53906250,
+        "kernel_ticks": 67812500,
+        "user_ticks": 12187500,
+        "total_ticks": 80000000,
+        "busy_ticks": 26093750,
+        "busy_fraction": 0.326171875
+      }
+    },
+    {
+      "begin_seconds": 14.14995250001084,
+      "end_seconds": 14.401362900040112,
+      "delta": {
+        "idle_ticks": 56718750,
+        "kernel_ticks": 69218750,
+        "user_ticks": 12968750,
+        "total_ticks": 82187500,
+        "busy_ticks": 25468750,
+        "busy_fraction": 0.30988593155893535
+      }
+    },
+    {
+      "begin_seconds": 14.401362900040112,
+      "end_seconds": 14.653267499990761,
+      "delta": {
+        "idle_ticks": 61718750,
+        "kernel_ticks": 70156250,
+        "user_ticks": 12187500,
+        "total_ticks": 82343750,
+        "busy_ticks": 20625000,
+        "busy_fraction": 0.2504743833017078
+      }
+    },
+    {
+      "begin_seconds": 14.653267499990761,
+      "end_seconds": 14.905960600008257,
+      "delta": {
+        "idle_ticks": 54843750,
+        "kernel_ticks": 67656250,
+        "user_ticks": 12343750,
+        "total_ticks": 80000000,
+        "busy_ticks": 25156250,
+        "busy_fraction": 0.314453125
+      }
+    },
+    {
+      "begin_seconds": 14.905960600008257,
+      "end_seconds": 15.158360600005835,
+      "delta": {
+        "idle_ticks": 52343750,
+        "kernel_ticks": 65937500,
+        "user_ticks": 14531250,
+        "total_ticks": 80468750,
+        "busy_ticks": 28125000,
+        "busy_fraction": 0.34951456310679613
+      }
+    },
+    {
+      "begin_seconds": 15.158360600005835,
+      "end_seconds": 15.413064400025178,
+      "delta": {
+        "idle_ticks": 44062500,
+        "kernel_ticks": 62968750,
+        "user_ticks": 17031250,
+        "total_ticks": 80000000,
+        "busy_ticks": 35937500,
+        "busy_fraction": 0.44921875
+      }
+    },
+    {
+      "begin_seconds": 15.413064400025178,
+      "end_seconds": 15.66532329999609,
+      "delta": {
+        "idle_ticks": 53437500,
+        "kernel_ticks": 67343750,
+        "user_ticks": 12656250,
+        "total_ticks": 80000000,
+        "busy_ticks": 26562500,
+        "busy_fraction": 0.33203125
+      }
+    },
+    {
+      "begin_seconds": 15.66532329999609,
+      "end_seconds": 15.918399300018791,
+      "delta": {
+        "idle_ticks": 57187500,
+        "kernel_ticks": 70156250,
+        "user_ticks": 13437500,
+        "total_ticks": 83593750,
+        "busy_ticks": 26406250,
+        "busy_fraction": 0.31588785046728973
+      }
+    },
+    {
+      "begin_seconds": 15.918399300018791,
+      "end_seconds": 16.17244540003594,
+      "delta": {
+        "idle_ticks": 63593750,
+        "kernel_ticks": 71718750,
+        "user_ticks": 9687500,
+        "total_ticks": 81406250,
+        "busy_ticks": 17812500,
+        "busy_fraction": 0.21880998080614203
+      }
+    },
+    {
+      "begin_seconds": 16.17244540003594,
+      "end_seconds": 16.426660900004208,
+      "delta": {
+        "idle_ticks": 66093750,
+        "kernel_ticks": 71406250,
+        "user_ticks": 8593750,
+        "total_ticks": 80000000,
+        "busy_ticks": 13906250,
+        "busy_fraction": 0.173828125
+      }
+    },
+    {
+      "begin_seconds": 16.426660900004208,
+      "end_seconds": 16.679692500038072,
+      "delta": {
+        "idle_ticks": 54218750,
+        "kernel_ticks": 64218750,
+        "user_ticks": 15781250,
+        "total_ticks": 80000000,
+        "busy_ticks": 25781250,
+        "busy_fraction": 0.322265625
+      }
+    },
+    {
+      "begin_seconds": 16.679692500038072,
+      "end_seconds": 16.92975790001219,
+      "delta": {
+        "idle_ticks": 62812500,
+        "kernel_ticks": 70156250,
+        "user_ticks": 9375000,
+        "total_ticks": 79531250,
+        "busy_ticks": 16718750,
+        "busy_fraction": 0.21021611001964635
+      }
+    },
+    {
+      "begin_seconds": 16.92975790001219,
+      "end_seconds": 17.183264299994335,
+      "delta": {
+        "idle_ticks": 68906250,
+        "kernel_ticks": 77500000,
+        "user_ticks": 7968750,
+        "total_ticks": 85468750,
+        "busy_ticks": 16562500,
+        "busy_fraction": 0.19378427787934185
+      }
+    },
+    {
+      "begin_seconds": 17.183264299994335,
+      "end_seconds": 17.437729199999012,
+      "delta": {
+        "idle_ticks": 60781250,
+        "kernel_ticks": 71562500,
+        "user_ticks": 8437500,
+        "total_ticks": 80000000,
+        "busy_ticks": 19218750,
+        "busy_fraction": 0.240234375
+      }
+    },
+    {
+      "begin_seconds": 17.437729199999012,
+      "end_seconds": 17.6893115999992,
+      "delta": {
+        "idle_ticks": 54687500,
+        "kernel_ticks": 69218750,
+        "user_ticks": 10781250,
+        "total_ticks": 80000000,
+        "busy_ticks": 25312500,
+        "busy_fraction": 0.31640625
+      }
+    },
+    {
+      "begin_seconds": 17.6893115999992,
+      "end_seconds": 17.939332999987528,
+      "delta": {
+        "idle_ticks": 57031250,
+        "kernel_ticks": 71093750,
+        "user_ticks": 8906250,
+        "total_ticks": 80000000,
+        "busy_ticks": 22968750,
+        "busy_fraction": 0.287109375
+      }
+    },
+    {
+      "begin_seconds": 17.939332999987528,
+      "end_seconds": 18.18933810002636,
+      "delta": {
+        "idle_ticks": 57968750,
+        "kernel_ticks": 70781250,
+        "user_ticks": 8906250,
+        "total_ticks": 79687500,
+        "busy_ticks": 21718750,
+        "busy_fraction": 0.2725490196078431
+      }
+    },
+    {
+      "begin_seconds": 18.18933810002636,
+      "end_seconds": 18.44226580002578,
+      "delta": {
+        "idle_ticks": 56250000,
+        "kernel_ticks": 68281250,
+        "user_ticks": 11718750,
+        "total_ticks": 80000000,
+        "busy_ticks": 23750000,
+        "busy_fraction": 0.296875
+      }
+    },
+    {
+      "begin_seconds": 18.44226580002578,
+      "end_seconds": 18.69606730004307,
+      "delta": {
+        "idle_ticks": 63281250,
+        "kernel_ticks": 71093750,
+        "user_ticks": 9062500,
+        "total_ticks": 80156250,
+        "busy_ticks": 16875000,
+        "busy_fraction": 0.21052631578947367
+      }
+    },
+    {
+      "begin_seconds": 18.69606730004307,
+      "end_seconds": 18.949804300034884,
+      "delta": {
+        "idle_ticks": 62031250,
+        "kernel_ticks": 72656250,
+        "user_ticks": 10937500,
+        "total_ticks": 83593750,
+        "busy_ticks": 21562500,
+        "busy_fraction": 0.25794392523364484
+      }
+    },
+    {
+      "begin_seconds": 18.949804300034884,
+      "end_seconds": 19.201499800023157,
+      "delta": {
+        "idle_ticks": 62968750,
+        "kernel_ticks": 74375000,
+        "user_ticks": 6875000,
+        "total_ticks": 81250000,
+        "busy_ticks": 18281250,
+        "busy_fraction": 0.225
+      }
+    },
+    {
+      "begin_seconds": 19.201499800023157,
+      "end_seconds": 19.456570699985605,
+      "delta": {
+        "idle_ticks": 63281250,
+        "kernel_ticks": 72031250,
+        "user_ticks": 8281250,
+        "total_ticks": 80312500,
+        "busy_ticks": 17031250,
+        "busy_fraction": 0.21206225680933852
+      }
+    },
+    {
+      "begin_seconds": 19.456570699985605,
+      "end_seconds": 19.70715850003762,
+      "delta": {
+        "idle_ticks": 61093750,
+        "kernel_ticks": 70468750,
+        "user_ticks": 9531250,
+        "total_ticks": 80000000,
+        "busy_ticks": 18906250,
+        "busy_fraction": 0.236328125
+      }
+    },
+    {
+      "begin_seconds": 19.70715850003762,
+      "end_seconds": 19.95739080000203,
+      "delta": {
+        "idle_ticks": 43125000,
+        "kernel_ticks": 63593750,
+        "user_ticks": 16406250,
+        "total_ticks": 80000000,
+        "busy_ticks": 36875000,
+        "busy_fraction": 0.4609375
+      }
+    },
+    {
+      "begin_seconds": 19.95739080000203,
+      "end_seconds": 20.210949300031643,
+      "delta": {
+        "idle_ticks": 51875000,
+        "kernel_ticks": 68125000,
+        "user_ticks": 11875000,
+        "total_ticks": 80000000,
+        "busy_ticks": 28125000,
+        "busy_fraction": 0.3515625
+      }
+    },
+    {
+      "begin_seconds": 20.210949300031643,
+      "end_seconds": 20.461260300013237,
+      "delta": {
+        "idle_ticks": 53593750,
+        "kernel_ticks": 67343750,
+        "user_ticks": 12500000,
+        "total_ticks": 79843750,
+        "busy_ticks": 26250000,
+        "busy_fraction": 0.3287671232876712
+      }
+    },
+    {
+      "begin_seconds": 20.461260300013237,
+      "end_seconds": 20.71475520002423,
+      "delta": {
+        "idle_ticks": 64375000,
+        "kernel_ticks": 72500000,
+        "user_ticks": 10937500,
+        "total_ticks": 83437500,
+        "busy_ticks": 19062500,
+        "busy_fraction": 0.22846441947565543
+      }
+    },
+    {
+      "begin_seconds": 20.71475520002423,
+      "end_seconds": 20.9688729000045,
+      "delta": {
+        "idle_ticks": 66562500,
+        "kernel_ticks": 73125000,
+        "user_ticks": 8125000,
+        "total_ticks": 81250000,
+        "busy_ticks": 14687500,
+        "busy_fraction": 0.18076923076923077
+      }
+    },
+    {
+      "begin_seconds": 20.9688729000045,
+      "end_seconds": 21.221063300035894,
+      "delta": {
+        "idle_ticks": 71093750,
+        "kernel_ticks": 73593750,
+        "user_ticks": 6875000,
+        "total_ticks": 80468750,
+        "busy_ticks": 9375000,
+        "busy_fraction": 0.11650485436893204
+      }
+    },
+    {
+      "begin_seconds": 21.221063300035894,
+      "end_seconds": 21.4736583000049,
+      "delta": {
+        "idle_ticks": 61250000,
+        "kernel_ticks": 67968750,
+        "user_ticks": 12031250,
+        "total_ticks": 80000000,
+        "busy_ticks": 18750000,
+        "busy_fraction": 0.234375
+      }
+    },
+    {
+      "begin_seconds": 21.4736583000049,
+      "end_seconds": 21.728142600040883,
+      "delta": {
+        "idle_ticks": 60156250,
+        "kernel_ticks": 68750000,
+        "user_ticks": 11250000,
+        "total_ticks": 80000000,
+        "busy_ticks": 19843750,
+        "busy_fraction": 0.248046875
+      }
+    },
+    {
+      "begin_seconds": 21.728142600040883,
+      "end_seconds": 21.98015940003097,
+      "delta": {
+        "idle_ticks": 60937500,
+        "kernel_ticks": 70781250,
+        "user_ticks": 12968750,
+        "total_ticks": 83750000,
+        "busy_ticks": 22812500,
+        "busy_fraction": 0.27238805970149255
+      }
+    },
+    {
+      "begin_seconds": 21.98015940003097,
+      "end_seconds": 22.230688100040425,
+      "delta": {
+        "idle_ticks": 49843750,
+        "kernel_ticks": 68125000,
+        "user_ticks": 12812500,
+        "total_ticks": 80937500,
+        "busy_ticks": 31093750,
+        "busy_fraction": 0.3841698841698842
+      }
+    },
+    {
+      "begin_seconds": 22.230688100040425,
+      "end_seconds": 22.48202759999549,
+      "delta": {
+        "idle_ticks": 56093750,
+        "kernel_ticks": 70156250,
+        "user_ticks": 10000000,
+        "total_ticks": 80156250,
+        "busy_ticks": 24062500,
+        "busy_fraction": 0.3001949317738791
+      }
+    },
+    {
+      "begin_seconds": 22.48202759999549,
+      "end_seconds": 22.736814600008074,
+      "delta": {
+        "idle_ticks": 55156250,
+        "kernel_ticks": 68125000,
+        "user_ticks": 11718750,
+        "total_ticks": 79843750,
+        "busy_ticks": 24687500,
+        "busy_fraction": 0.30919765166340507
+      }
+    },
+    {
+      "begin_seconds": 22.736814600008074,
+      "end_seconds": 22.98951240000315,
+      "delta": {
+        "idle_ticks": 59687500,
+        "kernel_ticks": 69687500,
+        "user_ticks": 9843750,
+        "total_ticks": 79531250,
+        "busy_ticks": 19843750,
+        "busy_fraction": 0.24950884086444008
+      }
+    },
+    {
+      "begin_seconds": 22.98951240000315,
+      "end_seconds": 23.241662900021765,
+      "delta": {
+        "idle_ticks": 65468750,
+        "kernel_ticks": 72343750,
+        "user_ticks": 8437500,
+        "total_ticks": 80781250,
+        "busy_ticks": 15312500,
+        "busy_fraction": 0.1895551257253385
+      }
+    },
+    {
+      "begin_seconds": 23.241662900021765,
+      "end_seconds": 23.49520720000146,
+      "delta": {
+        "idle_ticks": 61718750,
+        "kernel_ticks": 71093750,
+        "user_ticks": 11406250,
+        "total_ticks": 82500000,
+        "busy_ticks": 20781250,
+        "busy_fraction": 0.2518939393939394
+      }
+    },
+    {
+      "begin_seconds": 23.49520720000146,
+      "end_seconds": 23.748711900028866,
+      "delta": {
+        "idle_ticks": 61718750,
+        "kernel_ticks": 67968750,
+        "user_ticks": 13125000,
+        "total_ticks": 81093750,
+        "busy_ticks": 19375000,
+        "busy_fraction": 0.23892100192678228
+      }
+    },
+    {
+      "begin_seconds": 23.748711900028866,
+      "end_seconds": 23.999638400040567,
+      "delta": {
+        "idle_ticks": 63125000,
+        "kernel_ticks": 73593750,
+        "user_ticks": 7812500,
+        "total_ticks": 81406250,
+        "busy_ticks": 18281250,
+        "busy_fraction": 0.22456813819577734
+      }
+    },
+    {
+      "begin_seconds": 23.999638400040567,
+      "end_seconds": 24.251767500012647,
+      "delta": {
+        "idle_ticks": 66718750,
+        "kernel_ticks": 73593750,
+        "user_ticks": 6250000,
+        "total_ticks": 79843750,
+        "busy_ticks": 13125000,
+        "busy_fraction": 0.1643835616438356
+      }
+    },
+    {
+      "begin_seconds": 24.251767500012647,
+      "end_seconds": 24.504016900027636,
+      "delta": {
+        "idle_ticks": 62500000,
+        "kernel_ticks": 70468750,
+        "user_ticks": 8906250,
+        "total_ticks": 79375000,
+        "busy_ticks": 16875000,
+        "busy_fraction": 0.2125984251968504
+      }
+    },
+    {
+      "begin_seconds": 24.504016900027636,
+      "end_seconds": 24.757487900031265,
+      "delta": {
+        "idle_ticks": 50468750,
+        "kernel_ticks": 65312500,
+        "user_ticks": 15312500,
+        "total_ticks": 80625000,
+        "busy_ticks": 30156250,
+        "busy_fraction": 0.374031007751938
+      }
+    },
+    {
+      "begin_seconds": 24.757487900031265,
+      "end_seconds": 25.009973900043406,
+      "delta": {
+        "idle_ticks": 67500000,
+        "kernel_ticks": 70625000,
+        "user_ticks": 10000000,
+        "total_ticks": 80625000,
+        "busy_ticks": 13125000,
+        "busy_fraction": 0.16279069767441862
+      }
+    },
+    {
+      "begin_seconds": 25.009973900043406,
+      "end_seconds": 25.264494200004265,
+      "delta": {
+        "idle_ticks": 57500000,
+        "kernel_ticks": 70781250,
+        "user_ticks": 13125000,
+        "total_ticks": 83906250,
+        "busy_ticks": 26406250,
+        "busy_fraction": 0.31471135940409684
+      }
+    },
+    {
+      "begin_seconds": 25.264494200004265,
+      "end_seconds": 25.516745700035244,
+      "delta": {
+        "idle_ticks": 64062500,
+        "kernel_ticks": 71093750,
+        "user_ticks": 9375000,
+        "total_ticks": 80468750,
+        "busy_ticks": 16406250,
+        "busy_fraction": 0.20388349514563106
+      }
+    },
+    {
+      "begin_seconds": 25.516745700035244,
+      "end_seconds": 25.767118600022513,
+      "delta": {
+        "idle_ticks": 60468750,
+        "kernel_ticks": 70937500,
+        "user_ticks": 9218750,
+        "total_ticks": 80156250,
+        "busy_ticks": 19687500,
+        "busy_fraction": 0.24561403508771928
+      }
+    },
+    {
+      "begin_seconds": 25.767118600022513,
+      "end_seconds": 26.021559900022112,
+      "delta": {
+        "idle_ticks": 65781250,
+        "kernel_ticks": 71250000,
+        "user_ticks": 8750000,
+        "total_ticks": 80000000,
+        "busy_ticks": 14218750,
+        "busy_fraction": 0.177734375
+      }
+    },
+    {
+      "begin_seconds": 26.021559900022112,
+      "end_seconds": 26.2716245999909,
+      "delta": {
+        "idle_ticks": 58593750,
+        "kernel_ticks": 69843750,
+        "user_ticks": 10156250,
+        "total_ticks": 80000000,
+        "busy_ticks": 21406250,
+        "busy_fraction": 0.267578125
+      }
+    },
+    {
+      "begin_seconds": 26.2716245999909,
+      "end_seconds": 26.522891100030392,
+      "delta": {
+        "idle_ticks": 59531250,
+        "kernel_ticks": 70312500,
+        "user_ticks": 9687500,
+        "total_ticks": 80000000,
+        "busy_ticks": 20468750,
+        "busy_fraction": 0.255859375
+      }
+    },
+    {
+      "begin_seconds": 26.522891100030392,
+      "end_seconds": 26.776951999985613,
+      "delta": {
+        "idle_ticks": 62187500,
+        "kernel_ticks": 71250000,
+        "user_ticks": 10468750,
+        "total_ticks": 81718750,
+        "busy_ticks": 19531250,
+        "busy_fraction": 0.2390057361376673
+      }
+    },
+    {
+      "begin_seconds": 26.776951999985613,
+      "end_seconds": 27.02888019999955,
+      "delta": {
+        "idle_ticks": 66250000,
+        "kernel_ticks": 73750000,
+        "user_ticks": 9531250,
+        "total_ticks": 83281250,
+        "busy_ticks": 17031250,
+        "busy_fraction": 0.2045028142589118
+      }
+    },
+    {
+      "begin_seconds": 27.02888019999955,
+      "end_seconds": 27.282694199995603,
+      "delta": {
+        "idle_ticks": 59375000,
+        "kernel_ticks": 69062500,
+        "user_ticks": 9687500,
+        "total_ticks": 78750000,
+        "busy_ticks": 19375000,
+        "busy_fraction": 0.24603174603174602
+      }
+    },
+    {
+      "begin_seconds": 27.282694199995603,
+      "end_seconds": 27.53308260004269,
+      "delta": {
+        "idle_ticks": 60156250,
+        "kernel_ticks": 70937500,
+        "user_ticks": 8593750,
+        "total_ticks": 79531250,
+        "busy_ticks": 19375000,
+        "busy_fraction": 0.24361493123772102
+      }
+    },
+    {
+      "begin_seconds": 27.53308260004269,
+      "end_seconds": 27.78529490000801,
+      "delta": {
+        "idle_ticks": 61875000,
+        "kernel_ticks": 73593750,
+        "user_ticks": 8125000,
+        "total_ticks": 81718750,
+        "busy_ticks": 19843750,
+        "busy_fraction": 0.24282982791587
+      }
+    },
+    {
+      "begin_seconds": 27.78529490000801,
+      "end_seconds": 28.040278600004967,
+      "delta": {
+        "idle_ticks": 67343750,
+        "kernel_ticks": 74843750,
+        "user_ticks": 5156250,
+        "total_ticks": 80000000,
+        "busy_ticks": 12656250,
+        "busy_fraction": 0.158203125
+      }
+    },
+    {
+      "begin_seconds": 28.040278600004967,
+      "end_seconds": 28.29171950003365,
+      "delta": {
+        "idle_ticks": 69375000,
+        "kernel_ticks": 75156250,
+        "user_ticks": 5625000,
+        "total_ticks": 80781250,
+        "busy_ticks": 11406250,
+        "busy_fraction": 0.14119922630560927
+      }
+    },
+    {
+      "begin_seconds": 28.29171950003365,
+      "end_seconds": 28.546798499999568,
+      "delta": {
+        "idle_ticks": 67343750,
+        "kernel_ticks": 73593750,
+        "user_ticks": 6875000,
+        "total_ticks": 80468750,
+        "busy_ticks": 13125000,
+        "busy_fraction": 0.16310679611650486
+      }
+    },
+    {
+      "begin_seconds": 28.546798499999568,
+      "end_seconds": 28.79698250000365,
+      "delta": {
+        "idle_ticks": 70937500,
+        "kernel_ticks": 75468750,
+        "user_ticks": 5312500,
+        "total_ticks": 80781250,
+        "busy_ticks": 9843750,
+        "busy_fraction": 0.1218568665377176
+      }
+    },
+    {
+      "begin_seconds": 28.79698250000365,
+      "end_seconds": 29.051715400011744,
+      "delta": {
+        "idle_ticks": 71562500,
+        "kernel_ticks": 74218750,
+        "user_ticks": 8437500,
+        "total_ticks": 82656250,
+        "busy_ticks": 11093750,
+        "busy_fraction": 0.1342155009451796
+      }
+    },
+    {
+      "begin_seconds": 29.051715400011744,
+      "end_seconds": 29.305679200042505,
+      "delta": {
+        "idle_ticks": 67187500,
+        "kernel_ticks": 72031250,
+        "user_ticks": 7500000,
+        "total_ticks": 79531250,
+        "busy_ticks": 12343750,
+        "busy_fraction": 0.15520628683693516
+      }
+    },
+    {
+      "begin_seconds": 29.305679200042505,
+      "end_seconds": 29.56042699998943,
+      "delta": {
+        "idle_ticks": 73906250,
+        "kernel_ticks": 76406250,
+        "user_ticks": 7656250,
+        "total_ticks": 84062500,
+        "busy_ticks": 10156250,
+        "busy_fraction": 0.120817843866171
+      }
+    },
+    {
+      "begin_seconds": 29.56042699998943,
+      "end_seconds": 29.810552300012205,
+      "delta": {
+        "idle_ticks": 68593750,
+        "kernel_ticks": 72187500,
+        "user_ticks": 8125000,
+        "total_ticks": 80312500,
+        "busy_ticks": 11718750,
+        "busy_fraction": 0.14591439688715954
+      }
+    },
+    {
+      "begin_seconds": 29.810552300012205,
+      "end_seconds": 30.064751700032502,
+      "delta": {
+        "idle_ticks": 68281250,
+        "kernel_ticks": 72968750,
+        "user_ticks": 6406250,
+        "total_ticks": 79375000,
+        "busy_ticks": 11093750,
+        "busy_fraction": 0.13976377952755906
+      }
+    },
+    {
+      "begin_seconds": 30.064751700032502,
+      "end_seconds": 30.318313500029035,
+      "delta": {
+        "idle_ticks": 64531250,
+        "kernel_ticks": 74531250,
+        "user_ticks": 6093750,
+        "total_ticks": 80625000,
+        "busy_ticks": 16093750,
+        "busy_fraction": 0.1996124031007752
+      }
+    },
+    {
+      "begin_seconds": 30.318313500029035,
+      "end_seconds": 30.56859949999489,
+      "delta": {
+        "idle_ticks": 54843750,
+        "kernel_ticks": 70156250,
+        "user_ticks": 11093750,
+        "total_ticks": 81250000,
+        "busy_ticks": 26406250,
+        "busy_fraction": 0.325
+      }
+    },
+    {
+      "begin_seconds": 30.56859949999489,
+      "end_seconds": 30.81924360000994,
+      "delta": {
+        "idle_ticks": 57812500,
+        "kernel_ticks": 69218750,
+        "user_ticks": 10312500,
+        "total_ticks": 79531250,
+        "busy_ticks": 21718750,
+        "busy_fraction": 0.2730844793713163
+      }
+    },
+    {
+      "begin_seconds": 30.81924360000994,
+      "end_seconds": 31.074718300020322,
+      "delta": {
+        "idle_ticks": 66562500,
+        "kernel_ticks": 72187500,
+        "user_ticks": 8906250,
+        "total_ticks": 81093750,
+        "busy_ticks": 14531250,
+        "busy_fraction": 0.1791907514450867
+      }
+    },
+    {
+      "begin_seconds": 31.074718300020322,
+      "end_seconds": 31.183582000026945,
+      "delta": {
+        "idle_ticks": 30468750,
+        "kernel_ticks": 33125000,
+        "user_ticks": 3437500,
+        "total_ticks": 36562500,
+        "busy_ticks": 6093750,
+        "busy_fraction": 0.16666666666666666
+      }
+    }
+  ],
+  "errors": [],
+  "scope": "Whole-host activity includes benchmark, monitoring and user apps; RAM observations are sampled, not a guaranteed continuous minimum; no subtraction of background activity",
+  "sources": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes",
+    "https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex"
+  ]
+}

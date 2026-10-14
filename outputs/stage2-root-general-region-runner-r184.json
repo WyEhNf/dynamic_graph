@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791780043.4938698,
+  "manifest_sha256": "412b2f1f83bec9b3417ef304f5bc4f69cbeb797c462a36e2b4c6e53ef6d92572",
+  "source_files": 67,
+  "fixed_inputs": 81,
+  "tiny_raw_oracle_inputs": 80,
+  "handwritten_N11": 1,
+  "authorization": "Execute fixedR18581inputs once after project19 cost window finishes. Preserve all unknown/partial/failures, all wholeproposals and immutable/frontier physical replay. No full336/default change.",
+  "scope": "Frozen complete runner+independent original-ring replay reviewed. Initial construction independent of broadraw costoracle; allactual sink proposals saved before post-search physical/symbolic/sixinteger checks; processlifetime peak scope explicit. Algorithm quality and Level remain unproven until actual results audited."
+}

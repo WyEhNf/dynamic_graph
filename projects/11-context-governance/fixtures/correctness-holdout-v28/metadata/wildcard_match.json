@@ -1,0 +1,15 @@
+{
+  "origin": "Self-created independent new task; not official benchmark",
+  "case_id": "wildcard_match",
+  "baseline_bundle": "wildcard_match",
+  "snapshot_sha256": "d7a57e475bc80cdff0a716790e457b88148381f28a995943e6de6ae79d6408e3",
+  "target_file": "solution.py",
+  "pinned_files": [
+    "solution.py"
+  ],
+  "history": [],
+  "dependencies": {
+    "python": ">=3.12",
+    "external": []
+  }
+}

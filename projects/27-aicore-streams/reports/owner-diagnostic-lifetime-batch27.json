@@ -1,0 +1,120 @@
+{
+  "before": {
+    "total": 36,
+    "passed": 25,
+    "failed": 11
+  },
+  "after": {
+    "total": 36,
+    "passed": 27,
+    "failed": 9
+  },
+  "common_cases": 25,
+  "common_solve_us_before": 730752,
+  "common_solve_us_after": 655701,
+  "improved_T": 0,
+  "regressed_T": 0,
+  "improved_peak_at_equal_T": 0,
+  "regressed_peak_at_equal_T": 0,
+  "recovered": [
+    "irregular_consumers_dense_k32_ret0_seed20264234_rootmem0",
+    "irregular_consumers_dense_k32_ret0_seed20264234_rootmem5"
+  ],
+  "lost": [],
+  "model_disagreements": 0,
+  "duplicates": 76,
+  "scales": [
+    {
+      "n": 62,
+      "median_us": 8770.5,
+      "max_us": 13254
+    },
+    {
+      "n": 64,
+      "median_us": 21417.0,
+      "max_us": 22276
+    },
+    {
+      "n": 67,
+      "median_us": 5260.5,
+      "max_us": 5276
+    },
+    {
+      "n": 70,
+      "median_us": 5812.0,
+      "max_us": 5935
+    },
+    {
+      "n": 71,
+      "median_us": 18907.5,
+      "max_us": 19229
+    },
+    {
+      "n": 75,
+      "median_us": 6022.5,
+      "max_us": 6067
+    },
+    {
+      "n": 166,
+      "median_us": 21532.5,
+      "max_us": 21692
+    },
+    {
+      "n": 173,
+      "median_us": 17163.0,
+      "max_us": 17316
+    },
+    {
+      "n": 178,
+      "median_us": 17786.5,
+      "max_us": 17923
+    },
+    {
+      "n": 179,
+      "median_us": 31997.5,
+      "max_us": 51458
+    },
+    {
+      "n": 185,
+      "median_us": 110575.0,
+      "max_us": 114286
+    },
+    {
+      "n": 508,
+      "median_us": 176135.5,
+      "max_us": 180399
+    },
+    {
+      "n": 519,
+      "median_us": 14553.5,
+      "max_us": 14735
+    },
+    {
+      "n": 536,
+      "median_us": 52450.5,
+      "max_us": 52769
+    },
+    {
+      "n": 539,
+      "median_us": 84076.0,
+      "max_us": 86463
+    },
+    {
+      "n": 552,
+      "median_us": 58085.5,
+      "max_us": 59215
+    },
+    {
+      "n": 563,
+      "median_us": 98757.0,
+      "max_us": 99900
+    }
+  ],
+  "common_thread_cpu_measured_cases": 25,
+  "common_thread_cpu_us_before": 718750,
+  "common_thread_cpu_us_after": 609375,
+  "all_solve_us_before": 1509604,
+  "all_thread_cpu_us_before": 1531250,
+  "all_solve_us_after": 1565632,
+  "all_thread_cpu_us_after": 1500000
+}

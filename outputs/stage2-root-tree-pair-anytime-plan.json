@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791728467.5627475,
+  "static_report_sha256": "83392c8b5351501e8398c88781fa62636ec8ee21a1b4719cc5ac35e9d9c48916",
+  "plan_sha256": "99a64cfd69e02918d5c7f231b57a1581e916fb98925e7a02d3858734073e6e31",
+  "static_provenance_sha256": "90c242360e5b4748287c9fdef6673622ca46b450ba2cd9ba2b41fa104c7f0281",
+  "plan_provenance_sha256": "acdde9a6f2bfaf429f459043518ddfb88d9801a836f0e8450ec924ef4ff1e77a",
+  "partial_inputs": 43,
+  "state_exhaustions": 42,
+  "first_pair_state_exhaustions": 41,
+  "later_pair_state_exhaustions": 1,
+  "time_exhaustions": 1,
+  "last_failed_pair_complete_outputs": 0,
+  "partial_inputs_with_earlier_complete_outputs": 1,
+  "actual_unfinished_frontier_available": false,
+  "report_tex_sha256": "3df913afb4bd1c23ad397b698363fb4d3857baf7514a80c811fcdd5b9146de0b",
+  "report_freeze_sha256": "f95d86f67bf554d5126595662f638f6281a608b5fcfd4636ded15515df09944b",
+  "root_builtin_compilation": "actual success2026-10-11; no new tab, current user-open27 TeX untouched",
+  "proposal": "Fixed w2 weighted visitation with safe unweighted full N+COPY bound, exact-role-state lower-cost reopen and immutable predecessors. Existing complete incumbent retained, emitted full suffix checked before lowering U; partial budget/outlet and unfinished expansion explicitly unknown.",
+  "authorized_next_scope": "Implement isolated single search extension and verify unchanged R16340 original inputs/8960 independent frozen merge gold plus complete12 and budget/reopen/external-role boundaries before root review and original84. No default/full-corpus promotion yet.",
+  "scope": "Frozen actual R164 counters independently attributed:42 state exhaustions,41 first-pair,one third-pair;43 last failing pairs have zero outlets but one input has earlier complete output. No missing historical age-frontier manufactured. Static full-cost admissibility and equal-state dominance reviewed; no COPY multiplicative approximation, first-goal or algorithm success claim."
+}

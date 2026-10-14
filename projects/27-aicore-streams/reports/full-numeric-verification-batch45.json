@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "fixed_plan_controls": 523,
+  "source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "exe_sha": "1ddd79dfa0ae9f54b64af52946f60a39994bf616d6830aa97e92df9ba0038d3e",
+  "runs": [
+    {
+      "suite": "numeric-controls",
+      "actual_exit_code": 0,
+      "controls": 11,
+      "reuse_same_successful_driver_after_wrapper_schema_repair": true,
+      "input_sha": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+      "output_sha": "4890ecb0ba0e68d5836ed376188474d1873febd0ae8d5d88a7937ac01fbe8dc6",
+      "log_sha": "0199575fcc7be723b9e759e8ecd722bef5661e95b7a56bbc88317765e3eea9f1"
+    },
+    {
+      "suite": "numeric-parallel",
+      "actual_exit_code": 0,
+      "controls": 320,
+      "reuse_same_successful_driver_after_wrapper_schema_repair": false,
+      "input_sha": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+      "output_sha": "e4d064e63f20c5fe857e1a0a64e5197955c01a4487bbd76b3dcccadf6a48428e",
+      "log_sha": "6fe5d200bfc952456a65d338bf13b5c1006a0bdba98f86549b3b9f3f24bf10c7"
+    },
+    {
+      "suite": "numeric-parallel-valid",
+      "actual_exit_code": 0,
+      "controls": 160,
+      "reuse_same_successful_driver_after_wrapper_schema_repair": false,
+      "input_sha": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+      "output_sha": "5248b4fcc1e7a274683dd34b4e75815ea9403e537015a9210a4b15539c8b4c97",
+      "log_sha": "118bef34db849b3f1ca52e4d6d9d3d11aaa2e57f71466aed4ef2357e71ca887a"
+    },
+    {
+      "suite": "scaled-serial-controls",
+      "actual_exit_code": 0,
+      "controls": 32,
+      "reuse_same_successful_driver_after_wrapper_schema_repair": false,
+      "input_sha": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473",
+      "output_sha": "754c7f05bea3ccf08ae3e0a64901a482d8d29db112885b05f38ab56fd5d03f01",
+      "log_sha": "5eaa3ec41310ee51242cc78913c6c29367d763e98ef5c52c65f8e4631003c478"
+    }
+  ],
+  "shared_functional_wall_seconds": 3.2979833999997936,
+  "UBSan_runtime_errors": 0,
+  "compiler": "Clang21.1 -O1 -g -fsanitize=undefined -fno-sanitize-recover=undefined",
+  "link_warnings": "UCRT LNK4217 recorded separately, no runtime UB",
+  "workspace_gold": 495,
+  "workspace_UBSan_evidence": "reports/projection-profile-ubsan-batch45.txt (same frozen5116 source, actual earlier execution, not repeated)",
+  "default44_preserved": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3"
+}

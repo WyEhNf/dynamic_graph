@@ -1,0 +1,11 @@
+test_budget_one_and_tiny_time_retain_original_incumbent (tests.test_tree_pair_anytime.AnytimePairTests.test_budget_one_and_tiny_time_retain_original_incumbent) ... ok
+test_complete12_preserves_originals_and_finds_zero (tests.test_tree_pair_anytime.AnytimePairTests.test_complete12_preserves_originals_and_finds_zero) ... ok
+test_external_unused_multiroot_and_ordered_args (tests.test_tree_pair_anytime.AnytimePairTests.test_external_unused_multiroot_and_ordered_args) ... ok
+test_goal_interrupted_and_outlet_cap_keep_actual_complete_program (tests.test_tree_pair_anytime.AnytimePairTests.test_goal_interrupted_and_outlet_cap_keep_actual_complete_program) ... ok
+test_queue_reopen_immutable_path_and_stale_versions (tests.test_tree_pair_anytime.AnytimePairTests.test_queue_reopen_immutable_path_and_stale_versions) ... ok
+test_unsupported_hazard_original_copy_bits_and_scope_fail_closed (tests.test_tree_pair_anytime.AnytimePairTests.test_unsupported_hazard_original_copy_bits_and_scope_fail_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+OK

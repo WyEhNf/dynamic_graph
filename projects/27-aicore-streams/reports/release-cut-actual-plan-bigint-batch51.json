@@ -1,0 +1,34 @@
+{
+  "status": "PASS independently replayed one saved actual input-only complete original-DAG serial schedule",
+  "cases": [
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "hardware": {
+        "aic_core_num": 8,
+        "aiv_core_num": 128,
+        "stream_num": 4,
+        "memory_limit": 2483,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "deadline_us": 1430270,
+      "n": 140,
+      "T": 1430270,
+      "peak": 2481,
+      "capacity": 2483,
+      "old_pass": false,
+      "source_sha": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+      "diagnostic_exe_sha": "d160f9da2d9f725cd2f57763b41aa60ea169c088705336d73a3fb1f3200e941f"
+    }
+  ],
+  "sha256": {
+    "research/batch51/actual-recoveries-input-only.json": "a3bcf4f40f032d3048f7da0e16600412246758b2f4cb72e748cbc175d02fae7f",
+    "research/batch51/actual-recoveries-plans.json": "a17a8065aaf906a4e9847d1c5203fffbc1a67495019df7bd4a7c6f18c341a260",
+    "data/unresolved-r44-input-only-batch45.json": "fe0bcdce1b2d28dde606e95f235e95df23a665448de516e4da7df7a9b2da998e",
+    "reports/projection-unresolved-diagnostic-batch48.json": "1c8cefd68adc2cb2dcab0d0e97f12e8b3fc0dd41ff9576e9e7a627d0fdfc095e",
+    "reports/projection-unresolved-diagnostic-batch51.json": "e45ee90cbf5f5f983160f06c956e698dcf219eacb328135e47809cb2c27beafb",
+    "research/batch51/functional-checkpoint.json": "22fa489f026269cad5d31517f71d61f21eda4ccb1626c7bbd55868ff4e2689f0",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\review_release_cut_recoveries_batch51.py": "26a9ae409311c1a1d7a938ffd5cbb2bb314e9295dad21b40a693d126b8960278"
+  },
+  "limits": "Serial actual no-events schedule; independent Python bigint prefix/future ORIGINAL DIRECT-user set plus W+O BEGIN and last-consumer END. Not an optimality proof, not a whole202 or cost measurement; default48 unchanged"
+}

@@ -1,0 +1,25 @@
+Test project F:/Hackathon/projects/27-aicore-streams/build
+      Start  1: scheduler_semantics
+ 1/10 Test  #1: scheduler_semantics .................   Passed    0.14 sec
+      Start  2: submission_model_and_json
+ 2/10 Test  #2: submission_model_and_json ...........   Passed    0.21 sec
+      Start  3: assignment_grouping_equivalence
+ 3/10 Test  #3: assignment_grouping_equivalence .....   Passed    0.11 sec
+      Start  4: serial_frontier_exact_equivalence
+ 4/10 Test  #4: serial_frontier_exact_equivalence ...   Passed    0.09 sec
+      Start  5: local_batch_quick
+ 5/10 Test  #5: local_batch_quick ...................   Passed    0.22 sec
+      Start  6: numeric-controls_int64
+ 6/10 Test  #6: numeric-controls_int64 ..............   Passed    0.19 sec
+      Start  7: numeric-parallel_int64
+ 7/10 Test  #7: numeric-parallel_int64 ..............   Passed    0.03 sec
+      Start  8: numeric-parallel-valid_int64
+ 8/10 Test  #8: numeric-parallel-valid_int64 ........   Passed    0.03 sec
+      Start  9: scaled-serial-controls_int64
+ 9/10 Test  #9: scaled-serial-controls_int64 ........   Passed    1.10 sec
+      Start 10: numeric_priority_exact_gold
+10/10 Test #10: numeric_priority_exact_gold .........   Passed    0.18 sec
+
+100% tests passed, 0 tests failed out of 10
+
+Total Test time (real) =   2.33 sec

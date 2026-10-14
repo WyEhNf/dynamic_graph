@@ -1,0 +1,31 @@
+{
+  "version": "qwen3-smoke-v26",
+  "cases": [
+    "stable_topology",
+    "merge_config"
+  ],
+  "dataset_status": "Existing DEV tasks; capability/resource smoke only; not holdout or official score",
+  "mode": "compressed",
+  "context_budget": 650,
+  "max_candidates_per_case": 2,
+  "seeds_per_candidate": [
+    260110,
+    260111
+  ],
+  "max_new_tokens": 4096,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "do_sample": true
+  },
+  "thinking": true,
+  "quantization": "nf4",
+  "prefill_chunk": 1024,
+  "attention": "auto",
+  "kv_cache_policy": "resident",
+  "warmup_calls": 1,
+  "public_test_feedback": true,
+  "selection": "First candidate passing fixed public checks; no hidden tests/reference code are read by this process",
+  "timing": "First generated token is reasoning-token TTFT; all reasoning/repair generation time and tokens counted"
+}

@@ -1,0 +1,454 @@
+{
+  "suite": "data\\lifetime-locality-holdout.json",
+  "suite_sha256": "0a91a91ac847d35c45a0a0375ab48d7df5b4928d4b469d3854784d8dfc07f4fd",
+  "baseline_exe_sha256": "b9ff45433e1590256d8b5a1ea150564fec5793eca1b616e4cbfecb27c50212e2",
+  "current_exe_sha256": "a2753bb1ee6f9ad838ca6fb7e2623642378ba29e739d7d4059320ce61bed9898",
+  "current_solution_sha256": "77ef67341e91a00a8b0357b43741d62838a54da7ee68c2bfec3d606ea2a70f2e",
+  "baseline_solution_sha256": "a72873d1ab827d51d34368b5f103763392aa39934fba85e6856312a0ca54d259",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-owner-lifetime-holdout-batch27-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 18.590302399999928,
+        "peak_working_set_bytes": 43520000
+      },
+      "after": {
+        "report": "reports\\paired-owner-lifetime-holdout-batch27-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.1369535999838263,
+        "peak_working_set_bytes": 44105728
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 22,
+          "failed": 14
+        },
+        "after": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "common_cases": 22,
+        "common_solve_us_before": 2972239,
+        "common_solve_us_after": 450041,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_local_k32_ret1_seed20274225_rootmem5",
+          "irregular_consumers_dense_k32_ret1_seed20274235_rootmem0",
+          "irregular_consumers_dense_k32_ret1_seed20274235_rootmem5",
+          "irregular_consumers_dense_k96_ret1_seed20280635_rootmem0",
+          "irregular_consumers_dense_k96_ret1_seed20280635_rootmem5"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 72,
+        "scales": [
+          {
+            "n": 59,
+            "median_us": 4046.5,
+            "max_us": 4123
+          },
+          {
+            "n": 63,
+            "median_us": 5288.0,
+            "max_us": 5441
+          },
+          {
+            "n": 69,
+            "median_us": 4627.0,
+            "max_us": 4712
+          },
+          {
+            "n": 70,
+            "median_us": 10954.0,
+            "max_us": 17166
+          },
+          {
+            "n": 71,
+            "median_us": 5758.0,
+            "max_us": 6107
+          },
+          {
+            "n": 74,
+            "median_us": 26025.5,
+            "max_us": 44653
+          },
+          {
+            "n": 165,
+            "median_us": 34096.5,
+            "max_us": 51364
+          },
+          {
+            "n": 172,
+            "median_us": 50575.5,
+            "max_us": 50861
+          },
+          {
+            "n": 176,
+            "median_us": 22823.0,
+            "max_us": 23069
+          },
+          {
+            "n": 180,
+            "median_us": 18638.0,
+            "max_us": 18744
+          },
+          {
+            "n": 184,
+            "median_us": 117279.0,
+            "max_us": 126010
+          },
+          {
+            "n": 196,
+            "median_us": 85981.5,
+            "max_us": 98840
+          },
+          {
+            "n": 512,
+            "median_us": 190136.0,
+            "max_us": 198538
+          },
+          {
+            "n": 516,
+            "median_us": 50143.5,
+            "max_us": 52314
+          },
+          {
+            "n": 521,
+            "median_us": 45698.0,
+            "max_us": 45972
+          },
+          {
+            "n": 522,
+            "median_us": 47066.0,
+            "max_us": 47303
+          },
+          {
+            "n": 534,
+            "median_us": 85053.5,
+            "max_us": 85828
+          },
+          {
+            "n": 547,
+            "median_us": 89497.0,
+            "max_us": 91940
+          }
+        ],
+        "common_thread_cpu_measured_cases": 22,
+        "common_thread_cpu_us_before": 2546875,
+        "common_thread_cpu_us_after": 453125,
+        "all_solve_us_before": 13812329,
+        "all_thread_cpu_us_before": 12187500,
+        "all_solve_us_after": 1787373,
+        "all_thread_cpu_us_after": 1812500
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-owner-lifetime-holdout-batch27-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.0324133000103757,
+        "peak_working_set_bytes": 43970560
+      },
+      "after": {
+        "report": "reports\\paired-owner-lifetime-holdout-batch27-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.465948900033254,
+        "peak_working_set_bytes": 43515904
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 22,
+          "failed": 14
+        },
+        "after": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "common_cases": 22,
+        "common_solve_us_before": 700791,
+        "common_solve_us_after": 587490,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_local_k32_ret1_seed20274225_rootmem5",
+          "irregular_consumers_dense_k32_ret1_seed20274235_rootmem0",
+          "irregular_consumers_dense_k32_ret1_seed20274235_rootmem5",
+          "irregular_consumers_dense_k96_ret1_seed20280635_rootmem0",
+          "irregular_consumers_dense_k96_ret1_seed20280635_rootmem5"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 72,
+        "scales": [
+          {
+            "n": 59,
+            "median_us": 4159.0,
+            "max_us": 4175
+          },
+          {
+            "n": 63,
+            "median_us": 5522.0,
+            "max_us": 5958
+          },
+          {
+            "n": 69,
+            "median_us": 4698.5,
+            "max_us": 4784
+          },
+          {
+            "n": 70,
+            "median_us": 11253.0,
+            "max_us": 17761
+          },
+          {
+            "n": 71,
+            "median_us": 5669.0,
+            "max_us": 5956
+          },
+          {
+            "n": 74,
+            "median_us": 27014.5,
+            "max_us": 46257
+          },
+          {
+            "n": 165,
+            "median_us": 35252.0,
+            "max_us": 54165
+          },
+          {
+            "n": 172,
+            "median_us": 58713.0,
+            "max_us": 59012
+          },
+          {
+            "n": 176,
+            "median_us": 24434.0,
+            "max_us": 24907
+          },
+          {
+            "n": 180,
+            "median_us": 18898.0,
+            "max_us": 19350
+          },
+          {
+            "n": 184,
+            "median_us": 126378.0,
+            "max_us": 138186
+          },
+          {
+            "n": 196,
+            "median_us": 89915.5,
+            "max_us": 103454
+          },
+          {
+            "n": 512,
+            "median_us": 218810.0,
+            "max_us": 219140
+          },
+          {
+            "n": 516,
+            "median_us": 51917.5,
+            "max_us": 55717
+          },
+          {
+            "n": 521,
+            "median_us": 78292.0,
+            "max_us": 87173
+          },
+          {
+            "n": 522,
+            "median_us": 78553.0,
+            "max_us": 78651
+          },
+          {
+            "n": 534,
+            "median_us": 145890.0,
+            "max_us": 151094
+          },
+          {
+            "n": 547,
+            "median_us": 155176.0,
+            "max_us": 159181
+          }
+        ],
+        "common_thread_cpu_measured_cases": 22,
+        "common_thread_cpu_us_before": 437500,
+        "common_thread_cpu_us_after": 390625,
+        "all_solve_us_before": 2806816,
+        "all_thread_cpu_us_before": 1859375,
+        "all_solve_us_after": 2281090,
+        "all_thread_cpu_us_after": 1781250
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-owner-lifetime-holdout-batch27-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.4475559999700636,
+        "peak_working_set_bytes": 43810816
+      },
+      "after": {
+        "report": "reports\\paired-owner-lifetime-holdout-batch27-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.4782697999617085,
+        "peak_working_set_bytes": 43429888
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 22,
+          "failed": 14
+        },
+        "after": {
+          "total": 36,
+          "passed": 27,
+          "failed": 9
+        },
+        "common_cases": 22,
+        "common_solve_us_before": 639852,
+        "common_solve_us_after": 590638,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_local_k32_ret1_seed20274225_rootmem5",
+          "irregular_consumers_dense_k32_ret1_seed20274235_rootmem0",
+          "irregular_consumers_dense_k32_ret1_seed20274235_rootmem5",
+          "irregular_consumers_dense_k96_ret1_seed20280635_rootmem0",
+          "irregular_consumers_dense_k96_ret1_seed20280635_rootmem5"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 72,
+        "scales": [
+          {
+            "n": 59,
+            "median_us": 6725.0,
+            "max_us": 6957
+          },
+          {
+            "n": 63,
+            "median_us": 9215.5,
+            "max_us": 9456
+          },
+          {
+            "n": 69,
+            "median_us": 7167.0,
+            "max_us": 8069
+          },
+          {
+            "n": 70,
+            "median_us": 18712.5,
+            "max_us": 30523
+          },
+          {
+            "n": 71,
+            "median_us": 9300.5,
+            "max_us": 10521
+          },
+          {
+            "n": 74,
+            "median_us": 44108.5,
+            "max_us": 75147
+          },
+          {
+            "n": 165,
+            "median_us": 41243.5,
+            "max_us": 60465
+          },
+          {
+            "n": 172,
+            "median_us": 91739.5,
+            "max_us": 92490
+          },
+          {
+            "n": 176,
+            "median_us": 40185.5,
+            "max_us": 40724
+          },
+          {
+            "n": 180,
+            "median_us": 21914.5,
+            "max_us": 22304
+          },
+          {
+            "n": 184,
+            "median_us": 180914.5,
+            "max_us": 201407
+          },
+          {
+            "n": 196,
+            "median_us": 142996.5,
+            "max_us": 166244
+          },
+          {
+            "n": 512,
+            "median_us": 205662.0,
+            "max_us": 214608
+          },
+          {
+            "n": 516,
+            "median_us": 51535.0,
+            "max_us": 53679
+          },
+          {
+            "n": 521,
+            "median_us": 47634.5,
+            "max_us": 47704
+          },
+          {
+            "n": 522,
+            "median_us": 49112.0,
+            "max_us": 49385
+          },
+          {
+            "n": 534,
+            "median_us": 88283.5,
+            "max_us": 88654
+          },
+          {
+            "n": 547,
+            "median_us": 90953.5,
+            "max_us": 92911
+          }
+        ],
+        "common_thread_cpu_measured_cases": 22,
+        "common_thread_cpu_us_before": 453125,
+        "common_thread_cpu_us_after": 453125,
+        "all_solve_us_before": 2257624,
+        "all_thread_cpu_us_before": 1656250,
+        "all_solve_us_after": 2294807,
+        "all_thread_cpu_us_after": 1750000
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch26\\solution.cpp",
+  "median_common_solve_us_before": 700791,
+  "median_common_solve_us_after": 587490,
+  "median_wall_seconds_before": 3.0324133000103757,
+  "median_wall_seconds_after": 2.4782697999617085,
+  "maximum_cli_working_set_bytes": 44105728,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 453125,
+  "median_all_solve_us_before": 2806816,
+  "median_all_thread_cpu_us_before": 1859375,
+  "median_common_thread_cpu_us_after": 453125,
+  "median_all_solve_us_after": 2281090,
+  "median_all_thread_cpu_us_after": 1781250,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5"
+}

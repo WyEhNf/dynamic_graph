@@ -1,0 +1,43 @@
+{
+  "version": 11,
+  "case_ids": [
+    "clamp",
+    "chunks",
+    "dedupe",
+    "slug",
+    "shipping",
+    "csv_sum",
+    "runs",
+    "rotate",
+    "intervals",
+    "normalize",
+    "histogram",
+    "prefix",
+    "window",
+    "threshold",
+    "priced_total",
+    "parse_records",
+    "bounded_mean",
+    "choose_records",
+    "partition_even",
+    "summarize_pairs",
+    "stable_topology",
+    "shortest_layers",
+    "interval_gaps",
+    "sparse_product",
+    "allocate_round_robin",
+    "outer_join"
+  ],
+  "constructed_unix": 1791654474.6535199,
+  "origins": [
+    {
+      "path": "fixtures\\engineering-v5",
+      "manifest_sha256": "48dac280ec70090e459ae564888ef85a94b21230fc18f9b1e315232a57a6b6b9"
+    },
+    {
+      "path": "fixtures\\structural-holdout-v8",
+      "manifest_sha256": "342e448e1c2c17011ad2f4ba69d0670c77c7fd1de4744fc4b3b457d9e9826a84"
+    }
+  ],
+  "scope": "26 unchanged synthetic tasks; union for a single bulk refinement milestone, not a fresh 26-task holdout"
+}

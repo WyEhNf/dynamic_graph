@@ -1,0 +1,26 @@
+{
+  "status": "GENERATED_AND_PYTHON_MATH_PHYSICS_CHECKED",
+  "controls": 176,
+  "counts": {
+    "manual_competing_equal_first": 8,
+    "external_users_and_sinks": 24,
+    "cross_dependencies_and_zero": 16,
+    "integer_limits": 24,
+    "closure_128_129": 8,
+    "fixed_seed_small_dags": 64,
+    "charged_work_boundaries": 32
+  },
+  "requests": 347,
+  "bound_budget_controls": 32,
+  "enumerated_original_cut_orders": 550,
+  "full_plans": 347,
+  "legal_full_plans": 311,
+  "expected_invalid_full_plans": 36,
+  "strictly_dominated": 87,
+  "reference": "Independent bigint H(D union C) SET values and full original BEGIN/END physics; local fee ledger follows pre-gold frozen logical units, not production liveness arithmetic",
+  "pre_gold_freeze_sha256": "8506bade825941f87938fb28592ff80f3c2a59ab56ac2d5ded3da250ca7b2e94",
+  "data_sha256": {
+    "data/final-live-gold-batch53.json": "63b800943c25e10ee8ee3a92259ddbcadb2bb4aa3cb49a511997c28e4f327ef8",
+    "data/final-live-fixed-gold-batch53.json": "0c0a22b9b9502ea966464b06d404e42c56e9e4a805ba502348cd86d92b05f247"
+  }
+}

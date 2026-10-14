@@ -1,0 +1,129 @@
+{
+  "reviewed_unix": 1791713247.5094821,
+  "passed": true,
+  "groups": {
+    "hard": {
+      "records": 202,
+      "before_legal": 143,
+      "after_legal": 144,
+      "round_cpu_ratios": [
+        0.9745862884160756,
+        0.9969641772920461,
+        1.0938063740228503
+      ],
+      "median_paired_cpu_ratio": 0.9969641772920461,
+      "ratio_of_independent_cpu_medians": 0.9915814792543596,
+      "medians": {
+        "all": {
+          "before": {
+            "wall_us": 26343960,
+            "thread_cpu_us": 25984375
+          },
+          "after": {
+            "wall_us": 26303100,
+            "thread_cpu_us": 25765625
+          }
+        },
+        "common_success": {
+          "before": {
+            "wall_us": 7730548,
+            "thread_cpu_us": 7562500
+          },
+          "after": {
+            "wall_us": 7802561,
+            "thread_cpu_us": 7593750
+          }
+        },
+        "common_failure": {
+          "before": {
+            "wall_us": 18572347,
+            "thread_cpu_us": 18375000
+          },
+          "after": {
+            "wall_us": 18465466,
+            "thread_cpu_us": 18125000
+          }
+        },
+        "recovered": {
+          "before": {
+            "wall_us": 46535,
+            "thread_cpu_us": 46875
+          },
+          "after": {
+            "wall_us": 50019,
+            "thread_cpu_us": 46875
+          }
+        }
+      }
+    },
+    "heldout": {
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "round_cpu_ratios": [
+        0.9852941176470589,
+        1.0615384615384615,
+        1.0229007633587786
+      ],
+      "median_paired_cpu_ratio": 1.0229007633587786,
+      "ratio_of_independent_cpu_medians": 1.0229007633587786,
+      "medians": {
+        "all": {
+          "before": {
+            "wall_us": 2097460,
+            "thread_cpu_us": 2046875
+          },
+          "after": {
+            "wall_us": 2112464,
+            "thread_cpu_us": 2093750
+          }
+        },
+        "common_success": {
+          "before": {
+            "wall_us": 1362698,
+            "thread_cpu_us": 1343750
+          },
+          "after": {
+            "wall_us": 1361015,
+            "thread_cpu_us": 1359375
+          }
+        },
+        "common_failure": {
+          "before": {
+            "wall_us": 734762,
+            "thread_cpu_us": 718750
+          },
+          "after": {
+            "wall_us": 750163,
+            "thread_cpu_us": 734375
+          }
+        },
+        "recovered": {
+          "before": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          },
+          "after": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          }
+        }
+      }
+    }
+  },
+  "evidence": {
+    "projects/27-aicore-streams/reports/paired-hard-batch48-1-before.json": "a4df4a8185c9225595b92245563459d9e044d6f556cc3df730804f0cd2b70a21",
+    "projects/27-aicore-streams/reports/paired-hard-batch48-1-after.json": "f994015dc8a4ff7f4c28e1ed6e59d6a91114a909242f5a95fa7895d55987b81d",
+    "projects/27-aicore-streams/reports/paired-hard-batch48-2-before.json": "519d8532ff5ade752a7099337241f62771d578006b66e33e6a4289b2728483ed",
+    "projects/27-aicore-streams/reports/paired-hard-batch48-2-after.json": "b64bfa2b9400ad76cbe6bfe0be50c155b4b844d5b1457329b28737a79fa5fd41",
+    "projects/27-aicore-streams/reports/paired-hard-batch48-3-before.json": "82669505bcf9096377e7b625237e421730293a97b74dd51283f31ffca24d78d0",
+    "projects/27-aicore-streams/reports/paired-hard-batch48-3-after.json": "e2933564148442fb509e505837f22783c6d7dae82f66bcec2147de3d83ed80bb",
+    "projects/27-aicore-streams/reports/paired-heldout-batch48-1-before.json": "769b0a9c1af09938ed0bf4f2cceafcdd191007cba378e6e3dfa88d3c5818a33e",
+    "projects/27-aicore-streams/reports/paired-heldout-batch48-1-after.json": "03afbfc47ff8ba7c8af503a94e601ef24670fb29de5e11a4a75efac05fea44a9",
+    "projects/27-aicore-streams/reports/paired-heldout-batch48-2-before.json": "19b1c0f3e46b2c717f871edbabbbe2fae083555fbb3c8c81ac5fbe8e62faa9bc",
+    "projects/27-aicore-streams/reports/paired-heldout-batch48-2-after.json": "d3025b477bb597e5636ab462392b052698295c13796b317d6a724f98bcb000b4",
+    "projects/27-aicore-streams/reports/paired-heldout-batch48-3-before.json": "43cc66d7832e2ad960169db50797cb48b6a48cd6ded7074d7198b3e87adf02f1",
+    "projects/27-aicore-streams/reports/paired-heldout-batch48-3-after.json": "797aceea05b83ddc5189b25bae87f2195091b7eccb23548e2f32e99e20d3817f"
+  },
+  "interpretation": "All202 and fresh48 three alternating pairs, common successes/failures and recovered cases included. Actual frozen baseline5acc actual R45 default Release archive and candidate991e R48 Release archive; distinct from historical measured R45 candidate3e827. Source flags Release O3, fullCLI working-set includes harness/witnesses. Per-trial hostload unmeasured and user background active; no idle-machine or general speed/feasibility claim."
+}

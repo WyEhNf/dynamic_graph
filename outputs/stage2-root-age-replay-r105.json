@@ -1,0 +1,88 @@
+{
+  "reviewed_unix": 1791701885.8854592,
+  "passed": true,
+  "verified": 12,
+  "checks": [
+    {
+      "input_sha256": "6a58dfb3020d846f034b644aed6c0d6b948a29de8bd64218d9b3d685a042509e",
+      "original_nodes": 52,
+      "copies": 19,
+      "window": 8
+    },
+    {
+      "input_sha256": "1a4ecd4101eb67b33e11835c5eef39bff4b571e94caaece5ba02d3a60592e19c",
+      "original_nodes": 52,
+      "copies": 0,
+      "window": 16
+    },
+    {
+      "input_sha256": "ba3a31ac4904b52e30eb97d846449fee9241933c90e75774f92067eb01720c76",
+      "original_nodes": 52,
+      "copies": 0,
+      "window": 32
+    },
+    {
+      "input_sha256": "22681d5c15d41371a325229136bb9982b8524265c99e376b8bf4e74fcc26334f",
+      "original_nodes": 247,
+      "copies": 124,
+      "window": 8
+    },
+    {
+      "input_sha256": "b7292221630e7f80934b5ccc1b95ea8c7d14b51ec5888f1a74cbf6a321345905",
+      "original_nodes": 247,
+      "copies": 0,
+      "window": 16
+    },
+    {
+      "input_sha256": "c3084701f9cc25fa92b8234d785201251ec98a5644aef661679c205c0b0f1eb9",
+      "original_nodes": 247,
+      "copies": 0,
+      "window": 32
+    },
+    {
+      "input_sha256": "a7b556c92c819c739f4f4a1428a6ef893a4e126950de85cb40894eae2be5498d",
+      "original_nodes": 1014,
+      "copies": 537,
+      "window": 8
+    },
+    {
+      "input_sha256": "73eb7937d1b5eaa284ad294407ba58c5c58d1c26252414b13716ec852b2df527",
+      "original_nodes": 1014,
+      "copies": 0,
+      "window": 16
+    },
+    {
+      "input_sha256": "6b7bce244c171128c1f8a21949a282810fb30fe2098706e4088fc42dd3d53e65",
+      "original_nodes": 1014,
+      "copies": 0,
+      "window": 32
+    },
+    {
+      "input_sha256": "947f015a92288ee6f876fa04c83198c33210a1e27c5b3ca7921b9e7aa72b3d96",
+      "original_nodes": 4095,
+      "copies": 2196,
+      "window": 8
+    },
+    {
+      "input_sha256": "e824a72889e16ed5f02c882bef95b93e414ff47ac0f61937f2b35f5d623b7dc6",
+      "original_nodes": 4095,
+      "copies": 0,
+      "window": 16
+    },
+    {
+      "input_sha256": "51b6443d474a9c7511bdd4d97181b1f4bb68445101bf90cf1376d31cf02bd22d",
+      "original_nodes": 4095,
+      "copies": 0,
+      "window": 32
+    }
+  ],
+  "method": "Root independently parses raw t# distances and replays exact original identities through every physical output slot. Checks a permutation of all original nodes, exact ordered original operands/registers, pure disjoint memory names, output window and COPY identity. Imports neither project parser, cache, scheduler nor verifier.",
+  "guarantee": "For these pure blocks, exact original identity/ordered operands and unique disjoint GET/SET preserve values for all initial registers under the same deterministic primitive semantics. This does not certify arbitrary hazard-bearing programs or optimal COPY counts.",
+  "limitation": "Only12 supported successful original dot cases; four restricted-matcher failures remain in the full16-input source report. New shape/order/argument holdouts and full336 portfolio validation still pending. Timing was a functional batch, not an isolated causal speed measurement.",
+  "evidence": {
+    "report.json": "f22602956f5dc7ec608dbfb5c243fd44d2d76f073a96ec6bb9bec28eade4b76d",
+    "inputs.jsonl": "ba13d242f72f6f422cb8674eefb200367bf29bbb80a75fd39b8cf9d8596f9602",
+    "optimized_outputs.jsonl": "ff44a10942492f88669c61ad494432a9f453f80c7078f6a5cad1572fea9f27f0",
+    "original_orders.jsonl": "3c3da50ee4b114721a8237cf35f107c792c1ea4f44e45cb2b15b17d0c33ed305"
+  }
+}

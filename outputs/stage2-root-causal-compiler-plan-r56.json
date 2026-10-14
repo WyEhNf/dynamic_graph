@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "static_only": true,
+  "frozen_file_entries": 61,
+  "original_commands_unchanged": true,
+  "fresh_RAM_G_minimum": 1073741824,
+  "F_state_reserve": 67108864,
+  "preflight_freeze_sha256": "5a74bb6077f085659074c40f3b61d9abb162851fe80bbd07320d9e8f0f2fe456",
+  "source_sha256": "3a4f184de2759fdcd1cbfd899c5f8029e2f7f2691743ec214a895123db19c21a",
+  "scope": "Independent review of original54+revision7 freezes, commands, Windows API layout, file capture, no-restart sentinel, first-failure stop. GCC O2/Clang UBSan control execution permitted only after19 compiler window terminal; no12/63/default/performance run."
+}

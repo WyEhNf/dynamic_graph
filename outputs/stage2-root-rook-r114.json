@@ -1,0 +1,96 @@
+{
+  "reviewed_unix": 1791706140.051276,
+  "passed": true,
+  "audited_minor_certificates": 8,
+  "new_identity_model_infeasible": 6,
+  "necessary_bound_only": 2,
+  "overlap_tamper_rejections": 8,
+  "results": [
+    {
+      "input_sha256": "6c01ea13e9ee84fe656cccfd93c64e543306093d88601853aa9770ecdfc6b9e5",
+      "nodes": 160,
+      "dimension": 4,
+      "window": 8,
+      "lower": 9,
+      "required_edges": 48,
+      "minor_edges": 48,
+      "infeasible": true
+    },
+    {
+      "input_sha256": "2f915d09d593a8b10308ffef2d278860b65b958ccfa76c50847eb25e45b9944c",
+      "nodes": 160,
+      "dimension": 4,
+      "window": 16,
+      "lower": 9,
+      "required_edges": 48,
+      "minor_edges": 48,
+      "infeasible": false
+    },
+    {
+      "input_sha256": "915a04c7cb0b6b4325ad752ea4556b10eee6d3a9ac8f00fde60aca971886ca49",
+      "nodes": 784,
+      "dimension": 7,
+      "window": 8,
+      "lower": 27,
+      "required_edges": 294,
+      "minor_edges": 294,
+      "infeasible": true
+    },
+    {
+      "input_sha256": "2d4bc742e80a9bd4f322dbc3da09cffe825f7743069bf590df742c128c7cad4f",
+      "nodes": 784,
+      "dimension": 7,
+      "window": 16,
+      "lower": 27,
+      "required_edges": 294,
+      "minor_edges": 294,
+      "infeasible": true
+    },
+    {
+      "input_sha256": "22b0eb07724e07129b5f0c12fb244fc5088e0d998df7a0ac69f102763cd01db9",
+      "nodes": 784,
+      "dimension": 7,
+      "window": 32,
+      "lower": 27,
+      "required_edges": 294,
+      "minor_edges": 294,
+      "infeasible": false
+    },
+    {
+      "input_sha256": "d9fc6e78ede92533deadc8442ffcf93175a79b1bb70ba2c592a316213076f05e",
+      "nodes": 3744,
+      "dimension": 12,
+      "window": 8,
+      "lower": 77,
+      "required_edges": 1584,
+      "minor_edges": 1584,
+      "infeasible": true
+    },
+    {
+      "input_sha256": "a30f7d15c57179148cd161d92de2d17276ee002f794a14230e91fae0b4a0112c",
+      "nodes": 3744,
+      "dimension": 12,
+      "window": 16,
+      "lower": 77,
+      "required_edges": 1584,
+      "minor_edges": 1584,
+      "infeasible": true
+    },
+    {
+      "input_sha256": "8746af8302dc845808149bf074fd15e89a59efde0338ecc8196b0b47eb5710a3",
+      "nodes": 3744,
+      "dimension": 12,
+      "window": 32,
+      "lower": 77,
+      "required_edges": 1584,
+      "minor_edges": 1584,
+      "infeasible": true
+    }
+  ],
+  "source_theorem": "https://arxiv.org/html/1210.8205#S1.Thm3",
+  "evidence": {
+    "inputs.jsonl": "7d470e686a3218400aebe9628addc9f4280320b82d89f41e7ebd14cd6b29d741",
+    "report.json": "92e97a8400b62656a656e3fd85660c8ef9430b2390a55e18610a6f65715e87e6"
+  },
+  "scope": "Original data edges only; no project imports. Live-before plus current-node bags give treewidth<=W for any strict identity COPY-only schedule. Minor bound>W proves scoped infeasibility; bound<=W does not prove feasibility. No new emitted output or official Level claim."
+}

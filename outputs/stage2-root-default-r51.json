@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791719401.9137175,
+  "source_sha256": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+  "default_exe_sha256": "c491f69d9ac2b39fa336afc5ef17b300bbdf84ab9021a482b3d404f91191b607",
+  "measured_exe_sha256": "25ac71bc389e62f512d7597d40048e97b88783c21e895524cdba3311c6067742",
+  "checked_inputs": 41,
+  "rollback_snapshots": 34,
+  "ctest": 14,
+  "actual_default_cases": 10,
+  "independent_heap_replays": 7,
+  "explicit_unresolved": 3,
+  "hard_legal": 145,
+  "hard_unresolved": 57,
+  "fresh48_legal": 42,
+  "fresh48_unresolved": 6,
+  "evidence": {
+    "projects/27-aicore-streams/reports/final-checkpoint-batch51.json": "62e082f7551e9760e611317e0fc7287767db4bd04a302a6c60ddd557dbede560",
+    "projects/27-aicore-streams/research/batch48/rollback/manifest.json": "e0a07092a5f0a632bfbd2f78c0f5ffe69d7c0b5fd6544693dd57fef233a9dcf9",
+    "projects/27-aicore-streams/research/batch48/provenance.json": "da406db778148152c7a26f8bcfa5b78fbb2af48ba44e6650b1c91b951bfb9457",
+    "projects/27-aicore-streams/research/batch51/acceptance-checkpoint.json": "5d302ad593c744d54f76f879f6268b4ec8eeb453c7a1f1e49f869138aecffa63",
+    "projects/27-aicore-streams/data/default-smoke-batch51.json": "87b34d28d9af0fdd24e4d3f53a82c775fdd5aaa2d54f26af05822d5c254ce0f8",
+    "projects/27-aicore-streams/reports/default-smoke-batch51.json": "98073b82eb3c6ae721e97bad5b96e1079ac4eccd05dac79e30890a4cfc9e4efd",
+    "projects/27-aicore-streams/reports/paired-hard-batch51-1-after.json": "fb796b8bd9cbc8cf3d1ca99f13581a19b133858ef5df92ffe315291a4d311b5b",
+    "projects/27-aicore-streams/reports/paired-heldout-batch51-1-after.json": "0eb7c26d13b9895d3a8070408286e59b5ae609d26fdf6983b645909c04bc73db"
+  },
+  "scope": "Actual c491 default source/EXE/archive/Release flags/full R48 rollback and14CTest verified; seven actual smoke heaps replayed independently, three known feasible failures explicit. c491 is distinct from25ac used for all paired costs. Full1099 regressions/625 numeric candidate controls were not rerun on this default. Original open TeX intact; 63 local known feasible failures remain, no official score/universal feasibility claim."
+}

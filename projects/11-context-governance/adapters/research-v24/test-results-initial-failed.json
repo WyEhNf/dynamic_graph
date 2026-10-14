@@ -1,0 +1,9 @@
+{
+  "tests_run": 10,
+  "errors": 5,
+  "failures": 0,
+  "successful": false,
+  "wall_seconds": 5.879597700026352,
+  "test_sha256": "1fc560a06733da6b491d58619b300d8338a715f9b3b719714d7a3e8adb41e128",
+  "scope": "Fake GPU/cache and CPU configuration only; no GPU inference, timings, memory savings or model-quality evidence."
+}

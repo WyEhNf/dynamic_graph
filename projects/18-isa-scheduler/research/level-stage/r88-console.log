@@ -1,0 +1,5 @@
+{"progress": 32, "total": 128, "elapsed_s": 10.358477199974004}
+{"progress": 64, "total": 128, "elapsed_s": 19.912533499998972}
+{"progress": 96, "total": 128, "elapsed_s": 27.53305630001705}
+{"progress": 128, "total": 128, "elapsed_s": 37.289585300022736}
+{"report": "F:\\Hackathon\\projects\\18-isa-scheduler\\experiments\\r88-forest-portfolio-holdout\\report.json", "summary": {"v14_auto": {"attempted": 128, "verified": 97, "statuses": {"budget_exhausted": 2, "proven_infeasible_under_model": 29, "verified": 97}, "total_inserted_copies_successes": 43297, "total_output_count_successes": 280353, "optimizer_ms_all_inputs": {"p50": 46.47390003083274, "p95": 314.0358999953605, "p99": 339.3577000242658}}, "tree_portfolio": {"attempted": 128, "verified": 96, "statuses": {"budget_exhausted": 3, "proven_infeasible_under_model": 29, "verified": 96}, "total_inserted_copies_successes": 42605, "total_output_count_successes": 271469, "optimizer_ms_all_inputs": {"p50": 50.44740001903847, "p95": 300.1037999638356, "p99": 345.3783000004478}}}}

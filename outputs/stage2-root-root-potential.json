@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791713373.6577194,
+  "suites": {
+    "r129-root-potential-oracle": {
+      "inputs": 400,
+      "checked_certificates": 201,
+      "positive": 14,
+      "stored_oracle_statuses": {
+        "feasible_optimal_copy": 340,
+        "proven_infeasible_identity_model": 27,
+        "unknown_budget": 33
+      },
+      "positive_with_stored_completed_optimal": 0
+    },
+    "r130-root-potential-positive": {
+      "inputs": 120,
+      "checked_certificates": 120,
+      "positive": 120,
+      "stored_oracle_statuses": {
+        "feasible_optimal_copy": 69,
+        "unknown_budget": 51
+      },
+      "positive_with_stored_completed_optimal": 69
+    },
+    "r131-root-potential-cross": {
+      "inputs": 16,
+      "checked_certificates": 16,
+      "positive": 16,
+      "stored_oracle_statuses": {
+        "necessary_bound_only": 16
+      },
+      "positive_with_stored_completed_optimal": 0
+    },
+    "r134-root-potential-336": {
+      "inputs": 336,
+      "checked_certificates": 156,
+      "positive": 135,
+      "stored_oracle_statuses": {
+        "necessary_bound_only": 336
+      },
+      "positive_with_stored_completed_optimal": 0
+    }
+  },
+  "tamper_rejections": 20,
+  "frozen_sources": 18,
+  "frozen_evidence": 93,
+  "evidence": {
+    "projects/18-isa-scheduler/experiments/r129-root-potential-oracle/report.json": "df3773e2726298f4c959dec1cc808ba8bd1e17e46fd9d09f612a201c6d1dcec2",
+    "projects/18-isa-scheduler/experiments/r129-root-potential-oracle/inputs.jsonl": "75b70bf1bb8a17812554e91c934d6b3b70db887b7fe0c73dd0de441b454dcab2",
+    "projects/18-isa-scheduler/experiments/r130-root-potential-positive/report.json": "fa8e3f2a4588dd73854b1e34be38b902d596f2bfd6eb6468b334373e7a12b9d4",
+    "projects/18-isa-scheduler/experiments/r130-root-potential-positive/inputs.jsonl": "45f4f7038c33ba1f0f96ad12db370a1418fd5b5f34f2ef2c66fe3a9b0dab10f0",
+    "projects/18-isa-scheduler/experiments/r131-root-potential-cross/report.json": "3118b465ea00c766d392d9746a6fa88e7b8a8f6378c4e3ba569b80ba97eb1c91",
+    "projects/18-isa-scheduler/experiments/r131-root-potential-cross/inputs.jsonl": "85a1501a11b146d7fff038888016c3f9d599b080346ec37f459c093b907ea54f",
+    "projects/18-isa-scheduler/experiments/r134-root-potential-336/report.json": "e79eaa430341c497f2ed2abef50903cbe60921959d9a63e5fe8b7c99898f4c5b",
+    "projects/18-isa-scheduler/experiments/r134-root-potential-336/inputs.jsonl": "7252b7ccaab17d798317ec5372aa7ea872978fd0f1d00d7033844f85d31b1c11"
+  },
+  "scope": "Independent raw-ancestor/strict-lifetime predicate and exact rational certificate recomputation. Normalized potential proof reviewed separately: selected live-root COPY decreases potential by at most one; original emissions contribute k/(W-k); one retirement loss at most W(W+1)/((W-S)(W-S+1)). Necessary strict-identity COPY floors only. Stored oracle costs compared; no independent oracle rerun, new feasible schedules, global minimum, default promotion or official Level claim."
+}

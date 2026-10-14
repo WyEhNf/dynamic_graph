@@ -1,0 +1,7 @@
+name,n,pass,valid,deadline,T,peak,solve_us,solve_thread_cpu_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,optimal_certificate,time_lower_bound,memory_lower_bound,error
+"dense_layer_n256_seed20261023",256,1,1,129950,14649,1103,52191,46875,248,180,1,25,273,0,0,0,14310,158,""
+"dense_global_n256_seed20261023",256,1,1,130270,11011,2022,50702,46875,248,180,1,28,276,0,0,0,10725,253,""
+"dense_layer_n1024_seed20261023",1024,1,1,519252,32716,2303,166940,171875,90,90,1,24,114,0,0,0,30515,283,""
+"dense_global_n1024_seed20261023",1024,1,1,510929,24524,6076,232152,234375,110,110,1,4,114,0,0,0,22615,435,""
+"dense_layer_n4096_seed20261023",4096,1,1,2035293,72131,3995,548506,531250,36,36,1,6,42,0,0,0,62991,589,""
+"dense_global_n4096_seed20261023",4096,1,1,2058696,54677,21551,711941,703125,36,36,1,2,38,0,0,0,46337,751,""

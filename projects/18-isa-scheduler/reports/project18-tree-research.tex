@@ -1,0 +1,149 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref,xurl}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\setlength{\emergencystretch}{3em}
+\title{18题：纯树物理年龄调度与局部交错链研究}
+\author{R144--R156 独立阶段报告}
+\date{2026年10月11日}
+\begin{document}
+\maketitle
+\begin{abstract}
+本阶段仅读取并保留全336/72冻结语料的原输入、状态和输出，再按真实COPY来源选择树形瓶颈。纯DFS年龄DP在旧48树和新36持出上没有收益；原JSON诊断表明，旧方案的优势来自原子树内部指令交错，而非提前COPY。只增加底部两条独立unary链逐原交错的局部能力后，固定旧48图COPY从10153减至10149，新36从1348减至1342。新增候选存在更多预算unknown，默认auto与R109完整质量保持冻结。本报告记录正确性、限制和成本，不宣称达到官方Level。
+\end{abstract}
+
+\section{原要求、工作与模型边界}
+官网18题正文更新仍为2026-10-10 09:18，要求重排原指令及插入COPY。
+bit\_width为2--5，最大回溯窗口$W=2^{bits}$，允许引用距离恰$W$。
+正文列Level0、1、3；Level2、COPY分母和平均权重未明确。
+官网示意输出存在操作数语义不一致，不能照搬。没有完整官方测试包，以下是明确的本地自生成分布。
+
+严格身份模型要求每原节点一次，原opcode、有序参数和寄存器保持，GET/SET同寄存器RAW/WAR/WAW依赖保持。
+不新增GET、重算、spill、数值别名、删除padding或重新结合运算。
+局部树matcher要求GET地址各唯一、SET地址各唯一且读写集合不交叉，无order依赖、无共享。
+允许重复自引用参数、保留未用GET；原COPY、dead arithmetic、共享/hazard或深度超限属于候选不支持，不是全图无解。
+SET无临时结果但仍推进物理槽。数值检查采用8位signed、16位unsigned、32位signed本地wrap模型，不冒称官方运算位宽。
+
+Sugita等CC2023距离ISA研究以物理保留窗口和dead-slot构造讨论可行性；其spill机制不在本题当前授权范围\cite{sugita}。
+Sethi--Ullman树需求给出放松寄存器机下的容量信息，但不能确定物理年龄COPY成本\cite{sethi}。
+Chen讨论寄存器压力调度；本项目原reverse-pressure候选受其思路启发，不能把压力最优当距离ISA COPY最优\cite{chen}。
+
+\section{全分布归因和最初的无收益结果}
+R144静态联接冻结R107全336和R108全72，保留336的272合法、47旧身份模型证书、9预算、8启发式失败；72的62合法、9预算、1启发式失败。
+必要界使用已审计R143/R123，COPY归因逐物理副本跟踪真实原身份。未运行新调度或替换分布。
+
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+原族&输入/合法&实际COPY&ADD来源&MULW来源\\
+\midrule
+ragged tree&16/13&4051&3409&642\\
+padded tree&16/13&3902&3433&469\\
+balanced tree&16/10&2200&1903&297\\
+\bottomrule
+\end{tabular}
+\end{center}
+这些COPY均携带中间结果；三族必要COPY界为零是弱界，并不保证全部可消除。
+cross-group共享族实际9755、更新必要界7956、差距上限1799；ladder差距上限仅4，不能按COPY总量选择优化目标。
+
+R145冻结的tree-age候选以子树shape和有序external latest-age向量缓存，枚举两种完整DFS子树方向。
+仅相同出口年龄合并低成本，不用未证明的分量年龄支配；max\_outcomes截断记录。
+COPY只在到期时保护仍需身份，未知时间/state耗尽与受限失败分开。
+
+R146有120新种子，四宽度、balanced/ragged/padded/多输出、真实原拓扑扰动、opaqueID、左右参数和未用GET。
+120候选全部原身份、符号及三整数检查通过，与独立全DFS方向/到期relay族成本全部相同，未截断。
+另一个raw-JSON Dijkstra允许任意ready原指令与提前COPY：68例完成全局最小成本，52例预算unknown；68中4例DFS候选更差。
+该oracle每图500ms/20000状态，未把unknown归成无解；只完成边界内的结果可称exact。
+五项边界测试通过，强制时间/state耗尽和不支持格式拒绝路径保留。
+
+R148旧48树保持36合法、12旧模型证书，COPY10153不变；R149新36保持29合法、7证书，COPY1348不变。
+旧候选16完成、15unknown；新候选13完成、9unknown，其余原零COPY或旧证书不运行新候选。
+这些无收益原件及全部已合法旧输出保留，没有通过放宽预算或删除困难图制造收益。
+
+\section{原输出诊断与完整反例}
+R150对两个真实padded图独立重建原数据边、子树区间和物理COPY来源。
+64节点$W4$旧24COPY、DFS37；256节点$W8$旧56、DFS67。
+两个旧原次序都在同一子树区间内穿插其它子树原节点；所有COPY距离都恰$W$，提前COPY数量为零。
+因此DFS限制确实排除了旧方案采用的合法行为，仅工程化缓存不能消除这一表达能力差距。
+
+完整10节点反例由两条各GET加三个重复自引用unary原算术、最终ADD和SET构成。
+原索引链A为0--3、链B为4--7、父8、SET9。两个DFS方向都1COPY；原次序
+\[0,4,1,5,2,6,3,7,8,9\]
+交替刷新两条链当前真实身份，输出零COPY、全部原节点一次、全部有序参数保持。
+DFS的一条COPY在物理槽7、距离4，携带原链A最终身份3；交错原输出引用距离最大2。
+零COPY由非负成本下界证明该完整例最优。“最小”只指这类两个等长独立链：两子树均至少$W$原节点才使DFS等待超窗，$2W+2=10$，不称所有DAG最小。
+
+\section{局部两链年龄前沿DP}
+single change只在一个二元原算术的两个子树均为独立GET起始unary链时，允许两链逐原交错；其它树节点仍使用原DFS候选。
+设两链长度$L_A,L_B$，状态是两prefix $(i,j)$、全部external有序年龄，以及已出生A/B当前身份的latest ages。
+当前身份由链role和prefix准确决定，所有external身份在此子树内不消费，始终保留。
+
+每条转移发射A或B下一原；自身旧链身份被最后消费，其他到期身份用COPY保护。
+COPY推进所有物理年龄，SET同样推进。删除消费角色后把新结果追加到最后，再恢复external/A/B固定角色年龄槽。
+原参数顺序不交换，缓存仅存role/prefix计划，最终根据本次真实原index恢复。
+完整出口状态相同才合并最低成本；没有数值等价、再次GET、重算或spill。
+
+局部前沿$i+j$严格增长，完整排空时得到该两链所有逐原交错且采用到期COPY的最低成本，按完整出口role-age条件。
+它不包括提前COPY，也不是整个树或任意DAG全局最优；全树max\_outcomes截断亦须记录。
+理论状态量随$(L_A+1)(L_B+1)P(W,k+active)$增长，$active\le2$，所以500ms和20000全局state仍必要。
+deadline从matcher前开始，覆盖恢复/emitter；它是算法截止，不是整个解析和独立验证接口的硬墙时保证。
+缓存恢复后的COPY数必须等于DP成本，否则断言失败；独立verify失败直接终止，不能改名为受限候选失败。
+
+\section{实测对照与正确性证据}
+R152冻结实际source后才运行。三个pipeline边界测试通过；R153的100个隔离双链实例覆盖长度1--5和四宽度，独立完整3648种逐原interleavings与候选全匹配。
+每个输出原JSON身份、符号和三整数检查通过；100隔离gold没有external身份，不能单独证明所有external上下文。
+嵌套树、外部角色和未用GET另由边界及原120图覆盖，完整数学前提另存proof文档。
+
+\begin{center}\small
+\begin{tabular}{lrrrr}
+\toprule
+固定比较&输入/合法&之前COPY&之后COPY&整批秒\\
+\midrule
+R154原120&120/120&16&14&0.218\\
+R155旧48&48/36&10153&10149&8.648\\
+R156新36&36/29&1348&1342&3.642\\
+\bottomrule
+\end{tabular}
+\end{center}
+R154沿用已冻结68exact、52unknown原oracle，不重跑来替换状态。2例改善，仍3例候选高于保存全局最优，未宣称全部最优。
+R155真实改善为padded64/$W4$的24到21、$W8$的7到6；R156为padded48/$W4$的14到8。
+两批均零恢复、零合法数量损失，原12/7证书不变；旧13completed、18预算unknown，新9completed、13预算unknown，其余原0COPY/证书不尝试。
+预算unknown比DFS阶段更多，是成本退化，仍保留所有已合法incumbent。
+所有completed候选，即使比旧更差，都保存完整物理输出；before/after及original orders全部保存并独立检查。
+根代理另以不导入项目调度器的原JSON工具独立重放728次实际输出，通过原身份、有序参数、物理窗口、COPY及寄存器hazard检查；独立枚举100局部的3648原次序与成本一致，并核对来源与证据SHA。
+只取得局部小收益，没有重测全336，没有把这几条COPY称为全量Level成绩，因此默认auto和R109质量冻结不变。
+
+\section{资源、复现和余量}
+本机Ryzen9 8945HX、32线程、约31.3GiB RAM、Windows11、CPython3.12.14，标准库单Python进程，无GPU、云/付费扩容。
+未连续采样峰值RSS，不能把建议硬件称实测峰值。最低建议2核8GiB，建议4核16GiB，数百MiB证据存储；这些是规划建议。
+功能批与其它普通项目验收可能并行，墙时不是隔离性能因果结论。
+原R146两个oracle及验证18.935秒；新R153gold0.964秒、R154验证0.218秒；R155/R156含原保存输出重放及新候选成本。
+
+R145/R147保留DFS实际source，R151是未执行的静态稿，R152是实际测试前最终source；R146、R148--150、R153--156分别有证据SHA清单。
+旧所有\texttt{.tex}/PDF不修改；本报告单文件，无外部bib/图片依赖。
+项目目录内使用新round，不覆盖旧证据：
+\begin{quote}\small\begin{verbatim}
+.venv/Scripts/python.exe -m unittest tests.test_tree_pipeline -v
+.venv/Scripts/python.exe scripts/research_tree_pipeline_gold.py
+  --round user-pipeline-gold
+.venv/Scripts/python.exe scripts/research_tree_pipeline_probe.py
+  --round user-pipeline48 --source experiments/r148-tree-age-old48
+\end{verbatim}\end{quote}
+长命令换行处在PowerShell合并一行执行。
+
+一个开发者后续估算：更一般子树交错前沿及局部外部上下文gold2--3工作日；有界快速候选保留/资源状态压缩1--2工作日；真实trace接入、完整同源对照和报告1--2工作日，总4--7工作日。
+raw校验、fixture构造、报告可并行；算法模型和语义前提需集中审阅。
+下一方向应先分析本轮18/13unknown的真实状态前沿及其它非局部交错差距，不能单纯增加预算；或者依据已审计共享族必要界选择可减差距。
+冻结全336必要平均COPY/输出下界11.98695\%，272成功子集必要下界10.28523\%仍只限严格身份模型和自生成分布，含旧不可行图的全分布下界不代表官方有效block平均。
+官方分母和Level2未明，不以改分母、删困难图或新增未授权运算来宣称Level1--3通过。
+
+\begin{thebibliography}{9}
+\bibitem{sugita} Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, Shuichi Sakai.
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA. CC2023.
+\href{https://www.rsg.ci.i.u-tokyo.ac.jp/lab/en/assets/files/cc2023-sugita.pdf}{作者原PDF}，\href{https://doi.org/10.1145/3578360.3580263}{DOI:10.1145/3578360.3580263}.
+\bibitem{sethi} Ravi Sethi, Jeffrey D. Ullman. The Generation of Optimal Code for Arithmetic Expressions. JACM1970.
+\href{https://doi.org/10.1145/321607.321620}{DOI:10.1145/321607.321620}.
+\bibitem{chen} Gang Chen. Optimal and Heuristic Min-Reg Scheduling Algorithms for GPU Programs.
+\href{https://arxiv.org/abs/2303.06855v4}{作者预印本arXiv:2303.06855v4}.
+\end{thebibliography}
+\end{document}

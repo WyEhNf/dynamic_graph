@@ -1,0 +1,67 @@
+{
+  "status": "primary_sources_read_static_direction_only",
+  "reviewed_date": "2026-10-12",
+  "requirements_source": "projects/19-dynamic-graph/docs/requirements.md",
+  "requirements": {
+    "metadata_score_weight": 15,
+    "compute_score_weight": 85,
+    "exact_source_FP64_output_is_gate": true,
+    "official_evaluation_CPU_and_complete_testpack_not_available": true
+  },
+  "actual_current_evidence": "outputs/stage2-root-vm-nested-cost-actual.json",
+  "actual_observation": "Same844 fixed/proved cost:174 fullC outputs agree;63 of69VM pairs slower with proof. Budget proof expands coverage, does not remove per-instruction execution overhead.",
+  "sources": [
+    {
+      "title": "Implementation Issues for Superinstructions in Gforth",
+      "authors": "M. Anton Ertl, David Gregg",
+      "year": 2003,
+      "url": "https://www.complang.tuwien.ac.at/anton/euroforth/ef03/ertl-gregg03.pdf",
+      "read_via": "primary author PDF,9pages",
+      "paraphrase": "Combining primitives can reduce dispatch; static and dynamic forms have implementation and tooling costs. The reported Forth performance is not evidence for this FP64 VM."
+    },
+    {
+      "title": "Interpreters vs. Compiler Performance at Run-Time",
+      "authors": "M. Anton Ertl",
+      "year": 2024,
+      "url": "https://www.complang.tuwien.ac.at/papers/ertl24-interpreter-speed.pdf",
+      "read_via": "primary author PDF,6pages",
+      "paraphrase": "Stack caching, superinstructions and IP updates address different costs; interpreter/JIT categories alone do not determine performance. Microarchitectural pitfalls and implementation complexity matter. Forth reciprocal transforms do not preserve this project's FP64 contract."
+    },
+    {
+      "title": "The Performance Effects of Virtual-Machine Instruction Pointer Updates",
+      "authors": "M. Anton Ertl, Bernd Paysan",
+      "year": 2024,
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2024.14",
+      "read_via": "publisher primary page and author paper reference",
+      "paraphrase": "Instruction-pointer update organization is a distinct interpreter optimization direction; this repository needs its own dependency-preserving evaluation."
+    },
+    {
+      "title": "ORC Design and Implementation",
+      "url": "https://llvm.org/docs/ORCv2.html",
+      "read_via": "official LLVM documentation",
+      "paraphrase": "ORC supplies LLVM IR compilation and object linking layers, including COFF support. A JIT would require additional runtime/build integration and separate compilation-cost accounting."
+    },
+    {
+      "title": "Clang Compiler User's Manual, Floating Point Model",
+      "url": "https://clang.llvm.org/docs/UsersManual.html",
+      "read_via": "official Clang documentation",
+      "paraphrase": "Disabling fast math alone can leave contraction enabled. Explicit -ffp-contract=off is needed here to preserve separately rounded multiply/add; signed zero and denormal behavior must remain intact."
+    }
+  ],
+  "repository_code_observation": {
+    "source": "projects/19-dynamic-graph/src/threaded_vm.cpp",
+    "current_dispatch": "Each original operation updates last_pc/steps, copies a decoded record, advances pc and performs computed-goto dispatch; NEXT also checks intermediate stack size.",
+    "inference_not_measured": "Control-flow-safe straight-line combinations or IP update changes could remove execution overhead while maintaining original operation boundaries. Static opcode frequency is not dynamic hotness."
+  },
+  "next_preparation": "Static PROGRAM bigram/basicblock analysis of existing original13 and fresh6 source metadata; one source-independent proposal, fulloriginal counterexamples and frozen correctness/performance scope before implementation.",
+  "must_preserve": [
+    "Every original operation's step increment, last_pc, budget rejection and error order",
+    "Stack4096 intermediate overflow and underflow behavior",
+    "Initialization, bounds/index validity, int32 conversions and division/remainder errors",
+    "FP64 operation order, separately rounded multiply/add, explicit fma, signed zero and subnormals",
+    "Original branch targets and ordinary native/AUTO/metadata1-2-3 behavior"
+  ],
+  "algorithm_or_speedup_established": false,
+  "default_changed": false,
+  "project11_paused": true
+}

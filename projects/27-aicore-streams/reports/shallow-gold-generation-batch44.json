@@ -1,0 +1,6 @@
+{
+  "profile_controls": 2590,
+  "adjacent_exchange_controls": 756,
+  "independent_python": "unbounded ints BEGIN allocation/last DIRECT consumer END, sinks retained",
+  "sha256": "bda8317127310503366bf717c07f983826e5213ee62052c556a6454b5915878f"
+}

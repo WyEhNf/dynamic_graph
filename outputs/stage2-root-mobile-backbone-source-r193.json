@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_only": true,
+  "manifest_sha256": "2a955e52582d743b4594ee9926431a603462b70d0b09a82badae062c4325dd17",
+  "source_files": 18,
+  "inputs": 84,
+  "frozen_gold": {
+    "unknown_discovery_budget": 13,
+    "optimal": 67
+  },
+  "max_input_package_bytes": 129439972,
+  "uncompressed_proposal_bound": 625543168,
+  "review": [
+    "Full state mobile mask/backbone cursor/latest live physical roles; immutable label version parents; g+h safe lower bound; weighted agenda only ordering",
+    "Same initial for every region; external suffix live users retained; SET consumes a physical slot; closure>32/fanout reject remain explicit",
+    "Independent raw physical-ring Dijkstra includes early and nonlatest COPY, N<=9; unknown is not infeasible; old80 gold is not rerun",
+    "Runner verifies every initial/proposal/best and independently replays every emitted frontier; retained resource/budget failures; outputs on G"
+  ],
+  "authorized_next": "One15-contract run then one frozen84 functionality batch; preserve first actual failure. No full336/default/official Level claim."
+}

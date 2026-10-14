@@ -1,0 +1,266 @@
+{
+  "status": "passed candidate full functional regression",
+  "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "bench_sha": "7f89627af8fbb418a5a80a2fdb3c27c9bad2bffbb79ab4d69820c277959f1d0d",
+  "normal979_direct_R45_same_every_record": true,
+  "equal_suites": [
+    {
+      "suite": "stress",
+      "records": 153,
+      "before": "reports\\stress-batch45.json",
+      "after": "reports\\stress-batch48.json",
+      "before_sha": "8a1e75a0471597d3b9b6c47b68a1b54b1ba1ef178092fdaf3b2245231179a1c7",
+      "after_sha": "40bcab0187df40c4f10bb861046575d56a17421259465406b9194591aab761c2"
+    },
+    {
+      "suite": "development",
+      "records": 143,
+      "before": "reports\\development-batch45.json",
+      "after": "reports\\development-batch48.json",
+      "before_sha": "488ad1381cd0777f0ea3470ad0cc6c6d72cb5eecc730c9830d51bedb638de25f",
+      "after_sha": "e40b7036c9533e1deffdda9f09cc6f2db9dc94c14f9c3b34ecdbe336744704e3"
+    },
+    {
+      "suite": "holdout",
+      "records": 143,
+      "before": "reports\\holdout-batch45.json",
+      "after": "reports\\holdout-batch48.json",
+      "before_sha": "4ccba1190bb09c397c5d1f74c27bdcb71d8995fe205fb3cb5ab0c133045cb029",
+      "after_sha": "9c1f78dae2d9a086f7c085b695085a033d7a54346a76e78baddebf95f6e08451"
+    },
+    {
+      "suite": "frontier",
+      "records": 72,
+      "before": "reports\\frontier-batch45.json",
+      "after": "reports\\frontier-batch48.json",
+      "before_sha": "07cea3bb1b1fb5b55e656a0e0cf5195b4bde1182030e7ff8e62a048a16277b13",
+      "after_sha": "c5ebd4a0aef686ecb74f59b7d537df89b5a82a0c515d9f4d4febcb192ee29121"
+    },
+    {
+      "suite": "frontier-holdout",
+      "records": 72,
+      "before": "reports\\frontier-holdout-batch45.json",
+      "after": "reports\\frontier-holdout-batch48.json",
+      "before_sha": "fe6c9416192e8c5b4e8d33d68facde864cfe6823de12b5d44af0056080575a55",
+      "after_sha": "d3ebf6d4ffd36a2cba2cc066b7e42ce9fc7e3aa8bb95241b5b099ab430509596"
+    },
+    {
+      "suite": "oracle4",
+      "records": 24,
+      "before": "reports\\oracle4-batch45.json",
+      "after": "reports\\oracle4-batch48.json",
+      "before_sha": "9e9466f5dff128d6c06577737687dd6c89aa066fe649e1669793eeea4d632b38",
+      "after_sha": "b1d7e0533c445e2e1dc5930d660949744867ca58d8b96b2bb470e162b89f283c"
+    },
+    {
+      "suite": "oracle4-holdout",
+      "records": 24,
+      "before": "reports\\oracle4-holdout-batch45.json",
+      "after": "reports\\oracle4-holdout-batch48.json",
+      "before_sha": "84c67fd8957091301465d8bbbf5e7ccb02579fd828fdd1c158cdaca4cca64fb0",
+      "after_sha": "aa14d156f25086272a8292f3544f31e689094a6544f403665b1c152ddb2338cf"
+    },
+    {
+      "suite": "oracle5",
+      "records": 24,
+      "before": "reports\\oracle5-batch45.json",
+      "after": "reports\\oracle5-batch48.json",
+      "before_sha": "1d26ac8b03c58572188647ed58e8d4e0d2edac2730f825b0ce4a76b7102e7622",
+      "after_sha": "3754e9dfdcd257f7007e92f75628fc2c8ea2b8655035c2289b21e7037146f1d9"
+    },
+    {
+      "suite": "oracle5-holdout",
+      "records": 24,
+      "before": "reports\\oracle5-holdout-batch45.json",
+      "after": "reports\\oracle5-holdout-batch48.json",
+      "before_sha": "85138f1855b3e627e00794969b65d70b86d325ee8d728bfd04d99badaebd16e9",
+      "after_sha": "ebf0415db0ccd12c409883f241b17431f65194aa8ef69af3d44320753f4379bb"
+    },
+    {
+      "suite": "overlap",
+      "records": 30,
+      "before": "reports\\overlap-batch45.json",
+      "after": "reports\\overlap-batch48.json",
+      "before_sha": "87935560c6383f21fdc064d6e0849a0ffa158ca8e9c87ef7d2189c4668ecc3d2",
+      "after_sha": "d665cbc97a7027f8961cfe7de0a2a150d37a527be880f9930ac56a7e7082cb27"
+    },
+    {
+      "suite": "overlap-holdout",
+      "records": 30,
+      "before": "reports\\overlap-holdout-batch45.json",
+      "after": "reports\\overlap-holdout-batch48.json",
+      "before_sha": "f0fc153c455707593f8811fa5ecfd9f6862a07dd81f48630fa4f648986cf1152",
+      "after_sha": "a474bbb80d94dcd257b811f7bce4959e2ed131295e62b986f2a395492f0b8335"
+    },
+    {
+      "suite": "resource-quality",
+      "records": 18,
+      "before": "reports\\resource-quality-batch45.json",
+      "after": "reports\\resource-quality-batch48.json",
+      "before_sha": "e65a52b8474e855423c15264fa1079f7b959faf129d1baa2fa561ffd929e8459",
+      "after_sha": "d48f35167c55e0c6b45e41eb40aa0986076635f17e9caff9d71c7453447e6e4e"
+    },
+    {
+      "suite": "resource-quality-holdout",
+      "records": 18,
+      "before": "reports\\resource-quality-holdout-batch45.json",
+      "after": "reports\\resource-quality-holdout-batch48.json",
+      "before_sha": "915d90c4003050231b31da3f6f3a03d2d710a125a60ea731f5112a2cb34e933e",
+      "after_sha": "a416a3a906298cef12cbd5b02967c963bfb21c7e9e59e4fd63cdf4d399b3bacf"
+    },
+    {
+      "suite": "weighted-overlap",
+      "records": 30,
+      "before": "reports\\weighted-overlap-batch45.json",
+      "after": "reports\\weighted-overlap-batch48.json",
+      "before_sha": "a4dda3628698ff55da1744e5cb225a6f2a2039012af555fbd7070f1c1c3cf6ac",
+      "after_sha": "e5ded53d21ac121df156f0156b0d60ed90c84e2c3785c7f992998dd034577729"
+    },
+    {
+      "suite": "weighted-overlap-holdout",
+      "records": 30,
+      "before": "reports\\weighted-overlap-holdout-batch45.json",
+      "after": "reports\\weighted-overlap-holdout-batch48.json",
+      "before_sha": "03d16adde5d2589a1bcfe5f0428216dbff06b6878d130fd080ead9db25421077",
+      "after_sha": "a4ebd264c5bcfcb6c9240f7701760ad5517e5d99a21d24050e45ca05e5966eee"
+    },
+    {
+      "suite": "oracle6",
+      "records": 12,
+      "before": "reports\\oracle6-batch45.json",
+      "after": "reports\\oracle6-batch48.json",
+      "before_sha": "588fe680ef93710863ad3b1255d7d4188ade2f139d20ee53dc266f9e3f1a1869",
+      "after_sha": "95b7ec4a13d895c04a18fb754c0861e2058e1c572b4093f4860a5314b3bdf776"
+    },
+    {
+      "suite": "oracle6-holdout",
+      "records": 12,
+      "before": "reports\\oracle6-holdout-batch45.json",
+      "after": "reports\\oracle6-holdout-batch48.json",
+      "before_sha": "4f4e5921f5847c147190151b76e115344e713379ada0563b3b34a5a4540cb36e",
+      "after_sha": "0cba0ad23a9b67453dcfd7bd53ecced30fd8ac0b03dc6326be58be26c9eb178e"
+    },
+    {
+      "suite": "irregular-small",
+      "records": 12,
+      "before": "reports\\irregular-small-batch45.json",
+      "after": "reports\\irregular-small-batch48.json",
+      "before_sha": "0f40b4180fcde858138c2a05fab1f9c14b3549cde112d0bb40da36bb5c08b578",
+      "after_sha": "3eccab49a94769a29d7d05a7f7e8619f0d3d91809d3d9ec4e31d8e058a845de3"
+    },
+    {
+      "suite": "irregular-small-holdout",
+      "records": 12,
+      "before": "reports\\irregular-small-holdout-batch45.json",
+      "after": "reports\\irregular-small-holdout-batch48.json",
+      "before_sha": "1c36d0d4d1f67366cc7a3d659c7eea01e25e8ebc94fcb2c73ca079ba8fd80d75",
+      "after_sha": "2702fb0b789577d64da297815a98e691fe9eb4e2a2fa5b54b37818da7896bae9"
+    },
+    {
+      "suite": "corepacking",
+      "records": 18,
+      "before": "reports\\corepacking-batch45.json",
+      "after": "reports\\corepacking-batch48.json",
+      "before_sha": "cfd74f2b48c5850b883fe802685b1554de4327d80e0af9e75f61053de89fe725",
+      "after_sha": "dc5f3fe85e5d5e12ae83f91287a0c432c99999598eae21cd5d5a03494db33bbd"
+    },
+    {
+      "suite": "corepacking-holdout",
+      "records": 18,
+      "before": "reports\\corepacking-holdout-batch45.json",
+      "after": "reports\\corepacking-holdout-batch48.json",
+      "before_sha": "581f97b251524b75bd14cc1bc98ac8f0db3eb4aec616a4f0321e6fc4a0023402",
+      "after_sha": "b85c7c7e17d9e58dffab4f2fcadbc091aa416707a35917e4096069a682f62c11"
+    },
+    {
+      "suite": "wait-overlap",
+      "records": 18,
+      "before": "reports\\wait-overlap-batch45.json",
+      "after": "reports\\wait-overlap-batch48.json",
+      "before_sha": "d1839f7e6d99f8ae257e4987ff3c90e6a974c962949ff7c19cda1c63f36c37ff",
+      "after_sha": "82aa9eeea0ddead135aa72df186e476415bf7eab1c71f39a8d11f75c92f7a99d"
+    },
+    {
+      "suite": "wait-overlap-holdout",
+      "records": 18,
+      "before": "reports\\wait-overlap-holdout-batch45.json",
+      "after": "reports\\wait-overlap-holdout-batch48.json",
+      "before_sha": "d57f265c7918832631e4573730d7c8491f6eeb88a4cd868132222f79873931b7",
+      "after_sha": "de63ba16e85520b154fb88137317c07efb1d6d118965274b96c2c313e13d6acf"
+    },
+    {
+      "suite": "certificate-controls",
+      "records": 12,
+      "before": "reports\\certificate-controls-batch45.json",
+      "after": "reports\\certificate-controls-batch48.json",
+      "before_sha": "4889b35cba66c36113411b84d2b49a8496ee87f95daa7a443347292d99254396",
+      "after_sha": "f336ee61856ae6e2e999c5bf600578bced36373e45d088a9952b6d8a26b019a7"
+    },
+    {
+      "suite": "dense",
+      "records": 6,
+      "before": "reports\\dense-batch45.json",
+      "after": "reports\\dense-batch48.json",
+      "before_sha": "a4073ea2cc1fb0f3eb9c48740ac6270914890206ae7d942197e3a3e28ae4e817",
+      "after_sha": "471db38f27b2fdacd5e5db5493ff73852ea7a2d2dc1c9b5cd77dda0ee42528b6"
+    },
+    {
+      "suite": "dense-holdout",
+      "records": 6,
+      "before": "reports\\dense-holdout-batch45.json",
+      "after": "reports\\dense-holdout-batch48.json",
+      "before_sha": "6010453e22352f1122edeb3b1b6ef5fa480b824236577d42c7eeac59cb16d8d3",
+      "after_sha": "6b3a55e6e29779a37d0ca5c27328afdaee89a108d5a827f67a55f67641ea3a7e"
+    }
+  ],
+  "statuses": [
+    {
+      "command": [
+        "C:/Users/admin/miniconda3/python.exe",
+        "scripts/regress_current.py",
+        "--label",
+        "batch48",
+        "--bench",
+        "research/batch48/aicore_bench.exe",
+        "--source",
+        "research/batch48/solution.cpp"
+      ],
+      "actual_exit_code": 0,
+      "wall_seconds": 39.96015449997503
+    },
+    {
+      "command": [
+        "C:/Users/admin/miniconda3/python.exe",
+        "scripts/audit_certificates.py"
+      ],
+      "actual_exit_code": 0,
+      "wall_seconds": 0.8280132000218146
+    },
+    {
+      "label": "forkjoin",
+      "actual_exit_code": 0,
+      "records": 36,
+      "before_sha": "10376873402c848a8dee1655ca9811623502b832bd72d3650f86440a80ea9f26",
+      "after_sha": "55c51ea3e20f793a16f42235baa5695ff45a3e1e0dc6fda46b90778e488eceab",
+      "all_fields_equal": true
+    },
+    {
+      "label": "shallow-heldout",
+      "actual_exit_code": 0,
+      "records": 72,
+      "before_sha": "1634dfe96dc44ab3cb44e1c4a7ade879c9ca292938a67a953703f8e264754263",
+      "after_sha": "922ae2d555b4289752e8ab9ad67dba560d11a814a12dfff08661db5ef7f9f375",
+      "all_fields_equal": true
+    },
+    {
+      "label": "resource-cliques",
+      "actual_exit_code": 0,
+      "records": 12,
+      "before_sha": "8a2ee5604754f210b6a6ffa290ba7e4ff093716770f8d0c1c13a26f430968391",
+      "after_sha": "9f533474019b13db43effebc2f917e63961cab76880291407cd835eb849ac00d",
+      "all_fields_equal": true
+    }
+  ],
+  "wall_seconds": 47.343616700032726,
+  "timing": "Shared functional only; no paired cost conclusion"
+}

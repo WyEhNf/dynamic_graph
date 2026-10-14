@@ -1,0 +1,15 @@
+{
+  "origin": "Self-created independent new task; not official benchmark",
+  "case_id": "range_updates",
+  "baseline_bundle": "range_updates",
+  "snapshot_sha256": "3e0ed0a1a95e04509a9b14e7a03f881e11d5640a700eefb488727e82ede1f8c8",
+  "target_file": "solution.py",
+  "pinned_files": [
+    "solution.py"
+  ],
+  "history": [],
+  "dependencies": {
+    "python": ">=3.12",
+    "external": []
+  }
+}

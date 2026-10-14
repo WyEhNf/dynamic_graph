@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791782723.2816768,
+  "source_manifest_sha256": "f9c6137f228db66f778491b8ab8836ec15cde512543df32b579005318a84d700",
+  "frozen_files": 441,
+  "original_accepted_source_files": 178,
+  "unchanged_old_files": 173,
+  "new_ABI_sha256": "65918905ae87a751b9745bdbf9aae3c5f26644b5aecefbb279731b173fedc3d4",
+  "full_original_groups": 15,
+  "all_prefix_cases": 8369,
+  "comparisons_per_enabled_build": 8464,
+  "original_threaded_contracts": 934,
+  "scope": "441 sources/baselines and source-before178 accepted originals checked; oldthreaded unchanged, all33 other handlers/dispatch text exact. Full15 originalPROGRAM literal op/IEEE bits independently matched to preimplementation gold, zero-through-onepast prefixes preserved. Source-only review cannot prove actual correctness or dispatch speed.",
+  "authorization": "One sequential GNU-enabled/forced-portable/disabled complete matching-ABI build batch and fullCTest, new8464+old934 contracts on enabled builds, strictFP/file-backed logs/ownedG temp and freshRAM>=1GiB/Gfree>=1GiB at launch. No performance/fullC/default promotion until actual contracts independently audited; preserve first failure and no timeout restart."
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791715163.6533926,
+  "n": 10000,
+  "actual_C_reference_rerun": true,
+  "complete_files_stream_compared": 5,
+  "full_bytes_per_file": 800000008,
+  "explicit_backends": [
+    {
+      "backend": "GNUauto",
+      "vm_backend": "decoded-threaded",
+      "vm_steps": 1700000012,
+      "available_ram_before_bytes": 3739811840,
+      "process_peak_working_set_bytes": 1605718016,
+      "process_peak_commit_bytes": 1604038656,
+      "host_available_ram_min_bytes": 2094825472,
+      "host_busy_percent_during_process": 17.24906191369606
+    },
+    {
+      "backend": "GNUdecoded",
+      "vm_backend": "decoded",
+      "vm_steps": 1700000012,
+      "available_ram_before_bytes": 3732201472,
+      "process_peak_working_set_bytes": 1605718016,
+      "process_peak_commit_bytes": 1604038656,
+      "host_available_ram_min_bytes": 2039451648,
+      "host_busy_percent_during_process": 16.28612303290415
+    },
+    {
+      "backend": "portableauto",
+      "vm_backend": "decoded-fallback",
+      "vm_steps": 1700000012,
+      "available_ram_before_bytes": 3608391680,
+      "process_peak_working_set_bytes": 1606373376,
+      "process_peak_commit_bytes": 1604079616,
+      "host_available_ram_min_bytes": 1996832768,
+      "host_busy_percent_during_process": 21.041349354092628
+    }
+  ],
+  "default_budget_passed": false,
+  "explicit_budget_passed": true,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/maximum-shape/run-plan.json": "4e8e2459a68c1a74a15229f64d44ae838edb4479ab4f0f19fa5b5bf8d1492bf8",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/maximum-shape/report.json": "590cf81dfbaed9467b12facb6824b7394829d0637a0f8f80eb7269468138f279"
+  },
+  "scope": "Independent root stream comparison of historicalC, new actualC and three actual backend800000008byte files, including headers; historical source/Meta/input/harness/oracle/executable SHA rechecked with bounded buffers. Original1700000012 steps and sequential fresh>=2.5GiB RAM gates checked. Default1e9 rejection explicit; explicit1e10 only proves this N10000 copy source, not all generic sources/default-budget acceptance or paired performance."
+}

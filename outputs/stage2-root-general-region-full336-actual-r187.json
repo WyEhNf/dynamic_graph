@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791782055.4330304,
+  "report_sha256": "cc36f031e37d7ea9d0973cbc95566793e2514b3d8997832938ecd5eb7b648931",
+  "original_inputs": 336,
+  "legal_initials": 272,
+  "retained_statuses": {
+    "proven_infeasible_under_model": 47,
+    "verified": 272,
+    "scheduling_failure": 8,
+    "budget_exhausted": 9
+  },
+  "before_COPY": 192902,
+  "after_COPY": 192859,
+  "improved_inputs": 23,
+  "complete_proposals": 4680,
+  "whole_outputs_independently_checked": 5116,
+  "frontier_counts": {
+    "header": 1031,
+    "immutable_label": 711769,
+    "open": 60494,
+    "unfinished_expansion": 323
+  },
+  "regions": 1031,
+  "nonzero_prefix_regions": 991,
+  "processed_states": 644693,
+  "attempted_transitions": 1446056,
+  "reopens": 15182,
+  "stale": 660,
+  "after_legal_copy_output_mean": 0.13584245954613186,
+  "all_input_quality_mean": null,
+  "scope": "All336 statuses retained and all5116whole outputs exact original identity/ordered operands/COPY age/RAW-WAR-WAW independently replayed. All711769immutable/60494OPEN/323unfinished records checked by independent root physical ring and masks, including nonzero original prefixes. Whole arithmetic follows original operation identities and register hazards, not candidate-generated numeric gold. Selfgenerated legal272 mean13.5842%,64 missingoutputs retained; partial restricted search does not prove global optimum/infeasibility or officialLevel1-3.",
+  "authorization": "Analyze all retained family/COPY origins and search partials; identify one stronger scheduling/retention mechanism with full original counterexamples and primary literature before implementation. No default promotion or full score claim."
+}

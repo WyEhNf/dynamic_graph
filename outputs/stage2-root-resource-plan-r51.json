@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791718238.9080863,
+  "plan_sha256": "e59213061bc893488c7a71c3cb9fc0529afdab9a67df0aece90aa268f4e9ad9b",
+  "dataset_sizes": [
+    202,
+    48
+  ],
+  "rounds": 3,
+  "full_CLI_trials": 12,
+  "original_case_execution_records": 1500,
+  "baseline_actual_default_sha256": "54fc7e9b2257f1edcd6925126f32e969826a5d6ba93bc2f9b3e8fd5dd5538c10",
+  "candidate_frozen_release_sha256": "25ac71bc389e62f512d7597d40048e97b88783c21e895524cdba3311c6067742",
+  "scope": "Root checked frozen hashes/Release flags, both full cohorts, alternating order and raw host CPU/RAM monitor. Every success and failure retained. No trial started at review; sole project window does not imply host idle; no default promotion authorized."
+}

@@ -1,0 +1,8 @@
+"""Declare only, never start measurement before root coordination."""
+import hashlib,json
+from pathlib import Path
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+p=Path('research/batch48');m=json.loads((p/'acceptance-checkpoint.json').read_text());before='research/batch45/default-aicore_bench.exe';after='research/batch48/release-candidate-frozen-aicore_bench.exe';source='research/batch48/solution.cpp'
+assert m['source_sha']==sha(source) and m['baseline45_exe_sha']==sha(before) and m['executables'][after]==sha(after)
+plan=dict(status='declared_not_executed_waiting_coordinated_root_window',baseline_source=sha('research/batch45/solution.cpp'),candidate_source=sha(source),baseline_exe_path=before,candidate_exe_path=after,baseline_exe=sha(before),candidate_exe=sha(after),acceptance_checkpoint_sha=sha(p/'acceptance-checkpoint.json'),compiler='GCC15.2 CMake Release -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic both;source5116/default5acc baseline,not earlier measured3e827',datasets={x:sha(x) for x in ['data/hard-corpus-resumed.json','data/projection-retention-heldout-batch45.json']},rounds=3,order='before/after,after/before,before/after per dataset',scope='all202 and all48 with all failures;common success/common failure/recovered costs separated;paired median and side median distinguished;CLI wall/PeakWS,Win32 thread CPU quantized',host_load='Trial host_busy/host_available RAM unmeasured by unchanged harness;user apps remain;root coordination does not imply idle host',default_unchanged_sha=sha('solution/solution.cpp'),default_exe_unchanged_sha=sha('build/aicore_bench.exe'))
+(p/'paired-plan.json').write_text(json.dumps(plan,indent=2),encoding='utf-8');print('declaration only',sha(p/'paired-plan.json'),flush=True)

@@ -1,0 +1,57 @@
+{
+  "median_all_solve_us_before": 1284990,
+  "median_all_solve_us_after": 1304146,
+  "median_all_thread_cpu_us_before": 1312500,
+  "median_all_thread_cpu_us_after": 1281250,
+  "median_common_solve_us_before": 1284990,
+  "median_common_solve_us_after": 1304146,
+  "median_common_thread_cpu_us_before": 1312500,
+  "median_common_thread_cpu_us_after": 1281250,
+  "median_wall_seconds_before": 1.420675500005018,
+  "median_wall_seconds_after": 1.4364135000505485,
+  "maximum_cli_working_set_bytes": 48971776,
+  "common_fail_cost": {
+    "before": {
+      "wall": 0,
+      "cpu": 0
+    },
+    "after": {
+      "wall": 0,
+      "cpu": 0
+    }
+  },
+  "all_pass_T_peak_identical_each_round": true,
+  "records": 36,
+  "passed": 36,
+  "failed": 0,
+  "CPU_ratio": 0.9761904761904762,
+  "individual_pairs": [
+    {
+      "round": 1,
+      "before_all_thread_cpu_us": 1296875,
+      "after_all_thread_cpu_us": 1375000,
+      "cpu_ratio": 1.0602409638554218,
+      "solve_wall_ratio": 1.1126139361606777,
+      "cli_wall_ratio": 1.1019083527667295
+    },
+    {
+      "round": 2,
+      "before_all_thread_cpu_us": 1312500,
+      "after_all_thread_cpu_us": 1265625,
+      "cpu_ratio": 0.9642857142857143,
+      "solve_wall_ratio": 1.014907509007852,
+      "cli_wall_ratio": 1.0144524212292907
+    },
+    {
+      "round": 3,
+      "before_all_thread_cpu_us": 1359375,
+      "after_all_thread_cpu_us": 1281250,
+      "cpu_ratio": 0.9425287356321839,
+      "solve_wall_ratio": 0.9288412472964164,
+      "cli_wall_ratio": 0.9300716771388401
+    }
+  ],
+  "median_paired_cpu_ratio": 0.9642857142857143,
+  "independent_side_median_cpu_ratio": 0.9761904761904762,
+  "interpretation": "Side medians ratio differs from median of within-pair ratios; no universal family speedup or process RAM reduction claim"
+}

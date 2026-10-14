@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "inputs": 336,
+  "legal_outputs": 272,
+  "totals": {
+    "missing_outputs_preserved": 64,
+    "whole_outputs_replayed": 867,
+    "proposals": 431,
+    "before_COPY": 192859,
+    "after_COPY": 192848,
+    "improved": 7
+  },
+  "frontier": {
+    "header": 136,
+    "immutable_label": 205911,
+    "open": 2161,
+    "unfinished_expansion": 26
+  },
+  "after_legal_copy_output_mean": 0.13563597730994614,
+  "all336_quality_mean": null,
+  "elapsed_seconds": 33.32265089999419,
+  "report_sha256": "d654975ff397cb3c6147e0216392921e0be573047d66b2ab1a552f8cdd374e69",
+  "audit_source_sha256": "78ebd5ea59ea70808d283db35b0565b288cb6510a7702e2d388611a31e0956bb",
+  "default_changed": false,
+  "scope": "Read-only original-identity and physical-ring replay of saved files; no scheduler rerun or official Level claim."
+}

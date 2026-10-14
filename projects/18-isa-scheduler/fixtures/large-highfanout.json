@@ -1,0 +1,21 @@
+{
+  "block_id": "local-large-highfanout",
+  "bit_width": 2,
+  "instructions": [
+    {"id": 0, "op": "GET", "reg": "a"},
+    {"id": 1, "op": "GET", "reg": "b"},
+    {"id": 2, "op": "ADD", "inputs": ["t#2", "t#1"]},
+    {"id": 3, "op": "ADD", "inputs": ["t#3", "t#1"]},
+    {"id": 4, "op": "ADD", "inputs": ["t#4", "t#1"]},
+    {"id": 5, "op": "ADD", "inputs": ["t#5", "t#1"]},
+    {"id": 6, "op": "ADD", "inputs": ["t#6", "t#1"]},
+    {"id": 7, "op": "ADD", "inputs": ["t#7", "t#1"]},
+    {"id": 8, "op": "ADD", "inputs": ["t#8", "t#1"]},
+    {"id": 9, "op": "ADD", "inputs": ["t#9", "t#1"]},
+    {"id": 10, "op": "ADD", "inputs": ["t#10", "t#1"]},
+    {"id": 11, "op": "ADD", "inputs": ["t#11", "t#1"]},
+    {"id": 12, "op": "ADD", "inputs": ["t#12", "t#1"]},
+    {"id": 13, "op": "ADD", "inputs": ["t#13", "t#1"]},
+    {"id": 14, "op": "SET", "reg": "out", "inputs": ["t#1"]}
+  ]
+}

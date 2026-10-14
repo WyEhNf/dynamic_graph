@@ -1,0 +1,11 @@
+{
+  "task": "修复 parser 错误并保留用户约束",
+  "budget": 450,
+  "items": [
+    {"id":"spec", "kind":"requirement", "text":"保持外部接口不变；解析失败必须返回明确错误。", "protected":true},
+    {"id":"source", "kind":"code", "text":"parser.parse(source) 的调用方需要结果类型与错误位置。", "utility":1.0},
+    {"id":"old", "kind":"memory", "text":"此前的页面颜色讨论与当前任务无关。"},
+    {"id":"duplicate", "kind":"memory", "text":"此前的页面颜色讨论与当前任务无关。"},
+    {"id":"log", "kind":"tool", "text":"progress 1\nprogress 2\nERROR parser: unexpected token line 12\nexit code 1"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "reviewed_unix": 1791707368.2859552,
+  "passed": true,
+  "full_file_C_outputs": 4,
+  "independent_constant_bit_checks": 10464,
+  "bytes_per_output": 167412,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/fp-supplement/report.json": "93e7639a7f853c6e4675ba280837714d89a12ffff1789c7a6d52150af69ab8cc",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/fp-supplement/source.c": "028893580b4a93785873084d8f7ee35742bbdd6b6240b4cc0da66f987ed54714",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/fp-supplement/program.meta": "4e9be470854bedb9c846b1cc5ddba2dcf33cdbf3ca83b5a8741c9284b30d737f",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase1/fp-supplement/oracle.bin": "d689c9d4fc6c8d7ac6ab6d08518a0f4b41352accf7608fc547d8052cca5cbd48"
+  },
+  "scope": "Root actual wholeC bytes including headers match all4 backends. Explicit fused -2^-54, unfused +0, subnormal half-minimum-normal and exactsqrt4 constants independently checked at every selected matrix element. FP sequence preservation verified on these fixtures; no performance/universal claim."
+}

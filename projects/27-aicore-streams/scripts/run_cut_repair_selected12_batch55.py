@@ -1,0 +1,26 @@
+"""ONE authorized originalR52 twelve run, frozen compiled GCC driver only."""
+from pathlib import Path
+import hashlib,json,os,subprocess,time
+P=Path('research/batch55');sha=lambda f:hashlib.sha256(Path(f).read_bytes()).hexdigest()
+freeze=json.loads((P/'pre-execution-freeze.json').read_text());complete=json.loads((P/'gold-completion.json').read_text())
+for f in freeze['files']:assert sha(f['path'])==f['sha256'],f['path']
+for f in complete['files']:assert sha(f['path'])==f['sha256'],f['path']
+exe=str(P/'selected12-gcc.exe');data='research/batch52/observer-selected12-input-only.json';output='reports/cut-repair-selected12-batch55.json'
+assert sha(exe)=='735064dacb95a485c1ee4c8323883250017f3ad3184371cb3768b4efec896d09'
+env=os.environ.copy();overrides=json.loads((P/'compiler-resource-plan.json').read_text())['process_environment_overrides'];env.update(overrides)
+cmd=[exe,data,output];print('R55 same12 owner PID',os.getpid(),flush=True);t=time.perf_counter();r=subprocess.run(cmd,capture_output=True,text=True,env=env)
+stdout='reports/cut-repair-selected12-batch55.stdout.txt';stderr='reports/cut-repair-selected12-batch55.stderr.txt';Path(stdout).write_text(r.stdout,encoding='utf-8');Path(stderr).write_text(r.stderr,encoding='utf-8')
+status=dict(owner_pid=os.getpid(),command=cmd,actual_exit_code=r.returncode,shared_functional_wall_seconds=time.perf_counter()-t,process_environment_overrides=overrides,exe_sha256=sha(exe),source_sha256=sha(P/'solution.cpp'),input_sha256=sha(data),stdout_path=stdout,stderr_path=stderr,scope='originalR52twelve ONLY; no63/67/full/perf/default')
+(P/'selected12-execution-status.json').write_text(json.dumps(status,indent=2)+'\n',encoding='utf-8');print('R55 selected12 actual exit',r.returncode,flush=True)
+if r.returncode:raise SystemExit(r.returncode)
+actual=json.loads(Path(output).read_text());before=json.loads(Path('reports/observer-baseline-batch52.json').read_text());old={c['name']:c for c in before['cases']};assert actual['count']==12 and len(actual['cases'])==12 and {c['name'] for c in actual['cases']}==set(old)
+rows=[]
+for a in actual['cases']:
+    b=old[a['name']];whole=b['whole']['valid'],a['whole']['valid'];helper=b['helper']['valid'],a['helper']['valid']
+    rows.append(dict(name=a['name'],before_whole_valid=whole[0],after_whole_valid=whole[1],whole_recovered=not whole[0] and whole[1],whole_lost=whole[0] and not whole[1],before_whole_T=b['whole']['T'],after_whole_T=a['whole']['T'],before_whole_peak=b['whole']['peak'],after_whole_peak=a['whole']['peak'],common_whole_plan_equal=b['whole']['plan']==a['whole']['plan'] if all(whole) else None,before_whole_error=b['whole']['error'],after_whole_error=a['whole']['error'],before_helper_valid=helper[0],after_helper_valid=helper[1],before_helper_work=b['helper']['work'],after_helper_work=a['helper']['work'],before_helper_evaluations=b['helper']['evaluations'],after_helper_evaluations=a['helper']['evaluations'],before_helper_exhausted=b['helper']['exhausted'],after_helper_exhausted=a['helper']['exhausted'],before_helper_T=b['helper']['T'],after_helper_T=a['helper']['T'],before_helper_peak=b['helper']['peak'],after_helper_peak=a['helper']['peak'],common_helper_order_equal=b['helper']['order_ids']==a['helper']['order_ids'] if all(helper) else None))
+summary=dict(status='ACTUAL_ORIGINAL12_SOURCE_ONLY_TERMINAL',before_whole_success=sum(c['whole']['valid'] for c in old.values()),after_whole_success=sum(c['whole']['valid'] for c in actual['cases']),whole_recovered=sum(r['whole_recovered'] for r in rows),whole_lost=sum(r['whole_lost'] for r in rows),remaining_whole_failed=sum(not c['whole']['valid'] for c in actual['cases']),before_helper_success=sum(c['helper']['valid'] for c in old.values()),after_helper_success=sum(c['helper']['valid'] for c in actual['cases']),before_helper_work=sum(c['helper']['work'] for c in old.values()),after_helper_work=sum(c['helper']['work'] for c in actual['cases']),before_helper_exhausted=sum(c['helper']['exhausted'] for c in old.values()),after_helper_exhausted=sum(c['helper']['exhausted'] for c in actual['cases']),rows=rows,raw_path=output,raw_sha256=sha(output),baseline_path='reports/observer-baseline-batch52.json',baseline_sha256=sha('reports/observer-baseline-batch52.json'),source_sha256=sha(P/'solution.cpp'),status_path=str(P/'selected12-execution-status.json'),default_changed=False,performance_unmeasured=True,scope=status['scope'])
+summarypath=Path('reports/cut-repair-selected12-summary-batch55.json');summarypath.write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
+for f in freeze['files']:assert sha(f['path'])==f['sha256'],f['path']
+paths=[output,str(summarypath),stdout,stderr,str(P/'selected12-execution-status.json'),__file__]
+doc=dict(status='ACTUAL_TERMINAL_EXIT0_ORIGINAL12_ONLY',actual_exit_code=0,source_sha256=sha(P/'solution.cpp'),exe_sha256=sha(exe),input_sha256=sha(data),preexecution_freeze_sha256=sha(P/'pre-execution-freeze.json'),gold_completion_sha256=sha(P/'gold-completion.json'),whole_recovered=summary['whole_recovered'],whole_lost=summary['whole_lost'],files=[dict(path=f,sha256=sha(f)) for f in paths],default_changed=False,scope=status['scope'])
+(P/'selected12-completion.json').write_text(json.dumps(doc,indent=2)+'\n',encoding='utf-8');print(json.dumps({k:v for k,v in summary.items() if k!='rows'},indent=2),flush=True)

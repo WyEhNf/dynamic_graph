@@ -1,0 +1,115 @@
+{
+  "reviewed_unix": 1791700428.1954384,
+  "passed": true,
+  "project19": {
+    "official_vendor_archive_files_checked": 255,
+    "full_native_containers_decoded_by_python": 42,
+    "frozen_full_metadata_sizes_recomputed": 57,
+    "original_c_whole_file_results": 72,
+    "new_compressed_choice_opportunity": [
+      {
+        "source": "scalar",
+        "current_container": 760,
+        "minimum_six_containers": 731,
+        "minimum_format": "3-expanded",
+        "all_candidate_sizes": {
+          "2-dag": 798,
+          "2-expanded": 769,
+          "2-table": 801,
+          "3-dag": 761,
+          "3-expanded": 731,
+          "3-table": 760
+        }
+      },
+      {
+        "source": "page",
+        "current_container": 763,
+        "minimum_six_containers": 735,
+        "minimum_format": "3-expanded",
+        "all_candidate_sizes": {
+          "2-dag": 801,
+          "2-expanded": 766,
+          "2-table": 802,
+          "3-dag": 769,
+          "3-expanded": 735,
+          "3-table": 763
+        }
+      },
+      {
+        "source": "blocked",
+        "current_container": 958,
+        "minimum_six_containers": 912,
+        "minimum_format": "3-expanded",
+        "all_candidate_sizes": {
+          "2-dag": 1018,
+          "2-expanded": 964,
+          "2-table": 1008,
+          "3-dag": 971,
+          "3-expanded": 912,
+          "3-table": 958
+        }
+      },
+      {
+        "source": "generic",
+        "current_container": 492,
+        "minimum_six_containers": 481,
+        "minimum_format": "3-expanded",
+        "all_candidate_sizes": {
+          "2-dag": 533,
+          "2-expanded": 527,
+          "2-table": 539,
+          "3-dag": 486,
+          "3-expanded": 481,
+          "3-table": 492
+        }
+      },
+      {
+        "source": "negative-zero",
+        "current_container": 407,
+        "minimum_six_containers": 397,
+        "minimum_format": "3-expanded",
+        "all_candidate_sizes": {
+          "2-dag": 424,
+          "2-expanded": 414,
+          "2-table": 434,
+          "3-dag": 407,
+          "3-expanded": 397,
+          "3-table": 416
+        }
+      },
+      {
+        "source": "noop",
+        "current_container": 225,
+        "minimum_six_containers": 225,
+        "minimum_format": "2-expanded",
+        "all_candidate_sizes": {
+          "2-dag": 231,
+          "2-expanded": 225,
+          "2-table": 246,
+          "3-dag": 238,
+          "3-expanded": 233,
+          "3-table": 254
+        }
+      }
+    ],
+    "runtime_sha256": "ee3f2387653ebb20b2d4854b58aba73da35eebbc6110532de57447827b0975fa"
+  },
+  "project27": {
+    "direct_frozen_r39_to_r42_normal_records": 979,
+    "fields": [
+      "pass",
+      "T",
+      "peak_memory"
+    ],
+    "all_same": true,
+    "default_binary_sha256": "27f3b0e741aa9bc800927bd20f4061659670c1a43522a73a049ce4d1d2752818",
+    "limitation": "Numerical correction does not recover the63 known feasible unresolved cases or establish universal solver correctness."
+  },
+  "evidence": {
+    "projects\\19-dynamic-graph\\artifacts\\stage2-metadata-zlib\\manifest.json": "1fe51b63e734d75fb308fbc3a1d82f1273b1a12620e0f327fd16a764c487a97a",
+    "projects\\19-dynamic-graph\\artifacts\\stage2-metadata-zlib\\validation\\report.json": "347a8b9612e49523b46ae08156c11c1d85985aa2ef8b61ff46859d446565cc84",
+    "projects\\19-dynamic-graph\\artifacts\\stage2-metadata-zlib\\size-probe.json": "0f2ce1a77de8bc5fb89a4708fe78033b2ceef8220489c17527d8f8d94fb1c68e",
+    "projects\\27-aicore-streams\\reports\\final-checkpoint-batch42.json": "532f1d72e33950668ffc71e278bbce1b904678acd8a63d1b815fad7320cc434a",
+    "projects\\27-aicore-streams\\reports\\direct-normal-r39-batch42.json": "8e583e17630d6adffa0208190b19a0fb9ac5c803f66983f50f3f2066542dfc8e"
+  }
+}

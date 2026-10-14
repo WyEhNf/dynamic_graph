@@ -1,0 +1,2 @@
+Implement bounded_mean(values). Call bounded from helpers.py for each finite integer and return the arithmetic mean of those returned values as a float. Empty input raises ValueError. Do not modify values. Use the helper rather than hardcoding its current bounds. Preserve the existing RELEASE_TAG constant and compatibility(value) function unchanged. Return only the complete target file.
+Target file: solution.py. Return its complete content. Existing dependencies must stay available.

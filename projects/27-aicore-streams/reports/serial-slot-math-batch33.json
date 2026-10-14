@@ -1,0 +1,8 @@
+{
+  "graphs": 40,
+  "topological_orders": 3886,
+  "passed": true,
+  "scope": "Exhaustive all topological orders of 40 arbitrary DAGs, n4..7; timed intervals versus serial-position intervals; not large CP-SAT solving",
+  "seed_base": 20321011,
+  "source_sha256": "6646d771e217f6aed6fdd8f669e4fb78d5d5fd19b8c17864b7c9b162b61e4091"
+}

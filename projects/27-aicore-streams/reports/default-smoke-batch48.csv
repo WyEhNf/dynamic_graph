@@ -1,0 +1,10 @@
+name,n,pass,valid,deadline,T,peak,solve_us,solve_thread_cpu_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,optimal_certificate,time_lower_bound,memory_lower_bound,error
+"irregular_consumers_local_k24_ret1_seed20273418",131,1,1,2421486,2421486,1946,45765,46875,127,1,1,0,127,18861,32,0,1152879,1409,""
+"irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",71,1,1,1487053,1487053,1745,27946,31250,123,1,1,4,127,17267,32,0,514436,1654,""
+"irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",71,1,1,1487053,1487053,1760,29120,31250,123,1,1,4,127,17286,32,0,514436,1654,""
+"projection_retention_seed203451001",44,1,1,881611,881611,1214,2127,0,79,3,1,48,127,1581,8,0,317645,1046,""
+"projection_retention_seed203451027",121,1,1,2436273,2436273,2362,33099,15625,125,1,1,0,125,25360,32,0,1042951,1473,""
+"projection_retention_seed203451048",262,1,1,4438687,4438687,4770,100346,109375,125,1,1,0,125,48059,32,0,1594678,1626,""
+"projection_retention_seed203451004",269,0,0,5453849,0,0,129855,125000,74,0,1,48,122,24557,32,0,1925611,1321,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"projection_retention_seed203451008",263,0,0,4653016,0,0,264117,250000,122,0,1,0,122,58116,32,0,2066404,2846,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"blind_high-fanout_local_k12_ret1_seed20282247",124,0,0,1238140,0,0,45111,46875,122,0,1,0,122,17620,32,0,373201,1135,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"

@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791778116.6854396,
+  "freeze_sha256": "8b6666017efd81ce5486f59f1abf8ea3c59f85c30f62e582569afb389289c412",
+  "frozen_files": 45,
+  "candidate_source_sha256": "c17c1f67792a3aa8ffeeb60034c92ac7e7b48e0f0835bfd3c7e0e8f63f1a36ec",
+  "gold_controls": 160,
+  "qualified_eligible": 158,
+  "eligible_within128": 150,
+  "reference_valid_cuts": 116,
+  "reference_legal_whole_orders": 138,
+  "direct_only_controls": 16,
+  "closure_sizes": {
+    "2": 138,
+    "127": 4,
+    "128": 4,
+    "129": 4,
+    "130": 4,
+    "1": 6
+  },
+  "literal_boundaries": [
+    80,
+    112,
+    180
+  ],
+  "authorization": "Compile frozen GCC gold/selected12/standalone and Clang UBSan gold with F temp/min1GiB. First execute160normal+16direct+160fixedphysics controls per compiler; independently review before sameR52twelve source-only. No full63/67/250/performance/default promotion.",
+  "scope": "Root all45source/gold/input hashes/two diff hunks reviewed. Independent bigint original-prefix and fullDIRECT unfinished closure qualification/all160 wholefixed orders/116legalcut outputs verified, including129/130 skips and largeint64 cases. Expanded35logical fee rows and hand80/112/180 transcript accepted before execution. These are pre-execution reference controls, not candidate passes/recoveries."
+}

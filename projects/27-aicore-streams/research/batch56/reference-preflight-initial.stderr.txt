@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "F:\Hackathon\projects\27-aicore-streams\scripts\run_causal_reference_batch56.py", line 10, in <module>
+    assert shutil.disk_usage(Path.cwd().anchor).free>=1<<30
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

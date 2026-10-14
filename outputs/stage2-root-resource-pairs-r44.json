@@ -1,0 +1,129 @@
+{
+  "reviewed_unix": 1791704808.2705202,
+  "passed": true,
+  "groups": {
+    "hard": {
+      "records": 202,
+      "before_legal": 139,
+      "after_legal": 141,
+      "round_cpu_ratios": [
+        1.1583333333333334,
+        1.0919117647058822,
+        1.0215672178289001
+      ],
+      "median_paired_cpu_ratio": 1.0919117647058822,
+      "ratio_of_independent_cpu_medians": 1.0448529411764707,
+      "medians": {
+        "all": {
+          "before": {
+            "wall_us": 21983504,
+            "thread_cpu_us": 21250000
+          },
+          "after": {
+            "wall_us": 22445947,
+            "thread_cpu_us": 22203125
+          }
+        },
+        "common_success": {
+          "before": {
+            "wall_us": 7408321,
+            "thread_cpu_us": 7250000
+          },
+          "after": {
+            "wall_us": 6654696,
+            "thread_cpu_us": 6625000
+          }
+        },
+        "common_failure": {
+          "before": {
+            "wall_us": 14364381,
+            "thread_cpu_us": 13812500
+          },
+          "after": {
+            "wall_us": 15578363,
+            "thread_cpu_us": 15359375
+          }
+        },
+        "recovered": {
+          "before": {
+            "wall_us": 215634,
+            "thread_cpu_us": 187500
+          },
+          "after": {
+            "wall_us": 220505,
+            "thread_cpu_us": 218750
+          }
+        }
+      }
+    },
+    "heldout": {
+      "records": 72,
+      "before_legal": 68,
+      "after_legal": 72,
+      "round_cpu_ratios": [
+        0.9797297297297297,
+        0.9423076923076923,
+        0.9659863945578231
+      ],
+      "median_paired_cpu_ratio": 0.9659863945578231,
+      "ratio_of_independent_cpu_medians": 0.9797297297297297,
+      "medians": {
+        "all": {
+          "before": {
+            "wall_us": 2343231,
+            "thread_cpu_us": 2312500
+          },
+          "after": {
+            "wall_us": 2315816,
+            "thread_cpu_us": 2265625
+          }
+        },
+        "common_success": {
+          "before": {
+            "wall_us": 1567948,
+            "thread_cpu_us": 1562500
+          },
+          "after": {
+            "wall_us": 1506039,
+            "thread_cpu_us": 1453125
+          }
+        },
+        "common_failure": {
+          "before": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          },
+          "after": {
+            "wall_us": 0,
+            "thread_cpu_us": 0
+          }
+        },
+        "recovered": {
+          "before": {
+            "wall_us": 775283,
+            "thread_cpu_us": 765625
+          },
+          "after": {
+            "wall_us": 803664,
+            "thread_cpu_us": 812500
+          }
+        }
+      }
+    }
+  },
+  "evidence": {
+    "projects/27-aicore-streams/reports/paired-hard-batch44-1-before.json": "e435bc59492ead13cc0f894cb233cff071ec70b29907e0793c0ffbce1b4d3793",
+    "projects/27-aicore-streams/reports/paired-hard-batch44-1-after.json": "dd8aa6a641e734b31ac55a7150deb5388242eb1de982556037421810b2cf8c49",
+    "projects/27-aicore-streams/reports/paired-hard-batch44-2-before.json": "c9b0cf2eebaa4a290ae0372208a6c9f43930325e6b2a2d4f67cd084aecd32097",
+    "projects/27-aicore-streams/reports/paired-hard-batch44-2-after.json": "8bf281e588d61d53676af4dfb6243f6a28c5d1a398c8da85fb91a466c692bebe",
+    "projects/27-aicore-streams/reports/paired-hard-batch44-3-before.json": "cb4e25939c003dabe214ec4c34373a584cd7d17ae9ce5e30ed4355080b9585c4",
+    "projects/27-aicore-streams/reports/paired-hard-batch44-3-after.json": "49657f52bc395a312b55e135fbdc6823a8db5915a7bc54d316ac4647d04630ca",
+    "projects/27-aicore-streams/reports/paired-heldout-batch44-1-before.json": "7b5f430f82bcd137d98b6228cc59d036f5f7eb5c5a8301e8a9fe463643e2b8cc",
+    "projects/27-aicore-streams/reports/paired-heldout-batch44-1-after.json": "57ed78597c7c3f93e28419bc0292cec4f3d38febb0f48071ed0541bd73ac2c66",
+    "projects/27-aicore-streams/reports/paired-heldout-batch44-2-before.json": "8d566c6a3305c51044bd2c608ec3b7defb408386661f7272805cfabb8fd0357e",
+    "projects/27-aicore-streams/reports/paired-heldout-batch44-2-after.json": "c5116a90f3d1019f7e532f15544fdfcb9ba2bfa3d7dc356cba648699b55522f4",
+    "projects/27-aicore-streams/reports/paired-heldout-batch44-3-before.json": "51d624269ab310efbbe80fda5e8191096f14821a279bd91eb46e33235ddd1098",
+    "projects/27-aicore-streams/reports/paired-heldout-batch44-3-after.json": "eab42591880a7a91887c12545934ac2904df550b7f4c22ec6534b6543de60c48"
+  },
+  "interpretation": "Quality improvement with cost: all202 pairs consume moreCPU, median within-pair+9.19percent, separate-side median+4.49percent.72 pairs use slightly lessCPU but this does not generalize to202. Common failures, common successes and recoveries all separately included; source flags same Release; working-set measurements include full harness and witnesses. No global speed or RAM reduction claim."
+}

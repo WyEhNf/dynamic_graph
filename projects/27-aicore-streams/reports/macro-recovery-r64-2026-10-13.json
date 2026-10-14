@@ -1,0 +1,148 @@
+{
+  "status": "promoted_and_verified",
+  "candidate": "R64",
+  "timestamp": "2026-10-13T13:36:07.608596+08:00",
+  "default_source": "F:\\Hackathon\\projects\\27-aicore-streams\\solution\\solution.cpp",
+  "default_exe": "F:\\Hackathon\\projects\\27-aicore-streams\\build\\aicore_bench.exe",
+  "change": "Original-DAG workspace-completion beam; original direct users and BEGIN lifetime replay; in-place reversible candidates; full done-set dedup; bounded retained-state heap; failed-legacy-only fallback.",
+  "hard202": {
+    "before": 145,
+    "after": 161,
+    "remaining": 41
+  },
+  "retention48": {
+    "before": 42,
+    "after": 48,
+    "remaining": 0
+  },
+  "previous_unresolved": 63,
+  "recovered": 22,
+  "remaining": 41,
+  "regression_records": 1099,
+  "regression_exact_plans": true,
+  "old202_plus48_success_plans_identical": 187,
+  "ctest": {
+    "passed": 15,
+    "total": 15
+  },
+  "controls": {
+    "small_bigint_subset_dp": 420,
+    "candidate_returned": 17,
+    "no_small_graph_completeness_claim": true,
+    "work_limits": 10,
+    "disabled_legacy_replay_records": 48
+  },
+  "budget": {
+    "default": 160000000,
+    "primary": {
+      "width": 32,
+      "work": 128000000,
+      "rank": "live,peak,area",
+      "max_nodes": 4096
+    },
+    "fallbacks": [
+      {
+        "width": 32,
+        "work": 16000000,
+        "rank": "peak,live,area",
+        "max_nodes": 512
+      },
+      {
+        "width": 32,
+        "work": 16000000,
+        "rank": "area,live,peak",
+        "max_nodes": 512
+      }
+    ],
+    "cmake_or_preprocessor_option": "AICORE_MACRO_RECOVERY_WORK_LIMIT",
+    "zero_disables": true,
+    "meaning": "logical search work, not milliseconds or proof of global infeasibility"
+  },
+  "all_failure_costs_included": true,
+  "cost_measurement": {
+    "scope": "one shared-load functional before/after comparison, both GCC O2; no stable speed claim",
+    "hard202": {
+      "before": {
+        "cpu_us": 33406250,
+        "wall_us": 34562160,
+        "max_wall_us": 1194013,
+        "passed": 145,
+        "failed": 57,
+        "old_failed_cpu_us": 23500000,
+        "old_failed_wall_us": 24338384
+      },
+      "after": {
+        "cpu_us": 49125000,
+        "wall_us": 53253538,
+        "max_wall_us": 2256655,
+        "passed": 161,
+        "failed": 41,
+        "old_failed_cpu_us": 38828125,
+        "old_failed_wall_us": 42252159
+      }
+    },
+    "retention48": {
+      "before": {
+        "cpu_us": 2593750,
+        "wall_us": 3177206,
+        "max_wall_us": 509258,
+        "passed": 42,
+        "failed": 6,
+        "old_failed_cpu_us": 859375,
+        "old_failed_wall_us": 1131372
+      },
+      "after": {
+        "cpu_us": 2390625,
+        "wall_us": 2404319,
+        "max_wall_us": 337741,
+        "passed": 48,
+        "failed": 0,
+        "old_failed_cpu_us": 953125,
+        "old_failed_wall_us": 926651
+      }
+    },
+    "helper63_cpu_us": 14015625,
+    "helper63_wall_us": 14960413,
+    "helper63_max_wall_us": 1442428
+  },
+  "build": {
+    "compiler": "MinGW GCC 15.2.0",
+    "standard": "C++17",
+    "default": "CMake Release -O3 -DNDEBUG; standalone standard library implementation",
+    "comparison": "both -O2"
+  },
+  "limits": [
+    "41 known-feasible records still unresolved",
+    "beam width and fixed greedy closure execution are heuristic",
+    "all benchmark sets are development data; no official hidden score claim"
+  ],
+  "sha256": {
+    "F:\\Hackathon\\projects\\27-aicore-streams\\solution\\solution.cpp": "0a9a966702af315da4851d4b47ad469471ab0b3016e7790e0664f9eeaa3935f5",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\build\\aicore_bench.exe": "0ada48f9db5a3720bdb5f6ac11afaf3d39694704743b2610f5650781a166d5af",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\CMakeLists.txt": "b7fd4f3a801a237119578004501f4a339c124e99bea972804a870b2efd78391e",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\tests\\test_macro_recovery_budget.cpp": "71dc69c7913663097fc8610ce912d5acf6cf0f27e93d532cbb98ebb9bb2ddf9d",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\research\\batch52\\remaining63-input-only.json": "0c87cf2a12f4bce73394672af747aa76fb69033f550907996e1f336489a7ed44",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\data\\hard-corpus-resumed.json": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\data\\projection-retention-heldout-batch45.json": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r63\\api\\report.json": "0289d57e0b2a36ac72cd5cb7076cf0fad8bda1c9dface2a02d7335baa9ba2ed3",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\default-api\\report.json": "87038fba3a5ac393c1a92906c775f7719b823811da7a22715d0b9cfb74df2571",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\default-api\\hard202.json": "60a2baa96ee05b5c26e1110084a403e8393bc89b74dd7840f1384afa10c2d685",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\default-api\\held48.json": "93a15cabbed2bd819906ec8f8fff07d59869353de490f7f6a24603803aad2c39",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\default-api\\hard202-failures.json": "6d84d8c5fecf188689599794736b038836a375ea157c8dc0e4814d8f337e23f8",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\default-api\\held48-failures.json": "c974de65dc23c5fe988b0862e71d74aeb472e51e611b15959b958d6a797f5c39",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\regression\\report.json": "5aaa1a3d89266be6143c747f1700720803f07c4d730c58772c020d85bb874e2b",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\ctest-final15.json": "eb1c9a60f7c637bdcf57f11096a9830029dd6a25f007d42708bb8dec266c9a7c",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\ctest-final15.log": "4d1c05239ee76bab0f259559e124435f743a7ca2474d0e123cbb7e4ffec6c97e",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\validation-receipt.json": "ac98b1541a571fa0c297e9e0c750ac3a9ee9dd66e05727662ed8cbb817351e23",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\budget.log": "1e9cad77832bc035522686df4b25ff97ac0f8f7c5840b8418e6a7882d027700d",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\recovery-disabled-report.json": "cb9f28378ac2aae66ce032ccbd11bc61298dfc35c09192be4be9038d2ae0baab",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\recovery-disabled-held48.json": "4775cd52f95e473d8a8b5c7cec8c70f68009754d2567f1714eead1b9f42761c1",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r63\\bigint-audit.json": "408611231249c6cfc747a9273ee524f45cfb294a298ad0cf42ecd8768cd30220",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r63\\remaining63-helper.json": "726077e8433cf56e80bbeae37721b6974725b6dbbe1cb4bac83f069d2effb46c",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r63\\controls\\controls-report.json": "32b9d22ea29c649680e78b93584fae7c18bd79b55a3aced2d1b8d4818f7917ef",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\promotion.json": "6096e8462424b508c58131e0c820efc512f700055a14299ad5e0d85f22acc8a8",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\previous-default\\solution.cpp": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+    "G:\\Hackathon-stage2-artifacts\\project27\\20261013\\r64\\previous-default\\aicore_bench.exe": "c491f69d9ac2b39fa336afc5ef17b300bbdf84ab9021a482b3d404f91191b607",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\finalize_macro_recovery.py": "0d2db2533f85f699e1e16edf554ca8ada8bde93ffe7856669e5adf1dbcaafe59"
+  }
+}

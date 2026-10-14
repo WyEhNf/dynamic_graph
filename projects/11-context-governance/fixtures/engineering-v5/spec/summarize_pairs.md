@@ -1,0 +1,2 @@
+Implement summarize_pairs(pairs). Each pair contains a string key and an integer amount. Normalize every key using normalize_key from helpers.py, then sum amounts for each normalized key in a dictionary. Keep keys in first-seen normalized order. Empty input returns {}. Do not modify pairs. Preserve the existing RELEASE_TAG constant and compatibility(value) function unchanged. Return only the complete target file.
+Target file: solution.py. Return its complete content. Existing dependencies must stay available.

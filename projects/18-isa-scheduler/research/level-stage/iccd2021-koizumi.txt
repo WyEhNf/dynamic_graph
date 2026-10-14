@@ -1,0 +1,728 @@
+Compiling and Optimizing Real-world Programs for
+               STRAIGHT ISA
+               Toru Koizumi, Shu Sugita, Ryota Shioya, Junichiro Kadomoto, Hidetsugu Irie, Shuichi Sakai
+                   Graduate School of Information Science and Technology, The University of Tokyo Tokyo, Japan
+                    Email: {koizumi, sugita, kadomoto, irie, sakai}@mtl.t.u-tokyo.ac.jp, shioya@ci.i.u-tokyo.ac.jp
+
+
+   Abstract—The renaming unit of a superscalar processor is a                        and refers to operands, not by register number, but by distance
+very expensive module. It consumes large amounts of power                            between instructions. Because of this new register architecture,
+and limits the front-end bandwidth. To overcome this problem,                        STRAIGHT has no false dependencies and does not require
+an instruction set architecture called STRAIGHT has been
+proposed. Owing to its unique manner of referencing operands,                        register renaming [7]. As a result, the renaming logic itself
+STRAIGHT does not cause false dependencies and allows out-of-                        can be omitted in the STRAIGHT processor; this removes the
+order execution without register renaming. However, the compiler                     front-end bottleneck and improves the scalability of the reorder
+optimization techniques for STRAIGHT are still immature, and                         buffer (ROB).
+we found that the naive code generators currently available can
+generate inefﬁcient code with additional instructions. In this
+                                                                                        In STRAIGHT, compiler optimization techniques are still
+paper, we propose two novel compiler optimization techniques                         immature, and we have found that the naive code generators
+and a novel calling convention for STRAIGHT to reduce the                            currently available can produce inefﬁcient code. In regular
+number of instructions. We compiled real-world programs with                         ISAs, optimization is traditionally well studied, and opti-
+a compiler that implemented these techniques and measured                            mization techniques such as code generation and register
+their performance through simulation. The evaluation results
+show that the proposed methods reduced the number of executed
+                                                                                     allocation are mature. However, the optimization techniques
+instructions by 15% and improved the performance by 17%.                             for STRAIGHT remain unexplored. This is due to the fol-
+   Index Terms—instruction-level parallelism, optimizing com-                        lowing two reasons: 1. STRAIGHT refers to operands by
+piler, callee-saved registers                                                        inter-instruction distance, so existing optimization techniques
+                                                                                     for register allocation cannot be applied. 2. STRAIGHT has
+                            I. I NTRODUCTION                                         inherent constraints, owing to its distance referencing. In
+                                                                                     existing research, the authors have manually optimized small
+   As Amdahl’s law suggests, the single-thread performance
+                                                                                     benchmarks, such as Dhrystone, to achieve performance com-
+of a core for executing sequential portions of a program
+                                                                                     parable to the RISC-V ISA [7]. However, the properties of
+is essential, even in the age of multi/many-core processors.
+                                                                                     STRAIGHT for larger real-world programs are not clear. We
+The current mainstream strategy for improving single-thread
+                                                                                     implemented a STRAIGHT toolchain to compile real-world
+performance is to extract more instruction-level parallelism by
+                                                                                     programs, evaluated the SPEC CPU benchmarks, and found
+increasing the processing width of a core and the size of the
+                                                                                     that the existing compiler can signiﬁcantly increase the number
+scheduling window [1]–[3]. As a result, even cores in mobile
+                                                                                     of instructions generated.
+devices, such as the ARM Cortex A77, can execute more than
+ten instructions in a single cycle [4].                                                 In this paper, we propose three new compiler optimization
+                                                                                     techniques for STRAIGHT. The ﬁrst reduces the number of
+   However, an increase in the processing width of a core can
+                                                                                     instructions generated by reordering the instructions, while
+lead to a superlinear increase in the circuit area, resulting
+                                                                                     satisfying the inherent constraints of STRAIGHT. This op-
+in a signiﬁcant increase in power consumption. One of the
+                                                                                     timization corresponds to register-allocation optimization in
+units that causes such an increase is the renaming unit in
+                                                                                     general instruction sets. The second is called aggressive spill;
+the front-end of the core. The renaming unit renames register
+                                                                                     it improves performance by deliberately spilling out values,
+numbers using a table called a register map table (RMT)1
+                                                                                     even when sufﬁcient registers are available2 . The third is a
+to remove false dependencies between instructions. The RMT
+                                                                                     novel function-calling convention that implements callee-saved
+mainly consists of a multiport memory, with the number of
+                                                                                     registers (CSRs) in STRAIGHT. The method of implementing
+ports proportional to the processing width. The circuit area
+                                                                                     callee-saved registers in STRAIGHT has not been clear;
+rapidly increases as the processing width of the renaming unit
+                                                                                     however, we propose a method to implement it in this paper.
+increases [5], [6].
+   To overcome this problem, an instruction set architecture                            We implemented these optimization techniques in a com-
+(ISA) called STRAIGHT has been proposed [7]. STRAIGHT                                piler using the LLVM [9] compiler infrastructure and evaluated
+has a register ﬁle where registers are sequentially allocated                        its performance using a simulator. We compiled the programs
+                                                                                     contained in the SPEC CPU 2006/2017 benchmark suites and
+  This work was partially supported by JSPS KAKENHI Grant Numbers
+JP19H04077, JP20H04153, JP20J22752.                                                   2 This is an extended version of our content presented at a workshop [8].
+  1 It is also known as a register alias table or register allocation table (RAT).   We extended the proposed method and increased the number of evaluations.
+used them in our evaluation. The evaluation results showed that       (a) Source code                 (b2) Control-flow graph (CFG)
+the optimization techniques reduced the number of executed
+instructions by 15% and improved the performance by 17%                int fill(int* arr) {
+                                                                         int val = 42;                 addi $zero,42          st   [4],[6],0
+on average.                                                              int N = 100;                  addi $zero,100         addi [7],4
+                                                                         int i = 0;                    addi $zero,0           addi [9],1
+                                                                         for(; i < N; ++i) {           mv   [1]               mv   [1]
+     II. E XISTING BASIC COMPILER ALGORITHMS FOR                           arr[i] = val;               mv   [6]               mv   [3]
+                                                                         }                             mv   [4]
+                                                                                                                 Fixed        mv   [10]
+                       STRAIGHT                                          return 0;                     mv   [6] region        mv   [10]
+                                                                       }                               mv   [8]               mv   [10]
+A. STRAIGHT instruction set architecture                                                               nop                    j
+
+   STRAIGHT is an ISA that uses inter-instruction distances           (b1) STRAIGHT assembly
+rather than register names to specify the source operands. In                                                      blt   [6], [4]
+                                                                       Function_fill
+STRAIGHT, the source operand is speciﬁed in the form, “use               addi $zero, 42
+the result of the nth -previous instruction.” In the assembly            addi $zero, 100
+                                                                         addi $zero, 0                             addi $zero, 0
+representation, square brackets are used to indicate this. For           mv   [1] # i                              ret [4]
+example, when referencing the result of an instruction exe-              mv   [6] # &arr[i]
+cuted two instructions previously, [2] is used as the operand.           mv   [4] # N                 (c) CFG of optimized code
+                                                                         mv   [6] # val
+Each instruction implicitly reserves one destination register            mv   [8] # _RetAddr
+and uses it in a write-once manner. Owing to the instruction-            nop                                                  st   [5],[7],0
+                                                                       L_for:                                                 addi [8],4
+length limitation, there is a maximum value deﬁned in the                blt [6], [4], L_end                                  mv   [8]
+ISA for the distance that can be used to specify the source              st   [4], [6], 0              addi $zero,42          mv   [8]
+                                                                         addi [7], 4                   addi $zero,100         mv   [8]
+operand. Therefore, the results of old instructions become               addi [9], 1                   addi $zero,0           addi [8],1
+unreferenceable after a certain number of instructions have              mv   [1] # i                  nop                    j
+been executed. Taking advantage of this feature, we can use a            mv   [3] # &arr[i]
+                                                                         mv   [10] # N
+ring buffer for the register ﬁle. The destination registers can be       mv   [10] # val                           blt   [2], [3]
+allocated in order from the ring buffer. Even so, it is guaranteed       mv   [10] # _RetAddr
+                                                                         j    L_for
+that only registers that are out of life will be overwritten.          L_end:
+Register renaming is no longer necessary because there are               addi $zero, 0                             addi $zero, 0
+no false dependencies [7].                                               ret [4]                                   ret [7]
+   STRAIGHT uses a calling convention that uses relative
+distances from branch instructions used for function calls           Fig. 1. Example of building a ﬁxed region: The live variables are transferred
+                                                                     in a common order to the area indicated in yellow at the end of the basic
+and returns (such as the jal (jump and link) and ret                 block (called the ﬁxed region).
+(return) instructions). Expressly, the instructions that generate
+the argument values are placed so that the instruction im-
+mediately before the function call instruction generates the
+ﬁrst argument, and the instruction two previous generates the        that depends on the execution path3 . In RISC, this problem
+second argument, and so forth. In addition, the instruction          is solved by using the same register in all execution paths,
+to generate the return value is placed so that the instruction       while in STRAIGHT, the problem is solved by matching
+immediately before the return instruction generates the return       the distances for all execution paths. The following is an
+value.                                                               algorithm for generating STRAIGHT code from a static single-
+                                                                     assignment format.
+B. STRAIGHT-speciﬁc code generation                                     1) Enumerate values that are live at a merging point and
+                                                                           add a phi function for each live variable.
+   In the following, we explain the “distance ﬁxing” algorithm
+                                                                        2) For each value referenced by the phi function, add a
+[7], which is speciﬁc to the STRAIGHT compiler; that is, the
+                                                                           mv (move or register-transfer) instruction just before the
+parts where conventional RISC compiler algorithms cannot be
+                                                                           merging point. By doing this, the referenced value is
+applied. Conventional algorithms can be used for conversion
+                                                                           generated at the same relative position in each path.
+from high-level programming languages to the compiler’s in-
+termediate representation, and for optimization in static single-    When instructions are added using this algorithm, the ﬁnal
+assignment (SSA) form [10], [11].                                    instruction sequence is as shown in Fig. 1 (b).
+   When generating STRAIGHT code, the RISC code-
+generation algorithm can be applied to most parts; however, a
+different algorithm is required for register allocation. This is        3 In RISC, this corresponds to the case of creating a phi function in a static
+
+because STRAIGHT, unlike RISC, is an instruction set whose           single-assignment format, whereas in STRAIGHT, it includes the case where
+                                                                     an instruction after a merging point refers to the result of an instruction before
+instruction speciﬁes operands by distance. A new algorithm           branching. This is because the distance between instructions generally differs
+is needed for code generation when selecting an operand              when the execution paths differ.
+III. O PTIMIZING COMPILER TECHNIQUES FOR STRAIGHT                    (a) SSA form                         (b) After adding mv instruction
+   In the following, we explain three proposals that con-
+                                                                                    (1) = phi (a), (3)                   (1) = phi (a), (3)
+tribute to performance. The ﬁrst is an algorithm to reduce                          (3 instructions)                     (3 instructions)
+the redundant instructions added during “distance ﬁxing,” as                              j    L_join1                         j    L_join1
+
+described in Section II-B, by reordering the instruction order.        (2) = phi (b), (1)                    (2) = phi (b), (1)
+The second is an optimization that reduces the number of               (3 instructions)                      (3 instructions)
+                                                                             j    L_join2                          j    L_join2
+executed instructions by aggressively spilling out some live
+values, even if there are enough registers. The third is a                          (3) = phi (2), (c)                   (3) = phi (2), (c)
+proposal for a calling convention that introduces callee-saved                      (3 instructions)                     (3 instructions)
+                                                                                          j    L_join3                         mv   [13]
+registers.                                                                                                                     j    L_join3
+
+A. Distance adjustment to remove redundant instructions
+   1) Overview: Existing basic compiler algorithms add re-
+dundant mv instructions in many cases. For example, in
+Fig. 1 (b), the operands referenced by the blt (branch less         Fig. 2. Adding mv instructions to hold loop constants. The location of the
+than) instruction are placed four and six instructions before,      mv instruction corresponds to the solution of the feedback edge set problem.
+regardless of the execution path, by being relayed via the mv
+instruction. The existing algorithm guarantees the compila-
+tion of arbitrary programs by creating a ﬁxed region, which         First, we add mv instructions that refer to a phi function
+contains mv instructions to relay the values just before the        corresponding to the destination of the feedback edge to the
+merging point. However, we found that this method generated         basic block where the phi function is located. Then, we change
+many redundant mv instructions. For example, mv instructions        the reference of the phi function corresponding to the source
+can be removed by reordering the instructions so that the           of the feedback edge to the added mv instruction.
+instructions after merging can directly reference the operands         In terms of implementation, the graph to be constructed is
+before merging, as shown in Fig. 1 (c).                             a directed multigraph with vertices corresponding to the basic
+   We ﬁnd that the addition of the mv instruction is inevitable     block. This modiﬁcation is needed because Step 1 also serves
+in the following two situations:                                    as a pre-processing step for Step 2. To construct this graph,
+   1) When holding a loop constant. In this case, at least one      we add a directed edge from A to B, for each phi function in
+      mv instruction per loop constant is required in the loop to   basic block A that references a phi function in basic block B.
+      refer to it by a static distance, regardless of the number       After adding the mv instructions, the graph of the reference
+      of times to loop.                                             relationship of the phi function becomes a directed acyclic
+   2) When the instruction order cannot be reordered because        graph (DAG). Every DAG has at least one topological order-
+      of restrictions on the execution order, such as a true        ing. The following Step 2 is performed for each corresponding
+      dependency. In this case, some mv instructions are            basic block in its topological order.
+      required because it is impossible to refer to the values         3) Step 2: Add mv instructions to eliminate dependency
+      directly without building a ﬁxed region.                      inversions: The values referenced after the merging point must
+The algorithm to ﬁnd the appropriate positions to add such mv       be placed at the same relative distance regardless of the execu-
+instructions consists of the following two steps. Step 1 involves   tion path. However, it is difﬁcult to solve this problem directly.
+adding mv instructions to hold the loop constants and pre-          Thus, we solve the relaxed problem of placing values in the
+processing for Step 2. Step 2 involves adding mv instructions       same order regardless of the execution path. If we solve this
+to reorder the instruction order.                                   problem, it is straightforward to satisfy the original constraints
+   2) Step 1: Add mv instructions to hold loop constants:           by adding nop (no operation) instructions as appropriate.
+To refer to a loop constant by a static distance, regardless of        In many cases, the constraint, “the values are generated in
+the number of times the loop is performed, at least one mv          the same order in all execution paths,” can be satisﬁed by
+instruction is required in the loop. When adding phi functions,     swapping instructions. This is not possible when the order
+as described in Section II-B, phi functions that deﬁne the same     of instructions has constraints owing to a dependency, and
+loop constant refer to each other and form a loop (Fig. 2 (a)).     the order constraints in multiple execution paths contradict
+This reference-relationship loop can be eliminated by adding        each other. In such a case, adding the mv instructions needs
+one mv instruction at any point in the loop (Fig. 2 (b)). In        to remove the dependency.
+other words, this type of loop can be eliminated by adding mv          Whether this constraint is inconsistent can be solved by
+instructions at the position corresponding to the feedback edge     detecting a cycle in the directed graph with the dependencies
+set problem. The graph that we should consider has vertices         as edges. By solving the feedback edge set problem of the
+corresponding to phi functions and edges corresponding to           directed graph, it is possible to derive where to add the mv
+reference relations.                                                instruction. However, the addition of a single mv instruc-
+   We provide a detailed implementation of this method. We          tion may solve multiple constraints simultaneously. Therefore,
+perform the following procedure for each feedback edge.             minimizing the number of mv instructions to be added may
+ (a) SSA form                                      (b) One solution: add one mv instruction            (c) Another solution: add two mv instructions
+                                                                                                                                    ...
+                                                      ...                                                                           (4) = ld [9], 0
+  ...                        ...                      (1) = ld   [9], 0         ...                       ...                       (5) = ld [9], 0
+  (1) = ld   [9], 0          (4) = ld [9], 0          (3) = addi [1], 3         (4) = ld [9], 0           (1) = ld   [9], 0         (6) = add [1], [2]
+  (2) = addi [1], 2          (5) = ld [9], 0          (2) = addi [2], 2         (5) = ld [9], 0           (2) = addi [1], 2         (8) = mv [2]
+  (3) = addi [2], 3          (6) = add [1], [2]       (7) = mv   [3]            (6) = add [1], [2]        (3) = addi [2], 3         (9) = mv [4]
+        j    L_join                j   L_join               j    L_join               j   L_join                j    L_join               j   L_join
+
+
+                  phi (3), (4)                                       phi (3), (4)                                        phi (3), (9)
+                  phi (2), (5)                                       phi (2), (5)                                        phi (2), (8)
+                  phi (1), (6)                                       phi (7), (6)                                        phi (1), (6)
+                ...                                                ...                                                 ...
+
+
+
+
+                        three hyperedges
+
+
+Fig. 3. Adding mv instructions to eliminate dependency inversions. (a) Two execution paths have conﬂicting execution-order constraints. The hypergraph has
+three hyperedges, which form loops. (b) Adding one mv instruction resolves the constraints. This corresponds to the best solution of the feedback hyperedge
+set problem. (c) Adding two mv instructions also resolves the constraints. This corresponds to another solution of the feedback hyperedge set problem.
+
+
+
+not correspond to the best solution to the feedback edge                       B. Aggressive spilling
+set problem. The problem to be solved for minimizing it
+                                                                                  In STRAIGHT, the mv instruction is executed once per loop
+corresponds to the feedback hyperedge set problem of a
+                                                                               to hold a loop constant and it is needed for each loop constant.
+hypergraph.
+                                                                               This is because the distance needs to be the same, regardless
+                                                                               of the number of times the loop is performed. The distance
+   The method of constructing the hypergraph with vertices
+                                                                               adjustment optimization cannot eliminate this problem.
+corresponding to the phi functions is as follows. First, for
+                                                                                  Even if the variable is a loop constant that is not referenced
+each execution-order constraint, a directed edge is created. The
+                                                                               in the loop (hereinafter referred to as a non-referenced loop
+edge’s destination corresponds to a phi function that references
+                                                                               constant), it still needs to be relayed by executing a mv
+the instruction’s result to be executed ﬁrst in a path. The source
+                                                                               instruction. We found that when there is a reference across
+of the edge corresponds to a phi function that references the
+                                                                               the loop, the referenced variable act as a non-referenced
+instruction’s result to be executed later in the path. Then, the
+                                                                               loop constant; the generated code requires many dynamic
+directed edges with the same destination for each execution
+                                                                               instructions to relay it.
+path are grouped and converted into a directed hyperedge of
+                                                                                  We propose an optimization method that reduces the number
+the following form, e.g., {src : v1 , v2 , v3 ; dst : v4 } (Fig. 3).
+                                                                               of instructions to be executed by spilling out these variables.
+A hyperedge in this hypergraph represents a constraint that is
+                                                                               We call this optimization “aggressive spill” because it spills
+solved by adding a mv instruction.
+                                                                               out, even if the number of logical registers is sufﬁcient.
+                                                                               Although this slightly increases the number of load/store
+   The location in which to add the mv instructions is derived
+                                                                               instructions, it is worth doing because reducing the number
+from the solution of the feedback hyperedge set problem.
+                                                                               of executed mv instructions has signiﬁcant effect, if the loop
+Where the mv instructions should be added corresponds to the
+                                                                               is executed in sufﬁciently large numbers.
+feedback hyperedges (Fig. 3). We need to add a mv instruction
+whose source operand is the result of the instruction referenced                  The procedure for spill-code insertion by this optimization
+by the phi function corresponding to the destination of a                      can be treated in a uniﬁed manner with the procedure for spill-
+hyperedge. Then, we should change the reference of the phi                     code insertion when there is a reference across function calls.
+function to the result of the added mv instruction.                            The details are given in Appendix.
+
+                                                                               C. STRAIGHT calling conventions with callee-saved registers
+   After adding the mv instructions, the hypergraph of the
+execution-order constraints becomes a directed acyclic hyper-                     The existing calling conventions of STRAIGHT lack callee-
+graph. Because this graph has no cycles, we can calculate a                    saved registers, and the lack of callee-saved registers increases
+topological ordering. Then, the execution order of each instruc-               the number of load/store instructions. Because the number of
+tion that generates a result that references the phi function can              instructions in a function is generally unknown, references
+be reordered to be in that topological order. After reordering                 across function calls cannot specify their operands by distance.
+the instructions, we appropriately insert nop instructions,                    STRAIGHT does not have named registers because of the
+starting from the end of the basic block. Instructions at the                  characteristics of the instruction set, so it is impossible to set
+same relative distance will generate results referenced to the                 registers as callee-saved. For this reason, the existing calling
+phi function in all execution paths.                                           convention deﬁnes all registers as caller-saved [7]. This causes
+ (a) Source code                      (c) Proposed calling conventions           techniques to select values for callee-saving. However, in
+                                          (# of CSRs is 3)                       STRAIGHT, the number of instructions for placing arguments
+                                                                                 in the caller and relaying values in the callee increases
+   int f(int x) {                       Function_f
+     return x + 42;                       add [5], 42
+                                                                                 by setting the callee-saved register. Therefore, to obtain the
+   }                                      mv   [5] # CSR2 relay                  full effect of callee-saving, it is necessary to avoid adding
+   int g(int val) {                       mv   [5] # CSR1 relay                  redundant instructions. In particular, variables that are subject
+     ...                                  mv   [5] # CSR0 relay
+     int i = 0;                           ret [5]                                to aggressive spill optimization should not be subject to callee-
+     int prod = 1;                      Function_g                               saving.
+     for(; i < 100; ++i) {                ...
+       prod *= f(i);                      addi $zero, 0 # i
+     }                                    addi $zero, 1 # prod
+                                                                                                        IV. E VALUATION
+     ...                                  nop                                    A. Methodology
+   }                                    L_for:
+                                          addi $zero, 100                           The evaluation was performed by measuring the number of
+                                          blt [4], [1], L_end
+ (b) Existing calling                     mv   [5] # arg0 = i
+                                                                                 cycles required to execute the benchmark programs through
+     conventions                          nop      # CSR2                        simulations. The benchmark programs used for the evaluation
+                                          mv   [7] # CSR1 = i                    were 401.bzip2, 605.mcf s, 619.lbm s, 657.xz s, and Core-
+   Function_f                             mv   [7] # CSR0 = prod
+     add [2], 42                          jal Function_f                         Mark [12]. The ﬁrst four are benchmark programs from real-
+     ret [2]                              mv   [3]
+   Function_g
+                                                                                 world programs in SPEC CPU 2006 [13] and SPEC CPU
+                                          mul [3], [5]
+     ...                                  j    L_for                             2017 [14] benchmark suites, all written in C. CoreMark is
+     addi $zero, 0 # i                  L_end:                                   a synthetic benchmark and not a real-world program; however
+     addi $zero, 1 # prod                 ...
+     nop                                                                         it was used for comparison with the previous study [7].
+   L_for:                                                                           The benchmark programs were compiled using our optimiz-
+     addi $zero, 100
+     blt [4], [1], L_end                                                         ing STRAIGHT compiler. The base STRAIGHT compiler was
+     stsp [5], 4 # i                                                             acquired from the author of an existing study and was based
+     stsp [5], 8 # prod
+     mv   [7]    # arg0 = i
+                                                                                 on version 7 of LLVM [9]. We implemented the proposed
+     jal Function_f                                                              optimizations on it.
+     ldsp 8      # prod                                                             For the C library, we used musl libc [15], a lightweight libc
+     ldsp 4      # i
+     mul [2], [4]                                                                implementation. This was because the base STRAIGHT com-
+     j    L_for                                                                  piler was for bare metal and could not compile programs that
+   L_end:
+     ...                                                                         required the C library. We ported musl libc for STRAIGHT.
+                                                                                 The changes we made for porting are described below.
+Fig. 4. Calling conventions in existing research [7] and proposed calling
+                                                                                    In addition, RISC-V [19] was chosen as the existing archi-
+conventions. CSR refers to callee-saved registers. In the proposed calling       tecture for comparison. The optimizing compiler for RISC-V
+conventions, we add arguments for the CSRs after the ﬁrst argument of the        was llc static compiler included in version 9 of LLVM.
+function and add return values for relaying the CSRs after the return value of
+the function.
+                                                                                 This is the closest to the LLVM version of the compiler for
+                                                                                 STRAIGHT that can correctly compile RISC-V. To make the
+                                                                                 comparison fair, we used musl with the above changes to
+large numbers of memory accesses when calling small leaf                         compile the RISC-V binaries.
+functions, which leads to performance degradation.                                  A cycle-accurate simulator, Onikiri2 [20], was used for
+   To address this problem, we propose a convention for intro-                   the simulation. First, we conﬁrmed that the overall program
+ducing callee-saved registers in STRAIGHT. This convention                       behavior was correct by using a userland-only instruction-
+uses the relative position to the branch instruction, similar to                 set simulator. To compare the performance of the different
+the existing calling conventions described in Section II-A. It                   binaries, the performance was measured using the same region.
+uses the relative distance from the branch instruction to specify                The regions were speciﬁed in the form of the number of
+the callee-saved registers. Hence, callee-saved registers can be                 times line A was executed to the number of times line B was
+dealt with in the same manner as arguments and return values                     executed. Because it would be too time-consuming to simulate
+by adding extra arguments and return values to the function.                     all the benchmark programs, we selected a region around the
+   Fig. 4 shows how the code changes, as a result of a change                    function with the most instructions to be executed in RISC-V
+in conventions. In this convention, the caller passes the values                 for each benchmark. The details of the measurement sections
+to be preserved across calls as extra arguments. In the callee,                  and their characteristics are listed in Table I.
+mv instructions are executed to relay the values passed as extra                    Table II lists the parameters of the processors used in the
+arguments directly to the corresponding return values. This                      simulations. We prepared several parameters with different
+allows the caller to receive them as return values across calls.                 front-end widths and reorder-buffer (ROB) capacities, which
+Thus, it is possible to specify an operand across the function                   were considered to increase the scalability by STRAIGHT.
+call by a static distance while delaying the spill decision until                We referred to the Apple Firestorm core [21] to determine the
+the execution of the callee.                                                     number of execution units and cache parameters. The RISC-V
+   The STRAIGHT compiler can use conventional compiler                           model has a two-cycle-longer front-end latency owing to the
+                                                                      TABLE I
+                                                T HE MEASUREMENT SECTIONS AND THEIR CHARACTERISTICS
+
+  Benchmark           Measurement sections                                                       Characteristics
+  CoreMark            10 iterations                                                              Synthetic benchmark
+  401.bzip2           From the 1st execution of the mainGtU to its 100,000th execution           Burrows–Wheeler transform (string comparison and sort)
+  605.mcf_s           From the 1st execution of the primal_bea_mpp to its 5th execution          Thrashing access and quicksort
+  619.lbm_s           100,000 iterations of the loop in LBM_performStreamCollideTRT              Many long chains of ﬂoating-point number instructions
+  657.xz_s            From the 1st execution of the sha_compress to its 300th execution          Bit manipulations and loads/stores unfriendly to store set
+
+
+
+                            TABLE II                                           100%
+    T HE PARAMETERS OF THE PROCESSOR USED IN THE SIMULATION                     90%
+                                                                                80%
+                         6-fetch      8-fetch     12-fetch      16-fetch
+                                                                                70%
+  Front-end width            6             8           12            16
+                                                                                60%
+                              STRAIGHT: 5 cycles, RISC-V: 7 cycles
+  Front-end latency                                                             50%
+                               (fetch + decode + rename + dispatch)
+  Issue width                                     16                            40%
+  Issue latency                    4 cycles (issue + register read)             30%
+                                Int×8, Float×4, Load×3, Store×2,                20%
+  Execution unit
+                                      iMul×2, iDiv×1, fDiv×1                    10%
+  Reorder buffer            640          1024         2048          4096
+                                                                                 0%
+                                     STRAIGHT: Uniﬁed×127
+
+
+
+
+                                                                                               Both
+
+
+
+
+                                                                                               Both
+
+
+
+
+                                                                                               Both
+
+
+
+
+                                                                                               Both
+
+
+
+
+                                                                                               Both
+                                                                                         Agg. spill
+
+
+
+
+                                                                                         Agg. spill
+
+
+
+
+                                                                                         Agg. spill
+
+
+
+
+                                                                                         Agg. spill
+
+
+
+
+                                                                                         Agg. spill
+                                                                                            No opt.
+
+
+
+                                                                                       Both+CSR4
+                                                                                            No opt.
+
+
+
+                                                                                       Both+CSR4
+                                                                                            No opt.
+
+
+
+                                                                                       Both+CSR4
+                                                                                            No opt.
+
+
+
+                                                                                       Both+CSR4
+                                                                                            No opt.
+
+
+
+                                                                                       Both+CSR4
+                                                                                        Dist. adjust
+
+
+
+
+                                                                                        Dist. adjust
+
+
+
+
+                                                                                        Dist. adjust
+
+
+
+
+                                                                                        Dist. adjust
+
+
+
+
+                                                                                        Dist. adjust
+  Logical registers
+                                       RISC-V: Int×31, FP×32
+  Physical registers                     (Sufﬁcient amount)
+  Branch predictor        8-component TAGE [16], 130-bit history, 8 KiB
+  Branch target           Branch target buffer (BTB): 4-way, 8192 entries
+  predictors                  Return address stack (RAS): 16 entries                     coremark          bzip2          lbm_s        mcf_s         xz_s
+  Mem. dep. pred.          Store set [17], 9-bit producer ID, 4096 entries
+                                                                                      Branches     Load   Store    Move    Integers   FLOPs    NOP   Other
+  L1I cache                     128 KiB, 8-way, 64B line, 3 cycles
+  L1D cache                     128 KiB, 8-way, 64B line, 3 cycles
+                                8 MiB, 16-way, 64B line, 12 cycles             Fig. 5. Number of instructions for each instruction type. For each benchmark,
+  L2 cache                                                                     the values are normalized to those of the case without optimizations.
+                            Stream prefetcher [18], distance 8, degree 2
+  Main memory                                 80 cycles
+
+                                                                                     b) Avoiding problems with quadruple-precision ﬂoating-
+register renaming4 . Exception recovery was assumed to be                      point numbers: The implementation for RISC-V, which we
+instantaneous; this is a favorable setting for RISC-V, unlike                  used as a base for porting, assumed that the long double
+the existing study where took into account the time for ROB                    was a quadruple-precision ﬂoating-point number. This was a
+walking.                                                                       problem because the simulator we used could not simulate
+                                                                               quadruple-precision ﬂoating-point operations. To address this
+B. Porting musl for STRAIGHT                                                   problem, we rewrote the source code for the part where the
+   To compile real-world programs written in C, a C standard                   long double is represented so that it works, even if it is
+library is required. We chose musl libc as the C standard                      a double-precision ﬂoating-point number. In this modiﬁcation,
+library; it is lightweight and almost written in C. Based                      we referred to architectures where the long double is a
+on the 2c2477d commit hash, which was the latest at the                        double-precision ﬂoating-point number. In addition, we ex-
+time of development, we ported it to STRAIGHT from the                         cluded mathematical functions and complex functions for the
+implementation of the 64-bit version of RISC-V, which has                      long double from the compilation target. This modiﬁca-
+almost the same application binary interface (ABI). The main                   tion did not affect the results because the benchmarks used in
+changes made in the port are as follows:                                       this study did not contain any code that used long doubles.
+      a) Removing inline assembly instructions: Although
+most of musl is written in C, it contains some inline assem-                   C. Results
+bly instructions to perform atomic memory operations. Our                        1) Change in the number of instructions, owing to our
+STRAIGHT compiler does not support inline assembly, so we                      proposal: Fig. 5 shows the extent to which our proposed
+removed them and wrote the equivalent memory operations                        methods reduce the number of instructions executed. For each
+with the C language. Although it lost atomicity because of                     benchmark, the values were normalized to those of the case
+these modiﬁcations, it did not cause any problems because all                  without optimizations (using the basic compiler algorithm [7]
+the benchmarks we used were single-threaded programs.                          shown in Section II-B). Instructions that were discarded be-
+                                                                               cause of speculative execution were not included.
+   4 STRAIGHT has a shorter front-end pipeline because only a simple adder
+                                                                                 In all benchmarks, except for 619.lbm_s, our proposed
+is needed to obtain a physical register number of a source operand [7].
+The calculation is done in parallel with the other decoding processes; thus,   optimizations signiﬁcantly reduced the number of executions
+removing the dedicated rename stage does not extend the critical path.         of mv instructions and contributed to a reduction in the total
+40%
+35%
+30%
+25%
+20%
+15%
+10%
+ 5%
+ 0%
+      D A B C DA B C D A B C D A B C D A B C DA B C D A B C D A B C D A B C DA B C D A B C D A B C D A B C DA B C D A B C D A B C D A B C DA B C D A B C D A B C
+      6-fetch 8-fetch 12-fetch16-fetch   6-fetch 8-fetch 12-fetch16-fetch   6-fetch 8-fetch 12-fetch16-fetch   6-fetch 8-fetch 12-fetch16-fetch   6-fetch 8-fetch 12-fetch16-fetch
+                 coremark                            bzip2                              lbm_s                              mcf_s                               xz_s
+
+Fig. 6. Performance improvement owing to our proposal. ‘D’ corresponds to the distance-adjustment optimization, ‘A’ corresponds to the aggressive-spill
+optimization, ‘B’ corresponds to applying both optimizations, and ‘C’ corresponds to introducing four CSRs to ‘B’. For each benchmark, the case without
+optimization is used as the 0% baseline.
+
+
+
+number of executed instructions. There was almost no reduc-                                160%
+tion in the number of instructions executed in 619.lbm_s                                   140%
+because most of the executions are executing a single large                                120%
+loop (∼ 350 instructions). The loop contains few function calls                            100%
+or merging points, and the only non-referenced loop constant                                80%
+is the return address of the function containing this loop;                                 60%
+therefore, we almost cannot reduce the mv instructions.                                     40%
+   Although the aggressive-spill optimization increases the                                 20%
+number of load/store instructions, it reduces the number of                                  0%
+mv instructions by more than that, resulting in a signiﬁcant                                        RSRSRSRS RSRSRSRS RSRSRSRS RSRSRSRS RSRSRSRS
+reduction in the total number of instructions executed. On the                                      6f 8f 12f16f 6f 8f 12f16f 6f 8f 12f16f 6f 8f 12f16f 6f 8f 12f16f
+other hand, the distance-adjustment optimization reduces the
+                                                                                                     coremark           bzip2          lbm_s           mcf_s            xz_s
+number of mv instructions without increasing the number of
+other instructions. Furthermore, these two optimizations are                              Fig. 7. Performance compared to RISC-V’s 6-way. 6f, 8f, 12f, and
+independent of each other, as they reduce completely different                            16f respectively correspond to parameters 6-way, 8-way, 12-way, and
+mv instructions.                                                                          16-way. ‘R’ and ‘S’ correspond to RISC-V and STRAIGHT, respectively.
+   The introduction of callee-saved registers has essentially
+increased the number of instructions because it requires the
+mv instruction to copy the value to the location deﬁned by                                optimizations signiﬁcantly improved the performance. Almost
+the calling conventions. In 401.bzip2 and 605.mcf_s,                                      no performance improvement was observed for 619.lbm_s
+which call many leaf functions with a small number of                                     because our optimizations hardly reduce the number of in-
+execution instructions, the introduction of callee-saved reg-                             structions to be executed. Depending on the benchmark, either
+isters reduces the number of load/store instructions required                             the aggressive-spill optimization or the distance-adjustment
+for spilling, while the number of mv instructions increases.                              optimization may contribute signiﬁcantly to the performance.
+For 619.lbm_s and 657.xz_s, which have fewer leaf                                         The two optimizations are independent of each other, not only
+function calls, there is almost no change in the number of                                in their effect on instruction-count reduction, but also in their
+instructions. In CoreMark, where all the small functions are                              contribution to performance improvement.
+inline expanded, the number of instructions increased. This                                  The introduction of callee-saved registers improved the
+is because there are not enough live variables to pass as                                 performance of 401.bzip2 and 605.mcf_s, which call
+callee-saved registers, so the number of load/store instructions                          many leaf functions with a small number of instructions to
+increases unnecessarily. This phenomenon also occurs in con-                              execute. For 619.lbm_s and 657.xz_s, which call fewer
+ventional RISC architectures. Thus, the increase in the number                            leaf functions, there is little performance improvement. In
+of load/store instructions executed by setting the callee-saved                           CoreMark, where all the small functions are inline expanded,
+registers is not a problem unique to STRAIGHT.                                            the performance is even worse. Our preliminary evaluations
+   2) Performance improvement, owing to our proposal:                                     show that CoreMark performs poorly on conventional RISC
+Fig. 6 shows the extent to our proposed methods improve the                               architectures because of the setting of the callee-saved regis-
+performance. The performance is the inverse of the number of                              ters; therefore, the performance degradation due to the setting
+cycles required for execution. For each benchmark, the case                               of callee-saved registers is not unique to STRAIGHT.
+without optimization was used as the 0% baseline.                                            3) Compared to RISC: Fig. 7 compares the performance
+   In all benchmarks, except for 619.lbm_s, our proposed                                  of binaries compiled with our proposed optimizations and
+four callee-saved registers with the performance of binaries       ing callee-saved registers is similar to the approach in the
+compiled for RISC-V. The values are normalized to those of         continuation-passing style [26].
+RISC-V’s 6-fetch.
+   In CoreMark and 657.xz_s, the performance of                                          VI. C ONCLUSION
+STRAIGHT is higher than that of RISC-V. In these bench-               STRAIGHT is an instruction set architecture that uses
+marks, STRAIGHT has the advantage of a larger number of            inter-instructional distance to specify operands so that false
+logical registers and faster recovery from branch mispredic-       dependencies do not occur. Because the compiler, not the hard-
+tion, owing to the shorter front-end latency.                      ware, resolves false dependencies, the compiler is essential
+   In 619.lbm_s, when the fetch width is small, the per-           to achieve high performance. In this paper, we proposed two
+formance is lower than that of RISC-V; however, when the           important optimizations and a novel calling conventions for
+fetch width is sufﬁcient, the performance is equivalent to         STRAIGHT. The ﬁrst was distance-adjustment optimization,
+that of RISC-V. This is because STRAIGHT requires more             which matched the inter-instructional distance in multiple exe-
+instructions to execute the same program as RISC-V. If there       cution paths by reordering the instruction order. Although the
+is sufﬁcient fetch width, and sufﬁcient instructions can be        distance-adjustment optimization required solving the feed-
+supplied to the back-end, the performance will be identical,       back edge set problem, it contributed to reducing the number
+because the number of ﬂoating-point units will be the bottle-      of mv instructions without increasing the number of other
+neck.                                                              instructions. The second was the aggressive spill optimization,
+   For 401.bzip2 and 605.mcf_s, the performance of                 which spills loop constants that are not referenced in the loop,
+RISC-V was higher than that of STRAIGHT. The main                  even though the number of logical registers is not insufﬁcient.
+computation in these benchmarks is sorting, which involves         While this optimization slightly increases the number of
+many complex control ﬂows with many merges and branches.           load/store instructions, it signiﬁcantly reduces the number of
+Moreover, the execution order constraints are often inconsis-      mv instructions executed. The third is a method of setting
+tent across multiple paths, and the addition of mv instructions    the callee-saved registers suitable for STRAIGHT. Setting the
+is inevitable, even with the distance-adjustment optimization.     callee-saved registers can reduce the number of load/store
+This overhead of increasing the number of instructions is the      instructions for benchmarks that frequently call small leaf
+cause of the inferior performance, compared to RISC-V.             functions, although it increases the number of mv instructions
+   In the geometric mean of the ﬁve benchmarks, our com-           for distance adjustment.
+piler achieved the following performance against RISC-V:              We implemented these optimizations and the method of
+86.1% for the 6-fetch model, 91.1% for the 8-fetch                 setting the callee-saved registers in a STRAIGHT compiler
+model, 97.0% for the 12-fetch model, and 97.8% for                 using LLVM. We also developed a STRAIGHT toolchain to
+the 16-fetch model. It is noteworthy that STRAIGHT,                compile real-world programs. We compiled and evaluated real-
+which has an increased number of instructions instead of           world programs using the compiler. Our optimizations reduced
+register renaming, can achieve almost the same performance         the number of executed instructions by 18% and improved the
+as RISC-V. The performance of STRAIGHT is within 2% of             performance by 16% on the average of ﬁve benchmarks. In
+RISC-V’s performance from evaluation, but it makes the 16-         addition, the introduction of callee-saved registers improved
+wide fetch much more feasible.                                     performance by up to 7% in benchmarks with many leaf func-
+                                                                   tion calls. Performance simulations with exactly the same scale
+                    V. R ELATED WORKS                              processor revealed that the performance difference between
+                                                                   STRAIGHT and RISC-V was only approximately 2%, despite
+   Various approaches have been proposed to reduce the             the elimination of register renaming. Our compiler technology,
+memory-accesses overhead to save registers on function calls.      which enables high-quality STRAIGHT code generation, en-
+Lang and Huguet [22] proposed a method to avoid unneces-           courages the development of highly scalable processors based
+sary spills by adding a hardware mechanism to dynamically          on the STRAIGHT architecture.
+track register usage. Wall [23] and Chow [24] independently
+proposed an interprocedural register allocation using call graph                              A PPENDIX
+analysis. However, many recent compilers have a ﬁxed set of           When there is a reference across function calls or loops
+callee-saved registers because of the increased hardware cost      in applying the aggressive-spill optimization, it is necessary
+and the difﬁculty of optimizing for indirect calls. The register   to insert a restore instruction. We describe the details of the
+allocation to reduce the cost of function calls is described in    procedure to determine where to insert the restore instruction.
+detail by Lueh and Gross [25]. Following this approach, we            If a reference to a value r may cross a function call, it is
+set a ﬁxed number of callee-saved registers in the STRAIGHT        necessary to insert a restore instruction. The restore instruction
+compiler.                                                          should be inserted immediately before an instruction referenc-
+   The write-once manner of register usage in STRAIGHT is          ing the value r that exists in a region where the value r may
+similar to that of purely functional languages, so compiler        not be in the registers. To ﬁnd the region, consider whether
+techniques for these languages can be valuable in STRAIGHT.        the value r may not be in the registers after the instruction
+The proposed method using extra arguments for introduc-            is completed. After completing the producer instruction of
+r, the value r is clearly in the registers. After completing a                [8] T. Koizumi, S. Nakae, A. Fukuda, H. Irie, and S. Sakai, “Reduction of
+consumer instruction of r, the value r is also in the registers                   instruction increase overhead by STRAIGHT compiler,” in 2018 Sixth
+                                                                                  International Symposium on Computing and Networking Workshops
+because it was referenced as an operand in the STRAIGHT’s                         (CANDARW), 2018, pp. 92–98.
+distance form. After completing a function call, the value r is               [9] C. Lattner and V. Adve, “LLVM: a compilation framework for lifelong
+not in the registers. Elsewhere, if the value r may not be in                     program analysis & transformation,” in International Symposium on
+                                                                                  Code Generation and Optimization, 2004, pp. 75–86.
+the registers after completing an instruction, it may not be in              [10] B. K. Rosen, M. N. Wegman, and F. K. Zadeck, “Global value
+the register after completing the next instruction. By ﬁnding                     numbers and redundant computations,” in Proceedings of the 15th
+the least ﬁxed-point set for the above relationship, we can                       ACM SIGPLAN-SIGACT Symposium on Principles of Programming
+                                                                                  Languages, 1988, pp. 12–27.
+determine whether there is a possibility that the value r is not             [11] B. Alpern, M. N. Wegman, and F. K. Zadeck, “Detecting equality of
+in the register at the location where a particular instruction is                 variables in programs,” in Proceedings of the 15th ACM SIGPLAN-
+completed.                                                                        SIGACT Symposium on Principles of Programming Languages, 1988,
+                                                                                  pp. 1–11.
+   To describe this formally, we introduce the notation of                   [12] “CoreMark,” https://www.eembc.org/coremark/.
+modal mu-calculus [27], [28]. To describe the algorithms, we                 [13] “Standard performance evaluation corporation cpu2006 benchmark
+deﬁne the following:                                                              suite,” http://www.spec.org/cpu2006/.
+                                                                             [14] “Standard performance evaluation corporation cpu2017 benchmark
+   • Ur : Set of all instructions in the living section of r. In                  suite,” http://www.spec.org/cpu2017/.
+     the following, this set is considered as the universal set.             [15] “musl libc,” https://musl.libc.org.
+                                                                             [16] A. Seznec and P. Michaud, “A case for (partially) tagged geometric his-
+   • Producerr : Proposition that this instruction is the pro-
+                                                                                  tory length branch prediction,” Journal of Instruction-Level Parallelism,
+     ducer instruction of r.                                                      vol. 8, no. 2, pp. 1–23, 2006.
+   • Consumerr : Proposition that this instruction is a con-                 [17] G. Z. Chrysos and J. S. Emer, “Memory dependence prediction using
+                                                                                  store sets,” in 25th Annual International Symposium on Computer
+     sumer instruction of r.                                                      Architecture, 1998, pp. 142–153.
+   • Call: Proposition that this instruction is a function-call              [18] S. Srinath, O. Mutlu, H. Kim, and Y. N. Patt, “Feedback directed
+     instruction.                                                                 prefetching: Improving the performance and bandwidth-efﬁciency of
+                                                                                  hardware prefetchers,” in 2007 IEEE 13th International Symposium on
+   The least ﬁxed-point set described above can be written as                     High Performance Computer Architecture, 2007, pp. 63–74.
+the following Ar :                                                           [19] “RISC-V: The free and open risc instruction set architecture,”
+                                                                                  https://riscv.org/.
+ Ar = [[µX. ¬Producerr ∧ ¬Consumerr ∧ (Call ∨ ⟨1⟩X)]].                       [20] “Processor simulator onikiri 2,” https://github.com/onikiri/onikiri2.
+                                                                             [21] A. Jani, “Apple ships its ﬁrst PC processor,” Microprocessor Report, pp.
+The code obtained by solving this data-ﬂow equation passes                        1–5, 2021.
+                                                                             [22] T. Lang and M. Huguet, “Reduced register saving/restoring in single-
+values through registers in any case where the values can be                      window register ﬁles,” ACM SIGARCH Computer Architecture News,
+passed through registers.                                                         vol. 14, no. 3, pp. 17–26, 1986.
+   When applying aggressive-spill optimization, we can use                   [23] D. W. Wall, “Global register allocation at link time,” ACM SIGPLAN
+                                                                                  Notices, vol. 21, no. 7, pp. 264–275, 1986.
+the greatest ﬁxed-point set Br , instead of the least ﬁxed-point             [24] F. C. Chow, “Minimizing register usage penalty at procedure calls,” in
+set Ar :                                                                          Proceedings of the ACM SIGPLAN 1988 conference on Programming
+                                                                                  Language design and Implementation, 1988, pp. 85–94.
+ Br = [[νX. ¬Producerr ∧ ¬Consumerr ∧ (Call ∨ ⟨1⟩X)]].                       [25] G.-Y. Lueh and T. Gross, “Call-cost directed register allocation,” ACM
+                                                                                  SIGPLAN Notices, vol. 32, no. 5, pp. 296–307, 1997.
+The code obtained by solving this data-ﬂow equation passes                   [26] A. W. Appel and Z. Shao, “Callee-save registers in continuation-passing
+values through registers, only if the passing path does not                       style,” LISP and Symbolic Computation, vol. 5, pp. 191–221, 1992.
+                                                                             [27] D. Kozen, “Results on the propositional mu-calculus,” Theoretical
+contain loops in which the value is not referenced.                               Computer Science, vol. 27, no. 3, pp. 333–354, 1983.
+                                                                             [28] B. Steffen, “Data ﬂow analysis as model checking,” in International
+                            R EFERENCES                                           Symposium on Theoretical Aspects of Computer Software, 1991, pp.
+ [1] S. K. Sadasivam, B. W. Thompto, R. Kalla, and W. J. Starke, “IBM             346–364.
+     POWER9 processor architecture,” IEEE Micro, vol. 37, no. 2, pp. 40–
+     51, 2017.
+ [2] D. Kanter, “Intel’s Sunny Cove sits on an icy lake,” Microprocessor
+     Report, pp. 1–4, 2019.
+ [3] D. Suggs and D. Bouvier, “The path to “Zen 2”,”
+     https://www.slideshare.net/AMD/the-path-to-zen-2, 2019.
+ [4] L. Gwennap, “Cortex-A77 improves IPC,” Microprocessor Report, pp.
+     1–4, 2019.
+ [5] R. Shioya, K. Horio, M. Goshima, and S. Sakai, “Register cache
+     system not for latency reduction purpose,” in Proceedings of the 2010
+     43rd Annual IEEE/ACM International Symposium on Microarchitecture,
+     2010, pp. 301–312.
+ [6] R. Shioya and H. Ando, “Energy efﬁciency improvement of renamed
+     trace cache through the reduction of dependent path length,” in 2014
+     IEEE 32nd International Conference on Computer Design, 2014, pp.
+     416–423.
+ [7] H. Irie, T. Koizumi, A. Fukuda, S. Akaki, S. Nakae, Y. Bessho,
+     R. Shioya, T. Notsu, K. Yoda, T. Ishihara, and S. Sakai, “STRAIGHT:
+     Hazardless processor architecture without register renaming,” in Pro-
+     ceedings of the 51st Annual IEEE/ACM International Symposium on
+     Microarchitecture, 2018, pp. 121–133.
+

@@ -1,0 +1,37 @@
+{
+  "status": "ACTUAL_COMPILER_GOLD_ASSERTIONS_PASSED",
+  "results": [
+    {
+      "compiler": "gcc",
+      "actual_controls": 160,
+      "normal_probe": 160,
+      "direct_routine": 16,
+      "fixed_physics": 160,
+      "normal_valid": 116,
+      "normal_expected_exhausted": 12,
+      "fixed_legal": 138,
+      "all_assertions_passed": true,
+      "raw_path": "reports\\cut-repair-gcc-batch55.json",
+      "raw_sha256": "fba2cf5d8ed3fb469b443ec180df862c84dc58a0295c1021e4801b20eefd8efd"
+    },
+    {
+      "compiler": "ubsan",
+      "actual_controls": 160,
+      "normal_probe": 160,
+      "direct_routine": 16,
+      "fixed_physics": 160,
+      "normal_valid": 116,
+      "normal_expected_exhausted": 12,
+      "fixed_legal": 138,
+      "all_assertions_passed": true,
+      "raw_path": "reports\\cut-repair-ubsan-batch55.json",
+      "raw_sha256": "fba2cf5d8ed3fb469b443ec180df862c84dc58a0295c1021e4801b20eefd8efd"
+    }
+  ],
+  "preexecution_freeze_sha256": "8b6666017efd81ce5486f59f1abf8ea3c59f85c30f62e582569afb389289c412",
+  "gold_sha256": "80455bc1be6b407c72a3707eb273d49cf6ebf2e3f6f4ee6e978c3fa8b2b6f863",
+  "candidate_source_sha256": "c17c1f67792a3aa8ffeeb60034c92ac7e7b48e0f0835bfd3c7e0e8f63f1a36ec",
+  "same12_solver_executed": false,
+  "performance_unmeasured": true,
+  "default_changed": false
+}

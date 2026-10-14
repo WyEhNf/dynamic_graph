@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791716635.685487,
+  "plan_sha": "808f6a035f036d83b9b7f48cee327a388af30cc25c2e9620e15a5da23cbde6c6",
+  "frozen_source_files": 166,
+  "cases": 13,
+  "records": 130,
+  "pairs": 65,
+  "scope": "Actual installed default versus old default; complete immutable phase3 cohort reused. No backend/budget override, no invented old counters, no new holdout claim. Performance not yet executed."
+}

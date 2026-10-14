@@ -1,0 +1,11 @@
+{
+  "project": 19,
+  "source": "F:\\Hackathon\\projects\\19-dynamic-graph\\reports\\project19-research.tex",
+  "source_sha256": "e34faaedb8eebcfe932298b76a37744a6ed5183d9a2461b1c88b7871eb160728",
+  "pdf_sha256": "d2bbedfd2b4e4cdfa2d2df0f80dbd0f2d8b1a634ee20e7b636cc418032e5c9b8",
+  "pages": 27,
+  "warnings": [],
+  "compile_render_wall_seconds": 12.76745057106018,
+  "visual_review": "passed: all 27 pages inspected via seven contact sheets; page 20 also inspected at full resolution; no clipped tables, overlaps or margin overflow",
+  "visual_reviewed_unix": 1791666374.4337053
+}

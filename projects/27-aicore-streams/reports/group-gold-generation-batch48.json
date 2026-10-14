@@ -1,0 +1,17 @@
+{
+  "seed": 203448001,
+  "cases": 83,
+  "requests": 210,
+  "no_group_controls": 58,
+  "input_sha": "566f4797237b1a5d3051a26a88e3beebbf1c2c12afd1b48a19b9db7dc882284e",
+  "reference": "Original direct-consumer sets; independent stable boundary insertion; full ancestors and prefix/future live-set bigint profile",
+  "explicit": [
+    "crossed group dependency",
+    "overlapping members",
+    "duplicate user-set priority saturation",
+    "last DIRECT release",
+    "MAX and above-MAX profile",
+    "zero outputs",
+    "multiple roots/sinks"
+  ]
+}

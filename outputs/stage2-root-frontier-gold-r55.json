@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791778436.0677392,
+  "completion_sha256": "2921185392ae84de35956230193720283d4843e0b96a1b1840ac6885b9fc70d1",
+  "source_sha256": "c17c1f67792a3aa8ffeeb60034c92ac7e7b48e0f0835bfd3c7e0e8f63f1a36ec",
+  "actual_compiler_results": [
+    {
+      "compiler": "gcc",
+      "normal_controls": 160,
+      "direct_controls": 16,
+      "fixed_physics": 160,
+      "valid_normal": 116,
+      "expected_budget_exhausted": 12,
+      "legal_fixed": 138
+    },
+    {
+      "compiler": "ubsan",
+      "normal_controls": 160,
+      "direct_controls": 16,
+      "fixed_physics": 160,
+      "valid_normal": 116,
+      "expected_budget_exhausted": 12,
+      "legal_fixed": 138
+    }
+  ],
+  "independent_actual_cut_physical_replays": 264,
+  "actual_build_and_gate_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "authorization": "One same-originalR52twelve source-only GCC helper+whole batch, preserve all failures/logicalcost/completeplans. Root replay actualplans before broader decisions. No63/67/full/performance/default promotion.",
+  "scope": "Root verifies true compiler/driver terminal logs/frozen source/gold and all320normal+32direct+320fixed observations.264actual validcut orders independently replayed against completeoriginal DAG/global DIRECTusers with bigint memory;12 exhausted percompiler remain unknown,22 invalid suppliedwholeplans retained percompiler. Same12 driver only compiled, no corpus recovery claimed yet."
+}

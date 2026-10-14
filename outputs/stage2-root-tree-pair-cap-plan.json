@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791775136.8044522,
+  "cap_plan_sha256": "8da42eea149c2e0e637a81987d13b7f6ec69cec48e33df1c4b4b97718ac9d742",
+  "full336_static_report_sha256": "b43f880d7a280bc6a50b06f349c05b434cce8ba2fdfeb72dd8b21bce3659c5a2",
+  "full_input_count": 336,
+  "retained_statuses": {
+    "proven_infeasible_under_model": 47,
+    "verified": 272,
+    "scheduling_failure": 8,
+    "budget_exhausted": 9
+  },
+  "before_success_copies": 192929,
+  "static_eligible_inputs": 25,
+  "static_eligible_pairs": 7714,
+  "saved_ca93_states": 7580,
+  "saved_ca93_outlets": 16,
+  "authorization": "Wrapper-only outcome dispatch/statistics and synthetic control tests; then one original ca93 actual candidate with all complete proposals and raw diagnostics retained and independently verified. No full336/baseline/default run.",
+  "scope": "Saved16 proposals and full336 baseline lineage accepted; particular old21 order is outside first two families, not proof of no alternative21. Continue after per-pair cap using same total deadline/state budget and initial incumbent, retain overall partial. Old454MB estimate is historical only; re-evaluate storage before full336."
+}

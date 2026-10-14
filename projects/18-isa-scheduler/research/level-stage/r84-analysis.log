@@ -1,0 +1,50 @@
+{
+  "before": "v14_auto",
+  "after": "root_spines",
+  "corpus_sha256": "b4ac53ff4309e6d0ac0d01f9db9b214255ef98e3b6cec6cc8f1ace8c7fdbbcc1",
+  "case_count": 60,
+  "joint_successes": 52,
+  "status_pairs": {
+    "verified->verified": 52,
+    "budget_exhausted->verified": 8
+  },
+  "quality_pairs": {
+    "same": 48,
+    "better": 4
+  },
+  "before_copies_joint": 33927,
+  "after_copies_joint": 18650,
+  "median_speedup_joint": 3.148602219006725,
+  "families": {
+    "unbalanced_root_stars": {
+      "status_pairs": {
+        "verified->verified": 52,
+        "budget_exhausted->verified": 8
+      },
+      "joint_successes": 52,
+      "before_copies": 33927,
+      "after_copies": 18650,
+      "median_speedup_joint": 3.148602219006725
+    }
+  },
+  "before_metrics": {
+    "latency_all_ms": {
+      "p50": 95.38779995637015,
+      "p95": 333.4472000133246,
+      "p99": 383.2976999692619
+    },
+    "equal_weight_copy_output_success": 0.12202980922356507,
+    "equal_weight_copy_original_success": 0.15415289463141027,
+    "failure_rate": 0.1333333333333333
+  },
+  "after_metrics": {
+    "latency_all_ms": {
+      "p50": 31.83359996182844,
+      "p95": 364.60940004326403,
+      "p99": 391.689200012479
+    },
+    "equal_weight_copy_output_success": 0.11052385789369842,
+    "equal_weight_copy_original_success": 0.13517523871527778,
+    "failure_rate": 0.0
+  }
+}

@@ -1,0 +1,11 @@
+test_cap_continues_second_improvement_same_initial_and_deadline (tests.test_tree_pair_wrapper_cap.WrapperCapTests.test_cap_continues_second_improvement_same_initial_and_deadline) ... ok
+test_cap_spends_all_states_no_second_child (tests.test_tree_pair_wrapper_cap.WrapperCapTests.test_cap_spends_all_states_no_second_child) ... ok
+test_cap_then_budget_preserves_cap_list_and_complete_best (tests.test_tree_pair_wrapper_cap.WrapperCapTests.test_cap_then_budget_preserves_cap_list_and_complete_best) ... ok
+test_cap_then_deadline_no_second_child (tests.test_tree_pair_wrapper_cap.WrapperCapTests.test_cap_then_deadline_no_second_child) ... ok
+test_two_caps_then_exhausted_keeps_overall_partial (tests.test_tree_pair_wrapper_cap.WrapperCapTests.test_two_caps_then_exhausted_keeps_overall_partial) ... ok
+test_without_caps_retains_complete_behavior (tests.test_tree_pair_wrapper_cap.WrapperCapTests.test_without_caps_retains_complete_behavior) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.229s
+
+OK

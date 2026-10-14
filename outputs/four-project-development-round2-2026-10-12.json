@@ -1,0 +1,321 @@
+{
+  "recorded_at": "2026-10-12T19:26:57.308017+08:00",
+  "summary": {
+    "11": {
+      "paired_batches": 2,
+      "generated_calls": 16,
+      "public_selected": 0,
+      "held_back_passes": 0,
+      "unit_test_terminal_receipt": {
+        "command": "python -m unittest discover -s tests",
+        "total": 54,
+        "passed": 53,
+        "skipped": 1,
+        "exit_code": 0,
+        "elapsed_seconds": 70.038
+      }
+    },
+    "18": {
+      "records": 7,
+      "before_copies": 331,
+      "after_copies": 324,
+      "totals": {
+        "whole_outputs": 327,
+        "proposals": 310,
+        "rounds": 10,
+        "improved_graphs": 3
+      },
+      "frontier": {
+        "header": 37,
+        "immutable_label": 77046,
+        "open": 2998,
+        "unfinished_expansion": 21
+      }
+    },
+    "19": {
+      "ctest_passed": 16,
+      "fusion_contract_comparisons": 8606,
+      "functional_sources": 19,
+      "dynamic_removed_dispatches": 1280,
+      "paired_performance_selected_DEV": [
+        {
+          "source": "generic-if-while",
+          "wall_ratio_pairs": [
+            1.0093065141125972,
+            0.9452344455278052,
+            0.839801895392485,
+            0.9896921550477931,
+            0.9717213585314172
+          ],
+          "wall_ratio_median": 0.9717213585314172,
+          "wins": 4,
+          "losses": 1,
+          "scope": "selected five-pair whole-process comparison only"
+        },
+        {
+          "source": "fresh-carry-fma-plain",
+          "wall_ratio_pairs": [
+            0.9853580658970599,
+            1.1301805698505918,
+            1.0990732049819512,
+            1.1333467937639705,
+            0.9572300033546691
+          ],
+          "wall_ratio_median": 1.0990732049819512,
+          "wins": 2,
+          "losses": 3,
+          "scope": "selected five-pair whole-process comparison only"
+        },
+        {
+          "source": "nested-gram-three-dense",
+          "wall_ratio_pairs": [
+            0.8189607788360124,
+            0.9655183680677106,
+            1.1442941797420323,
+            1.0221660197128164,
+            0.8824427319809874
+          ],
+          "wall_ratio_median": 0.9655183680677106,
+          "wins": 3,
+          "losses": 2,
+          "scope": "selected five-pair whole-process comparison only"
+        }
+      ]
+    },
+    "27": {
+      "before_whole_success": 4,
+      "after_whole_success": 4,
+      "recoveries": 0,
+      "pruned_producer_decisions": 111324,
+      "controls": {
+        "passed": true,
+        "controls": 98,
+        "feasible_controls": 41,
+        "integer_model": "Python bigint",
+        "oracle": "all ID permutations, original DIRECT edges and original BEGIN lifetime",
+        "scope": "serial small controls only; selected12 failures remain unknown",
+        "sha256": {
+          "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\controls-input.json": "09b3bcfcf37d1011badc3ebed9e701765909228caf15b19bf836c56ee8550623",
+          "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\controls-output.json": "83484b1435a9a90ba8a83c24d811f2693e059cb5f607229fb7c37fc53c21fab4",
+          "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\validate_necessary_prefix_candidate.py": "bec93cf1c3063ca8087dc98caf6ebfc15edd2cfa466ffe464c1f713dc5799179"
+        }
+      }
+    }
+  },
+  "evidence": {
+    "11-model-v1": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project11\\candidate-gate-paired-20261012\\report.json",
+      "sha256": "4b5349b0b1b74224a511bffbc094038d7a8b0683896d93f92021fe424ab71621",
+      "bytes": 58641
+    },
+    "11-model-v2": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project11\\candidate-gate-public-prompt-v2-20261012\\report.json",
+      "sha256": "3eacb6355694cc5c894baf902c35b6335db133376d56fc9a9ea870d6db298e60",
+      "bytes": 61426
+    },
+    "11-offline-scoring": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project11\\candidate-gate-offline-scoring-20261012.json",
+      "sha256": "1adb90bc6d18dd45f0c344c5aecfeee77b1319cff0d5b5ea7943125ab04b15ed",
+      "bytes": 47437
+    },
+    "18-composed": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project18\\r197-composed-selected7\\report.json",
+      "sha256": "a8d3b2b94bee84ab86382ebddfdb71354e3cdc49fcbb2ef010e7c40cf933fe35",
+      "bytes": 307599
+    },
+    "18-independent-audit": {
+      "path": "F:\\Hackathon\\outputs\\composed-mobile-selected7-audit-2026-10-12.json",
+      "sha256": "59e68e3605932fa7f889911800e065b9ea6ef9af94e43831d5c0490b124278ee",
+      "bytes": 646
+    },
+    "19-source": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\source-provenance.json",
+      "sha256": "548a87d31c9ee8766b5f4981e358ee1d60ecf0f00a0c841bdc875801f9acc24b",
+      "bytes": 682
+    },
+    "19-functional": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\functional19\\report.json",
+      "sha256": "4120ff47f18d08ff0d0d36a1d9385c219ba83f65cd079a8efc6bbb82bb6d9d62",
+      "bytes": 71687
+    },
+    "19-performance": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\selected-performance3\\report.json",
+      "sha256": "2c70e5704619b6d4664ab8f16039d0af0f4c47a7c52d6647e80808e23dc4e6fd",
+      "bytes": 132452
+    },
+    "19-ctest": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\build\\Testing\\Temporary\\LastTest.log",
+      "sha256": "0573ae05e561a059b3c1064fe1044e76fc2e8bd3c49eb3b3f5ffa79c937050f0",
+      "bytes": 36271
+    },
+    "19-vm-source": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\workspace\\src\\load_pair_vm.cpp",
+      "sha256": "ee67b330b15d02d9ba7e2cc04052162eefe73ed40b48bb16ec40581eda4004f4",
+      "bytes": 9369
+    },
+    "19-test-source": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\workspace\\tests\\load_pair_vm_tests.cpp",
+      "sha256": "76b1d444404c9b26bf51f709c5b581c949b2469eea4c5e8d4c340dc5d29a99e1",
+      "bytes": 132955
+    },
+    "19-build-flags": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\build\\CMakeFiles\\cholesky_core.dir\\flags.make",
+      "sha256": "9c13786bd0db8be71a000e6fda194db56e64bb35ed580326af918ea4d64762f7",
+      "bytes": 670
+    },
+    "19-core": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\build\\libcholesky_core.a",
+      "sha256": "daf49b8cd2fb6373a1b5671d982e78eaf391dd43931dea075b3d4fd76f19ffd1",
+      "bytes": 708204
+    },
+    "19-runtime": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\build\\cholesky_runtime.exe",
+      "sha256": "935db2bb1717f7fe764769aa82dc7a037dbf7ab268e64ad763ad44a6fe3113f0",
+      "bytes": 700506
+    },
+    "19-observer": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-run4\\observer.exe",
+      "sha256": "3e11e0354b016348af4fe92432e8fbc28877c8242dcbb2bcbc9e5f3eee7d2a38",
+      "bytes": 690322
+    },
+    "19-observer-source": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\load-pair\\functional-plan\\vm_load_pair_functional_observer_stage2.cpp",
+      "sha256": "b56943cd67b4627cbf455d7697b198286adcd06e7d69bcefb6ef5cc419769529",
+      "bytes": 4798
+    },
+    "27-source": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\research\\batch57\\source-provenance.json",
+      "sha256": "68baa7551e3ef3c428e7e6f2bdafe6e9300ab00c82fd45ee28c7b417d64e8f7a",
+      "bytes": 805
+    },
+    "27-summary": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\reports\\necessary-prefix-candidate-r57-2026-10-12.json",
+      "sha256": "9b933e247dad64ac84a0707e45e4625a92b62fb24f605221eb99f14920f5a6a2",
+      "bytes": 6606
+    },
+    "27-controls": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\controls-report.json",
+      "sha256": "9d4c51a91ceaabab44e18db3422c29a232fd5533ff151e96902fdc9b3ae9a5d9",
+      "bytes": 782
+    },
+    "27-budget-controls": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\budget-controls-receipt.json",
+      "sha256": "42fb83f856823c15d1884af7eda8924ebfe58fc3c422645180a9c2664c8f91ad",
+      "bytes": 372
+    },
+    "27-budget-controls-exe": {
+      "path": "G:\\Hackathon-stage2-artifacts\\project27\\r57-necessary-prefix\\budget-controls.exe",
+      "sha256": "4bffced97349a2388b0fec8f08149e3dc3104c822a5ec8e69bcdf4447899c9a4",
+      "bytes": 524712
+    },
+    "projects\\11-context-governance\\src\\context_governance\\public_prompt.py": {
+      "path": "F:\\Hackathon\\projects\\11-context-governance\\src\\context_governance\\public_prompt.py",
+      "sha256": "bc566314bec741332327f1766418951f92aa87ac05e3e8592860086575ac696c",
+      "bytes": 1364
+    },
+    "projects\\11-context-governance\\tests\\test_public_prompt.py": {
+      "path": "F:\\Hackathon\\projects\\11-context-governance\\tests\\test_public_prompt.py",
+      "sha256": "8474457d4ae968f38ac4d4e373e329f0bb96f7fd2fe807b64d00882e5b6537bc",
+      "bytes": 1080
+    },
+    "projects\\11-context-governance\\scripts\\run_candidate_gate_paired.py": {
+      "path": "F:\\Hackathon\\projects\\11-context-governance\\scripts\\run_candidate_gate_paired.py",
+      "sha256": "fec7169222ecf2fdca83398fe118444e4668d6b76fb6d56289a44a34f93701be",
+      "bytes": 6989
+    },
+    "projects\\11-context-governance\\scripts\\prepare_public_prompt_paired.py": {
+      "path": "F:\\Hackathon\\projects\\11-context-governance\\scripts\\prepare_public_prompt_paired.py",
+      "sha256": "1269850a9680093f77f9a91daad2e8919d399ad0df5bad78e17f1cdcbb21918b",
+      "bytes": 1920
+    },
+    "projects\\11-context-governance\\scripts\\run_candidate_gate_public_prompt_v2.py": {
+      "path": "F:\\Hackathon\\projects\\11-context-governance\\scripts\\run_candidate_gate_public_prompt_v2.py",
+      "sha256": "05cb5ff308de8b4b896dc2284b2c2c9b632d9da00224573a3f426441d1f54c9b",
+      "bytes": 7074
+    },
+    "projects\\11-context-governance\\scripts\\score_saved_candidate_batches.py": {
+      "path": "F:\\Hackathon\\projects\\11-context-governance\\scripts\\score_saved_candidate_batches.py",
+      "sha256": "f71a0d74970114fc83bfc42eb403ac96ab2cbe85510d2f808c62c0735621c0c2",
+      "bytes": 2798
+    },
+    "projects\\18-isa-scheduler\\scripts\\research_composed_mobile.py": {
+      "path": "F:\\Hackathon\\projects\\18-isa-scheduler\\scripts\\research_composed_mobile.py",
+      "sha256": "c0c57e5b5ac25031829810232197018013a82c1b3b6d7793c87725ab03369938",
+      "bytes": 6431
+    },
+    "projects\\18-isa-scheduler\\scripts\\audit_composed_mobile_result.py": {
+      "path": "F:\\Hackathon\\projects\\18-isa-scheduler\\scripts\\audit_composed_mobile_result.py",
+      "sha256": "b68cbebf4b210efb9147696c29687024d3930e6d1040cb03ad87b30766c7979a",
+      "bytes": 3363
+    },
+    "projects\\19-dynamic-graph\\tools\\prepare_load_run_candidate.py": {
+      "path": "F:\\Hackathon\\projects\\19-dynamic-graph\\tools\\prepare_load_run_candidate.py",
+      "sha256": "d2829bab03b66b96a3f894cab831b3b7985834f8ce17d91da6bdc26fdc1acdcb",
+      "bytes": 4452
+    },
+    "projects\\19-dynamic-graph\\tools\\validate_load_run_candidate.py": {
+      "path": "F:\\Hackathon\\projects\\19-dynamic-graph\\tools\\validate_load_run_candidate.py",
+      "sha256": "f99745b60ca1d021e2882e022ab53b6e5cc23bca4bf95096f0af4e17c1e07bdb",
+      "bytes": 3337
+    },
+    "projects\\19-dynamic-graph\\tools\\benchmark_load_run_candidate.py": {
+      "path": "F:\\Hackathon\\projects\\19-dynamic-graph\\tools\\benchmark_load_run_candidate.py",
+      "sha256": "10c8bb329d18a425c2b2eebc5ac5e0b375bc79df9bbfbcbfbeb1e479622f582f",
+      "bytes": 4237
+    },
+    "projects\\27-aicore-streams\\research\\batch57\\necessary_prefix_search.inc": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\research\\batch57\\necessary_prefix_search.inc",
+      "sha256": "446d363424cfbf5931762abf493a7e6b1530a8b0621d6b69a5bf871fbcb803a3",
+      "bytes": 5060
+    },
+    "projects\\27-aicore-streams\\research\\batch57\\solution.cpp": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\research\\batch57\\solution.cpp",
+      "sha256": "e507d2add0e457c2570ef1e87b174b5b7ce7e48c0ba50435a5c0397cfcefa050",
+      "bytes": 124228
+    },
+    "projects\\27-aicore-streams\\research\\batch57\\selected-driver.cpp": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\research\\batch57\\selected-driver.cpp",
+      "sha256": "48c27bf4e18467f450736d5d725711e0efa2742915ef70649774f4e7df9244f0",
+      "bytes": 2939
+    },
+    "projects\\27-aicore-streams\\scripts\\prepare_necessary_prefix_candidate.py": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\prepare_necessary_prefix_candidate.py",
+      "sha256": "0097f370f34abd9a61454c1dd4d34e30c76b11715ee79720010c0e52e9408fc8",
+      "bytes": 2818
+    },
+    "projects\\27-aicore-streams\\scripts\\validate_necessary_prefix_candidate.py": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\validate_necessary_prefix_candidate.py",
+      "sha256": "bec93cf1c3063ca8087dc98caf6ebfc15edd2cfa466ffe464c1f713dc5799179",
+      "bytes": 3645
+    },
+    "projects\\27-aicore-streams\\scripts\\summarize_necessary_prefix_candidate.py": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\summarize_necessary_prefix_candidate.py",
+      "sha256": "4d0de0ec6907bbe77012fcaa16a97a64592ecb503283d5114e971787fcd887c1",
+      "bytes": 2363
+    },
+    "projects\\27-aicore-streams\\tests\\test_necessary_prefix_r57.cpp": {
+      "path": "F:\\Hackathon\\projects\\27-aicore-streams\\tests\\test_necessary_prefix_r57.cpp",
+      "sha256": "a357f7bc5e2c83bb961d980f2c870b50ee9ea04c0743ff5ad3c9208d5ca5ac7f",
+      "bytes": 1869
+    },
+    "scripts\\record_four_project_round2.py": {
+      "path": "F:\\Hackathon\\scripts\\record_four_project_round2.py",
+      "sha256": "c2a18934833143124465b90807d964b94cac4ac4b3209f9fd02918eb0cf61891",
+      "bytes": 5674
+    },
+    "docs\\four-project-development-round2-2026-10-12.md": {
+      "path": "F:\\Hackathon\\docs\\four-project-development-round2-2026-10-12.md",
+      "sha256": "352bdd58b0270e4826bd8f94de1b91d4ed37963cc1e0f842ce87ae16bd4e6813",
+      "bytes": 4372
+    }
+  },
+  "default_promotions": [],
+  "official_requirements_proved": false,
+  "prior_artifacts_preserved": true,
+  "notes": [
+    "11 scoring happens only after all generation; neither batch selects rejected candidates",
+    "18 selected7 larger budget; full336 missing64 unchanged",
+    "19 selected3 vs same binary unfused, not old pair; unstable timing no promotion",
+    "27 bounded search failures unknown; existing4 plans equal, new recoveries0"
+  ]
+}

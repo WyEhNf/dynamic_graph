@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "hand_sha256": "ae1d51b588bba72b6f1f4ad840dc0fa54400195f0dfc474ca852e43a3c17b7eb",
+  "whole_outputs": 2,
+  "physical_COPY_before_after": [
+    13,
+    0
+  ],
+  "symbolic_checks": 2,
+  "integer_checks": 18,
+  "continuous_intervals": 944,
+  "min_producer_consumer_gap": 12,
+  "window": 4,
+  "proof": "With zero COPY, physical and original ranks coincide. A length<=32 interval moves each member at most31 slots and cannot contain both GET0 and MULW43. Even ignoring all readiness constraints, their minimum gap is12>W4. MULW43 must use original GET0 twice; zero COPY is impossible for any single such interval with fixed outside order. Added retained prefix COPY only strengthens this impossibility.",
+  "prior_root_review_failure": "af1770 exit1: root assumed mobile-before-backbone but the frozen valid witness uses backbone-before-mobile; corrected reader only, witness unchanged.",
+  "scope": "Manual witness and neighborhood expressiveness only; no new solver, corpus gain or official Level claim; symbolic evaluator treats MULW as ordered syntax, integer evaluator checks original/output equality."
+}

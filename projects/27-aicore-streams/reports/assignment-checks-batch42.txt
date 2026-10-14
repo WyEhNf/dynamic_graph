@@ -1,0 +1,1 @@
+288 frozen-recurrence comparisons, 24 ordering checks, 3 wide closure checks, and 6 resource bound cases passed

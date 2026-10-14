@@ -1,0 +1,2999 @@
+{
+  "suite": "data\\hard-corpus-resumed.json",
+  "suite_sha256": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+  "baseline_exe_sha256": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+  "current_exe_sha256": "3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9",
+  "current_solution_sha256": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "current_solution_path": "research\\batch45\\solution.cpp",
+  "baseline_solution_sha256": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-hard-batch45-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 34.612786300014704,
+        "peak_working_set_bytes": 316616704
+      },
+      "after": {
+        "report": "reports\\paired-hard-batch45-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 37.168506199959666,
+        "peak_working_set_bytes": 316801024
+      },
+      "comparison": {
+        "before": {
+          "total": 202,
+          "passed": 141,
+          "failed": 61
+        },
+        "after": {
+          "total": 202,
+          "passed": 143,
+          "failed": 59
+        },
+        "common_cases": 141,
+        "common_solve_us_before": 10571115,
+        "common_solve_us_after": 10475905,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 813,
+        "scales": [
+          {
+            "n": 42,
+            "median_us": 4708,
+            "max_us": 4708
+          },
+          {
+            "n": 43,
+            "median_us": 4061,
+            "max_us": 4061
+          },
+          {
+            "n": 46,
+            "median_us": 3141.5,
+            "max_us": 17052
+          },
+          {
+            "n": 47,
+            "median_us": 6872,
+            "max_us": 6872
+          },
+          {
+            "n": 48,
+            "median_us": 16873.0,
+            "max_us": 20716
+          },
+          {
+            "n": 49,
+            "median_us": 5052.5,
+            "max_us": 5788
+          },
+          {
+            "n": 50,
+            "median_us": 5405,
+            "max_us": 5405
+          },
+          {
+            "n": 51,
+            "median_us": 5263,
+            "max_us": 5263
+          },
+          {
+            "n": 58,
+            "median_us": 30847,
+            "max_us": 30847
+          },
+          {
+            "n": 59,
+            "median_us": 5821.0,
+            "max_us": 6412
+          },
+          {
+            "n": 60,
+            "median_us": 6716,
+            "max_us": 6716
+          },
+          {
+            "n": 62,
+            "median_us": 12184.0,
+            "max_us": 18690
+          },
+          {
+            "n": 63,
+            "median_us": 7405,
+            "max_us": 7480
+          },
+          {
+            "n": 64,
+            "median_us": 30821,
+            "max_us": 31033
+          },
+          {
+            "n": 67,
+            "median_us": 9880.0,
+            "max_us": 12963
+          },
+          {
+            "n": 68,
+            "median_us": 32680,
+            "max_us": 32680
+          },
+          {
+            "n": 69,
+            "median_us": 5771,
+            "max_us": 9636
+          },
+          {
+            "n": 70,
+            "median_us": 8619,
+            "max_us": 54732
+          },
+          {
+            "n": 71,
+            "median_us": 8243,
+            "max_us": 45759
+          },
+          {
+            "n": 72,
+            "median_us": 5818,
+            "max_us": 5818
+          },
+          {
+            "n": 74,
+            "median_us": 38061.5,
+            "max_us": 65886
+          },
+          {
+            "n": 75,
+            "median_us": 9340.0,
+            "max_us": 10211
+          },
+          {
+            "n": 118,
+            "median_us": 9316,
+            "max_us": 9316
+          },
+          {
+            "n": 122,
+            "median_us": 73168,
+            "max_us": 73168
+          },
+          {
+            "n": 124,
+            "median_us": 60103,
+            "max_us": 60103
+          },
+          {
+            "n": 127,
+            "median_us": 96493.5,
+            "max_us": 100061
+          },
+          {
+            "n": 128,
+            "median_us": 91331,
+            "max_us": 91331
+          },
+          {
+            "n": 129,
+            "median_us": 147713,
+            "max_us": 147713
+          },
+          {
+            "n": 131,
+            "median_us": 79641.0,
+            "max_us": 82470
+          },
+          {
+            "n": 133,
+            "median_us": 50230.0,
+            "max_us": 86169
+          },
+          {
+            "n": 136,
+            "median_us": 25395,
+            "max_us": 25395
+          },
+          {
+            "n": 137,
+            "median_us": 16301,
+            "max_us": 42587
+          },
+          {
+            "n": 138,
+            "median_us": 11573,
+            "max_us": 11573
+          },
+          {
+            "n": 139,
+            "median_us": 18495,
+            "max_us": 18495
+          },
+          {
+            "n": 140,
+            "median_us": 56105.5,
+            "max_us": 97707
+          },
+          {
+            "n": 141,
+            "median_us": 46340,
+            "max_us": 46340
+          },
+          {
+            "n": 142,
+            "median_us": 14729.5,
+            "max_us": 22373
+          },
+          {
+            "n": 146,
+            "median_us": 143599,
+            "max_us": 143599
+          },
+          {
+            "n": 148,
+            "median_us": 17154,
+            "max_us": 17154
+          },
+          {
+            "n": 160,
+            "median_us": 79897,
+            "max_us": 79897
+          },
+          {
+            "n": 164,
+            "median_us": 23435,
+            "max_us": 23435
+          },
+          {
+            "n": 165,
+            "median_us": 49362.0,
+            "max_us": 74315
+          },
+          {
+            "n": 166,
+            "median_us": 31795.0,
+            "max_us": 33415
+          },
+          {
+            "n": 168,
+            "median_us": 37112,
+            "max_us": 37112
+          },
+          {
+            "n": 169,
+            "median_us": 121900,
+            "max_us": 121900
+          },
+          {
+            "n": 170,
+            "median_us": 20969,
+            "max_us": 20969
+          },
+          {
+            "n": 172,
+            "median_us": 108711.0,
+            "max_us": 139910
+          },
+          {
+            "n": 173,
+            "median_us": 23918.5,
+            "max_us": 23990
+          },
+          {
+            "n": 176,
+            "median_us": 30613.0,
+            "max_us": 31257
+          },
+          {
+            "n": 178,
+            "median_us": 22075.0,
+            "max_us": 22187
+          },
+          {
+            "n": 179,
+            "median_us": 26345,
+            "max_us": 86833
+          },
+          {
+            "n": 180,
+            "median_us": 29731,
+            "max_us": 130489
+          },
+          {
+            "n": 182,
+            "median_us": 107468,
+            "max_us": 107468
+          },
+          {
+            "n": 183,
+            "median_us": 152747,
+            "max_us": 152747
+          },
+          {
+            "n": 184,
+            "median_us": 170399.5,
+            "max_us": 176250
+          },
+          {
+            "n": 185,
+            "median_us": 182434,
+            "max_us": 195045
+          },
+          {
+            "n": 188,
+            "median_us": 20805,
+            "max_us": 20805
+          },
+          {
+            "n": 190,
+            "median_us": 8193.0,
+            "max_us": 222799
+          },
+          {
+            "n": 196,
+            "median_us": 163745,
+            "max_us": 189463
+          },
+          {
+            "n": 341,
+            "median_us": 386939,
+            "max_us": 386939
+          },
+          {
+            "n": 348,
+            "median_us": 307767,
+            "max_us": 307767
+          },
+          {
+            "n": 352,
+            "median_us": 410949,
+            "max_us": 410949
+          },
+          {
+            "n": 353,
+            "median_us": 241498,
+            "max_us": 669655
+          },
+          {
+            "n": 361,
+            "median_us": 580162,
+            "max_us": 580162
+          },
+          {
+            "n": 362,
+            "median_us": 358206,
+            "max_us": 358206
+          },
+          {
+            "n": 508,
+            "median_us": 367274.0,
+            "max_us": 485226
+          },
+          {
+            "n": 511,
+            "median_us": 500173,
+            "max_us": 500173
+          },
+          {
+            "n": 512,
+            "median_us": 526708,
+            "max_us": 903370
+          },
+          {
+            "n": 514,
+            "median_us": 57675,
+            "max_us": 57675
+          },
+          {
+            "n": 516,
+            "median_us": 318789.0,
+            "max_us": 336553
+          },
+          {
+            "n": 517,
+            "median_us": 57507,
+            "max_us": 57507
+          },
+          {
+            "n": 519,
+            "median_us": 19099.0,
+            "max_us": 19112
+          },
+          {
+            "n": 521,
+            "median_us": 60740.5,
+            "max_us": 63889
+          },
+          {
+            "n": 522,
+            "median_us": 64004,
+            "max_us": 309368
+          },
+          {
+            "n": 524,
+            "median_us": 65973,
+            "max_us": 65973
+          },
+          {
+            "n": 525,
+            "median_us": 151682.5,
+            "max_us": 177807
+          },
+          {
+            "n": 526,
+            "median_us": 102390,
+            "max_us": 102390
+          },
+          {
+            "n": 532,
+            "median_us": 283564,
+            "max_us": 283564
+          },
+          {
+            "n": 534,
+            "median_us": 113688.0,
+            "max_us": 114816
+          },
+          {
+            "n": 535,
+            "median_us": 170952,
+            "max_us": 170952
+          },
+          {
+            "n": 536,
+            "median_us": 301470.0,
+            "max_us": 310200
+          },
+          {
+            "n": 539,
+            "median_us": 572177.0,
+            "max_us": 578119
+          },
+          {
+            "n": 540,
+            "median_us": 20884,
+            "max_us": 20884
+          },
+          {
+            "n": 547,
+            "median_us": 431603.5,
+            "max_us": 622486
+          },
+          {
+            "n": 552,
+            "median_us": 76244.0,
+            "max_us": 79758
+          },
+          {
+            "n": 563,
+            "median_us": 425944.5,
+            "max_us": 429853
+          },
+          {
+            "n": 638,
+            "median_us": 448457,
+            "max_us": 448457
+          },
+          {
+            "n": 639,
+            "median_us": 235483.0,
+            "max_us": 268067
+          },
+          {
+            "n": 651,
+            "median_us": 302562,
+            "max_us": 302562
+          },
+          {
+            "n": 676,
+            "median_us": 371684,
+            "max_us": 371684
+          },
+          {
+            "n": 695,
+            "median_us": 320492,
+            "max_us": 320492
+          },
+          {
+            "n": 700,
+            "median_us": 442209,
+            "max_us": 442209
+          },
+          {
+            "n": 704,
+            "median_us": 547581.5,
+            "max_us": 629931
+          },
+          {
+            "n": 705,
+            "median_us": 650579,
+            "max_us": 650579
+          },
+          {
+            "n": 712,
+            "median_us": 262695,
+            "max_us": 262695
+          },
+          {
+            "n": 715,
+            "median_us": 242340,
+            "max_us": 242340
+          },
+          {
+            "n": 766,
+            "median_us": 66183.5,
+            "max_us": 334746
+          },
+          {
+            "n": 781,
+            "median_us": 298314,
+            "max_us": 298314
+          },
+          {
+            "n": 798,
+            "median_us": 178701,
+            "max_us": 178701
+          },
+          {
+            "n": 813,
+            "median_us": 350822,
+            "max_us": 350822
+          },
+          {
+            "n": 814,
+            "median_us": 417203,
+            "max_us": 417203
+          },
+          {
+            "n": 1265,
+            "median_us": 697419,
+            "max_us": 697419
+          },
+          {
+            "n": 1270,
+            "median_us": 378732,
+            "max_us": 378732
+          },
+          {
+            "n": 1284,
+            "median_us": 325085,
+            "max_us": 325085
+          },
+          {
+            "n": 1292,
+            "median_us": 511052,
+            "max_us": 511052
+          },
+          {
+            "n": 1576,
+            "median_us": 365494,
+            "max_us": 365494
+          },
+          {
+            "n": 1605,
+            "median_us": 754596,
+            "max_us": 754596
+          },
+          {
+            "n": 1628,
+            "median_us": 730067,
+            "max_us": 730067
+          },
+          {
+            "n": 1659,
+            "median_us": 1019106,
+            "max_us": 1019106
+          },
+          {
+            "n": 2069,
+            "median_us": 64823,
+            "max_us": 64823
+          },
+          {
+            "n": 2077,
+            "median_us": 685123,
+            "max_us": 685123
+          },
+          {
+            "n": 2085,
+            "median_us": 660952,
+            "max_us": 660952
+          },
+          {
+            "n": 2095,
+            "median_us": 1311896,
+            "max_us": 1311896
+          },
+          {
+            "n": 2103,
+            "median_us": 675538,
+            "max_us": 675538
+          },
+          {
+            "n": 2104,
+            "median_us": 858557,
+            "max_us": 858557
+          },
+          {
+            "n": 2116,
+            "median_us": 52307,
+            "max_us": 52307
+          },
+          {
+            "n": 2124,
+            "median_us": 424303,
+            "max_us": 424303
+          },
+          {
+            "n": 2125,
+            "median_us": 275455,
+            "max_us": 275455
+          },
+          {
+            "n": 2139,
+            "median_us": 435202,
+            "max_us": 435202
+          },
+          {
+            "n": 2146,
+            "median_us": 404999,
+            "max_us": 404999
+          },
+          {
+            "n": 2151,
+            "median_us": 854730,
+            "max_us": 854730
+          }
+        ],
+        "common_thread_cpu_measured_cases": 141,
+        "common_thread_cpu_us_before": 9593750,
+        "common_thread_cpu_us_after": 9765625,
+        "all_solve_us_before": 33081394,
+        "all_thread_cpu_us_before": 30015625,
+        "all_solve_us_after": 35451879,
+        "all_thread_cpu_us_after": 33140625
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-hard-batch45-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 33.71784050000133,
+        "peak_working_set_bytes": 317009920
+      },
+      "after": {
+        "report": "reports\\paired-hard-batch45-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 36.761607700027525,
+        "peak_working_set_bytes": 316153856
+      },
+      "comparison": {
+        "before": {
+          "total": 202,
+          "passed": 141,
+          "failed": 61
+        },
+        "after": {
+          "total": 202,
+          "passed": 143,
+          "failed": 59
+        },
+        "common_cases": 141,
+        "common_solve_us_before": 10314834,
+        "common_solve_us_after": 10463564,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 813,
+        "scales": [
+          {
+            "n": 42,
+            "median_us": 4304,
+            "max_us": 4304
+          },
+          {
+            "n": 43,
+            "median_us": 4697,
+            "max_us": 4697
+          },
+          {
+            "n": 46,
+            "median_us": 3936.0,
+            "max_us": 13547
+          },
+          {
+            "n": 47,
+            "median_us": 6561,
+            "max_us": 6561
+          },
+          {
+            "n": 48,
+            "median_us": 15969.5,
+            "max_us": 20414
+          },
+          {
+            "n": 49,
+            "median_us": 5216.5,
+            "max_us": 6567
+          },
+          {
+            "n": 50,
+            "median_us": 5281,
+            "max_us": 5281
+          },
+          {
+            "n": 51,
+            "median_us": 3113,
+            "max_us": 3113
+          },
+          {
+            "n": 58,
+            "median_us": 29109,
+            "max_us": 29109
+          },
+          {
+            "n": 59,
+            "median_us": 4861.5,
+            "max_us": 5001
+          },
+          {
+            "n": 60,
+            "median_us": 6621,
+            "max_us": 6621
+          },
+          {
+            "n": 62,
+            "median_us": 13743.5,
+            "max_us": 21527
+          },
+          {
+            "n": 63,
+            "median_us": 7315,
+            "max_us": 7890
+          },
+          {
+            "n": 64,
+            "median_us": 28231,
+            "max_us": 33216
+          },
+          {
+            "n": 67,
+            "median_us": 8990.0,
+            "max_us": 11258
+          },
+          {
+            "n": 68,
+            "median_us": 34744,
+            "max_us": 34744
+          },
+          {
+            "n": 69,
+            "median_us": 7362,
+            "max_us": 9173
+          },
+          {
+            "n": 70,
+            "median_us": 7021,
+            "max_us": 51232
+          },
+          {
+            "n": 71,
+            "median_us": 7295,
+            "max_us": 50005
+          },
+          {
+            "n": 72,
+            "median_us": 5964,
+            "max_us": 5964
+          },
+          {
+            "n": 74,
+            "median_us": 31153.0,
+            "max_us": 52899
+          },
+          {
+            "n": 75,
+            "median_us": 7355.5,
+            "max_us": 7652
+          },
+          {
+            "n": 118,
+            "median_us": 8070,
+            "max_us": 8070
+          },
+          {
+            "n": 122,
+            "median_us": 88215,
+            "max_us": 88215
+          },
+          {
+            "n": 124,
+            "median_us": 70727,
+            "max_us": 70727
+          },
+          {
+            "n": 127,
+            "median_us": 86024.5,
+            "max_us": 97886
+          },
+          {
+            "n": 128,
+            "median_us": 66822,
+            "max_us": 66822
+          },
+          {
+            "n": 129,
+            "median_us": 144662,
+            "max_us": 144662
+          },
+          {
+            "n": 131,
+            "median_us": 71868.5,
+            "max_us": 75447
+          },
+          {
+            "n": 133,
+            "median_us": 57986.0,
+            "max_us": 99002
+          },
+          {
+            "n": 136,
+            "median_us": 21586,
+            "max_us": 21586
+          },
+          {
+            "n": 137,
+            "median_us": 15789,
+            "max_us": 44554
+          },
+          {
+            "n": 138,
+            "median_us": 10959,
+            "max_us": 10959
+          },
+          {
+            "n": 139,
+            "median_us": 15376,
+            "max_us": 15376
+          },
+          {
+            "n": 140,
+            "median_us": 51999.5,
+            "max_us": 89346
+          },
+          {
+            "n": 141,
+            "median_us": 58346,
+            "max_us": 58346
+          },
+          {
+            "n": 142,
+            "median_us": 14102.0,
+            "max_us": 21399
+          },
+          {
+            "n": 146,
+            "median_us": 147220,
+            "max_us": 147220
+          },
+          {
+            "n": 148,
+            "median_us": 19501,
+            "max_us": 19501
+          },
+          {
+            "n": 160,
+            "median_us": 79857,
+            "max_us": 79857
+          },
+          {
+            "n": 164,
+            "median_us": 26424,
+            "max_us": 26424
+          },
+          {
+            "n": 165,
+            "median_us": 52923.5,
+            "max_us": 83780
+          },
+          {
+            "n": 166,
+            "median_us": 33640.0,
+            "max_us": 35233
+          },
+          {
+            "n": 168,
+            "median_us": 34607,
+            "max_us": 34607
+          },
+          {
+            "n": 169,
+            "median_us": 114481,
+            "max_us": 114481
+          },
+          {
+            "n": 170,
+            "median_us": 20475,
+            "max_us": 20475
+          },
+          {
+            "n": 172,
+            "median_us": 99640.5,
+            "max_us": 128234
+          },
+          {
+            "n": 173,
+            "median_us": 26721.0,
+            "max_us": 28983
+          },
+          {
+            "n": 176,
+            "median_us": 26496.5,
+            "max_us": 27333
+          },
+          {
+            "n": 178,
+            "median_us": 24557.0,
+            "max_us": 25956
+          },
+          {
+            "n": 179,
+            "median_us": 25543,
+            "max_us": 84603
+          },
+          {
+            "n": 180,
+            "median_us": 24021,
+            "max_us": 139148
+          },
+          {
+            "n": 182,
+            "median_us": 114662,
+            "max_us": 114662
+          },
+          {
+            "n": 183,
+            "median_us": 145283,
+            "max_us": 145283
+          },
+          {
+            "n": 184,
+            "median_us": 160874.0,
+            "max_us": 165292
+          },
+          {
+            "n": 185,
+            "median_us": 175861,
+            "max_us": 189836
+          },
+          {
+            "n": 188,
+            "median_us": 24970,
+            "max_us": 24970
+          },
+          {
+            "n": 190,
+            "median_us": 7679.5,
+            "max_us": 226019
+          },
+          {
+            "n": 196,
+            "median_us": 151152,
+            "max_us": 188924
+          },
+          {
+            "n": 341,
+            "median_us": 422906,
+            "max_us": 422906
+          },
+          {
+            "n": 348,
+            "median_us": 281009,
+            "max_us": 281009
+          },
+          {
+            "n": 352,
+            "median_us": 388215,
+            "max_us": 388215
+          },
+          {
+            "n": 353,
+            "median_us": 248910,
+            "max_us": 690202
+          },
+          {
+            "n": 361,
+            "median_us": 557768,
+            "max_us": 557768
+          },
+          {
+            "n": 362,
+            "median_us": 394859,
+            "max_us": 394859
+          },
+          {
+            "n": 508,
+            "median_us": 356900.5,
+            "max_us": 440294
+          },
+          {
+            "n": 511,
+            "median_us": 424658,
+            "max_us": 424658
+          },
+          {
+            "n": 512,
+            "median_us": 500567,
+            "max_us": 964606
+          },
+          {
+            "n": 514,
+            "median_us": 60832,
+            "max_us": 60832
+          },
+          {
+            "n": 516,
+            "median_us": 327459.5,
+            "max_us": 355810
+          },
+          {
+            "n": 517,
+            "median_us": 55276,
+            "max_us": 55276
+          },
+          {
+            "n": 519,
+            "median_us": 20151.0,
+            "max_us": 21538
+          },
+          {
+            "n": 521,
+            "median_us": 61584.5,
+            "max_us": 65270
+          },
+          {
+            "n": 522,
+            "median_us": 62410,
+            "max_us": 334689
+          },
+          {
+            "n": 524,
+            "median_us": 66927,
+            "max_us": 66927
+          },
+          {
+            "n": 525,
+            "median_us": 156553.5,
+            "max_us": 195328
+          },
+          {
+            "n": 526,
+            "median_us": 103598,
+            "max_us": 103598
+          },
+          {
+            "n": 532,
+            "median_us": 261623,
+            "max_us": 261623
+          },
+          {
+            "n": 534,
+            "median_us": 108546.5,
+            "max_us": 110638
+          },
+          {
+            "n": 535,
+            "median_us": 163067,
+            "max_us": 163067
+          },
+          {
+            "n": 536,
+            "median_us": 312368.0,
+            "max_us": 321169
+          },
+          {
+            "n": 539,
+            "median_us": 569245.0,
+            "max_us": 584576
+          },
+          {
+            "n": 540,
+            "median_us": 20340,
+            "max_us": 20340
+          },
+          {
+            "n": 547,
+            "median_us": 403566.5,
+            "max_us": 582887
+          },
+          {
+            "n": 552,
+            "median_us": 73866.5,
+            "max_us": 74426
+          },
+          {
+            "n": 563,
+            "median_us": 434440.5,
+            "max_us": 434619
+          },
+          {
+            "n": 638,
+            "median_us": 467601,
+            "max_us": 467601
+          },
+          {
+            "n": 639,
+            "median_us": 238401.0,
+            "max_us": 268246
+          },
+          {
+            "n": 651,
+            "median_us": 286527,
+            "max_us": 286527
+          },
+          {
+            "n": 676,
+            "median_us": 406610,
+            "max_us": 406610
+          },
+          {
+            "n": 695,
+            "median_us": 324224,
+            "max_us": 324224
+          },
+          {
+            "n": 700,
+            "median_us": 438326,
+            "max_us": 438326
+          },
+          {
+            "n": 704,
+            "median_us": 550479.0,
+            "max_us": 654008
+          },
+          {
+            "n": 705,
+            "median_us": 604487,
+            "max_us": 604487
+          },
+          {
+            "n": 712,
+            "median_us": 272533,
+            "max_us": 272533
+          },
+          {
+            "n": 715,
+            "median_us": 244510,
+            "max_us": 244510
+          },
+          {
+            "n": 766,
+            "median_us": 71089.0,
+            "max_us": 350098
+          },
+          {
+            "n": 781,
+            "median_us": 264682,
+            "max_us": 264682
+          },
+          {
+            "n": 798,
+            "median_us": 176417,
+            "max_us": 176417
+          },
+          {
+            "n": 813,
+            "median_us": 349117,
+            "max_us": 349117
+          },
+          {
+            "n": 814,
+            "median_us": 403211,
+            "max_us": 403211
+          },
+          {
+            "n": 1265,
+            "median_us": 747885,
+            "max_us": 747885
+          },
+          {
+            "n": 1270,
+            "median_us": 388203,
+            "max_us": 388203
+          },
+          {
+            "n": 1284,
+            "median_us": 344683,
+            "max_us": 344683
+          },
+          {
+            "n": 1292,
+            "median_us": 546532,
+            "max_us": 546532
+          },
+          {
+            "n": 1576,
+            "median_us": 367350,
+            "max_us": 367350
+          },
+          {
+            "n": 1605,
+            "median_us": 718002,
+            "max_us": 718002
+          },
+          {
+            "n": 1628,
+            "median_us": 746139,
+            "max_us": 746139
+          },
+          {
+            "n": 1659,
+            "median_us": 1025621,
+            "max_us": 1025621
+          },
+          {
+            "n": 2069,
+            "median_us": 71521,
+            "max_us": 71521
+          },
+          {
+            "n": 2077,
+            "median_us": 608264,
+            "max_us": 608264
+          },
+          {
+            "n": 2085,
+            "median_us": 688592,
+            "max_us": 688592
+          },
+          {
+            "n": 2095,
+            "median_us": 1280679,
+            "max_us": 1280679
+          },
+          {
+            "n": 2103,
+            "median_us": 684285,
+            "max_us": 684285
+          },
+          {
+            "n": 2104,
+            "median_us": 881666,
+            "max_us": 881666
+          },
+          {
+            "n": 2116,
+            "median_us": 50618,
+            "max_us": 50618
+          },
+          {
+            "n": 2124,
+            "median_us": 407040,
+            "max_us": 407040
+          },
+          {
+            "n": 2125,
+            "median_us": 273036,
+            "max_us": 273036
+          },
+          {
+            "n": 2139,
+            "median_us": 399898,
+            "max_us": 399898
+          },
+          {
+            "n": 2146,
+            "median_us": 391505,
+            "max_us": 391505
+          },
+          {
+            "n": 2151,
+            "median_us": 909312,
+            "max_us": 909312
+          }
+        ],
+        "common_thread_cpu_measured_cases": 141,
+        "common_thread_cpu_us_before": 9796875,
+        "common_thread_cpu_us_after": 9781250,
+        "all_solve_us_before": 32291202,
+        "all_thread_cpu_us_before": 30281250,
+        "all_solve_us_after": 35302307,
+        "all_thread_cpu_us_after": 33015625
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-hard-batch45-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 33.0787805999862,
+        "peak_working_set_bytes": 316755968
+      },
+      "after": {
+        "report": "reports\\paired-hard-batch45-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 38.87025059998268,
+        "peak_working_set_bytes": 316141568
+      },
+      "comparison": {
+        "before": {
+          "total": 202,
+          "passed": 141,
+          "failed": 61
+        },
+        "after": {
+          "total": 202,
+          "passed": 143,
+          "failed": 59
+        },
+        "common_cases": 141,
+        "common_solve_us_before": 10121691,
+        "common_solve_us_after": 10988965,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 813,
+        "scales": [
+          {
+            "n": 42,
+            "median_us": 4059,
+            "max_us": 4059
+          },
+          {
+            "n": 43,
+            "median_us": 4959,
+            "max_us": 4959
+          },
+          {
+            "n": 46,
+            "median_us": 3510.5,
+            "max_us": 15744
+          },
+          {
+            "n": 47,
+            "median_us": 6440,
+            "max_us": 6440
+          },
+          {
+            "n": 48,
+            "median_us": 17845.0,
+            "max_us": 23776
+          },
+          {
+            "n": 49,
+            "median_us": 5960.5,
+            "max_us": 6553
+          },
+          {
+            "n": 50,
+            "median_us": 5807,
+            "max_us": 5807
+          },
+          {
+            "n": 51,
+            "median_us": 3773,
+            "max_us": 3773
+          },
+          {
+            "n": 58,
+            "median_us": 35569,
+            "max_us": 35569
+          },
+          {
+            "n": 59,
+            "median_us": 5592.5,
+            "max_us": 5736
+          },
+          {
+            "n": 60,
+            "median_us": 6198,
+            "max_us": 6198
+          },
+          {
+            "n": 62,
+            "median_us": 12366.5,
+            "max_us": 18541
+          },
+          {
+            "n": 63,
+            "median_us": 7657,
+            "max_us": 8622
+          },
+          {
+            "n": 64,
+            "median_us": 29467,
+            "max_us": 34280
+          },
+          {
+            "n": 67,
+            "median_us": 7246.0,
+            "max_us": 7320
+          },
+          {
+            "n": 68,
+            "median_us": 36682,
+            "max_us": 36682
+          },
+          {
+            "n": 69,
+            "median_us": 6580,
+            "max_us": 10157
+          },
+          {
+            "n": 70,
+            "median_us": 8002,
+            "max_us": 56617
+          },
+          {
+            "n": 71,
+            "median_us": 8828,
+            "max_us": 47726
+          },
+          {
+            "n": 72,
+            "median_us": 6359,
+            "max_us": 6359
+          },
+          {
+            "n": 74,
+            "median_us": 43444.5,
+            "max_us": 75433
+          },
+          {
+            "n": 75,
+            "median_us": 8404.5,
+            "max_us": 8464
+          },
+          {
+            "n": 118,
+            "median_us": 8457,
+            "max_us": 8457
+          },
+          {
+            "n": 122,
+            "median_us": 83400,
+            "max_us": 83400
+          },
+          {
+            "n": 124,
+            "median_us": 69380,
+            "max_us": 69380
+          },
+          {
+            "n": 127,
+            "median_us": 95270.5,
+            "max_us": 102073
+          },
+          {
+            "n": 128,
+            "median_us": 106942,
+            "max_us": 106942
+          },
+          {
+            "n": 129,
+            "median_us": 140175,
+            "max_us": 140175
+          },
+          {
+            "n": 131,
+            "median_us": 88630.0,
+            "max_us": 104236
+          },
+          {
+            "n": 133,
+            "median_us": 57390.0,
+            "max_us": 96802
+          },
+          {
+            "n": 136,
+            "median_us": 23502,
+            "max_us": 23502
+          },
+          {
+            "n": 137,
+            "median_us": 19714,
+            "max_us": 44324
+          },
+          {
+            "n": 138,
+            "median_us": 13610,
+            "max_us": 13610
+          },
+          {
+            "n": 139,
+            "median_us": 15099,
+            "max_us": 15099
+          },
+          {
+            "n": 140,
+            "median_us": 64810.0,
+            "max_us": 112838
+          },
+          {
+            "n": 141,
+            "median_us": 66189,
+            "max_us": 66189
+          },
+          {
+            "n": 142,
+            "median_us": 16294.0,
+            "max_us": 25470
+          },
+          {
+            "n": 146,
+            "median_us": 169458,
+            "max_us": 169458
+          },
+          {
+            "n": 148,
+            "median_us": 20648,
+            "max_us": 20648
+          },
+          {
+            "n": 160,
+            "median_us": 77101,
+            "max_us": 77101
+          },
+          {
+            "n": 164,
+            "median_us": 29866,
+            "max_us": 29866
+          },
+          {
+            "n": 165,
+            "median_us": 58504.5,
+            "max_us": 89499
+          },
+          {
+            "n": 166,
+            "median_us": 28817.5,
+            "max_us": 29478
+          },
+          {
+            "n": 168,
+            "median_us": 33911,
+            "max_us": 33911
+          },
+          {
+            "n": 169,
+            "median_us": 112964,
+            "max_us": 112964
+          },
+          {
+            "n": 170,
+            "median_us": 22449,
+            "max_us": 22449
+          },
+          {
+            "n": 172,
+            "median_us": 109807.5,
+            "max_us": 140850
+          },
+          {
+            "n": 173,
+            "median_us": 23340.5,
+            "max_us": 23779
+          },
+          {
+            "n": 176,
+            "median_us": 33298.5,
+            "max_us": 34240
+          },
+          {
+            "n": 178,
+            "median_us": 23778.0,
+            "max_us": 24607
+          },
+          {
+            "n": 179,
+            "median_us": 32334,
+            "max_us": 77448
+          },
+          {
+            "n": 180,
+            "median_us": 27459,
+            "max_us": 131666
+          },
+          {
+            "n": 182,
+            "median_us": 117626,
+            "max_us": 117626
+          },
+          {
+            "n": 183,
+            "median_us": 163759,
+            "max_us": 163759
+          },
+          {
+            "n": 184,
+            "median_us": 172613.5,
+            "max_us": 180205
+          },
+          {
+            "n": 185,
+            "median_us": 180105,
+            "max_us": 183306
+          },
+          {
+            "n": 188,
+            "median_us": 25190,
+            "max_us": 25190
+          },
+          {
+            "n": 190,
+            "median_us": 8074.5,
+            "max_us": 212239
+          },
+          {
+            "n": 196,
+            "median_us": 181930,
+            "max_us": 224811
+          },
+          {
+            "n": 341,
+            "median_us": 466677,
+            "max_us": 466677
+          },
+          {
+            "n": 348,
+            "median_us": 340870,
+            "max_us": 340870
+          },
+          {
+            "n": 352,
+            "median_us": 429907,
+            "max_us": 429907
+          },
+          {
+            "n": 353,
+            "median_us": 300159,
+            "max_us": 746175
+          },
+          {
+            "n": 361,
+            "median_us": 661684,
+            "max_us": 661684
+          },
+          {
+            "n": 362,
+            "median_us": 425239,
+            "max_us": 425239
+          },
+          {
+            "n": 508,
+            "median_us": 361227.0,
+            "max_us": 477424
+          },
+          {
+            "n": 511,
+            "median_us": 485230,
+            "max_us": 485230
+          },
+          {
+            "n": 512,
+            "median_us": 546122,
+            "max_us": 969631
+          },
+          {
+            "n": 514,
+            "median_us": 58586,
+            "max_us": 58586
+          },
+          {
+            "n": 516,
+            "median_us": 352639.5,
+            "max_us": 361944
+          },
+          {
+            "n": 517,
+            "median_us": 57119,
+            "max_us": 57119
+          },
+          {
+            "n": 519,
+            "median_us": 22688.0,
+            "max_us": 23392
+          },
+          {
+            "n": 521,
+            "median_us": 62379.5,
+            "max_us": 63157
+          },
+          {
+            "n": 522,
+            "median_us": 64655,
+            "max_us": 322984
+          },
+          {
+            "n": 524,
+            "median_us": 71025,
+            "max_us": 71025
+          },
+          {
+            "n": 525,
+            "median_us": 154153.0,
+            "max_us": 183992
+          },
+          {
+            "n": 526,
+            "median_us": 115106,
+            "max_us": 115106
+          },
+          {
+            "n": 532,
+            "median_us": 262766,
+            "max_us": 262766
+          },
+          {
+            "n": 534,
+            "median_us": 118098.0,
+            "max_us": 121865
+          },
+          {
+            "n": 535,
+            "median_us": 170080,
+            "max_us": 170080
+          },
+          {
+            "n": 536,
+            "median_us": 291415.5,
+            "max_us": 298507
+          },
+          {
+            "n": 539,
+            "median_us": 591034.0,
+            "max_us": 599847
+          },
+          {
+            "n": 540,
+            "median_us": 19862,
+            "max_us": 19862
+          },
+          {
+            "n": 547,
+            "median_us": 427748.5,
+            "max_us": 617227
+          },
+          {
+            "n": 552,
+            "median_us": 77296.5,
+            "max_us": 79002
+          },
+          {
+            "n": 563,
+            "median_us": 444072.0,
+            "max_us": 447443
+          },
+          {
+            "n": 638,
+            "median_us": 502404,
+            "max_us": 502404
+          },
+          {
+            "n": 639,
+            "median_us": 267332.5,
+            "max_us": 289472
+          },
+          {
+            "n": 651,
+            "median_us": 344751,
+            "max_us": 344751
+          },
+          {
+            "n": 676,
+            "median_us": 448495,
+            "max_us": 448495
+          },
+          {
+            "n": 695,
+            "median_us": 344019,
+            "max_us": 344019
+          },
+          {
+            "n": 700,
+            "median_us": 475198,
+            "max_us": 475198
+          },
+          {
+            "n": 704,
+            "median_us": 610770.5,
+            "max_us": 678811
+          },
+          {
+            "n": 705,
+            "median_us": 743909,
+            "max_us": 743909
+          },
+          {
+            "n": 712,
+            "median_us": 319991,
+            "max_us": 319991
+          },
+          {
+            "n": 715,
+            "median_us": 294933,
+            "max_us": 294933
+          },
+          {
+            "n": 766,
+            "median_us": 64337.5,
+            "max_us": 352503
+          },
+          {
+            "n": 781,
+            "median_us": 295059,
+            "max_us": 295059
+          },
+          {
+            "n": 798,
+            "median_us": 179585,
+            "max_us": 179585
+          },
+          {
+            "n": 813,
+            "median_us": 365790,
+            "max_us": 365790
+          },
+          {
+            "n": 814,
+            "median_us": 430511,
+            "max_us": 430511
+          },
+          {
+            "n": 1265,
+            "median_us": 774413,
+            "max_us": 774413
+          },
+          {
+            "n": 1270,
+            "median_us": 409791,
+            "max_us": 409791
+          },
+          {
+            "n": 1284,
+            "median_us": 375706,
+            "max_us": 375706
+          },
+          {
+            "n": 1292,
+            "median_us": 557554,
+            "max_us": 557554
+          },
+          {
+            "n": 1576,
+            "median_us": 372624,
+            "max_us": 372624
+          },
+          {
+            "n": 1605,
+            "median_us": 792115,
+            "max_us": 792115
+          },
+          {
+            "n": 1628,
+            "median_us": 794862,
+            "max_us": 794862
+          },
+          {
+            "n": 1659,
+            "median_us": 1018110,
+            "max_us": 1018110
+          },
+          {
+            "n": 2069,
+            "median_us": 64147,
+            "max_us": 64147
+          },
+          {
+            "n": 2077,
+            "median_us": 676080,
+            "max_us": 676080
+          },
+          {
+            "n": 2085,
+            "median_us": 683486,
+            "max_us": 683486
+          },
+          {
+            "n": 2095,
+            "median_us": 1323122,
+            "max_us": 1323122
+          },
+          {
+            "n": 2103,
+            "median_us": 715531,
+            "max_us": 715531
+          },
+          {
+            "n": 2104,
+            "median_us": 816285,
+            "max_us": 816285
+          },
+          {
+            "n": 2116,
+            "median_us": 52347,
+            "max_us": 52347
+          },
+          {
+            "n": 2124,
+            "median_us": 409550,
+            "max_us": 409550
+          },
+          {
+            "n": 2125,
+            "median_us": 278908,
+            "max_us": 278908
+          },
+          {
+            "n": 2139,
+            "median_us": 428239,
+            "max_us": 428239
+          },
+          {
+            "n": 2146,
+            "median_us": 406960,
+            "max_us": 406960
+          },
+          {
+            "n": 2151,
+            "median_us": 855685,
+            "max_us": 855685
+          }
+        ],
+        "common_thread_cpu_measured_cases": 141,
+        "common_thread_cpu_us_before": 9468750,
+        "common_thread_cpu_us_after": 10125000,
+        "all_solve_us_before": 31585705,
+        "all_thread_cpu_us_before": 29781250,
+        "all_solve_us_after": 37377771,
+        "all_thread_cpu_us_after": 33796875
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch44\\solution.cpp",
+  "median_common_solve_us_before": 10314834,
+  "median_common_solve_us_after": 10475905,
+  "median_wall_seconds_before": 33.71784050000133,
+  "median_wall_seconds_after": 37.168506199959666,
+  "maximum_cli_working_set_bytes": 316801024,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 9593750,
+  "median_all_solve_us_before": 32291202,
+  "median_all_thread_cpu_us_before": 30015625,
+  "median_common_thread_cpu_us_after": 9781250,
+  "median_all_solve_us_after": 35451879,
+  "median_all_thread_cpu_us_after": 33140625,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+  "baseline_build_provenance": {
+    "status": "validated_recovery_default_milestone",
+    "source_sha256": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+    "default_exe_sha256": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+    "measured_exe_sha256": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+    "measured_build_inputs": {
+      "research/batch44/solution.cpp": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+      "include/problem.h": "7c09de2cf92464b7209ef71333fffb06428abf320ee7a005e3dba6072da78f0a",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/simulator.cpp": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+      "include/simulator.h": "a9657897fccdb6d70ddbe450b43a7961f105647ff6170de508251e7d26117ed7",
+      "include/local_json.h": "407aac276343e315104ab63e27a887765f4a27025768ee4232a8c38d11e11c43",
+      "include/solver_metrics.h": "1e14d74fc8123763417a82335eb57cb975d49e9015bb9623468ca45d20b1dea5",
+      "CMakeLists.txt": "dbd6a242d0d669e0a86e7e897cf0c51dc9ae6ec2753a5622c631b2fb49fe5671"
+    },
+    "measured_CMake_snapshot": "research/batch44/CMakeLists-measured.txt",
+    "compile_inputs": {
+      "solution/solution.cpp": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+      "CMakeLists.txt": "85288111d5445f822d904e638c80f2d9e2a5caa4308ad074f99141d7962ec11b",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/candidate_search.cpp": "d3ad51f2b51a831d8f1b227b03fc9475cf442243faa90e0b72f5a1100542597a",
+      "src/frontier_probe.cpp": "2e67ec976cf5a61c29d13d668a144d29a5e148bd7af922960fc4017124430071",
+      "src/main.cpp": "575fc7f284a65ea51bf28f494dadb2d9682bf2e4b3c48726dd3323bc63bcc5b1",
+      "src/parallel_oracle.cpp": "81e487372b2eaa9c23df26fa66e676ab1c81ce4e0d0672484ac68e6c2346dbf7",
+      "src/simulator.cpp": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+      "include/candidate_search.h": "fa631e48fe2f8550720824cc0702ea750eaa51365ba421d8de28e3e6803e586b",
+      "include/local_json.h": "407aac276343e315104ab63e27a887765f4a27025768ee4232a8c38d11e11c43",
+      "include/problem.h": "7c09de2cf92464b7209ef71333fffb06428abf320ee7a005e3dba6072da78f0a",
+      "include/samples.h": "966bcccd47f35ef476aa818bac7ae64a76c5dd3c63b7f6c6c5475e01df8fa4ca",
+      "include/simulator.h": "a9657897fccdb6d70ddbe450b43a7961f105647ff6170de508251e7d26117ed7",
+      "include/solver_metrics.h": "1e14d74fc8123763417a82335eb57cb975d49e9015bb9623468ca45d20b1dea5"
+    },
+    "test_inputs": {
+      "tests/test_simulator.cpp": "f810c633fc0f7302c2a195e2c122357464f00868f666a1f6e47ba9d7f9ea8486",
+      "tests/test_models.cpp": "2ecbf0520c650144a3be0e17f02ffb5e498a3349d11e9f99f353c5d5eba05682",
+      "tests/test_assignment.cpp": "cde11ec1ecf5f65de50396399f22b3955078be28f285d5a8eca7a222b23e6c10",
+      "tests/test_serial_frontier.cpp": "71d7931b883352e99879ec620906c8c5860d94c5277586aab220448f0c74b29d",
+      "tests/test_numeric.cpp": "a24a1283e4494d403cf63fca9e0c7938b4bfe61c39bb8adae718c93ac95bf9ea",
+      "tests/test_numeric_priority.cpp": "a9994a19ce5a2f029d686a3d2b8ebf9a3718ca97f38c911796e492d06aece6d2",
+      "tests/test_shallow.cpp": "74f2df2ae2510ef06e64d557cb33c6e04c9549542e20c5e20dcd7a8a0e1cdf23"
+    },
+    "generation_inputs": {
+      "research/batch43/solution.cpp": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+      "research/batch44/shallow.cpp.inc": "5816293d2e17554547283fe126e277966fc3923c1ada20c1dd8b706306bdcc7e",
+      "scripts/prepare_batch44.py": "e53181a0e864613d45b92d938fc8e281b5d2f312153a96ce21f068350b6e4938",
+      "scripts/make_shallow_gold_batch44.py": "61d5f4f6f0fd5aa2e534829117738699ba1176ceba709b16fddea849dc6dc31c",
+      "scripts/make_shallow_holdout_batch44.py": "cd39fbc9d5869826db815af82aabf6154e215d45c056ef65a09c09e705cd8414"
+    },
+    "release_flags": {
+      "build/CMakeFiles/solution.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/solution.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n",
+      "build/CMakeFiles/aicore_bench.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/aicore_bench.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17\n\n",
+      "build/CMakeFiles/simulator.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"MinGW Makefiles\" Generator, CMake Version 4.2\n\n# compile CXX with E:/mingw64/bin/g++.exe\nCXX_DEFINES = \n\nCXX_INCLUDES = @CMakeFiles/simulator.dir/includes_CXX.rsp\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic\n\n"
+    },
+    "independent_simulator_sha256": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+    "old_default_R43_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+    "old_default_R43_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+    "old_R43_freeze": "research/batch43/provenance.json",
+    "normal_original_records": 1229,
+    "normal_original_passed_according_to_expectation": 1168,
+    "new_heldout_records": 72,
+    "new_heldout_passed": 72,
+    "total_records": 1301,
+    "total_passed_according_to_expectation": 1240,
+    "total_expected_infeasible": 1,
+    "known_witness_unresolved": 61,
+    "count_caveat": "Parameter-repeat records are retained. 1240 expectation passes include one expected-infeasible rejection, not1240 feasible outputs. Bigint/profile controls separate. Original2 recoveries share one topology; new4 are heldout seeds.",
+    "hard_records": 202,
+    "hard_legal": 141,
+    "new_structure_records": 36,
+    "new_structure_legal": 36,
+    "recovery": {
+      "original_records": 2,
+      "original_topologies": 1,
+      "new_heldout_records": 4,
+      "lost": 0,
+      "common_243_T_peak_identical": true
+    },
+    "unresolved": [
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270617",
+        "n": 532,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270618",
+        "n": 511,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20299417",
+        "n": 2125,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20299418",
+        "n": 2139,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+        "n": 2077,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+        "n": 2085,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k24_ret1_seed20273418",
+        "n": 131,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+        "n": 129,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280617",
+        "n": 522,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280618",
+        "n": 525,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20309417",
+        "n": 2124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20309418",
+        "n": 2146,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+        "n": 2103,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+        "n": 2104,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+        "n": 71,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+        "n": 71,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+        "n": 508,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+        "n": 172,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+        "n": 547,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+        "n": 124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k64_ret1_seed20287427",
+        "n": 348,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k64_ret1_seed20287429",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+        "n": 362,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+        "n": 361,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+        "n": 651,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+        "n": 639,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+        "n": 638,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret0_seed20293826",
+        "n": 676,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret1_seed20293827",
+        "n": 712,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret0_seed20293828",
+        "n": 705,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret1_seed20293829",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+        "n": 695,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+        "n": 715,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+        "n": 700,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+        "n": 1270,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+        "n": 1284,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+        "n": 1265,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+        "n": 781,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+        "n": 798,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+        "n": 814,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+        "n": 1576,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+        "n": 1628,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+        "n": 1605,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+        "n": 1659,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+        "n": 190,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+        "n": 766,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+        "n": 140,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+        "n": 182,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      }
+    ],
+    "strict_regression_records": 979,
+    "strict_regression_wall_seconds": 56.46217849996174,
+    "strict_regression_baseline": "Historical8..22 no regression; distinct direct R43 cached979 full equality proof reports/direct-normal-r43-batch44.json",
+    "optimum_audits": 144,
+    "optimal_certificates": 33,
+    "ctest": "11/11 passed: original10 plus new profile gold; 2.64s",
+    "ctest_report_sha": "e0e11f65b74b36b46e1113aef63ba1994c399b90cec9d68c7b6e06d78deb3bde",
+    "numeric_fixed_plan_gold": 523,
+    "numeric_validation": "R44 real source Clang21 UBSan fixed plans523 all matched Python bigint; newprofile2590/160 bounded validity no runtime UB diagnostics",
+    "priority_arbitrary_precision_gold": 20180,
+    "priority_execution": "Actual new-default GCC numeric_priority_exact_gold test reran20180; no new UBSan priority claim",
+    "profile_bigint_gold": 2590,
+    "profile_search_validity": 160,
+    "exchange_controls": 756,
+    "exchange_caveat": "Constant previously live prefix required; mixed release negative control preserved",
+    "numeric_controls": {
+      "numeric-controls": {
+        "total": 11,
+        "passed": 11,
+        "report_sha": "4890ecb0ba0e68d5836ed376188474d1873febd0ae8d5d88a7937ac01fbe8dc6"
+      },
+      "numeric-parallel": {
+        "total": 320,
+        "passed": 320,
+        "report_sha": "e4d064e63f20c5fe857e1a0a64e5197955c01a4487bbd76b3dcccadf6a48428e"
+      },
+      "numeric-parallel-valid": {
+        "total": 160,
+        "passed": 160,
+        "report_sha": "5248b4fcc1e7a274683dd34b4e75815ea9403e537015a9210a4b15539c8b4c97"
+      },
+      "scaled-serial": {
+        "total": 32,
+        "passed": 32,
+        "report_sha": "04bd149872aa6c8ba29f4a538e587d7e8db2c3ea67de405c8d2325a1d777552f"
+      }
+    },
+    "functional_source_exe": "997f29db14b9987c83bc0fe2411fce3f904fa9bfdd31cf5b267c9ceffb2cc4f6",
+    "paired_plan_sha": "5fa51e27c76630ef1903bfaa0284b7eaafc9b829e99ebab074cbe791c66b7021",
+    "paired_cost": {
+      "hard": {
+        "rounds": [
+          {
+            "round": 1,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 18997815,
+                  "thread_cpu_us": 18750000
+                },
+                "after": {
+                  "wall_us": 22156215,
+                  "thread_cpu_us": 21718750
+                }
+              },
+              "common_success": {
+                "count": 139,
+                "before": {
+                  "wall_us": 6404716,
+                  "thread_cpu_us": 6328125
+                },
+                "after": {
+                  "wall_us": 6571700,
+                  "thread_cpu_us": 6484375
+                }
+              },
+              "common_failure": {
+                "count": 61,
+                "before": {
+                  "wall_us": 12377465,
+                  "thread_cpu_us": 12265625
+                },
+                "after": {
+                  "wall_us": 15364010,
+                  "thread_cpu_us": 15015625
+                }
+              },
+              "recovered": {
+                "count": 2,
+                "before": {
+                  "wall_us": 215634,
+                  "thread_cpu_us": 156250
+                },
+                "after": {
+                  "wall_us": 220505,
+                  "thread_cpu_us": 218750
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "e435bc59492ead13cc0f894cb233cff071ec70b29907e0793c0ffbce1b4d3793",
+              "after": "dd8aa6a641e734b31ac55a7150deb5388242eb1de982556037421810b2cf8c49"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 20.016425399982836,
+                "working_set_bytes": 316047360
+              },
+              "after": {
+                "wall_seconds": 23.28995780000696,
+                "working_set_bytes": 316243968
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+            ],
+            "all_cpu_ratio": 1.1583333333333334,
+            "all_wall_ratio": 1.1662506977776128
+          },
+          {
+            "round": 2,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 21983504,
+                  "thread_cpu_us": 21250000
+                },
+                "after": {
+                  "wall_us": 24210913,
+                  "thread_cpu_us": 23203125
+                }
+              },
+              "common_success": {
+                "count": 139,
+                "before": {
+                  "wall_us": 7408321,
+                  "thread_cpu_us": 7250000
+                },
+                "after": {
+                  "wall_us": 7459220,
+                  "thread_cpu_us": 7171875
+                }
+              },
+              "common_failure": {
+                "count": 61,
+                "before": {
+                  "wall_us": 14364381,
+                  "thread_cpu_us": 13812500
+                },
+                "after": {
+                  "wall_us": 16481345,
+                  "thread_cpu_us": 15796875
+                }
+              },
+              "recovered": {
+                "count": 2,
+                "before": {
+                  "wall_us": 210802,
+                  "thread_cpu_us": 187500
+                },
+                "after": {
+                  "wall_us": 270348,
+                  "thread_cpu_us": 234375
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "c9b0cf2eebaa4a290ae0372208a6c9f43930325e6b2a2d4f67cd084aecd32097",
+              "after": "8bf281e588d61d53676af4dfb6243f6a28c5d1a398c8da85fb91a466c692bebe"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 22.99850810004864,
+                "working_set_bytes": 315957248
+              },
+              "after": {
+                "wall_seconds": 25.235057300014887,
+                "working_set_bytes": 316268544
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+            ],
+            "all_cpu_ratio": 1.0919117647058822,
+            "all_wall_ratio": 1.1013218365916553
+          },
+          {
+            "round": 3,
+            "groups": {
+              "all": {
+                "count": 202,
+                "before": {
+                  "wall_us": 22156355,
+                  "thread_cpu_us": 21734375
+                },
+                "after": {
+                  "wall_us": 22445947,
+                  "thread_cpu_us": 22203125
+                }
+              },
+              "common_success": {
+                "count": 139,
+                "before": {
+                  "wall_us": 7479686,
+                  "thread_cpu_us": 7343750
+                },
+                "after": {
+                  "wall_us": 6654696,
+                  "thread_cpu_us": 6625000
+                }
+              },
+              "common_failure": {
+                "count": 61,
+                "before": {
+                  "wall_us": 14416849,
+                  "thread_cpu_us": 14140625
+                },
+                "after": {
+                  "wall_us": 15578363,
+                  "thread_cpu_us": 15359375
+                }
+              },
+              "recovered": {
+                "count": 2,
+                "before": {
+                  "wall_us": 259820,
+                  "thread_cpu_us": 250000
+                },
+                "after": {
+                  "wall_us": 212888,
+                  "thread_cpu_us": 218750
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "cb4e25939c003dabe214ec4c34373a584cd7d17ae9ce5e30ed4355080b9585c4",
+              "after": "49657f52bc395a312b55e135fbdc6823a8db5915a7bc54d316ac4647d04630ca"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 23.21390849997988,
+                "working_set_bytes": 316129280
+              },
+              "after": {
+                "wall_seconds": 23.390440999995917,
+                "working_set_bytes": 315891712
+              }
+            },
+            "recovered": [
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+              "irregular_consumers_local_k32_ret0_seed20274224_rootmem5"
+            ],
+            "all_cpu_ratio": 1.0215672178289001,
+            "all_wall_ratio": 1.0130703809358534
+          }
+        ],
+        "independent_side_medians": {
+          "all": {
+            "before": {
+              "wall_us": 21983504,
+              "thread_cpu_us": 21250000
+            },
+            "after": {
+              "wall_us": 22445947,
+              "thread_cpu_us": 22203125
+            }
+          },
+          "common_success": {
+            "before": {
+              "wall_us": 7408321,
+              "thread_cpu_us": 7250000
+            },
+            "after": {
+              "wall_us": 6654696,
+              "thread_cpu_us": 6625000
+            }
+          },
+          "common_failure": {
+            "before": {
+              "wall_us": 14364381,
+              "thread_cpu_us": 13812500
+            },
+            "after": {
+              "wall_us": 15578363,
+              "thread_cpu_us": 15359375
+            }
+          },
+          "recovered": {
+            "before": {
+              "wall_us": 215634,
+              "thread_cpu_us": 187500
+            },
+            "after": {
+              "wall_us": 220505,
+              "thread_cpu_us": 218750
+            }
+          }
+        },
+        "median_within_pair_all_cpu_ratio": 1.0919117647058822,
+        "ratio_of_independent_side_all_cpu_medians": 1.0448529411764707,
+        "median_within_pair_all_wall_ratio": 1.1013218365916553,
+        "cli_side_medians": {
+          "before": {
+            "wall_seconds": 22.99850810004864,
+            "maximum_working_set_bytes": 316129280
+          },
+          "after": {
+            "wall_seconds": 23.390440999995917,
+            "maximum_working_set_bytes": 316268544
+          }
+        },
+        "source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+        "exe_sha": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+        "baseline_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+        "baseline_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+        "counts": {
+          "all": 202,
+          "common_success": 139,
+          "common_failure": 61,
+          "recovered": 2
+        },
+        "timing": "same GCC Release O3; all failures included; Win32 CPU quantized; independent-side median ratio differs from median per-pair ratio; process WS includes whole JSON/witness/validators"
+      },
+      "heldout": {
+        "rounds": [
+          {
+            "round": 1,
+            "groups": {
+              "all": {
+                "count": 72,
+                "before": {
+                  "wall_us": 2343231,
+                  "thread_cpu_us": 2312500
+                },
+                "after": {
+                  "wall_us": 2420220,
+                  "thread_cpu_us": 2265625
+                }
+              },
+              "common_success": {
+                "count": 68,
+                "before": {
+                  "wall_us": 1567948,
+                  "thread_cpu_us": 1562500
+                },
+                "after": {
+                  "wall_us": 1616556,
+                  "thread_cpu_us": 1453125
+                }
+              },
+              "common_failure": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              },
+              "recovered": {
+                "count": 4,
+                "before": {
+                  "wall_us": 775283,
+                  "thread_cpu_us": 750000
+                },
+                "after": {
+                  "wall_us": 803664,
+                  "thread_cpu_us": 812500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "7b5f430f82bcd137d98b6228cc59d036f5f7eb5c5a8301e8a9fe463643e2b8cc",
+              "after": "57ed78597c7c3f93e28419bc0292cec4f3d38febb0f48071ed0541bd73ac2c66"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.529536799993366,
+                "working_set_bytes": 60030976
+              },
+              "after": {
+                "wall_seconds": 2.600687999976799,
+                "working_set_bytes": 59465728
+              }
+            },
+            "recovered": [
+              "shallow_holdout_seed20344735",
+              "shallow_holdout_seed20344737",
+              "shallow_holdout_seed20344758",
+              "shallow_holdout_seed20344770"
+            ],
+            "all_cpu_ratio": 0.9797297297297297,
+            "all_wall_ratio": 1.0328559156139536
+          },
+          {
+            "round": 2,
+            "groups": {
+              "all": {
+                "count": 72,
+                "before": {
+                  "wall_us": 2414202,
+                  "thread_cpu_us": 2437500
+                },
+                "after": {
+                  "wall_us": 2315816,
+                  "thread_cpu_us": 2296875
+                }
+              },
+              "common_success": {
+                "count": 68,
+                "before": {
+                  "wall_us": 1608375,
+                  "thread_cpu_us": 1609375
+                },
+                "after": {
+                  "wall_us": 1503603,
+                  "thread_cpu_us": 1484375
+                }
+              },
+              "common_failure": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              },
+              "recovered": {
+                "count": 4,
+                "before": {
+                  "wall_us": 805827,
+                  "thread_cpu_us": 828125
+                },
+                "after": {
+                  "wall_us": 812213,
+                  "thread_cpu_us": 812500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "8d566c6a3305c51044bd2c608ec3b7defb408386661f7272805cfabb8fd0357e",
+              "after": "c5116a90f3d1019f7e532f15544fdfcb9ba2bfa3d7dc356cba648699b55522f4"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.6068658999865875,
+                "working_set_bytes": 58990592
+              },
+              "after": {
+                "wall_seconds": 2.481631899951026,
+                "working_set_bytes": 59174912
+              }
+            },
+            "recovered": [
+              "shallow_holdout_seed20344735",
+              "shallow_holdout_seed20344737",
+              "shallow_holdout_seed20344758",
+              "shallow_holdout_seed20344770"
+            ],
+            "all_cpu_ratio": 0.9423076923076923,
+            "all_wall_ratio": 0.9592469892743026
+          },
+          {
+            "round": 3,
+            "groups": {
+              "all": {
+                "count": 72,
+                "before": {
+                  "wall_us": 2300549,
+                  "thread_cpu_us": 2296875
+                },
+                "after": {
+                  "wall_us": 2303015,
+                  "thread_cpu_us": 2218750
+                }
+              },
+              "common_success": {
+                "count": 68,
+                "before": {
+                  "wall_us": 1538135,
+                  "thread_cpu_us": 1531250
+                },
+                "after": {
+                  "wall_us": 1506039,
+                  "thread_cpu_us": 1406250
+                }
+              },
+              "common_failure": {
+                "count": 0,
+                "before": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                },
+                "after": {
+                  "wall_us": 0,
+                  "thread_cpu_us": 0
+                }
+              },
+              "recovered": {
+                "count": 4,
+                "before": {
+                  "wall_us": 762414,
+                  "thread_cpu_us": 765625
+                },
+                "after": {
+                  "wall_us": 796976,
+                  "thread_cpu_us": 812500
+                }
+              }
+            },
+            "raw_sha": {
+              "before": "51d624269ab310efbbe80fda5e8191096f14821a279bd91eb46e33235ddd1098",
+              "after": "eab42591880a7a91887c12545934ac2904df550b7f4c22ec6534b6543de60c48"
+            },
+            "cli": {
+              "before": {
+                "wall_seconds": 2.474643900000956,
+                "working_set_bytes": 59510784
+              },
+              "after": {
+                "wall_seconds": 2.4762862999923527,
+                "working_set_bytes": 60547072
+              }
+            },
+            "recovered": [
+              "shallow_holdout_seed20344735",
+              "shallow_holdout_seed20344737",
+              "shallow_holdout_seed20344758",
+              "shallow_holdout_seed20344770"
+            ],
+            "all_cpu_ratio": 0.9659863945578231,
+            "all_wall_ratio": 1.0010719180508652
+          }
+        ],
+        "independent_side_medians": {
+          "all": {
+            "before": {
+              "wall_us": 2343231,
+              "thread_cpu_us": 2312500
+            },
+            "after": {
+              "wall_us": 2315816,
+              "thread_cpu_us": 2265625
+            }
+          },
+          "common_success": {
+            "before": {
+              "wall_us": 1567948,
+              "thread_cpu_us": 1562500
+            },
+            "after": {
+              "wall_us": 1506039,
+              "thread_cpu_us": 1453125
+            }
+          },
+          "common_failure": {
+            "before": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            },
+            "after": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            }
+          },
+          "recovered": {
+            "before": {
+              "wall_us": 775283,
+              "thread_cpu_us": 765625
+            },
+            "after": {
+              "wall_us": 803664,
+              "thread_cpu_us": 812500
+            }
+          }
+        },
+        "median_within_pair_all_cpu_ratio": 0.9659863945578231,
+        "ratio_of_independent_side_all_cpu_medians": 0.9797297297297297,
+        "median_within_pair_all_wall_ratio": 1.0010719180508652,
+        "cli_side_medians": {
+          "before": {
+            "wall_seconds": 2.529536799993366,
+            "maximum_working_set_bytes": 60030976
+          },
+          "after": {
+            "wall_seconds": 2.481631899951026,
+            "maximum_working_set_bytes": 60547072
+          }
+        },
+        "source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+        "exe_sha": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+        "baseline_source_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+        "baseline_exe_sha": "a35e2221450c2c9bf078a6174892ce3cdfe77876b7882384c62c4b39309c4bc0",
+        "counts": {
+          "all": 72,
+          "common_success": 68,
+          "common_failure": 0,
+          "recovered": 4
+        },
+        "timing": "same GCC Release O3; all failures included; Win32 CPU quantized; independent-side median ratio differs from median per-pair ratio; process WS includes whole JSON/witness/validators"
+      }
+    },
+    "timing_caveat": "Recovery portfolio costs more on full202; per-pair CPU median+9.19%, independent-side median ratio+4.49%. Retain failure costs and raw pair ratios; not an overall speedup. 72 favorable CPU does not generalize.",
+    "old_frozen_R31_tex_sha": "e6e735ff65657d4d5cb7fb5ae6321edada13a0d1972932239da35c885e40ed82",
+    "single_file": "problem.h plus standard library; .inc fully expanded, no runtime external oracle/witness/third-party dependency",
+    "support": "Original R43 portfolio preserved; additional recovery only after failed original search. n<=4096/consumer<=512, charged12M profile+affinity work, seed container/sorting/generation costs not included in charged count. No infeasibility certificate on exhaustion.",
+    "default_build_evidence": "reports/build-batch44.txt",
+    "LF_hash_note": "Preparation normalized-string SHA was corrected; all freeze and functional metadata use actual file bytes.",
+    "default_exe_path": "build/aicore_bench.exe",
+    "measured_exe_path": "research/batch44/measured-release-aicore_bench.exe",
+    "performance_executed_exe_path": "research/batch44/build/aicore_bench.exe",
+    "functional_O2_exe_path": "research/batch44/aicore_bench.exe",
+    "data_inputs": {
+      "data/hard-corpus-resumed.json": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+      "data/nested-forkjoin-new-batch38.json": "5ff191bfccddf86e0d46baa5dbafe488756ecfa7a3dfaaa282aae621cf99559b",
+      "data/shallow-profile-gold-batch44.json": "bda8317127310503366bf717c07f983826e5213ee62052c556a6454b5915878f",
+      "data/shallow-heldout-batch44.json": "c1a4ce0fcefcdcba82269e375057bc8828a30d7e04d19b1dd2ffcbaed51d2af1",
+      "data/priority-gold-batch42.txt": "022f174020e7da9632a706f77301d79b5d2591d82bdbcd9417c24d226309ae23",
+      "data/resource-cliques-batch31.json": "2d6930307fbd7a6c166212249e18b397834c930e08b4a4c423f240b9e9669747",
+      "data/numeric-controls-batch42.json": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+      "data/numeric-parallel-batch42.json": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+      "data/numeric-parallel-valid-batch42.json": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+      "data/scaled-serial-controls-batch42.json": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473"
+    }
+  }
+}

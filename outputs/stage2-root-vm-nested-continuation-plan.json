@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791777754.3525255,
+  "manifest_sha256": "26c41d04eebb229629319749bde62e0f1853751fc0e7d86d6d3d7520c7f392b5",
+  "runner_sha256": "fc382f300726a54603f195f6e67da34219702980705c38e8b6369a82af33fa92",
+  "verified_cached_C": 586,
+  "planned_missing_C": 38,
+  "planned_errors": 56,
+  "planned_CLI": 10,
+  "new_C_oracles": 5,
+  "authorization": "One actual frozen continuation only, preserve terminal result. If all624/56/10 completed then independent root full-byte audit and fullCTest/UBSan; ordinary/default unchanged.",
+  "scope": "Root reviewed complete runner diff and cached original source/meta/input/reference/output/raw lineage; only classification uses actual emitted budget mode. Reuse586 actual observations, execute38 missing identities. First terminal exit1 immutable; no Runtime/C/Metadata/gold changes or fabricated completed rows."
+}

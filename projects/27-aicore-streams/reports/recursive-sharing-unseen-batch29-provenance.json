@@ -1,0 +1,11 @@
+{
+  "input_sha256": "06b21c4ef2f6d63fa69d77bcf90838434b510e74a50c722452f928f439d26a01",
+  "generator_sha256": "18304e7d5ed633f9cd89d5c689629a3e09895a0ab0ebfd15536ccc3b691b0122",
+  "baseline_source_sha256": "b52f3b8e2b54e0f8bb4d1f0a896018e0139b38f2b8a0f65a7c1048d2c9477925",
+  "after_source_sha256": "1df00a5d1e229337dea657a946a1378a09d4eacdbf203425f6a1a0485938d7bd",
+  "records": 18,
+  "nodes_range": [
+    46,
+    766
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "source_only": true,
+  "source_plan_sha256": "113f34a8e4b0480c8273793658f95b8e677a91711c1b4218efeeab993f0f6439",
+  "frozen_files": 36,
+  "marker_blocks": 211,
+  "byte_exact_original_source": true,
+  "return_inventory_rows": 119,
+  "stage_ids": 107,
+  "bounds": {
+    "metadata": 16,
+    "states": 2,
+    "array_elements": 4096,
+    "stage_counters": 256
+  },
+  "review": [
+    "Only fixed global observer storage changes; no algorithm input, fee, comparator, calls, budgets or default changes",
+    "Source returns wrapped and directly counted; successful lambda/comparator returns explicitly excluded; cut/r48 exhausted separate",
+    "Helper/whole reset before each actual call; serializers after execution; sampling drops and observer errors explicit",
+    "Driver strictly compares every nonobserver field to saved original12; every original complete plan needs root replay; observation timing not performance"
+  ],
+  "authorized_next": "One isolated observer compile+original12+strict equality after current19 cost window is terminal; no baseline/control/63/full rerun. Full trace coverage is not claimed with16/2 sampling."
+}

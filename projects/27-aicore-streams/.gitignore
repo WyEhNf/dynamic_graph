@@ -1,0 +1,7 @@
+/build/
+/build-batch*/
+/.cache/
+/research/oracle-env/
+*.exe
+*.o
+*.a

@@ -1,0 +1,283 @@
+"""Optional Transformers adapter: actual tokenizer and first generated-token timing."""
+import time
+import re
+from dataclasses import dataclass
+
+
+SYSTEM = 'You are a Python developer. Implement the current task. Existing source files are context, not answers: replace the target placeholder with a working implementation. Return only the complete target Python file inside one python code block.'
+
+REQUIREMENTS_SYSTEM = SYSTEM + ' Satisfy every requirement, including invalid inputs, exception types, empty inputs, ordering, and dependency use. Check each requirement before returning the code.'
+CONCISE_SYSTEM = REQUIREMENTS_SYSTEM + ' Keep the implementation concise. Do not include example usage, demonstrations, print calls, or a main block.'
+
+
+def expanded_kv_sdpa(module, query, key, value, attention_mask, dropout=0.0,
+                     scaling=None, is_causal=None, **kwargs):
+    """Allow efficient Windows SDPA kernels without native GQA support.
+
+    The installed Windows torch build has no FlashAttention kernel. Native GQA
+    otherwise restricts dispatch to the quadratic-memory math implementation.
+    Expanding only K/V permits regular SDPA fused kernels; never force a kernel
+    that is unavailable on the current device.
+    """
+    import torch
+    from transformers.integrations.sdpa_attention import repeat_kv
+    groups = query.shape[1] // key.shape[1]
+    key, value = repeat_kv(key, groups), repeat_kv(value, groups)
+    if attention_mask is not None and attention_mask.ndim == 4:
+        attention_mask = attention_mask[:, :, :, :key.shape[-2]]
+    if is_causal is None:
+        is_causal = query.shape[2] > 1 and attention_mask is None and getattr(module, 'is_causal', True)
+    result = torch.nn.functional.scaled_dot_product_attention(
+        query, key, value, attn_mask=attention_mask, dropout_p=dropout,
+        scale=scaling, is_causal=is_causal)
+    return result.transpose(1, 2).contiguous(), None
+
+
+class ModelTokenCounter:
+    def __init__(self, tokenizer):
+        self.tokenizer = tokenizer
+        self.name = 'model-tokenizer:' + tokenizer.name_or_path
+
+    def count(self, text):
+        return len(self.tokenizer.encode(text, add_special_tokens=False))
+
+    def count_many(self, texts):
+        if not texts:
+            return []
+        return [len(ids) for ids in self.tokenizer(texts, add_special_tokens=False,
+                                                 padding=False, truncation=False)['input_ids']]
+
+
+@dataclass
+class Generation:
+    output: str
+    ttft_ms: float
+    elapsed_ms: float
+    input_tokens: int
+    output_tokens: int
+
+
+class LocalModel:
+    def __init__(self, path, device='auto', threads=4, attention='auto', prompt_policy='concise-v3',prefill_chunk=0,quantization='none',kv_cache_policy='resident',kv_offload_min_tokens=16384):
+        if kv_cache_policy not in {'resident','offloaded','reclaimed'}:
+            raise ValueError('unsupported KV cache policy')
+        if type(kv_offload_min_tokens) is not int or kv_offload_min_tokens < 0:
+            raise ValueError('KV offload threshold must be a nonnegative integer')
+        self.kv_cache_policy = kv_cache_policy
+        self.kv_offload_min_tokens = kv_offload_min_tokens
+        from .prepare_model import verify_snapshot
+        self.manifest=verify_snapshot(path)
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer, AttentionInterface
+        torch.set_num_threads(threads)
+        self.torch = torch
+        self.device = ('cuda' if torch.cuda.is_available() else 'cpu') if device == 'auto' else device
+        self.device_type = torch.device(self.device).type
+        if self.kv_cache_policy != 'resident' and self.device_type != 'cuda':
+            raise ValueError('nonresident KV cache policies require CUDA')
+        if quantization not in {'none','nf4'}: raise ValueError('unsupported quantization mode')
+        if quantization!='none' and self.device_type!='cuda': raise ValueError('this optional NF4 evaluation backend requires CUDA')
+        self.quantization=quantization
+        self.prompt_policy = prompt_policy
+        if prefill_chunk<0: raise ValueError('prefill chunk must be nonnegative')
+        self.prefill_chunk = prefill_chunk
+        self.attention = 'sdpa'
+        if attention == 'expanded' or (attention == 'auto' and self.device_type == 'cuda'
+                                      and not torch.backends.cuda.is_flash_attention_available()):
+            from transformers.masking_utils import AttentionMaskInterface, ALL_MASK_ATTENTION_FUNCTIONS
+            AttentionInterface.register('context-expanded-sdpa', expanded_kv_sdpa)
+            AttentionMaskInterface.register('context-expanded-sdpa', ALL_MASK_ATTENTION_FUNCTIONS['sdpa'])
+            self.attention = 'context-expanded-sdpa'
+        self.tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True, trust_remote_code=False)
+        dtype = torch.float16 if self.device_type == 'cuda' else torch.float32
+        load_options={}
+        if quantization=='nf4':
+            from transformers import BitsAndBytesConfig
+            load_options={'quantization_config':BitsAndBytesConfig(load_in_4bit=True,bnb_4bit_quant_type='nf4',
+                          bnb_4bit_use_double_quant=True,bnb_4bit_compute_dtype=dtype),
+                          'device_map':{'':str(torch.device(self.device))},'low_cpu_mem_usage':True}
+        self.model = AutoModelForCausalLM.from_pretrained(path, local_files_only=True,
+                     trust_remote_code=False, dtype=dtype, attn_implementation=self.attention,**load_options)
+        if quantization=='none': self.model=self.model.to(self.device)
+        self.model.eval()
+        self.counter = ModelTokenCounter(self.tokenizer)
+
+    def prompt(self, context, task):
+        policy = getattr(self, 'prompt_policy', 'original-v1')
+        system = CONCISE_SYSTEM if policy == 'concise-v3' else REQUIREMENTS_SYSTEM if policy == 'requirements-v2' else SYSTEM
+        if policy in {'requirements-v2','concise-v3'}:
+            clauses = re.split(r'(?<=[.!?。])\s+|\n+', task.strip())
+            task = 'Every requirement below is mandatory:\n' + '\n'.join('- ' + x for x in clauses if x)
+        return self.tokenizer.apply_chat_template([
+            {'role': 'system', 'content': system},
+            {'role': 'user', 'content': context + '\n\nCURRENT TASK:\n' + task}],
+            tokenize=False, add_generation_prompt=True)
+
+    def critique_prompt(self, context, task, draft):
+        return self.tokenizer.apply_chat_template([
+            {'role':'system','content':'You are a Python code reviewer. The public task specifies required behavior; context is evidence. Analyze the draft without executing it. Do not use hidden tests or invent extra requirements. Return concise review notes, not corrected code. Trace every requirement against concrete paths: validation before early returns, all input entries, ordering and duplicates, mutation and aliases, existing exports, and required helper calls at the correct validation boundary. Explain concrete mistakes and corrections. If no issue is found, say so.'},
+            {'role':'user','content':context+'\n\nPUBLIC TASK:\n'+task+'\n\nDRAFT:\n'+draft}],
+            tokenize=False,add_generation_prompt=True)
+
+    def examples_prompt(self, context, task, target_source='', protocol='literal-v17'):
+        if protocol == 'public-contract-v22':
+            from .public_examples import declared_functions
+            allowed = sorted(declared_functions(target_source, task))
+            import json
+            schema = {'function': allowed[0] if allowed else 'PUBLIC_FUNCTION',
+                      'args_python': '[3]', 'expected_python': '6'}
+            system = ('Generate one to three small examples using ONLY the public task and context. '
+                      'The target may be a comment-only placeholder: the public task declares the function to create. '
+                      'Return ONLY a JSON array, with no prose or code fence. Every object has function and args_python, '
+                      'and exactly one of expected_python or raises. The function must be one of the allowed names. '
+                      'args_python is a JSON STRING containing a Python LIST of positional arguments: [] for no arguments, '
+                      '[42] for one, [42, 5] for two. Nested tuple/dictionary literals are allowed inside that list. '
+                      'expected_python is a JSON STRING containing the exact Python literal result, including tuples where required. '
+                      'raises must be ValueError, TypeError, KeyError or IndexError. No Python expressions, calls, or variable references. '
+                      'Choose normal and explicitly required invalid-input/empty/ordering examples; derive expectations carefully. '
+                      'You cannot see a draft, hidden tests or an oracle. '
+                      'FORMAT ONLY (not an actual example): ' + json.dumps([schema]))
+            user = ('ALLOWED FUNCTION NAMES: ' + json.dumps(allowed) +
+                    '\nPUBLIC TARGET FILE BEFORE IMPLEMENTATION:\n' + target_source +
+                    '\nCONTEXT:\n' + context + '\nPUBLIC TASK:\n' + task)
+            return self.tokenizer.apply_chat_template([
+                {'role': 'system', 'content': system}, {'role': 'user', 'content': user}],
+                tokenize=False, add_generation_prompt=True)
+        if protocol != 'literal-v17':
+            raise ValueError('Unknown public-example protocol')
+        return self.tokenizer.apply_chat_template([
+            {'role':'system','content':'Generate small concrete examples from the public Python task and target file. You cannot see a candidate, hidden tests or an oracle. Return only a JSON array of one to six objects. Each object has function (a public function defined in the target file), args_python (a string containing a Python tuple literal), and exactly one of expected_python (a string containing a Python literal result) or raises (ValueError, TypeError, KeyError or IndexError). Use only literal data, no Python expressions or calls. Cover normal behavior and explicit edge cases such as invalid inputs, duplicates, ordering, empty input and cycles only where the task requires them. Derive expected results carefully from the public task; do not invent requirements.'},
+            {'role':'user','content':context+'\n\nPUBLIC TASK:\n'+task}],
+            tokenize=False,add_generation_prompt=True)
+
+    def review_prompt(self, context, task, draft, feedback=None, review_notes=None, public_examples=None):
+        # Only caller-visible requirements/context and the candidate are used.
+        # Hidden evaluator outcomes/answers never enter. Optional public-example
+        # feedback comes only from bounded model-generated data and the draft.
+        clauses=re.split(r'(?<=[.!?。])\s+|\n+',task.strip())
+        review='\n'.join('- '+clause for clause in clauses if clause)
+        hints=''
+        if feedback:
+            hints='\n\nSTATIC REVIEW HINTS (visible-source heuristics, not test results):\n'+'\n'.join('- '+item for item in feedback)
+        if review_notes:
+            hints+='\n\nMODEL-GENERATED REVIEW NOTES (may be wrong; verify against the public requirements):\n'+review_notes
+        if public_examples:
+            hints+='\n\n'+public_examples
+        return self.tokenizer.apply_chat_template([
+            {'role':'system','content':CONCISE_SYSTEM+' You are reviewing a draft. Trace each requirement against the code. Correct any missing validation, input mutation, return identity, ordering, dependency calls, and existing-export preservation. Return the corrected complete target file even if the draft is already correct.'},
+            {'role':'user','content':context+'\n\nMANDATORY REQUIREMENTS:\n'+review+'\n\nDRAFT TO REVIEW:\n'+draft+hints+'\n\nCheck every requirement and return the complete corrected target file.'}],
+            tokenize=False,add_generation_prompt=True)
+
+    def sync(self):
+        if self.device_type == 'cuda':
+            self.torch.cuda.synchronize(self.device)
+
+    def generate(self, prompt, max_new_tokens=256):
+        generated, _ = self._generate(prompt, max_new_tokens)
+        return generated
+
+    def generate_evidence(self, prompt, max_new_tokens=256, *, thinking=False,
+                          sampling=None, seed=None, max_seconds=None, reasoning_budget=None):
+        """Generate an EOS-checked candidate, retaining reasoning and exact token IDs.
+
+        The legacy generate API remains greedy and returns Generation. This opt-in
+        path supports a thinking model without mistaking its draft for final code.
+        A wall-time stop or token cap never promotes an unfinished answer.
+        """
+        from .generation_protocol import generation_record, validate_sampling
+        options = validate_sampling(sampling)
+        if seed is not None:
+            if type(seed) is not int or not 0 <= seed < 2**63:
+                raise ValueError('seed must be an integer in [0, 2**63)')
+            self.torch.manual_seed(seed)
+            if self.device_type == 'cuda': self.torch.cuda.manual_seed_all(seed)
+        if max_seconds is not None:
+            if isinstance(max_seconds, bool) or not isinstance(max_seconds, (int, float)) or not 0 < max_seconds < float('inf'):
+                raise ValueError('max_seconds must be finite and positive')
+            from transformers import MaxTimeCriteria, StoppingCriteriaList
+            options['stopping_criteria'] = StoppingCriteriaList([
+                MaxTimeCriteria(max_time=max_seconds, initial_timestamp=time.time())])
+        control=None
+        if reasoning_budget is not None:
+            if not thinking: raise ValueError('reasoning budget requires thinking mode')
+            from transformers import LogitsProcessorList, StoppingCriteriaList
+            from .reasoning_budget import ReasoningBudget
+            closing=self.tokenizer.convert_tokens_to_ids('</think>')
+            if self.tokenizer.convert_ids_to_tokens(closing)!='</think>':
+                raise ValueError('model tokenizer has no explicit thinking boundary token')
+            control=ReasoningBudget(closing,reasoning_budget,max_new_tokens)
+            options['logits_processor']=LogitsProcessorList([control])
+            criteria=options.setdefault('stopping_criteria',StoppingCriteriaList())
+            criteria.append(control.answer_limit_reached)
+        total_budget=max_new_tokens if control is None else reasoning_budget+1+max_new_tokens
+        generated, ids = self._generate(prompt, total_budget, options)
+        result=generation_record(generated, ids, self.tokenizer,
+                                 self.model.generation_config.eos_token_id,
+                                 thinking=thinking, seed=seed, sampling=sampling)
+        if control is not None:
+            result.update(reasoning_budget=reasoning_budget,answer_budget=max_new_tokens,
+                          forced_reasoning_end=bool(control.forced_positions),
+                          forced_output_positions=control.forced_positions,
+                          sampled_output_tokens=len(ids)-len(control.forced_positions),
+                          decoding_passes=1,kv_cache_reused_across_boundary=True)
+        return result
+
+    def _generate(self, prompt, max_new_tokens=256, decode_options=None):
+        if type(max_new_tokens) is not int or max_new_tokens < 1:
+            raise ValueError('max_new_tokens must be a positive integer')
+        owner = self
+        class TokenClock:
+            first = None
+            prompt_seen = False
+            def put(self, value):
+                if not self.prompt_seen:
+                    self.prompt_seen = True
+                    return
+                if self.first is None and value.numel():
+                    owner.sync()
+                    self.first = time.perf_counter_ns()
+            def end(self):
+                pass
+        clock = TokenClock()
+        self.sync()
+        start = time.perf_counter_ns()
+        encoded = self.tokenizer(prompt, return_tensors='pt').to(self.device)
+        input_count = encoded.input_ids.shape[1]
+        limit = self.model.config.max_position_embeddings
+        if input_count + max_new_tokens > limit:
+            raise ValueError(f'prompt exceeds model context: {input_count}+{max_new_tokens}>{limit}')
+        with self.torch.inference_mode():
+            generation_kwargs={}
+            cache_policy = getattr(self, 'kv_cache_policy', 'resident')
+            offload = (self.device_type == 'cuda' and cache_policy != 'resident'
+                       and input_count > getattr(self, 'kv_offload_min_tokens', 16384))
+            if self.prefill_chunk and input_count>self.prefill_chunk:
+                from transformers import DynamicCache
+                cache=DynamicCache(config=self.model.config, offloading=offload)
+                # Leave a final nonempty chunk for generate's first step, so
+                # its callback measures the same first generated token. The
+                # cache contains only earlier prompt tokens; none are dropped.
+                for offset in range(0,input_count-self.prefill_chunk,self.prefill_chunk):
+                    end=min(offset+self.prefill_chunk,input_count-self.prefill_chunk)
+                    self.model(input_ids=encoded.input_ids[:,offset:end],
+                               attention_mask=encoded.attention_mask[:,:end],
+                               past_key_values=cache,use_cache=True,return_dict=True,logits_to_keep=1)
+                    if offload and cache_policy == 'reclaimed':
+                        # Finish pending transfers before releasing only unused
+                        # allocator blocks. Live K/V and input tokens remain.
+                        self.sync()
+                        self.torch.cuda.empty_cache()
+                generation_kwargs['past_key_values']=cache
+            if not generation_kwargs and offload:
+                generation_kwargs['cache_implementation']='offloaded'
+            options = {'do_sample': False}
+            options.update(decode_options or {})
+            output = self.model.generate(**encoded, max_new_tokens=max_new_tokens, **options,
+                                        streamer=clock, pad_token_id=self.tokenizer.eos_token_id,**generation_kwargs)
+        self.sync()
+        end = time.perf_counter_ns()
+        if clock.first is None:
+            raise ValueError('no generated token')
+        ids = output[0, input_count:]
+        return (Generation(self.tokenizer.decode(ids, skip_special_tokens=True),
+                           (clock.first-start)/1e6, (end-start)/1e6, input_count, len(ids)), ids.tolist())

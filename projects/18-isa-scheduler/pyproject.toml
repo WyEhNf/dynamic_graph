@@ -1,0 +1,11 @@
+[project]
+name = "hackathon-18-isa-scheduler"
+version = "0.3.0"
+description = "Bounded-distance instruction scheduling research scaffold"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.hackathon]
+problem = 18
+runtime = "Python standard library only; run from project root"
+

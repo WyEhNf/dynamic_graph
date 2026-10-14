@@ -1,0 +1,154 @@
+{
+  "scope": "self-generated local tests; no official hidden-test claim",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "summary": {
+    "total": 153,
+    "passed": 153,
+    "failed": 0
+  },
+  "returned_plan_model_agreements": 152,
+  "expected_infeasible_cases": 1,
+  "official_example_solver_results": [
+    {
+      "name": "official_1",
+      "T": 365,
+      "peak_memory": 320,
+      "solve_us": 99
+    },
+    {
+      "name": "official_2",
+      "T": 122,
+      "peak_memory": 55,
+      "solve_us": 33
+    },
+    {
+      "name": "official_3_extra_event",
+      "T": 150,
+      "peak_memory": 45,
+      "solve_us": 26
+    }
+  ],
+  "scales": [
+    {
+      "n": 0,
+      "cases": 1,
+      "passed": 1,
+      "solve_us_median": 0,
+      "solve_us_max": 0,
+      "solve_us_mean": 0,
+      "candidates_max": 0,
+      "T_max": 0,
+      "peak_max": 0
+    },
+    {
+      "n": 1,
+      "cases": 1,
+      "passed": 1,
+      "solve_us_median": 74,
+      "solve_us_max": 74,
+      "solve_us_mean": 74,
+      "candidates_max": 1,
+      "T_max": 0,
+      "peak_max": 0
+    },
+    {
+      "n": 3,
+      "cases": 2,
+      "passed": 2,
+      "solve_us_median": 29.5,
+      "solve_us_max": 33,
+      "solve_us_mean": 29.5,
+      "candidates_max": 11,
+      "T_max": 150,
+      "peak_max": 55
+    },
+    {
+      "n": 4,
+      "cases": 24,
+      "passed": 24,
+      "solve_us_median": 53.0,
+      "solve_us_max": 135,
+      "solve_us_mean": 61.08,
+      "candidates_max": 49,
+      "T_max": 4000000000,
+      "peak_max": 79
+    },
+    {
+      "n": 6,
+      "cases": 1,
+      "passed": 1,
+      "solve_us_median": 99,
+      "solve_us_max": 99,
+      "solve_us_mean": 99,
+      "candidates_max": 11,
+      "T_max": 365,
+      "peak_max": 320
+    },
+    {
+      "n": 16,
+      "cases": 25,
+      "passed": 25,
+      "solve_us_median": 868,
+      "solve_us_max": 1453,
+      "solve_us_mean": 706.32,
+      "candidates_max": 157,
+      "T_max": 16000000000,
+      "peak_max": 228
+    },
+    {
+      "n": 64,
+      "cases": 25,
+      "passed": 25,
+      "solve_us_median": 3737,
+      "solve_us_max": 6309,
+      "solve_us_mean": 3314.48,
+      "candidates_max": 240,
+      "T_max": 64000000000,
+      "peak_max": 676
+    },
+    {
+      "n": 128,
+      "cases": 1,
+      "passed": 1,
+      "solve_us_median": 6113,
+      "solve_us_max": 6113,
+      "solve_us_mean": 6113,
+      "candidates_max": 220,
+      "T_max": 100,
+      "peak_max": 256
+    },
+    {
+      "n": 256,
+      "cases": 25,
+      "passed": 25,
+      "solve_us_median": 12809,
+      "solve_us_max": 23451,
+      "solve_us_mean": 12164.72,
+      "candidates_max": 240,
+      "T_max": 256000000000,
+      "peak_max": 1504
+    },
+    {
+      "n": 1024,
+      "cases": 24,
+      "passed": 24,
+      "solve_us_median": 12175.0,
+      "solve_us_max": 25275,
+      "solve_us_mean": 12057.04,
+      "candidates_max": 66,
+      "T_max": 1024000000000,
+      "peak_max": 5661
+    },
+    {
+      "n": 4096,
+      "cases": 24,
+      "passed": 24,
+      "solve_us_median": 29280.0,
+      "solve_us_max": 60367,
+      "solve_us_mean": 29960.33,
+      "candidates_max": 36,
+      "T_max": 4096000000000,
+      "peak_max": 20798
+    }
+  ]
+}

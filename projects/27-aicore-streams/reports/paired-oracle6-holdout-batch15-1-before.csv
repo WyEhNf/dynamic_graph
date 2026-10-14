@@ -1,0 +1,13 @@
+name,n,pass,valid,deadline,T,peak,solve_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,error
+"parallel_oracle_n6_seed20271018",6,0,0,117,0,0,218,13,0,1,44,57,30,2,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"parallel_oracle_n6_seed20271019",6,0,0,105,0,0,170,21,0,1,61,82,87,4,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"parallel_oracle_n6_seed20271020",6,0,0,57,0,0,233,35,0,1,38,73,171,7,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"parallel_oracle_n6_seed20271021",6,0,0,53,0,0,248,36,0,1,35,71,226,10,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"parallel_oracle_n6_seed20271022",6,0,0,82,0,0,195,30,0,1,52,82,129,6,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"parallel_oracle_n6_seed20271023",6,1,1,94,94,17,57,18,2,1,23,41,0,0,""
+"parallel_oracle_n6_seed20271024",6,1,1,75,75,38,98,27,3,1,25,52,0,0,""
+"parallel_oracle_n6_seed20271025",6,1,1,93,93,19,65,21,4,1,25,46,0,0,""
+"parallel_oracle_n6_seed20271026",6,1,1,54,54,24,51,13,7,1,31,44,0,0,""
+"parallel_oracle_n6_seed20271027",6,0,0,74,0,0,201,30,0,1,52,82,108,4,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+"parallel_oracle_n6_seed20271028",6,1,1,103,103,32,70,21,3,1,27,48,0,0,""
+"parallel_oracle_n6_seed20271029",6,0,0,65,0,0,237,45,0,1,37,82,183,8,"No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"

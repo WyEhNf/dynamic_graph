@@ -1,0 +1,875 @@
+\documentclass[UTF8,fontset=fandol,11pt]{ctexart}
+\usepackage[a4paper,margin=2.1cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,longtable,tabularx,xurl}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\title{赛题27续研：从显存前沿到消费者闭包调度}
+\author{本地独立实现与自建测试}
+\date{2026年10月11日；独立于冻结R31报告}
+\begin{document}
+\maketitle
+\begin{abstract}
+续研针对已有独立可行见证、但旧求解器仍失败的69个记录。
+先核对2025--2026任务图内存调度、异构调度及CP-SAT原始资料，
+再实现并验证序列内存搜索、未来持出必要界、消费者闭包宏和共享输出消费者组。
+完整回溯和通用CP-SAT短预算没有恢复困难图；消费者宏恢复4个记录，
+宏内消费与严格嵌套结构再恢复2个，并在新36结构图增加22个可行计划。
+恢复路径均未回溯，因而生产候选采用有界贪心宏，保留独立Event模型最终过滤。
+本文保存负结果与模型迁移边界，不把搜索耗尽或外部UNKNOWN解释成不可行。
+R36相对R31三轮202配对恢复4例、线程CPU中位增加9.74\%；
+R39相对R36再恢复2例、线程CPU增加3.14\%。
+R42另修复完整非负int64边界，两旧模型的共同溢出由UBSan独立复现。
+R43在相同搜索路径上减少存储与顺序拼接开销；202逐配对CPU改善中位2.06\%，36结构墙时略增。
+R44、R45、R48、R51继续分别恢复2、2、1、1条原困难记录，
+当前默认R51为145/202，新48持出仍42/48，57+6共63条已知可行未解。
+最新1099直接R48回归、625条大整数固定计划金标及实际默认14项CTest通过。
+R51三轮困难全成本CPU逐配对中位减少6.24\%，第三轮增加6.07\%；
+持出CPU略降而墙时增加0.46\%，不称稳定通用加速。
+新批12个trial保存实际宿主CPU/RAM采样，旧R31打开文件保持不变。
+\end{abstract}
+
+\section{目标、约束与证据边界}
+官方目标先满足deadline，再按Compute完成时刻的最大值$T$和峰值显存字典序优化。
+每任务依次执行Wait、Compute、Record；同刻按压缩后的流编号尝试。
+Compute开始同时分配workspace和自身output，结束释放workspace。
+生产者output在最后一个\emph{直接}消费者Compute结束时释放，sink输出持有到全图结束。
+额外Event只约束时刻，不能改变数据依赖或释放规则。
+最终计划都经过提交内模型和独立实现\path{src/simulator.cpp}一致性验证。
+
+提交仍为\path{solution/solution.cpp}，只依赖官方接口转录头和标准库。
+没有真实NPU和官方测试包；所有输入、witness、独立oracle与结果均是本地测试，
+不称作官方评分。官方头尚为转录，平台求解CPU时限及RAM额度没有公开数据。
+旧R31的1193个记录包含重复参数、样例及一个预期不可行记录，
+不能把记录数当成独立拓扑数，不能把“按预期通过”当成全部输出合法可行计划。
+
+\section{经典方法与近期原始研究}
+HEFT\cite{heft}提供异构任务优先级与最早插入思想；serial/parallel
+schedule generation\cite{kolisch}提醒我们构造策略的可达集合不同。
+内存约束DAG研究\cite{marchal}则把任务输出持有引入可行性判断。
+本项目保留原始边、两个核资源池和Event步骤，不能仅用通用调度时刻替代计划。
+
+Jin等的computation graph模型含scratch/output\cite{dominant}，比允许重算、换页的模型
+更接近本题串行显存。原模型在sink完成后释放输出；仅在诊断图添加连接所有sink的
+零权重虚拟terminal，才能保持本题sink持有到$T$。该terminal不提交为虚构算子。
+论文的isolated子图线性化要求完整曲线dominance，最小peak本身不够；
+外部生产者/消费者必须符合边界定义。它还证明一般权重out-tree/pumpkin亦强NP难，
+不能由低outdegree SP算法外推所有困难图。
+
+Fradet、Girault、Honorat的IPDPS 2025工作\cite{fradet}
+从序列内存顺序构造动态并行list scheduling，并检查剩余序列内存预算。
+作者讲义说明图归约和分支界定；公布MASTAG源码地址，但本次访问被站点保护拒绝，
+没有把该源码记为已运行的复现。
+该方法提示先找到合法内存前沿，再改善并行；其任务峰值/净影响抽象的保证
+不能不经证明直接搬到本题持出与Event模型。
+
+Kulagina等的CCGrid 2025工作\cite{adaptive}涉及处理器局部内存、边文件、
+通信缓冲、驱逐和重算，且公布Zenodo代码/数据。
+内存优先级有参考价值；驱逐输出、按消费者开始释放或复制局部文件
+会改变本题语义，故不采用这些机制。
+
+2026年的gap-aware异构调度\cite{gap}用主动skip等待下次完成，扩展工作保守调度的可达顺序。
+本题可通过额外Event探索这种等待，但其最优覆盖证明不含本题输出存活和Event成本。
+论文消除传递冗余边的处理也不能直接采用：本题直接消费者决定内存释放及跨流同步。
+本次不训练神经网络，不引入GPU依赖。
+
+Google官方CP-SAT RCPSP例程\cite{ortools}用interval、precedence和cumulative建模。
+常规RCPSP只计Compute占用会漏掉输出持有；任意开始时刻的解也未必可由
+本题eager流执行器实现。因此外部求解器先用于严格限定的串行内存oracle，
+不能把它的通用调度解直接称作合法提交。
+
+\section{独立串行位置oracle}
+把节点$i$在串行顺序的位置写为$p_i\in[0,n-1]$，所有位置互异，
+每条原始边$(i,j)$要求$p_i+1\le p_j$。
+workspace区间为$[p_i,p_i+1)$；output区间为
+\[
+ [p_i,\ell_i),\qquad
+ \ell_i=\begin{cases}\max_{j\in\mathrm{out}(i)}(p_j+1),&\mathrm{out}(i)\ne\varnothing,\\
+ n,&\mathrm{out}(i)=\varnothing.\end{cases}
+\]
+对两类区间使用显存cumulative约束，正好计入本节点workspace与output的同时分配。
+这是\emph{串行}模型：真实$T=\sum_i t_i$，单流不产生Event，
+内存峰值只依赖顺序而不依赖真实持续时间。
+外部INFEASIBLE也仅说明该串行固定预算模型无解，不证明并行deadline无解。
+
+40个任意小DAG、3886个全部拓扑顺序，对真实64位时间区间和单位位置区间核对，峰值均相同。
+另32个任意小图、96个容量判定，与独立全子集最小peak核对，CP-SAT判定一致。
+13个原失败记录满足$n\le200$，各5秒、单worker求解，全部UNKNOWN；
+另56个按诊断规模范围排除，仍完整保留原压力集。
+没有把原witness用作hint，也没有更改deadline。
+
+隔离环境为\path{research/oracle-env/}，OR-Tools版本9.15.6755，
+完整依赖锁见\path{research/oracle-requirements-lock.txt}。
+这些库没有进入单文件提交。
+
+\section{前沿搜索与未来持出必要界}
+完成集合唯一决定原图ready集合、剩余直接消费者计数和串行持出内存。
+完整bitset作为状态键，只有完全探索而失败的状态才进入失败集合。
+预算中止不写不可行证书。
+
+若ready任务$A$的本次分配放得下，且其output不大于它将释放的父输出总和，
+可提前完成$A$：被释放的父输出都只剩$A$一个未完成消费者，其他任务不会使用它们；
+用不大的$A$输出替换这些输出，不增加后续持有，且提前满足依赖不会破坏原序列。
+这只保持固定容量下的\emph{可行性}，不保证最小peak，因此不会声称是一条峰值最优归约。
+
+未来必要界进一步考虑：若已完成生产者$p$的某个直接消费者是未完成$i$或$i$的后代，
+则$p$输出必然活到$i$Compute期间。
+令$H_i$为这类已完成生产者，$S$为已完成sink，$U_i$为未完成的直接父节点，则
+\[
+ B_i=W_i+O_i+\sum_{p\in H_i\cup S\cup U_i}O_p.
+\]
+三个集合去重；已完成直接父输出已包含在$H_i$。
+若$B_i>M$，当前串行前缀无法完成。
+已释放的输出不可能对未完成$i$满足该祖先条件，否则其消费者不可能已经完成。
+所有加法使用64位安全范围/饱和逻辑，不把不同时存活的资源合成互斥关系。
+40小DAG全部拓扑顺序的99781个前缀/未来节点检查均满足$B_i$不高估真实未来分配。
+
+R32/R33的完整有界前沿回溯均通过640项DP、独立Event及中止测试，但没有恢复原69失败。
+51个适用规模记录均预算中止。这两批未推广；失败记录完整保留。
+
+\section{消费者宏与生产候选}
+若消费者自身output小于直接父输出总和，把它及未完成祖先按原始拓扑顺序完成，
+构成一个候选宏。宏每一步都使用原始workspace/output分配与直接消费者结束释放，
+不会增删数据边。按真实最终live、过程peak排序后尝试。
+完整诊断搜索仍保留所有原单节点分支；固定宏内部顺序只是一种分支优先级，
+不能声称覆盖全部可行顺序。
+
+R34单消费者宏找回3个旧失败。R35再加最多48个共享输出亲和度较高的消费者对宏，
+新增一个恢复。亲和度来自原始共同生产者，较低fanout获得较高单位权重；
+消费者对仅帮助选择顺序，不改变生命周期。
+所有恢复路径的失败状态数均为0，说明有效方案沿第一条宏路径完成。
+因此R36生产候选用单消费者贪心宏，再用消费者对贪心宏，
+避免为剩余失败图支付没有观察到收益的回溯成本。
+任意贪心停止都明确属于策略/预算中止，不能当作不可行证明。
+
+只在旧R31所有策略失败后调用新方法，规模限$n\le768$、搜索工作上限8M。
+合法串行顺序再尝试单流与少量并行流映射，由独立模型过滤后比较$T$和peak。
+原先已有可行结果的选择路径保持，因此恢复收益和共同可行质量用不同分母。
+
+\begin{longtable}{L{0.8cm}L{5.1cm}L{1.9cm}L{6.0cm}}
+\toprule 批次 & 改动 & 原69恢复 & 结论 \\\midrule\endfirsthead
+\toprule 批次 & 改动 & 原69恢复 & 结论 \\\midrule\endhead
+R32 & 完成集合记忆和安全释放归约 & 0 & 未推广；51适用记录全部耗尽预算。\\
+R33 & 未来持出必要界、外部串行CP-SAT & 0 & 数学/小图验证通过，困难图短预算仍未解。\\
+R34 & 单消费者祖先闭包宏 & 3 & 三个恢复均通过独立Event模型。\\
+R35 & 共享输出消费者对宏 & 4 & 额外恢复1个；回溯增加CPU开销。\\
+R36 & 贪心宏生产路径 & 4 & 三轮配对保持四个恢复，已冻结默认；总CPU增加。\\
+\bottomrule
+\end{longtable}
+
+\section{宏内归约与严格嵌套结构（R37--R39）}
+R37在宏每次分配前，执行当前能放入且净output影响非正的ready任务，
+允许该消费者在名义闭包之外。全部实际动作记录并精确回滚，原依赖和释放仍不变。
+它解决了某些已就绪消费者被固定闭包遍历延后的问题，恢复一个70节点旧失败：
+$T=1454246$，peak1856。原四个恢复保持；960项独立subset容量对照与160预算控制通过。
+
+独立原始边结构分类发现R36的65失败中只有一个经分析terminal扩展的TTSP图；
+一般dense图高fanout，不能整体套用低degree FPT方法。
+R38识别更严格的整图嵌套fork/join：fork直接连接两子块入口和join，
+join仅消费fork与两子块terminal，外部进出边界全部检查。
+每个子块从入口执行到terminal，父fork输出因为原始fork到join的边一直保留。
+若父fork输出为$O_f$，子块峰值/终态输出为$(P_a,O_a),(P_b,O_b)$，则完整$a$再$b$为
+\[
+\max\{W_f+O_f,\ O_f+P_a,\ O_f+O_a+P_b,
+\ O_f+O_a+O_b+W_j+O_j\}.
+\]
+比较另一先后顺序即可选该连续子块候选族的最小峰值。
+这不证明dominance或任意子块交叠的最优性，最终Event模拟仍决定是否可行。
+它恢复766节点旧失败，$T=3687139$、peak3591、容量3646。
+R39仅把便宜结构候选放到新前沿搜索之前，避免已可构造结构解再支付无益搜索。
+识别边界本身线性，递归order向量拼接最坏$O(n\cdot depth)$；depth上限512、规模上限4096。
+
+新增36独立seed/拓扑记录，4--1534节点，包含不同随机分叉与scratch/output权重、
+0和大Event开销。witness来自96次独立随机DFS遍历后的原边区间核验，
+未使用候选递推生成。12小图另外穷举所有连续分支顺序和全部完成子集；
+36正例、3个边界负控制通过。R36/R37均14合法、R38/R39均36合法，共同14的$T$/peak保持。
+原202困难首轮功能为139合法/63未解，原137成功全部保持。
+R39三轮原202均137到139合法/63未解，共同137的$T$/peak保持、0丢失、0模型分歧。
+全solve wall中位24.731626到25.173202秒，线程CPU22.859375到23.578125秒（增加3.14\%），
+全CLI 26.174994到26.540709秒，峰值工作集316395520字节（约301.7MiB）。
+共同成功路径的轻微计时变化不解释为算法加速。
+共同63持续失败的solve wall15.727359到16.479054秒，
+线程CPU14.500000到15.515625秒；原65全部失败wall15.921203/CPU14.656250秒
+仅作为不同分母历史值列出。两个新恢复并未消除剩余失败的新增搜索成本。
+新36图三轮均14到36合法，共同14质量保持；wall1.985639到1.787678秒，
+线程CPU1.796875到1.593750秒（减少11.30\%），CLI2.188558到1.974526秒。
+新族的性能收益来自提前结构候选减少无效搜索，不能外推一般图。
+CTest5/5（0.99秒）、1120前沿检查、单文件无警告编译完成；
+979严格回归46.834秒全部按预期通过且质量不回退，144独立标尺/33证书通过。
+R39已冻结默认，历史R36配对分栏保留。累计1229记录1166按预期通过，
+含1个不可行预期控制；旧1193中1130通过，63有独立witness仍未解。
+
+\section{资源候选与扩大规模的负结果（R40）}
+R40把greedy宏的全部候选向量改为流式保留稳定最小$(final\_live,peak)$，
+平局保留原先第一个宏；所有宏仍依原顺序评估。
+用pending完成bitset替换较长节点序列的去重键。
+332条旧/新输入的直接双实现对照，贪心order、work、失败状态和中止标志完全相同；
+1120独立subset/Event/预算检查通过。
+另尝试对769--2048节点的旧失败追加单消费者宏与宏内归约，
+避开大fanout的平方亲和构造，仍保留8M搜索工作限额。
+该扩规模没有新增恢复，原69仍6合法/63未解，因此R40不推广，默认保持R39。
+1000独立sink的可行控制检查384层递归保护，在931392工作时明确策略中止，
+失败状态0；这种中止不能说成不可行证明。
+预处理、排序和undo没有完全纳入work计数，8M并非CPU墙时限。
+证据见\path{research/batch40/provenance.json}。
+存储改动与结构顺序显式emit另作纯资源候选R41，尚未完成性能测量，
+不把它与无质量收益的大图搜索混合推广。
+
+\section{实测、资源成本与尚未完成范围}
+新候选完整979个严格记录已按预期通过，无$T$及等$T$时peak回退；
+本次流程墙时49.395秒，属于功能回归而非配对性能证据。
+原69失败的单次功能运行变为4合法、65未解，全部内部/独立Event指标一致。
+202困难全量三轮交替配对每轮均由133合法/69未解变为137合法/65未解，
+共同133例的$T$/peak完全保持，0丢失、0模型分歧。
+1193总记录中1128按预期通过，含1个预期不可行控制；65仍有witness但未解。
+144独立最优标尺、33份证书、CTest 5/5（1.45秒）和单文件无警告编译通过。
+
+全202调用墙时中位24.110155到25.001174秒（增加3.70\%），
+线程CPU中位21.171875到23.234375秒（增加9.74\%），
+全CLI墙时25.944064到26.564670秒（增加2.39\%）。
+共同65个持续失败的调用墙时14.803591到16.144965秒，
+线程CPU12.984375到15.000000秒；分母与原69失败不同，不能直接混比。
+共同133例CPU 7.5625到7.4375秒的轻微变化来自相同旧路径计时，
+不解释为算法加速。恢复可行性支付了实际搜索成本。
+全CLI最大工作集316727296字节（约302.1MiB），包含解析、witness和独立验证。
+
+使用AMD Ryzen 9 8945HX、16物理核/32逻辑处理器、约31.3GiB主存、
+Windows、GCC15.2.0、CMake4.2.0、Python3.13.12。
+生产求解单线程；外部CP-SAT诊断单worker，未使用GPU。
+调用wall时间含系统抢占；Win32线程CPU为实际user+kernel累计，可能以15.625ms量化。
+全CLI内存包括JSON DOM、witness与独立验证，不等于求解器额外内存。
+共享机器负载、缓存和频率变化仍是计时限制。
+
+尚未取得全部已知有解图、并行全局最优、官方隐藏分数或真实NPU性能。
+约束搜索的规模与工作限额是真实限制，不用输入名称、生成族或witness规避困难记录。
+今后须扩大结构改变的新图，并对内存持出、核争抢、长距离fanout、多sink和Event等待组合验证。
+
+\section{后续可推进工作量}
+一名熟悉C++调度的开发者可按以下顺序推进：
+约2--3天实现宏的增量评估及流式最佳候选选择，降低重复闭包和递归候选内存；
+约3--5天为更大图设计局部前沿/分块宏并构造独立可行新图；
+约4--7天实现含流分配、Wait/Record和eager启动的外部CP-SAT小图oracle；
+约2--3天扩大未见图和回归/资源计时。总计约11--18个开发日，
+依赖调试中暴露的模型差异，不包含官方测试包接入或真实NPU迁移。
+优先寻找能恢复未解图的结构策略；没有质量或可靠成本收益的额外搜索不普遍保留。
+
+\section{复现与冻结入口}
+原R31报告\path{reports/project27-research.tex}及其PDF不覆盖。
+新负结果、候选源码和二进制分别位于\path{research/batch32/}到\path{research/batch36/}。
+\path{scripts/prepare_resumed_hard_corpus.py}保持原202困难记录的完整对象。
+\path{scripts/paired_benchmark.py}保存交替配对、输入/源代码/二进制SHA及全CLI峰值工作集。
+\path{scripts/regress_current.py}执行979严格记录。
+小图验证与外部oracle入口分别为\path{scripts/check_serial_slot_math.py}、
+\path{scripts/check_retention_bound.py}、\path{scripts/check_cpsat_small.py}和
+\path{scripts/serial_cpsat_oracle.py}。
+R36稳定源SHA-256为
+\path{6b913bef5a17fc0c7d8a9db9889f443e9d2995d44909087a976b9061bed86032}；
+冻结默认二进制见\path{research/batch36/default-aicore_bench.exe}，SHA-256为
+\path{6c9ce18bab1ba049c9087eb7eda200516dd24f7c806d9c86e6cb34aa715b02d8}。
+完整成本见\path{reports/paired-hard-batch36-summary.json}，
+最终核对见\path{reports/final-hard-batch36.json}与\path{research/batch36/provenance.json}。
+
+正常范围历史验证默认R39源SHA-256为
+\path{2c9c526bb41d46b442e6b16f82fc2683734042ed7842cc6498f3424680641395}；
+冻结默认二进制\path{research/batch39/default-aicore_bench.exe}的SHA-256为
+\path{da721b7a8d74431142438079c442dfeec1d399b916dc6272db60d25125024345}。
+原202与新36图的三轮配对分别见\path{reports/paired-hard-batch39-summary.json}、
+\path{reports/paired-forkjoin-batch39-summary.json}。
+最终冻结见\path{research/batch39/provenance.json}和\path{reports/final-hard-batch39.json}。
+后续候选隔离保存在新research目录，尚未验证的收益不计入R39结果。
+
+
+\section{R42：独立整数正确性修复}
+R39两套C++状态机在普通量级一致，但这种一致不能排除共同算术错误。
+硬件显存为\texttt{INT64\_MAX}、单节点workspace与output各为
+$6\cdot10^{18}$时，真实同时占用超过容量；旧模型把有符号加法溢出后的量当成可分配。
+Clang 21.1、VS2022运行库的UBSan分别在独立模型和提交模型中实证同一问题。
+原冻结R31/R39数字保留为正常量级历史证据，不再推断完整整数域正确。
+
+实际占用采用逐项剩余容量检查，通过后才作精确加法；不能把真实量饱和后再减去释放量。
+时间加法与Wait数量乘时长先检查可表示性，\texttt{INT64\_MAX}合法定时器与不存在定时器用独立布尔状态区分。
+串行子集DP也分开可达状态与最大合法峰值。
+前沿持出量仅为尚未完成目标维护，按真实动作对称撤销；已完成目标不累计历史输出。
+评分乘法先作标准库整数乘除分解，精确除法完成后才饱和，避免乘1024溢出。
+直接父输出与最终sink之和可构成必要拒绝门槛；全部节点历史output之和不能成为上限。
+
+独立Python任意精度Event模型及原始边串行递推生成固定计划金标。
+523条控制包含209合法、314预期拒绝，覆盖恰好最大峰值与完成时间、超容量、多父输入、
+Wait乘法、异构核争抢、乱序ID、历史输出超过最大值但已释放。
+另20180个完整乘后除的评分控制与Python大整数一致。
+这些控制及评分路径在UBSan下通过；默认CTest增为10项，全部通过，墙时2.33秒。
+32条放大图的固定witness全部正确，但求解器只求出26条，另6条仍保留为启发式缺口，
+不混入语义测试成功数。通常量级1229记录仍1166按预期通过、63已知有解未解；
+202困难及新36结构的全部pass/T/peak与R39逐条相同。
+979严格回归40.373秒、144最优标尺及33证书保持；这是单次功能验证，不是配对加速证据。
+R41流式best/显式emit资源候选继续隔离，必须基于R42修复重建再评估成本。
+
+整数正确性历史R42源SHA-256：\path{96d31657a8ab4a432c6f0fee14ac835d99b9806a04839adb5409751406dfeb1a}。
+完整冻结、输入SHA及全部63失败单次求解成本见\path{research/batch42/provenance.json}，
+控制入口见\path{tests/test_numeric.cpp}和\path{tests/test_numeric_priority.cpp}。
+旧R31单文件报告保持原SHA，尚无官方包、隐藏评分或真实NPU验证。
+
+
+\section{R43：等价资源改动与成本的两种中位口径}
+贪心原本按$(final\_live,peak)$稳定排序后只用首项；现在逐候选维护严格更小的best，
+相等保留最早项，所有候选仍按原顺序模拟。闭包均由同一$g.topo$过滤，
+故pending节点向量与完整节点bitset一一对应；去重集合只判插入，不以集合顺序挑选。
+严格fork/join递归只保存原选择的first/second/root/join，之后显式栈顺序输出。
+识别和emit均为$O(n)$，支持范围与递归深度上限保持。
+不引入新搜索、扩大预算或改变Event/直接消费者释放。
+
+332个宏order/work/失败状态/截断对照、105结构order对照和1120前沿检查通过。
+523大整数固定计划控制在真实R43源Clang UBSan下通过，默认20180评分金标通过。
+979对历史批8--22无退化；另读取冻结R42/R43逐记录报告证明979结果全同。
+144最优标尺、33证书及CTest10/10通过。
+202困难三轮均139合法/63未解，新36三轮均36合法；每轮全部pass/T/peak相同。
+
+\begin{tabularx}{\textwidth}{L{4.0cm}rrX}
+\toprule
+指标 & Before & After & 口径与限制\\
+\midrule
+202全部线程CPU/秒 & 21.265625 & 20.046875 & 分别取两侧中位，比值改善5.73\%\\
+202全部求解wall/秒 & 21.976112 & 20.593606 & 全部成功与失败\\
+63共同失败CPU/秒 & 14.015625 & 13.187500 & 分别中位，包括未解搜索\\
+36结构线程CPU/秒 & 1.312500 & 1.281250 & 量化测量，一轮变差\\
+36结构wall/秒 & 1.284990 & 1.304146 & 略增，保留负结果\\
+\bottomrule
+\end{tabularx}
+
+独立侧中位之比与逐配对比值的中位不是同一统计量。
+202三轮逐对CPU比为0.992487、0.942689、0.979433，改善0.75--5.73\%，
+逐对改善中位仅2.06\%；不能把5.73\%写成典型每对收益。
+36逐对CPU比为1.060241、0.964286、0.942529，一轮变慢；
+全CLI墙时分别中位1.420676到1.436414秒，也略增。
+两版均GCC15.2、CMake Release的\texttt{-O3 -DNDEBUG}，相同harness与R42独立模型。
+202候选全CLI最大工作集316633088字节约302MiB，JSON及验证开销也在内，
+没有证据称整个进程RAM显著下降。
+原始逐轮与两种中位口径分别见
+\path{reports/resource-cost-hard-batch43.json}、\path{reports/resource-cost-forkjoin-batch43.json}。
+
+R43正常1229记录仍1166按预期通过，63已知有解未解，资源改动不是可行性恢复。
+当前默认源SHA-256：\path{e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb}。
+实际配对候选与默认构建二进制的SHA分别保存，见\path{research/batch43/provenance.json}。
+旧R31/R39/R42冻结不覆盖；后续将先评估浅层消费者窗口的适用率再实施恢复候选。
+
+
+\section{R44：浅层消费者邻近关系恢复可行方案}
+本批推广依据是原先未找到方案的输入恢复合法方案，CPU代价同时保留。
+原202困难集合由139合法/63未解变为141合法/61未解；两条恢复是同一拓扑的不同内存参数。
+72个新种子持出由68合法变为72合法，另恢复4个未见种子。
+共同243个成功记录的$T$/峰值全部相同，0丢失、0模型分歧、0共同质量退化。
+原1229记录现1168按预期通过，加72新输入后为1301记录1240按预期通过，
+其中含1条预期不可行拒绝，不能称1240个合法可行输出；仍61条有witness未解。
+数值金标与剖面控制另计，不作为新增独立拓扑恢复数。
+
+\subsection{识别、前缀条件与准确剖面}
+只读原节点与原始直接边，识别可选独立前缀、独立producer、consumer反链及可选terminal sink。
+支持$n\le4096$、consumer数不超过512；原63未解初步浅层26条，实际候选识别20条。
+名字、生成参数、witness及其顺序均不进入算法。
+真实Compute开始同时占workspace和本节点output，结束释放workspace，
+producer output保持到最后\emph{直接}consumer结束，sink保持到$T$。
+新分支不消除冗余边、不借用额外Event的释放信用。
+
+固定consumer顺序时，尚未打开的输入producer在首次消费之前执行。
+组内工作区降序交换只在既有前缀存活恒定时成立。
+若$W_a\ge W_b$，两producer的output都持有到本consumer，则有
+\begin{align*}
+ P_{ab}-L &= \max(O_a+W_a,\ O_a+O_b+W_b),\\
+ P_{ba}-L &= \max(O_b+W_b,\ O_b+O_a+W_a),\\
+ P_{ab}-L &\le O_a+O_b+W_a\le P_{ba}-L.
+\end{align*}
+不同前缀可能在组内提前释放时不成立。
+实现逐前缀检查remaining direct users，前缀在组后继续存活或由全组共同消费时才重排；
+否则保留输入顺序。恒存活756个枚举控制与变化存活负控制均保留。
+根独立反例初始live101、两工作区20/10、分别释放1/100的前缀，
+无条件W降序峰值121，反序111，说明条件不能省略。
+
+诊断计数可能超出int64，即使另有可行排列。
+标准库双\texttt{uint64\_t}精确记录profile，可准确释放与排序；
+$n\le4096$使瞬时量小于$2^{76}$，逐节点累计小于$2^{88}$。
+评分为超容量逐节点面积、峰值、总逐节点面积的字典序，
+面积仅是结构评分，不能当物理时间积分。
+实际计划仍通过R42修复的Event/资源模型后才接受。
+
+共享producer的实际output加权形成consumer邻近种子，高fanout按度归一化。
+评分pair最多100万，producer fanout超过64跳过评分，全部原始依赖仍参与profile。
+局部插入延后关键consumer，或提前持有producer的最后consumer；
+所有种子先统一评分，再给两个较好初态局部预算，避免第一差种子耗尽预算。
+charged12M包含配对/邻近与profile节点边扫描；旧种子生成、排序及容器成本另计，
+它不是全算法的严格指令或wall上限。
+首次消费者前执行producer也不是一般DAG或非零workspace的全局最优定理。
+
+\subsection{独立验证与保留的负结果}
+初版首seed和统一排序初态均0恢复，保留原始负结果。
+加入直接共享producer邻近seed后得到原两条恢复，随后补前缀条件与计数预算。
+2590个Python任意精度profile/order/capacity金标及160个有界搜索有效性控制，
+在真实候选源Clang UBSan下全通过，无运行UB诊断。
+523个固定计划数值金标亦真实重跑全通过。
+979历史回归无退化，另外直接读取R43/R44逐记录报告证明979结果全同；
+144个最优审计、33证书及默认原10加新profile共11/11通过，CTest实际2.64秒。
+默认priority金标20180真实重跑，不把旧UBSan priority执行说成本批新执行。
+
+新72图包含不同规模、多个有输出前缀、producer工作区与输出、保留consumer输出、
+多个sink、局部与非局部使用、0与大Event；独立Python构造并计算串行witness，
+再打乱稀疏ID与节点记录。测试适配器验证witness，算法不接收它。
+根另以独立Python heap-event模型实际重放249份合法计划，
+包括8stream跨流Event、所有完成后再启动、分别AIC/AIV核池、
+BEGIN的W+O、最后直接消费者END释放、sink保留及最后Record排除，$T$/峰值均精确一致。
+两原恢复的最终计划为8stream $T=3581299$微秒，
+早期串行诊断$T=3779533$微秒另存，不混淆两个阶段。
+
+\subsection{同Release费用：恢复覆盖不等于加速}
+隔离窗口两版均GCC15.2、CMake Release的\texttt{-O3 -DNDEBUG}，
+原202与新72各三轮before/after、after/before、before/after，全体与失败保留。
+整个配对批wall154.096秒，原36已有功能质量全同，不额外跑性能批。
+\begin{tabularx}{\textwidth}{L{4.0cm}rrX}
+\toprule
+指标（秒） & R43 & R44 & 分别取两侧中位\\
+\midrule
+202全部线程CPU &21.250000&22.203125&增加4.49\%，不是逐pair典型值\\
+202全部求解wall &21.983504&22.445947&全部成功、未解及恢复\\
+61共同失败CPU &13.812500&15.359375&包含未解搜索费用\\
+2恢复记录CPU &0.187500&0.218750&before失败、after成功\\
+72全部线程CPU &2.312500&2.265625&不能外推原困难集\\
+4持出恢复CPU &0.765625&0.812500&独立种子，before失败\\
+\bottomrule
+\end{tabularx}
+
+202逐pair全CPU比1.158333、1.091912、1.021567，三轮都增加，
+逐pair中位增加9.19\%；两侧中位增加4.49\%是另一口径。
+全CLI分别中位22.998508到23.390441秒，最大工作集316129280到316268544字节，
+包括DOM/witness/验证器，不能称显著RAM下降。
+新72全CPU比0.979730、0.942308、0.965986，
+逐pair中位比0.965986；对应全求解wall比1.032856、0.959247、1.001072，
+并非三轮稳定wall加速。
+此前O2候选与O3默认的功能对照没有用来计算速度比。
+推广取舍是失败后恢复覆盖增加，以原202逐pair中位CPU增加9.19\%换取2参数记录恢复，
+另有4持出种子恢复；不称整体加速。原成功方案保持。
+
+\subsection{冻结与下一步}
+实际单文件源SHA-256：\path{d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3}。
+\path{research/batch44/provenance.json}分别记录实际默认和性能测量EXE，
+测量执行路径\path{research/batch44/build/aicore_bench.exe}另存
+\path{research/batch44/measured-release-aicore_bench.exe}；
+\path{research/batch44/aicore_bench.exe}是O2功能文件，不是性能测量文件。
+片段已展开到单文件；仅\texttt{problem.h}与标准库，不增加提交依赖。
+准备脚本曾打印LF内存文本SHA，实际Windows文件为CRLF；消息标签已纠正，
+冻结与功能报告一直采用实际文件字节SHA，编译输入与片段均有记录。
+
+\path{reports/resource-cost-summary-batch44.json}保留逐pair费用、成功/失败/恢复分组及两种中位；
+\path{reports/direct-normal-r43-batch44.json}是979直接对照。
+原R43冻结回退、root pre-guard独立证据与旧R31打开报告保持。
+下一步先输入-only识别未解61图是否经孤立单入单出链的\emph{候选顺序块}
+形成可处理的消费者前沿，不随意声称链压缩保留全局最优或改变原边；
+外部输出生存与节点workspace仍必须按原图逐节点profile和独立Event模拟验证。
+官方包、隐藏成绩与平台资源时限均未公开，本地恢复不能作为全图保证。
+
+\section{R45：原始祖先闭包前沿恢复及默认验收}
+\subsection{文献依据与适用边界}
+SERENITY用动态规划优化不规则神经网络的顺序，并另行使用图改写降低显存\cite{serenity}。
+本批只借鉴以顺序状态观察显存前沿的构思；不采用重写、重算或换页。
+Jin等的scratch/output模型更接近本题\cite{dominant}，
+但原始直接消费者释放、sink保留、Compute开始同时分配W+O、
+分开的AIC/AIV核池和实际Wait/Record均继续按本题实现，
+不能将该论文的孤立子图优势剖面结论推广到任意共享边界。
+
+R44的严格单入单出边候选在原202中没有可收缩边；
+此前大量indegree=outdegree=1的单个内部节点不等于该收缩前提。
+因此新方向保留所有原节点和边，选择workspace明显高于邻近producer的节点作为接口，
+用原始祖先闭包构造\emph{候选执行顺序}。
+它没有证明一般图最优，没有因启发式失败就推断不可行。
+
+\subsection{算法与精确生命周期剖面}
+正workspace的下中位数乘4（安全饱和）作为阈值，
+接口还需至少两个直接输入且workspace严格大于每个直接父节点；
+仅在$n\le4096$、接口数2至512时启用。
+这项输入阈值是启发式选择，与数据名字、family、seed或witness无关。
+扫描祖先时停在其他接口，原拓扑顺序保存各接口closure，
+接口偏序再由稳定Kahn normalization处理。
+每个closure中未执行节点仍按原DAG逐个执行，最后补全残余节点，
+所有节点恰好一次；没有融合、删除边或减少原始DIRECT用户计数。
+
+剖面按候选串行顺序精确累加BEGIN的\(L+W_v+O_v\)，
+END释放workspace与相应已完成最后直接消费者的直接父节点输出，sink持续持有。
+双64位无符号整数表示可能超过MAX的诊断peak/area/excess，
+而实际方案的物理容量与时间比较仍使用R42精确checked运算。
+area为各BEGIN分配量之和，不是显存乘时间积分。
+局部评分依次比较超容量量、peak和area；多种初始顺序、输出关联与单节点移动
+共用16M charged-work上限。该计数没有覆盖所有seed生成、排序与预处理CPU，
+不应把它当作整段运行时的指令硬界。
+仅旧R44全部失败后触发，最终方案继续经过Compute/核池/内存/Event/deadline验证。
+
+\subsection{质量、负结果与独立验收}
+原R44的61未解图中35满足该接口选择。
+初步诊断恢复两条同一71节点拓扑的显存参数变体；
+完整failed-only集成后原202由141增至143，59已知有witness图仍未解。
+新恢复串行$T=1487053$微秒，peak分别1745与1760字节，capacity分别1747与1762。
+原141共同成功的$T$/peak全同，没有丢失。
+根代理对真实计划独立Python bigint重放通过；该witness未交给求解器。
+
+新增48个不按求解结果筛选的retained-sharing输入，覆盖8/12/24/48阶段、
+local/dense/global边、非零根输出、不均workspace和不同Event成本，
+均先由预声明构造序独立验证有解。
+R44与R45都通过42/48，六条仍未解，42共同方案质量全同。
+这组没有新恢复，不能作为泛化质量提升证据。
+
+R46只改变workspace阈值为最大相邻比例gap，
+使原61中的接口适用图35增至44，但恢复仍2，新六条仍0；
+576独立profile控制通过不改变这个质量负结果，未推广。
+R47只把12个affinity初态改成依赖ready选择，
+495 profile与138实际顺序bigint验证通过，原恢复却由2变0，
+新六条仍0，明确拒绝推广；未合并阈值或扩大16M预算以遮盖退化。
+
+完整候选979按预期全通过，并按原始记录顺序与R44逐条
+name/pass/valid/$T$/peak对照全同；原36结构、72持出和12强资源族也无变化。
+132外部最优审计加12资源精确审计共144，保留33已证最优记录。
+新的495金标用Python完整祖先集合和每BEGIN的prefix/future live集合求和，
+没有复制C++的停接口closure或可变剩余用户计数。
+同完整源Clang21 UBSan实际523固定计划与495 workspace剖面均通过，
+数值gold还保留MAX恰好可行、超过MAX不可行和历史总输出超过MAX的控制。
+
+授权默认推广只复制已冻结单文件字节。
+默认构建12/12 CTest实际通过，5.80秒共享功能墙时，
+覆盖523数值、20180评分、2590浅层和495闭包gold。
+另8条行为烟测：两恢复、三新48代表成功和三仍未解案例，
+均与完整候选逐字段相同；CLI对三未解返回1，包装器确认这种预期行为后返回0。
+这不是重新运行979，更不是把三未解判为不可行。
+
+合并历史与新48，1349记录1284按预期通过，
+包含一条预期不可行拒绝与参数重复，不是1284个可行输出。
+原困难59与新持出6共65条已知有解仍未解，全部保留。
+
+\subsection{同Release完整成本：默认覆盖提升需要额外CPU}
+预声明计划\path{research/batch45/paired-plan.json}冻结后，
+项目19性能终态及根协调释放窗口，才执行202与48各三轮交替。
+实际session9393 exit0，完整配对CLI墙时235.4763402秒。
+双方GCC15.2 Release的\texttt{-O3 -DNDEBUG}及警告flags相同。
+\begin{tabularx}{\textwidth}{L{4.1cm}rrX}
+\toprule
+指标（秒） & R44 & R45 & 分别取两侧中位\\
+\midrule
+202全部线程CPU &30.015625&33.140625&增加10.41\%\\
+59共同失败CPU &20.359375&23.281250&失败搜索全部计入\\
+202全部求解wall &32.291202&35.451879&含成功、恢复和失败\\
+48全部线程CPU &2.703125&2.921875&增加8.09\%，另一中位口径\\
+6共同失败CPU &0.796875&1.031250&新48没有恢复\\
+\bottomrule
+\end{tabularx}
+
+202逐配对CPU比1.104112、1.090299、1.134837，
+中位增加10.41\%；48比1.075145、1.087209、1.093407，
+逐配对中位增加8.72\%，区别于两侧中位增加8.09\%。
+202求解wall逐配对中位增加9.32\%，48增加6.62\%。
+202全CLI中位33.71784至37.16851秒，最大working set前后
+317009920/316801024字节，包含DOM、计划与验证器，不能归因于算法独占内存。
+每trial host busy/可用RAM\emph{未采}，授权前低RAM与用户后台观察不代表全窗口样本；
+未修改运行中harness，也未为补背景或挑选好看结果额外重跑。
+
+默认推广的理由是新增两条真实可行恢复且保持原方案，
+接受原困难CPU中位增加10.41\%以及新48增加8.72\%的代价，
+不是通用加速。新六图和59困难未解的费用均保留。
+\path{reports/resource-cost-summary-batch45.json}保存全部原始SHA、每轮分组费用和两个中位口径；
+根代理独立复算12份raw结果、哈希、费用与质量全部通过。
+
+\subsection{实际默认冻结与后续工作量}
+完整单文件源SHA：
+\path{5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9}。
+实际默认及archive EXE：
+\path{5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8}。
+本批实际测量候选EXE：
+\path{3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9}。
+本批基线是R44默认archive的7861开头EXE，
+不能与此前R44成本批8d43开头EXE混称相同实测文件。
+\path{research/batch45/provenance.json}分别冻结source、fragment、全部编译与测试输入、
+flags、实际默认与测量EXE以及候选完整验收证据。
+仅\texttt{problem.h}和标准库，fragment完整展开，
+无第三方求解器、oracle或witness运行时依赖。
+R44回退、R46/R47负结果与旧R31打开报告保留。
+
+下一步R48仅在单节点移动局部最小时，依据原始producer的2至4个直接接口用户
+尝试有界成组顺序移动；重叠与依赖需重新normalize，仍不能提前释放共享输出。
+一名开发者预计2至3工作日建立该分支的随机偏序/输出边界金标与持出结构，
+2至4日处理若干新拓扑的可行恢复，2至3日完成全部功能/数值回归及隔离成本冻结，
+另1至2日整理报告，合计约7至12工作日，按实际新恢复决定是否投入下一批。
+这不是完成65未解或官方隐藏测试的承诺。
+截止本节，R48不在默认中，其后成果需另列记录，不能回填本批成本或质量。
+
+\section{R48：消费者组移动的一例新恢复与默认验收}
+本批先隔离质量/成本验收，后经root授权推广默认；两个阶段分别记录。
+沿用R45阈值、seed数量、原始closure/profile和16M charged cap，
+不合并R46/R47；只从原输入识别O大于零且全部直接消费者为2至4个接口的producer。
+同直接用户集合的输出按安全饱和加法聚合为搜索优先级，
+实际生存与peak仍按原始DIRECT边精确计算，绝不凭该优先级提前释放。
+若包含任何未选择的直接消费者，该producer不参与组。
+
+只在单节点局部移动停滞时尝试覆盖critical位置的最多24组，
+成员保留原permutation相对顺序，尝试critical附近两个插入边界；
+原接口偏序normalize继续执行，组内外依赖不被绕过，重叠组分别评估。
+组识别访问直接边也计入总charged cap，不增加预算或硬编码witness。
+这是允许探索跨单节点局部最小的候选顺序，不是无条件显存优化定理。
+
+83输入recognition、210组移动独立Python bigint profile通过，
+58无安全组的负控制保留；显式包含交叉依赖、成员重叠、重复用户集合权重超过MAX、
+零输出、多根/sink、最后DIRECT释放和超MAX瞬时剖面。
+原495闭包控制也全通过。
+初编译漏标准库\texttt{map}头，修复后才冻结实际候选源，未改默认。
+
+原61失败诊断中35接口适用，合法串行顺序从R45的2增至3，保留旧两例；
+新增原始131节点拓扑，$T=2421486$微秒、peak1946字节，满足原容量与deadline。
+原图hw/nodes/deadline完整匹配原hard202，输入无witness/generation。
+三份实际诊断输出按原ID、偏序、核池和Python bigint prefix/future live重放通过。
+新六个持出失败图仍零恢复，31原诊断和4持出诊断预算耗尽，不判不可行。
+
+因实质新增恢复才运行完整功能：原202由143增至144，
+共同143的$T$/peak全同、零丢失/模型分歧，原58仍未解；
+新48保持42/48，共同42质量全同，新6仍未解。
+979直接R45逐记录无变化、36/72/12资源全同，132外部审计通过。
+镜像测试均指向actual候选，Release13/13实际通过，6.62秒共享功能墙时。
+下一阶段cmd正斜杠启动错误发生在Clang开始前，修复启动后仅续跑编译，
+没有重做Release/CTest。
+同候选源Clang21实际523固定plan、495workspace profile、
+83recognition/210组移动全部通过，零runtimeUB；UCRT链接警告另存。
+
+实际完整候选源：
+\path{da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3}。
+\path{research/batch48/diagnostic-checkpoint.json}保存三真实输入与计划来源，
+\path{research/batch48/acceptance-checkpoint.json}冻结完整编译/test/gold/flags和EXE。
+\subsection{唯一同Release三轮实测（测量时默认尚未改变）}
+预声明的\path{research/batch48/paired-plan.json}经root第二窗口授权后实际执行，
+声明文件字节保持；基线是R45默认archive5acc、候选Release991e，
+完整202+48三轮交替含全部失败，实际session65788 exit0，CLI全流程185.2929215秒。
+双方GCC15.2/Release/O3 flags相同，未额外重跑或修改harness。
+\begin{tabularx}{\textwidth}{L{4.1cm}rrX}
+\toprule
+指标（秒） & R45 & R48候选 & 独立两侧中位\\
+\midrule
+202全部线程CPU &25.984375&25.765625&减少0.84\%，另一中位口径\\
+58共同失败CPU &18.375000&18.125000&失败费用全部保留\\
+202全部求解wall &26.343960&26.303100&并非稳定全体加速\\
+48全部线程CPU &2.046875&2.093750&增加2.29\%\\
+6共同失败CPU &0.718750&0.734375&没有新增持出恢复\\
+\bottomrule
+\end{tabularx}
+
+原202每轮143增至144，共同143的$T$/peak全同，58共同失败与1恢复均计成本。
+全CPU逐pair比0.974586、0.996964、1.093806，中位减少0.30\%，
+第三轮增加9.38\%，不能称稳定加速或把两侧中位减少0.84\%当成每pair典型值。
+求解wall逐pair中位减少0.19\%，CLI独立中位27.531782至27.650994秒。
+CLI最大working set前后316878848/317050880字节，含数据、保存计划与验证器。
+新48每轮42/48不变，6失败全计，0恢复；
+全CPU逐pair比0.985294、1.061538、1.022901，中位增加2.29\%，
+求解wall中位增加0.72\%。功能阶段O2共享时延没用于计算这些比率。
+
+Win32线程CPU有量化，背景host busy/可用RAM每trial未采，
+保留用户其他应用，既不称完整背景测量也不称整机空闲。
+\path{reports/resource-cost-summary-batch48.json}保留每轮成功/失败/恢复费用与两个中位口径；
+\path{research/batch48/paired-completion.json}冻结实际源、EXE、harness、完整raw的SHA与终态。
+性能窗口释放后，root独立复算12份raw与全部失败费用、哈希和两种中位口径通过。
+测量当时默认是R45的143/202和65总未解；隔离候选144/202与64总未解分开列，
+新48没有新恢复，不能宣称一般拓扑泛化、全图保证或稳定性能收益。
+
+\subsection{实际默认验收与完整回退}
+根代理独立审查186份实际passing计划的heap-event重放、1099原功能/结构记录、
+523独立Python bigint数值结果、source/EXE与镜像13测试后，
+再结合完整三轮成本接受本批作为可行性覆盖里程碑。
+推广复制完整已冻结source字节，没有混入R49。
+先逐SHA验证R45所有编译/测试/生成输入，归档source、原CMake、测试、fragment、
+默认EXE、flags和provenance，回退入口
+\path{research/batch45/rollback/manifest.json}，而后才更改当前默认。
+
+默认Release构建实际session42198 exit0，13/13 CTest全通过，
+2.80秒共享功能墙时；不得把它与此前候选6.62秒比较成速度成果。
+九条代表行为检查包括新增131节点恢复、此前两恢复、三正常成功和三已知有解仍未解，
+实际六成功/三失败，与完整候选逐name/pass/valid/$T$/peak/models一致。
+CLI预期返回1，wrapper验证该状态后exit0；没有改它们的expected-feasible标签，
+没有重新运行979或把未解写成不可行。
+同单文件SHA的候选Clang证据复用，默认GCC的13测试实际重新执行全部数字与剖面金标。
+
+R48推广时的单文件源为
+\path{da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3}。
+实际默认EXE与archive：
+\path{54fc7e9b2257f1edcd6925126f32e969826a5d6ba93bc2f9b3e8fd5dd5538c10}。
+实测候选991e开头EXE另存，不冒称它就是默认54fc。
+\path{research/batch48/provenance.json}和
+\path{reports/final-checkpoint-batch48.json}冻结全部实际输入、flags、源与EXE来源。
+\path{solution/projection.cpp.inc}只保存参考片段，source已展开，不是提交依赖。
+原202为144/202、原58与新48的6共64条已知有解仍未解；
+1349记录1285按预期通过，含一条预期不可行拒绝和参数重复，
+不是1285可行输出。144外部最优审计与33证书、旧R31打开文档及所有历史失败均保留。
+
+\section{R49--R50：消费组扩展与first pivot负结果}
+R49从R48独立只将完整DIRECT用户组上限4改为16，未扩大原种子或16M计费预算。
+此前input-only计数的58原未解中32适用，这32都有小组和新增大组，额外大组2401，
+并未新增适用图。完整4/5/16/17边界、交叠成员、外部DIRECT用户、MAX数值、
+95识别和342移动控制及495闭包profile均通过。
+原61诊断保留此前三恢复，新增持出六图仍全未解：零新增恢复，因而停止full202与成本批，未推广。
+
+R50同样从R48独立，仅增加first-member pivot，未继承R49。
+21个原节点的完整可检查反例中，已有pivot需要peak381，first只需301，
+完整$T=21$、容量301、deadline21不改；容量301/381对照均经独立完整生命周期重放。
+原83识别/210移动和495profile通过，但61+6诊断没有新增恢复或丢失。
+既有131节点记录$T=2421486$不变、peak从1946降至1884，另两旧恢复$T$/peak不变。
+所以此批有62字节共同峰改善，不能称全部质量为零，也不能称共同$T$/peak全同；
+缺乏新覆盖证据，保留隔离候选而未推广、未另开性能批。
+
+\section{R51：动态完整remaining-DIRECT用户祖先释放cut}
+\subsection{输入证据与构造边界}
+R51此前58原未解全部满足串行Compute总时长不超过原deadline，
+必要显存与时间下界也没有发现不可行证书。
+32图适用旧投影，31图耗尽；另8图target超过512、18图低于原workspace筛选门槛。
+这个input-only证据支持直接在真实显存前沿构造顺序，而不是继续随机pivot。
+分类保留全部原root、节点、硬件、deadline，不读witness或生成顺序。
+
+在实际完成前缀$D$中，对已完成、仍持有非零输出的非sink生产者$p$，
+收集所有尚未完成的原DIRECT用户，再递归闭合这些用户的全部未完成原祖先。
+完成前缀在边界停止；共享父节点、用户互依赖和全部原边均保留。
+闭集内部只执行真实ready节点，每个BEGIN先以剩余额度检查$W+O$，
+END释放workspace，父输出只在最后原DIRECT用户END释放。
+新输出有cut外用户或为sink时继续保留，不能把它们当作回收收益。
+probe复制临时状态，失败不污染实际前缀；只有完整合法次序才逐节点实际apply。
+完成后检查$p$未完成用户数为零，才证明它的输出已经按原模型释放。
+
+就绪且净持有变化$O-\sum O_{\rm last\ parents}\le0$、BEGIN可放的节点可提前执行：
+被释放的原父输出没有后续未完成用户，新输出不大于释放量，
+因此后续串行前缀live不增加，DAG偏序不受损。
+该论证只用于串行顺序，不推广为多流Event交换或全局最小peak定理。
+probe中的单一greedy按净持有变化、瞬时$W+O$、原ID选择，
+候选cut按最终live和peak排序；没有witness、family或seed名条件。
+
+最多128个未完成cut节点、top24持出producer；超过门槛拒绝整个可选cut，
+不能错误执行partialcut而提前释放。
+新阶段最多2M来自原总16M，失败后原R48投影用余量，原threshold、种子和组上限不变。
+节点/边扫描、状态拷贝、排序比较、probe/apply均计费；
+16M是可复现搜索工作口径，不是完整CPU周期、墙时或官方判题资源上限。
+其单一greedy及阈值会错过可行顺序，失败不能当作原图无解。
+
+\subsection{独立金标与实际功能验收}
+102个独立Python bigint控制覆盖外部DIRECT用户、错误partial释放、交叉依赖、
+共享/重叠成员、sink/零output、producer未完成或已经释放、恰好MAX和超过MAX、128/129边界。
+它们另保存102条全部原节点完整固定计划，100物理合法、2预期非法；
+129边界图本身合法但可选cut拒绝，不能称原图不可行。
+父任务独立重算闭集/live-set并重放全部102完整计划，73个有效cut与实现一致。
+
+原61+6诊断增加一条真实140节点恢复，完整202一次由144至145，
+持出48仍42，全186共同成功$T$/peak恒等，零丢失、零两模型分歧。
+新增图原AIC8/AIV128、stream4、容量2483、Event时间零不改；
+$T=1430270$恰好原deadline，peak2481。
+输入与完整原节点计划冻结于
+\path{research/batch51/actual-recoveries-input-only.json}及
+\path{research/batch51/actual-recoveries-plans.json}。
+父任务独立heap-event模型重放全部187实际passing计划通过；
+两个CLI实际exit1保留57+6已知可行未解，wrapper核对后exit0，不伪写全成功。
+
+首次Release构建actual3354 exit1来自C盘临时文件ENOSPC，尚未启动测试，
+原始日志保存，不记为算法失败或测试通过。
+授权后仅编译子进程TEMP/TMP/TMPDIR改项目F盘compiler-temp；
+未删除用户文件、未改变系统环境或源码。
+实际88807 exit0完成Release、14CTest和Clang构建；
+26484、22878实际exit0分别完成1099记录直接R48对照和数值验收。
+1099由979正常、36结构、72此前持出、12资源标尺组成，逐条name/pass/valid/$T$/peak相同。
+现有523加新102共625固定计划、495祖先profile、83组识别/210移动、102cut，
+新Clang21 UBSan实际通过，运行UB错误零。
+验收冻结入口为\path{research/batch51/acceptance-checkpoint.json}。
+
+\subsection{三轮全部成本及宿主观测}
+预声明计划经过独立SHA、flags和脚本核验后只执行一次，
+actual32966 exit0；12CLI trials、1500条case执行记录，driver全流程199.257680秒。
+基线为实际R48 default archive54fc，区别历史R48测量991e；
+候选为本批冻结Release25ac，区别此前O2功能EXE。
+双方solution/simulator均GCC15.2 Release
+\path{-O3 -DNDEBUG -std=c++17 -Wall -Wextra -Wpedantic}，
+CLI均\path{-O3 -DNDEBUG -std=c++17}。
+每数据集依次before/after、after/before、before/after，全部失败成本保留。
+
+\begin{tabularx}{\textwidth}{L{3.4cm}rrX}
+\toprule
+全体记录指标 & 困难202 & 持出48 & 解释\\
+\midrule
+CPU第1对比 &0.857803&0.985294&after/before\\
+CPU第2对比 &0.937605&0.941606&相反执行顺序\\
+CPU第3对比 &1.060692&0.971014&困难CPU负轮保留\\
+CPU配对比中位 &0.937605&0.971014&下降6.24\%/2.90\%\\
+CPU两侧中位比 &0.939292&0.978102&另一统计口径\\
+solve墙时配对中位 &0.953677&1.004624&持出墙时负值保留\\
+\bottomrule
+\end{tabularx}
+
+每轮合法数144至145、42不变，共同186成功$T$/peak相同。
+困难第三轮CPU增加6.07\%，持出求解墙时中位增加0.46\%，
+不能从小规模三轮称稳定通用加速。
+完整CLI两侧墙时中位困难30.6745至28.7422秒、持出2.3991至2.4046秒；
+困难最大工作集317526016至316575744字节，包含JSON、图、plan与验证器，
+不同于模拟设备显存。
+
+本批新独立监测脚本两侧相同，在每trial起止及0.25秒间隔记录
+GetSystemTimes原始idle/kernel/user与GlobalMemoryStatusEx物理RAM\cite{win32host}。
+kernel包含idle，CPU busy为
+\[
+\frac{\Delta kernel+\Delta user-\Delta idle}{\Delta kernel+\Delta user}.
+\]
+它是完整宿主活动，包含求解器、监测和用户其他应用，不能替代Win32求解线程CPU或扣除背景。
+本机32逻辑处理器，此API覆盖全部；超过64时仅覆盖调用者主要处理器组，需另标限制。
+12份host观测实际measured，最低采样可用RAM6334910464字节；
+采样最小值不是连续全窗口最低值，资源观测也不代表OS隔离或空机。
+API缺失保留partial/unmeasured，不伪造、不因背景补跑。
+原始ticks、CPU差值、RAM、JSON/CSV/failure/stdout/stderr与每组费用冻结于
+\path{research/batch51/paired-completion.json}，成本schema为
+\path{reports/resource-cost-summary-batch51.json}。
+离线汇总首次反斜杠路径KeyError，随后仅修正Path.as\_posix再读取同raw，
+未改变测量脚本、未重新运行trial。
+
+\subsection{实际默认、剩余工作与成本估算}
+独立root核验全部成本、原始host与完整功能后，授权默认整合。
+先保存完整R48 source/include/tests/flags/bin/provenance回退入口
+\path{research/batch48/rollback/manifest.json}，再复制已冻结单文件8b7c。
+actual17141 exit0完成默认Release及14/14 CTest；
+十条默认烟测含四恢复、三正常成功和三known-feasible失败，七合法/三未解与已验收候选逐条相同。
+CLI预期exit1由wrapper确认后exit0；推广后只新执行14CTest与十烟测，未重跑979或完整性能。
+源码、实际default、测量EXE必须分开：
+\begin{itemize}
+\item 单文件源：\path{8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b}。
+\item 实际默认EXE：\path{c491f69d9ac2b39fa336afc5ef17b300bbdf84ab9021a482b3d404f91191b607}。
+\item 三轮实测EXE：\path{25ac71bc389e62f512d7597d40048e97b88783c21e895524cdba3311c6067742}。
+\end{itemize}
+默认清单为\path{research/batch51/provenance.json}及
+\path{reports/final-checkpoint-batch51.json}。
+提交单文件仅problem.h+标准库；reference fragment已展开，非编译依赖。
+当前145/202、42/48；1349记录1286按预期通过，含一预期非法拒绝和参数重复，
+不是1286个合法可行输出。原57与新6共63已知有解仍未解。
+
+下一阶段优先按实际cut拒绝原因定位：闭集过大、内部greedy停滞、
+外部持出导致无容量、或2M预算耗尽。应先追加不影响求解路径的隔离诊断，
+再以完整原节点小图验证有界frontier/dominance或链块方案；
+不放宽deadline/容量、不读witness、也不将任意最小peak子图直接线性化。
+一名熟悉C++与本项目的开发者约需1--2天建立失败归因与独立小图控制，
+2--4天实现首个状态压缩或有界分支候选，1--2天完成heldout、数字边界、全回归和配对成本，
+约4--8开发日形成可审里程碑；没有可保证的恢复率或官方判题成功承诺。
+CPU功能时间按共享负载记录，新增性能必须单独协调窗口、记录全失败成本及宿主背景。
+
+\begin{thebibliography}{99}
+\bibitem{heft} Topcuoglu, Hariri, Wu. Performance-effective and low-complexity task scheduling for heterogeneous computing. IEEE TPDS, 2002.
+\url{https://doi.org/10.1109/71.993206}.
+\bibitem{kolisch} Kolisch. Serial and parallel resource-constrained project scheduling methods revisited. EJOR, 1996.
+\url{https://doi.org/10.1016/0377-2217(95)00357-6}.
+\bibitem{dominant} Jin, Purohit, Svitkina, Vee, Wang. New Tools for Peak Memory Scheduling. arXiv:2312.13526v1, 2023.
+\url{https://arxiv.org/html/2312.13526v1}.
+\bibitem{marchal} Marchal et al. Parallel scheduling of DAGs under memory constraints. IPDPS, 2018.
+\url{https://www.uni-bremen.de/fileadmin/user_upload/fachbereiche/fb3/infcon/CSLog/Publications/bsimon/papers/2018-MNSV-IPDPS.pdf}.
+\bibitem{fradet} Fradet, Girault, Honorat. Parallel Scheduling of Task Graphs with Minimal Memory Requirements. IPDPS, 2025.
+DOI:10.1109/IPDPS64566.2025.00042.
+\url{https://synchron-2025.imag.fr/slides/alain_girault_scheduling_2025.pdf}.
+\url{https://gitlab.inria.fr/spades-pub/mastag}.
+\bibitem{adaptive} Kulagina, Benoit, Meyerhenke. Memory-aware Adaptive Scheduling of Scientific Workflows on Heterogeneous Architectures. CCGrid, 2025.
+\url{https://arxiv.org/html/2503.22365v1}.
+\bibitem{gap} Zhou et al. A Learning Method with Gap-Aware Generation for Heterogeneous DAG Scheduling. 2026.
+\url{https://arxiv.org/html/2603.23249v1}.
+\bibitem{ortools} Google OR-Tools. Official RCPSP CP-SAT example and job-shop documentation.
+\url{https://raw.githubusercontent.com/google/or-tools/stable/examples/python/rcpsp_sat.py}.
+\url{https://developers.google.com/optimization/scheduling/job_shop}.
+\bibitem{serenity} Ahn, Lee, Lin, Cheng, Hou, Esmaeilzadeh. Ordering Chaos: Memory-Aware Scheduling of Irregularly Wired Neural Networks for Edge Devices. MLSys, 2020.
+\url{https://arxiv.org/abs/2003.02369}.
+\bibitem{win32host} Microsoft. GetSystemTimes and GlobalMemoryStatusEx official Win32 documentation.
+\url{https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getsystemtimes}.
+\url{https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,729 @@
+{
+  "suite": "data\\nested-forkjoin-new-batch38.json",
+  "suite_sha256": "5ff191bfccddf86e0d46baa5dbafe488756ecfa7a3dfaaa282aae621cf99559b",
+  "baseline_exe_sha256": "6c9ce18bab1ba049c9087eb7eda200516dd24f7c806d9c86e6cb34aa715b02d8",
+  "current_exe_sha256": "da721b7a8d74431142438079c442dfeec1d399b916dc6272db60d25125024345",
+  "current_solution_sha256": "2c9c526bb41d46b442e6b16f82fc2683734042ed7842cc6498f3424680641395",
+  "baseline_solution_sha256": "6b913bef5a17fc0c7d8a9db9889f443e9d2995d44909087a976b9061bed86032",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-forkjoin-batch39-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.226749099965673,
+        "peak_working_set_bytes": 49098752
+      },
+      "after": {
+        "report": "reports\\paired-forkjoin-batch39-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 1.974526199977845,
+        "peak_working_set_bytes": 49045504
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "after": {
+          "total": 36,
+          "passed": 36,
+          "failed": 0
+        },
+        "common_cases": 14,
+        "common_solve_us_before": 10031,
+        "common_solve_us_after": 10941,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "new_nested_forkjoin_k15_seed2026116200",
+          "new_nested_forkjoin_k15_seed2026116201",
+          "new_nested_forkjoin_k15_seed2026116202",
+          "new_nested_forkjoin_k31_seed2026132200",
+          "new_nested_forkjoin_k31_seed2026132201",
+          "new_nested_forkjoin_k31_seed2026132202",
+          "new_nested_forkjoin_k63_seed2026164200",
+          "new_nested_forkjoin_k63_seed2026164201",
+          "new_nested_forkjoin_k63_seed2026164202",
+          "new_nested_forkjoin_k63_seed2026164203",
+          "new_nested_forkjoin_k127_seed2026228200",
+          "new_nested_forkjoin_k127_seed2026228201",
+          "new_nested_forkjoin_k127_seed2026228202",
+          "new_nested_forkjoin_k127_seed2026228203",
+          "new_nested_forkjoin_k255_seed2026356200",
+          "new_nested_forkjoin_k255_seed2026356201",
+          "new_nested_forkjoin_k255_seed2026356202",
+          "new_nested_forkjoin_k255_seed2026356203",
+          "new_nested_forkjoin_k511_seed2026612200",
+          "new_nested_forkjoin_k511_seed2026612201",
+          "new_nested_forkjoin_k511_seed2026612202",
+          "new_nested_forkjoin_k511_seed2026612203"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 1703,
+        "scales": [
+          {
+            "n": 4,
+            "median_us": 172.5,
+            "max_us": 404
+          },
+          {
+            "n": 7,
+            "median_us": 125.0,
+            "max_us": 168
+          },
+          {
+            "n": 10,
+            "median_us": 251.5,
+            "max_us": 324
+          },
+          {
+            "n": 46,
+            "median_us": 6814.0,
+            "max_us": 8082
+          },
+          {
+            "n": 94,
+            "median_us": 21035.0,
+            "max_us": 22985
+          },
+          {
+            "n": 190,
+            "median_us": 64477.5,
+            "max_us": 75884
+          },
+          {
+            "n": 382,
+            "median_us": 152534.0,
+            "max_us": 222770
+          },
+          {
+            "n": 766,
+            "median_us": 59228.5,
+            "max_us": 83910
+          },
+          {
+            "n": 1534,
+            "median_us": 132651.0,
+            "max_us": 161609
+          }
+        ],
+        "common_thread_cpu_measured_cases": 14,
+        "common_thread_cpu_us_before": 15625,
+        "common_thread_cpu_us_after": 15625,
+        "all_solve_us_before": 2019011,
+        "all_thread_cpu_us_before": 1843750,
+        "all_solve_us_after": 1787678,
+        "all_thread_cpu_us_after": 1562500
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-forkjoin-batch39-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.1639496000134386,
+        "peak_working_set_bytes": 49356800
+      },
+      "after": {
+        "report": "reports\\paired-forkjoin-batch39-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 1.9784638999844901,
+        "peak_working_set_bytes": 48472064
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "after": {
+          "total": 36,
+          "passed": 36,
+          "failed": 0
+        },
+        "common_cases": 14,
+        "common_solve_us_before": 9767,
+        "common_solve_us_after": 10915,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "new_nested_forkjoin_k15_seed2026116200",
+          "new_nested_forkjoin_k15_seed2026116201",
+          "new_nested_forkjoin_k15_seed2026116202",
+          "new_nested_forkjoin_k31_seed2026132200",
+          "new_nested_forkjoin_k31_seed2026132201",
+          "new_nested_forkjoin_k31_seed2026132202",
+          "new_nested_forkjoin_k63_seed2026164200",
+          "new_nested_forkjoin_k63_seed2026164201",
+          "new_nested_forkjoin_k63_seed2026164202",
+          "new_nested_forkjoin_k63_seed2026164203",
+          "new_nested_forkjoin_k127_seed2026228200",
+          "new_nested_forkjoin_k127_seed2026228201",
+          "new_nested_forkjoin_k127_seed2026228202",
+          "new_nested_forkjoin_k127_seed2026228203",
+          "new_nested_forkjoin_k255_seed2026356200",
+          "new_nested_forkjoin_k255_seed2026356201",
+          "new_nested_forkjoin_k255_seed2026356202",
+          "new_nested_forkjoin_k255_seed2026356203",
+          "new_nested_forkjoin_k511_seed2026612200",
+          "new_nested_forkjoin_k511_seed2026612201",
+          "new_nested_forkjoin_k511_seed2026612202",
+          "new_nested_forkjoin_k511_seed2026612203"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 1703,
+        "scales": [
+          {
+            "n": 4,
+            "median_us": 128.0,
+            "max_us": 184
+          },
+          {
+            "n": 7,
+            "median_us": 117.0,
+            "max_us": 152
+          },
+          {
+            "n": 10,
+            "median_us": 233.5,
+            "max_us": 275
+          },
+          {
+            "n": 46,
+            "median_us": 7540.5,
+            "max_us": 8787
+          },
+          {
+            "n": 94,
+            "median_us": 23812.0,
+            "max_us": 25360
+          },
+          {
+            "n": 190,
+            "median_us": 74619.5,
+            "max_us": 87545
+          },
+          {
+            "n": 382,
+            "median_us": 159324.0,
+            "max_us": 199306
+          },
+          {
+            "n": 766,
+            "median_us": 57525.5,
+            "max_us": 89937
+          },
+          {
+            "n": 1534,
+            "median_us": 126002.0,
+            "max_us": 153311
+          }
+        ],
+        "common_thread_cpu_measured_cases": 14,
+        "common_thread_cpu_us_before": 31250,
+        "common_thread_cpu_us_after": 0,
+        "all_solve_us_before": 1954091,
+        "all_thread_cpu_us_before": 1796875,
+        "all_solve_us_after": 1796000,
+        "all_thread_cpu_us_after": 1593750
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-forkjoin-batch39-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.1885580999660306,
+        "peak_working_set_bytes": 49819648
+      },
+      "after": {
+        "report": "reports\\paired-forkjoin-batch39-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 1.8798905999865383,
+        "peak_working_set_bytes": 48492544
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "after": {
+          "total": 36,
+          "passed": 36,
+          "failed": 0
+        },
+        "common_cases": 14,
+        "common_solve_us_before": 10345,
+        "common_solve_us_after": 12104,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "new_nested_forkjoin_k15_seed2026116200",
+          "new_nested_forkjoin_k15_seed2026116201",
+          "new_nested_forkjoin_k15_seed2026116202",
+          "new_nested_forkjoin_k31_seed2026132200",
+          "new_nested_forkjoin_k31_seed2026132201",
+          "new_nested_forkjoin_k31_seed2026132202",
+          "new_nested_forkjoin_k63_seed2026164200",
+          "new_nested_forkjoin_k63_seed2026164201",
+          "new_nested_forkjoin_k63_seed2026164202",
+          "new_nested_forkjoin_k63_seed2026164203",
+          "new_nested_forkjoin_k127_seed2026228200",
+          "new_nested_forkjoin_k127_seed2026228201",
+          "new_nested_forkjoin_k127_seed2026228202",
+          "new_nested_forkjoin_k127_seed2026228203",
+          "new_nested_forkjoin_k255_seed2026356200",
+          "new_nested_forkjoin_k255_seed2026356201",
+          "new_nested_forkjoin_k255_seed2026356202",
+          "new_nested_forkjoin_k255_seed2026356203",
+          "new_nested_forkjoin_k511_seed2026612200",
+          "new_nested_forkjoin_k511_seed2026612201",
+          "new_nested_forkjoin_k511_seed2026612202",
+          "new_nested_forkjoin_k511_seed2026612203"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 1703,
+        "scales": [
+          {
+            "n": 4,
+            "median_us": 141.0,
+            "max_us": 176
+          },
+          {
+            "n": 7,
+            "median_us": 150.5,
+            "max_us": 225
+          },
+          {
+            "n": 10,
+            "median_us": 395.5,
+            "max_us": 500
+          },
+          {
+            "n": 46,
+            "median_us": 7145.0,
+            "max_us": 10310
+          },
+          {
+            "n": 94,
+            "median_us": 24423.0,
+            "max_us": 25839
+          },
+          {
+            "n": 190,
+            "median_us": 69758.5,
+            "max_us": 84193
+          },
+          {
+            "n": 382,
+            "median_us": 149165.5,
+            "max_us": 176064
+          },
+          {
+            "n": 766,
+            "median_us": 54564.5,
+            "max_us": 79040
+          },
+          {
+            "n": 1534,
+            "median_us": 121885.0,
+            "max_us": 146681
+          }
+        ],
+        "common_thread_cpu_measured_cases": 14,
+        "common_thread_cpu_us_before": 0,
+        "common_thread_cpu_us_after": 15625,
+        "all_solve_us_before": 1985639,
+        "all_thread_cpu_us_before": 1750000,
+        "all_solve_us_after": 1692671,
+        "all_thread_cpu_us_after": 1640625
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch36\\solution.cpp",
+  "median_common_solve_us_before": 10031,
+  "median_common_solve_us_after": 10941,
+  "median_wall_seconds_before": 2.1885580999660306,
+  "median_wall_seconds_after": 1.974526199977845,
+  "maximum_cli_working_set_bytes": 49045504,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": false,
+  "median_common_thread_cpu_us_before": 15625,
+  "median_all_solve_us_before": 1985639,
+  "median_all_thread_cpu_us_before": 1796875,
+  "median_common_thread_cpu_us_after": 15625,
+  "median_all_solve_us_after": 1787678,
+  "median_all_thread_cpu_us_after": 1593750,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+  "baseline_build_provenance": {
+    "status": "validated_default_milestone",
+    "source_sha256": "6b913bef5a17fc0c7d8a9db9889f443e9d2995d44909087a976b9061bed86032",
+    "default_exe_sha256": "6c9ce18bab1ba049c9087eb7eda200516dd24f7c806d9c86e6cb34aa715b02d8",
+    "candidate_exe_sha256": "71dcfdc38e24d37b1673541ab61d56a5d3005550746004fc08a6e939127a0734",
+    "strict_records": 979,
+    "hard_records": 202,
+    "hard_legal": 137,
+    "hard_unresolved": 65,
+    "analytic_records": 12,
+    "total_records": 1193,
+    "total_passed_according_to_expectation": 1128,
+    "expected_infeasible_records": 1,
+    "count_caveat": "Records include shared samples and repeated parameters, not 1128 independent feasible topologies",
+    "optimum_audit_checked": 144,
+    "certificates": 33,
+    "ctest": "5/5 passed, 1.45s",
+    "standalone": "GCC15.2 -std=c++17 -O2 -Wall -Wextra -Wpedantic no warnings",
+    "paired": "reports/paired-hard-batch36-summary.json",
+    "failed_search_costs": {
+      "before_fail69_solve_us": 15559484,
+      "before_fail69_solve_thread_cpu_us": 13609375,
+      "after_fail65_solve_us": 16144965,
+      "after_fail65_solve_thread_cpu_us": 15000000,
+      "common_fail65_before_solve_us": 14803591,
+      "common_fail65_before_solve_thread_cpu_us": 12984375,
+      "common_fail65_after_solve_us": 16144965,
+      "common_fail65_after_solve_thread_cpu_us": 15000000
+    },
+    "unresolved": [
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270617",
+        "n": 532,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270618",
+        "n": 511,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20299417",
+        "n": 2125,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20299418",
+        "n": 2139,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+        "n": 2077,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+        "n": 2085,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k24_ret1_seed20273418",
+        "n": 131,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+        "n": 129,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280617",
+        "n": 522,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280618",
+        "n": 525,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret0_seed20309417",
+        "n": 2124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k384_ret1_seed20309418",
+        "n": 2146,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+        "n": 2103,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+        "n": 2104,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+        "n": 71,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+        "n": 71,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+        "n": 536,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+        "n": 508,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+        "n": 539,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+        "n": 563,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+        "n": 196,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem5",
+        "n": 196,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+        "n": 172,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+        "n": 516,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+        "n": 512,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+        "n": 547,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k12_ret0_seed20282228",
+        "n": 70,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+        "n": 124,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k64_ret1_seed20287427",
+        "n": 348,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k64_ret1_seed20287429",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+        "n": 362,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+        "n": 353,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+        "n": 361,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+        "n": 651,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+        "n": 639,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+        "n": 638,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret0_seed20293826",
+        "n": 676,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_local_k128_ret1_seed20293827",
+        "n": 712,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret0_seed20293828",
+        "n": 705,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_irregular_dense_k128_ret1_seed20293829",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+        "n": 695,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+        "n": 715,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+        "n": 704,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+        "n": 700,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+        "n": 1270,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+        "n": 1284,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+        "n": 1265,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+        "n": 781,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+        "n": 798,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+        "n": 814,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+        "n": 1576,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+        "n": 1628,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+        "n": 1605,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+        "n": 1659,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+        "n": 190,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_random-split_leaves256_ret1_seed20326640",
+        "n": 766,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+        "n": 766,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+        "n": 140,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      },
+      {
+        "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+        "n": 182,
+        "error": "No verified feasible plan in bounded search; feasibility is not guaranteed by this heuristic"
+      }
+    ],
+    "new_method": "Recovery-only <=768-node bounded greedy consumer macros; single then affinity pair; actual Event evaluation decides legality",
+    "unsupported": "No complete hidden-graph guarantee, real NPU, official package or official wall/RAM limit; CP-SAT external serial oracle only"
+  }
+}

@@ -1,0 +1,921 @@
+{
+  "source_sha256": "5a8518a47ea188520fe1ec58cae43403a667c8cb19910e586a3e69b7c3f3a20b",
+  "case_records": 739,
+  "elapsed_wall_seconds": 24.49004619999323,
+  "all_passed": true,
+  "comparisons": {
+    "stress": {
+      "before": {
+        "total": 153,
+        "passed": 153,
+        "failed": 0
+      },
+      "after": {
+        "total": 153,
+        "passed": 153,
+        "failed": 0
+      },
+      "common_cases": 152,
+      "common_solve_us_before": 1435392,
+      "common_solve_us_after": 1493753,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 18786,
+      "scales": [
+        {
+          "n": 0,
+          "median_us": 0,
+          "max_us": 0
+        },
+        {
+          "n": 1,
+          "median_us": 76,
+          "max_us": 76
+        },
+        {
+          "n": 3,
+          "median_us": 79.0,
+          "max_us": 98
+        },
+        {
+          "n": 4,
+          "median_us": 333.5,
+          "max_us": 4749
+        },
+        {
+          "n": 6,
+          "median_us": 111,
+          "max_us": 111
+        },
+        {
+          "n": 16,
+          "median_us": 798,
+          "max_us": 1441
+        },
+        {
+          "n": 64,
+          "median_us": 4164,
+          "max_us": 7091
+        },
+        {
+          "n": 128,
+          "median_us": 6982,
+          "max_us": 6982
+        },
+        {
+          "n": 256,
+          "median_us": 13286,
+          "max_us": 26030
+        },
+        {
+          "n": 1024,
+          "median_us": 12794.0,
+          "max_us": 27663
+        },
+        {
+          "n": 4096,
+          "median_us": 29411.0,
+          "max_us": 62124
+        }
+      ]
+    },
+    "development": {
+      "before": {
+        "total": 143,
+        "passed": 143,
+        "failed": 0
+      },
+      "after": {
+        "total": 143,
+        "passed": 143,
+        "failed": 0
+      },
+      "common_cases": 143,
+      "common_solve_us_before": 2343149,
+      "common_solve_us_after": 2099887,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 4044,
+      "scales": [
+        {
+          "n": 3,
+          "median_us": 69.0,
+          "max_us": 85
+        },
+        {
+          "n": 6,
+          "median_us": 101,
+          "max_us": 101
+        },
+        {
+          "n": 8,
+          "median_us": 27.0,
+          "max_us": 42
+        },
+        {
+          "n": 12,
+          "median_us": 50.0,
+          "max_us": 147
+        },
+        {
+          "n": 16,
+          "median_us": 107.5,
+          "max_us": 822
+        },
+        {
+          "n": 18,
+          "median_us": 985,
+          "max_us": 985
+        },
+        {
+          "n": 32,
+          "median_us": 1085,
+          "max_us": 2037
+        },
+        {
+          "n": 64,
+          "median_us": 3797,
+          "max_us": 5269
+        },
+        {
+          "n": 96,
+          "median_us": 1302,
+          "max_us": 1302
+        },
+        {
+          "n": 128,
+          "median_us": 9509,
+          "max_us": 16349
+        },
+        {
+          "n": 256,
+          "median_us": 16500,
+          "max_us": 26391
+        },
+        {
+          "n": 512,
+          "median_us": 23035,
+          "max_us": 61268
+        },
+        {
+          "n": 768,
+          "median_us": 4127,
+          "max_us": 4127
+        },
+        {
+          "n": 1024,
+          "median_us": 15319,
+          "max_us": 25696
+        },
+        {
+          "n": 2048,
+          "median_us": 36695,
+          "max_us": 71106
+        },
+        {
+          "n": 3072,
+          "median_us": 15305,
+          "max_us": 15305
+        },
+        {
+          "n": 4096,
+          "median_us": 33949.5,
+          "max_us": 53368
+        },
+        {
+          "n": 9216,
+          "median_us": 52430,
+          "max_us": 52430
+        },
+        {
+          "n": 10000,
+          "median_us": 89045.0,
+          "max_us": 140840
+        }
+      ]
+    },
+    "holdout": {
+      "before": {
+        "total": 143,
+        "passed": 143,
+        "failed": 0
+      },
+      "after": {
+        "total": 143,
+        "passed": 143,
+        "failed": 0
+      },
+      "common_cases": 143,
+      "common_solve_us_before": 2267331,
+      "common_solve_us_after": 2173962,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 3955,
+      "scales": [
+        {
+          "n": 3,
+          "median_us": 69.5,
+          "max_us": 86
+        },
+        {
+          "n": 6,
+          "median_us": 105,
+          "max_us": 105
+        },
+        {
+          "n": 8,
+          "median_us": 30.5,
+          "max_us": 41
+        },
+        {
+          "n": 12,
+          "median_us": 59.0,
+          "max_us": 208
+        },
+        {
+          "n": 16,
+          "median_us": 134.5,
+          "max_us": 736
+        },
+        {
+          "n": 18,
+          "median_us": 1479,
+          "max_us": 1479
+        },
+        {
+          "n": 32,
+          "median_us": 1126,
+          "max_us": 2341
+        },
+        {
+          "n": 64,
+          "median_us": 3706,
+          "max_us": 5547
+        },
+        {
+          "n": 96,
+          "median_us": 1352,
+          "max_us": 1352
+        },
+        {
+          "n": 128,
+          "median_us": 9679,
+          "max_us": 17035
+        },
+        {
+          "n": 256,
+          "median_us": 17843,
+          "max_us": 28707
+        },
+        {
+          "n": 512,
+          "median_us": 27023,
+          "max_us": 61987
+        },
+        {
+          "n": 768,
+          "median_us": 4190,
+          "max_us": 4190
+        },
+        {
+          "n": 1024,
+          "median_us": 15855,
+          "max_us": 26988
+        },
+        {
+          "n": 2048,
+          "median_us": 37443,
+          "max_us": 71473
+        },
+        {
+          "n": 3072,
+          "median_us": 15668,
+          "max_us": 15668
+        },
+        {
+          "n": 4096,
+          "median_us": 35326.0,
+          "max_us": 54783
+        },
+        {
+          "n": 9216,
+          "median_us": 55985,
+          "max_us": 55985
+        },
+        {
+          "n": 10000,
+          "median_us": 94293.0,
+          "max_us": 151757
+        }
+      ]
+    },
+    "frontier": {
+      "before": {
+        "total": 72,
+        "passed": 72,
+        "failed": 0
+      },
+      "after": {
+        "total": 72,
+        "passed": 72,
+        "failed": 0
+      },
+      "common_cases": 72,
+      "common_solve_us_before": 5208695,
+      "common_solve_us_after": 3487411,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 2584,
+      "scales": [
+        {
+          "n": 16,
+          "median_us": 703,
+          "max_us": 1085
+        },
+        {
+          "n": 31,
+          "median_us": 676,
+          "max_us": 676
+        },
+        {
+          "n": 32,
+          "median_us": 1966.0,
+          "max_us": 2675
+        },
+        {
+          "n": 33,
+          "median_us": 760,
+          "max_us": 760
+        },
+        {
+          "n": 38,
+          "median_us": 879,
+          "max_us": 879
+        },
+        {
+          "n": 64,
+          "median_us": 4439,
+          "max_us": 8254
+        },
+        {
+          "n": 97,
+          "median_us": 1401,
+          "max_us": 1401
+        },
+        {
+          "n": 99,
+          "median_us": 1536,
+          "max_us": 1536
+        },
+        {
+          "n": 104,
+          "median_us": 2871,
+          "max_us": 2871
+        },
+        {
+          "n": 128,
+          "median_us": 10191.0,
+          "max_us": 17712
+        },
+        {
+          "n": 256,
+          "median_us": 44016,
+          "max_us": 121173
+        },
+        {
+          "n": 385,
+          "median_us": 4943,
+          "max_us": 4943
+        },
+        {
+          "n": 387,
+          "median_us": 5396,
+          "max_us": 5396
+        },
+        {
+          "n": 392,
+          "median_us": 9886,
+          "max_us": 9886
+        },
+        {
+          "n": 512,
+          "median_us": 56230.5,
+          "max_us": 88693
+        },
+        {
+          "n": 1024,
+          "median_us": 190118,
+          "max_us": 613297
+        },
+        {
+          "n": 1537,
+          "median_us": 12917,
+          "max_us": 12917
+        },
+        {
+          "n": 1539,
+          "median_us": 16034,
+          "max_us": 16034
+        },
+        {
+          "n": 1544,
+          "median_us": 22689,
+          "max_us": 22689
+        },
+        {
+          "n": 2048,
+          "median_us": 77905.0,
+          "max_us": 138687
+        }
+      ]
+    },
+    "frontier-holdout": {
+      "before": {
+        "total": 72,
+        "passed": 72,
+        "failed": 0
+      },
+      "after": {
+        "total": 72,
+        "passed": 72,
+        "failed": 0
+      },
+      "common_cases": 72,
+      "common_solve_us_before": 3500740,
+      "common_solve_us_after": 3785784,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 2788,
+      "scales": [
+        {
+          "n": 16,
+          "median_us": 751,
+          "max_us": 4356
+        },
+        {
+          "n": 31,
+          "median_us": 699,
+          "max_us": 699
+        },
+        {
+          "n": 32,
+          "median_us": 1786.0,
+          "max_us": 3328
+        },
+        {
+          "n": 33,
+          "median_us": 699,
+          "max_us": 699
+        },
+        {
+          "n": 38,
+          "median_us": 890,
+          "max_us": 890
+        },
+        {
+          "n": 64,
+          "median_us": 4721,
+          "max_us": 9570
+        },
+        {
+          "n": 97,
+          "median_us": 1272,
+          "max_us": 1272
+        },
+        {
+          "n": 99,
+          "median_us": 1489,
+          "max_us": 1489
+        },
+        {
+          "n": 104,
+          "median_us": 2183,
+          "max_us": 2183
+        },
+        {
+          "n": 128,
+          "median_us": 10562.5,
+          "max_us": 17616
+        },
+        {
+          "n": 256,
+          "median_us": 43066,
+          "max_us": 143867
+        },
+        {
+          "n": 385,
+          "median_us": 4725,
+          "max_us": 4725
+        },
+        {
+          "n": 387,
+          "median_us": 6862,
+          "max_us": 6862
+        },
+        {
+          "n": 392,
+          "median_us": 8549,
+          "max_us": 8549
+        },
+        {
+          "n": 512,
+          "median_us": 56493.0,
+          "max_us": 89233
+        },
+        {
+          "n": 1024,
+          "median_us": 208672,
+          "max_us": 617839
+        },
+        {
+          "n": 1537,
+          "median_us": 11428,
+          "max_us": 11428
+        },
+        {
+          "n": 1539,
+          "median_us": 15272,
+          "max_us": 15272
+        },
+        {
+          "n": 1544,
+          "median_us": 22318,
+          "max_us": 22318
+        },
+        {
+          "n": 2048,
+          "median_us": 80225.0,
+          "max_us": 95977
+        }
+      ]
+    },
+    "oracle4": {
+      "before": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "after": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "common_cases": 24,
+      "common_solve_us_before": 28013,
+      "common_solve_us_after": 28597,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 9249,
+      "scales": [
+        {
+          "n": 3,
+          "median_us": 67.0,
+          "max_us": 128
+        },
+        {
+          "n": 4,
+          "median_us": 1270.0,
+          "max_us": 4654
+        }
+      ]
+    },
+    "oracle4-holdout": {
+      "before": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "after": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "common_cases": 24,
+      "common_solve_us_before": 25934,
+      "common_solve_us_after": 28665,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 8769,
+      "scales": [
+        {
+          "n": 3,
+          "median_us": 87.5,
+          "max_us": 247
+        },
+        {
+          "n": 4,
+          "median_us": 942.5,
+          "max_us": 5039
+        }
+      ]
+    },
+    "oracle5": {
+      "before": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "after": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "common_cases": 24,
+      "common_solve_us_before": 86505,
+      "common_solve_us_after": 79930,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 66045,
+      "scales": [
+        {
+          "n": 5,
+          "median_us": 2617.5,
+          "max_us": 9577
+        }
+      ]
+    },
+    "oracle5-holdout": {
+      "before": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "after": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "common_cases": 24,
+      "common_solve_us_before": 142896,
+      "common_solve_us_after": 119559,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 108402,
+      "scales": [
+        {
+          "n": 5,
+          "median_us": 3138.0,
+          "max_us": 18532
+        }
+      ]
+    },
+    "overlap": {
+      "before": {
+        "total": 30,
+        "passed": 0,
+        "failed": 30
+      },
+      "after": {
+        "total": 30,
+        "passed": 30,
+        "failed": 0
+      },
+      "common_cases": 0,
+      "common_solve_us_before": 0,
+      "common_solve_us_after": 0,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [
+        "overlap_k8_f1_r1_seed20261825",
+        "overlap_k8_f1_r4_seed20261828",
+        "overlap_k8_f2_r1_seed20261835",
+        "overlap_k8_f2_r4_seed20261838",
+        "overlap_k8_f4_r1_seed20261855",
+        "overlap_k8_f4_r4_seed20261858",
+        "overlap_k24_f1_r1_seed20263425",
+        "overlap_k24_f1_r4_seed20263428",
+        "overlap_k24_f2_r1_seed20263435",
+        "overlap_k24_f2_r4_seed20263438",
+        "overlap_k24_f4_r1_seed20263455",
+        "overlap_k24_f4_r4_seed20263458",
+        "overlap_k96_f1_r1_seed20270625",
+        "overlap_k96_f1_r4_seed20270628",
+        "overlap_k96_f2_r1_seed20270635",
+        "overlap_k96_f2_r4_seed20270638",
+        "overlap_k96_f4_r1_seed20270655",
+        "overlap_k96_f4_r4_seed20270658",
+        "overlap_k384_f1_r1_seed20299425",
+        "overlap_k384_f1_r4_seed20299428",
+        "overlap_k384_f2_r1_seed20299435",
+        "overlap_k384_f2_r4_seed20299438",
+        "overlap_k384_f4_r1_seed20299455",
+        "overlap_k384_f4_r4_seed20299458",
+        "overlap_k1536_f1_r1_seed20414625",
+        "overlap_k1536_f1_r4_seed20414628",
+        "overlap_k1536_f2_r1_seed20414635",
+        "overlap_k1536_f2_r4_seed20414638",
+        "overlap_k1536_f4_r1_seed20414655",
+        "overlap_k1536_f4_r4_seed20414658"
+      ],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 1097,
+      "scales": [
+        {
+          "n": 25,
+          "median_us": 762,
+          "max_us": 923
+        },
+        {
+          "n": 28,
+          "median_us": 1142,
+          "max_us": 1670
+        },
+        {
+          "n": 73,
+          "median_us": 1681,
+          "max_us": 2164
+        },
+        {
+          "n": 76,
+          "median_us": 2339,
+          "max_us": 3043
+        },
+        {
+          "n": 289,
+          "median_us": 6274,
+          "max_us": 8236
+        },
+        {
+          "n": 292,
+          "median_us": 8370,
+          "max_us": 10560
+        },
+        {
+          "n": 1153,
+          "median_us": 13499,
+          "max_us": 18579
+        },
+        {
+          "n": 1156,
+          "median_us": 19811,
+          "max_us": 27237
+        },
+        {
+          "n": 4609,
+          "median_us": 51473,
+          "max_us": 61454
+        },
+        {
+          "n": 4612,
+          "median_us": 90200,
+          "max_us": 97679
+        }
+      ]
+    },
+    "overlap-holdout": {
+      "before": {
+        "total": 30,
+        "passed": 0,
+        "failed": 30
+      },
+      "after": {
+        "total": 30,
+        "passed": 30,
+        "failed": 0
+      },
+      "common_cases": 0,
+      "common_solve_us_before": 0,
+      "common_solve_us_after": 0,
+      "improved_T": 0,
+      "regressed_T": 0,
+      "improved_peak_at_equal_T": 0,
+      "regressed_peak_at_equal_T": 0,
+      "recovered": [
+        "overlap_k8_f1_r1_seed20271825",
+        "overlap_k8_f1_r4_seed20271828",
+        "overlap_k8_f2_r1_seed20271835",
+        "overlap_k8_f2_r4_seed20271838",
+        "overlap_k8_f4_r1_seed20271855",
+        "overlap_k8_f4_r4_seed20271858",
+        "overlap_k24_f1_r1_seed20273425",
+        "overlap_k24_f1_r4_seed20273428",
+        "overlap_k24_f2_r1_seed20273435",
+        "overlap_k24_f2_r4_seed20273438",
+        "overlap_k24_f4_r1_seed20273455",
+        "overlap_k24_f4_r4_seed20273458",
+        "overlap_k96_f1_r1_seed20280625",
+        "overlap_k96_f1_r4_seed20280628",
+        "overlap_k96_f2_r1_seed20280635",
+        "overlap_k96_f2_r4_seed20280638",
+        "overlap_k96_f4_r1_seed20280655",
+        "overlap_k96_f4_r4_seed20280658",
+        "overlap_k384_f1_r1_seed20309425",
+        "overlap_k384_f1_r4_seed20309428",
+        "overlap_k384_f2_r1_seed20309435",
+        "overlap_k384_f2_r4_seed20309438",
+        "overlap_k384_f4_r1_seed20309455",
+        "overlap_k384_f4_r4_seed20309458",
+        "overlap_k1536_f1_r1_seed20424625",
+        "overlap_k1536_f1_r4_seed20424628",
+        "overlap_k1536_f2_r1_seed20424635",
+        "overlap_k1536_f2_r4_seed20424638",
+        "overlap_k1536_f4_r1_seed20424655",
+        "overlap_k1536_f4_r4_seed20424658"
+      ],
+      "lost": [],
+      "model_disagreements": 0,
+      "duplicates": 1101,
+      "scales": [
+        {
+          "n": 25,
+          "median_us": 840,
+          "max_us": 1037
+        },
+        {
+          "n": 28,
+          "median_us": 1101,
+          "max_us": 1325
+        },
+        {
+          "n": 73,
+          "median_us": 1607,
+          "max_us": 2191
+        },
+        {
+          "n": 76,
+          "median_us": 2163,
+          "max_us": 2912
+        },
+        {
+          "n": 289,
+          "median_us": 6003,
+          "max_us": 7491
+        },
+        {
+          "n": 292,
+          "median_us": 8325,
+          "max_us": 9745
+        },
+        {
+          "n": 1153,
+          "median_us": 14251,
+          "max_us": 18680
+        },
+        {
+          "n": 1156,
+          "median_us": 20228,
+          "max_us": 27198
+        },
+        {
+          "n": 4609,
+          "median_us": 54203,
+          "max_us": 58733
+        },
+        {
+          "n": 4612,
+          "median_us": 92641,
+          "max_us": 98805
+        }
+      ]
+    }
+  },
+  "timing_scope": "single functional regression, not paired CPU evidence"
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791729206.4169505,
+  "source_provenance_sha256": "66a137d563141ac0d9578ae32d16849239ace3305d91ac4a2039db0674a66746",
+  "report_sha256": "7876b9b6f6f16660a36e104ed10c9a7a2135392a6a1ac4b91b17bfe6c6da9be8",
+  "frozen_source_files": 66,
+  "frozen_gold_files": 122,
+  "original_gold_cases": 40,
+  "reused_independent_full_merge_gold": 8960,
+  "actual_new_outlets_replayed": 38,
+  "actual_boundary_outputs_replayed": 5,
+  "actual_full_replay_instances": 163,
+  "processed_states": 2461,
+  "before_copies": 89,
+  "after_copies": 53,
+  "actual_graph_reopens": 0,
+  "actual_graph_stale_entries": 0,
+  "synthetic_queue_contracts_separate": true,
+  "root_actual_boundary_tests": 6,
+  "root_actual_exit_code": 0,
+  "scope": "All40 original fixed-merge inputs/cached baselines and independently verified8960 order gold retained. All38 new full outlets,40 bests,5 boundary programs and frozen baselines/golds independently replayed;40 retained minima equal min(baseline,fixed-family gold). All40 OPEN exhausted. Synthetic-only reopen/stale contract rerun, no real-graph coverage claim. No84/full336/default/official Level result.",
+  "limitation": "R168 returns materialized diagnostic frontier after search/emit stop and does not separately time that export;40 real gold OPENs are empty, so no active-state export occurred there. Partial boundary frontiers not archived. Correct budget/export accounting and saved partial boundaries required before84."
+}

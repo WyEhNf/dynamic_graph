@@ -1,0 +1,16 @@
+{
+  "reviewed_unix": 1791706143.9184105,
+  "passed": true,
+  "normal_records": 979,
+  "hashed_build_test_generation_inputs": 34,
+  "ctest": 11,
+  "default_source_sha256": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+  "default_exe_sha256": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+  "measured_exe_sha256": "8d43bf1ff55eb0486d902652782b04c35fe32c7985eb5207e07fdffdbb507e16",
+  "evidence": {
+    "projects/27-aicore-streams/reports/final-checkpoint-batch44.json": "f56650f6bfbf3332a9325c324edec4f32a5e9071d6d72f2126ff9398c0ff9578",
+    "projects/27-aicore-streams/reports/direct-normal-r43-batch44.json": "849931df29a16b276a6f7183aba07083bf54d89b9cca40aec238d3270c2326e2",
+    "projects/27-aicore-streams/reports/ctest-batch44.txt": "e0e11f65b74b36b46e1113aef63ba1994c399b90cec9d68c7b6e06d78deb3bde"
+  },
+  "scope": "Current default source/binary, frozen historical R43, measured Release source/recipe/binary, exact recorded build inputs, terminal CTest log and every979 normal saved before/after record checked. Original open TeX unchanged. No fresh979 solver rerun claimed."
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791779929.7240107,
+  "cost_plan_sha256": "38c54b9ac38c8e26b11d8ce12953b58b512b994291d2a674f460bbd05eca813b",
+  "probe_plan_sha256": "d4f37ab48eecd0ba1e60a92a744e72617d4e1490ed36661a8b4c2b5a43b6a80f",
+  "cost_cases": 29,
+  "planned_records": 174,
+  "planned_pairs": 87,
+  "planned_output_bytes": 495920904,
+  "probe_observations": 25,
+  "authorization": "Compile the frozen matching-ABI analysis-only probe once and execute25 observations under fresh256MiB RAM/disk gates. Then run exactly frozen174 samebinary fixed/proved cost records once with wholeCbyte comparisons and resource gates after root/otheragent CPU audits finish; keep all negatives and failures. No large matrix/realC run/default promotion.",
+  "scope": "All frozen source/helper/case hashes and matching accepted ABI/strictFP compiler provenance verified. Probe cannot allocate or execute matrices; highN bound evaluation does not demonstrate highN runtime output. Cost runner scope is only old29 unamplified cases; no speedup claim before actual results."
+}

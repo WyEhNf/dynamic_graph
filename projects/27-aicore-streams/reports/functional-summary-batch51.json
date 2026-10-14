@@ -1,0 +1,54 @@
+{
+  "status": "isolated full functional;not default",
+  "source_sha": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+  "benchmark_sha": "17a3d651b7c1b1b9afeefe34a0d75b4065ef041b61cc86ab5190cce88449537a",
+  "default_source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "diagnostic_freeze_sha": "22fa489f026269cad5d31517f71d61f21eda4ccb1626c7bbd55868ff4e2689f0",
+  "independent_simulator_sha": "bbf4dbcfcdcdd60247301abce68350dcf62445506ebd172e68b57036351199a4",
+  "shared_functional_seconds": 37.840727400034666,
+  "jobs": [
+    {
+      "label": "hard",
+      "input_sha": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325",
+      "actual_exit_code": 1,
+      "shared_functional_wall_seconds": 34.79890960000921
+    },
+    {
+      "label": "heldout",
+      "input_sha": "8252c85627e3a8517d60d995d28a65ec8fea6d96ef0ae3b62ee988f820dfb84a",
+      "actual_exit_code": 1,
+      "shared_functional_wall_seconds": 2.90301329997601
+    }
+  ],
+  "comparisons": {
+    "hard": {
+      "records": 202,
+      "before_legal": 144,
+      "after_legal": 145,
+      "recovered": [
+        "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration"
+      ],
+      "lost": [],
+      "common_T_peak_changes": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "0607350f4ac622013bb55ec9c61eb206763e6561ad3b968ecc793a4b573bd8c0",
+      "after_sha": "bf24b5c3db093b1cb2b8cc0b5f0469233ab471e3a64bdb06ffdc25886d833f02",
+      "all_failure_wall_us": 23132721,
+      "all_failure_thread_cpu_us": 22656250
+    },
+    "heldout": {
+      "records": 48,
+      "before_legal": 42,
+      "after_legal": 42,
+      "recovered": [],
+      "lost": [],
+      "common_T_peak_changes": [],
+      "common_all_T_peak_identical": true,
+      "before_sha": "d8b707ca8eaf6ff7fe3234bc224ac1afca598c87b590ea4363332888210a262c",
+      "after_sha": "b7cf3ec8084e2868fdbf7f304b72e8caf3877283bb837ace2fa793f9332c39b4",
+      "all_failure_wall_us": 892721,
+      "all_failure_thread_cpu_us": 859375
+    }
+  },
+  "timing": "Shared functional O2, no paired performance/speed claim"
+}

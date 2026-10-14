@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791719213.0671182,
+  "frozen_component_manifest_sha256": "07481fb2fc9c6cdbe4a197230907c07dbd6a828feb29e7bf6431c1508954db48",
+  "abi_dependency_supplement_sha256": "09f31d00df7df1beb52f54bb68a60ff79069758ad493805b73929def3ea8f023",
+  "frozen_dependency_files": 12,
+  "actual_root_executions": [
+    {
+      "phase": "compile",
+      "command": [
+        "E:\\mingw64\\bin\\g++.exe",
+        "-std=c++20",
+        "-O2",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-I",
+        "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-proved-budget\\component-dependency-supplement\\source\\include",
+        "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-proved-budget\\component-dependency-supplement\\source\\src\\vm_step_bound.cpp",
+        "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-proved-budget\\component-dependency-supplement\\source\\tests\\vm_step_bound_tests.cpp",
+        "F:\\Hackathon\\projects\\19-dynamic-graph\\artifacts\\stage2-vm-proved-budget\\component-dependency-supplement\\libcholesky_core.a",
+        "-o",
+        "F:\\Hackathon\\outputs\\stage2-root-vm-proof-component\\vm-bound-tests.exe"
+      ],
+      "actual_exit_code": 0,
+      "wall_seconds": 9.528689622879028
+    },
+    {
+      "phase": "test",
+      "command": [
+        "F:\\Hackathon\\outputs\\stage2-root-vm-proof-component\\vm-bound-tests.exe"
+      ],
+      "actual_exit_code": 0,
+      "wall_seconds": 0.3471829891204834
+    }
+  ],
+  "root_test_exe_sha256": "d57eab9f66695498cb5aceb73dd8976d951f3347d7e02ab27fb1d6ba2cedfa86",
+  "component_stats": {
+    "passed": true,
+    "exhaustive_goldens": 517,
+    "unknown_mutations": 119,
+    "exact_and_one_short_boundaries": 1030,
+    "adversarial_program_mutations": 6358,
+    "proved_mutations": 416,
+    "actual_mutation_VM_executions": 832,
+    "ordinary_runtime_changed": false,
+    "N10000_execution_started": false
+  },
+  "ordinary_runtime_sha256": "99a87d135378406a15efd930d58941291683ca799f91bd5dcc0ca77ceadef448",
+  "ordinary_runtime_unchanged": true,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-acceptance/manifest.json": "07481fb2fc9c6cdbe4a197230907c07dbd6a828feb29e7bf6431c1508954db48",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/manifest.json": "09f31d00df7df1beb52f54bb68a60ff79069758ad493805b73929def3ea8f023",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/compressed_metadata.hpp": "00670103159099a97de16a11bd5e784df27b614323ad6d7df0cc5cb6085edab8",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/prepared_vm.hpp": "ce278c18b351fa200852f20f1379cd04dcf496bf743ad92d7b9e46e4319b7eb8",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/runtime.hpp": "f1b56b5526e65df389036c579300a9c8a9f01d99e24899493e3369a51b75bd0e",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/simd_dispatch.hpp": "a09b1b1646a512def456d5208ada97a785a5651a124b67144e2c79974d3ce1eb",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/threaded_vm.hpp": "fcec4811967275bab66cce28f2a724a19002e586876e792ff4ddff80a6e129aa",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/tos2_stack.hpp": "776e701fb3e525a6cba94a371292df0a9ef5307255160a39fcd85a9d08d9f9a8",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/src/vm_step_bound.cpp": "c761fee9c8d9aa9b2c1cc6ee1caf6ce6704290b89e56bb59d7851d7f3f31e62c",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/include/cholesky/vm_step_bound.hpp": "75f2d32f5836f3a225751396e78db3cfd55227dbf8447cd46223359972044168",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/tests/vm_step_bound_tests.cpp": "fbae4bcf7a8d60a62c60bfaacb084e1004c01959fdf42e55217c7c59442d2c31",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/libcholesky_core.a": "476ad1c98d5983b6a821a2395a41d01771b364667ce85de163ef09ce8edd8127",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/core-flags.make": "5029af41ba7ec326aada17ea832adb022b16f89e6881e834474b9a7127a00312",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-proved-budget/component-dependency-supplement/source/tools/supplement_vm_bound_component_dependencies.py": "df0ba073e83b8a684539e765a558e37e65e708abcfe2dd77a7b93940b8efaab3",
+    "outputs/stage2-root-vm-proof-component/compile-stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proof-component/compile-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/stage2-root-vm-proof-component/test-stdout.txt": "d590ce1e953593ea77f105f2c62810e04542a0180df26361f0479f82ebc4e62f",
+    "outputs/stage2-root-vm-proof-component/test-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Independent actual rebuild and execution of frozen historical-ABI component tests:517 goldens,1030 boundaries,119 unknowns,6358 one-position mutations,832 actual VM mutation runs. These finite tests plus structural review support scoped proof, not arbitraryPROGRAM correctness or N10000 execution. Original failed test fixture retained; runtime integration is a separate gate."
+}

@@ -1,0 +1,14 @@
+{
+  "block_id": "local-far-dependency",
+  "bit_width": 2,
+  "instructions": [
+    {"id": 0, "op": "GET", "reg": "a"},
+    {"id": 1, "op": "GET", "reg": "b"},
+    {"id": 2, "op": "ADD", "inputs": ["t#1", "t#1"]},
+    {"id": 3, "op": "ADD", "inputs": ["t#1", "t#1"]},
+    {"id": 4, "op": "ADD", "inputs": ["t#1", "t#1"]},
+    {"id": 5, "op": "MULW", "inputs": ["t#5", "t#1"]},
+    {"id": 6, "op": "SET", "reg": "out", "inputs": ["t#1"]}
+  ]
+}
+

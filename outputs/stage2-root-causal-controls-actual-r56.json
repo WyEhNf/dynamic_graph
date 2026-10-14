@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "actual_owner_session": 97407,
+  "actual_terminal_exit_code": 0,
+  "completion_freeze_sha256": "24a61498677b9d130c1f3df7e93951fb47f613ede32225b26698d59165edb19c",
+  "root_static_caller_review_sha256": "9d53051128da8b2fce0e468ac102ea3c7bb4f6c7b4a91ecf612ada6b98813e1c",
+  "compiler_summaries": [
+    {
+      "compiler": "gcc",
+      "fixed_legal": 144,
+      "helper_whole_legal": 136,
+      "qualified_pairs": 96,
+      "detector_exhausted": 12,
+      "fixed_invalid": 16,
+      "helper_whole_missing": 24,
+      "caller_exhausted": 11,
+      "caller_valid": 5
+    },
+    {
+      "compiler": "ubsan",
+      "fixed_legal": 144,
+      "helper_whole_legal": 136,
+      "qualified_pairs": 96,
+      "detector_exhausted": 12,
+      "fixed_invalid": 16,
+      "helper_whole_missing": 24,
+      "caller_exhausted": 11,
+      "caller_valid": 5
+    }
+  ],
+  "independent_original_physics_replays": 634,
+  "actual_commands": 13,
+  "fresh_resource_gates": 14,
+  "frozen_completion_files": 61,
+  "source_sha256": "3a4f184de2759fdcd1cbfd899c5f8029e2f7f2691743ec214a895123db19c21a",
+  "scope": "GCC and Clang UBSan actual160 detector/16 caller fee boundaries each, original bigint full-plan physical replay. Artificial helper136/160 complete each;24missing retained. No original12/63 recovery, performance or default promotion evidence."
+}

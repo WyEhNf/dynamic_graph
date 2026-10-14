@@ -1,0 +1,569 @@
+{
+  "hard": {
+    "rounds": [
+      {
+        "round": 1,
+        "groups": {
+          "all": {
+            "count": 202,
+            "before": {
+              "wall_us": 33081394,
+              "thread_cpu_us": 30015625
+            },
+            "after": {
+              "wall_us": 35451879,
+              "thread_cpu_us": 33140625
+            }
+          },
+          "common_success": {
+            "count": 141,
+            "before": {
+              "wall_us": 10571115,
+              "thread_cpu_us": 9593750
+            },
+            "after": {
+              "wall_us": 10475905,
+              "thread_cpu_us": 9765625
+            }
+          },
+          "common_failure": {
+            "count": 59,
+            "before": {
+              "wall_us": 22439448,
+              "thread_cpu_us": 20359375
+            },
+            "after": {
+              "wall_us": 24887330,
+              "thread_cpu_us": 23281250
+            }
+          },
+          "recovered": {
+            "count": 2,
+            "before": {
+              "wall_us": 70831,
+              "thread_cpu_us": 62500
+            },
+            "after": {
+              "wall_us": 88644,
+              "thread_cpu_us": 93750
+            }
+          }
+        },
+        "raw_sha": {
+          "before": "04bba7357765c851fb92c0a9ff7cc7de1232d2cb214f4b654f6d09999e25f9e1",
+          "after": "5f1744cef86695e481dbacc0a50680d424f33b5879744aeed1c6786e9935b9ec"
+        },
+        "cli": {
+          "before": {
+            "wall_seconds": 34.612786300014704,
+            "working_set_bytes": 316616704
+          },
+          "after": {
+            "wall_seconds": 37.168506199959666,
+            "working_set_bytes": 316801024
+          }
+        },
+        "recovered": [
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+        ],
+        "all_cpu_ratio": 1.1041124414367518,
+        "all_wall_ratio": 1.0716561400042575
+      },
+      {
+        "round": 2,
+        "groups": {
+          "all": {
+            "count": 202,
+            "before": {
+              "wall_us": 32291202,
+              "thread_cpu_us": 30281250
+            },
+            "after": {
+              "wall_us": 35302307,
+              "thread_cpu_us": 33015625
+            }
+          },
+          "common_success": {
+            "count": 141,
+            "before": {
+              "wall_us": 10314834,
+              "thread_cpu_us": 9796875
+            },
+            "after": {
+              "wall_us": 10463564,
+              "thread_cpu_us": 9781250
+            }
+          },
+          "common_failure": {
+            "count": 59,
+            "before": {
+              "wall_us": 21892205,
+              "thread_cpu_us": 20437500
+            },
+            "after": {
+              "wall_us": 24746228,
+              "thread_cpu_us": 23140625
+            }
+          },
+          "recovered": {
+            "count": 2,
+            "before": {
+              "wall_us": 84163,
+              "thread_cpu_us": 46875
+            },
+            "after": {
+              "wall_us": 92515,
+              "thread_cpu_us": 93750
+            }
+          }
+        },
+        "raw_sha": {
+          "before": "e0c07c31446bf00e650931d4c4517be92f6ce1bc6e2ee56326d1a70c65c0fdb3",
+          "after": "6edc135e1647593d3c8c8d68922e6f0dbdac0a95f575d49ff8e8c8a43e338f8d"
+        },
+        "cli": {
+          "before": {
+            "wall_seconds": 33.71784050000133,
+            "working_set_bytes": 317009920
+          },
+          "after": {
+            "wall_seconds": 36.761607700027525,
+            "working_set_bytes": 316153856
+          }
+        },
+        "recovered": [
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+        ],
+        "all_cpu_ratio": 1.0902992776057792,
+        "all_wall_ratio": 1.0932484643959677
+      },
+      {
+        "round": 3,
+        "groups": {
+          "all": {
+            "count": 202,
+            "before": {
+              "wall_us": 31585705,
+              "thread_cpu_us": 29781250
+            },
+            "after": {
+              "wall_us": 37377771,
+              "thread_cpu_us": 33796875
+            }
+          },
+          "common_success": {
+            "count": 141,
+            "before": {
+              "wall_us": 10121691,
+              "thread_cpu_us": 9468750
+            },
+            "after": {
+              "wall_us": 10988965,
+              "thread_cpu_us": 10125000
+            }
+          },
+          "common_failure": {
+            "count": 59,
+            "before": {
+              "wall_us": 21391746,
+              "thread_cpu_us": 20250000
+            },
+            "after": {
+              "wall_us": 26295071,
+              "thread_cpu_us": 23593750
+            }
+          },
+          "recovered": {
+            "count": 2,
+            "before": {
+              "wall_us": 72268,
+              "thread_cpu_us": 62500
+            },
+            "after": {
+              "wall_us": 93735,
+              "thread_cpu_us": 78125
+            }
+          }
+        },
+        "raw_sha": {
+          "before": "654f536817c0f77ac422e846a97415b456a198003e0032fdd88795693d2c187f",
+          "after": "c7e18e34e7df7a4b014b8b2fb7b95303b1bf454fd32dc472f380a3a67c394bf9"
+        },
+        "cli": {
+          "before": {
+            "wall_seconds": 33.0787805999862,
+            "working_set_bytes": 316755968
+          },
+          "after": {
+            "wall_seconds": 38.87025059998268,
+            "working_set_bytes": 316141568
+          }
+        },
+        "recovered": [
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+          "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+        ],
+        "all_cpu_ratio": 1.1348373557187827,
+        "all_wall_ratio": 1.1833761823584434
+      }
+    ],
+    "independent_side_medians": {
+      "all": {
+        "before": {
+          "wall_us": 32291202,
+          "thread_cpu_us": 30015625
+        },
+        "after": {
+          "wall_us": 35451879,
+          "thread_cpu_us": 33140625
+        }
+      },
+      "common_success": {
+        "before": {
+          "wall_us": 10314834,
+          "thread_cpu_us": 9593750
+        },
+        "after": {
+          "wall_us": 10475905,
+          "thread_cpu_us": 9781250
+        }
+      },
+      "common_failure": {
+        "before": {
+          "wall_us": 21892205,
+          "thread_cpu_us": 20359375
+        },
+        "after": {
+          "wall_us": 24887330,
+          "thread_cpu_us": 23281250
+        }
+      },
+      "recovered": {
+        "before": {
+          "wall_us": 72268,
+          "thread_cpu_us": 62500
+        },
+        "after": {
+          "wall_us": 92515,
+          "thread_cpu_us": 93750
+        }
+      }
+    },
+    "median_within_pair_all_cpu_ratio": 1.1041124414367518,
+    "ratio_of_independent_side_all_cpu_medians": 1.1041124414367518,
+    "median_within_pair_all_wall_ratio": 1.0932484643959677,
+    "cli_side_medians": {
+      "before": {
+        "wall_seconds": 33.71784050000133,
+        "maximum_working_set_bytes": 317009920
+      },
+      "after": {
+        "wall_seconds": 37.168506199959666,
+        "maximum_working_set_bytes": 316801024
+      }
+    },
+    "source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+    "exe_sha": "3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9",
+    "baseline_source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+    "baseline_exe_sha": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+    "counts": {
+      "all": 202,
+      "common_success": 141,
+      "common_failure": 59,
+      "recovered": 2
+    },
+    "timing": "Same GCC Release O3; complete failures included; original record order retained; Win32 thread CPU quantized; process WS includes JSON/plans/validators; background user applications remain; side-median and median-paired ratios distinguished",
+    "host_load": {
+      "trial_host_busy": "unmeasured",
+      "trial_host_available_ram": "unmeasured",
+      "pre_window_observation": "Parent observed about1.32GiB available RAM and active user applications; not a complete-window sample",
+      "harness_modified_during_run": false,
+      "extra_runs_for_background": false
+    },
+    "paired_plan_path": "research/batch45/paired-plan.json",
+    "paired_plan_sha": "43ebc687b73bc3dfb23cc3a7a44a89aa818c91eb983763405e9597f05a2d34cf",
+    "baseline_executed_path": "research/batch44/default-aicore_bench.exe",
+    "candidate_executed_path": "research/batch45/release-candidate-frozen-aicore_bench.exe"
+  },
+  "heldout": {
+    "rounds": [
+      {
+        "round": 1,
+        "groups": {
+          "all": {
+            "count": 48,
+            "before": {
+              "wall_us": 2970729,
+              "thread_cpu_us": 2703125
+            },
+            "after": {
+              "wall_us": 3167261,
+              "thread_cpu_us": 2906250
+            }
+          },
+          "common_success": {
+            "count": 42,
+            "before": {
+              "wall_us": 2082051,
+              "thread_cpu_us": 1906250
+            },
+            "after": {
+              "wall_us": 2064594,
+              "thread_cpu_us": 1875000
+            }
+          },
+          "common_failure": {
+            "count": 6,
+            "before": {
+              "wall_us": 888678,
+              "thread_cpu_us": 796875
+            },
+            "after": {
+              "wall_us": 1102667,
+              "thread_cpu_us": 1031250
+            }
+          },
+          "recovered": {
+            "count": 0,
+            "before": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            },
+            "after": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            }
+          }
+        },
+        "raw_sha": {
+          "before": "14be81f476f328d0b797d17a5ddc961a1c9b7fcc8d1e8211cb6a323087195f6b",
+          "after": "ca453b5bac00dbcdc1bcadd1e891582eedc52373cec74d6d3ba2920cf2a4b6f3"
+        },
+        "cli": {
+          "before": {
+            "wall_seconds": 3.1636847999761812,
+            "working_set_bytes": 31461376
+          },
+          "after": {
+            "wall_seconds": 3.3751489000278525,
+            "working_set_bytes": 31948800
+          }
+        },
+        "recovered": [],
+        "all_cpu_ratio": 1.0751445086705202,
+        "all_wall_ratio": 1.0661561522441125
+      },
+      {
+        "round": 2,
+        "groups": {
+          "all": {
+            "count": 48,
+            "before": {
+              "wall_us": 2951188,
+              "thread_cpu_us": 2687500
+            },
+            "after": {
+              "wall_us": 3233042,
+              "thread_cpu_us": 2921875
+            }
+          },
+          "common_success": {
+            "count": 42,
+            "before": {
+              "wall_us": 2102459,
+              "thread_cpu_us": 1906250
+            },
+            "after": {
+              "wall_us": 2155797,
+              "thread_cpu_us": 1937500
+            }
+          },
+          "common_failure": {
+            "count": 6,
+            "before": {
+              "wall_us": 848729,
+              "thread_cpu_us": 781250
+            },
+            "after": {
+              "wall_us": 1077245,
+              "thread_cpu_us": 984375
+            }
+          },
+          "recovered": {
+            "count": 0,
+            "before": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            },
+            "after": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            }
+          }
+        },
+        "raw_sha": {
+          "before": "b5f186ddd64efb00ce7a12e111dc8739662ebefd90123e0a5999f0ff5f5a58b3",
+          "after": "c34ef89375374bb441a4c07ca777b0a0d510942a280c3167911967433ba2c3c8"
+        },
+        "cli": {
+          "before": {
+            "wall_seconds": 3.1416634999914095,
+            "working_set_bytes": 31682560
+          },
+          "after": {
+            "wall_seconds": 3.434454799978994,
+            "working_set_bytes": 31801344
+          }
+        },
+        "recovered": [],
+        "all_cpu_ratio": 1.0872093023255813,
+        "all_wall_ratio": 1.0955052677091395
+      },
+      {
+        "round": 3,
+        "groups": {
+          "all": {
+            "count": 48,
+            "before": {
+              "wall_us": 3154167,
+              "thread_cpu_us": 2843750
+            },
+            "after": {
+              "wall_us": 3356952,
+              "thread_cpu_us": 3109375
+            }
+          },
+          "common_success": {
+            "count": 42,
+            "before": {
+              "wall_us": 2247677,
+              "thread_cpu_us": 2000000
+            },
+            "after": {
+              "wall_us": 2215894,
+              "thread_cpu_us": 2062500
+            }
+          },
+          "common_failure": {
+            "count": 6,
+            "before": {
+              "wall_us": 906490,
+              "thread_cpu_us": 843750
+            },
+            "after": {
+              "wall_us": 1141058,
+              "thread_cpu_us": 1046875
+            }
+          },
+          "recovered": {
+            "count": 0,
+            "before": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            },
+            "after": {
+              "wall_us": 0,
+              "thread_cpu_us": 0
+            }
+          }
+        },
+        "raw_sha": {
+          "before": "6e1c02b3c32f13ca5f8ed9a7b4e0e4a7d78b3e73491929bfbacbc952427f6b9f",
+          "after": "67904b946530f4fe41000bf75ebb66c9863127b2f8daea711f17e1c2efac6337"
+        },
+        "cli": {
+          "before": {
+            "wall_seconds": 3.3719198999460787,
+            "working_set_bytes": 31870976
+          },
+          "after": {
+            "wall_seconds": 3.5724567000288516,
+            "working_set_bytes": 31674368
+          }
+        },
+        "recovered": [],
+        "all_cpu_ratio": 1.0934065934065933,
+        "all_wall_ratio": 1.0642911424791395
+      }
+    ],
+    "independent_side_medians": {
+      "all": {
+        "before": {
+          "wall_us": 2970729,
+          "thread_cpu_us": 2703125
+        },
+        "after": {
+          "wall_us": 3233042,
+          "thread_cpu_us": 2921875
+        }
+      },
+      "common_success": {
+        "before": {
+          "wall_us": 2102459,
+          "thread_cpu_us": 1906250
+        },
+        "after": {
+          "wall_us": 2155797,
+          "thread_cpu_us": 1937500
+        }
+      },
+      "common_failure": {
+        "before": {
+          "wall_us": 888678,
+          "thread_cpu_us": 796875
+        },
+        "after": {
+          "wall_us": 1102667,
+          "thread_cpu_us": 1031250
+        }
+      },
+      "recovered": {
+        "before": {
+          "wall_us": 0,
+          "thread_cpu_us": 0
+        },
+        "after": {
+          "wall_us": 0,
+          "thread_cpu_us": 0
+        }
+      }
+    },
+    "median_within_pair_all_cpu_ratio": 1.0872093023255813,
+    "ratio_of_independent_side_all_cpu_medians": 1.0809248554913296,
+    "median_within_pair_all_wall_ratio": 1.0661561522441125,
+    "cli_side_medians": {
+      "before": {
+        "wall_seconds": 3.1636847999761812,
+        "maximum_working_set_bytes": 31870976
+      },
+      "after": {
+        "wall_seconds": 3.434454799978994,
+        "maximum_working_set_bytes": 31948800
+      }
+    },
+    "source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+    "exe_sha": "3e8273e29d090a99f8224dad8e7a47cd6c5d313e50bee026e4064ed200cb02a9",
+    "baseline_source_sha": "d88860f2da7eb9b18d0271abec308a2aa1e6f426742eeecd01d58d87fd7034a3",
+    "baseline_exe_sha": "7861a413437c0617705fffa335e6dbedead3cb3b15c5fff5ae25f3fef1920f56",
+    "counts": {
+      "all": 48,
+      "common_success": 42,
+      "common_failure": 6,
+      "recovered": 0
+    },
+    "timing": "Same GCC Release O3; complete failures included; original record order retained; Win32 thread CPU quantized; process WS includes JSON/plans/validators; background user applications remain; side-median and median-paired ratios distinguished",
+    "host_load": {
+      "trial_host_busy": "unmeasured",
+      "trial_host_available_ram": "unmeasured",
+      "pre_window_observation": "Parent observed about1.32GiB available RAM and active user applications; not a complete-window sample",
+      "harness_modified_during_run": false,
+      "extra_runs_for_background": false
+    },
+    "paired_plan_path": "research/batch45/paired-plan.json",
+    "paired_plan_sha": "43ebc687b73bc3dfb23cc3a7a44a89aa818c91eb983763405e9597f05a2d34cf",
+    "baseline_executed_path": "research/batch44/default-aicore_bench.exe",
+    "candidate_executed_path": "research/batch45/release-candidate-frozen-aicore_bench.exe"
+  }
+}

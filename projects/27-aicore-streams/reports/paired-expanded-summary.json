@@ -1,0 +1,442 @@
+{
+  "suite": "data\\research-expanded.json",
+  "suite_sha256": "10303892c3eec496b66a6d97573d701ed3c7f01973954405c39219eed94142e5",
+  "baseline_exe_sha256": "6635346d15e4667a2288110e26fed5b3cf7bf35adaefa5727153bd5041465f09",
+  "current_exe_sha256": "820253dee248a2297599857823861f3452839e7218e8ec12a4d33c652d138d0f",
+  "current_solution_sha256": "efc4ca00f93fa1336e87a7a99eab2951ebc4b2f0babe8117ad249ac87b5a8632",
+  "baseline_solution_sha256": "5ef41afab1c083669e446e957a9498058ce7748e033a8887d3e2e68b93a58dfd",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-expanded-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 8.06680749997031,
+        "peak_working_set_bytes": 382689280
+      },
+      "after": {
+        "report": "reports\\paired-expanded-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.671528099977877,
+        "peak_working_set_bytes": 385544192
+      },
+      "comparison": {
+        "before": {
+          "total": 138,
+          "passed": 107,
+          "failed": 31
+        },
+        "after": {
+          "total": 138,
+          "passed": 138,
+          "failed": 0
+        },
+        "common_cases": 107,
+        "common_solve_us_before": 2092501,
+        "common_solve_us_after": 2052418,
+        "improved_T": 11,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 10,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "oracle_n8_d0.08_seed20261811",
+          "oracle_n8_d0.2_seed20261812",
+          "oracle_n8_d0.08_seed20261814",
+          "oracle_n8_d0.2_seed20261815",
+          "oracle_n8_d0.08_seed20261817",
+          "oracle_n8_d0.2_seed20261818",
+          "oracle_n8_d0.08_seed20261820",
+          "oracle_n8_d0.2_seed20261821",
+          "oracle_n12_d0.08_seed20262211",
+          "oracle_n12_d0.2_seed20262212",
+          "oracle_n12_d0.08_seed20262214",
+          "oracle_n12_d0.08_seed20262217",
+          "oracle_n12_d0.2_seed20262218",
+          "oracle_n12_d0.45_seed20262219",
+          "oracle_n12_d0.2_seed20262221",
+          "oracle_n12_d0.45_seed20262222",
+          "oracle_n16_d0.08_seed20262611",
+          "oracle_n16_d0.2_seed20262612",
+          "oracle_n16_d0.08_seed20262614",
+          "oracle_n16_d0.2_seed20262615",
+          "oracle_n16_d0.08_seed20262617",
+          "oracle_n16_d0.2_seed20262618",
+          "oracle_n16_d0.08_seed20262620",
+          "oracle_n16_d0.2_seed20262621",
+          "parallel_irregular_n128_event1000000_slack_seed20273823",
+          "parallel_irregular_n512_event0_tight_seed20312221",
+          "parallel_irregular_n512_event3_slack_seed20312222",
+          "parallel_irregular_n512_event1000000_slack_seed20312223",
+          "parallel_irregular_n2048_event0_tight_seed20465821",
+          "parallel_irregular_n2048_event3_slack_seed20465822",
+          "parallel_irregular_n2048_event1000000_slack_seed20465823"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 3905,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 32.5,
+            "max_us": 37
+          },
+          {
+            "n": 6,
+            "median_us": 101,
+            "max_us": 101
+          },
+          {
+            "n": 8,
+            "median_us": 27.5,
+            "max_us": 41
+          },
+          {
+            "n": 12,
+            "median_us": 53.0,
+            "max_us": 172
+          },
+          {
+            "n": 16,
+            "median_us": 117.5,
+            "max_us": 914
+          },
+          {
+            "n": 32,
+            "median_us": 1232,
+            "max_us": 2032
+          },
+          {
+            "n": 64,
+            "median_us": 5530,
+            "max_us": 7198
+          },
+          {
+            "n": 128,
+            "median_us": 10514,
+            "max_us": 17529
+          },
+          {
+            "n": 256,
+            "median_us": 19668,
+            "max_us": 38498
+          },
+          {
+            "n": 512,
+            "median_us": 25477,
+            "max_us": 65208
+          },
+          {
+            "n": 1024,
+            "median_us": 16874,
+            "max_us": 27626
+          },
+          {
+            "n": 2048,
+            "median_us": 37806,
+            "max_us": 75835
+          },
+          {
+            "n": 4096,
+            "median_us": 38199.0,
+            "max_us": 59928
+          },
+          {
+            "n": 10000,
+            "median_us": 113201.5,
+            "max_us": 158031
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-expanded-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.7515684999525547,
+        "peak_working_set_bytes": 382218240
+      },
+      "after": {
+        "report": "reports\\paired-expanded-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.942479200020898,
+        "peak_working_set_bytes": 385355776
+      },
+      "comparison": {
+        "before": {
+          "total": 138,
+          "passed": 107,
+          "failed": 31
+        },
+        "after": {
+          "total": 138,
+          "passed": 138,
+          "failed": 0
+        },
+        "common_cases": 107,
+        "common_solve_us_before": 1966949,
+        "common_solve_us_after": 1873701,
+        "improved_T": 11,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 10,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "oracle_n8_d0.08_seed20261811",
+          "oracle_n8_d0.2_seed20261812",
+          "oracle_n8_d0.08_seed20261814",
+          "oracle_n8_d0.2_seed20261815",
+          "oracle_n8_d0.08_seed20261817",
+          "oracle_n8_d0.2_seed20261818",
+          "oracle_n8_d0.08_seed20261820",
+          "oracle_n8_d0.2_seed20261821",
+          "oracle_n12_d0.08_seed20262211",
+          "oracle_n12_d0.2_seed20262212",
+          "oracle_n12_d0.08_seed20262214",
+          "oracle_n12_d0.08_seed20262217",
+          "oracle_n12_d0.2_seed20262218",
+          "oracle_n12_d0.45_seed20262219",
+          "oracle_n12_d0.2_seed20262221",
+          "oracle_n12_d0.45_seed20262222",
+          "oracle_n16_d0.08_seed20262611",
+          "oracle_n16_d0.2_seed20262612",
+          "oracle_n16_d0.08_seed20262614",
+          "oracle_n16_d0.2_seed20262615",
+          "oracle_n16_d0.08_seed20262617",
+          "oracle_n16_d0.2_seed20262618",
+          "oracle_n16_d0.08_seed20262620",
+          "oracle_n16_d0.2_seed20262621",
+          "parallel_irregular_n128_event1000000_slack_seed20273823",
+          "parallel_irregular_n512_event0_tight_seed20312221",
+          "parallel_irregular_n512_event3_slack_seed20312222",
+          "parallel_irregular_n512_event1000000_slack_seed20312223",
+          "parallel_irregular_n2048_event0_tight_seed20465821",
+          "parallel_irregular_n2048_event3_slack_seed20465822",
+          "parallel_irregular_n2048_event1000000_slack_seed20465823"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 3905,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 31.0,
+            "max_us": 34
+          },
+          {
+            "n": 6,
+            "median_us": 98,
+            "max_us": 98
+          },
+          {
+            "n": 8,
+            "median_us": 28.5,
+            "max_us": 42
+          },
+          {
+            "n": 12,
+            "median_us": 53.0,
+            "max_us": 164
+          },
+          {
+            "n": 16,
+            "median_us": 115.0,
+            "max_us": 974
+          },
+          {
+            "n": 32,
+            "median_us": 1114,
+            "max_us": 2064
+          },
+          {
+            "n": 64,
+            "median_us": 3697,
+            "max_us": 5404
+          },
+          {
+            "n": 128,
+            "median_us": 9401,
+            "max_us": 16752
+          },
+          {
+            "n": 256,
+            "median_us": 15988,
+            "max_us": 26079
+          },
+          {
+            "n": 512,
+            "median_us": 24064,
+            "max_us": 63397
+          },
+          {
+            "n": 1024,
+            "median_us": 15339,
+            "max_us": 25426
+          },
+          {
+            "n": 2048,
+            "median_us": 37936,
+            "max_us": 71019
+          },
+          {
+            "n": 4096,
+            "median_us": 35157.5,
+            "max_us": 60043
+          },
+          {
+            "n": 10000,
+            "median_us": 94265.5,
+            "max_us": 145666
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-expanded-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 4.923274200002197,
+        "peak_working_set_bytes": 382320640
+      },
+      "after": {
+        "report": "reports\\paired-expanded-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.810823199979495,
+        "peak_working_set_bytes": 385310720
+      },
+      "comparison": {
+        "before": {
+          "total": 138,
+          "passed": 107,
+          "failed": 31
+        },
+        "after": {
+          "total": 138,
+          "passed": 138,
+          "failed": 0
+        },
+        "common_cases": 107,
+        "common_solve_us_before": 2238831,
+        "common_solve_us_after": 2685653,
+        "improved_T": 11,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 10,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "oracle_n8_d0.08_seed20261811",
+          "oracle_n8_d0.2_seed20261812",
+          "oracle_n8_d0.08_seed20261814",
+          "oracle_n8_d0.2_seed20261815",
+          "oracle_n8_d0.08_seed20261817",
+          "oracle_n8_d0.2_seed20261818",
+          "oracle_n8_d0.08_seed20261820",
+          "oracle_n8_d0.2_seed20261821",
+          "oracle_n12_d0.08_seed20262211",
+          "oracle_n12_d0.2_seed20262212",
+          "oracle_n12_d0.08_seed20262214",
+          "oracle_n12_d0.08_seed20262217",
+          "oracle_n12_d0.2_seed20262218",
+          "oracle_n12_d0.45_seed20262219",
+          "oracle_n12_d0.2_seed20262221",
+          "oracle_n12_d0.45_seed20262222",
+          "oracle_n16_d0.08_seed20262611",
+          "oracle_n16_d0.2_seed20262612",
+          "oracle_n16_d0.08_seed20262614",
+          "oracle_n16_d0.2_seed20262615",
+          "oracle_n16_d0.08_seed20262617",
+          "oracle_n16_d0.2_seed20262618",
+          "oracle_n16_d0.08_seed20262620",
+          "oracle_n16_d0.2_seed20262621",
+          "parallel_irregular_n128_event1000000_slack_seed20273823",
+          "parallel_irregular_n512_event0_tight_seed20312221",
+          "parallel_irregular_n512_event3_slack_seed20312222",
+          "parallel_irregular_n512_event1000000_slack_seed20312223",
+          "parallel_irregular_n2048_event0_tight_seed20465821",
+          "parallel_irregular_n2048_event3_slack_seed20465822",
+          "parallel_irregular_n2048_event1000000_slack_seed20465823"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 3905,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 31.0,
+            "max_us": 34
+          },
+          {
+            "n": 6,
+            "median_us": 96,
+            "max_us": 96
+          },
+          {
+            "n": 8,
+            "median_us": 30.0,
+            "max_us": 40
+          },
+          {
+            "n": 12,
+            "median_us": 51.5,
+            "max_us": 160
+          },
+          {
+            "n": 16,
+            "median_us": 126.5,
+            "max_us": 929
+          },
+          {
+            "n": 32,
+            "median_us": 1119,
+            "max_us": 2035
+          },
+          {
+            "n": 64,
+            "median_us": 5496,
+            "max_us": 7397
+          },
+          {
+            "n": 128,
+            "median_us": 9338,
+            "max_us": 17092
+          },
+          {
+            "n": 256,
+            "median_us": 18609,
+            "max_us": 37823
+          },
+          {
+            "n": 512,
+            "median_us": 23875,
+            "max_us": 65371
+          },
+          {
+            "n": 1024,
+            "median_us": 17065,
+            "max_us": 28661
+          },
+          {
+            "n": 2048,
+            "median_us": 38576,
+            "max_us": 73599
+          },
+          {
+            "n": 4096,
+            "median_us": 61071.0,
+            "max_us": 135486
+          },
+          {
+            "n": 10000,
+            "median_us": 230664.0,
+            "max_us": 443617
+          }
+        ]
+      }
+    }
+  ],
+  "median_common_solve_us_before": 2092501,
+  "median_common_solve_us_after": 2052418,
+  "median_wall_seconds_before": 4.923274200002197,
+  "median_wall_seconds_after": 4.810823199979495,
+  "maximum_cli_working_set_bytes": 385544192,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation"
+}

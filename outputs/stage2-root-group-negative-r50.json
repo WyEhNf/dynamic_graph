@@ -1,0 +1,53 @@
+{
+  "common_memory_improvements": [
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "T": 2421486,
+      "before_peak": 1946,
+      "after_peak": 1884
+    }
+  ],
+  "counterexample_controls": [
+    {
+      "label": "critical",
+      "T": 21,
+      "peak": 381,
+      "original301_feasible": false
+    },
+    {
+      "label": "after-critical",
+      "T": 21,
+      "peak": 381,
+      "original301_feasible": false
+    },
+    {
+      "label": "first-member",
+      "T": 21,
+      "peak": 301,
+      "original301_feasible": true
+    }
+  ],
+  "passed": true,
+  "reviewed_unix": 1791714809.409898,
+  "suites": {
+    "unresolved": {
+      "inputs": 61,
+      "legal": 3,
+      "newly_recovered": 0,
+      "lost": 0,
+      "budget_exhausted": 31
+    },
+    "heldout-unresolved": {
+      "inputs": 6,
+      "legal": 0,
+      "newly_recovered": 0,
+      "lost": 0,
+      "budget_exhausted": 4
+    }
+  },
+  "independent_actual_heap_plans": 3,
+  "evidence": {
+    "projects/27-aicore-streams/research/batch50/functional-checkpoint.json": "a37f35a1579e044439af5fd579095b2affc2b673b3c80e5310bd321c1ad954df"
+  },
+  "scope": "All67 input-only records retained and all3 passing actual plans independently replayed. Candidate source/producer/data/executable/report SHA and recorded real exit codes inspected. No newly feasible recovery from first-member insertion pivot; one existing131-node peak1946to1884 improvement retained; do not promote or spend full performance window. Root independently replays3 complete counterexample plans with original DAG and broad381 capacity, then checks original301 feasibility; first-member301 versus381 other pivots is genuine full-schedule memory effect. Root did not independently recompute all group-move gold values."
+}

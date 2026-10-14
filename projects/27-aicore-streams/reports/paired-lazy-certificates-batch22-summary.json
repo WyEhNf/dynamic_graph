@@ -1,0 +1,213 @@
+{
+  "suite": "data\\certificate-controls.json",
+  "suite_sha256": "0e7b32f4a5317988ef6d74153d5570e90cc6253b3908a97d448028f5312b8955",
+  "baseline_exe_sha256": "4267bf463ca5e8fc198cefeae0352a86f65f26fafc2edbd4b517f8bf55c13e10",
+  "current_exe_sha256": "3b00329d2801b9b4c327fee39f66d92f06332ee9d585dbe04f956397b84428b6",
+  "current_solution_sha256": "ef3797e37fe6c776aff134efbaf86dc07237bb358a21b3dac752b935359533ff",
+  "baseline_solution_sha256": "f95ea2f74d1d37b2b552637560a68423539ec675a29acc3f7b6550257494fb2b",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-lazy-certificates-batch22-1-before.json",
+        "exit_code": 0,
+        "wall_seconds": 3.2040686000254937,
+        "peak_working_set_bytes": 73551872
+      },
+      "after": {
+        "report": "reports\\paired-lazy-certificates-batch22-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 2.9782846000161953,
+        "peak_working_set_bytes": 73396224
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "after": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "common_cases": 12,
+        "common_solve_us_before": 7791,
+        "common_solve_us_after": 7229,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 27,
+        "scales": [
+          {
+            "n": 1,
+            "median_us": 23.0,
+            "max_us": 38
+          },
+          {
+            "n": 2,
+            "median_us": 7.0,
+            "max_us": 17
+          },
+          {
+            "n": 32,
+            "median_us": 14.0,
+            "max_us": 14
+          },
+          {
+            "n": 512,
+            "median_us": 198.0,
+            "max_us": 283
+          },
+          {
+            "n": 10000,
+            "median_us": 3362.5,
+            "max_us": 3727
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-lazy-certificates-batch22-2-before.json",
+        "exit_code": 0,
+        "wall_seconds": 1.4866809000377543,
+        "peak_working_set_bytes": 73273344
+      },
+      "after": {
+        "report": "reports\\paired-lazy-certificates-batch22-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.438459500030149,
+        "peak_working_set_bytes": 72728576
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "after": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "common_cases": 12,
+        "common_solve_us_before": 7740,
+        "common_solve_us_after": 6170,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 27,
+        "scales": [
+          {
+            "n": 1,
+            "median_us": 22.5,
+            "max_us": 40
+          },
+          {
+            "n": 2,
+            "median_us": 6.5,
+            "max_us": 17
+          },
+          {
+            "n": 32,
+            "median_us": 13.0,
+            "max_us": 13
+          },
+          {
+            "n": 512,
+            "median_us": 124.5,
+            "max_us": 131
+          },
+          {
+            "n": 10000,
+            "median_us": 2908.5,
+            "max_us": 2970
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-lazy-certificates-batch22-3-before.json",
+        "exit_code": 0,
+        "wall_seconds": 0.29145550000248477,
+        "peak_working_set_bytes": 73162752
+      },
+      "after": {
+        "report": "reports\\paired-lazy-certificates-batch22-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.30068270000629127,
+        "peak_working_set_bytes": 72814592
+      },
+      "comparison": {
+        "before": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "after": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0
+        },
+        "common_cases": 12,
+        "common_solve_us_before": 11962,
+        "common_solve_us_after": 11141,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 27,
+        "scales": [
+          {
+            "n": 1,
+            "median_us": 20.0,
+            "max_us": 33
+          },
+          {
+            "n": 2,
+            "median_us": 7.5,
+            "max_us": 17
+          },
+          {
+            "n": 32,
+            "median_us": 12.5,
+            "max_us": 13
+          },
+          {
+            "n": 512,
+            "median_us": 138.0,
+            "max_us": 155
+          },
+          {
+            "n": 10000,
+            "median_us": 5382.5,
+            "max_us": 5527
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch21\\solution.cpp",
+  "median_common_solve_us_before": 7791,
+  "median_common_solve_us_after": 7229,
+  "median_wall_seconds_before": 1.4866809000377543,
+  "median_wall_seconds_after": 2.9782846000161953,
+  "maximum_cli_working_set_bytes": 73396224,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": false
+}

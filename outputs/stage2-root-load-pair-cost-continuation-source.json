@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "source_only": true,
+  "plan_sha256": "63e2fc7a63978c275aabe392ae9ed5cf357efde35f2cceed0d09c6161754932c",
+  "source_files": 12,
+  "first_runtime_record_reused": 1,
+  "new_launches": 189,
+  "planned_pairs": 95,
+  "continuous_pairs": 94,
+  "continuous_VM_pairs": 89,
+  "continuous_native_pairs": 5,
+  "original_failure_preserved": true,
+  "corrected_validator_applied_to_actual_first_metric": true,
+  "scope": "Only fixedVM/not-run classification and explicit interrupted firstpair accounting revised; exact19 originalC/samea95 unchanged. Every planned ratio/negative remains; one noncontiguous firstpair is diagnostic, never represented as a continuous benchmark.",
+  "authorized_next": "One remaining189 actual execution batch after27 observer terminal; no firstrow relaunch/retry/default changes."
+}

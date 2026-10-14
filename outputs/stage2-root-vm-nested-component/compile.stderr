@@ -1,0 +1,28 @@
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp: In function 'chol::{anonymous}::Value chol::{anonymous}::range_binary(O, Value, Value)':
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp:36:7: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   36 |       for(S i:x)for(S j:y){if(i&&j&&std::abs(i)>exact_limit/std::abs(j))return {};S product=i*j;lo=std::min(lo,product);hi=std::max(hi,product);}break;
+      |       ^~~
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp:36:146: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   36 |       for(S i:x)for(S j:y){if(i&&j&&std::abs(i)>exact_limit/std::abs(j))return {};S product=i*j;lo=std::min(lo,product);hi=std::max(hi,product);}break;
+      |                                                                                                                                                  ^~~~~
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp: In function 'std::vector<long long unsigned int> chol::{anonymous}::topo(const Graph&, const std::vector<bool>&, Meter&)':
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp:85:3: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   85 |   if(result.size()!=count)throw Stop{"unproved-cycle"};return result;
+      |   ^~
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp:85:56: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   85 |   if(result.size()!=count)throw Stop{"unproved-cycle"};return result;
+      |                                                        ^~~~~~
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp: In member function 'chol::{anonymous}::U chol::{anonymous}::Analysis::run(uint32_t, unsigned int)':
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp:227:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  227 |     if(!states[size]||costs[size]==std::numeric_limits<U>::max())throw Stop{"no-finite-exit"};return costs[size];
+      |     ^~
+F:\Hackathon\projects\19-dynamic-graph\artifacts\stage2-vm-nested-budget\accounting-supplement\candidate-source\src\vm_nested_step_bound.cpp:227:95: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  227 |     if(!states[size]||costs[size]==std::numeric_limits<U>::max())throw Stop{"no-finite-exit"};return costs[size];
+      |                                                                                               ^~~~~~
+F:\Hackathon\outputs\stage2-root-vm-nested-component\observed-tests.cpp: In function 'int main()':
+F:\Hackathon\outputs\stage2-root-vm-nested-component\observed-tests.cpp:73:3: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   73 |   for(auto& in:fault.program)if((in.opcode==O::Jump||in.opcode==O::Jz||in.opcode==O::Jnz)&&in.argument>=double(leaf+2))++in.argument;bounded(fault,true);
+      |   ^~~
+F:\Hackathon\outputs\stage2-root-vm-nested-component\observed-tests.cpp:73:134: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   73 |   for(auto& in:fault.program)if((in.opcode==O::Jump||in.opcode==O::Jz||in.opcode==O::Jnz)&&in.argument>=double(leaf+2))++in.argument;bounded(fault,true);
+      |                                                                                                                                      ^~~~~~~

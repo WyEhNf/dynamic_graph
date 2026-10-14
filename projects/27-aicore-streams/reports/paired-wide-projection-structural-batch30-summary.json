@@ -1,0 +1,646 @@
+{
+  "suite": "data\\structural-blind-batch26.json",
+  "suite_sha256": "e327a93fda0a1728a8e03b8d1f8666b303df1a5120c4f2f5c46ea4985119d1e7",
+  "baseline_exe_sha256": "2e55958e79c4ad8becb44e1f56e9303ea472ed50b26133b62f8828fa2cb073d0",
+  "current_exe_sha256": "3effeb693487764479a6866db9d513470423b7c12ade6c479332e9c4de273e5a",
+  "current_solution_sha256": "6c9ea2d3b557c88ab8bb8f87922018fb204bd247643dd25ba10eeba52893bd57",
+  "baseline_solution_sha256": "1df00a5d1e229337dea657a946a1378a09d4eacdbf203425f6a1a0485938d7bd",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-wide-projection-structural-batch30-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 5.6642300999956205,
+        "peak_working_set_bytes": 69824512
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-structural-batch30-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 6.500054300006013,
+        "peak_working_set_bytes": 69980160
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "after": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "common_cases": 14,
+        "common_solve_us_before": 1419954,
+        "common_solve_us_after": 1801605,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 22,
+        "scales": [
+          {
+            "n": 60,
+            "median_us": 5791,
+            "max_us": 5791
+          },
+          {
+            "n": 63,
+            "median_us": 6576,
+            "max_us": 6576
+          },
+          {
+            "n": 64,
+            "median_us": 6743,
+            "max_us": 6743
+          },
+          {
+            "n": 68,
+            "median_us": 29678,
+            "max_us": 29678
+          },
+          {
+            "n": 69,
+            "median_us": 8347,
+            "max_us": 8347
+          },
+          {
+            "n": 70,
+            "median_us": 42093,
+            "max_us": 42093
+          },
+          {
+            "n": 71,
+            "median_us": 7203,
+            "max_us": 7203
+          },
+          {
+            "n": 72,
+            "median_us": 5931,
+            "max_us": 5931
+          },
+          {
+            "n": 118,
+            "median_us": 8475,
+            "max_us": 8475
+          },
+          {
+            "n": 122,
+            "median_us": 80677,
+            "max_us": 80677
+          },
+          {
+            "n": 124,
+            "median_us": 52340,
+            "max_us": 52340
+          },
+          {
+            "n": 127,
+            "median_us": 78503,
+            "max_us": 78503
+          },
+          {
+            "n": 341,
+            "median_us": 394453,
+            "max_us": 394453
+          },
+          {
+            "n": 348,
+            "median_us": 205127,
+            "max_us": 205127
+          },
+          {
+            "n": 352,
+            "median_us": 465760,
+            "max_us": 465760
+          },
+          {
+            "n": 353,
+            "median_us": 272419,
+            "max_us": 463837
+          },
+          {
+            "n": 361,
+            "median_us": 365718,
+            "max_us": 365718
+          },
+          {
+            "n": 362,
+            "median_us": 238162,
+            "max_us": 238162
+          },
+          {
+            "n": 638,
+            "median_us": 211193,
+            "max_us": 211193
+          },
+          {
+            "n": 639,
+            "median_us": 191601.0,
+            "max_us": 209815
+          },
+          {
+            "n": 651,
+            "median_us": 156253,
+            "max_us": 156253
+          },
+          {
+            "n": 676,
+            "median_us": 85815,
+            "max_us": 85815
+          },
+          {
+            "n": 695,
+            "median_us": 58213,
+            "max_us": 58213
+          },
+          {
+            "n": 700,
+            "median_us": 113607,
+            "max_us": 113607
+          },
+          {
+            "n": 704,
+            "median_us": 121001.0,
+            "max_us": 133097
+          },
+          {
+            "n": 705,
+            "median_us": 152074,
+            "max_us": 152074
+          },
+          {
+            "n": 712,
+            "median_us": 98832,
+            "max_us": 98832
+          },
+          {
+            "n": 715,
+            "median_us": 63412,
+            "max_us": 63412
+          },
+          {
+            "n": 1265,
+            "median_us": 427681,
+            "max_us": 427681
+          },
+          {
+            "n": 1270,
+            "median_us": 284284,
+            "max_us": 284284
+          },
+          {
+            "n": 1284,
+            "median_us": 426234,
+            "max_us": 426234
+          },
+          {
+            "n": 1292,
+            "median_us": 615687,
+            "max_us": 615687
+          }
+        ],
+        "common_thread_cpu_measured_cases": 14,
+        "common_thread_cpu_us_before": 1250000,
+        "common_thread_cpu_us_after": 1234375,
+        "all_solve_us_before": 4589509,
+        "all_thread_cpu_us_before": 4375000,
+        "all_solve_us_after": 6183690,
+        "all_thread_cpu_us_after": 4562500
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-wide-projection-structural-batch30-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 6.1502671999624,
+        "peak_working_set_bytes": 69890048
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-structural-batch30-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 4.549662799981888,
+        "peak_working_set_bytes": 69976064
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "after": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "common_cases": 14,
+        "common_solve_us_before": 1252362,
+        "common_solve_us_after": 1222140,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 22,
+        "scales": [
+          {
+            "n": 60,
+            "median_us": 5860,
+            "max_us": 5860
+          },
+          {
+            "n": 63,
+            "median_us": 6789,
+            "max_us": 6789
+          },
+          {
+            "n": 64,
+            "median_us": 6036,
+            "max_us": 6036
+          },
+          {
+            "n": 68,
+            "median_us": 29890,
+            "max_us": 29890
+          },
+          {
+            "n": 69,
+            "median_us": 8451,
+            "max_us": 8451
+          },
+          {
+            "n": 70,
+            "median_us": 42365,
+            "max_us": 42365
+          },
+          {
+            "n": 71,
+            "median_us": 7564,
+            "max_us": 7564
+          },
+          {
+            "n": 72,
+            "median_us": 6077,
+            "max_us": 6077
+          },
+          {
+            "n": 118,
+            "median_us": 7808,
+            "max_us": 7808
+          },
+          {
+            "n": 122,
+            "median_us": 79753,
+            "max_us": 79753
+          },
+          {
+            "n": 124,
+            "median_us": 49570,
+            "max_us": 49570
+          },
+          {
+            "n": 127,
+            "median_us": 80456,
+            "max_us": 80456
+          },
+          {
+            "n": 341,
+            "median_us": 275683,
+            "max_us": 275683
+          },
+          {
+            "n": 348,
+            "median_us": 113532,
+            "max_us": 113532
+          },
+          {
+            "n": 352,
+            "median_us": 257987,
+            "max_us": 257987
+          },
+          {
+            "n": 353,
+            "median_us": 160327,
+            "max_us": 248004
+          },
+          {
+            "n": 361,
+            "median_us": 199649,
+            "max_us": 199649
+          },
+          {
+            "n": 362,
+            "median_us": 126424,
+            "max_us": 126424
+          },
+          {
+            "n": 638,
+            "median_us": 197437,
+            "max_us": 197437
+          },
+          {
+            "n": 639,
+            "median_us": 134094.5,
+            "max_us": 167553
+          },
+          {
+            "n": 651,
+            "median_us": 94335,
+            "max_us": 94335
+          },
+          {
+            "n": 676,
+            "median_us": 78447,
+            "max_us": 78447
+          },
+          {
+            "n": 695,
+            "median_us": 50219,
+            "max_us": 50219
+          },
+          {
+            "n": 700,
+            "median_us": 103911,
+            "max_us": 103911
+          },
+          {
+            "n": 704,
+            "median_us": 102923.5,
+            "max_us": 112856
+          },
+          {
+            "n": 705,
+            "median_us": 125990,
+            "max_us": 125990
+          },
+          {
+            "n": 712,
+            "median_us": 72886,
+            "max_us": 72886
+          },
+          {
+            "n": 715,
+            "median_us": 53799,
+            "max_us": 53799
+          },
+          {
+            "n": 1265,
+            "median_us": 364120,
+            "max_us": 364120
+          },
+          {
+            "n": 1270,
+            "median_us": 203904,
+            "max_us": 203904
+          },
+          {
+            "n": 1284,
+            "median_us": 272276,
+            "max_us": 272276
+          },
+          {
+            "n": 1292,
+            "median_us": 397589,
+            "max_us": 397589
+          }
+        ],
+        "common_thread_cpu_measured_cases": 14,
+        "common_thread_cpu_us_before": 1218750,
+        "common_thread_cpu_us_after": 1234375,
+        "all_solve_us_before": 5014957,
+        "all_thread_cpu_us_before": 4515625,
+        "all_solve_us_after": 4296016,
+        "all_thread_cpu_us_after": 4312500
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-wide-projection-structural-batch30-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 5.2360558999935165,
+        "peak_working_set_bytes": 70098944
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-structural-batch30-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 6.326012100034859,
+        "peak_working_set_bytes": 69603328
+      },
+      "comparison": {
+        "before": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "after": {
+          "total": 36,
+          "passed": 14,
+          "failed": 22
+        },
+        "common_cases": 14,
+        "common_solve_us_before": 1399270,
+        "common_solve_us_after": 1493598,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 22,
+        "scales": [
+          {
+            "n": 60,
+            "median_us": 4550,
+            "max_us": 4550
+          },
+          {
+            "n": 63,
+            "median_us": 6548,
+            "max_us": 6548
+          },
+          {
+            "n": 64,
+            "median_us": 6188,
+            "max_us": 6188
+          },
+          {
+            "n": 68,
+            "median_us": 30973,
+            "max_us": 30973
+          },
+          {
+            "n": 69,
+            "median_us": 7428,
+            "max_us": 7428
+          },
+          {
+            "n": 70,
+            "median_us": 33733,
+            "max_us": 33733
+          },
+          {
+            "n": 71,
+            "median_us": 6247,
+            "max_us": 6247
+          },
+          {
+            "n": 72,
+            "median_us": 4752,
+            "max_us": 4752
+          },
+          {
+            "n": 118,
+            "median_us": 7716,
+            "max_us": 7716
+          },
+          {
+            "n": 122,
+            "median_us": 92156,
+            "max_us": 92156
+          },
+          {
+            "n": 124,
+            "median_us": 55969,
+            "max_us": 55969
+          },
+          {
+            "n": 127,
+            "median_us": 106851,
+            "max_us": 106851
+          },
+          {
+            "n": 341,
+            "median_us": 345552,
+            "max_us": 345552
+          },
+          {
+            "n": 348,
+            "median_us": 179785,
+            "max_us": 179785
+          },
+          {
+            "n": 352,
+            "median_us": 395384,
+            "max_us": 395384
+          },
+          {
+            "n": 353,
+            "median_us": 236741,
+            "max_us": 441472
+          },
+          {
+            "n": 361,
+            "median_us": 345824,
+            "max_us": 345824
+          },
+          {
+            "n": 362,
+            "median_us": 161690,
+            "max_us": 161690
+          },
+          {
+            "n": 638,
+            "median_us": 269546,
+            "max_us": 269546
+          },
+          {
+            "n": 639,
+            "median_us": 171167.5,
+            "max_us": 183138
+          },
+          {
+            "n": 651,
+            "median_us": 168076,
+            "max_us": 168076
+          },
+          {
+            "n": 676,
+            "median_us": 79210,
+            "max_us": 79210
+          },
+          {
+            "n": 695,
+            "median_us": 51039,
+            "max_us": 51039
+          },
+          {
+            "n": 700,
+            "median_us": 96753,
+            "max_us": 96753
+          },
+          {
+            "n": 704,
+            "median_us": 106491.0,
+            "max_us": 117368
+          },
+          {
+            "n": 705,
+            "median_us": 122303,
+            "max_us": 122303
+          },
+          {
+            "n": 712,
+            "median_us": 76566,
+            "max_us": 76566
+          },
+          {
+            "n": 715,
+            "median_us": 55259,
+            "max_us": 55259
+          },
+          {
+            "n": 1265,
+            "median_us": 353961,
+            "max_us": 353961
+          },
+          {
+            "n": 1270,
+            "median_us": 188859,
+            "max_us": 188859
+          },
+          {
+            "n": 1284,
+            "median_us": 265560,
+            "max_us": 265560
+          },
+          {
+            "n": 1292,
+            "median_us": 404926,
+            "max_us": 404926
+          }
+        ],
+        "common_thread_cpu_measured_cases": 14,
+        "common_thread_cpu_us_before": 1171875,
+        "common_thread_cpu_us_after": 1031250,
+        "all_solve_us_before": 4967106,
+        "all_thread_cpu_us_before": 4437500,
+        "all_solve_us_after": 5274692,
+        "all_thread_cpu_us_after": 4328125
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch29\\solution.cpp",
+  "median_common_solve_us_before": 1399270,
+  "median_common_solve_us_after": 1493598,
+  "median_wall_seconds_before": 5.6642300999956205,
+  "median_wall_seconds_after": 6.326012100034859,
+  "maximum_cli_working_set_bytes": 69980160,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 1218750,
+  "median_all_solve_us_before": 4967106,
+  "median_all_thread_cpu_us_before": 4437500,
+  "median_common_thread_cpu_us_after": 1234375,
+  "median_all_solve_us_after": 5274692,
+  "median_all_thread_cpu_us_after": 4328125,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5"
+}

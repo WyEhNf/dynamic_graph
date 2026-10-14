@@ -1,0 +1,1474 @@
+{
+  "passed": true,
+  "actual_terminal_exit_code": 0,
+  "actual_owner_session": 73424,
+  "actual_owner_PID": 137004,
+  "completion_sha256": "f58a06730dfbf4696f2f32cf087acffa338c4e3391990ccaec815f546aacd01c",
+  "actual_original_inputs": 12,
+  "all_nonobserver_fields_identical": true,
+  "independent_complete_plan_replays": 8,
+  "scopes": 24,
+  "physical_states_replayed": 24,
+  "prefix_original_operations_replayed": 1400,
+  "restart_entry_scopes": 16,
+  "guard_dispatch_scopes": 8,
+  "metadata_drops": 0,
+  "state_drops": 0,
+  "details": [
+    {
+      "name": "projection_retention_seed203451023",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 629842833,
+        "target_id": 1570508042,
+        "work": 410615,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 59,
+          "live": 2379,
+          "ready_count": 22,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 1570508042,
+              "bound": 2556,
+              "cap": 2450,
+              "pinned_ids": [
+                103302216,
+                286867976,
+                303285523,
+                396549589,
+                460593136,
+                524035376,
+                530015348,
+                612086230,
+                629842833,
+                724121183,
+                812156800,
+                899068535,
+                907854341,
+                960913820,
+                969231269,
+                1023000432,
+                1026799949,
+                1073397167,
+                1078276469,
+                1104278974,
+                1142954119,
+                1147163608,
+                1152174086,
+                1217735514,
+                1232128282,
+                1372246973,
+                1480029615,
+                1564383137,
+                1580390656,
+                1770866131,
+                1775829633,
+                1823212630
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 59,
+          "live": 2388,
+          "ready_count": 22,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 1570508042,
+              "bound": 2475,
+              "cap": 2450,
+              "pinned_ids": [
+                103302216,
+                286867976,
+                303285523,
+                396549589,
+                460593136,
+                524035376,
+                530015348,
+                612086230,
+                724121183,
+                812156800,
+                899068535,
+                907854341,
+                960913820,
+                969231269,
+                1023000432,
+                1026799949,
+                1073397167,
+                1078276469,
+                1104278974,
+                1142954119,
+                1147163608,
+                1152174086,
+                1217735514,
+                1232128282,
+                1372246973,
+                1480029615,
+                1564383137,
+                1580390656,
+                1770866131,
+                1775829633,
+                1823212630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "projection_retention_seed203451023",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 629842833,
+        "target_id": 1570508042,
+        "work": 410615,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 59,
+          "live": 2379,
+          "ready_count": 22,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 1570508042,
+              "bound": 2556,
+              "cap": 2450,
+              "pinned_ids": [
+                103302216,
+                286867976,
+                303285523,
+                396549589,
+                460593136,
+                524035376,
+                530015348,
+                612086230,
+                629842833,
+                724121183,
+                812156800,
+                899068535,
+                907854341,
+                960913820,
+                969231269,
+                1023000432,
+                1026799949,
+                1073397167,
+                1078276469,
+                1104278974,
+                1142954119,
+                1147163608,
+                1152174086,
+                1217735514,
+                1232128282,
+                1372246973,
+                1480029615,
+                1564383137,
+                1580390656,
+                1770866131,
+                1775829633,
+                1823212630
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 59,
+          "live": 2388,
+          "ready_count": 22,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 1570508042,
+              "bound": 2475,
+              "cap": 2450,
+              "pinned_ids": [
+                103302216,
+                286867976,
+                303285523,
+                396549589,
+                460593136,
+                524035376,
+                530015348,
+                612086230,
+                724121183,
+                812156800,
+                899068535,
+                907854341,
+                960913820,
+                969231269,
+                1023000432,
+                1026799949,
+                1073397167,
+                1078276469,
+                1104278974,
+                1142954119,
+                1147163608,
+                1152174086,
+                1217735514,
+                1232128282,
+                1372246973,
+                1480029615,
+                1564383137,
+                1580390656,
+                1770866131,
+                1775829633,
+                1823212630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 1348661544,
+        "target_id": 1399095202,
+        "work": 130123,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 46,
+          "live": 1441,
+          "ready_count": 3,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 491746761,
+              "bound": 1567,
+              "cap": 1547,
+              "pinned_ids": [
+                25063590,
+                127569995,
+                185553098,
+                390857939,
+                419528258,
+                464271020,
+                512422354,
+                585071319,
+                664522972,
+                712270147,
+                722995218,
+                793630571,
+                823773327,
+                844117691,
+                869170012,
+                934554640,
+                950893530,
+                1145801060,
+                1348661544,
+                1392748658,
+                1405243519,
+                1413090084,
+                1424571238,
+                1576015566,
+                1780860873,
+                1848446256,
+                1906602316
+              ]
+            },
+            {
+              "target_id": 1399095202,
+              "bound": 1877,
+              "cap": 1547,
+              "pinned_ids": [
+                25063590,
+                127569995,
+                185553098,
+                390857939,
+                419528258,
+                464271020,
+                491746761,
+                512422354,
+                585071319,
+                664522972,
+                712270147,
+                722995218,
+                793630571,
+                823773327,
+                844117691,
+                869170012,
+                934554640,
+                950893530,
+                1145801060,
+                1348661544,
+                1392748658,
+                1405243519,
+                1413090084,
+                1424571238,
+                1576015566,
+                1780860873,
+                1848446256,
+                1906602316
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 50,
+          "live": 1500,
+          "ready_count": 13,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 1348661544,
+        "target_id": 1399095202,
+        "work": 130123,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 46,
+          "live": 1441,
+          "ready_count": 3,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 491746761,
+              "bound": 1567,
+              "cap": 1547,
+              "pinned_ids": [
+                25063590,
+                127569995,
+                185553098,
+                390857939,
+                419528258,
+                464271020,
+                512422354,
+                585071319,
+                664522972,
+                712270147,
+                722995218,
+                793630571,
+                823773327,
+                844117691,
+                869170012,
+                934554640,
+                950893530,
+                1145801060,
+                1348661544,
+                1392748658,
+                1405243519,
+                1413090084,
+                1424571238,
+                1576015566,
+                1780860873,
+                1848446256,
+                1906602316
+              ]
+            },
+            {
+              "target_id": 1399095202,
+              "bound": 1877,
+              "cap": 1547,
+              "pinned_ids": [
+                25063590,
+                127569995,
+                185553098,
+                390857939,
+                419528258,
+                464271020,
+                491746761,
+                512422354,
+                585071319,
+                664522972,
+                712270147,
+                722995218,
+                793630571,
+                823773327,
+                844117691,
+                869170012,
+                934554640,
+                950893530,
+                1145801060,
+                1348661544,
+                1392748658,
+                1405243519,
+                1413090084,
+                1424571238,
+                1576015566,
+                1780860873,
+                1848446256,
+                1906602316
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 50,
+          "live": 1500,
+          "ready_count": 13,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 538315,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 113,
+          "live": 7508,
+          "ready_count": 14,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 538315,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 113,
+          "live": 7508,
+          "ready_count": 14,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "scope": "helper",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 99,
+          "label": "release_cut_order:return-14:line-1024",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "scope": "whole",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 99,
+          "label": "release_cut_order:return-14:line-1024",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "scope": "helper",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 99,
+          "label": "release_cut_order:return-14:line-1024",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "scope": "whole",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 99,
+          "label": "release_cut_order:return-14:line-1024",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 206270,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 87,
+          "live": 1730,
+          "ready_count": 16,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 206270,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 87,
+          "live": 1730,
+          "ready_count": 16,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "projection_retention_seed203451016",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 757670,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 50,
+          "live": 2165,
+          "ready_count": 89,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "projection_retention_seed203451016",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 757670,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 50,
+          "live": 2165,
+          "ready_count": 89,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "scope": "helper",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 99,
+          "label": "release_cut_order:return-14:line-1024",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "scope": "whole",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 99,
+          "label": "release_cut_order:return-14:line-1024",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 281484,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 82,
+          "live": 1917,
+          "ready_count": 26,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 0,
+      "pair": {
+        "stage": 70,
+        "producer_id": -1,
+        "target_id": -1,
+        "work": 281484,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 82,
+          "live": 1917,
+          "ready_count": 26,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 1616327829,
+        "target_id": 1632166807,
+        "work": 115092,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 36,
+          "live": 1731,
+          "ready_count": 13,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 515614320,
+              "bound": 2068,
+              "cap": 1747,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 768661113,
+              "bound": 1916,
+              "cap": 1747,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1606370735,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 1632166807,
+              "bound": 2138,
+              "cap": 1747,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                501097943,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1170546865,
+                1244747895,
+                1315561180,
+                1372289884,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1995350883
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 41,
+          "live": 1716,
+          "ready_count": 23,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 1616327829,
+        "target_id": 1632166807,
+        "work": 115092,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 36,
+          "live": 1731,
+          "ready_count": 13,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 515614320,
+              "bound": 2068,
+              "cap": 1747,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 768661113,
+              "bound": 1916,
+              "cap": 1747,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1606370735,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 1632166807,
+              "bound": 2138,
+              "cap": 1747,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                501097943,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1170546865,
+                1244747895,
+                1315561180,
+                1372289884,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1995350883
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 41,
+          "live": 1716,
+          "ready_count": 23,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "scope": "helper",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 1616327829,
+        "target_id": 1632166807,
+        "work": 191668,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 36,
+          "live": 1746,
+          "ready_count": 13,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 515614320,
+              "bound": 2083,
+              "cap": 1762,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 768661113,
+              "bound": 1926,
+              "cap": 1762,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1606370735,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 1632166807,
+              "bound": 2153,
+              "cap": 1762,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                501097943,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1170546865,
+                1244747895,
+                1315561180,
+                1372289884,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1995350883
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 41,
+          "live": 1731,
+          "ready_count": 23,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "scope": "whole",
+      "entry": 1,
+      "guard_dispatch": 1,
+      "pair": {
+        "stage": 70,
+        "producer_id": 1616327829,
+        "target_id": 1632166807,
+        "work": 191668,
+        "limit": 2000000,
+        "flags": 4,
+        "order_size": 0,
+        "peak_lo": 0,
+        "peak_hi": 0
+      },
+      "cut_returns": [
+        {
+          "id": 101,
+          "label": "release_cut_order:return-16:line-1029",
+          "count": 1
+        }
+      ],
+      "states": [
+        {
+          "stage": "release_cut_order:return-16:line-1029",
+          "prefix_length": 36,
+          "live": 1746,
+          "ready_count": 13,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": [
+            {
+              "target_id": 515614320,
+              "bound": 2083,
+              "cap": 1762,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 768661113,
+              "bound": 1926,
+              "cap": 1762,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                700493539,
+                753932042,
+                988071771,
+                1083421973,
+                1244747895,
+                1315561180,
+                1484158919,
+                1606370735,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1978877108
+              ]
+            },
+            {
+              "target_id": 1632166807,
+              "bound": 2153,
+              "cap": 1762,
+              "pinned_ids": [
+                110883794,
+                161299420,
+                219615895,
+                396256974,
+                501097943,
+                595867598,
+                662602262,
+                685183530,
+                688753378,
+                753932042,
+                869824405,
+                988071771,
+                1083421973,
+                1170546865,
+                1244747895,
+                1315561180,
+                1372289884,
+                1575311140,
+                1606370735,
+                1616327829,
+                1632060044,
+                1634404744,
+                1666953268,
+                1729132246,
+                1783290722,
+                1913730246,
+                1952036353,
+                1995350883
+              ]
+            }
+          ]
+        },
+        {
+          "stage": "release_cut_order_guarded:return-19:line-920",
+          "prefix_length": 41,
+          "live": 1731,
+          "ready_count": 23,
+          "memory_fit_ids": [],
+          "guard_policy_fit_ids": [],
+          "forced_overlap_violations": []
+        }
+      ]
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "scope": "helper",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 103,
+          "label": "release_cut_order:return-18:line-1033",
+          "count": 1
+        }
+      ],
+      "states": []
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "scope": "whole",
+      "entry": 0,
+      "guard_dispatch": 0,
+      "pair": null,
+      "cut_returns": [
+        {
+          "id": 103,
+          "label": "release_cut_order:return-18:line-1033",
+          "count": 1
+        }
+      ],
+      "states": []
+    }
+  ],
+  "scope": "Every saved original-DAG state independently reconstructed from original direct consumers/workspace/output/sink retention; all8 complete plans independently simulated. Observation leaves all outcomes/fees/plans unchanged. Guard return19 has zero eligible memory-fitting original nodes, so this actual return is no-fit. No recovery/performance/default/63 improvement claim."
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "static_only": true,
+  "plan_sha256": "1a1e658658a051cf44fe7bed3c431253e760d0929ea22124a1b5a606adf694b6",
+  "frozen_small_files": 110,
+  "true_C_sources": 19,
+  "functional_records": 54,
+  "cost_pairs": 95,
+  "genuine_VM_pairs": 90,
+  "native_control_pairs": 5,
+  "actual_PE_instruction_lines_verified": 11725,
+  "hot_pair_indirect_dispatch_removed": true,
+  "code_size_increase_bytes": 1984,
+  "source_and_shape_cohort_unchanged": true,
+  "fresh_input_oracle_hash_required_at_actual_run": true,
+  "scope": "Static lineage and actual-binary disassembly audit only. Prepare functional-only54 runner/filecapture/resources freeze first; no actual new functional/performance/default runs. Performance requires full-C correctness accepted first."
+}

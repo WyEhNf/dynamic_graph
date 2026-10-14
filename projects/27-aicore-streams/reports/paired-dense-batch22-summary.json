@@ -1,0 +1,183 @@
+{
+  "suite": "data\\dense-assignment.json",
+  "suite_sha256": "aee860baf566de2d70541bae887ae660060a1de43c5998265c50228475ee9c84",
+  "baseline_exe_sha256": "4267bf463ca5e8fc198cefeae0352a86f65f26fafc2edbd4b517f8bf55c13e10",
+  "current_exe_sha256": "3b00329d2801b9b4c327fee39f66d92f06332ee9d585dbe04f956397b84428b6",
+  "current_solution_sha256": "ef3797e37fe6c776aff134efbaf86dc07237bb358a21b3dac752b935359533ff",
+  "baseline_solution_sha256": "f95ea2f74d1d37b2b552637560a68423539ec675a29acc3f7b6550257494fb2b",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-dense-batch22-1-before.json",
+        "exit_code": 0,
+        "wall_seconds": 5.905497699975967,
+        "peak_working_set_bytes": 133292032
+      },
+      "after": {
+        "report": "reports\\paired-dense-batch22-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.680038999998942,
+        "peak_working_set_bytes": 133103616
+      },
+      "comparison": {
+        "before": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "after": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "common_cases": 6,
+        "common_solve_us_before": 2382426,
+        "common_solve_us_after": 2220492,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 89,
+        "scales": [
+          {
+            "n": 256,
+            "median_us": 51760.5,
+            "max_us": 57868
+          },
+          {
+            "n": 1024,
+            "median_us": 198301.5,
+            "max_us": 242120
+          },
+          {
+            "n": 4096,
+            "median_us": 860184.0,
+            "max_us": 1092872
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-dense-batch22-2-before.json",
+        "exit_code": 0,
+        "wall_seconds": 5.893105400027707,
+        "peak_working_set_bytes": 132648960
+      },
+      "after": {
+        "report": "reports\\paired-dense-batch22-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.511428099998739,
+        "peak_working_set_bytes": 133382144
+      },
+      "comparison": {
+        "before": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "after": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "common_cases": 6,
+        "common_solve_us_before": 2681277,
+        "common_solve_us_after": 1949882,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 89,
+        "scales": [
+          {
+            "n": 256,
+            "median_us": 46033.5,
+            "max_us": 46270
+          },
+          {
+            "n": 1024,
+            "median_us": 205784.5,
+            "max_us": 255450
+          },
+          {
+            "n": 4096,
+            "median_us": 723123.0,
+            "max_us": 755418
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-dense-batch22-3-before.json",
+        "exit_code": 0,
+        "wall_seconds": 4.671984300017357,
+        "peak_working_set_bytes": 132820992
+      },
+      "after": {
+        "report": "reports\\paired-dense-batch22-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 9.125438500021119,
+        "peak_working_set_bytes": 132870144
+      },
+      "comparison": {
+        "before": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "after": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0
+        },
+        "common_cases": 6,
+        "common_solve_us_before": 2357163,
+        "common_solve_us_after": 2076588,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 89,
+        "scales": [
+          {
+            "n": 256,
+            "median_us": 73435.0,
+            "max_us": 76473
+          },
+          {
+            "n": 1024,
+            "median_us": 265067.0,
+            "max_us": 296521
+          },
+          {
+            "n": 4096,
+            "median_us": 699792.0,
+            "max_us": 795793
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch21\\solution.cpp",
+  "median_common_solve_us_before": 2382426,
+  "median_common_solve_us_after": 2076588,
+  "median_wall_seconds_before": 5.893105400027707,
+  "median_wall_seconds_after": 4.680038999998942,
+  "maximum_cli_working_set_bytes": 133382144,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": false
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "static_readonly": true,
+  "frozen_files": 196,
+  "actual_original_cases": 12,
+  "checkpoint_sha256": "ac02b349b312db47d83693aa8eb1da3d6359e43ffbd1750d41d4a2bdafaffead",
+  "readonly_attribution_sha256": "1b3208bd713243c2a202ebeb6ecc2e7ddf5f5847988fda3822cb8fb8d4fd0482",
+  "actual_internal_stages_unknown": true,
+  "top_exhausted_does_not_merge_cut": true,
+  "authorized_next": "Source-only bounded independent observer + every-return inventory + marker removal byte-for-byte3a4f + compile/input resource plan; no compiler/solver before review. Defaults and fees unchanged."
+}

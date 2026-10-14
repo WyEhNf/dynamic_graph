@@ -1,0 +1,211 @@
+{
+  "suite": "data\\recursive-sharing-unseen-batch29.json",
+  "suite_sha256": "06b21c4ef2f6d63fa69d77bcf90838434b510e74a50c722452f928f439d26a01",
+  "baseline_exe_sha256": "2e55958e79c4ad8becb44e1f56e9303ea472ed50b26133b62f8828fa2cb073d0",
+  "current_exe_sha256": "3effeb693487764479a6866db9d513470423b7c12ade6c479332e9c4de273e5a",
+  "current_solution_sha256": "6c9ea2d3b557c88ab8bb8f87922018fb204bd247643dd25ba10eeba52893bd57",
+  "baseline_solution_sha256": "1df00a5d1e229337dea657a946a1378a09d4eacdbf203425f6a1a0485938d7bd",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-wide-projection-recursive-batch30-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 0.8595540000242181,
+        "peak_working_set_bytes": 27721728
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-recursive-batch30-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 0.8374075000174344,
+        "peak_working_set_bytes": 27869184
+      },
+      "comparison": {
+        "before": {
+          "total": 18,
+          "passed": 15,
+          "failed": 3
+        },
+        "after": {
+          "total": 18,
+          "passed": 15,
+          "failed": 3
+        },
+        "common_cases": 15,
+        "common_solve_us_before": 195988,
+        "common_solve_us_after": 193158,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 56,
+        "scales": [
+          {
+            "n": 46,
+            "median_us": 1662.5,
+            "max_us": 4744
+          },
+          {
+            "n": 190,
+            "median_us": 5551.0,
+            "max_us": 75822
+          },
+          {
+            "n": 766,
+            "median_us": 52873.5,
+            "max_us": 156202
+          }
+        ],
+        "common_thread_cpu_measured_cases": 15,
+        "common_thread_cpu_us_before": 203125,
+        "common_thread_cpu_us_after": 203125,
+        "all_solve_us_before": 504414,
+        "all_thread_cpu_us_before": 500000,
+        "all_solve_us_after": 496282,
+        "all_thread_cpu_us_after": 515625
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-wide-projection-recursive-batch30-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 1.101101300038863,
+        "peak_working_set_bytes": 27635712
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-recursive-batch30-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 0.9670460000052117,
+        "peak_working_set_bytes": 27754496
+      },
+      "comparison": {
+        "before": {
+          "total": 18,
+          "passed": 15,
+          "failed": 3
+        },
+        "after": {
+          "total": 18,
+          "passed": 15,
+          "failed": 3
+        },
+        "common_cases": 15,
+        "common_solve_us_before": 279564,
+        "common_solve_us_after": 214934,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 56,
+        "scales": [
+          {
+            "n": 46,
+            "median_us": 1685.5,
+            "max_us": 4873
+          },
+          {
+            "n": 190,
+            "median_us": 5572.5,
+            "max_us": 76401
+          },
+          {
+            "n": 766,
+            "median_us": 57829.0,
+            "max_us": 254647
+          }
+        ],
+        "common_thread_cpu_measured_cases": 15,
+        "common_thread_cpu_us_before": 187500,
+        "common_thread_cpu_us_after": 203125,
+        "all_solve_us_before": 725652,
+        "all_thread_cpu_us_before": 562500,
+        "all_solve_us_after": 624876,
+        "all_thread_cpu_us_after": 546875
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-wide-projection-recursive-batch30-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 1.2790883000125177,
+        "peak_working_set_bytes": 27602944
+      },
+      "after": {
+        "report": "reports\\paired-wide-projection-recursive-batch30-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 0.8996560000232421,
+        "peak_working_set_bytes": 27672576
+      },
+      "comparison": {
+        "before": {
+          "total": 18,
+          "passed": 15,
+          "failed": 3
+        },
+        "after": {
+          "total": 18,
+          "passed": 15,
+          "failed": 3
+        },
+        "common_cases": 15,
+        "common_solve_us_before": 334056,
+        "common_solve_us_after": 193784,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 56,
+        "scales": [
+          {
+            "n": 46,
+            "median_us": 1680.0,
+            "max_us": 4767
+          },
+          {
+            "n": 190,
+            "median_us": 5523.5,
+            "max_us": 75620
+          },
+          {
+            "n": 766,
+            "median_us": 49388.0,
+            "max_us": 217776
+          }
+        ],
+        "common_thread_cpu_measured_cases": 15,
+        "common_thread_cpu_us_before": 218750,
+        "common_thread_cpu_us_after": 187500,
+        "all_solve_us_before": 853753,
+        "all_thread_cpu_us_before": 562500,
+        "all_solve_us_after": 552109,
+        "all_thread_cpu_us_after": 453125
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch29\\solution.cpp",
+  "median_common_solve_us_before": 279564,
+  "median_common_solve_us_after": 193784,
+  "median_wall_seconds_before": 1.101101300038863,
+  "median_wall_seconds_after": 0.8996560000232421,
+  "maximum_cli_working_set_bytes": 27869184,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true,
+  "median_common_thread_cpu_us_before": 203125,
+  "median_all_solve_us_before": 725652,
+  "median_all_thread_cpu_us_before": 562500,
+  "median_common_thread_cpu_us_after": 203125,
+  "median_all_solve_us_after": 552109,
+  "median_all_thread_cpu_us_after": 515625,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5"
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "static_only": true,
+  "original_inputs": 12,
+  "frozen_files": 40,
+  "source_sha256": "3a4f184de2759fdcd1cbfd899c5f8029e2f7f2691743ec214a895123db19c21a",
+  "exe_sha256": "79cecfe8db0eddcd1d267f293a468425e842565e6167f32259afdd98307d583f",
+  "primary_baseline": "R51 source8b7c, already executed historical baseline; no timing comparison",
+  "secondary_baseline": "R55 isolated negative c17c only, not composed with candidate",
+  "plan_freeze_sha256": "4bb5efb4a49aa7060ba5204a6c5a996e52f4147d19fc5f619e5369ee77d298b8",
+  "scope": "One unchanged original12 helper and whole run,16Mshared/2Mcut/once-retry preserved, all failures retained, fresh RAM/G1GiB/F64MiB file-backed G. No recompilation or63/full/perf/default."
+}

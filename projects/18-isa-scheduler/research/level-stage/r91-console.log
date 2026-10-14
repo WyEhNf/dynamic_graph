@@ -1,0 +1,570 @@
+{"progress": 32, "total": 10000, "elapsed_s": 0.32284269999945536}
+{"progress": 64, "total": 10000, "elapsed_s": 0.3479994999943301}
+{"progress": 96, "total": 10000, "elapsed_s": 0.3776983999996446}
+{"progress": 128, "total": 10000, "elapsed_s": 0.4084431999945082}
+{"progress": 160, "total": 10000, "elapsed_s": 0.4450799999758601}
+{"progress": 192, "total": 10000, "elapsed_s": 0.4719797999714501}
+{"progress": 224, "total": 10000, "elapsed_s": 0.5056768999784254}
+{"progress": 256, "total": 10000, "elapsed_s": 0.5389199999626726}
+{"progress": 288, "total": 10000, "elapsed_s": 0.5634622999932617}
+{"progress": 320, "total": 10000, "elapsed_s": 0.5911890999996103}
+{"progress": 352, "total": 10000, "elapsed_s": 0.6164034999674186}
+{"progress": 384, "total": 10000, "elapsed_s": 0.6389653999940492}
+{"progress": 416, "total": 10000, "elapsed_s": 0.6629646999645047}
+{"progress": 448, "total": 10000, "elapsed_s": 0.6901532999472693}
+{"progress": 480, "total": 10000, "elapsed_s": 0.7147239999612793}
+{"progress": 512, "total": 10000, "elapsed_s": 0.7423951999517158}
+{"progress": 544, "total": 10000, "elapsed_s": 0.7699923999607563}
+{"progress": 576, "total": 10000, "elapsed_s": 0.7987931999959983}
+{"progress": 608, "total": 10000, "elapsed_s": 0.8232627999968827}
+{"progress": 640, "total": 10000, "elapsed_s": 0.8540901999804191}
+{"progress": 672, "total": 10000, "elapsed_s": 0.8834055999759585}
+{"progress": 704, "total": 10000, "elapsed_s": 0.9092757999897003}
+{"progress": 736, "total": 10000, "elapsed_s": 0.9374640999594703}
+{"progress": 768, "total": 10000, "elapsed_s": 0.961712499964051}
+{"progress": 800, "total": 10000, "elapsed_s": 0.9869142999523319}
+{"progress": 832, "total": 10000, "elapsed_s": 1.0136220999993384}
+{"progress": 864, "total": 10000, "elapsed_s": 1.0400918999803253}
+{"progress": 896, "total": 10000, "elapsed_s": 1.068125699996017}
+{"progress": 928, "total": 10000, "elapsed_s": 1.0926886999513954}
+{"progress": 960, "total": 10000, "elapsed_s": 1.125271699973382}
+{"progress": 992, "total": 10000, "elapsed_s": 1.149920600000769}
+{"progress": 1024, "total": 10000, "elapsed_s": 1.1735826999647543}
+{"progress": 1056, "total": 10000, "elapsed_s": 1.198673199978657}
+{"progress": 1088, "total": 10000, "elapsed_s": 1.2260794999892823}
+{"progress": 1120, "total": 10000, "elapsed_s": 1.2538389999535866}
+{"progress": 1152, "total": 10000, "elapsed_s": 1.2798872999846935}
+{"progress": 1184, "total": 10000, "elapsed_s": 1.311551499995403}
+{"progress": 1216, "total": 10000, "elapsed_s": 1.3370151999988593}
+{"progress": 1248, "total": 10000, "elapsed_s": 1.3686070999829099}
+{"progress": 1280, "total": 10000, "elapsed_s": 1.3922712999628857}
+{"progress": 1312, "total": 10000, "elapsed_s": 1.419011399964802}
+{"progress": 1344, "total": 10000, "elapsed_s": 1.4450835000025108}
+{"progress": 1376, "total": 10000, "elapsed_s": 1.472320300003048}
+{"progress": 1408, "total": 10000, "elapsed_s": 1.4999972999794409}
+{"progress": 1440, "total": 10000, "elapsed_s": 1.5242758999811485}
+{"progress": 1472, "total": 10000, "elapsed_s": 1.549796199949924}
+{"progress": 1504, "total": 10000, "elapsed_s": 1.5775474999682046}
+{"progress": 1536, "total": 10000, "elapsed_s": 1.605980099993758}
+{"progress": 1568, "total": 10000, "elapsed_s": 1.6361875999718904}
+{"progress": 1600, "total": 10000, "elapsed_s": 1.6646209000027739}
+{"progress": 1632, "total": 10000, "elapsed_s": 1.6885324000031687}
+{"progress": 1664, "total": 10000, "elapsed_s": 1.728471599984914}
+{"progress": 1696, "total": 10000, "elapsed_s": 1.755064599972684}
+{"progress": 1728, "total": 10000, "elapsed_s": 1.7858611999545246}
+{"progress": 1760, "total": 10000, "elapsed_s": 1.8148973999777809}
+{"progress": 1792, "total": 10000, "elapsed_s": 1.8426790999947116}
+{"progress": 1824, "total": 10000, "elapsed_s": 1.8721451999736018}
+{"progress": 1856, "total": 10000, "elapsed_s": 1.9101796000031754}
+{"progress": 1888, "total": 10000, "elapsed_s": 1.942398699990008}
+{"progress": 1920, "total": 10000, "elapsed_s": 1.9673203999991529}
+{"progress": 1952, "total": 10000, "elapsed_s": 2.0013877999735996}
+{"progress": 1984, "total": 10000, "elapsed_s": 2.0287554999813437}
+{"progress": 2016, "total": 10000, "elapsed_s": 2.058867999992799}
+{"progress": 2048, "total": 10000, "elapsed_s": 2.0849367999471724}
+{"progress": 2080, "total": 10000, "elapsed_s": 2.1099779999931343}
+{"progress": 2112, "total": 10000, "elapsed_s": 2.1351282999967225}
+{"progress": 2144, "total": 10000, "elapsed_s": 2.161731799948029}
+{"progress": 2176, "total": 10000, "elapsed_s": 2.19023039995227}
+{"progress": 2208, "total": 10000, "elapsed_s": 2.2245789999724366}
+{"progress": 2240, "total": 10000, "elapsed_s": 2.256138500000816}
+{"progress": 2272, "total": 10000, "elapsed_s": 2.2871944999787956}
+{"progress": 2304, "total": 10000, "elapsed_s": 2.319481899961829}
+{"progress": 2336, "total": 10000, "elapsed_s": 2.353689899959136}
+{"progress": 2368, "total": 10000, "elapsed_s": 2.3860963999759406}
+{"progress": 2400, "total": 10000, "elapsed_s": 2.415205999976024}
+{"progress": 2432, "total": 10000, "elapsed_s": 2.4483431999688037}
+{"progress": 2464, "total": 10000, "elapsed_s": 2.4821023999829777}
+{"progress": 2496, "total": 10000, "elapsed_s": 2.517506899952423}
+{"progress": 2528, "total": 10000, "elapsed_s": 2.549502699985169}
+{"progress": 2560, "total": 10000, "elapsed_s": 2.5783840999938548}
+{"progress": 2592, "total": 10000, "elapsed_s": 2.6139449999900535}
+{"progress": 2624, "total": 10000, "elapsed_s": 2.6476547999773175}
+{"progress": 2656, "total": 10000, "elapsed_s": 2.676979299983941}
+{"progress": 2688, "total": 10000, "elapsed_s": 2.705200199969113}
+{"progress": 2720, "total": 10000, "elapsed_s": 2.745118199964054}
+{"progress": 2752, "total": 10000, "elapsed_s": 2.776305199950002}
+{"progress": 2784, "total": 10000, "elapsed_s": 2.8048330000019632}
+{"progress": 2816, "total": 10000, "elapsed_s": 2.8327460999717005}
+{"progress": 2848, "total": 10000, "elapsed_s": 2.8587348999571986}
+{"progress": 2880, "total": 10000, "elapsed_s": 2.886054200003855}
+{"progress": 2912, "total": 10000, "elapsed_s": 2.9150247999932617}
+{"progress": 2944, "total": 10000, "elapsed_s": 2.94621579995146}
+{"progress": 2976, "total": 10000, "elapsed_s": 2.977283299958799}
+{"progress": 3008, "total": 10000, "elapsed_s": 3.009161999973003}
+{"progress": 3040, "total": 10000, "elapsed_s": 3.036143000004813}
+{"progress": 3072, "total": 10000, "elapsed_s": 3.0704467999748886}
+{"progress": 3104, "total": 10000, "elapsed_s": 3.09882709995145}
+{"progress": 3136, "total": 10000, "elapsed_s": 3.1340071999584325}
+{"progress": 3168, "total": 10000, "elapsed_s": 3.1677105999551713}
+{"progress": 3200, "total": 10000, "elapsed_s": 3.200483299966436}
+{"progress": 3232, "total": 10000, "elapsed_s": 3.2317299999995157}
+{"progress": 3264, "total": 10000, "elapsed_s": 3.262525799975265}
+{"progress": 3296, "total": 10000, "elapsed_s": 3.292528299964033}
+{"progress": 3328, "total": 10000, "elapsed_s": 3.3204578000004403}
+{"progress": 3360, "total": 10000, "elapsed_s": 3.349936099955812}
+{"progress": 3392, "total": 10000, "elapsed_s": 3.375917199999094}
+{"progress": 3424, "total": 10000, "elapsed_s": 3.404244799981825}
+{"progress": 3456, "total": 10000, "elapsed_s": 3.4341824000002816}
+{"progress": 3488, "total": 10000, "elapsed_s": 3.4612714999821037}
+{"progress": 3520, "total": 10000, "elapsed_s": 3.499395299993921}
+{"progress": 3552, "total": 10000, "elapsed_s": 3.5278604999766685}
+{"progress": 3584, "total": 10000, "elapsed_s": 3.5583386999787763}
+{"progress": 3616, "total": 10000, "elapsed_s": 3.5856153999920934}
+{"progress": 3648, "total": 10000, "elapsed_s": 3.614976699987892}
+{"progress": 3680, "total": 10000, "elapsed_s": 3.6426787999807857}
+{"progress": 3712, "total": 10000, "elapsed_s": 3.6680075000040233}
+{"progress": 3744, "total": 10000, "elapsed_s": 3.6975988999474794}
+{"progress": 3776, "total": 10000, "elapsed_s": 3.7272626999765635}
+{"progress": 3808, "total": 10000, "elapsed_s": 3.7573386000003666}
+{"progress": 3840, "total": 10000, "elapsed_s": 3.7881215999950655}
+{"progress": 3872, "total": 10000, "elapsed_s": 3.820404800004326}
+{"progress": 3904, "total": 10000, "elapsed_s": 3.865188399970066}
+{"progress": 3936, "total": 10000, "elapsed_s": 3.890469799982384}
+{"progress": 3968, "total": 10000, "elapsed_s": 3.919821299961768}
+{"progress": 4000, "total": 10000, "elapsed_s": 3.9524518999969587}
+{"progress": 4032, "total": 10000, "elapsed_s": 3.9871821999549866}
+{"progress": 4064, "total": 10000, "elapsed_s": 4.019451799977105}
+{"progress": 4096, "total": 10000, "elapsed_s": 4.054124299960677}
+{"progress": 4128, "total": 10000, "elapsed_s": 4.080964499968104}
+{"progress": 4160, "total": 10000, "elapsed_s": 4.108514199964702}
+{"progress": 4192, "total": 10000, "elapsed_s": 4.136702799994964}
+{"progress": 4224, "total": 10000, "elapsed_s": 4.16509359999327}
+{"progress": 4256, "total": 10000, "elapsed_s": 4.20113289996516}
+{"progress": 4288, "total": 10000, "elapsed_s": 4.231368899985682}
+{"progress": 4320, "total": 10000, "elapsed_s": 4.263848599977791}
+{"progress": 4352, "total": 10000, "elapsed_s": 4.2976403999491595}
+{"progress": 4384, "total": 10000, "elapsed_s": 4.326583199959714}
+{"progress": 4416, "total": 10000, "elapsed_s": 4.3559116999967955}
+{"progress": 4448, "total": 10000, "elapsed_s": 4.389948899974115}
+{"progress": 4480, "total": 10000, "elapsed_s": 4.4256156999617815}
+{"progress": 4512, "total": 10000, "elapsed_s": 4.458215199992992}
+{"progress": 4544, "total": 10000, "elapsed_s": 4.4921476999879815}
+{"progress": 4576, "total": 10000, "elapsed_s": 4.52869720000308}
+{"progress": 4608, "total": 10000, "elapsed_s": 4.559631999989506}
+{"progress": 4640, "total": 10000, "elapsed_s": 4.590711899974849}
+{"progress": 4672, "total": 10000, "elapsed_s": 4.624364999996033}
+{"progress": 4704, "total": 10000, "elapsed_s": 4.664674200001173}
+{"progress": 4736, "total": 10000, "elapsed_s": 4.6979378999676555}
+{"progress": 4768, "total": 10000, "elapsed_s": 4.727265800000168}
+{"progress": 4800, "total": 10000, "elapsed_s": 4.753318200004287}
+{"progress": 4832, "total": 10000, "elapsed_s": 4.789188299968373}
+{"progress": 4864, "total": 10000, "elapsed_s": 4.818737499997951}
+{"progress": 4896, "total": 10000, "elapsed_s": 4.860448499966878}
+{"progress": 4928, "total": 10000, "elapsed_s": 4.889085599977989}
+{"progress": 4960, "total": 10000, "elapsed_s": 4.9180704999598674}
+{"progress": 4992, "total": 10000, "elapsed_s": 4.9463130999938585}
+{"progress": 5024, "total": 10000, "elapsed_s": 4.98061659996165}
+{"progress": 5056, "total": 10000, "elapsed_s": 5.013922699959949}
+{"progress": 5088, "total": 10000, "elapsed_s": 5.050952499965206}
+{"progress": 5120, "total": 10000, "elapsed_s": 5.08086349995574}
+{"progress": 5152, "total": 10000, "elapsed_s": 5.109068499994464}
+{"progress": 5184, "total": 10000, "elapsed_s": 5.14282159996219}
+{"progress": 5216, "total": 10000, "elapsed_s": 5.174967799976002}
+{"progress": 5248, "total": 10000, "elapsed_s": 5.204172700003255}
+{"progress": 5280, "total": 10000, "elapsed_s": 5.236702399968635}
+{"progress": 5312, "total": 10000, "elapsed_s": 5.264640999957919}
+{"progress": 5344, "total": 10000, "elapsed_s": 5.301126699952874}
+{"progress": 5376, "total": 10000, "elapsed_s": 5.333022599981632}
+{"progress": 5408, "total": 10000, "elapsed_s": 5.361082099960186}
+{"progress": 5440, "total": 10000, "elapsed_s": 5.388027599954512}
+{"progress": 5472, "total": 10000, "elapsed_s": 5.416811999981292}
+{"progress": 5504, "total": 10000, "elapsed_s": 5.446907899982762}
+{"progress": 5536, "total": 10000, "elapsed_s": 5.480596199980937}
+{"progress": 5568, "total": 10000, "elapsed_s": 5.51082480000332}
+{"progress": 5600, "total": 10000, "elapsed_s": 5.548464699997567}
+{"progress": 5632, "total": 10000, "elapsed_s": 5.577491599950008}
+{"progress": 5664, "total": 10000, "elapsed_s": 5.606552999990527}
+{"progress": 5696, "total": 10000, "elapsed_s": 5.63731469999766}
+{"progress": 5728, "total": 10000, "elapsed_s": 5.666480199957732}
+{"progress": 5760, "total": 10000, "elapsed_s": 5.699610199953895}
+{"progress": 5792, "total": 10000, "elapsed_s": 5.731896199984476}
+{"progress": 5824, "total": 10000, "elapsed_s": 5.760814399982337}
+{"progress": 5856, "total": 10000, "elapsed_s": 5.795367599988822}
+{"progress": 5888, "total": 10000, "elapsed_s": 5.827277399948798}
+{"progress": 5920, "total": 10000, "elapsed_s": 5.857057599991094}
+{"progress": 5952, "total": 10000, "elapsed_s": 5.887501599965617}
+{"progress": 5984, "total": 10000, "elapsed_s": 5.915527499979362}
+{"progress": 6016, "total": 10000, "elapsed_s": 5.9412360999849625}
+{"progress": 6048, "total": 10000, "elapsed_s": 5.975392299995292}
+{"progress": 6080, "total": 10000, "elapsed_s": 6.0022718999534845}
+{"progress": 6112, "total": 10000, "elapsed_s": 6.029612199985422}
+{"progress": 6144, "total": 10000, "elapsed_s": 6.059914799989201}
+{"progress": 6176, "total": 10000, "elapsed_s": 6.086506699968595}
+{"progress": 6208, "total": 10000, "elapsed_s": 6.117778399959207}
+{"progress": 6240, "total": 10000, "elapsed_s": 6.1474879999877885}
+{"progress": 6272, "total": 10000, "elapsed_s": 6.1772047999547794}
+{"progress": 6304, "total": 10000, "elapsed_s": 6.206989899976179}
+{"progress": 6336, "total": 10000, "elapsed_s": 6.237614699988626}
+{"progress": 6368, "total": 10000, "elapsed_s": 6.267635500000324}
+{"progress": 6400, "total": 10000, "elapsed_s": 6.298797099967487}
+{"progress": 6432, "total": 10000, "elapsed_s": 6.334420799976215}
+{"progress": 6464, "total": 10000, "elapsed_s": 6.367580999969505}
+{"progress": 6496, "total": 10000, "elapsed_s": 6.401827999972738}
+{"progress": 6528, "total": 10000, "elapsed_s": 6.430705599952489}
+{"progress": 6560, "total": 10000, "elapsed_s": 6.465258599957451}
+{"progress": 6592, "total": 10000, "elapsed_s": 6.492419899965171}
+{"progress": 6624, "total": 10000, "elapsed_s": 6.519954199960921}
+{"progress": 6656, "total": 10000, "elapsed_s": 6.549419299990404}
+{"progress": 6688, "total": 10000, "elapsed_s": 6.577085700002499}
+{"progress": 6720, "total": 10000, "elapsed_s": 6.608738799986895}
+{"progress": 6752, "total": 10000, "elapsed_s": 6.638601499958895}
+{"progress": 6784, "total": 10000, "elapsed_s": 6.669192599947564}
+{"progress": 6816, "total": 10000, "elapsed_s": 6.694079499982763}
+{"progress": 6848, "total": 10000, "elapsed_s": 6.7237577000050806}
+{"progress": 6880, "total": 10000, "elapsed_s": 6.7572675999836065}
+{"progress": 6912, "total": 10000, "elapsed_s": 6.793033199966885}
+{"progress": 6944, "total": 10000, "elapsed_s": 6.8224252999643795}
+{"progress": 6976, "total": 10000, "elapsed_s": 6.856755299959332}
+{"progress": 7008, "total": 10000, "elapsed_s": 6.886636099952739}
+{"progress": 7040, "total": 10000, "elapsed_s": 6.925281999981962}
+{"progress": 7072, "total": 10000, "elapsed_s": 6.9564185999915935}
+{"progress": 7104, "total": 10000, "elapsed_s": 6.987285499984864}
+{"progress": 7136, "total": 10000, "elapsed_s": 7.019416800001636}
+{"progress": 7168, "total": 10000, "elapsed_s": 7.049178299959749}
+{"progress": 7200, "total": 10000, "elapsed_s": 7.078987999993842}
+{"progress": 7232, "total": 10000, "elapsed_s": 7.1089240000001155}
+{"progress": 7264, "total": 10000, "elapsed_s": 7.1347237000009045}
+{"progress": 7296, "total": 10000, "elapsed_s": 7.167256299988367}
+{"progress": 7328, "total": 10000, "elapsed_s": 7.19569619995309}
+{"progress": 7360, "total": 10000, "elapsed_s": 7.2275495999492705}
+{"progress": 7392, "total": 10000, "elapsed_s": 7.255605299957097}
+{"progress": 7424, "total": 10000, "elapsed_s": 7.28614469995955}
+{"progress": 7456, "total": 10000, "elapsed_s": 7.315985699999146}
+{"progress": 7488, "total": 10000, "elapsed_s": 7.349202699959278}
+{"progress": 7520, "total": 10000, "elapsed_s": 7.383365399960894}
+{"progress": 7552, "total": 10000, "elapsed_s": 7.410771999973804}
+{"progress": 7584, "total": 10000, "elapsed_s": 7.437482499983162}
+{"progress": 7616, "total": 10000, "elapsed_s": 7.46346800000174}
+{"progress": 7648, "total": 10000, "elapsed_s": 7.492879199970048}
+{"progress": 7680, "total": 10000, "elapsed_s": 7.521316899976227}
+{"progress": 7712, "total": 10000, "elapsed_s": 7.555895600002259}
+{"progress": 7744, "total": 10000, "elapsed_s": 7.58217099995818}
+{"progress": 7776, "total": 10000, "elapsed_s": 7.61098649998894}
+{"progress": 7808, "total": 10000, "elapsed_s": 7.637730599963106}
+{"progress": 7840, "total": 10000, "elapsed_s": 7.663199799950235}
+{"progress": 7872, "total": 10000, "elapsed_s": 7.692464499967173}
+{"progress": 7904, "total": 10000, "elapsed_s": 7.720134200004395}
+{"progress": 7936, "total": 10000, "elapsed_s": 7.752863299974706}
+{"progress": 7968, "total": 10000, "elapsed_s": 7.7813833999680355}
+{"progress": 8000, "total": 10000, "elapsed_s": 7.813246199977584}
+{"progress": 8032, "total": 10000, "elapsed_s": 7.84213159995852}
+{"progress": 8064, "total": 10000, "elapsed_s": 7.8706088999751955}
+{"progress": 8096, "total": 10000, "elapsed_s": 7.901342199998908}
+{"progress": 8128, "total": 10000, "elapsed_s": 7.9358928999863565}
+{"progress": 8160, "total": 10000, "elapsed_s": 7.969851200003177}
+{"progress": 8192, "total": 10000, "elapsed_s": 7.999093399965204}
+{"progress": 8224, "total": 10000, "elapsed_s": 8.02751459996216}
+{"progress": 8256, "total": 10000, "elapsed_s": 8.053687399951741}
+{"progress": 8288, "total": 10000, "elapsed_s": 8.085379900003318}
+{"progress": 8320, "total": 10000, "elapsed_s": 8.112628699978814}
+{"progress": 8352, "total": 10000, "elapsed_s": 8.141743199958}
+{"progress": 8384, "total": 10000, "elapsed_s": 8.1682593000005}
+{"progress": 8416, "total": 10000, "elapsed_s": 8.19430559995817}
+{"progress": 8448, "total": 10000, "elapsed_s": 8.222076099948026}
+{"progress": 8480, "total": 10000, "elapsed_s": 8.254618799954187}
+{"progress": 8512, "total": 10000, "elapsed_s": 8.290470299951266}
+{"progress": 8544, "total": 10000, "elapsed_s": 8.32549099996686}
+{"progress": 8576, "total": 10000, "elapsed_s": 8.355467499990482}
+{"progress": 8608, "total": 10000, "elapsed_s": 8.39511839998886}
+{"progress": 8640, "total": 10000, "elapsed_s": 8.42407299997285}
+{"progress": 8672, "total": 10000, "elapsed_s": 8.455138299963437}
+{"progress": 8704, "total": 10000, "elapsed_s": 8.487520399969071}
+{"progress": 8736, "total": 10000, "elapsed_s": 8.519199699978344}
+{"progress": 8768, "total": 10000, "elapsed_s": 8.54924469999969}
+{"progress": 8800, "total": 10000, "elapsed_s": 8.580455299990717}
+{"progress": 8832, "total": 10000, "elapsed_s": 8.610364499967545}
+{"progress": 8864, "total": 10000, "elapsed_s": 8.637329699995462}
+{"progress": 8896, "total": 10000, "elapsed_s": 8.665283299982548}
+{"progress": 8928, "total": 10000, "elapsed_s": 8.692272199958097}
+{"progress": 8960, "total": 10000, "elapsed_s": 8.71765929996036}
+{"progress": 8992, "total": 10000, "elapsed_s": 8.747699500003364}
+{"progress": 9024, "total": 10000, "elapsed_s": 8.780446799995843}
+{"progress": 9056, "total": 10000, "elapsed_s": 8.808974299987312}
+{"progress": 9088, "total": 10000, "elapsed_s": 8.844019599957392}
+{"progress": 9120, "total": 10000, "elapsed_s": 8.875151099986397}
+{"progress": 9152, "total": 10000, "elapsed_s": 8.90457489999244}
+{"progress": 9184, "total": 10000, "elapsed_s": 8.937289699970279}
+{"progress": 9216, "total": 10000, "elapsed_s": 8.970542799972463}
+{"progress": 9248, "total": 10000, "elapsed_s": 9.009227499947883}
+{"progress": 9280, "total": 10000, "elapsed_s": 9.044705799955409}
+{"progress": 9312, "total": 10000, "elapsed_s": 9.080099399958272}
+{"progress": 9344, "total": 10000, "elapsed_s": 9.112969799956772}
+{"progress": 9376, "total": 10000, "elapsed_s": 9.144920799997635}
+{"progress": 9408, "total": 10000, "elapsed_s": 9.174261599953752}
+{"progress": 9440, "total": 10000, "elapsed_s": 9.20500739995623}
+{"progress": 9472, "total": 10000, "elapsed_s": 9.233738599985372}
+{"progress": 9504, "total": 10000, "elapsed_s": 9.259196600003634}
+{"progress": 9536, "total": 10000, "elapsed_s": 9.288806399970781}
+{"progress": 9568, "total": 10000, "elapsed_s": 9.320151199994143}
+{"progress": 9600, "total": 10000, "elapsed_s": 9.353217399970163}
+{"progress": 9632, "total": 10000, "elapsed_s": 9.385884799994528}
+{"progress": 9664, "total": 10000, "elapsed_s": 9.415381699975114}
+{"progress": 9696, "total": 10000, "elapsed_s": 9.448569999949541}
+{"progress": 9728, "total": 10000, "elapsed_s": 9.47931329999119}
+{"progress": 9760, "total": 10000, "elapsed_s": 9.513067199965008}
+{"progress": 9792, "total": 10000, "elapsed_s": 9.542563900002278}
+{"progress": 9824, "total": 10000, "elapsed_s": 9.574029199953657}
+{"progress": 9856, "total": 10000, "elapsed_s": 9.60357199999271}
+{"progress": 9888, "total": 10000, "elapsed_s": 9.634541599953081}
+{"progress": 9920, "total": 10000, "elapsed_s": 9.661983800004236}
+{"progress": 9952, "total": 10000, "elapsed_s": 9.690439599973615}
+{"progress": 9984, "total": 10000, "elapsed_s": 9.717760999978054}
+{"report": "F:\\Hackathon\\projects\\18-isa-scheduler\\experiments\\milestone-level-r91-10000\\report.json", "summary": {"v14_auto": {"attempted": 10000, "verified": 9998, "statuses": {"proven_infeasible_under_model": 2, "verified": 9998}, "total_inserted_copies_successes": 562, "total_output_count_successes": 76856, "optimizer_ms_all_inputs": {"p50": 0.1344000338576734, "p95": 0.6400999845936894, "p99": 1.4092999626882374}}, "research_portfolio": {"attempted": 10000, "verified": 9998, "statuses": {"proven_infeasible_under_model": 2, "verified": 9998}, "total_inserted_copies_successes": 562, "total_output_count_successes": 76856, "optimizer_ms_all_inputs": {"p50": 0.14509999891743064, "p95": 0.6817000103183091, "p99": 1.4077999512664974}}}}
+{"progress": 32, "total": 336, "elapsed_s": 5.363387800054625}
+{"progress": 64, "total": 336, "elapsed_s": 12.069596200017259}
+{"progress": 96, "total": 336, "elapsed_s": 16.319013600004837}
+{"progress": 128, "total": 336, "elapsed_s": 20.204647000005934}
+{"progress": 160, "total": 336, "elapsed_s": 29.028631500026677}
+{"progress": 192, "total": 336, "elapsed_s": 39.02716400002828}
+{"progress": 224, "total": 336, "elapsed_s": 45.896647300047334}
+{"progress": 256, "total": 336, "elapsed_s": 51.53684070002055}
+{"progress": 288, "total": 336, "elapsed_s": 59.40374380000867}
+{"progress": 320, "total": 336, "elapsed_s": 67.73143570002867}
+{"report": "F:\\Hackathon\\projects\\18-isa-scheduler\\experiments\\milestone-level-r91-336\\report.json", "summary": {"v14_auto": {"attempted": 336, "verified": 272, "statuses": {"budget_exhausted": 9, "proven_infeasible_under_model": 47, "scheduling_failure": 8, "verified": 272}, "total_inserted_copies_successes": 195525, "total_output_count_successes": 550345, "optimizer_ms_all_inputs": {"p50": 33.00769999623299, "p95": 255.1880999817513, "p99": 285.2868000045419}}, "research_portfolio": {"attempted": 336, "verified": 272, "statuses": {"budget_exhausted": 9, "proven_infeasible_under_model": 47, "scheduling_failure": 8, "verified": 272}, "total_inserted_copies_successes": 194736, "total_output_count_successes": 549556, "optimizer_ms_all_inputs": {"p50": 33.37220003595576, "p95": 257.044899975881, "p99": 279.38730001915246}}}}
+{
+  "before": "v14_auto",
+  "after": "research_portfolio",
+  "corpus_sha256": "7252b7ccaab17d798317ec5372aa7ea872978fd0f1d00d7033844f85d31b1c11",
+  "case_count": 336,
+  "joint_successes": 272,
+  "status_pairs": {
+    "proven_infeasible_under_model->proven_infeasible_under_model": 47,
+    "verified->verified": 272,
+    "scheduling_failure->scheduling_failure": 8,
+    "budget_exhausted->budget_exhausted": 9
+  },
+  "quality_pairs": {
+    "same": 264,
+    "better": 8
+  },
+  "before_copies_joint": 195525,
+  "after_copies_joint": 194736,
+  "median_speedup_joint": 0.975876187891138,
+  "families": {
+    "balanced_tree": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 6,
+        "verified->verified": 10
+      },
+      "joint_successes": 10,
+      "before_copies": 2200,
+      "after_copies": 2200,
+      "median_speedup_joint": 0.8816198155899699
+    },
+    "butterfly": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 11,
+        "verified->verified": 5
+      },
+      "joint_successes": 5,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 1.0012957577041763
+    },
+    "cross_group_shared": {
+      "status_pairs": {
+        "verified->verified": 14,
+        "budget_exhausted->budget_exhausted": 1,
+        "proven_infeasible_under_model->proven_infeasible_under_model": 1
+      },
+      "joint_successes": 14,
+      "before_copies": 9841,
+      "after_copies": 9841,
+      "median_speedup_joint": 0.999480857701825
+    },
+    "dot_product_many": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 4,
+        "verified->verified": 12
+      },
+      "joint_successes": 12,
+      "before_copies": 4112,
+      "after_copies": 4112,
+      "median_speedup_joint": 0.9738814314596373
+    },
+    "fanout_diamonds": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 3043,
+      "after_copies": 3043,
+      "median_speedup_joint": 0.9964862702705373
+    },
+    "hazard_multi": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 0.9871796384657054
+    },
+    "ladder_diamond": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 8334,
+      "after_copies": 8334,
+      "median_speedup_joint": 0.9693364556844433
+    },
+    "matrix_product_tile": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 4,
+        "verified->verified": 4,
+        "budget_exhausted->budget_exhausted": 8
+      },
+      "joint_successes": 4,
+      "before_copies": 77,
+      "after_copies": 77,
+      "median_speedup_joint": 0.9565396843468557
+    },
+    "multi_sink_irregular": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 3078,
+      "after_copies": 3078,
+      "median_speedup_joint": 0.9407364855608196
+    },
+    "multi_sink_shared": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 3040,
+      "after_copies": 3040,
+      "median_speedup_joint": 0.9467955078445012
+    },
+    "near_window_spine": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 135443,
+      "after_copies": 135443,
+      "median_speedup_joint": 0.9512617125271252
+    },
+    "ordered_duplicate_network": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 7,
+        "verified->verified": 9
+      },
+      "joint_successes": 9,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 0.9253444271490142
+    },
+    "padded_tree": {
+      "status_pairs": {
+        "verified->verified": 13,
+        "proven_infeasible_under_model->proven_infeasible_under_model": 3
+      },
+      "joint_successes": 13,
+      "before_copies": 4822,
+      "after_copies": 4033,
+      "median_speedup_joint": 0.9166968098794858
+    },
+    "parallel_chains": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 1.2966471967874567
+    },
+    "ragged_tree": {
+      "status_pairs": {
+        "verified->verified": 13,
+        "proven_infeasible_under_model->proven_infeasible_under_model": 3
+      },
+      "joint_successes": 13,
+      "before_copies": 4051,
+      "after_copies": 4051,
+      "median_speedup_joint": 0.9355723824839007
+    },
+    "serial_chains": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 0.991799191065737
+    },
+    "skew_tree": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 1.8969185290350596
+    },
+    "sparse_live": {
+      "status_pairs": {
+        "scheduling_failure->scheduling_failure": 4,
+        "verified->verified": 12
+      },
+      "joint_successes": 12,
+      "before_copies": 4061,
+      "after_copies": 4061,
+      "median_speedup_joint": 0.9851620473787704
+    },
+    "sparse_shared": {
+      "status_pairs": {
+        "scheduling_failure->scheduling_failure": 4,
+        "verified->verified": 12
+      },
+      "joint_successes": 12,
+      "before_copies": 4997,
+      "after_copies": 4997,
+      "median_speedup_joint": 1.0000374774262002
+    },
+    "stencil_1d": {
+      "status_pairs": {
+        "verified->verified": 16
+      },
+      "joint_successes": 16,
+      "before_copies": 1356,
+      "after_copies": 1356,
+      "median_speedup_joint": 0.9346785617230013
+    },
+    "wide_fanout": {
+      "status_pairs": {
+        "proven_infeasible_under_model->proven_infeasible_under_model": 8,
+        "verified->verified": 8
+      },
+      "joint_successes": 8,
+      "before_copies": 7070,
+      "after_copies": 7070,
+      "median_speedup_joint": 0.9503507859766567
+    }
+  },
+  "before_metrics": {
+    "latency_all_ms": {
+      "p50": 33.00769999623299,
+      "p95": 255.1880999817513,
+      "p99": 285.2868000045419
+    },
+    "equal_weight_copy_output_success": 0.14021770556374225,
+    "equal_weight_copy_original_success": 0.42209539345636893,
+    "failure_rate": 0.19047619047619047
+  },
+  "after_metrics": {
+    "latency_all_ms": {
+      "p50": 33.37220003595576,
+      "p95": 257.044899975881,
+      "p99": 279.38730001915246
+    },
+    "equal_weight_copy_output_success": 0.13918254107216016,
+    "equal_weight_copy_original_success": 0.42007046239019247,
+    "failure_rate": 0.19047619047619047
+  }
+}
+{"method": "fresh serialized input/output; no scheduler call or internal state; alternate signed inputs", "attempted": 272, "verified": 272, "missing_success_outputs": 0, "elapsed_seconds": 7.6475449000135995}
+{"source": "experiments\\milestone-level-r91-336", "attempted": 272, "verified_identity_outputs": 272, "elapsed_s": 6.186035500024445, "input_file_sha256": "7252b7ccaab17d798317ec5372aa7ea872978fd0f1d00d7033844f85d31b1c11", "output_file_sha256": "f615fb82bad6aeae2e19b5db7322a56c78eca22aa40508db46fb16e151d53d16", "order_witness_file_sha256": "067989480802766403abdc4494435aff2a8cbe5fe258247a5aa024a947208da0", "checker_manifest": {"identity_witness.py": "4c9b509ecf772acda58be4f25005f9330b68e19dce6d46cd6af81cffa00b95f1", "raw_pure.py": "fd8edc8b7da10916eeb9125d399957187e125a1add15d3a8719ca7b7c84afc80", "verify.py": "14d628fc00ca6b9ae022edffa1068a19c14ba019dad3b267d2140ea35a6bbf61"}, "method": "raw input/output and untrusted complete permutation; no scheduler or DAG model state; symbolic and exact identity purposes separate"}

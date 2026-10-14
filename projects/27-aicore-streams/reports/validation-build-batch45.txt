@@ -1,0 +1,42 @@
+[  3%] Building CXX object CMakeFiles/solution.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/solution.cpp.obj
+[  7%] Linking CXX static library libsolution.a
+[  7%] Built target solution
+[ 10%] Building CXX object CMakeFiles/simulator.dir/F_/Hackathon/projects/27-aicore-streams/src/simulator.cpp.obj
+[ 14%] Linking CXX static library libsimulator.a
+[ 14%] Built target simulator
+[ 17%] Building CXX object CMakeFiles/candidate_search.dir/F_/Hackathon/projects/27-aicore-streams/src/candidate_search.cpp.obj
+[ 21%] Linking CXX static library libcandidate_search.a
+[ 21%] Built target candidate_search
+[ 25%] Building CXX object CMakeFiles/aicore_demo.dir/F_/Hackathon/projects/27-aicore-streams/src/main.cpp.obj
+[ 28%] Linking CXX executable aicore_demo.exe
+[ 28%] Built target aicore_demo
+[ 32%] Building CXX object CMakeFiles/aicore_bench.dir/F_/Hackathon/projects/27-aicore-streams/src/benchmark.cpp.obj
+[ 35%] Linking CXX executable aicore_bench.exe
+[ 35%] Built target aicore_bench
+[ 39%] Building CXX object CMakeFiles/aicore_oracle.dir/F_/Hackathon/projects/27-aicore-streams/src/parallel_oracle.cpp.obj
+[ 42%] Linking CXX executable aicore_oracle.exe
+[ 42%] Built target aicore_oracle
+[ 46%] Building CXX object CMakeFiles/simulator_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_simulator.cpp.obj
+[ 50%] Linking CXX executable simulator_tests.exe
+[ 50%] Built target simulator_tests
+[ 53%] Building CXX object CMakeFiles/model_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_models.cpp.obj
+[ 57%] Linking CXX executable model_tests.exe
+[ 57%] Built target model_tests
+[ 60%] Building CXX object CMakeFiles/assignment_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_assignment.cpp.obj
+[ 64%] Linking CXX executable assignment_tests.exe
+[ 64%] Built target assignment_tests
+[ 67%] Building CXX object CMakeFiles/serial_frontier_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_serial_frontier.cpp.obj
+[ 71%] Linking CXX executable serial_frontier_tests.exe
+[ 71%] Built target serial_frontier_tests
+[ 75%] Building CXX object CMakeFiles/numeric_boundary_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_numeric.cpp.obj
+[ 78%] Linking CXX executable numeric_boundary_tests.exe
+[ 78%] Built target numeric_boundary_tests
+[ 82%] Building CXX object CMakeFiles/numeric_priority_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_numeric_priority.cpp.obj
+[ 85%] Linking CXX executable numeric_priority_tests.exe
+[ 85%] Built target numeric_priority_tests
+[ 89%] Building CXX object CMakeFiles/shallow_profile_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/tests/test_shallow.cpp.obj
+[ 92%] Linking CXX executable shallow_profile_tests.exe
+[ 92%] Built target shallow_profile_tests
+[ 96%] Building CXX object CMakeFiles/workspace_profile_tests.dir/F_/Hackathon/projects/27-aicore-streams/research/batch45/test_projection.cpp.obj
+[100%] Linking CXX executable workspace_profile_tests.exe
+[100%] Built target workspace_profile_tests

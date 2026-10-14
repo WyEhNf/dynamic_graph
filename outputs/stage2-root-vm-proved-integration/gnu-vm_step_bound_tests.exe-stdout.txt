@@ -1,0 +1,1 @@
+{"passed":true,"exhaustive_goldens":517,"unknown_mutations":119,"exact_and_one_short_boundaries":1030,"adversarial_program_mutations":6358,"proved_mutations":416,"actual_mutation_VM_executions":832,"ordinary_runtime_changed":false,"N10000_execution_started":false}

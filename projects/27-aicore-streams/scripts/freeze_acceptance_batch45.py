@@ -1,0 +1,14 @@
+"""Freeze actual complete candidate acceptance; default44 remains untouched."""
+import hashlib,json,re,shutil
+from pathlib import Path
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+p=Path('research/batch45');source=sha(p/'solution.cpp');assert source=='5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9'
+quality=json.loads(Path('reports/full-verification-batch45.json').read_text());numeric=json.loads(Path('reports/full-numeric-verification-batch45.json').read_text());assert quality['source_sha']==numeric['source_sha']==source
+ctest=Path('reports/validation-ctest-batch45.txt').read_text();assert '100% tests passed' in ctest and '12/12' in ctest
+inputs=[str(x).replace('\\','/') for directory in ['src','include'] for x in sorted(Path(directory).glob('*')) if x.suffix in ['.cpp','.h']]
+inputs+=['research/batch45/solution.cpp','research/batch45/projection.cpp.inc','research/batch45/cmake/CMakeLists.txt','research/batch45/numeric_checks.cpp','research/batch45/test_projection.cpp']+[str(x).replace('\\','/') for x in sorted((p/'tests').glob('*.cpp'))]
+flags=[str(p/'validation-build/CMakeFiles'/label/'flags.make').replace('\\','/') for label in ['solution.dir','aicore_bench.dir','simulator.dir']]
+archive=p/'release-candidate-frozen-aicore_bench.exe';shutil.copyfile(p/'validation-build/aicore_bench.exe',archive)
+reports=['reports/full-verification-batch45.json','reports/full-numeric-verification-batch45.json','reports/validation-ctest-batch45.txt','reports/validation-build-batch45.txt','reports/functional-summary-batch45.json','reports/projection-profile-ubsan-batch45.txt','reports/projection-gold-generation-batch45.json']
+manifest=dict(status='full candidate functional/numeric acceptance passed; performance pending; not default',source_sha=source,compile_inputs={x:sha(x) for x in inputs},compile_flags={x:Path(x).read_text() for x in flags},executables={str(x).replace('\\','/'):sha(x) for x in [p/'aicore_bench.exe',p/'validation-build/aicore_bench.exe',archive,p/'numeric-validation-ubsan.exe',p/'test_projection-ubsan.exe']},reports={x:sha(x) for x in reports},normal_979_direct_R44_same_every_record=True,prior_structure36_same=True,prior_heldout72_same=True,resource_cliques12_same=True,external_optimum_audits132=quality['statuses'][1]['actual_exit_code']==0,numeric_gold523=True,workspace_gold495=True,shallow_gold2590=True,priority_gold20180=True,ctest12_actual_exit0=True,ctest_shared_wall_seconds=float(re.search(r'Total Test time \(real\) =\s+([\d.]+)',ctest).group(1)),quality=quality,numeric=numeric,baseline44_source_sha=sha('solution/solution.cpp'),baseline44_exe_sha=sha('research/batch44/default-aicore_bench.exe'),no_promotion=True)
+(p/'acceptance-checkpoint.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8');print('acceptance',sha(p/'acceptance-checkpoint.json'),'release',sha(archive),'default44 preserved')

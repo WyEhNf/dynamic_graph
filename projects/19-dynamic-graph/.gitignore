@@ -1,0 +1,7 @@
+build/
+build-memory/
+.venv/
+artifacts/*.bin
+artifacts/*.partial
+__pycache__/
+*.pyc

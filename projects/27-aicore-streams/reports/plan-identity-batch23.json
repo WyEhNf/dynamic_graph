@@ -1,0 +1,147 @@
+{
+  "checked": 1027,
+  "identical": true,
+  "scope": "emitted plans and validity/T/peak; complements internal 288 old-recurrence assignment tests",
+  "reports": [
+    {
+      "before": "reports\\certificate-controls-batch22.json",
+      "after": "reports\\certificate-controls-batch23.json",
+      "records": 12
+    },
+    {
+      "before": "reports\\corepacking-batch22.json",
+      "after": "reports\\corepacking-batch23.json",
+      "records": 18
+    },
+    {
+      "before": "reports\\corepacking-holdout-batch22.json",
+      "after": "reports\\corepacking-holdout-batch23.json",
+      "records": 18
+    },
+    {
+      "before": "reports\\dense-batch22.json",
+      "after": "reports\\dense-batch23.json",
+      "records": 6
+    },
+    {
+      "before": "reports\\dense-holdout-batch22.json",
+      "after": "reports\\dense-holdout-batch23.json",
+      "records": 6
+    },
+    {
+      "before": "reports\\development-batch22.json",
+      "after": "reports\\development-batch23.json",
+      "records": 143
+    },
+    {
+      "before": "reports\\frontier-batch22.json",
+      "after": "reports\\frontier-batch23.json",
+      "records": 72
+    },
+    {
+      "before": "reports\\frontier-holdout-batch22.json",
+      "after": "reports\\frontier-holdout-batch23.json",
+      "records": 72
+    },
+    {
+      "before": "reports\\holdout-batch22.json",
+      "after": "reports\\holdout-batch23.json",
+      "records": 143
+    },
+    {
+      "before": "reports\\irregular-batch22.json",
+      "after": "reports\\irregular-batch23.json",
+      "records": 24
+    },
+    {
+      "before": "reports\\irregular-holdout-batch22.json",
+      "after": "reports\\irregular-holdout-batch23.json",
+      "records": 24
+    },
+    {
+      "before": "reports\\irregular-small-batch22.json",
+      "after": "reports\\irregular-small-batch23.json",
+      "records": 12
+    },
+    {
+      "before": "reports\\irregular-small-holdout-batch22.json",
+      "after": "reports\\irregular-small-holdout-batch23.json",
+      "records": 12
+    },
+    {
+      "before": "reports\\oracle4-batch22.json",
+      "after": "reports\\oracle4-batch23.json",
+      "records": 24
+    },
+    {
+      "before": "reports\\oracle4-holdout-batch22.json",
+      "after": "reports\\oracle4-holdout-batch23.json",
+      "records": 24
+    },
+    {
+      "before": "reports\\oracle5-batch22.json",
+      "after": "reports\\oracle5-batch23.json",
+      "records": 24
+    },
+    {
+      "before": "reports\\oracle5-holdout-batch22.json",
+      "after": "reports\\oracle5-holdout-batch23.json",
+      "records": 24
+    },
+    {
+      "before": "reports\\oracle6-batch22.json",
+      "after": "reports\\oracle6-batch23.json",
+      "records": 12
+    },
+    {
+      "before": "reports\\oracle6-holdout-batch22.json",
+      "after": "reports\\oracle6-holdout-batch23.json",
+      "records": 12
+    },
+    {
+      "before": "reports\\overlap-batch22.json",
+      "after": "reports\\overlap-batch23.json",
+      "records": 30
+    },
+    {
+      "before": "reports\\overlap-holdout-batch22.json",
+      "after": "reports\\overlap-holdout-batch23.json",
+      "records": 30
+    },
+    {
+      "before": "reports\\resource-quality-batch22.json",
+      "after": "reports\\resource-quality-batch23.json",
+      "records": 18
+    },
+    {
+      "before": "reports\\resource-quality-holdout-batch22.json",
+      "after": "reports\\resource-quality-holdout-batch23.json",
+      "records": 18
+    },
+    {
+      "before": "reports\\stress-batch22.json",
+      "after": "reports\\stress-batch23.json",
+      "records": 153
+    },
+    {
+      "before": "reports\\wait-overlap-batch22.json",
+      "after": "reports\\wait-overlap-batch23.json",
+      "records": 18
+    },
+    {
+      "before": "reports\\wait-overlap-holdout-batch22.json",
+      "after": "reports\\wait-overlap-holdout-batch23.json",
+      "records": 18
+    },
+    {
+      "before": "reports\\weighted-overlap-batch22.json",
+      "after": "reports\\weighted-overlap-batch23.json",
+      "records": 30
+    },
+    {
+      "before": "reports\\weighted-overlap-holdout-batch22.json",
+      "after": "reports\\weighted-overlap-holdout-batch23.json",
+      "records": 30
+    }
+  ]
+}

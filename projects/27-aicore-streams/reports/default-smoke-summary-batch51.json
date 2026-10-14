@@ -1,0 +1,61 @@
+{
+  "status": "Actual default10 matches accepted R51 candidate;known-feasible failures explicit",
+  "actual_exit_code": 1,
+  "count": 10,
+  "passing": 7,
+  "unresolved": 3,
+  "four_recoveries": [
+    "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+    "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+    "irregular_consumers_local_k24_ret1_seed20273418",
+    "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration"
+  ],
+  "selection": [
+    [
+      "hard",
+      31
+    ],
+    [
+      "hard",
+      54
+    ],
+    [
+      "hard",
+      55
+    ],
+    [
+      "hard",
+      192
+    ],
+    [
+      "heldout",
+      0
+    ],
+    [
+      "heldout",
+      26
+    ],
+    [
+      "heldout",
+      47
+    ],
+    [
+      "heldout",
+      3
+    ],
+    [
+      "heldout",
+      7
+    ],
+    [
+      "hard",
+      129
+    ]
+  ],
+  "input_sha": "87b34d28d9af0fdd24e4d3f53a82c775fdd5aaa2d54f26af05822d5c254ce0f8",
+  "report_sha": "98073b82eb3c6ae721e97bad5b96e1079ac4eccd05dac79e30890a4cfc9e4efd",
+  "source_sha": "8b7c5383215084692b812a1451d1137802bf00323e80170ed5ce1ed14a1ecf4b",
+  "exe_sha": "c491f69d9ac2b39fa336afc5ef17b300bbdf84ab9021a482b3d404f91191b607",
+  "timing": "Shared functionality only;not a new979 or performance batch",
+  "witness_or_generation_passed_to_solver": false
+}

@@ -1,0 +1,21 @@
+{
+  "checked": 3,
+  "source_sha256": "b68148bfed40aa1cd3e587efa4162c134e622b31ff2beac5425991de98e15b88",
+  "input_sha256": "d1d680bf17f282507ebc17b655284b46426abecf50dde51e78053be0891f9e20",
+  "scope": "Auxiliary literal unit controls, excluded from 1193 benchmark record count",
+  "expected_T_peak": [
+    [
+      21,
+      100
+    ],
+    [
+      7,
+      100
+    ],
+    [
+      7,
+      0
+    ]
+  ],
+  "report": "reports\\resource-liveness-batch31.json"
+}

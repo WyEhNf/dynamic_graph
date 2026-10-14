@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791773688.8774354,
+  "functional_plan_sha256": "671ed9b558774f576f7ea57aeff4e8d04bee39d4490b0ea4aeb7cbd60f45fa33",
+  "frozen_files": 36,
+  "original_inputs": 67,
+  "original_remaining_hard": 57,
+  "original_remaining_fresh": 6,
+  "known_recovery_controls": 4,
+  "independently_replayed_baseline_plans": 4,
+  "actual_default_baseline_records": 7,
+  "same_source_accepted_baseline_records": 60,
+  "actual_candidate_executions": 0,
+  "scope": "All63 original failed known-feasible graphs plus4 accepted recoveries, original hardware/edges/deadlines unchanged.67complete frozen baseline/source lineage reviewed; selected12 driver reuses exactcandidate GCC EXE and reads only hardware/nodes/deadline. Same2M/16M; functional execution still required, no full250/regression/performance/default promotion."
+}

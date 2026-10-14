@@ -1,0 +1,3 @@
+BASE_FEE = 17
+PER_KG = 6
+FREE_FROM_KG = 23

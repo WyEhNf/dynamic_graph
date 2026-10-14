@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791770791.0990193,
+  "report_sha256": "e555200a5130e3da569519b850a12c11a144b46d865066e00c58e298177e7ac5",
+  "source_provenance_sha256": "c3f58072a08f86a368a61b9673b23906c819bdd0ba3e9fef3c1682ba9a25dd66",
+  "returned_results": 8,
+  "full_output_replays": 21,
+  "immutable_labels_replayed": 115,
+  "actual_open_prefixes": 11,
+  "actual_unfinished_prefixes": 5,
+  "root_boundary_tests": 7,
+  "root_exit_code": 0,
+  "outcomes": {
+    "partial_budget": 5,
+    "exhausted_improvement_search": 2,
+    "partial_outlet_limit": 1
+  },
+  "scope": "Actual saved immutable label paths independently replayed from original operands and incoming physical prefix; g/h/roles/ages and all OPEN/unfinished records agree. Search/heap/physical restore text unchanged. Search time excludes explicit frontier export and JSON I/O. Injected1000ms deadline is contract only; no CLI time guarantee,84/global/official result."
+}

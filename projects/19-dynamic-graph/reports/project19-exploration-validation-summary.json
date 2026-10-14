@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-14T03:03:43.241443+00:00",
+  "scope": "Current S33 all registered presets plus published structured/metadata correctness, explicit encoding choice, feature-OFF rejection, max/dynamic scale and same-host library comparison.",
+  "totals": {
+    "ctest_registered": 25,
+    "ctest_failed": 0,
+    "ctest_skipped": 0,
+    "python_unit_tests": 3,
+    "independent_C_success_runs": 1666,
+    "expected_rejections": 118,
+    "additional_current_large_CLI_runs": 29,
+    "industry_processes": 48,
+    "source_files": 206
+  },
+  "production_runtime": {
+    "path": "F:\\Hackathon\\projects\\19-dynamic-graph\\build\\cholesky_runtime.exe",
+    "sha256": "912c9fec8ac5e1793d6217afc5c3b09f49a8b8e536f273eeaef9b94a69072eba"
+  },
+  "production_core": {
+    "path": "F:\\Hackathon\\projects\\19-dynamic-graph\\build\\libcholesky_core.a",
+    "sha256": "e7c9dd7fa08ecff90318762fd3bef95e816f7918e85e9ec2274bebca21c3b3c6"
+  },
+  "source_integrity_all206": true,
+  "full_test_object_PE_bridge": true,
+  "reports": [
+    {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\20261014-exploration\\full-test\\report.json",
+      "sha256": "f06deb63317b25b0fe96ff3be8d7bb16d681433ba96f1e1c991225fb4803ef4b"
+    },
+    {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\20261014-exploration\\full-test\\supplement.json",
+      "sha256": "16b572fb14f528b296e092522d1e463e6cdb24ef5763b081c71c494eefa6d04a"
+    },
+    {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\20261014-exploration\\structured-test\\report.json",
+      "sha256": "cced9ed7f1aa5cc2ba53a5b0aa4708ece709c5622e263cccf2aea5dba4698fee"
+    },
+    {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\20261014-exploration\\encoding-test\\report.json",
+      "sha256": "e1f5499fd337c06ec49b9b84bc927cf44e0b50de92148448a99ea40a8f48be81"
+    },
+    {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\20261014-exploration\\scale-test\\report.json",
+      "sha256": "700f651a17556f05f5fefac106e3e09a5f240489577899e3360a87c10f789be1"
+    },
+    {
+      "path": "G:\\Hackathon-stage2-artifacts\\project19\\20261014-exploration\\industry-benchmark\\report.json",
+      "sha256": "687f8bca61ab060d20d35468d2f5eb602e8551855ecb6f5179db9aa02c3eebc1"
+    }
+  ],
+  "limits": [
+    "No official hidden package/helper/CPU score",
+    "Not arbitrary C",
+    "No ARM or other OS validation",
+    "Three-pair shared-host library samples; all outliers retained",
+    "Library numerical error is factor-to-C comparison, not a new residual/conditioning campaign",
+    "Optional rejected or disabled research branches are not current production capabilities"
+  ]
+}

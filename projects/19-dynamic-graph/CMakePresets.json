@@ -1,0 +1,83 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "local-mingw",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_C_COMPILER": "E:/mingw64/bin/gcc.exe",
+        "CMAKE_CXX_COMPILER": "E:/mingw64/bin/g++.exe",
+        "BUILD_TESTING": "ON",
+        "CHOL_PREPARED_VM": "ON",
+        "CHOL_THREADED_VM": "ON",
+        "CHOL_THREADED_VM_FORCE_PORTABLE": "OFF",
+        "CHOL_UPDATE_WIDTH": "16",
+        "CHOL_AVX_ROW_GROUP": "0",
+        "CHOL_BUILD_X86_SIMD": "ON",
+        "CHOL_VECTOR_PANEL": "ON",
+        "CHOL_VECTOR_SCANS": "ON",
+        "CHOL_FUSED_FINITE_BAND_SCAN": "ON",
+        "CHOL_SELECTIVE_NOTIFY": "ON",
+        "CHOL_BOUNDED_NOTIFY": "OFF",
+        "CHOL_UNLOCK_NOTIFY": "OFF",
+        "CHOL_PACK_INITIALIZATION": "ZERO",
+        "CHOL_COLUMN_WORKSPACE": "ON",
+        "CHOL_ROW_TILE_WORKSPACE": "ON",
+        "CHOL_TRANSPOSE_EXPORT": "ON",
+        "CHOL_REUSE_INPUT_BUFFER": "ON",
+        "CHOL_REUSE_STRUCTURED_INPUT": "ON",
+        "CHOL_LAZY_TILE_GRAPH": "OFF",
+        "CHOL_LAZY_CACHED_WAIT": "OFF",
+        "CHOL_SERIAL_TILE_WALK": "OFF",
+        "CHOL_REUSE_WORKERS": "ON",
+        "CHOL_TILE_FIRST_TOUCH": "ON",
+        "CHOL_CACHE_NATIVE_WORKSPACE": "ON",
+        "CHOL_PROVED_OPERAND_STACK": "ON"
+      }
+    },
+    {
+      "name": "memory-mingw",
+      "inherits": "local-mingw",
+      "binaryDir": "${sourceDir}/build-memory",
+      "cacheVariables": {
+        "CHOL_PREPARED_VM": "OFF",
+        "CHOL_REUSE_STRUCTURED_INPUT": "OFF",
+        "CHOL_FUSED_FINITE_BAND_SCAN": "OFF",
+        "CHOL_THREADED_VM": "OFF",
+        "CHOL_COLUMN_WORKSPACE": "ON",
+        "CHOL_ROW_TILE_WORKSPACE": "ON",
+        "CHOL_TRANSPOSE_EXPORT": "ON",
+        "CHOL_REUSE_INPUT_BUFFER": "ON",
+        "CHOL_PROVED_OPERAND_STACK": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "local-mingw",
+      "configurePreset": "local-mingw"
+    },
+    {
+      "name": "memory-mingw",
+      "configurePreset": "memory-mingw"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "local-mingw",
+      "configurePreset": "local-mingw",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "memory-mingw",
+      "configurePreset": "memory-mingw",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

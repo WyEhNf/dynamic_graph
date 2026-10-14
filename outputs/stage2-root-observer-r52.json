@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791728063.440549,
+  "completion_sha256": "4028600e19d265f3e22e44ea97851f7aa189fb7e23ec228c581be799289b6caf",
+  "plan_sha256": "411eec43c36bb5187351e4bce45a2e0bf2f398fe301d5211183ab276a184bb67",
+  "unchanged_default_exe_sha256": "c491f69d9ac2b39fa336afc5ef17b300bbdf84ab9021a482b3d404f91191b607",
+  "source_roundtrip_insertions": 14,
+  "original_cases": 12,
+  "physical_snapshots": 138,
+  "actual_original_prefix_replays": 252,
+  "full_recovery_plans": 4,
+  "whole_bigint_gold": 8,
+  "valid_gold": 4,
+  "all_cut_terminal_causes": {
+    "no_progress": 8,
+    "budget_exhausted": 3,
+    "complete_graph": 1
+  },
+  "failed_whole_case_terminal_causes": {
+    "no_progress": 5,
+    "budget_exhausted": 3
+  },
+  "case_evidence": [
+    {
+      "name": "projection_retention_seed203451023",
+      "helper_work": 13888844,
+      "whole_valid": false
+    },
+    {
+      "name": "projection_retention_seed203451018",
+      "helper_work": 115612,
+      "whole_valid": false
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "helper_work": 419195,
+      "whole_valid": false
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "helper_work": 15968139,
+      "whole_valid": false
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "helper_work": 2000000,
+      "whole_valid": false
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "helper_work": 162593,
+      "whole_valid": false
+    },
+    {
+      "name": "projection_retention_seed203451016",
+      "helper_work": 15996808,
+      "whole_valid": false
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "helper_work": 2000000,
+      "whole_valid": false
+    },
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "helper_work": 1155913,
+      "whole_valid": true
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "helper_work": 1231870,
+      "whole_valid": true
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "helper_work": 1306736,
+      "whole_valid": true
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "helper_work": 471850,
+      "whole_valid": true
+    }
+  ],
+  "scope": "Every saved coherent prefix replayed with original BEGIN/END memory, topology and exact done set; direct users/degree/global and cut ready-fit sets/held external and sink outputs checked. Pure observation round-trip and unchanged plans/work/default verified. Five no-fit and three budget exits are heuristic causes, not graph infeasibility or performance evidence."
+}

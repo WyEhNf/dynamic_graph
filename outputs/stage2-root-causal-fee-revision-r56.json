@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791781709.3668337,
+  "revision_freeze_sha256": "aee815efa4053eb9a976c8235aa75fa1102701d0ebb85368db89f15b50463a69",
+  "first_pair_fields": 75,
+  "complete_scan": 127,
+  "paid_rows": 64,
+  "preserved_initial_error": true,
+  "scope": "Original record-order FIFO Graph/context, LIFO ancestor/descendant scans, all detector charge-before-action paths and independent bigint physical generator reviewed. First hand table omitted unfinished target visit; source and independent Ledger already include it.",
+  "authorization": "Exactly one independent original-DAG/bigint/literal Ledger 160-reference generation; no candidate/compiler/solver. Keep old error and freeze immutable. New gold naturally75/127, not fitted to candidate; root review materialized full gold before compiler."
+}

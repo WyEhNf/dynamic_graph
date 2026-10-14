@@ -1,0 +1,427 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791728769.9811203,
+  "plan_sha256": "d829acfaac89531685d8eeb97af59b58dfe59ee2661f5591e89760a75e8bd2a0",
+  "report_sha256": "a82d644cf91402a95d931e873823e5f6238d50b5858074f2d9b4fc3c40c48e92",
+  "final_freeze_sha256": "751243f746b4d5a9f9d93b85bae04715cb5fb5157e79cf2de0e8974474c76764",
+  "binary_sha256": "b9a65378905b9d4355466a530aa7f5cc7f0b90051389cf5a3d5922ddcce4c923",
+  "actual_session": 94396,
+  "actual_exit_code": 0,
+  "actual_whole_C_outputs": 114,
+  "paired_comparisons": 57,
+  "VM_pairs": 45,
+  "native_pairs": 12,
+  "negative_pairs": 38,
+  "VM_negative_pairs": 34,
+  "native_negative_pairs": 4,
+  "complete_output_bytes_compared": 494057592,
+  "summaries": [
+    {
+      "source": "changed-arithmetic",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        0.9471289531295334,
+        1.008479709267111,
+        1.0199290660361424
+      ],
+      "paired_wall_ratios": [
+        0.4429872627912523,
+        1.0517153724627804,
+        1.019696291574173
+      ],
+      "median_paired_compute_ratio": 1.008479709267111,
+      "median_paired_wall_ratio": 1.019696291574173,
+      "fixed_median_compute_ms": 71.052,
+      "proved_median_compute_ms": 71.817,
+      "median_proof_ms": 0.218,
+      "wins": 1,
+      "negative": 2
+    },
+    {
+      "source": "changed-SSA",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        0.912258164973335,
+        0.970566222597194,
+        1.018165438605927
+      ],
+      "paired_wall_ratios": [
+        0.9712479854915105,
+        1.0302135701872468,
+        0.9644607309902938
+      ],
+      "median_paired_compute_ratio": 0.970566222597194,
+      "median_paired_wall_ratio": 0.9712479854915105,
+      "fixed_median_compute_ms": 74.372,
+      "proved_median_compute_ms": 71.324,
+      "median_proof_ms": 0.211,
+      "wins": 2,
+      "negative": 1
+    },
+    {
+      "source": "generic-if-while",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.0409763313609468,
+        1.018809980806142,
+        1.0831006053155523
+      ],
+      "paired_wall_ratios": [
+        1.0035338714751052,
+        1.0085010795245524,
+        1.0136645898146783
+      ],
+      "median_paired_compute_ratio": 1.0409763313609468,
+      "median_paired_wall_ratio": 1.0085010795245524,
+      "fixed_median_compute_ms": 74.837,
+      "proved_median_compute_ms": 77.407,
+      "median_proof_ms": 2.127,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "int-arithmetic",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.1441223627618151,
+        1.1263435914956241,
+        1.114214988392525
+      ],
+      "paired_wall_ratios": [
+        0.9618378192644413,
+        0.9817103186049572,
+        1.042495359347881
+      ],
+      "median_paired_compute_ratio": 1.1263435914956241,
+      "median_paired_wall_ratio": 0.9817103186049572,
+      "fixed_median_compute_ms": 77.967,
+      "proved_median_compute_ms": 86.872,
+      "median_proof_ms": 6.535,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "int-conversion",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.0611228433677333,
+        1.0272179062313251,
+        1.1163534039995628
+      ],
+      "paired_wall_ratios": [
+        1.1123470580129327,
+        0.984984390274253,
+        1.0836599607187831
+      ],
+      "median_paired_compute_ratio": 1.0611228433677333,
+      "median_paired_wall_ratio": 1.0836599607187831,
+      "fixed_median_compute_ms": 73.628,
+      "proved_median_compute_ms": 79.893,
+      "median_proof_ms": 4.565,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "deep-SSA40",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.0595676499851403,
+        1.0215208034433285,
+        1.040103693792708
+      ],
+      "paired_wall_ratios": [
+        0.992912795701963,
+        0.9694727434074157,
+        0.999450534754569
+      ],
+      "median_paired_compute_ratio": 1.040103693792708,
+      "median_paired_wall_ratio": 0.992912795701963,
+      "fixed_median_compute_ms": 80.852,
+      "proved_median_compute_ms": 82.592,
+      "median_proof_ms": 4.668,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "nested-helpers",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.1132926202842304,
+        1.056056527590848,
+        1.0528328212833893
+      ],
+      "paired_wall_ratios": [
+        1.1389684372158708,
+        1.01106505744622,
+        1.0420655602795919
+      ],
+      "median_paired_compute_ratio": 1.056056527590848,
+      "median_paired_wall_ratio": 1.0420655602795919,
+      "fixed_median_compute_ms": 74.3,
+      "proved_median_compute_ms": 78.465,
+      "median_proof_ms": 4.244,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "SSA-conditional",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.1129758656317057,
+        1.0487933383021923,
+        1.0704193849021435
+      ],
+      "paired_wall_ratios": [
+        1.0103672661587515,
+        0.9778873449069068,
+        1.1395312285508883
+      ],
+      "median_paired_compute_ratio": 1.0704193849021435,
+      "median_paired_wall_ratio": 1.0103672661587515,
+      "fixed_median_compute_ms": 77.818,
+      "proved_median_compute_ms": 84.023,
+      "median_proof_ms": 4.554,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "unused-double",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        0.8874399220246698,
+        1.03508527759502,
+        1.0367456976142995
+      ],
+      "paired_wall_ratios": [
+        0.908608460041084,
+        1.0147860125683976,
+        0.9275271344296904
+      ],
+      "median_paired_compute_ratio": 1.03508527759502,
+      "median_paired_wall_ratio": 0.9275271344296904,
+      "fixed_median_compute_ms": 81.234,
+      "proved_median_compute_ms": 81.809,
+      "median_proof_ms": 0.221,
+      "wins": 1,
+      "negative": 2
+    },
+    {
+      "source": "fresh-fma-control",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.0022606382978723,
+        0.9333611711534683,
+        0.9900002614310737
+      ],
+      "paired_wall_ratios": [
+        0.9770200642012286,
+        0.906039381388048,
+        1.030959480779345
+      ],
+      "median_paired_compute_ratio": 0.9900002614310737,
+      "median_paired_wall_ratio": 0.9770200642012286,
+      "fixed_median_compute_ms": 76.502,
+      "proved_median_compute_ms": 75.737,
+      "median_proof_ms": 0.827,
+      "wins": 2,
+      "negative": 1
+    },
+    {
+      "source": "fresh-dependent-branches",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.0285452236489345,
+        0.9540237372487198,
+        1.0113573712647481
+      ],
+      "paired_wall_ratios": [
+        1.0514991150426054,
+        0.8792609917886276,
+        1.0228510757901024
+      ],
+      "median_paired_compute_ratio": 1.0113573712647481,
+      "median_paired_wall_ratio": 1.0228510757901024,
+      "fixed_median_compute_ms": 72.552,
+      "proved_median_compute_ms": 73.228,
+      "median_proof_ms": 1.382,
+      "wins": 1,
+      "negative": 2
+    },
+    {
+      "source": "original-fp-builtin",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        0.9954115730324625,
+        0.9978242695762148,
+        1.1203494014881916
+      ],
+      "paired_wall_ratios": [
+        0.9907340726881376,
+        1.0303640637530673,
+        1.0987168162728174
+      ],
+      "median_paired_compute_ratio": 0.9978242695762148,
+      "median_paired_wall_ratio": 1.0303640637530673,
+      "fixed_median_compute_ms": 90.227,
+      "proved_median_compute_ms": 93.099,
+      "median_proof_ms": 2.795,
+      "wins": 2,
+      "negative": 1
+    },
+    {
+      "source": "fresh-carry-fma-plain",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        0.9837189374464439,
+        0.9985343309338913,
+        1.05822324892906
+      ],
+      "paired_wall_ratios": [
+        0.9017664164475989,
+        1.0040596091245704,
+        1.0378268814378897
+      ],
+      "median_paired_compute_ratio": 0.9985343309338913,
+      "median_paired_wall_ratio": 1.0040596091245704,
+      "fixed_median_compute_ms": 84.603,
+      "proved_median_compute_ms": 84.479,
+      "median_proof_ms": 0.773,
+      "wins": 2,
+      "negative": 1
+    },
+    {
+      "source": "heldout-stride2",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        1.4189189189189189,
+        1.8429752066115703,
+        1.821138211382114
+      ],
+      "paired_wall_ratios": [
+        0.9792534369227593,
+        0.9228441819041487,
+        0.9281893934375168
+      ],
+      "median_paired_compute_ratio": 1.821138211382114,
+      "median_paired_wall_ratio": 0.9281893934375168,
+      "fixed_median_compute_ms": 0.123,
+      "proved_median_compute_ms": 0.223,
+      "median_proof_ms": 0.111,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "heldout-disjoint",
+      "kind": "vm",
+      "paired_compute_ratios": [
+        2.484536082474227,
+        2.269230769230769,
+        2.0826446280991737
+      ],
+      "paired_wall_ratios": [
+        1.0568153286415929,
+        0.9689523115926307,
+        1.0378295134919322
+      ],
+      "median_paired_compute_ratio": 2.269230769230769,
+      "median_paired_wall_ratio": 1.0378295134919322,
+      "fixed_median_compute_ms": 0.104,
+      "proved_median_compute_ms": 0.241,
+      "median_proof_ms": 0.144,
+      "wins": 0,
+      "negative": 3
+    },
+    {
+      "source": "control-scalar-auto-dense",
+      "kind": "native",
+      "paired_compute_ratios": [
+        1.691345151199166,
+        1.136409227683049,
+        0.6979228486646883
+      ],
+      "paired_wall_ratios": [
+        0.9565981897442174,
+        1.1012210622811753,
+        1.097787554013937
+      ],
+      "median_paired_compute_ratio": 1.136409227683049,
+      "median_paired_wall_ratio": 1.097787554013937,
+      "fixed_median_compute_ms": 0.997,
+      "proved_median_compute_ms": 1.176,
+      "median_proof_ms": 0,
+      "wins": 1,
+      "negative": 2
+    },
+    {
+      "source": "control-scalar-auto-diagonal",
+      "kind": "native",
+      "paired_compute_ratios": [
+        0.8823529411764705,
+        0.8658536585365852,
+        0.9655172413793105
+      ],
+      "paired_wall_ratios": [
+        0.9706509528802332,
+        1.0099906764009934,
+        0.9620353379434944
+      ],
+      "median_paired_compute_ratio": 0.8823529411764705,
+      "median_paired_wall_ratio": 0.9706509528802332,
+      "fixed_median_compute_ms": 0.085,
+      "proved_median_compute_ms": 0.075,
+      "median_proof_ms": 0,
+      "wins": 3,
+      "negative": 0
+    },
+    {
+      "source": "control-page-tiled-dense",
+      "kind": "native",
+      "paired_compute_ratios": [
+        1.1498452012383902,
+        0.9135206321334504,
+        0.6744554455445545
+      ],
+      "paired_wall_ratios": [
+        0.796830273590984,
+        0.7432169124064006,
+        0.94641879208906
+      ],
+      "median_paired_compute_ratio": 0.9135206321334504,
+      "median_paired_wall_ratio": 0.796830273590984,
+      "fixed_median_compute_ms": 2.278,
+      "proved_median_compute_ms": 1.857,
+      "median_proof_ms": 0,
+      "wins": 2,
+      "negative": 1
+    },
+    {
+      "source": "control-blocked-auto-dense",
+      "kind": "native",
+      "paired_compute_ratios": [
+        0.9895543175487466,
+        0.8647568287808128,
+        1.640117994100295
+      ],
+      "paired_wall_ratios": [
+        0.7285721808325362,
+        1.0654184822856714,
+        1.0398707005642633
+      ],
+      "median_paired_compute_ratio": 0.9895543175487466,
+      "median_paired_wall_ratio": 1.0398707005642633,
+      "fixed_median_compute_ms": 1.501,
+      "proved_median_compute_ms": 1.421,
+      "median_proof_ms": 0,
+      "wins": 2,
+      "negative": 1
+    }
+  ],
+  "host_busy_percent_range": [
+    4.45859872611465,
+    38.541666666666664
+  ],
+  "host_free_ram_min_bytes": 5222879232,
+  "ordinary_default_promoted": false,
+  "decision": "Retain fixed ordinary default and optional proved isolated policy. Proof safely expands demonstrated large PROGRAM budget but adds measured computation, particularly short tasks; unknown/nested coverage still incomplete.",
+  "scope": "All114 whole outputs independently streamed against frozen actual originalC; every raw metric/flag/proof/native bypass contract, 57 alternating compute/wall pairs, all38 negatives and RAM/disk gates recomputed. Same binary policy cost, not kernel acceleration. Native proof-zero timing fluctuates and host is not idle; no official/generalC/default promotion claim."
+}

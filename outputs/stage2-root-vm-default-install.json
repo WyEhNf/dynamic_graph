@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791715735.436396,
+  "actual_installed_sha256": "99a87d135378406a15efd930d58941291683ca799f91bd5dcc0ca77ceadef448",
+  "immutable_source_files": 136,
+  "installed_ctest": 8,
+  "actual_complete_C_outputs": 147,
+  "scopes": {
+    "generic": 63,
+    "wire": 60,
+    "smallest": 24
+  },
+  "error_contracts": 7,
+  "default_budget_passed": false,
+  "maximum_explicit_budget_passed": true,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/ordinary-install/release-manifest.json": "d99a0e57b27111eaf13b9d04509b8907d4ac8eb511cf81d95b34df1ce3461a69",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/ordinary-install/verification-report.json": "47c9125896568ab16f331cc8197dbbe5d32f851891efa0d65c851d0ed61e0df3"
+  },
+  "scope": "Actual installed99a8 binary and immutable archive/source/Release flags checked;147 actual completeC files (63 generic,60 wire,24 smallest),8 installed CTest and7 exact errors checked. Separate isolated378 files and GNU/portable12CTest, explicit1e10 N10000 resource proof remain frozen. Default1e9 generic N10000 rejection retained. Old4f73 complete rollback and memory7da06 preserved. No new performance inference."
+}

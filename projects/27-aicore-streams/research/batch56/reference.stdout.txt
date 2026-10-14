@@ -1,0 +1,1 @@
+{"status": "PRE_CANDIDATE_ONLY", "count": 160, "families": {"A": 48, "B": 32, "C": 32, "D": 32, "F": 16}, "qualified_pairs": 96, "exhausted": 12, "whole_fixed_legal": 144, "source_sha256": "3a4f184de2759fdcd1cbfd899c5f8029e2f7f2691743ec214a895123db19c21a", "generator_sha256": "495c6d82a877dd111163f2f636ffac657802e08879041791262d65669414f800"}

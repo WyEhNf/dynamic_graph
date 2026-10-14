@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "graphs": 40,
+  "topological_orders": 3886,
+  "future_prefix_node_checks": 99781,
+  "seed_base": 20321011,
+  "source_sha256": "c2bb74320aca7271276a6006b6e3b78ccd3a4266941cfe92c8c0d2928adf473c",
+  "scope": "Necessary bound <= actual future Compute allocation for every prefix and future node of every topological order; zero output/multiple sinks/shared and transitive users included"
+}

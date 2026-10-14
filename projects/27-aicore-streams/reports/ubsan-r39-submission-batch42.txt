@@ -1,0 +1,2 @@
+research/batch42\../batch39/solution.cpp:179:74: runtime error: signed integer overflow: 6000000000000000000 + 6000000000000000000 cannot be represented in type 'int64_t' (aka 'long long')
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior research/batch42\../batch39/solution.cpp:179:74 

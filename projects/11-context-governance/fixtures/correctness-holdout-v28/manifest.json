@@ -1,0 +1,32 @@
+{
+  "version": "correctness-holdout-v28",
+  "case_ids": [
+    "wildcard_match",
+    "range_updates"
+  ],
+  "origin": "Two self-created algorithmic tasks first frozen after v27 contracts and before any model generation on these tasks",
+  "scope": "New finite task coverage only, not arbitrary-input proof or official score",
+  "evaluation_policy": "Tests/oracle not used for prompt, repair or candidate selection; once evaluation outcomes influence changes this set becomes DEV",
+  "script_sha256": "123f75c83fd83cff7c1f2c22b844534718ea2e0b9450c6295e5f7a606fd57d8c",
+  "prepared_unix": 1791695030.322791,
+  "files_sha256": {
+    "metadata/range_updates.json": "10ee8398975139bc354d39c6aa3ab95b9a050d7252b41a399c200a4f727cc83a",
+    "metadata/wildcard_match.json": "45f649137e47389356ed5d2ec66edef58bfd8aa762e18ff3b39f0535af86aab1",
+    "oracle/range_updates.py": "c7c676ccd7e75f797dadace86250942544a36ce33b04a73209a85e7dd8e9fb7c",
+    "oracle/wildcard_match.py": "44d7fecd6710fd47727e678c8e94e0dd318f50d508477a62ce581766cc5a85ca",
+    "public_contracts/range_updates.py": "a722f7db15f5c87a26d42c54a223c9a347acbfbef241f8eade08ff85066e19a4",
+    "public_contracts/wildcard_match.py": "0388537324c2ec590fa97337144bfe252f54b9cc249b37523ccfb723b30b12de",
+    "repo_bundles/range_updates/solution.py": "345cc52fc57fe588fdab09fca5793d5b444b9ba75a6a6b0550cc284517936f62",
+    "repo_bundles/range_updates/unrelated_0.py": "f9bbefa4883c7b5fb4ad39e9852d766d66529ba8650b81bcbd1c00970e96c9d6",
+    "repo_bundles/range_updates/unrelated_1.py": "d9b576f1ea220f644f5a160bb4050259a201d3aedfa48844c058b7f05c5f22f6",
+    "repo_bundles/range_updates/unrelated_2.py": "c43fd0ac593665ab4dee469efe586899a7562a49f90b18ed1be38914cffbd724",
+    "repo_bundles/wildcard_match/solution.py": "09c0a33cc0f0c7750ec9e25db877edb4facc8eb4961209130453ff07a3a34e4b",
+    "repo_bundles/wildcard_match/unrelated_0.py": "f9bbefa4883c7b5fb4ad39e9852d766d66529ba8650b81bcbd1c00970e96c9d6",
+    "repo_bundles/wildcard_match/unrelated_1.py": "d9b576f1ea220f644f5a160bb4050259a201d3aedfa48844c058b7f05c5f22f6",
+    "repo_bundles/wildcard_match/unrelated_2.py": "c43fd0ac593665ab4dee469efe586899a7562a49f90b18ed1be38914cffbd724",
+    "spec/range_updates.md": "194b6c304c6c5822a5a38afbf0846d00e1ddb8ca9fad50e30838c3f503a73036",
+    "spec/wildcard_match.md": "c786de30ac0185a4e6f2ad32207504f5f173e384b711e89cdc445e0eccc24f36",
+    "tests/range_updates.py": "197d4907150c6a9737e10c3aa4f850fdaf278f1947bf58b37fb4a1f4a1dcca0b",
+    "tests/wildcard_match.py": "1b80085c77a2f8a3ef65cd2fa58b795f4c9a290af1990fe6c76c0abc61b10c5e"
+  }
+}

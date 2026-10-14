@@ -1,0 +1,489 @@
+{
+  "suite": "data\\irregular-consumers.json",
+  "suite_sha256": "e599343645da0a960b412bab4b278aa9ee13b134f58a4e8f7495350b167f716d",
+  "baseline_exe_sha256": "4b8f2d70616fe7206539a244ba3132fb8bf0d8c2e9758dbbc3f77b9f8b05aa71",
+  "current_exe_sha256": "09c503c51f5d9d016f493100d1f161b4d769de7359f3e1f4c4de0368cdd28000",
+  "current_solution_sha256": "6921067fb0f8c567d6edb49255207f87db65d3e19a8e7ba0891ff17b442b7d5f",
+  "baseline_solution_sha256": "9e4a633813a59b088436e1c8a74257fd703edd0dcd89cc3803d1687c7d3276bd",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-projection-batch16-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 3.000661799975205,
+        "peak_working_set_bytes": 69959680
+      },
+      "after": {
+        "report": "reports\\paired-projection-batch16-1-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.8746178000001237,
+        "peak_working_set_bytes": 69337088
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 11,
+          "failed": 13
+        },
+        "after": {
+          "total": 24,
+          "passed": 12,
+          "failed": 12
+        },
+        "common_cases": 11,
+        "common_solve_us_before": 240486,
+        "common_solve_us_after": 227537,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_global_k8_ret1_seed20261838"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 37,
+        "scales": [
+          {
+            "n": 42,
+            "median_us": 3409,
+            "max_us": 3409
+          },
+          {
+            "n": 43,
+            "median_us": 3548,
+            "max_us": 3548
+          },
+          {
+            "n": 46,
+            "median_us": 11057,
+            "max_us": 11057
+          },
+          {
+            "n": 48,
+            "median_us": 15600,
+            "max_us": 15600
+          },
+          {
+            "n": 49,
+            "median_us": 3752,
+            "max_us": 3752
+          },
+          {
+            "n": 51,
+            "median_us": 3043,
+            "max_us": 3043
+          },
+          {
+            "n": 128,
+            "median_us": 53845,
+            "max_us": 53845
+          },
+          {
+            "n": 131,
+            "median_us": 61407,
+            "max_us": 61407
+          },
+          {
+            "n": 136,
+            "median_us": 16668,
+            "max_us": 16668
+          },
+          {
+            "n": 137,
+            "median_us": 23044.5,
+            "max_us": 33250
+          },
+          {
+            "n": 139,
+            "median_us": 12655,
+            "max_us": 12655
+          },
+          {
+            "n": 511,
+            "median_us": 163474,
+            "max_us": 163474
+          },
+          {
+            "n": 512,
+            "median_us": 284534,
+            "max_us": 284534
+          },
+          {
+            "n": 514,
+            "median_us": 48795,
+            "max_us": 48795
+          },
+          {
+            "n": 524,
+            "median_us": 48556,
+            "max_us": 48556
+          },
+          {
+            "n": 526,
+            "median_us": 38160,
+            "max_us": 38160
+          },
+          {
+            "n": 532,
+            "median_us": 24201,
+            "max_us": 24201
+          },
+          {
+            "n": 2069,
+            "median_us": 58672,
+            "max_us": 58672
+          },
+          {
+            "n": 2077,
+            "median_us": 228857,
+            "max_us": 228857
+          },
+          {
+            "n": 2085,
+            "median_us": 261139,
+            "max_us": 261139
+          },
+          {
+            "n": 2095,
+            "median_us": 895029,
+            "max_us": 895029
+          },
+          {
+            "n": 2125,
+            "median_us": 98748,
+            "max_us": 98748
+          },
+          {
+            "n": 2139,
+            "median_us": 140225,
+            "max_us": 140225
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-projection-batch16-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.5895113000296988,
+        "peak_working_set_bytes": 69496832
+      },
+      "after": {
+        "report": "reports\\paired-projection-batch16-2-after.json",
+        "exit_code": 1,
+        "wall_seconds": 3.3774251000140794,
+        "peak_working_set_bytes": 69230592
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 11,
+          "failed": 13
+        },
+        "after": {
+          "total": 24,
+          "passed": 12,
+          "failed": 12
+        },
+        "common_cases": 11,
+        "common_solve_us_before": 239581,
+        "common_solve_us_after": 221182,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_global_k8_ret1_seed20261838"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 37,
+        "scales": [
+          {
+            "n": 42,
+            "median_us": 3375,
+            "max_us": 3375
+          },
+          {
+            "n": 43,
+            "median_us": 3849,
+            "max_us": 3849
+          },
+          {
+            "n": 46,
+            "median_us": 11115,
+            "max_us": 11115
+          },
+          {
+            "n": 48,
+            "median_us": 16070,
+            "max_us": 16070
+          },
+          {
+            "n": 49,
+            "median_us": 3697,
+            "max_us": 3697
+          },
+          {
+            "n": 51,
+            "median_us": 3450,
+            "max_us": 3450
+          },
+          {
+            "n": 128,
+            "median_us": 55866,
+            "max_us": 55866
+          },
+          {
+            "n": 131,
+            "median_us": 63002,
+            "max_us": 63002
+          },
+          {
+            "n": 136,
+            "median_us": 17510,
+            "max_us": 17510
+          },
+          {
+            "n": 137,
+            "median_us": 23047.0,
+            "max_us": 32869
+          },
+          {
+            "n": 139,
+            "median_us": 12709,
+            "max_us": 12709
+          },
+          {
+            "n": 511,
+            "median_us": 171930,
+            "max_us": 171930
+          },
+          {
+            "n": 512,
+            "median_us": 289355,
+            "max_us": 289355
+          },
+          {
+            "n": 514,
+            "median_us": 47978,
+            "max_us": 47978
+          },
+          {
+            "n": 524,
+            "median_us": 49881,
+            "max_us": 49881
+          },
+          {
+            "n": 526,
+            "median_us": 38777,
+            "max_us": 38777
+          },
+          {
+            "n": 532,
+            "median_us": 24684,
+            "max_us": 24684
+          },
+          {
+            "n": 2069,
+            "median_us": 49438,
+            "max_us": 49438
+          },
+          {
+            "n": 2077,
+            "median_us": 213161,
+            "max_us": 213161
+          },
+          {
+            "n": 2085,
+            "median_us": 235528,
+            "max_us": 235528
+          },
+          {
+            "n": 2095,
+            "median_us": 593596,
+            "max_us": 593596
+          },
+          {
+            "n": 2125,
+            "median_us": 99476,
+            "max_us": 99476
+          },
+          {
+            "n": 2139,
+            "median_us": 143178,
+            "max_us": 143178
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-projection-batch16-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 2.3961718999780715,
+        "peak_working_set_bytes": 69304320
+      },
+      "after": {
+        "report": "reports\\paired-projection-batch16-3-after.json",
+        "exit_code": 1,
+        "wall_seconds": 2.5910607000114396,
+        "peak_working_set_bytes": 69038080
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 11,
+          "failed": 13
+        },
+        "after": {
+          "total": 24,
+          "passed": 12,
+          "failed": 12
+        },
+        "common_cases": 11,
+        "common_solve_us_before": 218895,
+        "common_solve_us_after": 215415,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "irregular_consumers_global_k8_ret1_seed20261838"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 37,
+        "scales": [
+          {
+            "n": 42,
+            "median_us": 3342,
+            "max_us": 3342
+          },
+          {
+            "n": 43,
+            "median_us": 3348,
+            "max_us": 3348
+          },
+          {
+            "n": 46,
+            "median_us": 11292,
+            "max_us": 11292
+          },
+          {
+            "n": 48,
+            "median_us": 15594,
+            "max_us": 15594
+          },
+          {
+            "n": 49,
+            "median_us": 3709,
+            "max_us": 3709
+          },
+          {
+            "n": 51,
+            "median_us": 2983,
+            "max_us": 2983
+          },
+          {
+            "n": 128,
+            "median_us": 57478,
+            "max_us": 57478
+          },
+          {
+            "n": 131,
+            "median_us": 62203,
+            "max_us": 62203
+          },
+          {
+            "n": 136,
+            "median_us": 15907,
+            "max_us": 15907
+          },
+          {
+            "n": 137,
+            "median_us": 22916.5,
+            "max_us": 33072
+          },
+          {
+            "n": 139,
+            "median_us": 12561,
+            "max_us": 12561
+          },
+          {
+            "n": 511,
+            "median_us": 177787,
+            "max_us": 177787
+          },
+          {
+            "n": 512,
+            "median_us": 295910,
+            "max_us": 295910
+          },
+          {
+            "n": 514,
+            "median_us": 48018,
+            "max_us": 48018
+          },
+          {
+            "n": 524,
+            "median_us": 48131,
+            "max_us": 48131
+          },
+          {
+            "n": 526,
+            "median_us": 45582,
+            "max_us": 45582
+          },
+          {
+            "n": 532,
+            "median_us": 24126,
+            "max_us": 24126
+          },
+          {
+            "n": 2069,
+            "median_us": 49061,
+            "max_us": 49061
+          },
+          {
+            "n": 2077,
+            "median_us": 213989,
+            "max_us": 213989
+          },
+          {
+            "n": 2085,
+            "median_us": 230303,
+            "max_us": 230303
+          },
+          {
+            "n": 2095,
+            "median_us": 595559,
+            "max_us": 595559
+          },
+          {
+            "n": 2125,
+            "median_us": 98481,
+            "max_us": 98481
+          },
+          {
+            "n": 2139,
+            "median_us": 142968,
+            "max_us": 142968
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch15\\solution.cpp",
+  "median_common_solve_us_before": 239581,
+  "median_common_solve_us_after": 221182,
+  "median_wall_seconds_before": 2.5895113000296988,
+  "median_wall_seconds_after": 2.8746178000001237,
+  "maximum_cli_working_set_bytes": 69337088,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": true
+}

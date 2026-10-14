@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791713838.5611005,
+  "immutable_snapshot_files": 138,
+  "ctest": 11,
+  "actual_C_files": 378,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/small-contract-manifest.json": "ce17168a3347ec8fbc645b42857183fd12cf9d77a22a26fb7ca9d666f4d2b0b7",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/correctness/report.json": "cd113e8c70eb13caf277c031c987c1983dceb965accb344db77bf4fd15613f71",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/ctest.log": "3f606fde22b64731c899428bc6ab6a12dd91f759053be910a4d78870b8d28224",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/threaded-initial.asm": "520dfeec52c7b3a7b9ab1d74c6eae188f48824d48a56216fefab0991651eb639",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/performance/run-plan.json": "3dc6440370ee8ed18f4bd8c68690e71f5a25e0ff01718c125904da2dea3d2ec6",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/performance/report.json": "ffad9e7126e737b6fa5133b4f0209a593a45d26e018da8b2fdf41e64cb63b3ee",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/performance/summary-audit.json": "85a9aefa15c290c2d92d440cae24306f97d3859d7b5867e559a6556370bfd4d4",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/acceptance-manifest.json": "94ec0bc6f0d4f3092602ec79ab1b35eed73355ffd5c9254f4b30f4c553dc43cb",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/final-manifest.json": "5d7c4cab400ae1d26f4a205d637c59f59deab0c17e7d268fb8030fa348babfa2"
+  },
+  "scope": "Immutable phase3 source/producers/complete C/performance/CTest manifests inspected after stage4 source edits. Root separately reran934/404/480/GNU/portable/UBSan contracts and compared actual378 C files/130 measured C files. Phase3 measured candidate remains isolated; stage4 default and N10000 require their own actual gates."
+}

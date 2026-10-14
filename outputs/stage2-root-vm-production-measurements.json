@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791717556.3810358,
+  "performance_records": 130,
+  "paired_comparisons": 65,
+  "actual_old_sha256": "4f73ceaae9e5b5ced6241d5733034d6fd7dc78fdae5c32bc3d7e65166e3d4c6c",
+  "actual_new_sha256": "99a87d135378406a15efd930d58941291683ca799f91bd5dcc0ca77ceadef448",
+  "wins": 65,
+  "negative_pairs": 0,
+  "ties": 0,
+  "summaries": [
+    {
+      "source": "changed-arithmetic",
+      "median_paired_ratio": 0.43212150355201917,
+      "median_paired_wall_ratio": 0.5968439294037473,
+      "negative_pairs": 0
+    },
+    {
+      "source": "changed-SSA",
+      "median_paired_ratio": 0.4570815114329149,
+      "median_paired_wall_ratio": 0.600788799453364,
+      "negative_pairs": 0
+    },
+    {
+      "source": "generic-if-while",
+      "median_paired_ratio": 0.3713365651774607,
+      "median_paired_wall_ratio": 0.5342473468482616,
+      "negative_pairs": 0
+    },
+    {
+      "source": "int-arithmetic",
+      "median_paired_ratio": 0.45431455264262205,
+      "median_paired_wall_ratio": 0.6115805534705805,
+      "negative_pairs": 0
+    },
+    {
+      "source": "int-conversion",
+      "median_paired_ratio": 0.2762098460141681,
+      "median_paired_wall_ratio": 0.4845575743517104,
+      "negative_pairs": 0
+    },
+    {
+      "source": "deep-SSA40",
+      "median_paired_ratio": 0.24078287088943798,
+      "median_paired_wall_ratio": 0.39871823512738114,
+      "negative_pairs": 0
+    },
+    {
+      "source": "nested-helpers",
+      "median_paired_ratio": 0.19424239718484632,
+      "median_paired_wall_ratio": 0.3373786393530149,
+      "negative_pairs": 0
+    },
+    {
+      "source": "SSA-conditional",
+      "median_paired_ratio": 0.31008329868528584,
+      "median_paired_wall_ratio": 0.5055965010633262,
+      "negative_pairs": 0
+    },
+    {
+      "source": "unused-double",
+      "median_paired_ratio": 0.44731296340969395,
+      "median_paired_wall_ratio": 0.5553194303318898,
+      "negative_pairs": 0
+    },
+    {
+      "source": "fresh-fma-control",
+      "median_paired_ratio": 0.45908271818827157,
+      "median_paired_wall_ratio": 0.6274914384626921,
+      "negative_pairs": 0
+    },
+    {
+      "source": "fresh-dependent-branches",
+      "median_paired_ratio": 0.440061993323796,
+      "median_paired_wall_ratio": 0.5504870716940082,
+      "negative_pairs": 0
+    },
+    {
+      "source": "original-fp-builtin",
+      "median_paired_ratio": 0.4696939608569979,
+      "median_paired_wall_ratio": 0.6623613127610808,
+      "negative_pairs": 0
+    },
+    {
+      "source": "fresh-carry-fma-plain",
+      "median_paired_ratio": 0.4783983509198525,
+      "median_paired_wall_ratio": 0.6280805224898646,
+      "negative_pairs": 0
+    }
+  ],
+  "host_busy_percent_range": [
+    21.813031161473088,
+    75.56818181818181
+  ],
+  "host_free_ram_min_bytes": 1014173696,
+  "working_set_peak_bytes": 7475200,
+  "commit_peak_bytes": 2248704,
+  "final_frozen_evidence_files": 5,
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/production-performance/run-plan.json": "808f6a035f036d83b9b7f48cee327a388af30cc25c2e9620e15a5da23cbde6c6",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/production-performance/report.json": "2f71109dfc15350058d98b13d5616c09ac87b001084bc2bd758a7025ffbbdd60",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/production-performance/final-manifest.json": "57d7e44e31622a9e2fbd251ff297c0254c1e26b30a5e9ba9cab1604979ff2aaa",
+    "projects/19-dynamic-graph/artifacts/stage2-vm-default-integration/production-performance/summary-audit.json": "4955dbc6584d671c4d01a8d1273604fc82341f922f54bc6bfbfd12f6f259ad28"
+  },
+  "scope": "Root checked all 130 complete real-C output files, raw stdout/stderr, original cached stream repetitions including every M/N header, immutable sources/binaries, trial ordering and all 65 ratios. Actual99a default versus old4f73 default, reused13-source local cohort, default budgets unchanged. Preparation included in compute, host background recorded. No new holdout/general-C/native/official-score claim."
+}

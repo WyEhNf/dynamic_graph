@@ -1,0 +1,13 @@
+{
+  "seed": 203451001,
+  "cases": 102,
+  "valid_cuts": 73,
+  "complete_plan_cases": 102,
+  "physically_feasible_complete_plans": 100,
+  "reference": "Independent ancestor SET closure, direct-user prefix/future set liveness; every original node once in complete fixed plan; sinks retained; wrong partialcut narrow is physically invalid, complete original ancestor cut at140 is valid",
+  "sha256": {
+    "data/release-cut-gold-batch51.json": "bf170b94394545cea0cd7f13a099135adc5e85e85540148855449a7e99b5589f",
+    "data/release-cut-fixed-gold-batch51.json": "9def7070fa911ad183cd8f4b25fb26e709404298d149b0010001facec5185d17",
+    "research/batch51/release-cut-full-plans.json": "d1a64ba15ed7f65f135d9ea0b5f5f1bb5e9eed099735fcb86180a73a8d6f7cae"
+  }
+}

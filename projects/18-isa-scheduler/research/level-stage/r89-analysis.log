@@ -1,0 +1,51 @@
+{
+  "before": "v14_auto",
+  "after": "research_portfolio",
+  "corpus_sha256": "d3220af4cab32e55c12d4e9dcd68d8d3171b916fdeb08a3a638bbee6ccc43364",
+  "case_count": 48,
+  "joint_successes": 32,
+  "status_pairs": {
+    "verified->verified": 32,
+    "budget_exhausted->budget_exhausted": 13,
+    "budget_exhausted->verified": 3
+  },
+  "quality_pairs": {
+    "same": 32
+  },
+  "before_copies_joint": 0,
+  "after_copies_joint": 0,
+  "median_speedup_joint": 1.3352696540373996,
+  "families": {
+    "skew_tree": {
+      "status_pairs": {
+        "verified->verified": 32,
+        "budget_exhausted->budget_exhausted": 13,
+        "budget_exhausted->verified": 3
+      },
+      "joint_successes": 32,
+      "before_copies": 0,
+      "after_copies": 0,
+      "median_speedup_joint": 1.3352696540373996
+    }
+  },
+  "before_metrics": {
+    "latency_all_ms": {
+      "p50": 128.46030003856868,
+      "p95": 456.8256000056863,
+      "p99": 459.7618000116199
+    },
+    "equal_weight_copy_output_success": 0.0,
+    "equal_weight_copy_original_success": 0.0,
+    "failure_rate": 0.33333333333333337
+  },
+  "after_metrics": {
+    "latency_all_ms": {
+      "p50": 43.75300003448501,
+      "p95": 484.32549997232854,
+      "p99": 527.7141999686137
+    },
+    "equal_weight_copy_output_success": 0.0,
+    "equal_weight_copy_original_success": 0.0,
+    "failure_rate": 0.27083333333333337
+  }
+}

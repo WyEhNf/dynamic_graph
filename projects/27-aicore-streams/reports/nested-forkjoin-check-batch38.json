@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "positive": 36,
+  "boundary_negative": 3,
+  "small_exhaustive_restricted_peak_equal": 12,
+  "unrestricted_small_serial_optimum": 12,
+  "source_sha256": "ba81e132ccacd18c0709774ebe76c74a08725f974448723ec588b0f92a6cae49",
+  "probe_sha256": "18d3a2a748903f44093ebf9d7a573e8a495ad52db65afe56a42666e61568ee40",
+  "note": "Contiguous-block profile optimality only; no arbitrary-interleaving/dominance claim. Actual original-edge Event simulator establishes returned peak."
+}

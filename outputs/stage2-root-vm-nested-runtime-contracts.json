@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791777100.898314,
+  "build_report_sha256": "077653d6e851a5a93861aead2df5b3f3fce00dc3a4f2c940e7c10d7546cec4d7",
+  "contracts_report_sha256": "cae99b9e1b0de385c14822a4252b5003e3ec68cf6b22fc72c66e8a652b6bd076",
+  "independent_repeats": [
+    {
+      "build": "gnu-nested",
+      "exit_code": 0,
+      "CTest": 13,
+      "exe_sha256": "419b73b5b2be7462e8313a298e573989c0f90f122b97930654a381807b85caa9",
+      "stdout_sha256": "b9fc5685e5b00cddc93326d7fd66365950cc86c2eea662df54f68a3df0fefabb",
+      "summary": {
+        "passed": true,
+        "selection_observations": 60,
+        "residual_work_auxiliary_checks": 5,
+        "fixed_boundary_executions": 15,
+        "large_shape_execution": false
+      }
+    },
+    {
+      "build": "portable-nested",
+      "exit_code": 0,
+      "CTest": 13,
+      "exe_sha256": "a4fd8104f3dac5c8644174602f1de7a04785dbd453a46cf86bbef560bc095ca0",
+      "stdout_sha256": "d8c6263a8c46e40662c26ed9f77ec7a1e2a1d7e2fb6e766136cffc601a4fc384",
+      "summary": {
+        "passed": true,
+        "selection_observations": 60,
+        "residual_work_auxiliary_checks": 5,
+        "fixed_boundary_executions": 15,
+        "large_shape_execution": false
+      }
+    },
+    {
+      "build": "proved-only-compat",
+      "exit_code": 0,
+      "CTest": 12,
+      "exe_sha256": "aa59f9460679f03f7bc91887f6953a44c6f2cb740fc326852eb840c6fd5cec56",
+      "stdout_sha256": "013fef3d0e68f305ce7bed2f6fba9149c93d531b8364a45c032d9d75623ceb95",
+      "summary": {
+        "passed": true,
+        "selection_observations": 60,
+        "residual_work_auxiliary_checks": 5,
+        "fixed_boundary_executions": 15,
+        "large_shape_execution": false
+      }
+    },
+    {
+      "build": "disabled",
+      "exit_code": 0,
+      "CTest": 10,
+      "exe_sha256": "a2a3f6509f66cabc38dcd73850e324268562a2c665e85ccba164b1261da3d834",
+      "stdout_sha256": "a64f5e050f909e182dff387819994084f8a9c6bf7c76df6c68e8e8e4a4598bf3",
+      "summary": {
+        "passed": true,
+        "selection_observations": 10,
+        "residual_work_auxiliary_checks": 0,
+        "fixed_boundary_executions": 15,
+        "large_shape_execution": false
+      }
+    }
+  ],
+  "selector_observations": 190,
+  "residual_work_checks": 15,
+  "fixed_boundary_executions": 60,
+  "authorization": "Complete624 whole-C comparisons/56 errors/10 CLI, fullGNU CTest and separate UBSan on the same frozen mirror; preserve first actual failures. No maximum-size/performance/default promotion.",
+  "scope": "All four actual core/caller inventories and strictFP flags, actual configure/build terminal logs and smallCTest counts verified; four selector executables independently rerun with exact observations. This does not yet prove C frontend integration or full regression."
+}

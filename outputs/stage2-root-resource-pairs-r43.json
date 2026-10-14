@@ -1,0 +1,190 @@
+{
+  "reviewed_unix": 1791701391.4698236,
+  "passed": true,
+  "groups": {
+    "hard": {
+      "records_per_round": 202,
+      "legal": 139,
+      "unresolved": 63,
+      "all_pass_T_peak_same": true,
+      "rows": [
+        {
+          "repetition": 1,
+          "before": {
+            "all_wall": 19107302,
+            "all_cpu": 18718750,
+            "failed_wall": 12759203,
+            "failed_cpu": 12515625,
+            "cli_wall": 20.382910200045444
+          },
+          "after": {
+            "all_wall": 18910456,
+            "all_cpu": 18578125,
+            "failed_wall": 12580099,
+            "failed_cpu": 12406250,
+            "cli_wall": 20.090269000036642
+          },
+          "all_cpu_ratio": 0.9924874791318865
+        },
+        {
+          "repetition": 2,
+          "before": {
+            "all_wall": 21976112,
+            "all_cpu": 21265625,
+            "failed_wall": 14665447,
+            "failed_cpu": 14015625,
+            "cli_wall": 23.04206329997396
+          },
+          "after": {
+            "all_wall": 20593606,
+            "all_cpu": 20046875,
+            "failed_wall": 13568461,
+            "failed_cpu": 13187500,
+            "cli_wall": 21.653199699998368
+          },
+          "all_cpu_ratio": 0.9426891991182954
+        },
+        {
+          "repetition": 3,
+          "before": {
+            "all_wall": 22406092,
+            "all_cpu": 22031250,
+            "failed_wall": 14961873,
+            "failed_cpu": 14640625,
+            "cli_wall": 23.50387400004547
+          },
+          "after": {
+            "all_wall": 22094882,
+            "all_cpu": 21578125,
+            "failed_wall": 14630706,
+            "failed_cpu": 14328125,
+            "cli_wall": 23.236104000010528
+          },
+          "all_cpu_ratio": 0.9794326241134752
+        }
+      ],
+      "medians": {
+        "before": {
+          "all_wall": 21976112,
+          "all_cpu": 21265625,
+          "failed_wall": 14665447,
+          "failed_cpu": 14015625,
+          "cli_wall": 23.04206329997396
+        },
+        "after": {
+          "all_wall": 20593606,
+          "all_cpu": 20046875,
+          "failed_wall": 13568461,
+          "failed_cpu": 13187500,
+          "cli_wall": 21.653199699998368
+        }
+      },
+      "median_paired_cpu_ratio": 0.9794326241134752,
+      "median_cpu_ratio": 0.9426891991182954
+    },
+    "forkjoin": {
+      "records_per_round": 36,
+      "legal": 36,
+      "unresolved": 0,
+      "all_pass_T_peak_same": true,
+      "rows": [
+        {
+          "repetition": 1,
+          "before": {
+            "all_wall": 1283065,
+            "all_cpu": 1296875,
+            "failed_wall": 0,
+            "failed_cpu": 0,
+            "cli_wall": 1.420675500005018
+          },
+          "after": {
+            "all_wall": 1427556,
+            "all_cpu": 1375000,
+            "failed_wall": 0,
+            "failed_cpu": 0,
+            "cli_wall": 1.5654542000265792
+          },
+          "all_cpu_ratio": 1.0602409638554218
+        },
+        {
+          "repetition": 2,
+          "before": {
+            "all_wall": 1284990,
+            "all_cpu": 1312500,
+            "failed_wall": 0,
+            "failed_cpu": 0,
+            "cli_wall": 1.4159495999920182
+          },
+          "after": {
+            "all_wall": 1304146,
+            "all_cpu": 1265625,
+            "failed_wall": 0,
+            "failed_cpu": 0,
+            "cli_wall": 1.4364135000505485
+          },
+          "all_cpu_ratio": 0.9642857142857143
+        },
+        {
+          "repetition": 3,
+          "before": {
+            "all_wall": 1389822,
+            "all_cpu": 1359375,
+            "failed_wall": 0,
+            "failed_cpu": 0,
+            "cli_wall": 1.527085099951364
+          },
+          "after": {
+            "all_wall": 1290924,
+            "all_cpu": 1281250,
+            "failed_wall": 0,
+            "failed_cpu": 0,
+            "cli_wall": 1.4202986000454985
+          },
+          "all_cpu_ratio": 0.9425287356321839
+        }
+      ],
+      "medians": {
+        "before": {
+          "all_wall": 1284990,
+          "all_cpu": 1312500,
+          "failed_wall": 0,
+          "failed_cpu": 0,
+          "cli_wall": 1.420675500005018
+        },
+        "after": {
+          "all_wall": 1304146,
+          "all_cpu": 1281250,
+          "failed_wall": 0,
+          "failed_cpu": 0,
+          "cli_wall": 1.4364135000505485
+        }
+      },
+      "median_paired_cpu_ratio": 0.9642857142857143,
+      "median_cpu_ratio": 0.9761904761904762
+    }
+  },
+  "evidence": {
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-summary.json": "9fd5cb7187d3d424f79f6df20a6d80f61186deb28b6a1de3ca27f21264e8c0a3",
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-1-before.json": "5723b27f56f2b25612d127aa5d41a43ca4c906c8624d714a8c0b60774cdee398",
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-1-after.json": "7a6a76736e26fb2dd5016df21400f58ed6781819f7d9e117ae8a1b8c75d5b743",
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-2-before.json": "610e7b7462aca231431e8e73b74ee4feed7fbe60cef4a4f5c89d1e03288fcca6",
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-2-after.json": "8667227d8dce6ca2305515ec8ff0316f345c2707cf3d88952e90642491eee679",
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-3-before.json": "2f53451a4bffa8f660d3cec550d24dac94513ac7392671c7325bb3f574f54381",
+    "projects\\27-aicore-streams\\reports\\paired-hard-batch43-3-after.json": "140aa0b30578878838c0a7419b002ee5719bcea6c212119e2a792d29461f5546",
+    "projects\\27-aicore-streams\\reports\\resource-cost-hard-batch43.json": "e3816847a3ab95a6eeb5434669b99883f97be65414abe4543b0927690b5c3d6a",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-summary.json": "5ae28d3c6c918023908b04191526299ccc7e3939b4d32d54c7c8fed67cafa54b",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-1-before.json": "44e9349102f1eb2441842bbb5ed7b3d08b619a5ca5edf090cbba2dffa9f8c7f5",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-1-after.json": "fb80c2f8911415ad73edaab906e240140a26e660fca8a18d46da5513a5b6ec8c",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-2-before.json": "3a3545e2044c33056c9c8607e0511d614b36e2ec821d606cef1ad0c220b107e5",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-2-after.json": "3c662ac483e47533b63b86caa3c09330b5e33d442a8dc899ef990dff9ad3c266",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-3-before.json": "012fda849d8a2ba049eb57fae7bbaa458bb1681bab9e1c5f0cfd0bdf7cbfba5a",
+    "projects\\27-aicore-streams\\reports\\paired-forkjoin-batch43-3-after.json": "d86c03084c5ca47f39dafedea1aa14b4d9934de71edf18d833437479cfa4aa4c",
+    "projects\\27-aicore-streams\\reports\\resource-cost-forkjoin-batch43.json": "c59f50a41a7ba2f753555b00b94f0940f7c12ca817a9cac464c54adc9b8660a9"
+  },
+  "static_equivalence_review": [
+    "All macro closures are filters of the same graph topological order. A pending node-set bitmask and the previous pending vector therefore encode exactly the same duplicate relation; set iteration is not used to choose candidates.",
+    "Greedy streaming replacement uses strict (final_live,peak) comparison, retaining the first tied candidate, matching the previous stable-sort first candidate.",
+    "Explicit fork/join emission traverses the same stored first/second children followed by original join, retaining root/node coverage and previous node/depth limits."
+  ],
+  "limitation": "Three local paired runs with identical Release flags and preserved failed paths. CPU counters are quantized; forkjoin wall time slightly regressed. No RAM-reduction, official-score or universal speed claim, and no recovery of63 unresolved cases."
+}

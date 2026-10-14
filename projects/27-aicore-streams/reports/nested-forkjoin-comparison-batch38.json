@@ -1,0 +1,100 @@
+{
+  "before": {
+    "total": 36,
+    "passed": 14,
+    "failed": 22
+  },
+  "after": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0
+  },
+  "common_cases": 14,
+  "common_solve_us_before": 11259,
+  "common_solve_us_after": 12589,
+  "improved_T": 0,
+  "regressed_T": 0,
+  "improved_peak_at_equal_T": 0,
+  "regressed_peak_at_equal_T": 0,
+  "recovered": [
+    "new_nested_forkjoin_k15_seed2026116200",
+    "new_nested_forkjoin_k15_seed2026116201",
+    "new_nested_forkjoin_k15_seed2026116202",
+    "new_nested_forkjoin_k31_seed2026132200",
+    "new_nested_forkjoin_k31_seed2026132201",
+    "new_nested_forkjoin_k31_seed2026132202",
+    "new_nested_forkjoin_k63_seed2026164200",
+    "new_nested_forkjoin_k63_seed2026164201",
+    "new_nested_forkjoin_k63_seed2026164202",
+    "new_nested_forkjoin_k63_seed2026164203",
+    "new_nested_forkjoin_k127_seed2026228200",
+    "new_nested_forkjoin_k127_seed2026228201",
+    "new_nested_forkjoin_k127_seed2026228202",
+    "new_nested_forkjoin_k127_seed2026228203",
+    "new_nested_forkjoin_k255_seed2026356200",
+    "new_nested_forkjoin_k255_seed2026356201",
+    "new_nested_forkjoin_k255_seed2026356202",
+    "new_nested_forkjoin_k255_seed2026356203",
+    "new_nested_forkjoin_k511_seed2026612200",
+    "new_nested_forkjoin_k511_seed2026612201",
+    "new_nested_forkjoin_k511_seed2026612202",
+    "new_nested_forkjoin_k511_seed2026612203"
+  ],
+  "lost": [],
+  "model_disagreements": 0,
+  "duplicates": 1703,
+  "scales": [
+    {
+      "n": 4,
+      "median_us": 132.0,
+      "max_us": 181
+    },
+    {
+      "n": 7,
+      "median_us": 110.5,
+      "max_us": 143
+    },
+    {
+      "n": 10,
+      "median_us": 277.5,
+      "max_us": 728
+    },
+    {
+      "n": 46,
+      "median_us": 8403.0,
+      "max_us": 9796
+    },
+    {
+      "n": 94,
+      "median_us": 26466.5,
+      "max_us": 30377
+    },
+    {
+      "n": 190,
+      "median_us": 91244.5,
+      "max_us": 102348
+    },
+    {
+      "n": 382,
+      "median_us": 212963.5,
+      "max_us": 246182
+    },
+    {
+      "n": 766,
+      "median_us": 160704.5,
+      "max_us": 180962
+    },
+    {
+      "n": 1534,
+      "median_us": 131877.5,
+      "max_us": 159306
+    }
+  ],
+  "common_thread_cpu_measured_cases": 14,
+  "common_thread_cpu_us_before": 0,
+  "common_thread_cpu_us_after": 0,
+  "all_solve_us_before": 2259237,
+  "all_thread_cpu_us_before": 2140625,
+  "all_solve_us_after": 2503589,
+  "all_thread_cpu_us_after": 2218750
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "source_only": true,
+  "plan_sha256": "bfbbf8634dcad7e6afb49ecf455f5783d916d3d6b71bdc7c3a88c292b21eb981",
+  "frozen_files": 19,
+  "true_C_sources": 19,
+  "streams": 27,
+  "planned_backend_records": 54,
+  "review": [
+    "Observer records finalized real RunMetrics from same execute_owned/ABI/core; never reads C oracle",
+    "Fresh all six reference hashes per launch; whole binary stream equality to independent original C",
+    "Actual per-matrix steps/PC/errors/engine equality; native PC explicitly inapplicable; fixed1e9 budget and proof features off",
+    "One compile with matching PUBLIC macros and strictFP; file stdout/stderr; rejected actual resource observations saved; first failure no retry"
+  ],
+  "authorized_next": "One separate observer compile+functional54; no95 cost pairs until accepted functional results."
+}

@@ -1,0 +1,23 @@
+{
+  "reviewed_unix": 1791706813.7399907,
+  "passed": true,
+  "actual_output_files": 172,
+  "source_files": 103,
+  "vm_required_sources": 9,
+  "preserved_error_contracts": 7,
+  "root_rerun_native_contract": {
+    "passed": true,
+    "opcode_coverage": 33,
+    "comparisons": 404,
+    "stack_limit": 4096,
+    "decode_phase_only": true
+  },
+  "ctest": 9,
+  "candidate_exe_sha256": "bf54f13b195f26547ded80dfd225f795062cfc427e2c3d1fb299c72010a96cdc",
+  "evidence": {
+    "phase1-manifest.json": "87c3d0863fbbe749bcb7d8aa67ed982419e11a70c566e87b8cb54ba157a7e377",
+    "correctness/report.json": "acbd0930cd2ef8c01ea04a45e3910d2a8d88721c2aaadf14bb10bf740f63ac4d",
+    "ctest.log": "676ebbc2b67dc3960ef015f1e9bddf6affdb38eb56212ddda004b7d61c0550c8"
+  },
+  "scope": "Full actual C output bytes including headers, original input/source/harness/oracle/Metadata hashes and frozen candidate files checked. Frozen native-contract executable rerun by root;404 opcode/error/step comparisons pass. Predecoded phase1 only, defaultOFF. No performance or universal correctness claim; explicitFMA and N10000 fallback-resource supplements pending."
+}

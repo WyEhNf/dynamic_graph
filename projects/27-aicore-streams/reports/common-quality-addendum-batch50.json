@@ -1,0 +1,37 @@
+{
+  "status": "Static addendum from saved actual raw diagnostics;no command repeated",
+  "common_legal": [
+    {
+      "name": "irregular_consumers_local_k24_ret1_seed20273418",
+      "before_T": 2421486,
+      "after_T": 2421486,
+      "before_peak": 1946,
+      "after_peak": 1884
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+      "before_T": 1487053,
+      "after_T": 1487053,
+      "before_peak": 1745,
+      "after_peak": 1745
+    },
+    {
+      "name": "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5",
+      "before_T": 1487053,
+      "after_T": 1487053,
+      "before_peak": 1760,
+      "after_peak": 1760
+    }
+  ],
+  "new_recovery": 0,
+  "lost": 0,
+  "peak_improved_count": 1,
+  "T_improved_count": 0,
+  "source_sha": "c3ed270f035891951631644b7444236a6343f35b9828f00a8a3d3712b2ba5e63",
+  "sha256": {
+    "reports/projection-unresolved-diagnostic-batch48.json": "1c8cefd68adc2cb2dcab0d0e97f12e8b3fc0dd41ff9576e9e7a627d0fdfc095e",
+    "reports/projection-unresolved-diagnostic-batch50.json": "3a45d76440d8bd3852259d77f26e8edef47c6b1a1fd43382f3c12e010bbbb3d9",
+    "research/batch50/functional-checkpoint.json": "a37f35a1579e044439af5fd579095b2affc2b673b3c80e5310bd321c1ad954df",
+    "reports/research-batch50.md": "4e07e36c1eff8a2c186e4219cb3c3d4731d622b57fdf5e11fd5eaa0559c33d63"
+  }
+}

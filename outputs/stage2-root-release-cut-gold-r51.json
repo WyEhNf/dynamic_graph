@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791717318.0019922,
+  "independent_cut_controls": 102,
+  "valid_cuts": 73,
+  "independent_full_plans": 102,
+  "feasible_full_plans": 100,
+  "expected_invalid_full_plans": [
+    "wrong-partial-cut-narrow",
+    "above-MAX-cannot-fit"
+  ],
+  "root_executable_actual_exit_code": 0,
+  "root_executable_stdout": "102 original remaining-DIRECT/ancestor cut bigint controls passed\n",
+  "evidence": {
+    "projects/27-aicore-streams/data/release-cut-gold-batch51.json": "bf170b94394545cea0cd7f13a099135adc5e85e85540148855449a7e99b5589f",
+    "projects/27-aicore-streams/data/release-cut-fixed-gold-batch51.json": "9def7070fa911ad183cd8f4b25fb26e709404298d149b0010001facec5185d17",
+    "projects/27-aicore-streams/research/batch51/release-cut-full-plans.json": "d1a64ba15ed7f65f135d9ea0b5f5f1bb5e9eed099735fcb86180a73a8d6f7cae",
+    "projects/27-aicore-streams/research/batch51/test_release_cut.exe": "73a43350a0c812f81cab7255bbca52a1c6dca3bf652906208cbb460ee94e0c96"
+  },
+  "scope": "Raw original-ancestor closure and full live-output sets independently recomputed. All102 full original plans replayed in bigint heap model, including above-int64 expected-invalid allocation. Direct external users/sinks retained, cutoff128/129 tested. Frozen diagnostic component rerun by root; separate Release/UBSan acceptance remains pending."
+}

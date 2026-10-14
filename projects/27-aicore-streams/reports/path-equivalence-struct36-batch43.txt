@@ -1,0 +1,1 @@
+128 exact greedy path/work/state/truncation comparisons; structural orders=36

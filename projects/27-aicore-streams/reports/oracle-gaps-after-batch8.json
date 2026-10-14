@@ -1,0 +1,249 @@
+{
+  "total": 24,
+  "feasible": 24,
+  "exact_T_and_peak": 24,
+  "independent_oracle_plans": 21460,
+  "scope": "exhaustive n<=4, <=2 streams, explicit direct synchronization only",
+  "rows": [
+    {
+      "name": "parallel_oracle_n3_seed20261012",
+      "returned_feasible": true,
+      "oracle_T": 35,
+      "oracle_peak": 16,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 130,
+      "plans_evaluated": 54
+    },
+    {
+      "name": "parallel_oracle_n3_seed20261013",
+      "returned_feasible": true,
+      "oracle_T": 12,
+      "oracle_peak": 22,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 32,
+      "plans_evaluated": 12
+    },
+    {
+      "name": "parallel_oracle_n3_seed20261014",
+      "returned_feasible": true,
+      "oracle_T": 49,
+      "oracle_peak": 20,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 47,
+      "plans_evaluated": 24
+    },
+    {
+      "name": "parallel_oracle_n3_seed20261015",
+      "returned_feasible": true,
+      "oracle_T": 37,
+      "oracle_peak": 16,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 82,
+      "plans_evaluated": 54
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261016",
+      "returned_feasible": true,
+      "oracle_T": 46,
+      "oracle_peak": 13,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1769,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261017",
+      "returned_feasible": true,
+      "oracle_T": 68,
+      "oracle_peak": 20,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1746,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261018",
+      "returned_feasible": true,
+      "oracle_T": 74,
+      "oracle_peak": 19,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 687,
+      "plans_evaluated": 492
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261019",
+      "returned_feasible": true,
+      "oracle_T": 39,
+      "oracle_peak": 15,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 477,
+      "plans_evaluated": 312
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261020",
+      "returned_feasible": true,
+      "oracle_T": 23,
+      "oracle_peak": 20,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 463,
+      "plans_evaluated": 312
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261021",
+      "returned_feasible": true,
+      "oracle_T": 35,
+      "oracle_peak": 13,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 259,
+      "plans_evaluated": 162
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261022",
+      "returned_feasible": true,
+      "oracle_T": 71,
+      "oracle_peak": 14,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1738,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261023",
+      "returned_feasible": true,
+      "oracle_T": 71,
+      "oracle_peak": 9,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 264,
+      "plans_evaluated": 162
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261024",
+      "returned_feasible": true,
+      "oracle_T": 65,
+      "oracle_peak": 17,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 818,
+      "plans_evaluated": 624
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261025",
+      "returned_feasible": true,
+      "oracle_T": 26,
+      "oracle_peak": 22,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 4715,
+      "plans_evaluated": 3888
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261026",
+      "returned_feasible": true,
+      "oracle_T": 59,
+      "oracle_peak": 22,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 185,
+      "plans_evaluated": 104
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261027",
+      "returned_feasible": true,
+      "oracle_T": 53,
+      "oracle_peak": 18,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1747,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261028",
+      "returned_feasible": true,
+      "oracle_T": 37,
+      "oracle_peak": 18,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 2153,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261029",
+      "returned_feasible": true,
+      "oracle_T": 60,
+      "oracle_peak": 17,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 272,
+      "plans_evaluated": 162
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261030",
+      "returned_feasible": true,
+      "oracle_T": 58,
+      "oracle_peak": 20,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1737,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261031",
+      "returned_feasible": true,
+      "oracle_T": 59,
+      "oracle_peak": 17,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 263,
+      "plans_evaluated": 162
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261032",
+      "returned_feasible": true,
+      "oracle_T": 71,
+      "oracle_peak": 20,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1754,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261033",
+      "returned_feasible": true,
+      "oracle_T": 40,
+      "oracle_peak": 36,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 4721,
+      "plans_evaluated": 3888
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261034",
+      "returned_feasible": true,
+      "oracle_T": 65,
+      "oracle_peak": 18,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 1776,
+      "plans_evaluated": 1368
+    },
+    {
+      "name": "parallel_oracle_n4_seed20261035",
+      "returned_feasible": true,
+      "oracle_T": 77,
+      "oracle_peak": 13,
+      "T_gap": 0,
+      "peak_gap": 0,
+      "solve_us": 178,
+      "plans_evaluated": 104
+    }
+  ]
+}

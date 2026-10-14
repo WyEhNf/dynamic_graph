@@ -1,0 +1,48 @@
+{
+  "reviewed_unix": 1791700872.922652,
+  "passed": true,
+  "independently_decoded_candidates": 36,
+  "original_c_full_file_records": 24,
+  "actual_final_byte_selections": [
+    {
+      "source": "scalar",
+      "before": 760,
+      "after": 731,
+      "format": "3-expanded"
+    },
+    {
+      "source": "page",
+      "before": 763,
+      "after": 735,
+      "format": "3-expanded"
+    },
+    {
+      "source": "blocked",
+      "before": 958,
+      "after": 912,
+      "format": "3-expanded"
+    },
+    {
+      "source": "generic",
+      "before": 492,
+      "after": 481,
+      "format": "3-expanded"
+    },
+    {
+      "source": "negative-zero",
+      "before": 407,
+      "after": 397,
+      "format": "3-expanded"
+    },
+    {
+      "source": "noop",
+      "before": 225,
+      "after": 225,
+      "format": "2-expanded"
+    }
+  ],
+  "method": "Root standard Python zlib decoded all saved complete native-format containers and independently checked exact size/SHA and six-format tie rule. Existing actual original-C byte-comparison records inspected; no duplicate C run.",
+  "limitation": "Minimum of the six implemented encodings at fixed compression settings; not a minimum over all possible Metadata encodings or an official score claim.",
+  "report_sha256": "637a0ff2a35617b4b5acce65a1a9f00d50451349f6dda04c19972c74ffb23a4d",
+  "manifest_sha256": "f51f6a51f2456b6e5f05b049ac6ff10fa4859c62eb56fac1f347ac47d311e1a2"
+}

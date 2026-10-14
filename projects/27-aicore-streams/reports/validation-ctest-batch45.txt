@@ -1,0 +1,29 @@
+Test project F:/Hackathon/projects/27-aicore-streams/research/batch45/validation-build
+      Start  1: scheduler_semantics
+ 1/12 Test  #1: scheduler_semantics .................   Passed    0.40 sec
+      Start  2: submission_model_and_json
+ 2/12 Test  #2: submission_model_and_json ...........   Passed    0.53 sec
+      Start  3: assignment_grouping_equivalence
+ 3/12 Test  #3: assignment_grouping_equivalence .....   Passed    0.37 sec
+      Start  4: serial_frontier_exact_equivalence
+ 4/12 Test  #4: serial_frontier_exact_equivalence ...   Passed    0.38 sec
+      Start  5: local_batch_quick
+ 5/12 Test  #5: local_batch_quick ...................   Passed    0.63 sec
+      Start  6: numeric-controls_int64
+ 6/12 Test  #6: numeric-controls_int64 ..............   Passed    0.33 sec
+      Start  7: numeric-parallel_int64
+ 7/12 Test  #7: numeric-parallel_int64 ..............   Passed    0.08 sec
+      Start  8: numeric-parallel-valid_int64
+ 8/12 Test  #8: numeric-parallel-valid_int64 ........   Passed    0.08 sec
+      Start  9: scaled-serial-controls_int64
+ 9/12 Test  #9: scaled-serial-controls_int64 ........   Passed    1.84 sec
+      Start 10: numeric_priority_exact_gold
+10/12 Test #10: numeric_priority_exact_gold .........   Passed    0.37 sec
+      Start 11: shallow_profile_bigint_gold
+11/12 Test #11: shallow_profile_bigint_gold .........   Passed    0.62 sec
+      Start 12: workspace_projection_bigint_gold
+12/12 Test #12: workspace_projection_bigint_gold ....   Passed    0.41 sec
+
+100% tests passed, 0 tests failed out of 12
+
+Total Test time (real) =   6.10 sec

@@ -1,0 +1,10 @@
+{
+  "prepared_unix": 1791667369.7373211,
+  "baseline_source_sha256": "60ae51cd6c89c6264ed234f492d3a2020e64426287933fb7717549b4c7c2fb67",
+  "candidate_source_sha256": "70865c0a1e1f78c6bfec6237dfe2682a22bd24c49107955169a7f54b47e75938",
+  "generator_sha256": "b0265707882c785513db46f7187c7456869bde351ecb15ea98bcc0eae393f1c4",
+  "basis": "v20 completed 32688 input tokens but peaked at 12211716096 reserved CUDA bytes; reservation or transfer pressure is a hypothesis, not a measured causal attribution.",
+  "scope": "Offloaded long-input prefill only: synchronize and release unused allocator blocks after each chunk. Same inputs, FP16 KV precision, weights and attention. Live tensors remain unchanged. Active model modules untouched.",
+  "primary_source": "https://docs.pytorch.org/docs/2.14/generated/torch.cuda.memory.empty_cache.html",
+  "status": "Not measured; no default promotion."
+}

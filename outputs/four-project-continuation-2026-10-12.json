@@ -1,0 +1,142 @@
+{
+  "checked_at": "2026-10-12T17:36:50.578971+08:00",
+  "assessment": "docs/four-project-assessment-2026-10-12.md",
+  "authorization": "Current user request resumes development of all four projects, including previously paused project11.",
+  "tests": [
+    {
+      "project": 11,
+      "argv": [
+        "F:\\Hackathon\\projects\\11-context-governance\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_candidate_gate",
+        "tests.test_governance",
+        "tests.test_contract_audit",
+        "-v"
+      ],
+      "cwd": "F:\\Hackathon\\projects\\11-context-governance",
+      "actual_exit_code": 0,
+      "log": "F:\\Hackathon\\outputs\\continuation-validation-2026-10-12\\project11-tests.log",
+      "reused_completed_log": true
+    },
+    {
+      "project": 19,
+      "argv": [
+        "F:\\Hackathon\\projects\\19-dynamic-graph\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_dispatch_profile.py",
+        "-v"
+      ],
+      "cwd": "F:\\Hackathon\\projects\\19-dynamic-graph",
+      "actual_exit_code": 0,
+      "log": "F:\\Hackathon\\outputs\\continuation-validation-2026-10-12\\project19-tests.log",
+      "reused_completed_log": true
+    },
+    {
+      "project": 27,
+      "argv": [
+        "F:\\Hackathon\\projects\\18-isa-scheduler\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_prefix_memory_certificates.py",
+        "-v"
+      ],
+      "cwd": "F:\\Hackathon\\projects\\27-aicore-streams",
+      "actual_exit_code": 0,
+      "log": "F:\\Hackathon\\outputs\\continuation-validation-2026-10-12\\project27-tests.log",
+      "reused_completed_log": true
+    }
+  ],
+  "project18_semantics_controls": {
+    "actual_exit_code": 0,
+    "tests": 4,
+    "tool_chunk": "02f5b8"
+  },
+  "project18": {
+    "passed": true,
+    "inputs": 336,
+    "legal_outputs": 272,
+    "totals": {
+      "missing_outputs_preserved": 64,
+      "whole_outputs_replayed": 867,
+      "proposals": 431,
+      "before_COPY": 192859,
+      "after_COPY": 192848,
+      "improved": 7
+    },
+    "frontier": {
+      "header": 136,
+      "immutable_label": 205911,
+      "open": 2161,
+      "unfinished_expansion": 26
+    },
+    "after_legal_copy_output_mean": 0.13563597730994614,
+    "all336_quality_mean": null,
+    "elapsed_seconds": 33.32265089999419,
+    "report_sha256": "d654975ff397cb3c6147e0216392921e0be573047d66b2ab1a552f8cdd374e69",
+    "audit_source_sha256": "78ebd5ea59ea70808d283db35b0565b288cb6510a7702e2d388611a31e0956bb",
+    "default_changed": false,
+    "scope": "Read-only original-identity and physical-ring replay of saved files; no scheduler rerun or official Level claim."
+  },
+  "project19": {
+    "sources": 19,
+    "all_selected_matrices_byte_equal": true,
+    "executed_load_pairs": 1135,
+    "large_shape_dynamic_coverage_measured": false,
+    "Cplusplus_speed_measured": false
+  },
+  "project27": {
+    "count": 24,
+    "original_cases": 12,
+    "distinct_saved_prefixes": 12,
+    "distinct_obstructed_prefixes": 5,
+    "distinct_obstructed_input_records": 4,
+    "certificates": 20
+  },
+  "limitations": {
+    "project11_new_model_quality_measured": false,
+    "project18_Level1_3_proved": false,
+    "project19_default_promoted": false,
+    "project27_new_recoveries": 0,
+    "official_scores_measured": false,
+    "old_frozen_evidence_preserved": true
+  },
+  "retained_intermediate_reports": [
+    "projects/19-dynamic-graph/artifacts/dispatch-profile-2026-10-12.json",
+    "projects/27-aicore-streams/reports/prefix-memory-certificates-2026-10-12.json",
+    "projects/27-aicore-streams/reports/prefix-memory-certificates-verified-2026-10-12.json"
+  ],
+  "initial_recording_error": {
+    "tool_chunk": "661f9f",
+    "type": "ZoneInfoNotFoundError",
+    "scope": "Timestamp persistence failed after all three child tests had returned exit0 and logs were saved.",
+    "repair": "UTC+08:00 timestamp; collect existing completed logs without repeating tests."
+  },
+  "file_sha256": {
+    "docs/four-project-assessment-2026-10-12.md": "d41f36c9b1e663092075d1cd1e3647b2fbaa74d50e21c4bf2afbda7e772a050d",
+    "projects/11-context-governance/src/context_governance/candidate_gate.py": "84b9bb6eb8ba51c73c8e5c1849bc0492881636f801b2ac5781f92ddfbaaa2d61",
+    "projects/11-context-governance/tests/test_candidate_gate.py": "17fb85d6f1182dbd819408c9480f003c839e0a42c2862b57978d341c0f81a40c",
+    "projects/18-isa-scheduler/scripts/audit_mobile_backbone_full336_result.py": "78ebd5ea59ea70808d283db35b0565b288cb6510a7702e2d388611a31e0956bb",
+    "projects/18-isa-scheduler/experiments/r196-mobile-backbone-full336/report.json": "d654975ff397cb3c6147e0216392921e0be573047d66b2ab1a552f8cdd374e69",
+    "outputs/mobile-backbone-full336-audit-2026-10-12.json": "e765cb482e6ab27f761525b91d78d24ffa20c369ec12e7e6f017dfe926bbdaae",
+    "projects/19-dynamic-graph/tools/profile_vm_dispatch.py": "71f6d695e285223b0b5c9e966f2d23306821d367976d0d2ed673f764bca17ae3",
+    "projects/19-dynamic-graph/tests/test_dispatch_profile.py": "a8a5722f6a2e7f6d18a62605f776f1426225c1c61ee7b97beb60149cb35ead95",
+    "projects/19-dynamic-graph/artifacts/dispatch-profile-verified-2026-10-12.json": "09a99715b7128f417834a09599e32973301a0f0631b8df298f89da5d9035bf0e",
+    "projects/27-aicore-streams/scripts/prefix_memory_certificates.py": "1ed979f254a500f9bc52ccc2ed95c16b9c96917b7e2ad1f56ab2df8c55d453fe",
+    "projects/27-aicore-streams/tests/test_prefix_memory_certificates.py": "54d019da93315cd465fb898a3a7625ab89915cb2d7907a120c8469b5947c6f29",
+    "projects/27-aicore-streams/reports/prefix-memory-certificates-final-2026-10-12.json": "9e9e51635157aa932d4189c2d04b5c83d8c8c151af90d75e509b758f9010e1fa",
+    "scripts/record-four-project-continuation.py": "5deab36a8123101b5deea11fdacd60bd0eaae7efebf6da1b31b15da99f4eb899",
+    "outputs\\continuation-validation-2026-10-12\\project11-tests.log": "3e76a6055269e2462ffb527b3b74c97f5f8cf52334a3907e197899288df1d325",
+    "outputs\\continuation-validation-2026-10-12\\project19-tests.log": "c7294df35dfcedf30015f92ffabdab97bc23b8207ed47a21d562e57903ae5516",
+    "outputs\\continuation-validation-2026-10-12\\project27-tests.log": "96af02e06da800e587d5d8dc39bdae0dbe07f04dd82bff45b3e0a7fc03e8341c"
+  }
+}

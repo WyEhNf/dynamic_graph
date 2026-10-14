@@ -1,0 +1,128 @@
+{
+  "before": {
+    "total": 36,
+    "passed": 22,
+    "failed": 14
+  },
+  "after": {
+    "total": 36,
+    "passed": 27,
+    "failed": 9
+  },
+  "common_cases": 22,
+  "common_solve_us_before": 583539,
+  "common_solve_us_after": 451072,
+  "improved_T": 0,
+  "regressed_T": 0,
+  "improved_peak_at_equal_T": 0,
+  "regressed_peak_at_equal_T": 0,
+  "recovered": [
+    "irregular_consumers_local_k32_ret1_seed20274225_rootmem5",
+    "irregular_consumers_dense_k32_ret1_seed20274235_rootmem0",
+    "irregular_consumers_dense_k32_ret1_seed20274235_rootmem5",
+    "irregular_consumers_dense_k96_ret1_seed20280635_rootmem0",
+    "irregular_consumers_dense_k96_ret1_seed20280635_rootmem5"
+  ],
+  "lost": [],
+  "model_disagreements": 0,
+  "duplicates": 72,
+  "scales": [
+    {
+      "n": 59,
+      "median_us": 4074.5,
+      "max_us": 4148
+    },
+    {
+      "n": 63,
+      "median_us": 5331.5,
+      "max_us": 5467
+    },
+    {
+      "n": 69,
+      "median_us": 4608.5,
+      "max_us": 4689
+    },
+    {
+      "n": 70,
+      "median_us": 11190.0,
+      "max_us": 17512
+    },
+    {
+      "n": 71,
+      "median_us": 5671.5,
+      "max_us": 5847
+    },
+    {
+      "n": 74,
+      "median_us": 25793.5,
+      "max_us": 44145
+    },
+    {
+      "n": 165,
+      "median_us": 34803.5,
+      "max_us": 51595
+    },
+    {
+      "n": 172,
+      "median_us": 51291.5,
+      "max_us": 51502
+    },
+    {
+      "n": 176,
+      "median_us": 22616.0,
+      "max_us": 23039
+    },
+    {
+      "n": 180,
+      "median_us": 18678.0,
+      "max_us": 18771
+    },
+    {
+      "n": 184,
+      "median_us": 108967.5,
+      "max_us": 115921
+    },
+    {
+      "n": 196,
+      "median_us": 87008.5,
+      "max_us": 99301
+    },
+    {
+      "n": 512,
+      "median_us": 198272.0,
+      "max_us": 206677
+    },
+    {
+      "n": 516,
+      "median_us": 50715.0,
+      "max_us": 52540
+    },
+    {
+      "n": 521,
+      "median_us": 45518.5,
+      "max_us": 45526
+    },
+    {
+      "n": 522,
+      "median_us": 47250.5,
+      "max_us": 47627
+    },
+    {
+      "n": 534,
+      "median_us": 85124.5,
+      "max_us": 85376
+    },
+    {
+      "n": 547,
+      "median_us": 88806.5,
+      "max_us": 90645
+    }
+  ],
+  "common_thread_cpu_measured_cases": 22,
+  "common_thread_cpu_us_before": 406250,
+  "common_thread_cpu_us_after": 421875,
+  "all_solve_us_before": 1955693,
+  "all_thread_cpu_us_before": 1593750,
+  "all_solve_us_after": 1791443,
+  "all_thread_cpu_us_after": 1718750
+}

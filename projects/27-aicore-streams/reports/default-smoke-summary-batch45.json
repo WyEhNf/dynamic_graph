@@ -1,0 +1,51 @@
+{
+  "status": "actual default8 unchanged vs fully accepted candidate;3 known-feasible cases remain explicit failures",
+  "actual_exit_code": 1,
+  "count": 8,
+  "passing": 5,
+  "unresolved": 3,
+  "two_recoveries": [
+    "irregular_consumers_dense_k12_ret1_seed20262235_rootmem0",
+    "irregular_consumers_dense_k12_ret1_seed20262235_rootmem5"
+  ],
+  "selection": [
+    [
+      "hard",
+      54
+    ],
+    [
+      "hard",
+      55
+    ],
+    [
+      "heldout",
+      0
+    ],
+    [
+      "heldout",
+      26
+    ],
+    [
+      "heldout",
+      47
+    ],
+    [
+      "heldout",
+      3
+    ],
+    [
+      "heldout",
+      7
+    ],
+    [
+      "hard",
+      129
+    ]
+  ],
+  "input_sha": "68060637e76c8e592418529aa1bf039d85d8a75b613ec07d88b54a013af3a48d",
+  "report_sha": "14baee01beaad55e36a858c078cccb4165fbe6cbe416bc568554e7fc39a9ceca",
+  "source_sha": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9",
+  "exe_sha": "5accb1f112ad1bac31fcfeff8faf191ece90c64162d415ec95792721f9fd23a8",
+  "timing": "Shared functional check; no performance inference",
+  "witness_or_generation_passed_to_solver": false
+}

@@ -1,0 +1,7 @@
+test_budget_and_policy_reject (tests.test_reverse_pressure.ReversePressureTests.test_budget_and_policy_reject) ... ok
+test_topological_permutation_and_independent_outputs (tests.test_reverse_pressure.ReversePressureTests.test_topological_permutation_and_independent_outputs) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.293s
+
+OK

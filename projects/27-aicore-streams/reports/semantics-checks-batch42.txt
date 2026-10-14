@@ -1,0 +1,4 @@
+sample1_reference T=365 peak=320 baseline_T=365 baseline_peak=320
+sample2_reference T=124 peak=55
+sample3_reference T=152 peak=45
+PASS 72 semantic checks

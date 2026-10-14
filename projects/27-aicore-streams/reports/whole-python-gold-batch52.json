@@ -1,0 +1,531 @@
+{
+  "status": "Independent whole-original-DAG Python bigint gold executed",
+  "controls": 8,
+  "valid": 4,
+  "invalid": 4,
+  "optimum_cap100": 100,
+  "cap120": "Greedy order succeeds withpeak120;alternative100;graph feasible",
+  "default_failure_claim": false,
+  "profiles": [
+    {
+      "name": "cap100_alternative",
+      "order": [
+        103,
+        99,
+        17
+      ],
+      "valid": true,
+      "T": 3,
+      "peak": 100,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 50,
+          "allocation": 50
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 50,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 1,
+          "live_before": 50,
+          "workspace": 20,
+          "output": 30,
+          "allocation": 100
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 2,
+          "live": 80,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 2,
+          "live_before": 80,
+          "workspace": 0,
+          "output": 20,
+          "allocation": 100
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 3,
+          "live": 50,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 50,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "cap100_greedy",
+      "order": [
+        103,
+        17,
+        99
+      ],
+      "valid": false,
+      "T": 3,
+      "peak": 120,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 50,
+          "allocation": 50
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 50,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 1,
+          "live_before": 50,
+          "workspace": 0,
+          "output": 20,
+          "allocation": 70
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 2,
+          "live": 70,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 2,
+          "live_before": 70,
+          "workspace": 20,
+          "output": 30,
+          "allocation": 120
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 3,
+          "live": 50,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 50,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "cap120_greedy_success_alternative",
+      "order": [
+        103,
+        99,
+        17
+      ],
+      "valid": true,
+      "T": 3,
+      "peak": 100,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 50,
+          "allocation": 50
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 50,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 1,
+          "live_before": 50,
+          "workspace": 20,
+          "output": 30,
+          "allocation": 100
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 2,
+          "live": 80,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 2,
+          "live_before": 80,
+          "workspace": 0,
+          "output": 20,
+          "allocation": 100
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 3,
+          "live": 50,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 50,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "cap120_greedy_success_greedy",
+      "order": [
+        103,
+        17,
+        99
+      ],
+      "valid": true,
+      "T": 3,
+      "peak": 120,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 50,
+          "allocation": 50
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 50,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 1,
+          "live_before": 50,
+          "workspace": 0,
+          "output": 20,
+          "allocation": 70
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 2,
+          "live": 70,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 2,
+          "live_before": 70,
+          "workspace": 20,
+          "output": 30,
+          "allocation": 120
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 3,
+          "live": 50,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 50,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "cap99_infeasible_lowerbound_alternative",
+      "order": [
+        103,
+        99,
+        17
+      ],
+      "valid": false,
+      "T": 3,
+      "peak": 100,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 50,
+          "allocation": 50
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 50,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 1,
+          "live_before": 50,
+          "workspace": 20,
+          "output": 30,
+          "allocation": 100
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 2,
+          "live": 80,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 2,
+          "live_before": 80,
+          "workspace": 0,
+          "output": 20,
+          "allocation": 100
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 3,
+          "live": 50,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 50,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "cap99_infeasible_lowerbound_greedy",
+      "order": [
+        103,
+        17,
+        99
+      ],
+      "valid": false,
+      "T": 3,
+      "peak": 120,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 50,
+          "allocation": 50
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 50,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 1,
+          "live_before": 50,
+          "workspace": 0,
+          "output": 20,
+          "allocation": 70
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 2,
+          "live": 70,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 2,
+          "live_before": 70,
+          "workspace": 20,
+          "output": 30,
+          "allocation": 120
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 3,
+          "live": 50,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 50,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "exactMAX_alternative",
+      "order": [
+        103,
+        99,
+        17
+      ],
+      "valid": true,
+      "T": 3,
+      "peak": 9223372036854775807,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 4611686018427387900,
+          "allocation": 4611686018427387900
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 4611686018427387900,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 1,
+          "live_before": 4611686018427387900,
+          "workspace": 1844674407370955167,
+          "output": 2767011611056432740,
+          "allocation": 9223372036854775807
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 2,
+          "live": 7378697629483820640,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 2,
+          "live_before": 7378697629483820640,
+          "workspace": 0,
+          "output": 1844674407370955160,
+          "allocation": 9223372036854775800
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 3,
+          "live": 4611686018427387900,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 4611686018427387900,
+      "live_after_global_T_cleanup": 0
+    },
+    {
+      "name": "exactMAX_greedy",
+      "order": [
+        103,
+        17,
+        99
+      ],
+      "valid": false,
+      "T": 3,
+      "peak": 11068046444225730967,
+      "trace": [
+        {
+          "phase": "BEGIN",
+          "id": 103,
+          "time": 0,
+          "live_before": 0,
+          "workspace": 0,
+          "output": 4611686018427387900,
+          "allocation": 4611686018427387900
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 103,
+          "time": 1,
+          "live": 4611686018427387900,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 17,
+          "time": 1,
+          "live_before": 4611686018427387900,
+          "workspace": 0,
+          "output": 1844674407370955160,
+          "allocation": 6456360425798343060
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 17,
+          "time": 2,
+          "live": 6456360425798343060,
+          "freed_original_direct_parents": []
+        },
+        {
+          "phase": "BEGIN",
+          "id": 99,
+          "time": 2,
+          "live_before": 6456360425798343060,
+          "workspace": 1844674407370955167,
+          "output": 2767011611056432740,
+          "allocation": 11068046444225730967
+        },
+        {
+          "phase": "END_before_global_sink_cleanup",
+          "id": 99,
+          "time": 3,
+          "live": 4611686018427387900,
+          "freed_original_direct_parents": [
+            103
+          ]
+        }
+      ],
+      "live_before_global_T_cleanup": 4611686018427387900,
+      "live_after_global_T_cleanup": 0
+    }
+  ]
+}

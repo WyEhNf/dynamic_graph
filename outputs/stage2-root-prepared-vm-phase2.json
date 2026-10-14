@@ -1,0 +1,25 @@
+{
+  "reviewed_unix": 1791709038.9599097,
+  "passed": true,
+  "actual_output_files": 290,
+  "source_files": 111,
+  "vm_required_sources": 12,
+  "preserved_error_contracts": 7,
+  "root_rerun_native_contract": {
+    "passed": true,
+    "opcode_coverage": 33,
+    "phase1_cases": 404,
+    "comparisons": 480,
+    "raw_stack_operations": 100000,
+    "stack_limit": 4096,
+    "TOS2_only": true
+  },
+  "ctest": 10,
+  "candidate_exe_sha256": "323045ced55b390cfaccfebff542abd5455fc6cc0d6657f3dad1fe9518cf5516",
+  "evidence": {
+    "candidate-manifest.json": "3ffdfe39e4befa00b1265f7f52d19416280a8c0bfe101b407a1e1b79307f3160",
+    "correctness/report.json": "ee7fe2dfe3fafacb4caf4a6d82f15b3103670e8bd9d4f879b71eb16cf870b9f7",
+    "ctest.log": "3cf77f7599db182944c16595f94e2409eb4fb77116605bf7cf4a0a6f0b68ccc2"
+  },
+  "scope": "Full actual C output bytes including headers, original input/source/harness/oracle/Metadata hashes and frozen candidate files checked. Frozen native-contract executable rerun by root;480 triple backend opcode/error/step comparisons and100000 payload operations pass. Optional TOS2 phase2 only, defaultOFF. No performance or universal correctness claim; explicitFMA and N10000 fallback-resource supplements pending."
+}

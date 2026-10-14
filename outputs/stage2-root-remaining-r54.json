@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791774339.7496595,
+  "completion_sha256": "46e9a584346ecd59172bc31baaf44c594adaae4e43eaa7bfe331630e10e260a3",
+  "raw_report_sha256": "3ef13aee2341819c7e1ce727d9c0cc9bf9d2599354908ea541bac7bc48de359b",
+  "negative_checkpoint_sha256": "d0ac1b39c227aa3444be8586926702624abdda421156acfd7b0f39d547743bfa",
+  "negative_frozen_files": 47,
+  "actual_session": 29846,
+  "actual_exit_code": 0,
+  "original_inputs": 67,
+  "known_feasible_remaining": 63,
+  "recovery_controls": 4,
+  "before_whole_success": 4,
+  "after_whole_success": 4,
+  "helper_success": 4,
+  "new_whole_recoveries": 0,
+  "new_helper_recoveries": 0,
+  "lost": 0,
+  "independently_replayed_actual_whole_and_helper_plans": 8,
+  "all_common_whole_plans_identical": true,
+  "before_logical_work": 636931404,
+  "after_logical_work": 637093426,
+  "logical_work_delta": 162022,
+  "logical_work_cases": {
+    "equal": 40,
+    "increased": 16,
+    "decreased": 11
+  },
+  "helper_exhausted": 35,
+  "scope": "All67 original source-only cases terminal and all8 actual complete helper/whole plans independently heap-replayed. Remaining63 still fail,4controls identical T/peak/fullplan; all original failures/errors/nullplans retained. Logical work total increases162022 with16increases/11decreases/40same; no matched CPU measurement. Freeze negative result and stop this single filter direction; actualdefaultR51 unchanged, no full250/regression/performance promotion."
+}

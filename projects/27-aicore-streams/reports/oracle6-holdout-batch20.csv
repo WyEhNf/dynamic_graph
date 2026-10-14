@@ -1,0 +1,13 @@
+name,n,pass,valid,deadline,T,peak,solve_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,error
+"parallel_oracle_n6_seed20271018",6,1,1,117,117,32,6154,1991,2,1,1995,3986,0,0,""
+"parallel_oracle_n6_seed20271019",6,1,1,105,105,26,37365,11843,2,1,23061,34904,0,0,""
+"parallel_oracle_n6_seed20271020",6,1,1,57,57,32,54297,16454,14,1,42361,58815,0,0,""
+"parallel_oracle_n6_seed20271021",6,1,1,53,53,38,72721,20551,18,1,62703,83254,0,0,""
+"parallel_oracle_n6_seed20271022",6,1,1,82,82,46,37998,11583,2,1,26572,38155,0,0,""
+"parallel_oracle_n6_seed20271023",6,1,1,94,94,17,58542,18194,12,1,41770,59964,0,0,""
+"parallel_oracle_n6_seed20271024",6,1,1,75,75,35,76636,22287,729,1,73080,95367,0,0,""
+"parallel_oracle_n6_seed20271025",6,1,1,93,93,19,47240,15516,11,1,29120,44636,0,0,""
+"parallel_oracle_n6_seed20271026",6,1,1,54,54,24,8278,3058,32,1,3482,6540,0,0,""
+"parallel_oracle_n6_seed20271027",6,1,1,74,74,37,39092,11301,2,1,28786,40087,0,0,""
+"parallel_oracle_n6_seed20271028",6,1,1,103,103,32,20568,7192,46,1,10440,17632,0,0,""
+"parallel_oracle_n6_seed20271029",6,1,1,65,65,27,68051,19880,8,1,55445,75325,0,0,""

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "actual_continuation_exit_code": 0,
+  "original_runner_exit_code": 1,
+  "original_failure_preserved": true,
+  "source_frozen_files": 441,
+  "acceptance_frozen_files": 3482,
+  "acceptance_bytes": 329642347,
+  "acceptance_manifest_sha256": "5a6a47332f520a375a2037e3c86be0ecabedd4df4d6b6f8b9747d816e0d0cf9e",
+  "build_CTest_counts": {
+    "gnu": 14,
+    "portable": 14,
+    "disabled": 13
+  },
+  "new_comparisons_per_enabled": 8464,
+  "old_comparisons_per_build": 934,
+  "cli_checks": 7,
+  "CLI_full_bytes_compared": 480,
+  "strict_FP_builds": 3,
+  "fresh_resource_records": 16,
+  "report_sha256": "8896ca777a39057454a1973db95dbfebdf7947901624ebb3b791eb3bba3596f0",
+  "source_review_sha256": "96009ed877439a0fd488ff0ffcacf0ba44570cc1fad9230747067bbb0a4d037b",
+  "GNU_exe_sha256": "a95a97d865f7be0942da06b9b35845fd540f88ed05aeaf0bea04d478fbb347e9",
+  "scope": "Actual source-preserving LOAD+LOAD/fallback/disabled functional gates; finite-C historical pipelines retained under auto, explicit fused realC only the N3 CLI. No measured speed gain or arbitrary-C/official grade/default promotion claim."
+}

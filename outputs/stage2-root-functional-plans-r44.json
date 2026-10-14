@@ -1,0 +1,117 @@
+{
+  "reviewed_unix": 1791703625.9977686,
+  "passed": true,
+  "independently_validated": 249,
+  "recovered_records": 6,
+  "suites": [
+    {
+      "suite": "hard",
+      "records": 202,
+      "before_legal": 139,
+      "after_legal": 141,
+      "independently_validated": 141,
+      "recovered": [
+        {
+          "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem0",
+          "T": 3581299,
+          "peak": 2356,
+          "nonempty_streams": 8
+        },
+        {
+          "name": "irregular_consumers_local_k32_ret0_seed20274224_rootmem5",
+          "T": 3581299,
+          "peak": 2376,
+          "nonempty_streams": 8
+        }
+      ],
+      "lost": 0,
+      "evidence": {
+        "input": {
+          "path": "projects/27-aicore-streams/data/hard-corpus-resumed.json",
+          "sha256": "61a7534051d3d6d1ea4c455bb5f841ba4a3be77ec6a2c1819a9bc4689e420325"
+        },
+        "before": {
+          "path": "projects/27-aicore-streams/reports/paired-hard-batch43-1-after.json",
+          "sha256": "7a6a76736e26fb2dd5016df21400f58ed6781819f7d9e117ae8a1b8c75d5b743"
+        },
+        "after": {
+          "path": "projects/27-aicore-streams/reports/hard-functional-batch44.json",
+          "sha256": "81ed6a870abfed443d8a74fe83d407116cc5a99844e6baed55dbb71d7d278f28"
+        }
+      }
+    },
+    {
+      "suite": "forkjoin",
+      "records": 36,
+      "before_legal": 36,
+      "after_legal": 36,
+      "independently_validated": 36,
+      "recovered": [],
+      "lost": 0,
+      "evidence": {
+        "input": {
+          "path": "projects/27-aicore-streams/data/nested-forkjoin-new-batch38.json",
+          "sha256": "5ff191bfccddf86e0d46baa5dbafe488756ecfa7a3dfaaa282aae621cf99559b"
+        },
+        "before": {
+          "path": "projects/27-aicore-streams/reports/paired-forkjoin-batch43-1-after.json",
+          "sha256": "fb80c2f8911415ad73edaab906e240140a26e660fca8a18d46da5513a5b6ec8c"
+        },
+        "after": {
+          "path": "projects/27-aicore-streams/reports/forkjoin-functional-batch44.json",
+          "sha256": "9bb1d8a86102fc4617b49977486eed486947e150e50423d570e6f366c706bd77"
+        }
+      }
+    },
+    {
+      "suite": "heldout",
+      "records": 72,
+      "before_legal": 68,
+      "after_legal": 72,
+      "independently_validated": 72,
+      "recovered": [
+        {
+          "name": "shallow_holdout_seed20344735",
+          "T": 4098704,
+          "peak": 7558,
+          "nonempty_streams": 1
+        },
+        {
+          "name": "shallow_holdout_seed20344737",
+          "T": 639223,
+          "peak": 1440,
+          "nonempty_streams": 1
+        },
+        {
+          "name": "shallow_holdout_seed20344758",
+          "T": 1704759,
+          "peak": 1320,
+          "nonempty_streams": 1
+        },
+        {
+          "name": "shallow_holdout_seed20344770",
+          "T": 787624,
+          "peak": 3815,
+          "nonempty_streams": 8
+        }
+      ],
+      "lost": 0,
+      "evidence": {
+        "input": {
+          "path": "projects/27-aicore-streams/data/shallow-heldout-batch44.json",
+          "sha256": "c1a4ce0fcefcdcba82269e375057bc8828a30d7e04d19b1dd2ffcbaed51d2af1"
+        },
+        "before": {
+          "path": "projects/27-aicore-streams/reports/heldout-before-functional-batch44.json",
+          "sha256": "8c0c02455f0553eb0f2a939ddbb595fffb927945bc395d8f3433c0a3da781e0f"
+        },
+        "after": {
+          "path": "projects/27-aicore-streams/reports/heldout-after-functional-batch44.json",
+          "sha256": "99003a03e64986fa476bc589b742759bc4463f147349ce20ba0b57567670015a"
+        }
+      }
+    }
+  ],
+  "method": "Root independent Python heap-event simulation, no project imports. All249 saved passing plans checked: exact original node coverage, explicit direct cross-stream events, wait/record durations, compressed stream start order, simultaneous completions before allocations, separate core pools, W+O at BEGIN, direct-last-consumer END releases, sink lifetime and T excludes final Record. Arbitrary-precision memory and checked int64 timestamps.",
+  "limitation": "Local synthetic310-input functional evidence.61 original witness-feasible hard cases still fail. These functional binaries use different O2/O3 flags, so no causal performance comparison, default promotion or official score claim."
+}

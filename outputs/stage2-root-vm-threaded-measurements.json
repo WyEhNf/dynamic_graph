@@ -1,0 +1,83 @@
+{
+  "reviewed_unix": 1791712824.0736747,
+  "passed": true,
+  "performance_records": 130,
+  "paired_comparisons": 65,
+  "negative_pairs": 0,
+  "summaries": [
+    {
+      "source": "changed-arithmetic",
+      "median_paired_ratio": 0.473213247360736,
+      "negative_pairs": 0
+    },
+    {
+      "source": "changed-SSA",
+      "median_paired_ratio": 0.4815912745577851,
+      "negative_pairs": 0
+    },
+    {
+      "source": "generic-if-while",
+      "median_paired_ratio": 0.44563120646557874,
+      "negative_pairs": 0
+    },
+    {
+      "source": "int-arithmetic",
+      "median_paired_ratio": 0.5187530938705762,
+      "negative_pairs": 0
+    },
+    {
+      "source": "int-conversion",
+      "median_paired_ratio": 0.45534938368592665,
+      "negative_pairs": 0
+    },
+    {
+      "source": "deep-SSA40",
+      "median_paired_ratio": 0.3965952934274949,
+      "negative_pairs": 0
+    },
+    {
+      "source": "nested-helpers",
+      "median_paired_ratio": 0.4122710888709912,
+      "negative_pairs": 0
+    },
+    {
+      "source": "SSA-conditional",
+      "median_paired_ratio": 0.46679299938109725,
+      "negative_pairs": 0
+    },
+    {
+      "source": "unused-double",
+      "median_paired_ratio": 0.4763554153141227,
+      "negative_pairs": 0
+    },
+    {
+      "source": "fresh-fma-control",
+      "median_paired_ratio": 0.5181275937070495,
+      "negative_pairs": 0
+    },
+    {
+      "source": "fresh-dependent-branches",
+      "median_paired_ratio": 0.4952525757984013,
+      "negative_pairs": 0
+    },
+    {
+      "source": "original-fp-builtin",
+      "median_paired_ratio": 0.4881906225632564,
+      "negative_pairs": 0
+    },
+    {
+      "source": "fresh-carry-fma-plain",
+      "median_paired_ratio": 0.5232602516186766,
+      "negative_pairs": 0
+    }
+  ],
+  "host_busy_percent_range": [
+    4.316546762589928,
+    27.075812274368232
+  ],
+  "evidence": {
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/performance/report.json": "ffad9e7126e737b6fa5133b4f0209a593a45d26e018da8b2fdf41e64cb63b3ee",
+    "projects/19-dynamic-graph/artifacts/stage2-prepared-vm-phase3/performance/run-plan.json": "3dc6440370ee8ed18f4bd8c68690e71f5a25e0ff01718c125904da2dea3d2ec6"
+  },
+  "scope": "Root streaming comparison of all130 whole actualC output files and65 recomputed sameEXE decoded/threaded ratios, cached originalC input/output stream repeats and original source/Metadata/oracle/harness SHA verified. All65 threaded pairs faster, candidate remains isolated pending default/resource integration review. Decode included in compute; backgroundhost activity recorded, no idle or universal result. No threaded N10000 acceptance claim."
+}

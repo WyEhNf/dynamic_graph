@@ -1,0 +1,120 @@
+{
+  "before": {
+    "total": 143,
+    "passed": 143,
+    "failed": 0
+  },
+  "after": {
+    "total": 143,
+    "passed": 143,
+    "failed": 0
+  },
+  "common_cases": 143,
+  "common_solve_us_before": 2781170,
+  "common_solve_us_after": 2267331,
+  "improved_T": 0,
+  "regressed_T": 0,
+  "improved_peak_at_equal_T": 0,
+  "regressed_peak_at_equal_T": 0,
+  "recovered": [],
+  "lost": [],
+  "model_disagreements": 0,
+  "duplicates": 3955,
+  "scales": [
+    {
+      "n": 3,
+      "median_us": 69.5,
+      "max_us": 87
+    },
+    {
+      "n": 6,
+      "median_us": 99,
+      "max_us": 99
+    },
+    {
+      "n": 8,
+      "median_us": 28.5,
+      "max_us": 59
+    },
+    {
+      "n": 12,
+      "median_us": 58.0,
+      "max_us": 211
+    },
+    {
+      "n": 16,
+      "median_us": 130.0,
+      "max_us": 620
+    },
+    {
+      "n": 18,
+      "median_us": 865,
+      "max_us": 865
+    },
+    {
+      "n": 32,
+      "median_us": 1159,
+      "max_us": 2098
+    },
+    {
+      "n": 64,
+      "median_us": 3454,
+      "max_us": 5260
+    },
+    {
+      "n": 96,
+      "median_us": 1598,
+      "max_us": 1598
+    },
+    {
+      "n": 128,
+      "median_us": 9585,
+      "max_us": 16115
+    },
+    {
+      "n": 256,
+      "median_us": 20677,
+      "max_us": 32245
+    },
+    {
+      "n": 512,
+      "median_us": 26919,
+      "max_us": 62923
+    },
+    {
+      "n": 768,
+      "median_us": 5002,
+      "max_us": 5002
+    },
+    {
+      "n": 1024,
+      "median_us": 18661,
+      "max_us": 45213
+    },
+    {
+      "n": 2048,
+      "median_us": 38221,
+      "max_us": 73935
+    },
+    {
+      "n": 3072,
+      "median_us": 18450,
+      "max_us": 18450
+    },
+    {
+      "n": 4096,
+      "median_us": 36906.0,
+      "max_us": 57753
+    },
+    {
+      "n": 9216,
+      "median_us": 52252,
+      "max_us": 52252
+    },
+    {
+      "n": 10000,
+      "median_us": 93969.5,
+      "max_us": 147992
+    }
+  ]
+}

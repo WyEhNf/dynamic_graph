@@ -1,0 +1,135 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand*\HyPL@Entry[1]{}
+\citation{official}
+\citation{polly}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\contentsline {section}{\numberline {1}项目目标与题面契约}{1}{section.1}\protected@file@percent }
+\citation{buttari}
+\citation{lapack}
+\citation{parsec}
+\citation{starpu}
+\citation{llvmfp}
+\citation{clangfp}
+\citation{repro}
+\@writefile{toc}{\contentsline {section}{\numberline {2}重要工作及其对本项目的影响}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}LLVM与多面体分析}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}任务化线性代数}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}确定性FP64与源码一致性}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}算法与实现}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}从实际源到可执行Metadata}{2}{subsection.3.1}\protected@file@percent }
+\citation{gccx86}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}参数化块任务图}{3}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}缓存、独立累加器与CPU SIMD}{3}{subsection.3.3}\protected@file@percent }
+\gdef \LT@i {\LT@entry 
+    {1}{116.81102pt}\LT@entry 
+    {1}{46.00002pt}\LT@entry 
+    {3}{66.00002pt}\LT@entry 
+    {1}{162.33542pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}IO和失败处理}{4}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}验证方法与已完成成果}{4}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}独立参考与数据集}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{本轮里程碑；各批证据独立保存，不合并成官方测试数量}}{4}{table.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}第一批缓存与调度收益}{5}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 块DAG第一批，$B=32$；单位ms，计算包含分配与调度}}{6}{table.2}\protected@file@percent }
+\newlabel{tab:phase1}{{2}{6}{块DAG第一批，$B=32$；单位ms，计算包含分配与调度}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}闭式图的收益和限制}{6}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}独立累加器与SIMD}{6}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}对角因子缓存与紧凑Metadata}{6}{subsection.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}就绪队列、两行复用与自动物理块}{7}{subsection.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 两行复用与选择通知，同批轮换；计算ms}}{7}{table.3}\protected@file@percent }
+\newlabel{tab:rows}{{3}{7}{两行复用与选择通知，同批轮换；计算ms}{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}helper求值、四行复用与线程相关成本策略}{7}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}分块边界的纯整数选择helper}{8}{subsection.4.8}\protected@file@percent }
+\citation{lapackband}
+\citation{winmemory}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}数据驱动带状专门化与新稠密工作负载}{9}{subsection.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}4线程以上伸缩与真实RAM峰值}{9}{subsection.4.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 伸缩批次计算中位ms，固定B64}}{10}{table.4}\protected@file@percent }
+\newlabel{tab:scaling}{{4}{10}{伸缩批次计算中位ms，固定B64}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}P/T独立位置SIMD的收益与负结果}{10}{subsection.4.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.12}完整线程策略验证}{10}{subsection.4.12}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces 完整策略计算ms；普通dense与M3流分别列出}}{11}{table.5}\protected@file@percent }
+\newlabel{tab:thread-policy}{{5}{11}{完整策略计算ms；普通dense与M3流分别列出}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.13}有界唤醒的负结果}{11}{subsection.4.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.14}因子缓存初始化与原通知移到锁外}{12}{subsection.4.14}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces 缓存初始化实验；compute毫秒}}{12}{table.6}\protected@file@percent }
+\newlabel{tab:lazy}{{6}{12}{缓存初始化实验；compute毫秒}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.15}连续列块工作区的负结果与导出成本}{12}{subsection.4.15}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces 连续列块候选同批中位；全部毫秒}}{13}{table.7}\protected@file@percent }
+\newlabel{tab:column}{{7}{13}{连续列块候选同批中位；全部毫秒}{table.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.16}混合布局与位保持导出的独立对照}{13}{subsection.4.16}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces 混合布局批次compute中位；毫秒}}{14}{table.8}\protected@file@percent }
+\newlabel{tab:hybridtiles}{{8}{14}{混合布局批次compute中位；毫秒}{table.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.17}当前panel惰性图：状态节省与性能边界}{14}{subsection.4.17}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces 同shape的逻辑任务与常驻状态；字节仅为任务状态和panel索引}}{15}{table.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.18}当前等待计数与因子行前缀：负结果亦保留}{15}{subsection.4.18}\protected@file@percent }
+\gdef \LT@ii {\LT@entry 
+    {3}{58.58002pt}\LT@entry 
+    {1}{28.00002pt}\LT@entry 
+    {3}{50.78001pt}\LT@entry 
+    {3}{50.78001pt}\LT@entry 
+    {3}{46.78001pt}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{同批compute中位：状态减少未形成全局稳定收益}}{16}{table.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.19}单worker闭式拓扑遍历}{16}{subsection.4.19}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces 单worker整版本对照；4线程为未改算法的控制观测}}{17}{table.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.20}输入所有权复用：约800MB实测峰值节省}{17}{subsection.4.20}\protected@file@percent }
+\gdef \LT@iii {\LT@entry 
+    {3}{33.37502pt}\LT@entry 
+    {1}{43.99591pt}\LT@entry 
+    {1}{62.49045pt}\LT@entry 
+    {1}{64.46146pt}\LT@entry 
+    {3}{42.41911pt}\LT@entry 
+    {3}{36.41911pt}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{输入复用：吞吐和实际工作集独立记录}}{18}{table.12}\protected@file@percent }
+\gdef \LT@iv {\LT@entry 
+    {3}{33.37502pt}\LT@entry 
+    {1}{43.99591pt}\LT@entry 
+    {1}{64.46146pt}\LT@entry 
+    {1}{66.4434pt}\LT@entry 
+    {3}{42.41911pt}\LT@entry 
+    {1}{37.03232pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.21}auto延迟分配与最终双配置选择}{19}{subsection.4.21}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{auto整配置对照：明显吞吐负结果亦保留}}{19}{table.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.22}最终构建与冻结验收}{20}{subsection.4.22}\protected@file@percent }
+\citation{avx2doc}
+\gdef \LT@v {\LT@entry 
+    {3}{33.37502pt}\LT@entry 
+    {1}{43.99591pt}\LT@entry 
+    {1}{62.49045pt}\LT@entry 
+    {1}{64.61475pt}\LT@entry 
+    {1}{68.8962pt}\LT@entry 
+    {1}{65.0205pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.23}历史整版本对照的实现限界}{21}{subsection.4.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.24}同源有限值与结构扫描：局部收益和负结果}{21}{subsection.4.24}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{同源扫描对照，一般稠密负结果保留}}{21}{table.14}\protected@file@percent }
+\citation{wincpu}
+\citation{winprocesscpu}
+\@writefile{toc}{\contentsline {section}{\numberline {5}工作负载、硬件与测试时间成本}{22}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}本机环境和能力需求}{22}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces 一般稠密单矩阵工作量与数据规模；十进制MB/GB}}{22}{table.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}计时口径}{23}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}结构化最大Shape与一般稠密最大Shape}{23}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}本地语义限界与后续工作余量}{23}{section.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces 后续工作余量：单人估算，非实测工期或交付承诺}}{24}{table.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}证据与复现}{24}{appendix.A}\protected@file@percent }
+\gdef \LT@vi {\LT@entry 
+    {1}{91.35826pt}\LT@entry 
+    {1}{361.65944pt}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{历史和最终二进制SHA256}}{25}{table.17}\protected@file@percent }
+\bibcite{official}{1}
+\bibcite{polly}{2}
+\bibcite{buttari}{3}
+\bibcite{lapack}{4}
+\bibcite{parsec}{5}
+\bibcite{starpu}{6}
+\bibcite{llvmfp}{7}
+\bibcite{clangfp}{8}
+\bibcite{repro}{9}
+\bibcite{gccx86}{10}
+\bibcite{lapackband}{11}
+\bibcite{winmemory}{12}
+\bibcite{avx2doc}{13}
+\bibcite{wincpu}{14}
+\bibcite{winprocesscpu}{15}
+\gdef \@abspage@last{27}

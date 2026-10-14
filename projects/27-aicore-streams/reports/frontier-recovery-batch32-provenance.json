@@ -1,0 +1,29 @@
+{
+  "record_count": 69,
+  "source_report": "reports/final-hard-batch31.json",
+  "source_report_sha256": "0ff25c23e2de7dd586a4f5a9484bde7102245faf975bc5786a818334f0e2ab77",
+  "source_inputs": {
+    "data/irregular-consumers.json": "e599343645da0a960b412bab4b278aa9ee13b134f58a4e8f7495350b167f716d",
+    "data/irregular-consumers-holdout.json": "a1750b629ced2aeb7fbfa1b39b7d04d98511d65d01e8868858bf3fdae7dfa9d7",
+    "data/lifetime-locality.json": "db658820627631f662b518b48f068976d75acc6c7388ec99d2901af19b543be3",
+    "data/lifetime-locality-holdout.json": "0a91a91ac847d35c45a0a0375ab48d7df5b4928d4b469d3854784d8dfc07f4fd",
+    "data/structural-blind-batch26.json": "e327a93fda0a1728a8e03b8d1f8666b303df1a5120c4f2f5c46ea4985119d1e7",
+    "data/wide-unseen-batch28.json": "e6c5d646cba516ca31b70eb5941a373ab50dd601f76b42610b15972b04b33efd",
+    "data/recursive-sharing-unseen-batch29.json": "06b21c4ef2f6d63fa69d77bcf90838434b510e74a50c722452f928f439d26a01",
+    "data/projection-unseen-batch30.json": "0d68886004dc3e2e6e86b5e6184aa9054a6cf6af8e8e4e73fcd1d04a54b48950"
+  },
+  "selection": "All 69 old failures, exact case objects and unchanged witness/deadline; no topology or scoring changes",
+  "suite": "data\\frontier-recovery-batch32.json",
+  "suite_sha256": "75497f2ccc0380dc5b906af6982d57e896e6613838a586b9ce7586587009ed54",
+  "solution_sha256": "87cdb075538490835e87ddfdac1336a6ccdd84e71d05a18f444dd7f387a00ba4",
+  "exe_sha256": "482fad88f8d8326e3cc9e052f66ba36de0cdcdf149d6296955472a2758abbc88",
+  "summary": {
+    "total": 69,
+    "passed": 0,
+    "failed": 69
+  },
+  "elapsed_wall_seconds": 21.74803839996457,
+  "recovered": [],
+  "all_solve_us": 20262455,
+  "all_thread_cpu_us": 18703125
+}

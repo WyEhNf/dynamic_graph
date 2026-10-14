@@ -1,0 +1,4010 @@
+{
+  "status": "input-only original-DAG necessary bounds and classifier coverage; no solving/no performance/no promotion",
+  "summary": {
+    "total": 58,
+    "serial_meets_deadline": 58,
+    "parallel_required": 0,
+    "projection_applicable": 32,
+    "projection_inapplicable_reasons": {
+      "targets>512": 8,
+      "targets<2": 18
+    },
+    "applicable_exhausted": 31,
+    "memory_lower_bound_violations": 0,
+    "time_lower_bound_violations": 0,
+    "stronger_than_direct": 4,
+    "applicable_with_small_complete_groups": 32,
+    "with_external_small_group_producers": 12
+  },
+  "cases": [
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270617",
+      "input_sha": "960120cd3b28706e0cb297f72d2187f1e29b76dfd8337006a4de4acb0581d496",
+      "n": 532,
+      "edges": 1281,
+      "max_indegree": 12,
+      "max_outdegree": 343,
+      "roots": 1,
+      "sinks": 188,
+      "zero_output": 189,
+      "core_types": {
+        "AIV": 246,
+        "AIC": 286
+      },
+      "memory_limit": 2202,
+      "deadline_us": 10279661,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1779,
+        "strict_ancestor_future_direct_overlap": 1779,
+        "strict_overlap_at": 1069324171,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1779,
+        "slack": 423
+      },
+      "necessary_time": {
+        "critical_path": 99569,
+        "pool_core_work": {
+          "AIC": 3815779,
+          "AIV": 2094065
+        },
+        "pool_strict_majority": {
+          "AIC": 3371697,
+          "AIV": 1669029
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3815779,
+        "slack": 6463882,
+        "serial_time": 10279661,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 188,
+        "median_pass": 188,
+        "workspace_greater_than_all_parents": 188,
+        "targets": 188,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 231,
+          "5..16": 39
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1314,
+        "unit": 38471,
+        "maximum_evaluations_at16M": 415
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 4363,
+        "best_gap_above_capacity": 2161,
+        "evaluations": 402,
+        "charged_work": 15989805,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270618",
+      "input_sha": "5df74871e36d67e54ba3ec00681675ef2f594756edd3fade73cf9e891bc8d998",
+      "n": 511,
+      "edges": 1657,
+      "max_indegree": 12,
+      "max_outdegree": 235,
+      "roots": 3,
+      "sinks": 159,
+      "zero_output": 32,
+      "core_types": {
+        "AIV": 224,
+        "AIC": 287
+      },
+      "memory_limit": 2472,
+      "deadline_us": 8900874,
+      "necessary_memory": {
+        "individual": 499,
+        "direct_parent_overlap": 1696,
+        "strict_ancestor_future_direct_overlap": 1696,
+        "strict_overlap_at": 1599052342,
+        "strict_overlap_producer_count": 14,
+        "sink_retention": 400,
+        "lower_bound": 1696,
+        "slack": 776
+      },
+      "necessary_time": {
+        "critical_path": 382651,
+        "pool_core_work": {
+          "AIC": 3537121,
+          "AIV": 1565006
+        },
+        "pool_strict_majority": {
+          "AIC": 3307330,
+          "AIV": 1451643
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3537121,
+        "slack": 5363753,
+        "serial_time": 8900874,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 441,
+        "median_pass": 192,
+        "workspace_greater_than_all_parents": 311,
+        "targets": 192,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 214,
+          "5..16": 38
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1577,
+        "unit": 40609,
+        "maximum_evaluations_at16M": 394
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10649,
+        "best_gap_above_capacity": 8177,
+        "evaluations": 380,
+        "charged_work": 15978387,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270628",
+      "input_sha": "cb857e7cc9f6abaaae406043cb47374d30f5c5d8b413105a41a3d18b963bb650",
+      "n": 512,
+      "edges": 2304,
+      "max_indegree": 29,
+      "max_outdegree": 219,
+      "roots": 4,
+      "sinks": 155,
+      "zero_output": 44,
+      "core_types": {
+        "AIV": 221,
+        "AIC": 291
+      },
+      "memory_limit": 6130,
+      "deadline_us": 9588880,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 3362,
+        "strict_ancestor_future_direct_overlap": 3362,
+        "strict_overlap_at": 83518205,
+        "strict_overlap_producer_count": 29,
+        "sink_retention": 349,
+        "lower_bound": 3362,
+        "slack": 2768
+      },
+      "necessary_time": {
+        "critical_path": 378996,
+        "pool_core_work": {
+          "AIC": 3839436,
+          "AIV": 1512183
+        },
+        "pool_strict_majority": {
+          "AIC": 3170960,
+          "AIV": 1371327
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3839436,
+        "slack": 5749444,
+        "serial_time": 9588880,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 484,
+        "median_pass": 188,
+        "workspace_greater_than_all_parents": 318,
+        "targets": 188,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 118,
+          "2..4": 139
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 2197,
+        "unit": 40357,
+        "maximum_evaluations_at16M": 396
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 14970,
+        "best_gap_above_capacity": 8840,
+        "evaluations": 383,
+        "charged_work": 15985989,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret0_seed20299417",
+      "input_sha": "aca9e68a3ffe4810ead84cfa05da312e4e60adebf24c8acc98792a8cd0150a81",
+      "n": 2125,
+      "edges": 5228,
+      "max_indegree": 11,
+      "max_outdegree": 1358,
+      "roots": 1,
+      "sinks": 766,
+      "zero_output": 767,
+      "core_types": {
+        "AIV": 936,
+        "AIC": 1189
+      },
+      "memory_limit": 2379,
+      "deadline_us": 38799355,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1684,
+        "strict_ancestor_future_direct_overlap": 1684,
+        "strict_overlap_at": 658787150,
+        "strict_overlap_producer_count": 10,
+        "sink_retention": 0,
+        "lower_bound": 1684,
+        "slack": 695
+      },
+      "necessary_time": {
+        "critical_path": 99711,
+        "pool_core_work": {
+          "AIC": 14416878,
+          "AIV": 7340170
+        },
+        "pool_strict_majority": {
+          "AIC": 12209247,
+          "AIV": 6577666
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 14416878,
+        "slack": 24382477,
+        "serial_time": 38799355,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 766,
+        "median_pass": 766,
+        "workspace_greater_than_all_parents": 766,
+        "targets": 766,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 918,
+          "5..16": 191
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret1_seed20299418",
+      "input_sha": "ff95e0b3bda7386bad96eee731c364d82eec478888d34ab72ee07a5b58efa97c",
+      "n": 2139,
+      "edges": 6526,
+      "max_indegree": 11,
+      "max_outdegree": 1027,
+      "roots": 2,
+      "sinks": 648,
+      "zero_output": 145,
+      "core_types": {
+        "AIC": 1210,
+        "AIV": 929
+      },
+      "memory_limit": 3648,
+      "deadline_us": 38402550,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 1687,
+        "strict_ancestor_future_direct_overlap": 1687,
+        "strict_overlap_at": 1121959773,
+        "strict_overlap_producer_count": 11,
+        "sink_retention": 1572,
+        "lower_bound": 1687,
+        "slack": 1961
+      },
+      "necessary_time": {
+        "critical_path": 730643,
+        "pool_core_work": {
+          "AIC": 14916073,
+          "AIV": 6869796
+        },
+        "pool_strict_majority": {
+          "AIC": 13338059,
+          "AIV": 6240950
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 14916073,
+        "slack": 23486477,
+        "serial_time": 38402550,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 1769,
+        "median_pass": 778,
+        "workspace_greater_than_all_parents": 1136,
+        "targets": 778,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 898,
+          "5..16": 202
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20299427",
+      "input_sha": "b1bac708bb97553e0d249e52978b0927738717aebfddef3a03ce1da84a89ad37",
+      "n": 2077,
+      "edges": 8348,
+      "max_indegree": 23,
+      "max_outdegree": 904,
+      "roots": 3,
+      "sinks": 758,
+      "zero_output": 761,
+      "core_types": {
+        "AIC": 1143,
+        "AIV": 934
+      },
+      "memory_limit": 7264,
+      "deadline_us": 36550918,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 2914,
+        "strict_ancestor_future_direct_overlap": 2914,
+        "strict_overlap_at": 837023969,
+        "strict_overlap_producer_count": 23,
+        "sink_retention": 0,
+        "lower_bound": 2914,
+        "slack": 4350
+      },
+      "necessary_time": {
+        "critical_path": 99882,
+        "pool_core_work": {
+          "AIC": 12706331,
+          "AIV": 7698131
+        },
+        "pool_strict_majority": {
+          "AIC": 11071953,
+          "AIV": 7252352
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 12706331,
+        "slack": 23844587,
+        "serial_time": 36550918,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 1682,
+        "median_pass": 758,
+        "workspace_greater_than_all_parents": 1527,
+        "targets": 758,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 581,
+          "5..16": 503
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20299428",
+      "input_sha": "2d1eb317a2b9bd7a1dcaa211563913fabb20ab330c01cdaec47fe9005fe7c6d8",
+      "n": 2085,
+      "edges": 9410,
+      "max_indegree": 20,
+      "max_outdegree": 843,
+      "roots": 4,
+      "sinks": 633,
+      "zero_output": 130,
+      "core_types": {
+        "AIC": 1165,
+        "AIV": 920
+      },
+      "memory_limit": 7899,
+      "deadline_us": 37441406,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 2415,
+        "strict_ancestor_future_direct_overlap": 2415,
+        "strict_overlap_at": 818242401,
+        "strict_overlap_producer_count": 19,
+        "sink_retention": 1513,
+        "lower_bound": 2415,
+        "slack": 5484
+      },
+      "necessary_time": {
+        "critical_path": 952333,
+        "pool_core_work": {
+          "AIC": 13527366,
+          "AIV": 7445220
+        },
+        "pool_strict_majority": {
+          "AIC": 11968906,
+          "AIV": 6225738
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 13527366,
+        "slack": 23914040,
+        "serial_time": 37441406,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 1892,
+        "median_pass": 764,
+        "workspace_greater_than_all_parents": 1237,
+        "targets": 764,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 595,
+          "5..16": 491
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k24_ret1_seed20273428",
+      "input_sha": "c4329b9c336d7c70108ee5ec1059fff0cbc8e57b6a565fd1d706d2210a9d0f4e",
+      "n": 129,
+      "edges": 437,
+      "max_indegree": 17,
+      "max_outdegree": 81,
+      "roots": 1,
+      "sinks": 38,
+      "zero_output": 12,
+      "core_types": {
+        "AIV": 60,
+        "AIC": 69
+      },
+      "memory_limit": 3194,
+      "deadline_us": 2640319,
+      "necessary_memory": {
+        "individual": 493,
+        "direct_parent_overlap": 1895,
+        "strict_ancestor_future_direct_overlap": 1918,
+        "strict_overlap_at": 1320383116,
+        "strict_overlap_producer_count": 15,
+        "sink_retention": 83,
+        "lower_bound": 1918,
+        "slack": 1276
+      },
+      "necessary_time": {
+        "critical_path": 409822,
+        "pool_core_work": {
+          "AIC": 956167,
+          "AIV": 441171
+        },
+        "pool_strict_majority": {
+          "AIC": 787949,
+          "AIV": 285596
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 956167,
+        "slack": 1684152,
+        "serial_time": 2640319,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 90,
+        "median_pass": 47,
+        "workspace_greater_than_all_parents": 47,
+        "targets": 47,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 44,
+          "5..16": 23
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 407,
+        "unit": 3182,
+        "maximum_evaluations_at16M": 5028
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 3364,
+        "best_gap_above_capacity": 170,
+        "evaluations": 4724,
+        "charged_work": 15064520,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280617",
+      "input_sha": "c5a5d3d38055ed481925fc0a7105ef4f7e07b9f4d4f4aadbd8dd4452362cf229",
+      "n": 522,
+      "edges": 1239,
+      "max_indegree": 11,
+      "max_outdegree": 323,
+      "roots": 1,
+      "sinks": 198,
+      "zero_output": 199,
+      "core_types": {
+        "AIV": 226,
+        "AIC": 296
+      },
+      "memory_limit": 2667,
+      "deadline_us": 8700514,
+      "necessary_memory": {
+        "individual": 499,
+        "direct_parent_overlap": 1810,
+        "strict_ancestor_future_direct_overlap": 1810,
+        "strict_overlap_at": 1321795443,
+        "strict_overlap_producer_count": 11,
+        "sink_retention": 0,
+        "lower_bound": 1810,
+        "slack": 857
+      },
+      "necessary_time": {
+        "critical_path": 99057,
+        "pool_core_work": {
+          "AIC": 3267678,
+          "AIV": 1499512
+        },
+        "pool_strict_majority": {
+          "AIC": 2713382,
+          "AIV": 1157978
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3267678,
+        "slack": 5432836,
+        "serial_time": 8700514,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 198,
+        "median_pass": 198,
+        "workspace_greater_than_all_parents": 198,
+        "targets": 198,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 52,
+          "2..4": 212
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1312,
+        "unit": 42277,
+        "maximum_evaluations_at16M": 378
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 4471,
+        "best_gap_above_capacity": 1804,
+        "evaluations": 364,
+        "charged_work": 15970668,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280618",
+      "input_sha": "e06365cca2878bb36cf4cd9b31012c65f5a85ae2e4b2d81394a67bfdfde618fc",
+      "n": 525,
+      "edges": 1849,
+      "max_indegree": 11,
+      "max_outdegree": 207,
+      "roots": 4,
+      "sinks": 152,
+      "zero_output": 31,
+      "core_types": {
+        "AIC": 291,
+        "AIV": 234
+      },
+      "memory_limit": 2526,
+      "deadline_us": 10576443,
+      "necessary_memory": {
+        "individual": 498,
+        "direct_parent_overlap": 1447,
+        "strict_ancestor_future_direct_overlap": 1447,
+        "strict_overlap_at": 478926197,
+        "strict_overlap_producer_count": 15,
+        "sink_retention": 378,
+        "lower_bound": 1447,
+        "slack": 1079
+      },
+      "necessary_time": {
+        "critical_path": 426214,
+        "pool_core_work": {
+          "AIC": 3930558,
+          "AIV": 1750844
+        },
+        "pool_strict_majority": {
+          "AIC": 3456555,
+          "AIV": 1552630
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3930558,
+        "slack": 6645885,
+        "serial_time": 10576443,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 452,
+        "median_pass": 188,
+        "workspace_greater_than_all_parents": 276,
+        "targets": 188,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 236,
+          "5..16": 40
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1740,
+        "unit": 39458,
+        "maximum_evaluations_at16M": 405
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 12411,
+        "best_gap_above_capacity": 9885,
+        "evaluations": 392,
+        "charged_work": 15992058,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret0_seed20309417",
+      "input_sha": "4cae21354ad0231fd008c64176ac4685f3c7389f5b15d4e3b2e3e6456e95fcd4",
+      "n": 2124,
+      "edges": 5165,
+      "max_indegree": 11,
+      "max_outdegree": 1358,
+      "roots": 1,
+      "sinks": 765,
+      "zero_output": 766,
+      "core_types": {
+        "AIC": 1152,
+        "AIV": 972
+      },
+      "memory_limit": 2672,
+      "deadline_us": 36867193,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1702,
+        "strict_ancestor_future_direct_overlap": 1702,
+        "strict_overlap_at": 517655843,
+        "strict_overlap_producer_count": 10,
+        "sink_retention": 0,
+        "lower_bound": 1702,
+        "slack": 970
+      },
+      "necessary_time": {
+        "critical_path": 99949,
+        "pool_core_work": {
+          "AIC": 13266734,
+          "AIV": 7475345
+        },
+        "pool_strict_majority": {
+          "AIC": 11256791,
+          "AIV": 6442086
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 13266734,
+        "slack": 23600459,
+        "serial_time": 36867193,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 765,
+        "median_pass": 765,
+        "workspace_greater_than_all_parents": 765,
+        "targets": 765,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 905,
+          "5..16": 190
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k384_ret1_seed20309418",
+      "input_sha": "ff3dbfe0dccae3a7d9173402bad7775136e71a261c9fbcf7a6cda4b90797470b",
+      "n": 2146,
+      "edges": 7270,
+      "max_indegree": 12,
+      "max_outdegree": 960,
+      "roots": 3,
+      "sinks": 661,
+      "zero_output": 146,
+      "core_types": {
+        "AIV": 992,
+        "AIC": 1154
+      },
+      "memory_limit": 3783,
+      "deadline_us": 39037367,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 1597,
+        "strict_ancestor_future_direct_overlap": 1597,
+        "strict_overlap_at": 395494405,
+        "strict_overlap_producer_count": 10,
+        "sink_retention": 1625,
+        "lower_bound": 1625,
+        "slack": 2158
+      },
+      "necessary_time": {
+        "critical_path": 585039,
+        "pool_core_work": {
+          "AIC": 13762637,
+          "AIV": 7491910
+        },
+        "pool_strict_majority": {
+          "AIC": 12024078,
+          "AIV": 6179532
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 13762637,
+        "slack": 25274730,
+        "serial_time": 39037367,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 1865,
+        "median_pass": 776,
+        "workspace_greater_than_all_parents": 1277,
+        "targets": 776,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 926,
+          "5..16": 197
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret0_seed20309427",
+      "input_sha": "7aab9ea9691f519bc0edbbf979915cad09c9887e64eef920e2f2c01e942ef28a",
+      "n": 2103,
+      "edges": 8291,
+      "max_indegree": 19,
+      "max_outdegree": 934,
+      "roots": 3,
+      "sinks": 752,
+      "zero_output": 755,
+      "core_types": {
+        "AIV": 923,
+        "AIC": 1180
+      },
+      "memory_limit": 7333,
+      "deadline_us": 39533924,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 2776,
+        "strict_ancestor_future_direct_overlap": 2776,
+        "strict_overlap_at": 139043297,
+        "strict_overlap_producer_count": 17,
+        "sink_retention": 0,
+        "lower_bound": 2776,
+        "slack": 4557
+      },
+      "necessary_time": {
+        "critical_path": 99908,
+        "pool_core_work": {
+          "AIC": 15628395,
+          "AIV": 7351803
+        },
+        "pool_strict_majority": {
+          "AIC": 14263382,
+          "AIV": 6645792
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 15628395,
+        "slack": 23905529,
+        "serial_time": 39533924,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 1676,
+        "median_pass": 752,
+        "workspace_greater_than_all_parents": 1521,
+        "targets": 752,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 625,
+          "5..16": 496
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k384_ret1_seed20309428",
+      "input_sha": "06034442200bab23c2987bed0c5fa76c32cf9fd5b1e37ac1c9cc5164ac33b429",
+      "n": 2104,
+      "edges": 9674,
+      "max_indegree": 20,
+      "max_outdegree": 886,
+      "roots": 4,
+      "sinks": 621,
+      "zero_output": 116,
+      "core_types": {
+        "AIC": 1182,
+        "AIV": 922
+      },
+      "memory_limit": 8521,
+      "deadline_us": 39540387,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 2665,
+        "strict_ancestor_future_direct_overlap": 2665,
+        "strict_overlap_at": 1799478841,
+        "strict_overlap_producer_count": 18,
+        "sink_retention": 1566,
+        "lower_bound": 2665,
+        "slack": 5856
+      },
+      "necessary_time": {
+        "critical_path": 716201,
+        "pool_core_work": {
+          "AIC": 14565893,
+          "AIV": 7968778
+        },
+        "pool_strict_majority": {
+          "AIC": 13247374,
+          "AIV": 7322756
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 14565893,
+        "slack": 24974494,
+        "serial_time": 39540387,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 1912,
+        "median_pass": 750,
+        "workspace_greater_than_all_parents": 1228,
+        "targets": 750,
+        "applicable": false,
+        "inapplicable_reason": "targets>512",
+        "complete_direct_producer_groups": {
+          "2..4": 604,
+          "5..16": 505
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem0",
+      "input_sha": "dacbb0f2a537128706d73611d1c0e54a8faf30947cefb224e1a8d7b96449c680",
+      "n": 536,
+      "edges": 1637,
+      "max_indegree": 12,
+      "max_outdegree": 243,
+      "roots": 3,
+      "sinks": 181,
+      "zero_output": 184,
+      "core_types": {
+        "AIC": 329,
+        "AIV": 207
+      },
+      "memory_limit": 2496,
+      "deadline_us": 10981622,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1865,
+        "strict_ancestor_future_direct_overlap": 1865,
+        "strict_overlap_at": 1418311214,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1865,
+        "slack": 631
+      },
+      "necessary_time": {
+        "critical_path": 99255,
+        "pool_core_work": {
+          "AIC": 4585091,
+          "AIV": 2015911
+        },
+        "pool_strict_majority": {
+          "AIC": 4264945,
+          "AIV": 1938956
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4585091,
+        "slack": 6396531,
+        "serial_time": 10981622,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 395,
+        "median_pass": 181,
+        "workspace_greater_than_all_parents": 369,
+        "targets": 181,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 235,
+          "5..16": 36
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1587,
+        "unit": 36521,
+        "maximum_evaluations_at16M": 438
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 4397,
+        "best_gap_above_capacity": 1901,
+        "evaluations": 424,
+        "charged_work": 15970996,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20270624_rootmem5",
+      "input_sha": "5436bc00f38ed05eea7be43d0e93852d38681ef813e88368f1eff62213c62025",
+      "n": 536,
+      "edges": 1637,
+      "max_indegree": 12,
+      "max_outdegree": 243,
+      "roots": 3,
+      "sinks": 181,
+      "zero_output": 181,
+      "core_types": {
+        "AIC": 329,
+        "AIV": 207
+      },
+      "memory_limit": 2511,
+      "deadline_us": 10981622,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1865,
+        "strict_ancestor_future_direct_overlap": 1865,
+        "strict_overlap_at": 1418311214,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1865,
+        "slack": 646
+      },
+      "necessary_time": {
+        "critical_path": 99255,
+        "pool_core_work": {
+          "AIC": 4585091,
+          "AIV": 2015911
+        },
+        "pool_strict_majority": {
+          "AIC": 4264945,
+          "AIV": 1938956
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4585091,
+        "slack": 6396531,
+        "serial_time": 10981622,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 395,
+        "median_pass": 181,
+        "workspace_greater_than_all_parents": 369,
+        "targets": 181,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 235,
+          "5..16": 36
+        },
+        "excluded_external_user_producers": {
+          ">16": 3
+        },
+        "total_closure_nodes": 1587,
+        "unit": 36521,
+        "maximum_evaluations_at16M": 438
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 4412,
+        "best_gap_above_capacity": 1901,
+        "evaluations": 424,
+        "charged_work": 15970996,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20270625_rootmem5",
+      "input_sha": "eefaf86f020eac8498e13dea8b9bb62e7611061743c1ca0265902685ebbecbe5",
+      "n": 508,
+      "edges": 1863,
+      "max_indegree": 11,
+      "max_outdegree": 223,
+      "roots": 4,
+      "sinks": 151,
+      "zero_output": 29,
+      "core_types": {
+        "AIC": 279,
+        "AIV": 229
+      },
+      "memory_limit": 2587,
+      "deadline_us": 9252200,
+      "necessary_memory": {
+        "individual": 499,
+        "direct_parent_overlap": 1560,
+        "strict_ancestor_future_direct_overlap": 1580,
+        "strict_overlap_at": 831721518,
+        "strict_overlap_producer_count": 15,
+        "sink_retention": 376,
+        "lower_bound": 1580,
+        "slack": 1007
+      },
+      "necessary_time": {
+        "critical_path": 422842,
+        "pool_core_work": {
+          "AIC": 3254665,
+          "AIV": 1995557
+        },
+        "pool_strict_majority": {
+          "AIC": 2897528,
+          "AIV": 1773407
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3254665,
+        "slack": 5997535,
+        "serial_time": 9252200,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 16,
+        "indegree_at_least2": 456,
+        "median_pass": 177,
+        "workspace_greater_than_all_parents": 308,
+        "targets": 177,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 219,
+          "5..16": 34
+        },
+        "excluded_external_user_producers": {
+          ">16": 4
+        },
+        "total_closure_nodes": 1660,
+        "unit": 35360,
+        "maximum_evaluations_at16M": 452
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 11668,
+        "best_gap_above_capacity": 9081,
+        "evaluations": 439,
+        "charged_work": 15987601,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem0",
+      "input_sha": "275d1329b2bc1401fe16ad21b820f4205de6dd1074037d040939548014b9d9ad",
+      "n": 539,
+      "edges": 1702,
+      "max_indegree": 27,
+      "max_outdegree": 337,
+      "roots": 1,
+      "sinks": 201,
+      "zero_output": 202,
+      "core_types": {
+        "AIC": 295,
+        "AIV": 244
+      },
+      "memory_limit": 6438,
+      "deadline_us": 9447437,
+      "necessary_memory": {
+        "individual": 493,
+        "direct_parent_overlap": 3432,
+        "strict_ancestor_future_direct_overlap": 3432,
+        "strict_overlap_at": 1382160196,
+        "strict_overlap_producer_count": 27,
+        "sink_retention": 0,
+        "lower_bound": 3432,
+        "slack": 3006
+      },
+      "necessary_time": {
+        "critical_path": 99724,
+        "pool_core_work": {
+          "AIC": 3639681,
+          "AIV": 1532261
+        },
+        "pool_strict_majority": {
+          "AIC": 2940625,
+          "AIV": 1368147
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3639681,
+        "slack": 5807756,
+        "serial_time": 9447437,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 201,
+        "median_pass": 201,
+        "workspace_greater_than_all_parents": 201,
+        "targets": 201,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 165,
+          "5..16": 114
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1767,
+        "unit": 44409,
+        "maximum_evaluations_at16M": 360
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10464,
+        "best_gap_above_capacity": 4026,
+        "evaluations": 346,
+        "charged_work": 15969867,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20270634_rootmem5",
+      "input_sha": "fa2a0783a177f362ee9237794987857b16652dae7d9258ba48acbb390562b37e",
+      "n": 539,
+      "edges": 1702,
+      "max_indegree": 27,
+      "max_outdegree": 337,
+      "roots": 1,
+      "sinks": 201,
+      "zero_output": 201,
+      "core_types": {
+        "AIC": 295,
+        "AIV": 244
+      },
+      "memory_limit": 6443,
+      "deadline_us": 9447437,
+      "necessary_memory": {
+        "individual": 493,
+        "direct_parent_overlap": 3432,
+        "strict_ancestor_future_direct_overlap": 3432,
+        "strict_overlap_at": 1382160196,
+        "strict_overlap_producer_count": 27,
+        "sink_retention": 0,
+        "lower_bound": 3432,
+        "slack": 3011
+      },
+      "necessary_time": {
+        "critical_path": 99724,
+        "pool_core_work": {
+          "AIC": 3639681,
+          "AIV": 1532261
+        },
+        "pool_strict_majority": {
+          "AIC": 2940625,
+          "AIV": 1368147
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3639681,
+        "slack": 5807756,
+        "serial_time": 9447437,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 201,
+        "median_pass": 201,
+        "workspace_greater_than_all_parents": 201,
+        "targets": 201,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 165,
+          "5..16": 114
+        },
+        "excluded_external_user_producers": {
+          ">16": 1
+        },
+        "total_closure_nodes": 1767,
+        "unit": 44409,
+        "maximum_evaluations_at16M": 360
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10469,
+        "best_gap_above_capacity": 4026,
+        "evaluations": 346,
+        "charged_work": 15969867,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem0",
+      "input_sha": "ca5481a6e02e850bbde634150ecdf351341ae894a9ef7c97ac5dbd6235621782",
+      "n": 563,
+      "edges": 2416,
+      "max_indegree": 20,
+      "max_outdegree": 252,
+      "roots": 3,
+      "sinks": 181,
+      "zero_output": 28,
+      "core_types": {
+        "AIV": 260,
+        "AIC": 303
+      },
+      "memory_limit": 7444,
+      "deadline_us": 9497423,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 2911,
+        "strict_ancestor_future_direct_overlap": 2911,
+        "strict_overlap_at": 210037124,
+        "strict_overlap_producer_count": 20,
+        "sink_retention": 495,
+        "lower_bound": 2911,
+        "slack": 4533
+      },
+      "necessary_time": {
+        "critical_path": 465355,
+        "pool_core_work": {
+          "AIC": 3173947,
+          "AIV": 1947980
+        },
+        "pool_strict_majority": {
+          "AIC": 2604938,
+          "AIV": 1707124
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3173947,
+        "slack": 6323476,
+        "serial_time": 9497423,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 501,
+        "median_pass": 213,
+        "workspace_greater_than_all_parents": 327,
+        "targets": 213,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 176,
+          "5..16": 135
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 2349,
+        "unit": 50697,
+        "maximum_evaluations_at16M": 315
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 18634,
+        "best_gap_above_capacity": 11190,
+        "evaluations": 302,
+        "charged_work": 15990247,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret1_seed20270635_rootmem5",
+      "input_sha": "45ae5426faec244a6b32009aa2687526161459f28cfc07ce4ba2324a678f0630",
+      "n": 563,
+      "edges": 2416,
+      "max_indegree": 20,
+      "max_outdegree": 252,
+      "roots": 3,
+      "sinks": 181,
+      "zero_output": 25,
+      "core_types": {
+        "AIV": 260,
+        "AIC": 303
+      },
+      "memory_limit": 7459,
+      "deadline_us": 9497423,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 2911,
+        "strict_ancestor_future_direct_overlap": 2911,
+        "strict_overlap_at": 210037124,
+        "strict_overlap_producer_count": 20,
+        "sink_retention": 495,
+        "lower_bound": 2911,
+        "slack": 4548
+      },
+      "necessary_time": {
+        "critical_path": 465355,
+        "pool_core_work": {
+          "AIC": 3173947,
+          "AIV": 1947980
+        },
+        "pool_strict_majority": {
+          "AIC": 2604938,
+          "AIV": 1707124
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3173947,
+        "slack": 6323476,
+        "serial_time": 9497423,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 501,
+        "median_pass": 213,
+        "workspace_greater_than_all_parents": 327,
+        "targets": 213,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 176,
+          "5..16": 135
+        },
+        "excluded_external_user_producers": {
+          ">16": 3
+        },
+        "total_closure_nodes": 2349,
+        "unit": 50697,
+        "maximum_evaluations_at16M": 315
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 18649,
+        "best_gap_above_capacity": 11190,
+        "evaluations": 302,
+        "charged_work": 15990247,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k32_ret1_seed20274225_rootmem0",
+      "input_sha": "3cd5b27c5482f5f2029e21b8a80f50ccf74494e06d9a1d532006f065095fa5ee",
+      "n": 172,
+      "edges": 552,
+      "max_indegree": 9,
+      "max_outdegree": 89,
+      "roots": 3,
+      "sinks": 55,
+      "zero_output": 10,
+      "core_types": {
+        "AIV": 71,
+        "AIC": 101
+      },
+      "memory_limit": 1938,
+      "deadline_us": 2981304,
+      "necessary_memory": {
+        "individual": 495,
+        "direct_parent_overlap": 1403,
+        "strict_ancestor_future_direct_overlap": 1403,
+        "strict_overlap_at": 839099234,
+        "strict_overlap_producer_count": 9,
+        "sink_retention": 140,
+        "lower_bound": 1403,
+        "slack": 535
+      },
+      "necessary_time": {
+        "critical_path": 193524,
+        "pool_core_work": {
+          "AIC": 944458,
+          "AIV": 571050
+        },
+        "pool_strict_majority": {
+          "AIC": 822784,
+          "AIV": 490815
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 944458,
+        "slack": 2036846,
+        "serial_time": 2981304,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 16,
+        "indegree_at_least2": 153,
+        "median_pass": 62,
+        "workspace_greater_than_all_parents": 121,
+        "targets": 62,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 71,
+          "5..16": 12
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 514,
+        "unit": 5082,
+        "maximum_evaluations_at16M": 3148
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 3629,
+        "best_gap_above_capacity": 1691,
+        "evaluations": 3137,
+        "charged_work": 15997965,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem0",
+      "input_sha": "0cfde0d17d2ade2cc4ccefdf368ee611b3a09be3f4679d8d5dfd65a7f2640fe9",
+      "n": 516,
+      "edges": 1547,
+      "max_indegree": 12,
+      "max_outdegree": 232,
+      "roots": 3,
+      "sinks": 186,
+      "zero_output": 189,
+      "core_types": {
+        "AIV": 219,
+        "AIC": 297
+      },
+      "memory_limit": 2112,
+      "deadline_us": 9866592,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1503,
+        "strict_ancestor_future_direct_overlap": 1503,
+        "strict_overlap_at": 1717450974,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1503,
+        "slack": 609
+      },
+      "necessary_time": {
+        "critical_path": 100009,
+        "pool_core_work": {
+          "AIC": 3692000,
+          "AIV": 1545235
+        },
+        "pool_strict_majority": {
+          "AIC": 3206434,
+          "AIV": 1287064
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3692000,
+        "slack": 6174592,
+        "serial_time": 9866592,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 386,
+        "median_pass": 186,
+        "workspace_greater_than_all_parents": 350,
+        "targets": 186,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 207,
+          "5..16": 44
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1569,
+        "unit": 38228,
+        "maximum_evaluations_at16M": 418
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 3082,
+        "best_gap_above_capacity": 970,
+        "evaluations": 405,
+        "charged_work": 15995603,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret0_seed20280624_rootmem5",
+      "input_sha": "f998ec757c20f58caa21be49b031ab31497fd308307266c2d91c09eda97a079d",
+      "n": 516,
+      "edges": 1547,
+      "max_indegree": 12,
+      "max_outdegree": 232,
+      "roots": 3,
+      "sinks": 186,
+      "zero_output": 186,
+      "core_types": {
+        "AIV": 219,
+        "AIC": 297
+      },
+      "memory_limit": 2127,
+      "deadline_us": 9866592,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1503,
+        "strict_ancestor_future_direct_overlap": 1503,
+        "strict_overlap_at": 1717450974,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1503,
+        "slack": 624
+      },
+      "necessary_time": {
+        "critical_path": 100009,
+        "pool_core_work": {
+          "AIC": 3692000,
+          "AIV": 1545235
+        },
+        "pool_strict_majority": {
+          "AIC": 3206434,
+          "AIV": 1287064
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3692000,
+        "slack": 6174592,
+        "serial_time": 9866592,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 386,
+        "median_pass": 186,
+        "workspace_greater_than_all_parents": 350,
+        "targets": 186,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 207,
+          "5..16": 44
+        },
+        "excluded_external_user_producers": {
+          ">16": 3
+        },
+        "total_closure_nodes": 1569,
+        "unit": 38228,
+        "maximum_evaluations_at16M": 418
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 3097,
+        "best_gap_above_capacity": 970,
+        "evaluations": 405,
+        "charged_work": 15995603,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem0",
+      "input_sha": "85afce8cfd31ca493512babbca5961014bbf944521d60ee97748507ceabc4f0e",
+      "n": 512,
+      "edges": 1470,
+      "max_indegree": 10,
+      "max_outdegree": 258,
+      "roots": 2,
+      "sinks": 154,
+      "zero_output": 33,
+      "core_types": {
+        "AIC": 272,
+        "AIV": 240
+      },
+      "memory_limit": 2445,
+      "deadline_us": 9842888,
+      "necessary_memory": {
+        "individual": 501,
+        "direct_parent_overlap": 1408,
+        "strict_ancestor_future_direct_overlap": 1408,
+        "strict_overlap_at": 288769611,
+        "strict_overlap_producer_count": 7,
+        "sink_retention": 373,
+        "lower_bound": 1408,
+        "slack": 1037
+      },
+      "necessary_time": {
+        "critical_path": 612532,
+        "pool_core_work": {
+          "AIC": 3287737,
+          "AIV": 2246604
+        },
+        "pool_strict_majority": {
+          "AIC": 2908399,
+          "AIV": 1848835
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3287737,
+        "slack": 6555151,
+        "serial_time": 9842888,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 394,
+        "median_pass": 182,
+        "workspace_greater_than_all_parents": 259,
+        "targets": 182,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 40,
+          "2..4": 202
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1388,
+        "unit": 36494,
+        "maximum_evaluations_at16M": 438
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10229,
+        "best_gap_above_capacity": 7784,
+        "evaluations": 424,
+        "charged_work": 15964640,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_local_k96_ret1_seed20280625_rootmem5",
+      "input_sha": "e44ef277dcedae3a4942d3c03d45f0ca6efed047861e0a5f0e1ef4e2cbe865a1",
+      "n": 512,
+      "edges": 1470,
+      "max_indegree": 10,
+      "max_outdegree": 258,
+      "roots": 2,
+      "sinks": 154,
+      "zero_output": 31,
+      "core_types": {
+        "AIC": 272,
+        "AIV": 240
+      },
+      "memory_limit": 2455,
+      "deadline_us": 9842888,
+      "necessary_memory": {
+        "individual": 501,
+        "direct_parent_overlap": 1408,
+        "strict_ancestor_future_direct_overlap": 1408,
+        "strict_overlap_at": 288769611,
+        "strict_overlap_producer_count": 7,
+        "sink_retention": 373,
+        "lower_bound": 1408,
+        "slack": 1047
+      },
+      "necessary_time": {
+        "critical_path": 612532,
+        "pool_core_work": {
+          "AIC": 3287737,
+          "AIV": 2246604
+        },
+        "pool_strict_majority": {
+          "AIC": 2908399,
+          "AIV": 1848835
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3287737,
+        "slack": 6555151,
+        "serial_time": 9842888,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 394,
+        "median_pass": 182,
+        "workspace_greater_than_all_parents": 259,
+        "targets": 182,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 40,
+          "2..4": 202
+        },
+        "excluded_external_user_producers": {
+          ">16": 2
+        },
+        "total_closure_nodes": 1388,
+        "unit": 36494,
+        "maximum_evaluations_at16M": 438
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10239,
+        "best_gap_above_capacity": 7784,
+        "evaluations": 424,
+        "charged_work": 15964640,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem5",
+      "input_sha": "6d9fbcf277867a4da46be503f093846b97891b3181231be635a27fcd3ce890b4",
+      "n": 547,
+      "edges": 1805,
+      "max_indegree": 18,
+      "max_outdegree": 345,
+      "roots": 1,
+      "sinks": 201,
+      "zero_output": 201,
+      "core_types": {
+        "AIC": 308,
+        "AIV": 239
+      },
+      "memory_limit": 6401,
+      "deadline_us": 10025031,
+      "necessary_memory": {
+        "individual": 499,
+        "direct_parent_overlap": 2291,
+        "strict_ancestor_future_direct_overlap": 2291,
+        "strict_overlap_at": 1988384335,
+        "strict_overlap_producer_count": 16,
+        "sink_retention": 0,
+        "lower_bound": 2291,
+        "slack": 4110
+      },
+      "necessary_time": {
+        "critical_path": 98473,
+        "pool_core_work": {
+          "AIC": 3788244,
+          "AIV": 1940534
+        },
+        "pool_strict_majority": {
+          "AIC": 3382250,
+          "AIV": 1654537
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3788244,
+        "slack": 6236787,
+        "serial_time": 10025031,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 201,
+        "median_pass": 201,
+        "workspace_greater_than_all_parents": 201,
+        "targets": 201,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 124,
+          "2..4": 174
+        },
+        "excluded_external_user_producers": {
+          ">16": 1
+        },
+        "total_closure_nodes": 1862,
+        "unit": 44615,
+        "maximum_evaluations_at16M": 358
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 11892,
+        "best_gap_above_capacity": 5491,
+        "evaluations": 345,
+        "charged_work": 15997343,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k12_ret1_seed20282247",
+      "input_sha": "06d63186f0f6c1c62e3086b168d1df0f30538b4bc3dba03838a318a0e5f3f640",
+      "n": 124,
+      "edges": 375,
+      "max_indegree": 6,
+      "max_outdegree": 29,
+      "roots": 3,
+      "sinks": 76,
+      "zero_output": 15,
+      "core_types": {
+        "AIC": 56,
+        "AIV": 68
+      },
+      "memory_limit": 1792,
+      "deadline_us": 1238140,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 1135,
+        "strict_ancestor_future_direct_overlap": 1135,
+        "strict_overlap_at": 291963903,
+        "strict_overlap_producer_count": 6,
+        "sink_retention": 204,
+        "lower_bound": 1135,
+        "slack": 657
+      },
+      "necessary_time": {
+        "critical_path": 199659,
+        "pool_core_work": {
+          "AIC": 369987,
+          "AIV": 338804
+        },
+        "pool_strict_majority": {
+          "AIC": 261572,
+          "AIV": 373201
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 373201,
+        "slack": 864939,
+        "serial_time": 1238140,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 1056,
+        "indegree_at_least2": 107,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 95,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "2..4": 4,
+          "5..16": 41,
+          ">16": 3
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "blind_irregular_local_k64_ret1_seed20287427",
+      "input_sha": "66c85ba0b6a4ddbcac09e9d36933aba0572f498123fc83583a3c01157bba38d5",
+      "n": 348,
+      "edges": 1141,
+      "max_indegree": 9,
+      "max_outdegree": 165,
+      "roots": 3,
+      "sinks": 110,
+      "zero_output": 13,
+      "core_types": {
+        "AIC": 209,
+        "AIV": 139
+      },
+      "memory_limit": 2363,
+      "deadline_us": 6518768,
+      "necessary_memory": {
+        "individual": 501,
+        "direct_parent_overlap": 1481,
+        "strict_ancestor_future_direct_overlap": 1481,
+        "strict_overlap_at": 683689923,
+        "strict_overlap_producer_count": 9,
+        "sink_retention": 309,
+        "lower_bound": 1481,
+        "slack": 882
+      },
+      "necessary_time": {
+        "critical_path": 260998,
+        "pool_core_work": {
+          "AIC": 2414458,
+          "AIV": 1027484
+        },
+        "pool_strict_majority": {
+          "AIC": 2200414,
+          "AIV": 855247
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 2414458,
+        "slack": 4104310,
+        "serial_time": 6518768,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 298,
+        "median_pass": 122,
+        "workspace_greater_than_all_parents": 231,
+        "targets": 122,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 139,
+          "5..16": 33
+        },
+        "excluded_external_user_producers": {
+          ">16": 3
+        },
+        "total_closure_nodes": 1078,
+        "unit": 17451,
+        "maximum_evaluations_at16M": 916
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 7306,
+        "best_gap_above_capacity": 4943,
+        "evaluations": 904,
+        "charged_work": 15995490,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_irregular_dense_k64_ret1_seed20287429",
+      "input_sha": "c44457c8bd1b83c5b78128f7c5b895a08c38d0a5fb68a8249359ad816319a8fc",
+      "n": 353,
+      "edges": 1613,
+      "max_indegree": 28,
+      "max_outdegree": 153,
+      "roots": 4,
+      "sinks": 101,
+      "zero_output": 13,
+      "core_types": {
+        "AIV": 146,
+        "AIC": 207
+      },
+      "memory_limit": 5937,
+      "deadline_us": 6743709,
+      "necessary_memory": {
+        "individual": 497,
+        "direct_parent_overlap": 2830,
+        "strict_ancestor_future_direct_overlap": 2830,
+        "strict_overlap_at": 24076293,
+        "strict_overlap_producer_count": 28,
+        "sink_retention": 266,
+        "lower_bound": 2830,
+        "slack": 3107
+      },
+      "necessary_time": {
+        "critical_path": 449288,
+        "pool_core_work": {
+          "AIC": 2617175,
+          "AIV": 1108311
+        },
+        "pool_strict_majority": {
+          "AIC": 2188606,
+          "AIV": 1069146
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 2617175,
+        "slack": 4126534,
+        "serial_time": 6743709,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 322,
+        "median_pass": 121,
+        "workspace_greater_than_all_parents": 206,
+        "targets": 121,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 84,
+          "2..4": 100
+        },
+        "excluded_external_user_producers": {
+          ">16": 4
+        },
+        "total_closure_nodes": 1502,
+        "unit": 18109,
+        "maximum_evaluations_at16M": 883
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10537,
+        "best_gap_above_capacity": 4600,
+        "evaluations": 871,
+        "charged_work": 15992414,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k64_ret0_seed20287436",
+      "input_sha": "38639cf863001a932191b44edc60617fe6926606aee9835a6278fc3dc528b92f",
+      "n": 362,
+      "edges": 907,
+      "max_indegree": 12,
+      "max_outdegree": 224,
+      "roots": 1,
+      "sinks": 137,
+      "zero_output": 138,
+      "core_types": {
+        "AIC": 188,
+        "AIV": 174
+      },
+      "memory_limit": 2456,
+      "deadline_us": 17626,
+      "necessary_memory": {
+        "individual": 496,
+        "direct_parent_overlap": 1690,
+        "strict_ancestor_future_direct_overlap": 1690,
+        "strict_overlap_at": 1261846420,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1690,
+        "slack": 766
+      },
+      "necessary_time": {
+        "critical_path": 201,
+        "pool_core_work": {
+          "AIC": 5538,
+          "AIV": 4399
+        },
+        "pool_strict_majority": {
+          "AIC": 5049,
+          "AIV": 3769
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 5538,
+        "slack": 12088,
+        "serial_time": 17626,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 16,
+        "indegree_at_least2": 137,
+        "median_pass": 137,
+        "workspace_greater_than_all_parents": 137,
+        "targets": 137,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 155,
+          "5..16": 43
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 957,
+        "unit": 20995,
+        "maximum_evaluations_at16M": 762
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 3689,
+        "best_gap_above_capacity": 1233,
+        "evaluations": 748,
+        "charged_work": 15981792,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k64_ret1_seed20287437",
+      "input_sha": "8e507e971040c357c83c15ed750fd932c4fedefc4143901cafeff177ad2a7d69",
+      "n": 353,
+      "edges": 1068,
+      "max_indegree": 11,
+      "max_outdegree": 175,
+      "roots": 2,
+      "sinks": 110,
+      "zero_output": 26,
+      "core_types": {
+        "AIC": 191,
+        "AIV": 162
+      },
+      "memory_limit": 2568,
+      "deadline_us": 17479,
+      "necessary_memory": {
+        "individual": 498,
+        "direct_parent_overlap": 1661,
+        "strict_ancestor_future_direct_overlap": 1661,
+        "strict_overlap_at": 1194736741,
+        "strict_overlap_producer_count": 11,
+        "sink_retention": 259,
+        "lower_bound": 1661,
+        "slack": 907
+      },
+      "necessary_time": {
+        "critical_path": 629,
+        "pool_core_work": {
+          "AIC": 5481,
+          "AIV": 4715
+        },
+        "pool_strict_majority": {
+          "AIC": 4962,
+          "AIV": 4098
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 5481,
+        "slack": 11998,
+        "serial_time": 17479,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 280,
+        "median_pass": 129,
+        "workspace_greater_than_all_parents": 185,
+        "targets": 129,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 151,
+          "5..16": 31
+        },
+        "excluded_external_user_producers": {
+          ">16": 2
+        },
+        "total_closure_nodes": 1013,
+        "unit": 19075,
+        "maximum_evaluations_at16M": 838
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 5898,
+        "best_gap_above_capacity": 3330,
+        "evaluations": 825,
+        "charged_work": 15982729,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_dense_k64_ret1_seed20287439",
+      "input_sha": "6aba6baa467ae323143b8fe8bf04667d2f312ebc25abafde999ee77aa56c7999",
+      "n": 361,
+      "edges": 1661,
+      "max_indegree": 26,
+      "max_outdegree": 169,
+      "roots": 4,
+      "sinks": 114,
+      "zero_output": 23,
+      "core_types": {
+        "AIV": 167,
+        "AIC": 194
+      },
+      "memory_limit": 6129,
+      "deadline_us": 18577,
+      "necessary_memory": {
+        "individual": 497,
+        "direct_parent_overlap": 3075,
+        "strict_ancestor_future_direct_overlap": 3075,
+        "strict_overlap_at": 668019758,
+        "strict_overlap_producer_count": 26,
+        "sink_retention": 275,
+        "lower_bound": 3075,
+        "slack": 3054
+      },
+      "necessary_time": {
+        "critical_path": 813,
+        "pool_core_work": {
+          "AIC": 5550,
+          "AIV": 4627
+        },
+        "pool_strict_majority": {
+          "AIC": 5018,
+          "AIV": 4221
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 5550,
+        "slack": 13027,
+        "serial_time": 18577,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 348,
+        "median_pass": 134,
+        "workspace_greater_than_all_parents": 231,
+        "targets": 134,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 88,
+          "2..4": 97
+        },
+        "excluded_external_user_producers": {
+          ">16": 4
+        },
+        "total_closure_nodes": 1569,
+        "unit": 21547,
+        "maximum_evaluations_at16M": 742
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 10193,
+        "best_gap_above_capacity": 4064,
+        "evaluations": 730,
+        "charged_work": 15997905,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k64_ret0_seed20287446",
+      "input_sha": "316ebe49f7d829cfac49548790524438425b4eecfdf877c0aa61bf42cc9fb8e5",
+      "n": 651,
+      "edges": 2321,
+      "max_indegree": 7,
+      "max_outdegree": 172,
+      "roots": 4,
+      "sinks": 416,
+      "zero_output": 420,
+      "core_types": {
+        "AIC": 335,
+        "AIV": 316
+      },
+      "memory_limit": 2310,
+      "deadline_us": 6506489,
+      "necessary_memory": {
+        "individual": 499,
+        "direct_parent_overlap": 1227,
+        "strict_ancestor_future_direct_overlap": 1227,
+        "strict_overlap_at": 490305840,
+        "strict_overlap_producer_count": 7,
+        "sink_retention": 0,
+        "lower_bound": 1227,
+        "slack": 1083
+      },
+      "necessary_time": {
+        "critical_path": 100057,
+        "pool_core_work": {
+          "AIC": 2321925,
+          "AIV": 1304729
+        },
+        "pool_strict_majority": {
+          "AIC": 2030229,
+          "AIV": 1166200
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 2321925,
+        "slack": 4184564,
+        "serial_time": 6506489,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 936,
+        "indegree_at_least2": 599,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 573,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 231
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k64_ret1_seed20287447",
+      "input_sha": "6617bf04d2241ceb6b0e52b3331c11a77c57439d401a4add261a83056402b13a",
+      "n": 639,
+      "edges": 2167,
+      "max_indegree": 8,
+      "max_outdegree": 157,
+      "roots": 3,
+      "sinks": 389,
+      "zero_output": 75,
+      "core_types": {
+        "AIV": 307,
+        "AIC": 332
+      },
+      "memory_limit": 3293,
+      "deadline_us": 6674827,
+      "necessary_memory": {
+        "individual": 505,
+        "direct_parent_overlap": 1381,
+        "strict_ancestor_future_direct_overlap": 1381,
+        "strict_overlap_at": 1998965051,
+        "strict_overlap_producer_count": 8,
+        "sink_retention": 991,
+        "lower_bound": 1381,
+        "slack": 1912
+      },
+      "necessary_time": {
+        "critical_path": 267820,
+        "pool_core_work": {
+          "AIC": 2075603,
+          "AIV": 1543442
+        },
+        "pool_strict_majority": {
+          "AIC": 1983338,
+          "AIV": 1313559
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 2075603,
+        "slack": 4599224,
+        "serial_time": 6674827,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 932,
+        "indegree_at_least2": 594,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 491,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "2..4": 13,
+          "5..16": 231,
+          ">16": 3
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "blind_high-fanout_dense_k64_ret1_seed20287449",
+      "input_sha": "39d0aeda3cb6f1bb067c7999cc87b774bf8c5564d5435e2b545f310539ed8e10",
+      "n": 638,
+      "edges": 2377,
+      "max_indegree": 11,
+      "max_outdegree": 184,
+      "roots": 2,
+      "sinks": 380,
+      "zero_output": 76,
+      "core_types": {
+        "AIC": 329,
+        "AIV": 309
+      },
+      "memory_limit": 6457,
+      "deadline_us": 7026789,
+      "necessary_memory": {
+        "individual": 503,
+        "direct_parent_overlap": 1525,
+        "strict_ancestor_future_direct_overlap": 1525,
+        "strict_overlap_at": 375550840,
+        "strict_overlap_producer_count": 11,
+        "sink_retention": 962,
+        "lower_bound": 1525,
+        "slack": 4932
+      },
+      "necessary_time": {
+        "critical_path": 421448,
+        "pool_core_work": {
+          "AIC": 2447488,
+          "AIV": 1524565
+        },
+        "pool_strict_majority": {
+          "AIC": 1845351,
+          "AIV": 1476676
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 2447488,
+        "slack": 4579301,
+        "serial_time": 7026789,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 996,
+        "indegree_at_least2": 555,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 450,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 239,
+          "2..4": 11,
+          ">16": 2
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "blind_irregular_local_k128_ret0_seed20293826",
+      "input_sha": "9de75a1425154a6d45bc1144b9388fa89afe0aeac3264f0d5751746b0df48bd0",
+      "n": 676,
+      "edges": 2049,
+      "max_indegree": 10,
+      "max_outdegree": 314,
+      "roots": 3,
+      "sinks": 241,
+      "zero_output": 244,
+      "core_types": {
+        "AIV": 321,
+        "AIC": 355
+      },
+      "memory_limit": 2194,
+      "deadline_us": 12307962,
+      "necessary_memory": {
+        "individual": 498,
+        "direct_parent_overlap": 1659,
+        "strict_ancestor_future_direct_overlap": 1659,
+        "strict_overlap_at": 1056678470,
+        "strict_overlap_producer_count": 10,
+        "sink_retention": 0,
+        "lower_bound": 1659,
+        "slack": 535
+      },
+      "necessary_time": {
+        "critical_path": 99883,
+        "pool_core_work": {
+          "AIC": 4558161,
+          "AIV": 2397312
+        },
+        "pool_strict_majority": {
+          "AIC": 3944642,
+          "AIV": 2116809
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4558161,
+        "slack": 7749801,
+        "serial_time": 12307962,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 542,
+        "median_pass": 241,
+        "workspace_greater_than_all_parents": 487,
+        "targets": 241,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 280,
+          "5..16": 52
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 2045,
+        "unit": 62851,
+        "maximum_evaluations_at16M": 254
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 5857,
+        "best_gap_above_capacity": 3663,
+        "evaluations": 240,
+        "charged_work": 15948024,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_irregular_local_k128_ret1_seed20293827",
+      "input_sha": "c9e9e8e225948cebc8bb77d0b558e974ffde83ddacb3d5fdd14f81e093ac085d",
+      "n": 712,
+      "edges": 2319,
+      "max_indegree": 11,
+      "max_outdegree": 301,
+      "roots": 3,
+      "sinks": 223,
+      "zero_output": 43,
+      "core_types": {
+        "AIV": 285,
+        "AIC": 427
+      },
+      "memory_limit": 2464,
+      "deadline_us": 12504048,
+      "necessary_memory": {
+        "individual": 501,
+        "direct_parent_overlap": 1382,
+        "strict_ancestor_future_direct_overlap": 1382,
+        "strict_overlap_at": 157291279,
+        "strict_overlap_producer_count": 11,
+        "sink_retention": 574,
+        "lower_bound": 1382,
+        "slack": 1082
+      },
+      "necessary_time": {
+        "critical_path": 345008,
+        "pool_core_work": {
+          "AIC": 4575424,
+          "AIV": 1961342
+        },
+        "pool_strict_majority": {
+          "AIC": 4288584,
+          "AIV": 1709140
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4575424,
+        "slack": 7928624,
+        "serial_time": 12504048,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 608,
+        "median_pass": 265,
+        "workspace_greater_than_all_parents": 413,
+        "targets": 265,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 63,
+          "2..4": 298
+        },
+        "excluded_external_user_producers": {
+          ">16": 3
+        },
+        "total_closure_nodes": 2211,
+        "unit": 75467,
+        "maximum_evaluations_at16M": 212
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 15841,
+        "best_gap_above_capacity": 13377,
+        "evaluations": 198,
+        "charged_work": 15987751,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_irregular_dense_k128_ret0_seed20293828",
+      "input_sha": "b3a2bef490afecdae859bc3af6e69951c1cf7118d4e38f45e6bf454ccea09187",
+      "n": 705,
+      "edges": 2250,
+      "max_indegree": 22,
+      "max_outdegree": 438,
+      "roots": 1,
+      "sinks": 266,
+      "zero_output": 267,
+      "core_types": {
+        "AIC": 372,
+        "AIV": 333
+      },
+      "memory_limit": 6323,
+      "deadline_us": 12156978,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 2420,
+        "strict_ancestor_future_direct_overlap": 2420,
+        "strict_overlap_at": 1795721357,
+        "strict_overlap_producer_count": 21,
+        "sink_retention": 0,
+        "lower_bound": 2420,
+        "slack": 3903
+      },
+      "necessary_time": {
+        "critical_path": 99606,
+        "pool_core_work": {
+          "AIC": 4460189,
+          "AIV": 2109488
+        },
+        "pool_strict_majority": {
+          "AIC": 3827526,
+          "AIV": 1922249
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4460189,
+        "slack": 7696789,
+        "serial_time": 12156978,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 266,
+        "median_pass": 266,
+        "workspace_greater_than_all_parents": 266,
+        "targets": 266,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 221,
+          "5..16": 150
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 2344,
+        "unit": 76055,
+        "maximum_evaluations_at16M": 210
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 12640,
+        "best_gap_above_capacity": 6317,
+        "evaluations": 196,
+        "charged_work": 15965999,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_irregular_dense_k128_ret1_seed20293829",
+      "input_sha": "12cccecd4db423380c60824c2993a5bb7deb0f5bf70014a19cd871ffdcc7590a",
+      "n": 704,
+      "edges": 2474,
+      "max_indegree": 23,
+      "max_outdegree": 452,
+      "roots": 1,
+      "sinks": 211,
+      "zero_output": 43,
+      "core_types": {
+        "AIC": 386,
+        "AIV": 318
+      },
+      "memory_limit": 6861,
+      "deadline_us": 12433494,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 2807,
+        "strict_ancestor_future_direct_overlap": 2807,
+        "strict_overlap_at": 324596809,
+        "strict_overlap_producer_count": 23,
+        "sink_retention": 520,
+        "lower_bound": 2807,
+        "slack": 4054
+      },
+      "necessary_time": {
+        "critical_path": 385524,
+        "pool_core_work": {
+          "AIC": 4367358,
+          "AIV": 2432599
+        },
+        "pool_strict_majority": {
+          "AIC": 4086037,
+          "AIV": 2233305
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4367358,
+        "slack": 8066136,
+        "serial_time": 12433494,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 16,
+        "indegree_at_least2": 412,
+        "median_pass": 251,
+        "workspace_greater_than_all_parents": 251,
+        "targets": 251,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "5..16": 169,
+          "2..4": 216
+        },
+        "excluded_external_user_producers": {
+          ">16": 1
+        },
+        "total_closure_nodes": 2363,
+        "unit": 68542,
+        "maximum_evaluations_at16M": 233
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 22162,
+        "best_gap_above_capacity": 15301,
+        "evaluations": 219,
+        "charged_work": 15954487,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k128_ret0_seed20293836",
+      "input_sha": "18c7e544e243ddc13d1591d09dbd70282fc894f20e613362ac51a51a9c2ebf83",
+      "n": 695,
+      "edges": 1867,
+      "max_indegree": 13,
+      "max_outdegree": 321,
+      "roots": 2,
+      "sinks": 259,
+      "zero_output": 261,
+      "core_types": {
+        "AIC": 408,
+        "AIV": 287
+      },
+      "memory_limit": 2422,
+      "deadline_us": 35242,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1825,
+        "strict_ancestor_future_direct_overlap": 1825,
+        "strict_overlap_at": 1721001913,
+        "strict_overlap_producer_count": 13,
+        "sink_retention": 0,
+        "lower_bound": 1825,
+        "slack": 597
+      },
+      "necessary_time": {
+        "critical_path": 200,
+        "pool_core_work": {
+          "AIC": 11319,
+          "AIV": 8017
+        },
+        "pool_strict_majority": {
+          "AIC": 9708,
+          "AIV": 6739
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 11319,
+        "slack": 23923,
+        "serial_time": 35242,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 447,
+        "median_pass": 259,
+        "workspace_greater_than_all_parents": 405,
+        "targets": 259,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 282,
+          "5..16": 66
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 1953,
+        "unit": 71596,
+        "maximum_evaluations_at16M": 223
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 5757,
+        "best_gap_above_capacity": 3335,
+        "evaluations": 209,
+        "charged_work": 15961883,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_local_k128_ret1_seed20293837",
+      "input_sha": "890638b3992aeb59e4fa6ef2ec51cecb6b21ee0dd7e8f93dd3f0ac9e8aa48ee8",
+      "n": 715,
+      "edges": 2395,
+      "max_indegree": 12,
+      "max_outdegree": 305,
+      "roots": 3,
+      "sinks": 222,
+      "zero_output": 49,
+      "core_types": {
+        "AIC": 412,
+        "AIV": 303
+      },
+      "memory_limit": 2617,
+      "deadline_us": 35446,
+      "necessary_memory": {
+        "individual": 502,
+        "direct_parent_overlap": 1620,
+        "strict_ancestor_future_direct_overlap": 1620,
+        "strict_overlap_at": 1655304645,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 525,
+        "lower_bound": 1620,
+        "slack": 997
+      },
+      "necessary_time": {
+        "critical_path": 1116,
+        "pool_core_work": {
+          "AIC": 12652,
+          "AIV": 7959
+        },
+        "pool_strict_majority": {
+          "AIC": 11952,
+          "AIV": 6908
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 12652,
+        "slack": 22794,
+        "serial_time": 35446,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 634,
+        "median_pass": 270,
+        "workspace_greater_than_all_parents": 395,
+        "targets": 270,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 301,
+          "5..16": 68
+        },
+        "excluded_external_user_producers": {
+          ">16": 3
+        },
+        "total_closure_nodes": 2268,
+        "unit": 78278,
+        "maximum_evaluations_at16M": 204
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 14070,
+        "best_gap_above_capacity": 11453,
+        "evaluations": 190,
+        "charged_work": 15958181,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_dense_k128_ret0_seed20293838",
+      "input_sha": "d950a7a4f309b081c219402f604aca9a9dede11f4c26d9f0370b454be613f15c",
+      "n": 704,
+      "edges": 2371,
+      "max_indegree": 33,
+      "max_outdegree": 453,
+      "roots": 1,
+      "sinks": 250,
+      "zero_output": 251,
+      "core_types": {
+        "AIC": 387,
+        "AIV": 317
+      },
+      "memory_limit": 6523,
+      "deadline_us": 35390,
+      "necessary_memory": {
+        "individual": 498,
+        "direct_parent_overlap": 3815,
+        "strict_ancestor_future_direct_overlap": 3815,
+        "strict_overlap_at": 1738775325,
+        "strict_overlap_producer_count": 33,
+        "sink_retention": 0,
+        "lower_bound": 3815,
+        "slack": 2708
+      },
+      "necessary_time": {
+        "critical_path": 198,
+        "pool_core_work": {
+          "AIC": 10477,
+          "AIV": 9849
+        },
+        "pool_strict_majority": {
+          "AIC": 9092,
+          "AIV": 8918
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 10477,
+        "slack": 24913,
+        "serial_time": 35390,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 250,
+        "median_pass": 250,
+        "workspace_greater_than_all_parents": 250,
+        "targets": 250,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 215,
+          "5..16": 167
+        },
+        "excluded_external_user_producers": {},
+        "total_closure_nodes": 2418,
+        "unit": 67993,
+        "maximum_evaluations_at16M": 235
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 12562,
+        "best_gap_above_capacity": 6039,
+        "evaluations": 221,
+        "charged_work": 15963688,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_equal-duration_dense_k128_ret1_seed20293839",
+      "input_sha": "d81b06d3236d937736ab13bb11019ea1e27db8f34e411c45ba068c1678e10e0a",
+      "n": 700,
+      "edges": 3038,
+      "max_indegree": 22,
+      "max_outdegree": 261,
+      "roots": 4,
+      "sinks": 202,
+      "zero_output": 45,
+      "core_types": {
+        "AIV": 316,
+        "AIC": 384
+      },
+      "memory_limit": 6684,
+      "deadline_us": 36052,
+      "necessary_memory": {
+        "individual": 503,
+        "direct_parent_overlap": 2602,
+        "strict_ancestor_future_direct_overlap": 2602,
+        "strict_overlap_at": 1636641555,
+        "strict_overlap_producer_count": 20,
+        "sink_retention": 497,
+        "lower_bound": 2602,
+        "slack": 4082
+      },
+      "necessary_time": {
+        "critical_path": 1237,
+        "pool_core_work": {
+          "AIC": 10982,
+          "AIV": 9662
+        },
+        "pool_strict_majority": {
+          "AIC": 9886,
+          "AIV": 8546
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 10982,
+        "slack": 25070,
+        "serial_time": 36052,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 20,
+        "indegree_at_least2": 596,
+        "median_pass": 249,
+        "workspace_greater_than_all_parents": 367,
+        "targets": 249,
+        "applicable": true,
+        "inapplicable_reason": null,
+        "complete_direct_producer_groups": {
+          "2..4": 198,
+          "5..16": 170
+        },
+        "excluded_external_user_producers": {
+          ">16": 4
+        },
+        "total_closure_nodes": 3007,
+        "unit": 68746,
+        "maximum_evaluations_at16M": 232
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": 20195,
+        "best_gap_above_capacity": 13511,
+        "evaluations": 219,
+        "charged_work": 15984336,
+        "exhausted": true
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k128_ret0_seed20293846",
+      "input_sha": "71b38d00e0e7bbae27d882513fb30884c9673566981a8946a023ece69a852a79",
+      "n": 1270,
+      "edges": 3720,
+      "max_indegree": 8,
+      "max_outdegree": 452,
+      "roots": 1,
+      "sinks": 817,
+      "zero_output": 818,
+      "core_types": {
+        "AIV": 610,
+        "AIC": 660
+      },
+      "memory_limit": 2679,
+      "deadline_us": 13775659,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1336,
+        "strict_ancestor_future_direct_overlap": 1336,
+        "strict_overlap_at": 1108538684,
+        "strict_overlap_producer_count": 8,
+        "sink_retention": 0,
+        "lower_bound": 1336,
+        "slack": 1343
+      },
+      "necessary_time": {
+        "critical_path": 99857,
+        "pool_core_work": {
+          "AIC": 5034064,
+          "AIV": 2592709
+        },
+        "pool_strict_majority": {
+          "AIC": 4308671,
+          "AIV": 2387308
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 5034064,
+        "slack": 8741595,
+        "serial_time": 13775659,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 960,
+        "indegree_at_least2": 817,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 817,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 452
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "blind_high-fanout_local_k128_ret1_seed20293847",
+      "input_sha": "ad9ce962a3b5dd414f36a046907ccdd46e56cc26f6a36bb6fa6edc52d727282c",
+      "n": 1284,
+      "edges": 3885,
+      "max_indegree": 7,
+      "max_outdegree": 450,
+      "roots": 1,
+      "sinks": 787,
+      "zero_output": 132,
+      "core_types": {
+        "AIC": 708,
+        "AIV": 576
+      },
+      "memory_limit": 3861,
+      "deadline_us": 12512624,
+      "necessary_memory": {
+        "individual": 503,
+        "direct_parent_overlap": 1362,
+        "strict_ancestor_future_direct_overlap": 1362,
+        "strict_overlap_at": 1372320458,
+        "strict_overlap_producer_count": 7,
+        "sink_retention": 1989,
+        "lower_bound": 1989,
+        "slack": 1872
+      },
+      "necessary_time": {
+        "critical_path": 347781,
+        "pool_core_work": {
+          "AIC": 4820259,
+          "AIV": 1879474
+        },
+        "pool_strict_majority": {
+          "AIC": 4337994,
+          "AIV": 1545487
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4820259,
+        "slack": 7692365,
+        "serial_time": 12512624,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 1008,
+        "indegree_at_least2": 1010,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 833,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "2..4": 29,
+          "5..16": 458,
+          ">16": 1
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "blind_high-fanout_dense_k128_ret0_seed20293848",
+      "input_sha": "0c99734a8d82191a9c43522ab7e6e8061d10991c50bd4bb2a13f90e744cd4305",
+      "n": 1265,
+      "edges": 4478,
+      "max_indegree": 10,
+      "max_outdegree": 377,
+      "roots": 2,
+      "sinks": 816,
+      "zero_output": 818,
+      "core_types": {
+        "AIV": 592,
+        "AIC": 673
+      },
+      "memory_limit": 6362,
+      "deadline_us": 12337092,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1515,
+        "strict_ancestor_future_direct_overlap": 1515,
+        "strict_overlap_at": 136001284,
+        "strict_overlap_producer_count": 8,
+        "sink_retention": 0,
+        "lower_bound": 1515,
+        "slack": 4847
+      },
+      "necessary_time": {
+        "critical_path": 99469,
+        "pool_core_work": {
+          "AIC": 5012150,
+          "AIV": 2033636
+        },
+        "pool_strict_majority": {
+          "AIC": 4541491,
+          "AIV": 1736922
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 5012150,
+        "slack": 7324942,
+        "serial_time": 12337092,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 976,
+        "indegree_at_least2": 1068,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 1026,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 447
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k80_ret0_seed20299028",
+      "input_sha": "572fda2417bd48252c35a11a070ea2e280bacdb1b9ffae676f1ee0b6b3d1b8b4",
+      "n": 781,
+      "edges": 2676,
+      "max_indegree": 8,
+      "max_outdegree": 192,
+      "roots": 4,
+      "sinks": 502,
+      "zero_output": 506,
+      "core_types": {
+        "AIV": 372,
+        "AIC": 409
+      },
+      "memory_limit": 2082,
+      "deadline_us": 7259679,
+      "necessary_memory": {
+        "individual": 496,
+        "direct_parent_overlap": 1243,
+        "strict_ancestor_future_direct_overlap": 1243,
+        "strict_overlap_at": 422063446,
+        "strict_overlap_producer_count": 8,
+        "sink_retention": 0,
+        "lower_bound": 1243,
+        "slack": 839
+      },
+      "necessary_time": {
+        "critical_path": 99548,
+        "pool_core_work": {
+          "AIC": 4529880,
+          "AIV": 64173
+        },
+        "pool_strict_majority": {
+          "AIC": 4205368,
+          "AIV": 0
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4529880,
+        "slack": 2729799,
+        "serial_time": 7259679,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 932,
+        "indegree_at_least2": 708,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 667,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 275
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k80_ret1_seed20299029",
+      "input_sha": "d5f32226616a9330f6bdffabc6d4c0766532bedb7b36b77ab532152b36247517",
+      "n": 798,
+      "edges": 2444,
+      "max_indegree": 8,
+      "max_outdegree": 282,
+      "roots": 1,
+      "sinks": 478,
+      "zero_output": 92,
+      "core_types": {
+        "AIV": 350,
+        "AIC": 448
+      },
+      "memory_limit": 3183,
+      "deadline_us": 7470098,
+      "necessary_memory": {
+        "individual": 503,
+        "direct_parent_overlap": 1300,
+        "strict_ancestor_future_direct_overlap": 1300,
+        "strict_overlap_at": 1402687751,
+        "strict_overlap_producer_count": 7,
+        "sink_retention": 1170,
+        "lower_bound": 1300,
+        "slack": 1883
+      },
+      "necessary_time": {
+        "critical_path": 320358,
+        "pool_core_work": {
+          "AIC": 3029196,
+          "AIV": 587298
+        },
+        "pool_strict_majority": {
+          "AIC": 2813300,
+          "AIV": 0
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3029196,
+        "slack": 4440902,
+        "serial_time": 7470098,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 976,
+        "indegree_at_least2": 652,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 515,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 289,
+          "2..4": 24,
+          ">16": 1
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k80_ret1_seed20299039",
+      "input_sha": "9ab79e482fe9afe34e590615ed52aa17385d7b04132d198da659112855e63104",
+      "n": 814,
+      "edges": 3303,
+      "max_indegree": 15,
+      "max_outdegree": 184,
+      "roots": 4,
+      "sinks": 497,
+      "zero_output": 92,
+      "core_types": {
+        "AIC": 461,
+        "AIV": 353
+      },
+      "memory_limit": 8098,
+      "deadline_us": 8528044,
+      "necessary_memory": {
+        "individual": 503,
+        "direct_parent_overlap": 1887,
+        "strict_ancestor_future_direct_overlap": 1887,
+        "strict_overlap_at": 2945778,
+        "strict_overlap_producer_count": 15,
+        "sink_retention": 1199,
+        "lower_bound": 1887,
+        "slack": 6211
+      },
+      "necessary_time": {
+        "critical_path": 284207,
+        "pool_core_work": {
+          "AIC": 227441,
+          "AIV": 1809135
+        },
+        "pool_strict_majority": {
+          "AIC": 0,
+          "AIV": 1726493
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 1809135,
+        "slack": 6718909,
+        "serial_time": 8528044,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 980,
+        "indegree_at_least2": 755,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 635,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 298,
+          "2..4": 12,
+          ">16": 4
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k160_ret0_seed20307028",
+      "input_sha": "645f7be6b38f56c629ede5813834c1fbe6859cbf37e85ebe07c8e2f10a0711c4",
+      "n": 1576,
+      "edges": 4785,
+      "max_indegree": 8,
+      "max_outdegree": 450,
+      "roots": 2,
+      "sinks": 1021,
+      "zero_output": 1023,
+      "core_types": {
+        "AIC": 828,
+        "AIV": 748
+      },
+      "memory_limit": 2451,
+      "deadline_us": 15672103,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1273,
+        "strict_ancestor_future_direct_overlap": 1273,
+        "strict_overlap_at": 1332382411,
+        "strict_overlap_producer_count": 7,
+        "sink_retention": 0,
+        "lower_bound": 1273,
+        "slack": 1178
+      },
+      "necessary_time": {
+        "critical_path": 99590,
+        "pool_core_work": {
+          "AIC": 9517282,
+          "AIV": 154732
+        },
+        "pool_strict_majority": {
+          "AIC": 9460003,
+          "AIV": 0
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 9517282,
+        "slack": 6154821,
+        "serial_time": 15672103,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 984,
+        "indegree_at_least2": 1311,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 1252,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 553
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_local_k160_ret1_seed20307029",
+      "input_sha": "f8e411b7fecda29e169fd263fdd0d4aa26faabe94948d1f6ae5265da751ff79e",
+      "n": 1628,
+      "edges": 5597,
+      "max_indegree": 9,
+      "max_outdegree": 387,
+      "roots": 3,
+      "sinks": 991,
+      "zero_output": 155,
+      "core_types": {
+        "AIC": 855,
+        "AIV": 773
+      },
+      "memory_limit": 4474,
+      "deadline_us": 17960301,
+      "necessary_memory": {
+        "individual": 505,
+        "direct_parent_overlap": 1432,
+        "strict_ancestor_future_direct_overlap": 1432,
+        "strict_overlap_at": 8421887,
+        "strict_overlap_producer_count": 8,
+        "sink_retention": 2577,
+        "lower_bound": 2577,
+        "slack": 1897
+      },
+      "necessary_time": {
+        "critical_path": 548913,
+        "pool_core_work": {
+          "AIC": 5769425,
+          "AIV": 2134530
+        },
+        "pool_strict_majority": {
+          "AIC": 4750753,
+          "AIV": 0
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 5769425,
+        "slack": 12190876,
+        "serial_time": 17960301,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 956,
+        "indegree_at_least2": 1488,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 1236,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 594,
+          "2..4": 30,
+          ">16": 3
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k160_ret0_seed20307038",
+      "input_sha": "36faadcb562d68e317181764a220404f9dcceab225b1de16aa69ec39ba07c8e8",
+      "n": 1605,
+      "edges": 6509,
+      "max_indegree": 12,
+      "max_outdegree": 415,
+      "roots": 4,
+      "sinks": 1022,
+      "zero_output": 1026,
+      "core_types": {
+        "AIC": 817,
+        "AIV": 788
+      },
+      "memory_limit": 7120,
+      "deadline_us": 16804694,
+      "necessary_memory": {
+        "individual": 500,
+        "direct_parent_overlap": 1871,
+        "strict_ancestor_future_direct_overlap": 1871,
+        "strict_overlap_at": 681382897,
+        "strict_overlap_producer_count": 12,
+        "sink_retention": 0,
+        "lower_bound": 1871,
+        "slack": 5249
+      },
+      "necessary_time": {
+        "critical_path": 99709,
+        "pool_core_work": {
+          "AIC": 2989073,
+          "AIV": 4031523
+        },
+        "pool_strict_majority": {
+          "AIC": 0,
+          "AIV": 3813760
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 4031523,
+        "slack": 12773171,
+        "serial_time": 16804694,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 972,
+        "indegree_at_least2": 1443,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 1374,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 579
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "wide_unseen_high-fanout_dense_k160_ret1_seed20307039",
+      "input_sha": "a498b235f50103360e1a80f4de76d4f1a24fbde290e83d9fe95a1ce95f7a713f",
+      "n": 1659,
+      "edges": 6945,
+      "max_indegree": 11,
+      "max_outdegree": 382,
+      "roots": 4,
+      "sinks": 995,
+      "zero_output": 201,
+      "core_types": {
+        "AIC": 898,
+        "AIV": 761
+      },
+      "memory_limit": 9111,
+      "deadline_us": 16788065,
+      "necessary_memory": {
+        "individual": 505,
+        "direct_parent_overlap": 1776,
+        "strict_ancestor_future_direct_overlap": 1776,
+        "strict_overlap_at": 719671005,
+        "strict_overlap_producer_count": 11,
+        "sink_retention": 2367,
+        "lower_bound": 2367,
+        "slack": 6744
+      },
+      "necessary_time": {
+        "critical_path": 494245,
+        "pool_core_work": {
+          "AIC": 414921,
+          "AIV": 3983397
+        },
+        "pool_strict_majority": {
+          "AIC": 0,
+          "AIV": 3616688
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 3983397,
+        "slack": 12804668,
+        "serial_time": 16788065,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 984,
+        "indegree_at_least2": 1539,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 1227,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 605,
+          "2..4": 44,
+          ">16": 4
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "recursive_nonlocal_leaves64_ret0_seed20307449",
+      "input_sha": "3ec740a9445b1fcdc0965acbee3cb1795096869d86b21b22a9d3afa8636d9cd7",
+      "n": 190,
+      "edges": 628,
+      "max_indegree": 7,
+      "max_outdegree": 19,
+      "roots": 1,
+      "sinks": 1,
+      "zero_output": 127,
+      "core_types": {
+        "AIV": 87,
+        "AIC": 103
+      },
+      "memory_limit": 7644,
+      "deadline_us": 869220,
+      "necessary_memory": {
+        "individual": 699,
+        "direct_parent_overlap": 1644,
+        "strict_ancestor_future_direct_overlap": 4234,
+        "strict_overlap_at": 1585384678,
+        "strict_overlap_producer_count": 26,
+        "sink_retention": 0,
+        "lower_bound": 4234,
+        "slack": 3410
+      },
+      "necessary_time": {
+        "critical_path": 143031,
+        "pool_core_work": {
+          "AIC": 269904,
+          "AIV": 237406
+        },
+        "pool_strict_majority": {
+          "AIC": 254363,
+          "AIV": 210420
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 269904,
+        "slack": 599316,
+        "serial_time": 869220,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 812,
+        "indegree_at_least2": 127,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 85,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 42,
+          "2..4": 16,
+          ">16": 5
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "recursive_nonlocal_leaves256_ret1_seed20326650",
+      "input_sha": "6c03cd2162faab50d9847e7ff3c7fc0e2a8407900635f3cd0a7bd61609be9d55",
+      "n": 766,
+      "edges": 2546,
+      "max_indegree": 7,
+      "max_outdegree": 25,
+      "roots": 1,
+      "sinks": 1,
+      "zero_output": 41,
+      "core_types": {
+        "AIV": 376,
+        "AIC": 390
+      },
+      "memory_limit": 26926,
+      "deadline_us": 3936768,
+      "necessary_memory": {
+        "individual": 708,
+        "direct_parent_overlap": 1957,
+        "strict_ancestor_future_direct_overlap": 6460,
+        "strict_overlap_at": 1242491775,
+        "strict_overlap_producer_count": 35,
+        "sink_retention": 6,
+        "lower_bound": 6460,
+        "slack": 20466
+      },
+      "necessary_time": {
+        "critical_path": 204587,
+        "pool_core_work": {
+          "AIC": 1117817,
+          "AIV": 1162006
+        },
+        "pool_strict_majority": {
+          "AIC": 988867,
+          "AIV": 1062414
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 1162006,
+        "slack": 2774762,
+        "serial_time": 3936768,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 948,
+        "indegree_at_least2": 511,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 340,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "2..4": 76,
+          "5..16": 159,
+          ">16": 20
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret1_seed20312441_role-duration",
+      "input_sha": "e5efed9f745b6dd19e6976570e12b379437fd7383650586f71123d88daf515f8",
+      "n": 140,
+      "edges": 545,
+      "max_indegree": 8,
+      "max_outdegree": 45,
+      "roots": 4,
+      "sinks": 84,
+      "zero_output": 14,
+      "core_types": {
+        "AIV": 72,
+        "AIC": 68
+      },
+      "memory_limit": 2483,
+      "deadline_us": 1430270,
+      "necessary_memory": {
+        "individual": 502,
+        "direct_parent_overlap": 1293,
+        "strict_ancestor_future_direct_overlap": 1293,
+        "strict_overlap_at": 1047206293,
+        "strict_overlap_producer_count": 8,
+        "sink_retention": 204,
+        "lower_bound": 1293,
+        "slack": 1190
+      },
+      "necessary_time": {
+        "critical_path": 158969,
+        "pool_core_work": {
+          "AIC": 414873,
+          "AIV": 26235
+        },
+        "pool_strict_majority": {
+          "AIC": 312703,
+          "AIV": 0
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 414873,
+        "slack": 1015397,
+        "serial_time": 1430270,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 928,
+        "indegree_at_least2": 136,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 117,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 48,
+          "2..4": 4,
+          ">16": 4
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    },
+    {
+      "name": "projection_unseen_high-fanout_local_k18_ret1_seed20314831_random-duration",
+      "input_sha": "730e7d58b6e707630414ce363c7f445b88cab4878c13444592684cee676c7499",
+      "n": 182,
+      "edges": 565,
+      "max_indegree": 7,
+      "max_outdegree": 64,
+      "roots": 1,
+      "sinks": 109,
+      "zero_output": 18,
+      "core_types": {
+        "AIC": 96,
+        "AIV": 86
+      },
+      "memory_limit": 2411,
+      "deadline_us": 9366,
+      "necessary_memory": {
+        "individual": 504,
+        "direct_parent_overlap": 1155,
+        "strict_ancestor_future_direct_overlap": 1155,
+        "strict_overlap_at": 1851526506,
+        "strict_overlap_producer_count": 6,
+        "sink_retention": 270,
+        "lower_bound": 1155,
+        "slack": 1256
+      },
+      "necessary_time": {
+        "critical_path": 754,
+        "pool_core_work": {
+          "AIC": 176,
+          "AIV": 2255
+        },
+        "pool_strict_majority": {
+          "AIC": 0,
+          "AIV": 2018
+        },
+        "memory_strict_majority": 0,
+        "lower_bound": 2255,
+        "slack": 7111,
+        "serial_time": 9366,
+        "serial_meets_deadline": true
+      },
+      "projection": {
+        "threshold": 1008,
+        "indegree_at_least2": 150,
+        "median_pass": 0,
+        "workspace_greater_than_all_parents": 117,
+        "targets": 0,
+        "applicable": false,
+        "inapplicable_reason": "targets<2",
+        "complete_direct_producer_groups": {},
+        "excluded_external_user_producers": {
+          "5..16": 66,
+          "2..4": 5,
+          ">16": 1
+        },
+        "total_closure_nodes": 0,
+        "unit": null,
+        "maximum_evaluations_at16M": 0
+      },
+      "heuristic_only": {
+        "source": "isolated R50, actual diagnostic; not optimum or infeasibility proof",
+        "best_peak": null,
+        "best_gap_above_capacity": null,
+        "evaluations": 0,
+        "charged_work": 0,
+        "exhausted": false
+      }
+    }
+  ],
+  "sha256": {
+    "research/batch49/unresolved-r48-input-only.json": "87b52c1ee01bd26fc1347cf6c50fd3dbae8263cc2cea43aef4b6554524882df7",
+    "reports/projection-unresolved-diagnostic-batch50.json": "3a45d76440d8bd3852259d77f26e8edef47c6b1a1fd43382f3c12e010bbbb3d9",
+    "research/batch50/solution.cpp": "c3ed270f035891951631644b7444236a6343f35b9828f00a8a3d3712b2ba5e63",
+    "F:\\Hackathon\\projects\\27-aicore-streams\\scripts\\classify_resource_gaps_batch51.py": "28b7d7e1b875d557c7284667ea0693e4f910143631b62ea506ce9cc7c5d553f8",
+    "scripts/classify_resource_gaps_batch51.py": "fb5249fec5f137ed73150aa5a11e186c147507299b6e7740313c3ddfb68af5f8"
+  },
+  "explanation": "At v BEGIN, strict ancestor output p is unavoidably live if an ORIGINAL DIRECT consumer is v or a descendant of v. Count distinct p once plus Wv+Ov. Sinks hold to globalT. Time lower bounds ignore event overhead, use independent AIC/AIV pools and simultaneous BEGIN W+O strict-half mutual exclusion. Bounds are necessary only; known witnesses are neither read nor reconstructed.",
+  "shared_analysis_seconds": 0.7257384000113234
+}

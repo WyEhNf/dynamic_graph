@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f CMakeFiles\consumer_group_tests.dir/objects.a
+E:\mingw64\bin\ar.exe qc CMakeFiles\consumer_group_tests.dir/objects.a @CMakeFiles\consumer_group_tests.dir\objects1.rsp
+E:\mingw64\bin\g++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\consumer_group_tests.dir/objects.a -Wl,--no-whole-archive -o consumer_group_tests.exe -Wl,--out-implib,libconsumer_group_tests.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\consumer_group_tests.dir\linkLibs.rsp

@@ -1,0 +1,360 @@
+{
+  "source_sha256": "6b913bef5a17fc0c7d8a9db9889f443e9d2995d44909087a976b9061bed86032",
+  "exe_sha256": "71dcfdc38e24d37b1673541ab61d56a5d3005550746004fc08a6e939127a0734",
+  "input": "data/frontier-recovery-batch32.json",
+  "input_sha256": "75497f2ccc0380dc5b906af6982d57e896e6613838a586b9ce7586587009ed54",
+  "report": "reports\\frontier-recovery-batch36.json",
+  "summary": {
+    "total": 69,
+    "passed": 4,
+    "failed": 65
+  },
+  "all_solve_us": 17067108,
+  "all_thread_cpu_us": 16203125,
+  "model_disagreements": 0,
+  "recovered": [
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280627",
+      "n": 535,
+      "T": 9881967,
+      "peak": 7145
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem0",
+      "n": 547,
+      "T": 9951939,
+      "peak": 6387
+    },
+    {
+      "name": "blind_equal-duration_dense_k64_ret0_seed20287438",
+      "n": 341,
+      "T": 16639,
+      "peak": 5513
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret0_seed20314440_random-duration",
+      "n": 146,
+      "T": 6584,
+      "peak": 3032
+    }
+  ],
+  "cost_scope": "One exploratory functional run; not paired performance evidence",
+  "case_scope": "All 69 R31 known-witness-feasible failures, unchanged complete input objects",
+  "comparison": {
+    "before": {
+      "total": 69,
+      "passed": 4,
+      "failed": 65
+    },
+    "after": {
+      "total": 69,
+      "passed": 4,
+      "failed": 65
+    },
+    "common_cases": 4,
+    "common_solve_us_before": 1046041,
+    "common_solve_us_after": 914389,
+    "improved_T": 0,
+    "regressed_T": 0,
+    "improved_peak_at_equal_T": 0,
+    "regressed_peak_at_equal_T": 0,
+    "recovered": [],
+    "lost": [],
+    "model_disagreements": 0,
+    "duplicates": 148,
+    "scales": [
+      {
+        "n": 70,
+        "median_us": 47280,
+        "max_us": 47280
+      },
+      {
+        "n": 71,
+        "median_us": 26425.0,
+        "max_us": 26666
+      },
+      {
+        "n": 124,
+        "median_us": 57552,
+        "max_us": 57552
+      },
+      {
+        "n": 129,
+        "median_us": 73487,
+        "max_us": 73487
+      },
+      {
+        "n": 131,
+        "median_us": 39225,
+        "max_us": 39225
+      },
+      {
+        "n": 140,
+        "median_us": 69280,
+        "max_us": 69280
+      },
+      {
+        "n": 146,
+        "median_us": 127637,
+        "max_us": 127637
+      },
+      {
+        "n": 172,
+        "median_us": 79217,
+        "max_us": 79217
+      },
+      {
+        "n": 182,
+        "median_us": 87160,
+        "max_us": 87160
+      },
+      {
+        "n": 190,
+        "median_us": 146974,
+        "max_us": 146974
+      },
+      {
+        "n": 196,
+        "median_us": 130061.0,
+        "max_us": 137354
+      },
+      {
+        "n": 341,
+        "median_us": 429433,
+        "max_us": 429433
+      },
+      {
+        "n": 348,
+        "median_us": 179500,
+        "max_us": 179500
+      },
+      {
+        "n": 353,
+        "median_us": 299647.5,
+        "max_us": 445586
+      },
+      {
+        "n": 361,
+        "median_us": 375688,
+        "max_us": 375688
+      },
+      {
+        "n": 362,
+        "median_us": 192227,
+        "max_us": 192227
+      },
+      {
+        "n": 508,
+        "median_us": 281771,
+        "max_us": 281771
+      },
+      {
+        "n": 511,
+        "median_us": 290136,
+        "max_us": 290136
+      },
+      {
+        "n": 512,
+        "median_us": 313055,
+        "max_us": 570589
+      },
+      {
+        "n": 516,
+        "median_us": 99473.0,
+        "max_us": 107871
+      },
+      {
+        "n": 522,
+        "median_us": 90534,
+        "max_us": 90534
+      },
+      {
+        "n": 525,
+        "median_us": 87883,
+        "max_us": 87883
+      },
+      {
+        "n": 532,
+        "median_us": 69377,
+        "max_us": 69377
+      },
+      {
+        "n": 535,
+        "median_us": 147601,
+        "max_us": 147601
+      },
+      {
+        "n": 536,
+        "median_us": 94410.5,
+        "max_us": 100258
+      },
+      {
+        "n": 539,
+        "median_us": 180649.5,
+        "max_us": 187973
+      },
+      {
+        "n": 547,
+        "median_us": 207806.5,
+        "max_us": 209718
+      },
+      {
+        "n": 563,
+        "median_us": 198053.5,
+        "max_us": 198356
+      },
+      {
+        "n": 638,
+        "median_us": 382097,
+        "max_us": 382097
+      },
+      {
+        "n": 639,
+        "median_us": 208907,
+        "max_us": 208907
+      },
+      {
+        "n": 651,
+        "median_us": 170922,
+        "max_us": 170922
+      },
+      {
+        "n": 676,
+        "median_us": 127032,
+        "max_us": 127032
+      },
+      {
+        "n": 695,
+        "median_us": 105208,
+        "max_us": 105208
+      },
+      {
+        "n": 700,
+        "median_us": 215172,
+        "max_us": 215172
+      },
+      {
+        "n": 704,
+        "median_us": 227379.0,
+        "max_us": 242394
+      },
+      {
+        "n": 705,
+        "median_us": 220377,
+        "max_us": 220377
+      },
+      {
+        "n": 712,
+        "median_us": 150289,
+        "max_us": 150289
+      },
+      {
+        "n": 715,
+        "median_us": 122996,
+        "max_us": 122996
+      },
+      {
+        "n": 766,
+        "median_us": 185240.0,
+        "max_us": 233304
+      },
+      {
+        "n": 781,
+        "median_us": 114198,
+        "max_us": 114198
+      },
+      {
+        "n": 798,
+        "median_us": 152017,
+        "max_us": 152017
+      },
+      {
+        "n": 814,
+        "median_us": 363363,
+        "max_us": 363363
+      },
+      {
+        "n": 1265,
+        "median_us": 397150,
+        "max_us": 397150
+      },
+      {
+        "n": 1270,
+        "median_us": 244152,
+        "max_us": 244152
+      },
+      {
+        "n": 1284,
+        "median_us": 312434,
+        "max_us": 312434
+      },
+      {
+        "n": 1576,
+        "median_us": 314593,
+        "max_us": 314593
+      },
+      {
+        "n": 1605,
+        "median_us": 644016,
+        "max_us": 644016
+      },
+      {
+        "n": 1628,
+        "median_us": 702811,
+        "max_us": 702811
+      },
+      {
+        "n": 1659,
+        "median_us": 912025,
+        "max_us": 912025
+      },
+      {
+        "n": 2077,
+        "median_us": 573123,
+        "max_us": 573123
+      },
+      {
+        "n": 2085,
+        "median_us": 582731,
+        "max_us": 582731
+      },
+      {
+        "n": 2103,
+        "median_us": 552996,
+        "max_us": 552996
+      },
+      {
+        "n": 2104,
+        "median_us": 761991,
+        "max_us": 761991
+      },
+      {
+        "n": 2124,
+        "median_us": 384192,
+        "max_us": 384192
+      },
+      {
+        "n": 2125,
+        "median_us": 255364,
+        "max_us": 255364
+      },
+      {
+        "n": 2139,
+        "median_us": 378772,
+        "max_us": 378772
+      },
+      {
+        "n": 2146,
+        "median_us": 359395,
+        "max_us": 359395
+      }
+    ],
+    "common_thread_cpu_measured_cases": 4,
+    "common_thread_cpu_us_before": 875000,
+    "common_thread_cpu_us_after": 859375,
+    "all_solve_us_before": 27427118,
+    "all_thread_cpu_us_before": 24750000,
+    "all_solve_us_after": 17067108,
+    "all_thread_cpu_us_after": 16203125
+  }
+}

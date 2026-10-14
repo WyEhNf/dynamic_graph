@@ -1,0 +1,2 @@
+E:\mingw64\bin\ar.exe qc libcandidate_search.a "CMakeFiles/candidate_search.dir/F_/Hackathon/projects/27-aicore-streams/src/candidate_search.cpp.obj"
+E:\mingw64\bin\ranlib.exe libcandidate_search.a

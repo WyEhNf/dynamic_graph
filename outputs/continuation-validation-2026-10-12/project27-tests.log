@@ -1,0 +1,9 @@
+test_bad_graph_or_non_topological_prefix_rejected (test_prefix_memory_certificates.PrefixMemoryTests.test_bad_graph_or_non_topological_prefix_rejected) ... ok
+test_bounds_against_all_serial_extensions_of_small_graphs (test_prefix_memory_certificates.PrefixMemoryTests.test_bounds_against_all_serial_extensions_of_small_graphs) ... ok
+test_prefix_crossing_and_unknown_budget (test_prefix_memory_certificates.PrefixMemoryTests.test_prefix_crossing_and_unknown_budget) ... ok
+test_sink_retention_completed_targets_and_bigints (test_prefix_memory_certificates.PrefixMemoryTests.test_sink_retention_completed_targets_and_bigints) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.063s
+
+OK

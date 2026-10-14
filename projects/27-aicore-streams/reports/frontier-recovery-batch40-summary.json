@@ -1,0 +1,372 @@
+{
+  "source_sha256": "e5e11c61623c1eefeedbff343f08d84fe3d55a725b379cc69f2cc38e4df002e2",
+  "exe_sha256": "be7b70f745d0fb1051e66cf680ecba789598aff3a938f93da52b57404ad3d4f2",
+  "input": "data/frontier-recovery-batch32.json",
+  "input_sha256": "75497f2ccc0380dc5b906af6982d57e896e6613838a586b9ce7586587009ed54",
+  "report": "reports\\frontier-recovery-batch40.json",
+  "summary": {
+    "total": 69,
+    "passed": 6,
+    "failed": 63
+  },
+  "all_solve_us": 20343273,
+  "all_thread_cpu_us": 19218750,
+  "model_disagreements": 0,
+  "recovered": [
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280627",
+      "n": 535,
+      "T": 9881967,
+      "peak": 7145
+    },
+    {
+      "name": "irregular_consumers_dense_k96_ret0_seed20280634_rootmem0",
+      "n": 547,
+      "T": 9951939,
+      "peak": 6387
+    },
+    {
+      "name": "blind_irregular_dense_k12_ret0_seed20282228",
+      "n": 70,
+      "T": 1454246,
+      "peak": 1856
+    },
+    {
+      "name": "blind_equal-duration_dense_k64_ret0_seed20287438",
+      "n": 341,
+      "T": 16639,
+      "peak": 5513
+    },
+    {
+      "name": "recursive_random-split_leaves256_ret1_seed20326640",
+      "n": 766,
+      "T": 3687139,
+      "peak": 3591
+    },
+    {
+      "name": "projection_unseen_high-fanout_dense_k14_ret0_seed20314440_random-duration",
+      "n": 146,
+      "T": 6584,
+      "peak": 3032
+    }
+  ],
+  "cost_scope": "One exploratory functional run; not paired performance evidence",
+  "case_scope": "All 69 R31 known-witness-feasible failures, unchanged complete input objects",
+  "comparison": {
+    "before": {
+      "total": 69,
+      "passed": 6,
+      "failed": 63
+    },
+    "after": {
+      "total": 69,
+      "passed": 6,
+      "failed": 63
+    },
+    "common_cases": 6,
+    "common_solve_us_before": 970726,
+    "common_solve_us_after": 1038538,
+    "improved_T": 0,
+    "regressed_T": 0,
+    "improved_peak_at_equal_T": 0,
+    "regressed_peak_at_equal_T": 0,
+    "recovered": [],
+    "lost": [],
+    "model_disagreements": 0,
+    "duplicates": 148,
+    "scales": [
+      {
+        "n": 70,
+        "median_us": 51275,
+        "max_us": 51275
+      },
+      {
+        "n": 71,
+        "median_us": 37442.0,
+        "max_us": 38445
+      },
+      {
+        "n": 124,
+        "median_us": 63291,
+        "max_us": 63291
+      },
+      {
+        "n": 129,
+        "median_us": 103526,
+        "max_us": 103526
+      },
+      {
+        "n": 131,
+        "median_us": 49015,
+        "max_us": 49015
+      },
+      {
+        "n": 140,
+        "median_us": 96354,
+        "max_us": 96354
+      },
+      {
+        "n": 146,
+        "median_us": 147906,
+        "max_us": 147906
+      },
+      {
+        "n": 172,
+        "median_us": 99379,
+        "max_us": 99379
+      },
+      {
+        "n": 182,
+        "median_us": 107219,
+        "max_us": 107219
+      },
+      {
+        "n": 190,
+        "median_us": 181601,
+        "max_us": 181601
+      },
+      {
+        "n": 196,
+        "median_us": 153206.0,
+        "max_us": 167643
+      },
+      {
+        "n": 341,
+        "median_us": 390307,
+        "max_us": 390307
+      },
+      {
+        "n": 348,
+        "median_us": 225008,
+        "max_us": 225008
+      },
+      {
+        "n": 353,
+        "median_us": 325158.5,
+        "max_us": 469848
+      },
+      {
+        "n": 361,
+        "median_us": 407415,
+        "max_us": 407415
+      },
+      {
+        "n": 362,
+        "median_us": 235355,
+        "max_us": 235355
+      },
+      {
+        "n": 508,
+        "median_us": 350622,
+        "max_us": 350622
+      },
+      {
+        "n": 511,
+        "median_us": 312007,
+        "max_us": 312007
+      },
+      {
+        "n": 512,
+        "median_us": 371900,
+        "max_us": 621927
+      },
+      {
+        "n": 516,
+        "median_us": 144239.0,
+        "max_us": 172236
+      },
+      {
+        "n": 522,
+        "median_us": 132611,
+        "max_us": 132611
+      },
+      {
+        "n": 525,
+        "median_us": 114735,
+        "max_us": 114735
+      },
+      {
+        "n": 532,
+        "median_us": 103473,
+        "max_us": 103473
+      },
+      {
+        "n": 535,
+        "median_us": 160518,
+        "max_us": 160518
+      },
+      {
+        "n": 536,
+        "median_us": 135648.0,
+        "max_us": 149915
+      },
+      {
+        "n": 539,
+        "median_us": 231202.0,
+        "max_us": 233498
+      },
+      {
+        "n": 547,
+        "median_us": 226294.5,
+        "max_us": 246734
+      },
+      {
+        "n": 563,
+        "median_us": 270699.0,
+        "max_us": 274972
+      },
+      {
+        "n": 638,
+        "median_us": 407169,
+        "max_us": 407169
+      },
+      {
+        "n": 639,
+        "median_us": 253754,
+        "max_us": 253754
+      },
+      {
+        "n": 651,
+        "median_us": 193439,
+        "max_us": 193439
+      },
+      {
+        "n": 676,
+        "median_us": 153926,
+        "max_us": 153926
+      },
+      {
+        "n": 695,
+        "median_us": 120337,
+        "max_us": 120337
+      },
+      {
+        "n": 700,
+        "median_us": 264296,
+        "max_us": 264296
+      },
+      {
+        "n": 704,
+        "median_us": 261640.0,
+        "max_us": 289830
+      },
+      {
+        "n": 705,
+        "median_us": 249630,
+        "max_us": 249630
+      },
+      {
+        "n": 712,
+        "median_us": 188573,
+        "max_us": 188573
+      },
+      {
+        "n": 715,
+        "median_us": 155063,
+        "max_us": 155063
+      },
+      {
+        "n": 766,
+        "median_us": 176605.0,
+        "max_us": 270533
+      },
+      {
+        "n": 781,
+        "median_us": 167597,
+        "max_us": 167597
+      },
+      {
+        "n": 798,
+        "median_us": 244886,
+        "max_us": 244886
+      },
+      {
+        "n": 814,
+        "median_us": 480990,
+        "max_us": 480990
+      },
+      {
+        "n": 1265,
+        "median_us": 553144,
+        "max_us": 553144
+      },
+      {
+        "n": 1270,
+        "median_us": 352080,
+        "max_us": 352080
+      },
+      {
+        "n": 1284,
+        "median_us": 514302,
+        "max_us": 514302
+      },
+      {
+        "n": 1576,
+        "median_us": 439547,
+        "max_us": 439547
+      },
+      {
+        "n": 1605,
+        "median_us": 809601,
+        "max_us": 809601
+      },
+      {
+        "n": 1628,
+        "median_us": 892679,
+        "max_us": 892679
+      },
+      {
+        "n": 1659,
+        "median_us": 1068887,
+        "max_us": 1068887
+      },
+      {
+        "n": 2077,
+        "median_us": 608441,
+        "max_us": 608441
+      },
+      {
+        "n": 2085,
+        "median_us": 647987,
+        "max_us": 647987
+      },
+      {
+        "n": 2103,
+        "median_us": 643261,
+        "max_us": 643261
+      },
+      {
+        "n": 2104,
+        "median_us": 869716,
+        "max_us": 869716
+      },
+      {
+        "n": 2124,
+        "median_us": 430888,
+        "max_us": 430888
+      },
+      {
+        "n": 2125,
+        "median_us": 258648,
+        "max_us": 258648
+      },
+      {
+        "n": 2139,
+        "median_us": 409357,
+        "max_us": 409357
+      },
+      {
+        "n": 2146,
+        "median_us": 373184,
+        "max_us": 373184
+      }
+    ],
+    "common_thread_cpu_measured_cases": 6,
+    "common_thread_cpu_us_before": 921875,
+    "common_thread_cpu_us_after": 1015625,
+    "all_solve_us_before": 18204475,
+    "all_thread_cpu_us_before": 16453125,
+    "all_solve_us_after": 20343273,
+    "all_thread_cpu_us_after": 19218750
+  }
+}

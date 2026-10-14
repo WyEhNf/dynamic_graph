@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791770712.3399668,
+  "initial_plan_sha256": "cd048c2e441f3d07e8198be5d9a466d753ad0add2b4e5a144565407493b5898a",
+  "supplement_plan_sha256": "039db32ba2c7a2abe7aaf82c9fc006a81a7382d74b0f44eae92401dbb736e690",
+  "original_frozen_files": 191,
+  "accounting_diff_hunks": 3,
+  "charge_table_rows": 11,
+  "compile_command_replacements": 3,
+  "planned_goldens": 1081,
+  "planned_boundaries": 2162,
+  "planned_mutations": 16320,
+  "actual_component_execution_count": 0,
+  "scope": "Static source/CFG/forest/interval and conservative nested original-opcode cost design reviewed. Accounting-only supplement preserves initial freeze, algorithm, gold denominator, accepted da955/57205 ABI,250k work and production default. Compile/small VM tests still required; not universal proof or performance result."
+}

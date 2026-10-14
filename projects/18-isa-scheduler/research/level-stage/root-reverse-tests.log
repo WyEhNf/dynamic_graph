@@ -1,0 +1,9 @@
+test_complete_stars_fresh_sizes_windows (tests.test_root_spines.RootSpinesTests.test_complete_stars_fresh_sizes_windows) ... ok
+test_nonmatching_and_memory_hazards_rejected (tests.test_root_spines.RootSpinesTests.test_nonmatching_and_memory_hazards_rejected) ... ok
+test_budget_and_policy_reject (tests.test_reverse_pressure.ReversePressureTests.test_budget_and_policy_reject) ... ok
+test_topological_permutation_and_independent_outputs (tests.test_reverse_pressure.ReversePressureTests.test_topological_permutation_and_independent_outputs) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.254s
+
+OK

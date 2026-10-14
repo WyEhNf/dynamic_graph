@@ -1,0 +1,1 @@
+1120 serial-frontier checks; 960 independently optimized capacities (outer/inner normalization) plus 160 budget controls

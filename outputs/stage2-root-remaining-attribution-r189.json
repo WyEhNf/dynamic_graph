@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "scope": "Read-only independent original-identity COPY attribution and direct-use rank joins; accepted whole-output semantics came from R187 root audit. No solver or oracle called.",
+  "report_sha256": "8c7a7700a17fd7dd1bb4909e8febce2ef4a721cebda360bda0fc99250ca4417c",
+  "inputs": 336,
+  "families": 21,
+  "legal": 272,
+  "missing_outputs": 64,
+  "COPY": 192859,
+  "full_proposals": 4680,
+  "proposal_comparison": {
+    "better_initial": 98,
+    "same_initial": 2893,
+    "worse_initial": 1689
+  },
+  "family_summaries": {
+    "balanced_tree": {
+      "copies": 2194,
+      "necessary_lower": 0,
+      "copy_origins": {
+        "ADD": 1897,
+        "MULW": 297
+      },
+      "gap_upper_pp": 0.42538195773106924
+    },
+    "skew_tree": {
+      "copies": 0,
+      "necessary_lower": 0,
+      "copy_origins": {},
+      "gap_upper_pp": 0.0
+    },
+    "parallel_chains": {
+      "copies": 0,
+      "necessary_lower": 0,
+      "copy_origins": {},
+      "gap_upper_pp": 0.0
+    },
+    "ladder_diamond": {
+      "copies": 8334,
+      "necessary_lower": 8330,
+      "copy_origins": {
+        "GET": 8334
+      },
+      "gap_upper_pp": 0.006027323475075301
+    },
+    "sparse_shared": {
+      "copies": 4992,
+      "necessary_lower": 4028,
+      "copy_origins": {
+        "GET": 4992
+      },
+      "gap_upper_pp": 0.18660938382744577
+    },
+    "butterfly": {
+      "copies": 0,
+      "necessary_lower": 0,
+      "copy_origins": {},
+      "gap_upper_pp": 0.0
+    },
+    "hazard_multi": {
+      "copies": 0,
+      "necessary_lower": 0,
+      "copy_origins": {},
+      "gap_upper_pp": 0.0
+    },
+    "wide_fanout": {
+      "copies": 7069,
+      "necessary_lower": 6950,
+      "copy_origins": {
+        "GET": 7069
+      },
+      "gap_upper_pp": 0.10557597372331817
+    },
+    "multi_sink_shared": {
+      "copies": 3039,
+      "necessary_lower": 2984,
+      "copy_origins": {
+        "GET": 3039
+      },
+      "gap_upper_pp": 0.035284998330089135
+    },
+    "fanout_diamonds": {
+      "copies": 3043,
+      "necessary_lower": 2897,
+      "copy_origins": {
+        "GET": 3043
+      },
+      "gap_upper_pp": 0.15732247852349085
+    },
+    "multi_sink_irregular": {
+      "copies": 3074,
+      "necessary_lower": 3053,
+      "copy_origins": {
+        "GET": 3074
+      },
+      "gap_upper_pp": 0.029207137595067437
+    },
+    "cross_group_shared": {
+      "copies": 9750,
+      "necessary_lower": 7956,
+      "copy_origins": {
+        "GET": 9743,
+        "ADD": 6,
+        "MULW": 1
+      },
+      "gap_upper_pp": 0.36713537172826716
+    },
+    "ragged_tree": {
+      "copies": 4036,
+      "necessary_lower": 0,
+      "copy_origins": {
+        "ADD": 3398,
+        "MULW": 638
+      },
+      "gap_upper_pp": 0.5624736548154061
+    },
+    "padded_tree": {
+      "copies": 3885,
+      "necessary_lower": 0,
+      "copy_origins": {
+        "ADD": 3419,
+        "MULW": 466
+      },
+      "gap_upper_pp": 0.5883952489268305
+    },
+    "dot_product_many": {
+      "copies": 2876,
+      "necessary_lower": 1677,
+      "copy_origins": {
+        "MULW": 16,
+        "GET": 412,
+        "ADD": 2448
+      },
+      "gap_upper_pp": 0.3099044227058222
+    },
+    "stencil_1d": {
+      "copies": 1352,
+      "necessary_lower": 0,
+      "copy_origins": {
+        "GET": 1352
+      },
+      "gap_upper_pp": 0.28415115979659944
+    },
+    "matrix_product_tile": {
+      "copies": 66,
+      "necessary_lower": 0,
+      "copy_origins": {
+        "GET": 17,
+        "MULW": 8,
+        "ADD": 41
+      },
+      "gap_upper_pp": 0.13332255979314803
+    },
+    "sparse_live": {
+      "copies": 4060,
+      "necessary_lower": 4021,
+      "copy_origins": {
+        "GET": 4060
+      },
+      "gap_upper_pp": 0.037409521649779974
+    },
+    "near_window_spine": {
+      "copies": 135089,
+      "necessary_lower": 134208,
+      "copy_origins": {
+        "GET": 135089
+      },
+      "gap_upper_pp": 0.07081545074276568
+    },
+    "serial_chains": {
+      "copies": 0,
+      "necessary_lower": 0,
+      "copy_origins": {},
+      "gap_upper_pp": 0.0
+    },
+    "ordered_duplicate_network": {
+      "copies": 0,
+      "necessary_lower": 0,
+      "copy_origins": {},
+      "gap_upper_pp": 0.0
+    }
+  },
+  "official_Level_proven": false
+}

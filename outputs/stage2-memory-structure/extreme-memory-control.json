@@ -1,0 +1,29 @@
+{
+  "format": "aicore-local-v1",
+  "cases": [
+    {
+      "name": "single_operator_int64_workspace_output_sum_exceeds_capacity",
+      "hardware": {
+        "aic_core_num": 1,
+        "aiv_core_num": 1,
+        "stream_num": 1,
+        "memory_limit": 9223372036854775807,
+        "event_record_time": 0,
+        "event_wait_time": 0
+      },
+      "deadline_us": 10,
+      "expected_feasible": false,
+      "nodes": [
+        {
+          "id": 10,
+          "core_type": "AIC",
+          "core_num": 1,
+          "exec_time": 1,
+          "workspace_memory": 6000000000000000000,
+          "output_memory": 6000000000000000000,
+          "inputs": []
+        }
+      ]
+    }
+  ]
+}

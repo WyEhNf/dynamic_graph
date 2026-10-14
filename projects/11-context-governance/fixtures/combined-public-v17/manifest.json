@@ -1,0 +1,82 @@
+{
+  "version": 17,
+  "case_ids": [
+    "clamp",
+    "chunks",
+    "dedupe",
+    "slug",
+    "shipping",
+    "csv_sum",
+    "runs",
+    "rotate",
+    "intervals",
+    "normalize",
+    "histogram",
+    "prefix",
+    "window",
+    "threshold",
+    "priced_total",
+    "parse_records",
+    "bounded_mean",
+    "choose_records",
+    "partition_even",
+    "summarize_pairs",
+    "stable_topology",
+    "shortest_layers",
+    "interval_gaps",
+    "sparse_product",
+    "allocate_round_robin",
+    "outer_join",
+    "transactional_edits",
+    "merge_config",
+    "patch_text",
+    "cache_trace"
+  ],
+  "origins": [
+    {
+      "path": "fixtures\\combined-refinement-v11",
+      "manifest_sha256": "5c6739e2657f32049a37d96c03456f1945f8daea9293e649d2f558b62d4e52e2",
+      "case_ids": [
+        "clamp",
+        "chunks",
+        "dedupe",
+        "slug",
+        "shipping",
+        "csv_sum",
+        "runs",
+        "rotate",
+        "intervals",
+        "normalize",
+        "histogram",
+        "prefix",
+        "window",
+        "threshold",
+        "priced_total",
+        "parse_records",
+        "bounded_mean",
+        "choose_records",
+        "partition_even",
+        "summarize_pairs",
+        "stable_topology",
+        "shortest_layers",
+        "interval_gaps",
+        "sparse_product",
+        "allocate_round_robin",
+        "outer_join"
+      ]
+    },
+    {
+      "path": "fixtures\\workflow-holdout-v13b",
+      "manifest_sha256": "8691bc4c1e05609bb78513aa70ca6216a2ec5f9f8a011737bfcc9e4a12a9082a",
+      "case_ids": [
+        "transactional_edits",
+        "merge_config",
+        "patch_text",
+        "cache_trace"
+      ]
+    }
+  ],
+  "constructed_unix": 1791659406.461997,
+  "script_sha256": "3adb00f143d4661c072a7865233f86d33adfe832be72b4dc15d2d7d85d85e94e",
+  "scope": "Unchanged source suites. Read origins for separate development and new holdout groups; not a fresh combined holdout."
+}

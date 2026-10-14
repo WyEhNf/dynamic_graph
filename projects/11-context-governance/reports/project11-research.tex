@@ -1,0 +1,699 @@
+\documentclass[UTF8,a4paper,11pt,fontset=fandol]{ctexart}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath,booktabs,longtable,array}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{3em}
+\title{赛题11：Code Agent上下文治理\\算法、真实模型评测与资源研究报告}
+\author{本地项目研究记录}
+\date{2026年10月11日；研究与验证报告}
+\begin{document}
+\maketitle
+\begin{abstract}
+本项目研究在代码生成质量不下降的前提下，缩短上下文与首Token时延。
+实现包含完整Python AST切块、保守跨文件依赖闭包、用户原文保护、
+查询相关度与历史效用排序、日志抽取、实际模型Token预算和独立功能评测。
+在14个自建任务、3轮成对真实生成中，1.5B模型完整/压缩上下文均通过9题，3B模型均通过10题。
+扩充至20题后，3B双调用复核完整13题、压缩16题，无成对或初稿到修订退化；
+加入公开源码静态提示仍为相同正确率，保留为负结果。
+双调用累计输入Token加权减少87.01\%，第一稿端到端首Token逐题改善均值87.80\%，
+到最终代码阶段时间改善均值26.07\%。仍有4题错误，不能将“不劣于基线”等同于“全部代码正确”。
+后续7B NF4单调用在相同20题上通过18题，但首次测量的新增6题仅通过2题，
+因此不能由原集合的改善推定工程泛化。新增会话缓存在23个工作负载上保持相同选择，
+温热请求中位加速2.64倍；46种编辑场景增量索引中位加速2.44倍，初始化另计。
+TypeScript编译器基座新增具名类型闭包与编辑复用，实际编译执行检查通过；
+三阶段模型批评在26题上出现两项成对退化，新4个工作流首次单调用均失败，保留负结果。
+30题公开样例反馈两轮完整/压缩通过19/20题，未提升压缩组正确数；
+按层KV卸载配合分块回收完成32688输入与13输出，单对完整greedy Token一致，资源与时延证据另列。
+更大工程任务、DevEco/ArkTS集成与未知官方数据尚未完成。本报告保留失败、口径与资源边界。
+\end{abstract}
+
+\section{赛题介绍与实现范围}
+官方要求\cite{official}包括语义、新颖性与历史效用等重要性因素，单次分析在100ms内完成；
+根据模型窗口和任务需求选择保留、摘要或去重，并记录每次压缩与session指标。
+代码生成质量不劣化是计分前提，压缩与TTFT权重为60\%和40\%，理想改善分别为25\%。
+本地按\texttt{spec/metadata/repo\_bundles/templates}组织输入，
+没有官方工程包时以SHA-256固定快照，并将\texttt{base\_commit}明确设为null。
+
+当前治理核心仅依赖Python标准库；模型评测环境独立安装Transformers并使用本机CUDA PyTorch。
+质量测试覆盖本地Python纯函数与多文件修复。另已实现TypeScript Compiler API适配与编译执行验收，
+但DevEco产品内部注入和完整ArkTS专用语法/SDK适配尚未完成。
+词项相关度属于轻量检索，并非向量语义模型；抽取式日志压缩不生成新事实。
+正式质量指标、官方模型和平台时延统计尚不能由自建fixture推定。
+
+\section{经典与相关工作}
+\subsection{提示压缩与长上下文利用}
+LLMLingua\cite{llmlingua}以预算控制和迭代Token压缩减少提示，
+LongLLMLingua\cite{longllmlingua}进一步考虑问题相关信息密度及位置信息。
+LLMLingua-2\cite{llmlingua2}用数据蒸馏训练Token分类器，提升通用压缩效率。
+这些工作为“按任务保留有用信息”提供方法基础，但它们的文本压缩结果不能直接保证代码语法、
+符号引用或跨文件依赖完整。因此本项目首先保持整个函数、导入和必要配置闭包，
+不将逐Token删除直接用于工程源码。
+
+Lost in the Middle\cite{lostmiddle}展示了长上下文检索中的位置敏感性。
+这支持减少无关材料的研究动机，不证明任意删减都能改善代码生成。
+RepoCoder\cite{repocoder}通过迭代仓库检索与生成利用跨文件信息；
+本项目采用静态闭包提供确定的最低依赖保护，后续可在该安全边界之外加入迭代检索。
+BM25\cite{bm25}考虑词频饱和、文档长度与逆文档频率；当前实现只是归一化词项重叠，
+不应把它称为BM25。短标识符拆分、文档频率和依赖组成本排序仍有优化余量。
+
+\subsection{推理系统与质量评估}
+GQA\cite{gqa}用少于查询头数量的KV头减少缓存；FlashAttention\cite{flashattention}
+通过IO感知的精确注意力计算减少中间矩阵物化；PagedAttention\cite{pagedattention}
+处理服务中KV缓存的分页与共享。这些属于推理系统优化，与删减提示是不同层面的收益来源。
+本机Windows PyTorch构建未包含FlashAttention内核，原生GQA走高内存数学实现。
+本项目只在注意力适配层扩展K/V到查询头数，允许已安装普通SDPA内核自行分派\cite{sdpa,attentioninterface}，
+没有实现FlashAttention或PagedAttention，也没有重新训练GQA权重。
+
+Self-Refine\cite{selfrefine}研究用同一模型反馈并修订初稿。
+CodeT\cite{codet}由模型生成测试，使用执行与候选间一致性选择代码；
+Self-Debugging\cite{selfdebug}研究执行结果与代码解释辅助自我修复。
+本项目普通复核只提供用户要求、可见上下文和草稿；另有可选公开样例执行反馈，
+其预期值是可能错误的模型输出，不是隐藏oracle。本实现没有CodeT的多候选一致性排名，
+也没有复现这些论文的官方benchmark或训练方法。隐藏功能测试在每条完整流程的全部模型调用结束后评分，
+不进入该流程或后续独立流程的提示；不是等整批全部任务结束才评分。
+公开样例生成不看初稿，只看公开要求/上下文；返回至多6项JSON记录，参数和预期结果经受限AST字面量检查。
+初代v17函数名称限原目标文件公开函数，拒绝任意调用表达式、超深/超大数据和无限数值。
+这一v17契约假设目标函数已存在。初代14题的目标文件只有注释占位，因此即使模型返回合法JSON，
+函数作用域检查也会拒绝其新建函数；此兼容性缺陷属于本地反馈基座，不作为模型正确率结论。
+v21隔离候选从公开任务开头的\texttt{Implement f(args)}声明补足允许函数，
+显式使用Python列表字面量表示位置参数，避免单参数元组遗漏逗号，生成规模缩至1--3例。
+没有解析隐藏测试或答案；支持范围是该英文公开声明和已有顶层函数，尚不覆盖任意自然语言API描述、方法或kwargs。
+8项针对性检查通过（20.20秒），含4项旧协议安全/执行检查以及占位、新参数容器、越界调用拒绝与旧提示一致性。
+独立审查随后发现旧helper允许名单与提示不一致，以及Python关键字函数名可能造成模板SyntaxError。
+v22另立冻结版本，让明确声明的必需API优先于旧helper，并拒绝关键字；提示和解析器共用同一名单。
+10项检查全部通过（12.94秒），包含旧4项、原修订4项及两项新边界；旧\texttt{literal-v17}提示保持逐字一致。
+这些检查证明修复的兼容行为，不证明模型例子的预期答案或工程代码质量；实际模型结论另批评测。
+可信unittest模板在既有受检进程内执行初稿，反馈仅含样例和稳定的成功/失败状态，
+无隐藏参数/真值。4项新增测试验证拒绝与稳定重放路径；字面量经AST规范化、补齐注释与Unicode边界后重新通过，耗时15.04秒。
+质量批次与额外生成、执行成本在后文单列。
+SWE-bench\cite{swebench}以真实仓库问题及补丁评测工程能力；
+当前小型Python集合远小于该类工作负载，不能换算成SWE-bench成绩。
+
+\section{当前算法与工程构思}
+\subsection{快照、源码与依赖保护}
+快照hash包括路径和文件字节，加载时重算，避免更改测试对象而不留记录。
+按完整顶层AST区间切分Python源码，保留装饰器、导入、空白/注释和分号合并区间。
+建立模块全局符号到定义块的索引，解析普通、相对、包及星号导入，
+保守追踪跨文件引用与顶层控制流中的绑定。
+一次后续审计补齐累加赋值、循环/海象表达式绑定、属性和下标写入，
+以及装饰器、默认实参和模块初始化调用的影响；不把函数局部变量当模块导出。
+不能精确解析的模块初始化块保守加入闭包，可能扩大预算。
+5项新增测试直接比较完整模块与选择后模块执行语义；现有26题的依赖图修复前后完全相同。
+历史基础环境核心回归48项，47项通过、1项需可选模型依赖而跳过，耗时100.11秒。
+最终v24推广后在模型环境执行全部48项，全部通过、无跳过，测试计时157.67秒，
+含解释器启动等的流程墙时161.14秒；属于CPU功能回归，不是新模型优化批次。
+之后TypeScript增量worker的相同5项编译/执行语义检查单独通过，耗时11.26秒。
+动态import、反射和eval未完整覆盖；依赖不确定时应扩大保护或回退完整上下文。
+
+保护集合包括原始用户要求、目标源码、调用者指定资料和当前错误；其传递闭包一起保护。
+闭包存在环时用访问集合终止。保护集合超预算时显式报错，不截断约束、函数或依赖。
+原20题中后增的六个多文件任务仅固定目标文件，辅助函数及配置由已存在导入拉入闭包。
+再增的六个结构任务中，稳定拓扑、最短分层及稀疏乘法三题也含跨文件helper导入，另三题无此依赖；
+原14题大部分辅助文件直接固定，不能用它们单独宣称非保护依赖召回能力。
+
+\subsection{重要性、去重与预算}
+对每个非保护块$x$，当前基础重要性为
+\[
+ s(x)=\frac{|Q\cap\operatorname{terms}(x)|}{\max(1,|Q|)}
+       +\operatorname{clip}(u_x,0,1)-d_x.
+\]
+$Q$移除通用任务词与文件扩展名；标识符保留完整形式并拆分下划线、点号和camelCase，
+中文目前以单字词项处理。$u_x$为调用者提供的历史效用；
+$d_x=1$仅用于重复工具/记忆文本的排序惩罚，后续还有精确重复检查。
+当前没有由长期真实成功率自动学习$u_x$，也没有近似语义重复检测。
+
+非正相关源码、工具和记忆可丢弃，需求仍保留；相同源码文本但不同定义身份不能误作重复。
+按重要性稳定排序，完整依赖组原子加入。首先批量计算可能入选块的Token成本，
+以总成本筛除明显放不下的组；每个实际接受的组合仍按原始来源顺序完整分词，
+以处理Token边界合并和排列变化。成本估算可能错拒绝少数能装下的组，但不能放入超预算组。
+超长工具输出仅抽取查询相关行或错误/差异/警告行，不合成摘要。
+
+生产请求不对全部被丢弃上下文再次分词以生成诊断字段；完整输入Token在独立报告阶段测量。
+这一口径必须和“带完整诊断”的治理时间分开。每次实际chat prompt仍由真实模型Tokenizer计数。
+\texttt{PreparedContext}缓存不可变上下文词项、依赖闭包和候选成本；
+源内容/依赖变更拒绝旧索引，计数器实例变化清空成本，接受预算始终重新计数。
+缓存由调用会话持有，无全局原文缓存；初始化时间不能藏进温热请求时延之外而不报告。
+
+\subsection{TypeScript源码适配与类型依赖精简}
+可选Node常驻worker使用锁定的TypeScript 6.0.3 Compiler API\cite{tsapi}，
+对调用者提供的虚拟工程建立AST、符号和跨文件引用，不执行输入源码，不访问网络获取依赖。
+保留完整声明及原始UTF-16区间对应的注释/Unicode文本；目标文件、模块初始化及普通运行时导入保守保护。
+动态或缺失相对导入、eval和解析失败回退整个已提供工程。\texttt{.ets}扩展名可接收，
+但专用\texttt{struct}语法失败时仅全量保留，不能宣称已有ArkTS语义编译器。
+外部SDK或模块别名只给出未解析警告，必须由产品工程补齐。
+
+类型专用导入/导出在JavaScript中擦除\cite{tsmodules}。新策略仅对具名类型导入/导出，
+且目标模块没有初始化、变量、类等执行块时按真实符号及继承引用闭包保留；
+命名空间、混合导入或含执行副作用的模块继续全模块保护。
+这一保守边界避免用类型裁剪错误删除运行时初始化。
+5项适配测试包含真实\texttt{tsc}编译与Node执行、跨barrel与累加配置、Unicode/CRLF、
+修改helper后缓存失效、动态/ArkTS回退，以及500个无关接口精简后的编译。
+它们验证源码处理，不代表模型已能生成TypeScript工程补丁。
+
+\subsection{模型适配与会话指标}
+本地生成使用官方Qwen2.5-Coder 0.5B、1.5B及3B Instruct权重\cite{qwen05,qwen15,qwen3}，
+逐文件commit、大小和SHA-256锁定，禁止远程Python代码执行，加载前核验。
+0.5B与1.5B为Apache-2.0，3B为Qwen research license，许可文件保留，不能混称Apache-2.0。
+CUDA使用FP16、greedy、无采样；改变注意力计算内核可能有浮点差异，功能质量另测。
+
+3B通过1024-Token分块预填充降低激活峰值。所有提示Token按原始顺序进入同一DynamicCache，
+最终非空片段交给generate；位置与causal mask保持连续，不是裁切上下文。
+小型随机CPU模型测试证明首个生成Token logits在容差内与不分块一致，并得到相同greedy输出；
+这不证明GPU不同内核的逐位相同。
+
+可选NF4后端使用bitsandbytes的4位线性层、双重量化与FP16计算，
+以降低较强模型的权重内存\cite{qlora,bnb,quantdocs}；NF4与双重量化来自QLoRA工作，
+本项目只使用其量化推理基础，没有进行LoRA训练。这会改变数值精度，
+不能把NF4较大模型与FP16较小模型的质量差异归因于纯规模。
+本机64乘64 CUDA层成功后完成整个7B模型单调用评测，
+质量与整体峰值如下单列。依赖固定为bitsandbytes 0.50.2与accelerate 1.15.0。
+
+SQLite WAL保存每session、每request的实际Token、成对首Token、功能结果、治理耗时和provenance。
+会话压缩采用$1-\sum C_i/\sum B_i$，不能用各请求比例均值替代；
+会话TTFT降低率为$\operatorname{median}_i(1-C_i^{\rm e2e}/B_i^{\rm e2e})$，
+不是两组TTFT中位数之比；研究批次另列逐任务降低率均值。
+未知质量不是成功，重复request ID报错，事务结束后关闭连接。
+
+\section{测试构造与可信评测}
+最初6题覆盖范围、分块、稳定去重、slug、配置计费和CSV转换；
+后增8题覆盖连续游程、旋转、区间合并、辅助验证、直方图、Unicode前缀、窗口和配置阈值。
+每题包含固定边界与随机/变形性质，测试和oracle不在模型快照中。
+生成只替换目标文件，非目标文件字节必须不变。
+可信驱动记录实际执行的测试数量，跳过、提前退出、伪造完成、污染测试框架不能视为通过。
+AST门槛针对本地纯函数，禁止进程/框架反射、危险动态执行及属性写入；
+它不是通用Python安全沙箱，也不能用于类对象写入和任意文件IO任务。
+新增工作流需要标准库深拷贝，后续纯函数门槛加入\texttt{copy}/\texttt{heapq}；
+改动前1088份已存输出的静态审计没有使用这两模块。
+离线重放按原报告起始SHA选择冻结的质量门槛，避免未来库策略变化重写历史评分。
+2项新增检查确认深拷贝/堆排序执行及错误门槛SHA拒绝，耗时1.91秒；
+不同质量门槛版本仍应声明，不能作为压缩算法收益。
+
+新6题覆盖价格与校验、行解析及配置链、截断均值、记录选择、谓词分区和键归一化汇总。
+既有导出必须保持，辅助函数通过monkeypatch性质测试确认被实际调用，
+不能只凭导入语句判定依赖使用。新的20题仍是自建集合，原14题已反复用于开发，
+不再称为未见持出集。新6题首次评测前固定，后续如据结果调优也应归为开发数据。
+
+模型评测按题和轮次交替完整/压缩顺序，排除模型载入与warmup。
+另在模型首次测量前构造4个工作流任务：事务编辑、嵌套配置合并、原坐标文本补丁、TTL/LRU缓存轨迹。
+其16个测试方法涵盖失败原子性、别名/深拷贝、冲突坐标、过期与淘汰、公开helper调用。
+最初v13的oracle审计发现测试monkeypatch恢复后，已重载solution仍持有旧helper别名；
+创建v13b修复测试清理并重新载入，4个参考实现全部通过、占位实现全部拒绝。
+这一测试装置错误发生在任何模型测量前，保留失败记录，没有计作算法收益。
+还对26个旧任务及4个新任务只重组压缩后保留的源码模块，用独立参考目标替换占位，
+30个任务全部通过隐藏测试；整批143.52秒。该审计验证这些快照的依赖完整性，不证明任意动态工程可靠。
+首Token回调同步CUDA，从编码/传输/预填充到第一个生成Token。
+端到端首Token加上每次治理和请求构造；加载、功能检查另计整批墙时。
+双调用复核还应单列到最终代码时间及累计输入Token，不能用第一稿TTFT表示复核结束。
+原始输出、失败原因、prompt hash、快照和测试hash全部保存，可离线重放。
+
+\section{已经取得的结果}
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+批次/模型 & 题数 & 完整通过 & 压缩通过 & 成对退化\\
+\midrule
+最初0.5B/native & 6 & 3 & 3 & 0\\
+v2 0.5B/expanded & 14 & 5 & 7 & 1\\
+v3 0.5B/concise & 14 & 4 & 5 & 0\\
+v4 1.5B/concise & 14 & 9 & 9 & 0\\
+v5 3B/分块预填充 & 14 & 10 & 10 & 0\\
+v6 3B/普通复核 & 20 & 13 & 16 & 0\\
+v7 3B/静态提示复核 & 20 & 13 & 16 & 0\\
+v8 7B/NF4单调用 & 20 & 17 & 18 & 0\\
+v9 7B/NF4首次持出 & 6 & 1 & 2 & 0\\
+v11 7B/NF4双调用 & 26 & 19 & 20 & 0\\
+v12 7B/NF4三阶段批评 & 26 & 21 & 20 & 2\\
+v13工作流首次单调用 & 4 & 0 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\caption{每题要求各重复均通过。不同批次曾调整提示/fixture，不能解释为纯模型规模消融。}
+\end{table}
+
+v2虽总通过数增加，但chunks由基线正确变为压缩错误，质量门槛失败，因此保留为负结果。
+v2阈值任务的初始文字存在辅助函数归属歧义，后续明确修正并创建新fixture版本，
+不能把不同文字定义下的通过数当作同一固定测试。v3标识符拆分一度把\texttt{.py}扩展名误作相关词，
+导致无关源码入选；v4移除扩展名相关度后保留更小、依赖完整的上下文。
+
+v4为84次真实生成：实际总输入完整128343、压缩11688 Token，
+加权压缩90.893\%，逐任务均值88.297\%，逐任务端到端首Token改善均值85.799\%，
+会话成对请求中位首Token改善89.130\%。整批墙时477.58秒，生成总时269.09秒。
+独立重放完成28个prompt hash、84个功能结果，并重新核验模型文件。
+
+v5同一修正后14题、3轮共84次生成，完整和压缩均10题正确，仍失败的是CSV、旋转、区间合并和归一化。
+典型错误包括过滤掉非法整数、offset为0时返回原对象、原地排序、
+仅导入校验函数而不调用。实际Token与v4相同，逐任务模型TTFT改善均值88.739\%，
+端到端均值88.476\%，会话成对请求中位改善91.037\%。
+生成总时342.98秒，包含载入/warmup/测试的整批墙时599.51秒。
+这是固定小型任务上“不劣于自身完整提示”的证据，不能宣称全部代码质量达标。
+
+v6为20题、两模式、两轮、每轮初稿与复核共160次生成。
+初稿完整12题、压缩14题，复核后13题和16题；没有初稿正确变为修订错误。
+普通复核修正归一化两模式与压缩行解析，CSV、旋转、区间合并、价格异常传播仍失败。
+累计输入Token为完整252648、压缩32394，加权减少87.178\%；
+第一稿端到端TTFT逐题改善均值86.736\%，到最终代码的阶段时间均值改善27.973\%。
+整批墙时1057.46秒，调用阶段总时694.66秒。
+复核草稿及第二次上下文均计入Token；只报第一Token会隐藏复核的实际工作量。
+
+v7仅增加公开要求及AST可见的静态提示：直接返回输入别名、直接修改参数、
+导入但未调用helper、吞掉要求抛出的异常、跳过非法整数、删除既有导出。
+规则不执行代码、不看测试参数或真值，也不是正确性证明。
+160次生成后完整13题、压缩16题，初稿12题、14题，均与v6相同；
+因此未把这项启发式宣传为有效质量改善。
+累计输入完整253622、压缩32934，加权减少87.015\%；
+端到端第一稿TTFT改善均值87.804\%，最终代码阶段时间改善26.066\%，墙时1035.22秒。
+v6/v7最终代码时间为各阶段求和，未包括极短的完整解码成本；
+后续评测改用请求开始到最终解码完成的连续墙钟，不同口径须明确区分。
+v7已离线独立重建40个初稿提示hash、80个复核提示hash，
+核对累计实际Token，重放全部160个初稿/最终功能结果，并重新验证模型文件。
+
+v8在相同20题上换用7B NF4、greedy、分块1024与单调用，
+共80次真实生成，完整17题、压缩18题，无成对退化，仍在区间合并及helper调用上失败。
+3B v6/v7的初稿完整12题、压缩14题，复核后13题、16题；
+7B数值同时改变模型与权重精度，不能视为纯量化或纯规模消融。
+输入Token完整123640、压缩13486，加权减少89.093\%；
+端到端TTFT逐题均值改善85.448\%，最终完整解码时间改善34.694\%。
+调用时间420.50秒，整批墙时594.32秒。
+40个提示hash与80个功能结果已独立重放，全部模型文件重新验证。
+
+为检查过拟合于短函数与旧集合，在首次测量前固定6个新任务，
+分别为稳定拓扑排序、分层最短路、区间空隙、稀疏乘积、轮转分配及外连接。
+测试涵盖随机结构、重复项、空输入、非法输入和已有导出，独立参考实现通过全部18个测试方法，
+占位实现全部拒绝。v9保持v8模型及单调用配置，共24次生成：完整1/6、压缩2/6，
+压缩仅通过分层最短路和轮转分配。失败主要涉及公开要求中的验证、排序及重复项处理，
+不是隐藏oracle被用于模型反馈后的结果。这一批之后该集合成为开发数据，后续复核不能继续称为首次持出。
+输入Token完整38842、压缩6094，加权减少84.31\%；逐题压缩均值81.82\%，
+端到端首Token改善83.62\%，最终代码时间改善34.07\%。
+生成285.43秒、整批425.57秒；12个提示hash、24个功能结果及模型文件均已独立核验。
+
+v11将上述20题与6题原样合并，固定快照、要求和隐藏测试，使用7B NF4普通复核，
+两轮、完整/压缩共104个流程、208次生成。完整19/26、压缩20/26，
+原20题完整/压缩均18/20，新6题仍为1/6与2/6；无成对或初稿到修订退化。
+相对单调用，复核修正了一题完整上下文的初稿，但没有提高压缩组正确率。
+累计输入完整333528、压缩47824，加权减少85.66\%；
+第一稿端到端首Token逐题改善85.22\%，到最终完整解码时间改善38.05\%。
+整批墙时2017.64秒、调用阶段1498.01秒。这个相对时延改善不能掩盖第二次调用的绝对成本，
+也不能因全流程Token减少而宣称复核策略本身节省推理。
+v11使用初始化依赖修复前的冻结源码，26题修复前后依赖图一致；没有将后续修复归作该批质量收益。
+52个初稿提示hash、104个复核提示hash、208个功能结果及全部模型文件已经独立离线重放核验。
+
+v12在相同26题、两模式、两轮上增加模型批评阶段：初稿、公开要求批评、修订，
+共312次计时生成。批评只见公开上下文、要求与草稿，不运行或读取隐藏测试。
+完整上下文21/26、压缩20/26，初稿仍为18/26与20/26；没有初稿正确到修订错误，
+但归一化与稳定拓扑排序两题由完整正确变为压缩错误，质量门槛失败。
+相对v11普通复核，完整模式增加两题、压缩模式不增；相对本批初稿，完整模式增加三题。
+因上述成对退化，三阶段策略保留为负结果，不进入默认流程。
+累计输入完整514086、压缩86020，加权减少83.27\%；
+第一稿端到端首Token逐题改善83.32\%，最终完整解码时间改善32.84\%。
+生成阶段总时3249.01秒、整批墙时3938.74秒（65.65分钟），实际最大输入6086 Token。
+独立重放核验52个初稿、104个批评、104个修订提示hash，全部208项功能结果和模型文件。
+后续受检代码允许纯函数标准库copy/heapq；这一评分策略修订不用于追溯改写v12结果，
+重放按起始质量检查器SHA选择冻结模块。
+
+v13在任何模型测量前固定4个新工作流任务，模型及公开反馈协议先冻结后测试。
+两模式各两轮共16次单调用生成，完整/压缩均0/4，故质量门槛失败；
+没有正确基线时不能以压缩、时延或“零退化”宣称任务成功。
+失败包括事务操作没有先完整验证、合并配置未深拷贝与完整验证、补丁原始坐标处理错误，
+以及缓存追踪的验证/状态错误；压缩缓存稿还违反纯函数fixture属性写入边界。
+输出均在158--439 Token内，没有耗尽512输出上限，不能据此将失败归于截断。
+生成227.41秒、整批347.82秒；输入Token逐题减少75.49\%，
+端到端首Token改善78.84\%、最终代码时间改善11.22\%，仅作为失败工作负载成本记录。
+后续30题公开反馈批次将26项既有开发题与这4项原样合并；4项首次测量后成为开发数据，
+公开反馈算法没有在这次失败后按隐藏结果调整。
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrl}
+\toprule
+工作负载 & 前(ms) & 后(ms) & 范围\\
+\midrule
+4096长SDPA注意力 & 48.653 & 3.481 & 单注意力适配，5次中位\\
+83739 Token治理 & 1046.37 & 192.27 & 带完整诊断，旧版至v4\\
+同一83739 Token治理 & 1046.37 & 73.19 & v4生产请求，无全量诊断\\
+82700 Token会话治理 & 59.67 & 8.71 & v6无缓存/温热缓存，11次中位\\
+\bottomrule
+\end{tabular}
+\caption{不同层次及工作负载分别报告，不将这些加速倍数相乘。长Token治理只分词/排序，不进行模型推理。}
+\end{table}
+
+第一批17个治理工作负载相对冻结旧核心，带诊断中位加速7.84倍；
+v4同套中位10.66倍，最小3.75倍。会话缓存新增23个工作负载逐轮验证相同选择，
+温热中位加速2.64倍，最小1.91倍；82700 Token索引初始化18.83ms、首次缓存请求40.75ms。
+首题首次Tokenizer冷启动额外成本较高，其估计需约23次请求摊销，不能省略。
+正式100ms要求对应重要性分析而非任意长度完整模型推理：
+实际131072 Token的6种分布/切块、各30次共180次分析，最高p95为53.84ms。
+共享机器并发负载影响分位数，128K从未送入32768窗口模型。
+
+后续增量索引通过\texttt{PreparedContext.revised}创建新不可变快照，
+只复用完全相同Item的词项与Token成本；原快照及缓存字典不共享可变状态。
+依赖图或节点集合变化清空闭包，计数器变更继续清空成本，最终接受完整精确计数。
+23个工作负载、每个1块编辑并分别保持/改变依赖图，共46种场景各11轮，
+新索引与重新建索引在全部选择、决策或显式错误上相同。
+编辑至治理并含独立预算/闭包验证的中位加速2.44倍，最小1.62倍；
+82705 Token保持图结构场景加速5.47倍。
+此前快照索引已温热，其初始化不在这一编辑成本内；未实现文件系统增量解析或依赖图自动更新。
+
+TypeScript常驻worker只缓存最后一份完全相同的文件/保护项快照，变更即失效，关闭进程释放缓存。
+8种32--2048函数、1或8个无关模块的工作负载各11轮，冷/温热的选择与闭包全部一致，
+温热中位加速2.21倍，最小1.73倍；整批3.88秒。
+计时包括Python序列化、Node IPC、索引与治理，进程启动在整批墙时内、每请求外；
+第一轮非缓存请求另存，使用ByteEstimate预算，不能称模型Token时延。
+类型精简独立采用真实Qwen Tokenizer，8/32/128/512/2048个无关接口的保护Token由
+247/842/3394/14747/62934降为72，各11轮确定一致；650预算下原32个以上接口案例显式拒绝，
+新策略得到有效上下文。失败变成功不能换算为输出时延加速；62934只进行分词，不送模型推理。
+8接口的共同成功案例端到端治理中位3.40降为2.71ms；整批3.97秒。
+
+TypeScript增量编译器进一步复用上个工程中内容完全相同的SourceFile及oldProgram，
+所有导入解析在新快照重新进行，以避免增删文件后沿用旧解析。完整源码治理结果仍重新计算，
+不是将旧完整分析套在已编辑工程上。
+26次正反向编辑覆盖类型继承、missing模块新增、模块初始化、语法损坏、ArkTS回退、动态导入、
+全局脚本、Unicode及保护项变化，源码/依赖/警告与冻结旧worker完全相同。
+128/512/2048/8192声明、1/8文件的8个工作负载各11成对轮，
+含IPC、索引及治理的编辑后时延中位加速1.34倍，最小1.29倍；整批29.85秒。
+计时前旧快照构建单列，完全结果缓存在所有请求禁用；这不是模型推理或质量改善。
+8192声明两种文件分布的Node驻留观测约303--304MiB，旧worker约298--300MiB，
+点采样并非RSS峰值，不声称内存下降。
+独立候选通过5项真实tsc/Node语义测试后成为默认worker；Python模型模块保持冻结。
+
+注意力测试4096长时，native/expanded最大分配约2.14GiB/80.25MiB，最大绝对差0.001953125。
+这是该进程CUDA allocator绝对峰值，含输入及用于对比的存活输出，
+不等于整卡占用或严格增量内存；不能仅凭数值相近省略功能质量评测。
+
+\subsection{公开样例反馈：完整批次与事后审计}
+v17在既有20+6+4开发任务上完成两轮、双上下文、三阶段流程，360次计时生成，另有3次预热。
+完整提示19/30、压缩提示20/30，初稿分别18/30、20/30，无初稿到修订退化；
+按原20/结构6/工作流4分组分别为完整18/1/0、压缩18/2/0。
+前26题与普通复核的19/20相同，因此没有新增压缩质量收益。
+30题早已分别测量过，不作为新的独立持出集合。
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+开发子组 & 题数 & 完整通过 & 压缩通过 & 有效公开样例流程/全部流程\\\midrule
+原20 & 20 & 18 & 18 & 0/80\\
+结构6 & 6 & 1 & 2 & 20/24\\
+工作流4 & 4 & 0 & 0 & 12/16\\
+合计 & 30 & 19 & 20 & 32/120\\\bottomrule
+\end{tabular}
+\end{center}
+120流程中88次协议拒绝：48次函数作用域、22次参数元组要求、18次其余解析限制。
+这不等于88次模型Python代码不正确。32次有效流程在整批v17全部生成结束后，另对可信参考实现执行，
+仅4次全部通过，28次在当前参考/guard/精确比较口径下不通过；
+这是生成样例与本地参考不一致，不自动证明公开需求本身错误。
+相同case/response的59项独立审计复用执行，分母仍是120个记录流程，不能称59个独立工程任务。
+事后结果不进入任何模型提示，也不改变已经记录的模型分数。
+
+模型生成4160.22秒，其中公开样例生成1960.73秒；公开样例执行60.99秒；
+含加载/预热/检查墙时4889.28秒（81.49分钟）。匹配前26题的模型生成3308.38秒，
+普通复核同26题为1498.01秒，成本约2.21倍而压缩质量未增加。
+30题累计实际输入Token为579908/93416，加权减少83.89\%；
+端到端第一Token逐题均值减少83.46\%，最终完整代码时间减少39.52\%。
+这些是双上下文成对减少，不能抵消增加第三次生成的绝对成本。
+离线已重建60项初稿提示、120项样例提示、120项修订提示及实际Token，重放240项功能结果；
+固定模型文件与历史guard SHA复核通过。
+保留v17负结果；普通单调用仍为默认。
+
+\paragraph{v22协议修订的独立完整批次。}
+同一30个开发任务预先声明一轮、双上下文、三阶段，共180次计时生成，另有3次预热。
+完整19/30、压缩20/30，初稿18/20，无成对或初稿到修订退化，仍无压缩组正确数增益。
+60流程中51个样例结果有效、9个协议拒绝；协议有效率85\%，明显高于v17的32/120，
+但有效解析不等于预期值正确，也没有带来当前集合的最终正确数改善。
+模型生成2057.83秒，公开样例执行109.92秒，含加载/预热/检查墙时2553.80秒（42.56分钟）。
+累计输入Token加权减少82.33\%，第一稿端到端首Token降低率逐题均值83.02\%，
+到最终完整解码降低率均值38.40\%。一轮不证明轮间稳定性；不能把v17两轮与v22一轮的整批墙时直接称为加速。
+60个初稿、60个公开样例和60个修订提示hash，以及120项功能结果和全部模型文件已离线复现。
+原20题两组均18/20，结构6题完整1/6、压缩2/6，工作流4题两组均0/4。
+完整/压缩模式分别25/30和26/30流程样例有效。
+事后审计60流程、56项去重响应，耗时151.40秒；51个有效流程中14个参考全部通过，
+37个与本地参考、受限guard或精确比较有分歧，不能统称预期答案错误。
+9项协议拒绝中3项无效语法、2项字面量文本边界、2项JSON起始、1项数量边界、1项未闭合列表。
+审计不修改分数、提示或候选默认，重复开发题不计新增持出任务。
+
+\section{硬件、workload与时间成本}
+实际环境为Windows 11 build 26200，Ryzen 9 8945HX（16核/32线程），31.3GiB RAM，
+RTX5070 Laptop GPU约7.96GiB。Python版本3.13.12，Transformers版本4.57.6，
+PyTorch版本为\path{2.12.0.dev20260408+cu128}。模型venv继承已有PyTorch，其他依赖另锁，
+不代表在另一台机器安装同名包即可得到相同CUDA内核。
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+模型批次 & 权重文件(GB) & CPU峰值(GiB) & CUDA分配峰值(GiB) & 整批墙时(s)\\
+\midrule
+v3 0.5B，56生成 & 0.99 & 2.55 & 1.23 & 426.43\\
+v4 1.5B，84生成 & 3.09 & 6.46 & 3.42 & 477.58\\
+v5 3B，84生成 & 6.17 & 9.94 & 6.17 & 599.51\\
+v7 3B复核，160生成 & 6.17 & 9.94 & 6.18 & 1035.22\\
+v8 7B NF4，80生成 & 15.23 & 5.71 & 6.21 & 594.32\\
+v11 7B NF4，208生成 & 15.23 & 5.72 & 6.21 & 2017.64\\
+v12 7B NF4，312生成 & 15.23 & 5.72 & 6.21 & 3938.74\\
+v13工作流，16生成 & 15.23 & 5.72 & 6.21 & 347.82\\
+v17公开反馈，360生成 & 15.23 & 5.72 & 6.21 & 4889.28\\
+v22公开协议，180生成 & 15.23 & 5.72 & 6.21 & 2553.80\\
+\bottomrule
+\end{tabular}
+\caption{GB为十进制磁盘大小，GiB为二进制内存。CPU仅本进程，CUDA仅allocator，不含子测试进程或整机/整卡。}
+\end{table}
+
+只运行治理、数据生成及功能oracle不需要GPU；建议4核以上CPU与8GiB主机内存即可开展小规模工作。
+这是规划建议，不是已测最小配置。真实1.5B评测在本机8GiB GPU运行，
+3B需要分块预填充并已有约6.35GiB reserved，显存余量有限。
+前三个模型权重及Tokenizer约10.3GB，7B再增加约15.23GB，四个合计约25.6GB。
+7B为Apache-2.0\cite{qwen7}，全部保留许可及文件锁；下载时间取决于网络。
+7B NF4实测CUDA reserved约6.60GiB，CPU约5.71GiB，通过降低GPU驻留权重内存可在现有卡上完成已测输入。
+没有同模型FP16载入耗时对照，磁盘权重仍为15.23GB。
+
+FP16权重理论下限约为$2P$字节；KV的理想存储量为
+\[
+ B_{\mathrm{KV}}=2\,L\,H_{\mathrm{KV}}\,d\,n\times2\ \mathrm{bytes}.
+\]
+32768 Token时，0.5B、1.5B、3B、7B配置分别约384、896、1152、1792MiB KV，
+尚未计激活、扩展KV中间量、workspace、缓存碎片及框架。
+因此不能据权重大小简单判断8GiB可容纳完整32K推理，更不能声称支持128K。
+代码质量批次最大真实输入6086 Token，100K级数据仅用于CPU治理与重要性测试。
+
+独立合成容量探测使用同一7B NF4、1024分块、不删输入，每个长度只运行一次，生成13 Token。
+1022、4088、8184、16380个实际输入Token全部完成，墙时分别1.20、4.08、8.49、20.03秒；
+CUDA allocator绝对峰值分别5.51、5.68、5.90、6.42GiB，reserved峰值5.70、5.96、6.21、6.77GiB。
+这些是容量观测，不是代码质量或稳定性能对照。
+32700输入的阶段在上一成功检查点后693.37秒仍未完成，因此人工结束该容量实验，继续预定质量批次。
+这一时间包含下一提示构造与推理，不能称精确kernel时长；截止并非事前指定，必须保留该限制。
+终止前本进程工作集约7.05GiB，整卡观测7690MiB、GPU利用率100\%；
+没有收到CUDA OOM，也没有32K完整输出，不能将其登记为成功或分配失败。
+WDDM显存压力可能参与骤慢，但未单独测量迁移，不作确定归因；该历史v14批次的完整输入边界为16K。
+证据\path{model-capacity-v14.json}保留四个完成阶段，\path{model-capacity-v14-interruption.json}
+另存原文件SHA、终止观测与口径。
+
+\paragraph{长窗口候选的资源依据。}
+7B配置为28层、4个KV头、每头128维，FP16缓存的理论载荷为
+\[
+  B_{\mathrm{KV}}(n)=2\times28\times4\times128\times2\times n
+  =57344n\ \text{bytes}.
+\]
+32700输入对应约1.75GiB；这是K/V元素载荷，不含allocator碎片、临时张量、权重或驱动内存。
+原扩展SDPA将4个KV头展开至28个查询头，单层该长度的K/V临时载荷约0.437GiB。
+按KV头依次处理7个查询头的候选，单组展开的逻辑载荷为四分之一；
+单KV头扩展也可能保持为零stride视图，物化与后端workspace须按allocator测量，不能从元素数推定实际峰值。
+每组结束显式释放临时张量，但增加SDPA调用次数，并不保证吞吐收益。
+另一隔离候选使用Transformers的按层CPU卸载\cite{kvcache}，保持FP16精度，
+将非当前层缓存移到主机并异步预取；GPU同时存活层数、workspace与实际峰值仍须测量。
+分块预填充和逐Token解码会反复传输增长中的缓存，不能把一次1.75GiB传输作为全部PCIe成本。
+两候选不修改普通窗口质量批次。分组SDPA随后只作独立微基准，不作为已实现的整模型收益。
+
+\paragraph{CPU卸载与分块回收的实测。}
+隔离v20用按层FP16缓存CPU卸载；v23只在长输入卸载的每个预填充分块后同步，
+并调用\texttt{empty\_cache}返回未占用allocator块。官方文档说明该API不增加PyTorch可用的物理显存，
+仅释放空闲缓存，某些情形下可缓解碎片\cite{emptycache}；存活K/V不被删除，也不降低缓存精度。
+两批均在启动前限定600秒整个session，含模型加载、预热、提示构造和两档探测；
+两个完整容量观察均在该限时内完成，原v14人工中止不改写为限时结果。
+\begin{center}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrr}
+\toprule
+候选/实际输入 & 输出 & TTFT秒 & 完整生成秒 & CUDA活跃/保留GiB & 进程RAM峰值GiB\\\midrule
+v20/16380 & 13 & 18.13 & 19.68 & 6.42/6.77 & 5.72\\
+v23/16380 & 13 & 18.61 & 20.58 & 6.42/6.77 & 5.72\\
+v20/32688 & 13 & 281.90 & 319.49 & 5.91/11.37 & 10.33\\
+v23/32688 & 13 & 50.10 & 54.07 & 5.91/6.11 & 7.87\\\bottomrule
+\end{tabular}
+\end{center}
+16380输入未越过16384阈值，两版都保持普通缓存路径；0.90秒负值保留，不归因于回收。
+32688输入完整保留，生成13 Token，共32701，仍在模型32768位置上限内。
+v20 CUDA保留量超过物理8GiB，不能将较小的活跃分配量解释为全部驻留显存；
+v23控制保留量后完成该32K类合成容量，但不是长工程代码质量结论。
+WDDM迁移/碎片或传输压力属于机制假设，没有单独驱动迁移计数，不能作确定归因。
+不同进程的这两次观察不作为稳定吞吐加速。
+
+随后同一加载模型、同一32688 Token提示、固定v20后v23的一轮独立对照，
+完整greedy输入及输出Token ID逐项一致（含13输出，SHA相同）；
+TTFT219.71/50.25秒，完整生成256.88/54.24秒，CUDA保留峰值11.37/6.11GiB。
+整次会话370.09秒；只有一对固定顺序，不建立轮间稳定性或通用加速。
+该进程RAM高水位12.15GiB为累计值，不能据两条相同峰值比较两候选RAM。
+另用6个较短合成提示、两轮交替、24次生成核对resident与v20卸载完整greedy IDs，全相同，
+耗时129.00秒；卸载各短提示中位均较慢，普通窗口保持resident默认。
+独立16K/32K进程观察与同模型配对属于容量/资源、数值兼容证据，均不换算为官方准确率。
+
+\paragraph{可配置缓存接口。}
+v24把隔离资源候选接成显式\texttt{resident/offloaded/reclaimed}策略，默认仍为resident。
+非resident只支持CUDA，且实际输入必须严格大于阈值（默认16384）才卸载；
+reclaimed只在显式预填充分块后同步并回收未占用allocator块，解码和非分块路径不额外回收。
+完整输入、缓存精度、原greedy配置和SINGLE默认保持不变。
+25模块冻结包中相对v22只更改模型适配、CLI以及公开样例的关键字模块路径拒绝；
+配置和FakeGPU生命周期11项通过，旧literal及v22协议10项检查也通过。
+这些是CPU逻辑与协议证据，实际GPU API验收另存，不能从v23观测直接转记为v24结果。
+真实GPU验收随后完成：6个短提示、两轮交替、冻结v17d基线及v24三策略，共48次生成，
+各模式完整输入/输出Token ID一致，涵盖非分块与1024分块；另一次32688输入/13输出，
+完整提示及greedy ID SHA与既有v23相同。另有4次预热，不计入48次短提示生成；整个验收会话308.80秒；
+该长调用TTFT51.91秒、完整生成57.05秒，CUDA活跃/保留5.91/6.11GiB，
+进程RAM累计峰值7.31GiB。它验证API集成，不是一轮新的独立性能对照，
+计时还包含共同的CPU Token捕获。验证后将25模块逐字推广到\texttt{src}，保留原默认与全部冻结来源。
+
+\paragraph{分组SDPA的微基准与取舍。}
+冻结v19b候选在首批测量前锁定6个CPU独立dense-softmax检查，
+以及18个GPU形状、每形状5轮交替，共180次计时SDPA调用，无模型权重加载。
+CPU用FP64显式QK/softmax/V参考，最大绝对误差$1.31\times10^{-6}$，满足预定容差；
+GPU FP16所测输入的最大绝对差均为0，不能外推任意张量逐位一致或代码质量。
+微基准总墙时12.36秒，时延含Python dispatch和同步，排除结果CPU传输与JSON记录。
+7B对应28查询头/4 KV头、K=32700的关键结果如下：
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+查询Token & 原扩展ms & 分组ms & 原增量MiB & 分组增量MiB\\\midrule
+1 & 3.96 & 9.35 & 448.01 & 0.009\\
+256 & 13.63 & 12.46 & 465.75 & 18.16\\
+1024 & 47.23 & 55.71 & 519.00 & 72.75\\\bottomrule
+\end{tabular}
+\end{center}
+增量为每调用活跃allocator峰值减调用前分配，含输出与已跟踪workspace，
+不是模型整体峰值、驱动显存或KV缓存总载荷。256查询形状约快8.6\%，
+但当前1024分块形状约慢18\%，长解码形状约为原时延2.36倍。
+资源节省与吞吐成本同时成立，因此没有推广该候选，也没有为它增加整模型质量批次。
+若未来受更严内存约束，可研究选择性分组，但须重新验证整体模型与长输出成本。
+
+\section{继续推进的方向与工作余量}
+北京时间10月11日06:30额度剩余达到35\%，按用户指定的严格大于35\%条件停止启动新优化试验，
+完成现有结果核验与报告。此前冻结了两份已知DEV任务的合成长工程数据：
+完整提示31128/31106 Token，压缩提示255/445 Token，保留512输出预算后均小于32768。
+只增加无关完整函数，原公开要求、源码、测试与参考实现逐字保留；两题均无跨文件依赖。
+完整/所选模块的参考检查通过，占位实现被拒绝，42个载荷文件SHA核对通过。
+准备耗时39.14秒、未导入torch、零模型生成；未启动预声明的4次计时模型调用，
+因此不计长工程代码质量成果。该数据可供下一轮重复及长输出成本验证。
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{5.0cm}>{\raggedright\arraybackslash}p{5.7cm}}
+\toprule
+方向 & 收益依据/预计工作量 & 验收与测试成本\\\midrule
+\endfirsthead
+\toprule
+方向 & 收益依据/预计工作量 & 验收与测试成本\\\midrule
+\endhead
+约束复核与回退 & 小模型常遗漏明确要求；可选二次生成或可靠公开检查。约1--2工作日 & 不使用隐藏oracle反馈；分列第一Token、最终代码时间、总Token与初稿到修订退化。20题两轮双调用约160次生成\\
+检索与预算组优化 & 词项重叠受通用词和代码长度影响；BM25、符号检索、组成本排序。约2--3工作日 & 固定预算/保护项，新增长代码与非保护依赖召回；治理对照后再跑质量里程碑，避免每次小改重复生成\\
+真实工程评测 & 当前多数任务为短纯函数；需要构建、修复、多语言与分布变化。约3--5工作日 & 首批50--100个任务；固定隐藏测试、工程版本及合规隔离。GPU时间预计按实测每任务调用成本线性估算，不承诺准确总时\\
+DevEco与ArkTS & TypeScript编译器基座已完成，专用语法/SDK和产品注入仍待适配。约3--5工作日 & 增量worker、模板注入、完整工程构建与交互时延；需实际SDK/IDE及目标工程\\
+多session与缓存 & 温热请求和内容编辑缓存已验证，实际文件系统/DevEco事件传播与多session并发尚未验证。约1--2工作日 & 测事件传播、内存回收、缓存失效及并发WAL；不把单会话温热结果外推服务吞吐\\
+更长窗口/较强模型 & 7B NF4单调用原集合18/20、新6题2/6，复杂任务与约束是质量瓶颈。约1--2工作日 & 固定新持出任务再研究复核/约束策略；长窗口另测。更高显存GPU/远端服务为可选资源，不计入已有环境\\
+长窗口显存治理 & 卸载配合分块回收已完成32688输入与13输出，完整greedy IDs一致；分组SDPA微基准有资源收益及长解码负成本，未推广。约1--2工作日 & 长工程和交替重复对照，分列PCIe成本、峰值和预定截止；普通短窗口卸载更慢，保留resident默认\\
+\bottomrule
+\end{longtable}
+
+上述工作量为一名开发者的工程估算，可部分并行，不能简单相加为赛事交付承诺。
+当前余量主要是质量提升、真实工程覆盖和集成；单次治理速度已经在已测规模上有明显收益，
+继续牺牲质量换极少Token不符合题面计分前提。
+
+\section{证据与复现}
+\path{artifacts/research-model-v4-1.5b.json}和\path{research-model-v5-3b.json}
+保存模型文件锁、版本、生成原文、逐题失败与实际资源；各轮冻结源码保留在\texttt{research-vN-source/}。
+\path{research-governance-v4.json}、\path{research-128k-importance-v3.json}和
+\path{research-session-cache-v6.json}分别对应治理、真实128K分析和会话缓存。
+\path{research-incremental-cache-v10.json}记录编辑后索引复用的全部原始样本，
+\path{research-model-v8-nf4-7b.json}为7B单调用质量与资源证据。
+\path{research-model-v9-holdout-nf4-7b.json}单列首次6题持出表现，
+\path{initialization-map-audit.json}记录依赖分析修复前后26题图一致。
+\path{research-model-v11-review-nf4-7b.json}记录26题普通复核的质量负结果与成本。
+\path{research-model-v12-critique-nf4-7b.json}记录三阶段批评的两项成对退化、全部原文与离线核验。
+\path{research-model-v13-workflow-single-nf4-7b.json}保存首次四任务零通过及逐方法错误。
+\path{research-model-v17-public-examples-nf4-7b.json}、\path{public-subgroups-v17.json}及
+\path{public-examples-reference-audit-v17.json}记录三阶段公开样例反馈、协议失败与不进入提示的参考审计。
+\path{research-model-v22-public-contract-nf4-7b.json}、\path{public-subgroups-v22.json}和
+\path{public-examples-reference-audit-v22.json}保存协议修订完整批次及事后核验，
+报告离线定稿SHA为\texttt{eb8386e2\allowbreak bb7e5392\allowbreak 93b88e98\allowbreak 8f9618b1\allowbreak 602e866b\allowbreak eadc9ea2\allowbreak 005ed2df\allowbreak c8be8f0a}。
+\path{model-capacity-offload-v20.json}、\path{model-capacity-reclaim-v23.json}及
+\path{long-kv-token-compatibility-v23.json}分别保存独立容量观察与单对完整Token核对。
+\path{kv-policy-api-compatibility-v24.json}、\path{v24-promotion.json}及
+\path{core-regression-v24.log}保存真实API验收、25模块推广与最终回归，
+源码来自\path{adapters/research-v24/}；完整冻结包聚合SHA为
+\texttt{6a189ad7\allowbreak 7542a3ab\allowbreak a4066ad5\allowbreak 6fb3fc08\allowbreak bb2f8b5a\allowbreak d9dee597\allowbreak aa8cb226\allowbreak 2bff438b}。
+\path{grouped-attention-v19.json}保存零模型加载的分组注意力微基准及负成本，
+\path{fixtures/long-engineering-v25/manifest.json}保存未进行模型测量的长工程准备数据。
+上述结果JSON均位于本项目\path{artifacts/}，数据和冻结源码路径相对本项目根目录。
+\path{typescript-incremental-v18.json}与\path{typescript-incremental-semantic-v18.json}
+记录编辑后编译器复用的冻结源码、成对样本与真实编译执行检查。
+\path{typescript-context-v15.json}和\path{typescript-type-import-v16.json}记录编译器缓存与类型闭包对照；
+\path{selected-dependency-audit-v13.json}记录30个压缩后工程的参考实现执行审计。
+新版双调用20题数据为\texttt{fixtures/engineering-v5/}，
+结果文件\path{research-model-v6-review-3b.json}和\path{research-model-v7-contract-3b.json}
+保存初稿、复核、静态提示、累计Token及各阶段时延；起始源码SHA与冻结源码一致。
+\texttt{verify\_recorded\_eval}重建prompt、核验真实Token并重放功能结果，不重新生成模型答案。
+本文件为独立XeLaTeX源码，无外部bib/图片；结果按各批冻结源码和原始记录归属。
+
+\begin{thebibliography}{99}
+\bibitem{official} Chaspark. 赛题11，核对日期2026-10-10.
+\url{https://www.chaspark.com/#/races/competitions/1326644835083431936}.
+\bibitem{llmlingua} H. Jiang et al. LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models. EMNLP, 2023.
+\url{https://aclanthology.org/2023.emnlp-main.825/}.
+\bibitem{longllmlingua} H. Jiang et al. LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression. ACL, 2024.
+\url{https://aclanthology.org/2024.acl-long.91/}.
+\bibitem{llmlingua2} Z. Pan et al. LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression. Findings of ACL, 2024.
+\url{https://aclanthology.org/2024.findings-acl.57/}.
+\bibitem{lostmiddle} N. F. Liu et al. Lost in the Middle: How Language Models Use Long Contexts. arXiv:2307.03172, 2023.
+\url{https://arxiv.org/abs/2307.03172}.
+\bibitem{repocoder} F. Zhang et al. RepoCoder: Repository-Level Code Completion Through Iterative Retrieval and Generation. EMNLP, 2023.
+\url{https://arxiv.org/abs/2303.12570}.
+\bibitem{bm25} C. D. Manning, P. Raghavan, H. Sch\"utze. Introduction to Information Retrieval. Cambridge University Press, 2008, section 11.4.
+\url{https://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html}.
+\bibitem{gqa} J. Ainslie et al. GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints. EMNLP, 2023.
+\url{https://aclanthology.org/2023.emnlp-main.298/}.
+\bibitem{flashattention} T. Dao et al. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness. NeurIPS, 2022.
+\url{https://arxiv.org/abs/2205.14135}.
+\bibitem{pagedattention} W. Kwon et al. Efficient Memory Management for Large Language Model Serving with PagedAttention. SOSP, 2023.
+\url{https://arxiv.org/abs/2309.06180}.
+\bibitem{selfrefine} A. Madaan et al. Self-Refine: Iterative Refinement with Self-Feedback. NeurIPS, 2023.
+\url{https://arxiv.org/abs/2303.17651}.
+\bibitem{codet} B. Chen et al. CodeT: Code Generation with Generated Tests. ICLR, 2023.
+\url{https://arxiv.org/abs/2207.10397}.
+\bibitem{selfdebug} X. Chen, M. Lin, N. Sch\"arli, D. Zhou. Teaching Large Language Models to Self-Debug. ICLR, 2024.
+\url{https://arxiv.org/abs/2304.05128}.
+\bibitem{tsapi} Microsoft. Using the Compiler API, TypeScript wiki. 访问日期2026-10-11；文档对应6及以前的API。
+\url{https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API}.
+\bibitem{tsmodules} Microsoft. TypeScript Modules Reference: type-only imports and exports.
+\url{https://www.typescriptlang.org/docs/handbook/modules/reference.html}.
+\bibitem{swebench} C. E. Jimenez et al. SWE-bench: Can Language Models Resolve Real-World GitHub Issues? ICLR, 2024.
+\url{https://www.swebench.com/SWE-bench/}.
+\bibitem{sdpa} PyTorch. Scaled Dot Product Attention tutorial. 访问日期2026-10-11.
+\url{https://docs.pytorch.org/tutorials/intermediate/scaled_dot_product_attention_tutorial.html}.
+\bibitem{attentioninterface} Hugging Face. Transformers Attention Interface, v4.57.1. 实装版本4.57.6.
+\url{https://huggingface.co/docs/transformers/v4.57.1/attention_interface}.
+\bibitem{kvcache} Hugging Face. KV cache strategies, v4.57.1；CPU offloading与缓存容量取舍。实装版本4.57.6，访问日期2026-10-11.
+\url{https://huggingface.co/docs/transformers/v4.57.1/kv_cache}.
+\bibitem{emptycache} PyTorch. \texttt{torch.cuda.memory.empty\_cache}, 在线文档2.14，访问日期2026-10-11；本机执行版本2.12.0.dev20260408+cu128。
+\url{https://docs.pytorch.org/docs/2.14/generated/torch.cuda.memory.empty_cache.html}.
+\bibitem{qwen05} Qwen. Qwen2.5-Coder-0.5B-Instruct model card.
+\url{https://huggingface.co/Qwen/Qwen2.5-Coder-0.5B-Instruct}.
+\bibitem{qwen15} Qwen. Qwen2.5-Coder-1.5B-Instruct model card.
+\url{https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct}.
+\bibitem{qwen3} Qwen. Qwen2.5-Coder-3B-Instruct model card and license.
+\url{https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct}.
+\bibitem{bnb} Hugging Face. bitsandbytes installation, 访问日期2026-10-11.
+\url{https://huggingface.co/docs/bitsandbytes/main/en/installation}.
+\bibitem{quantdocs} Hugging Face. Transformers bitsandbytes quantization, v4.57.1.
+\url{https://huggingface.co/docs/transformers/v4.57.1/quantization/bitsandbytes}.
+\bibitem{qwen7} Qwen. Qwen2.5-Coder-7B-Instruct model card, Apache-2.0.
+\url{https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct}.
+\bibitem{qlora} T. Dettmers, A. Pagnoni, A. Holtzman, L. Zettlemoyer. QLoRA: Efficient Finetuning of Quantized LLMs. NeurIPS, 2023.
+\url{https://arxiv.org/abs/2305.14314}.
+\end{thebibliography}
+\end{document}

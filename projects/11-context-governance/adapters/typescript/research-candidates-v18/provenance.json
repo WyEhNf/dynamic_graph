@@ -1,0 +1,18 @@
+{
+  "frozen_unix": 1791661517.0590835,
+  "scope": "Isolated candidate only, default worker unchanged; unchanged SourceFile reuse with oldProgram, import resolution invalidated every request.",
+  "compiler_version": "6.0.3",
+  "sha256": {
+    "baseline.mjs": "3e08142f11129f81a9e2cd646027085ffb12223ac535271f02cddaa80c9f1f1e",
+    "incremental.mjs": "fd4692f632fbc086bd02f348e72f5c4c834f4ec01d7f66885e2c457c55f3853b"
+  },
+  "generator_sha256": "a9a5d3a4f83d647ab7a73b6bf69d17af0e7ecdf719ac7cd1dbb1aa79997a0bc0",
+  "promotion": {
+    "unix": 1791661793.686058,
+    "original_default_raw_sha256": "1548d0b7a59b3409046ceb4ad85e7304cc5b71f83217a01b0fa940043ea10536",
+    "baseline_line_endings": "Normalized to LF by read_text/write_text; exact decoded content compared before promotion.",
+    "promoted_sha256": "fd4692f632fbc086bd02f348e72f5c4c834f4ec01d7f66885e2c457c55f3853b",
+    "semantic_report": "artifacts/typescript-incremental-semantic-v18.json",
+    "performance_report": "artifacts/typescript-incremental-v18.json"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "hackathon11-typescript-context",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {"node": ">=20"},
+  "dependencies": {"typescript": "6.0.3"}
+}

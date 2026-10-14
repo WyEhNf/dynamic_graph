@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791719294.2452936,
+  "controls": 40,
+  "independently_reconstructed_baselines": 2,
+  "independently_replayed_full_outputs": 33,
+  "independently_reproduced_restricted_failures": 7,
+  "strictly_better_than_both_serial": [
+    {
+      "input_sha256": "ca93bf4ab93ad82421ae4da463775dc2d4c7ceb7bfdaba399a02f1588a2c0b9d",
+      "parent": 44,
+      "serial_copies": [
+        23,
+        23
+      ],
+      "interleaved_copies": 22
+    },
+    {
+      "input_sha256": "ca93bf4ab93ad82421ae4da463775dc2d4c7ceb7bfdaba399a02f1588a2c0b9d",
+      "parent": 52,
+      "serial_copies": [
+        23,
+        25
+      ],
+      "interleaved_copies": 22
+    },
+    {
+      "input_sha256": "ca93bf4ab93ad82421ae4da463775dc2d4c7ceb7bfdaba399a02f1588a2c0b9d",
+      "parent": 53,
+      "serial_copies": [
+        23,
+        23
+      ],
+      "interleaved_copies": 22
+    },
+    {
+      "input_sha256": "ca93bf4ab93ad82421ae4da463775dc2d4c7ceb7bfdaba399a02f1588a2c0b9d",
+      "parent": 59,
+      "serial_copies": [
+        28,
+        23
+      ],
+      "interleaved_copies": 21
+    }
+  ],
+  "evidence": {
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/source-provenance.json": "6845d8735015b7a20bb0d75f0e6f74f80dc53d407e3692b0f1999b97cec2f75e",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/evidence-provenance.json": "78716088b7232db741aa33d81c0c31ffcfdf35ed07f4ae18383b62f36e905ebf",
+    "projects/18-isa-scheduler/experiments/r158-tree-fixed-pair-diagnostic/inputs.jsonl": "e72efcb8783822cb4bfa4de57bc583651bc4eb29b3b06ceb0e7489ad8049e9a1",
+    "projects/18-isa-scheduler/experiments/r158-tree-fixed-pair-diagnostic/report.json": "73b7da62820bfa8a84817a5dc7077e200622cdf3bd9f1bc85c7f487eef751dbb",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/report.json": "27d45a4e13b03eb9f067d7f6c51e5d8556584d568187ff3a7ffa7049bad7c46d",
+    "projects/18-isa-scheduler/experiments/r158-tree-fixed-pair-diagnostic/ca93bf4ab93ad824-baseline-output.json": "9cf1a1b68ef073491fbccdddfdaec45b05dda916db2a7f4e346079f2f1f258f5",
+    "projects/18-isa-scheduler/experiments/r158-tree-fixed-pair-diagnostic/23db7ee39361ed48-baseline-output.json": "61ac2b40091ce492b8c4152328b5840acc4e64c5c923263a9a1a7bc95492da38",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent36-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent36-serial1-output.json": "09a8d943363ac88d06a4e7e5039a65350932940f4e4b995fe43f8d4aee227dd6",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent39-serial0-output.json": "88e9d59d38c14ef4cb53b632f80c99eee3959c54eab174889ccd4a8e9c87af96",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent39-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent40-serial0-output.json": "43701548ca4a06f977c0fd8cda51182bffa87067ee0f54e4f09073af042c5707",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent40-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent44-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent44-serial1-output.json": "4fa07624384f07a703da4fcf62a0626c02bc3e8a6216000279fa6dca8d3cfac0",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent45-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent45-serial1-output.json": "311748bd25c0cb3e1bd70ed476d24024aacbfd8ca9f9b6567800730ec1e6923c",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent46-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent46-serial1-output.json": "71c27461957fefbfaa39953426acf8cc9e0ce25fd4fb3c1ad254bec050ea6087",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent50-serial0-failure.json": "2fe7e7176a354b1ce23ad0c7c47ab8a3c06af1dd95bfffc40e6a951713e5f302",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent50-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent51-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent51-serial1-failure.json": "89ea1faf0a9be10c535ac5ec5e062078a59282acf269560d90cdff72d8834f90",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent52-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent52-serial1-output.json": "41975c467bb7dbdd9e092ead886fc86abd0bc805905a75af06379cc62f1f7222",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent53-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent53-serial1-output.json": "11519072ad0e0c5e2410d681995e4036baa7220c8f8d738f638c6c15e7091d72",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent54-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent54-serial1-output.json": "d1d063151a66d3ec4e6b32a58491571443aac92c9fbcb6b68e62bcb41095c7b7",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent55-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent55-serial1-output.json": "4ef52c4e6841e075157955394f3b14f0e09a3aa4fda836f09930db74bcabb2bd",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent56-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent56-serial1-failure.json": "c064ab0cb5a4ec6fd18e466c5743e61795b27ebe27ef01bd597762a72cddde47",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent57-serial0-output.json": "584595db280f2dadd536fd25a0d415cc28f5300b68c1e9fe43871e73d638ec5a",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent57-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent58-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent58-serial1-failure.json": "5fc7d667460d7fe167a72ec1d8db1057c69367df2efc855bb2b185d7bea3b0ba",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent59-serial0-output.json": "3c5053b533949f471342c3366816672fdbce7f4a81b4643fbd069ce193884482",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent59-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent60-serial0-failure.json": "77ed0eb620a8fee9437d7a25e274102e0e47bd83366dced57df0d98c7aa23341",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent60-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent61-serial0-failure.json": "9ae9fc92fb44750508e584300ed9e3e848d90ad06d1a90e574c88575c02008a5",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent61-serial1-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent62-serial0-output.json": "c58bfe6ab45eedc4c5c7a434beb8a1438cbc3d08b5f2be06fbc865a6bc1b47c3",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/ca93bf4ab93ad824-parent62-serial1-failure.json": "ec2eac39770317ce0e40d69714c17104c589edbd40b70a029a9d9cc79ade7a7c",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/23db7ee39361ed48-parent60-serial0-output.json": "4f4ba342c556648db6e5c12204237023b189339717e1fa6999d1185e152f5604",
+    "projects/18-isa-scheduler/experiments/r161-tree-pair-serial-controls/23db7ee39361ed48-parent60-serial1-output.json": "66e777b176c7616e598af40f9ac49c8c8d2e36587713620d3e13095cea69ae34"
+  },
+  "scope": "Both concatenations on unchanged full64-node originals and same prefix/suffix. Independent set-based emitter reconstructed exact physical rows and seven restricted deadline failures; these failures do not prove graph infeasibility. Four interleaved proposals strictly beat both completed serial controls, including parent59 28/23 versus21. Proposals are separate, not additive; no global optimality/officialLevel claim."
+}

@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "source_sha": "da5dc93e1f0615e0e1a3e4daf1f349eb9fe6d275cbff843d85cbb6da05b178c3",
+  "fixed_plan_controls": 523,
+  "workspace_profiles": 495,
+  "group_recognition_controls": 83,
+  "group_moved_profiles": 210,
+  "runs": [
+    {
+      "label": "numeric-controls",
+      "actual_exit_code": 0,
+      "controls": 11,
+      "input_sha": "263d09b6fb0b038b40a31c6bdcd7de5bf9237bed211ef87696fa510b79ff1bdd",
+      "output_sha": "4890ecb0ba0e68d5836ed376188474d1873febd0ae8d5d88a7937ac01fbe8dc6",
+      "log_sha": "0199575fcc7be723b9e759e8ecd722bef5661e95b7a56bbc88317765e3eea9f1"
+    },
+    {
+      "label": "numeric-parallel",
+      "actual_exit_code": 0,
+      "controls": 320,
+      "input_sha": "d8fe2d586590054796f37bdb5f32d8fc7ae9b0acbf514474839eb94120a04b9e",
+      "output_sha": "e4d064e63f20c5fe857e1a0a64e5197955c01a4487bbd76b3dcccadf6a48428e",
+      "log_sha": "6fe5d200bfc952456a65d338bf13b5c1006a0bdba98f86549b3b9f3f24bf10c7"
+    },
+    {
+      "label": "numeric-parallel-valid",
+      "actual_exit_code": 0,
+      "controls": 160,
+      "input_sha": "87f50b8f1cc8be3ffe0a98d08c29752ba0fe5db89cc01fe1c41bfb20dd82d4ee",
+      "output_sha": "5248b4fcc1e7a274683dd34b4e75815ea9403e537015a9210a4b15539c8b4c97",
+      "log_sha": "118bef34db849b3f1ca52e4d6d9d3d11aaa2e57f71466aed4ef2357e71ca887a"
+    },
+    {
+      "label": "scaled-serial-controls",
+      "actual_exit_code": 0,
+      "controls": 32,
+      "input_sha": "a3a4645e7700acbf06d00b53ea69a4fc4f397b591b900ea54f5cff906d2fa473",
+      "output_sha": "754c7f05bea3ccf08ae3e0a64901a482d8d29db112885b05f38ab56fd5d03f01",
+      "log_sha": "5eaa3ec41310ee51242cc78913c6c29367d763e98ef5c52c65f8e4631003c478"
+    },
+    {
+      "label": "projection",
+      "actual_exit_code": 0,
+      "input_sha": "e21a0198f35ddfb94cac9b459f82b49ca0094076ce829d81705dc0ea874b8b68",
+      "log_sha": "08d299ba2e31c52b1268d394ef3fede85db87202059a9889d4df1a554a30ed4d",
+      "output": "495 independent full-ancestor/live-set bigint controls passed"
+    },
+    {
+      "label": "group",
+      "actual_exit_code": 0,
+      "input_sha": "566f4797237b1a5d3051a26a88e3beebbf1c2c12afd1b48a19b9db7dc882284e",
+      "log_sha": "4392a76cd4f5ef03e82375476f5ab90a884caa186afeffb5622242cdd1fdc5ba",
+      "output": "83 recognition controls / 210 group moves: independent bigint passed"
+    }
+  ],
+  "UBSan_runtime_errors": 0,
+  "exe_sha": {
+    "numeric": "c20e294f78fc25a0b150ce6d47e06356e9dbe6dc27379f426bc375d98b2bf3b4",
+    "projection": "2c16890ebabcb1c95d3d8904eb524ddbf0cdac4f066c58a87bc4b3a18fc9a5d5",
+    "group": "16d3eb804370a100a93eb2cf385047c45649aacc2824e61ca74341450db6d17f"
+  },
+  "compiler": "Clang21.1 -O1 -g -fsanitize=undefined -fno-sanitize-recover=undefined",
+  "link_warnings": "UCRT LNK4217 logged separately from runtime UB",
+  "shared_functional_wall_seconds": 3.7118000999907963,
+  "default45_preserved": "5116d8d9c859662a26d1aba7dd1b0916097cb2bd87e466007adf2cbede391dd9"
+}

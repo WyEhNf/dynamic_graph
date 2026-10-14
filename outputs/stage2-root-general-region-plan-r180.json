@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791778557.2055955,
+  "source_freezes": {
+    "r180-general-dag-region-static": "bdc7d5404309e7995c21f05bcf9af6fc03951db96147136963a2aa90047d0556",
+    "r181-general-region-counting-static": "b9388a15ef0bd2c0273ee7cdc95c4ff7e2bb69dad1e99d3accf7eceb19defe83"
+  },
+  "manual_witness_sha256": "6288e5c2e2f1f4f312dbe29252149fae4a1ebe720f6413a7e72dc3f534b1f350",
+  "manual_complete_witnesses": [
+    {
+      "witness": "baseline",
+      "original_nodes": 11,
+      "physical_rows": 14,
+      "COPY": 3,
+      "physical_identity": true,
+      "symbolic_registers": true,
+      "local_integer_checks": 3
+    },
+    {
+      "witness": "proposed_manual_witness",
+      "original_nodes": 11,
+      "physical_rows": 12,
+      "COPY": 1,
+      "physical_identity": true,
+      "symbolic_registers": true,
+      "local_integer_checks": 3
+    }
+  ],
+  "transition_attempt_cap": 20000,
+  "expansion_cap": 20000,
+  "region_cap": 64,
+  "region_nodes": 32,
+  "complete_per_region": 16,
+  "labels_upper": 20064,
+  "reserve_bytes": 536870912,
+  "authorization": "Implement isolated general-region core/wrapper and predeclared small raw-oracle/contract fixtures plus source/resource-layout freeze; no solver or fullcorpus execution until code/gold/resource review. Retain default/core/336statuses/11pause.",
+  "scope": "Root reviewed genuine allready originalDAG/sharedroles/hazard/prefix+suffix state contracts and tighter separatelycounted transition cap. Handwritten two complete11node blocks independently physicalidentity/RAW-WAR-WAW and ordered symbolic registers/3local64bit tests verified3to1COPY; not new algorithm gain or officialscore. Actual implementation bytes/completeoutput storage/oracle/partial/reopen controls still require freeze review."
+}

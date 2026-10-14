@@ -1,0 +1,217 @@
+{
+  "records": 979,
+  "all_same": true,
+  "baseline_sha": "96d31657a8ab4a432c6f0fee14ac835d99b9806a04839adb5409751406dfeb1a",
+  "current_sha": "e7c3f2cc84098f5da051265eddc1dc5a0cdc59c464ab0078c346a9888801c6eb",
+  "historical_regression": "batch8..22 sources; direct frozen R42 comparison is separate",
+  "suites": [
+    {
+      "suite": "stress",
+      "records": 153,
+      "before": "reports\\stress-batch42.json",
+      "after": "reports\\stress-batch43.json",
+      "before_sha": "4dded8d24c0a1efaab614300b269fd730a01d4ea6d4cb53d794962782f352c9a",
+      "after_sha": "25844c7352403d23a9d830f1ecee2a7ef67e863977110da5197e36db2c1167f4"
+    },
+    {
+      "suite": "development",
+      "records": 143,
+      "before": "reports\\development-batch42.json",
+      "after": "reports\\development-batch43.json",
+      "before_sha": "3a254fa11be74fcc095bb6d0eb41aae56e5043f46b4dd874a49eac1bb48b5030",
+      "after_sha": "5c6cfbeb53d4178b4b69a19c9301075829783b1a39b1e559ca32cdad3e885dbb"
+    },
+    {
+      "suite": "holdout",
+      "records": 143,
+      "before": "reports\\holdout-batch42.json",
+      "after": "reports\\holdout-batch43.json",
+      "before_sha": "fc2809bd14485ac2427b180d08abb1c444dcf37dd6777e61a47868cdbe713745",
+      "after_sha": "7458c7bf61f18e4fe5619249c2556950dc1401cc70b2312bb8a98b2202e951c0"
+    },
+    {
+      "suite": "frontier",
+      "records": 72,
+      "before": "reports\\frontier-batch42.json",
+      "after": "reports\\frontier-batch43.json",
+      "before_sha": "9165df1edf09af7f597ac53a6f768f28289292809dbcfff1696474ae739aef96",
+      "after_sha": "4e2a3db40184c56cc9399f3e23101e0a880f9f575ba2c301f8baf3a27384fe58"
+    },
+    {
+      "suite": "frontier-holdout",
+      "records": 72,
+      "before": "reports\\frontier-holdout-batch42.json",
+      "after": "reports\\frontier-holdout-batch43.json",
+      "before_sha": "0635762109f0c27ddab6a805450a159e35673a831204a1eece9c906208a0b038",
+      "after_sha": "b98a817e78049ec206634927cc75fcdb5e729ff02fb5c0b11cd80f449ad9c2cb"
+    },
+    {
+      "suite": "oracle4",
+      "records": 24,
+      "before": "reports\\oracle4-batch42.json",
+      "after": "reports\\oracle4-batch43.json",
+      "before_sha": "41bb8db4cc6857faa9f4b3f0c9aa1cab17eafa69e695b8cd6bb74fd31e572179",
+      "after_sha": "c399a08b1c0917bcc5504f7076e1d7189cb94a5f1b5b60f0c851bcce4ec084a3"
+    },
+    {
+      "suite": "oracle4-holdout",
+      "records": 24,
+      "before": "reports\\oracle4-holdout-batch42.json",
+      "after": "reports\\oracle4-holdout-batch43.json",
+      "before_sha": "a3ef71dee244f7b420fed67676fefb4b737e198cbac01d2af3df4dd63d95d91f",
+      "after_sha": "4b17e81b86c5c92cba49e6b4549752a3a965c311b4a634958c12cfd062aa8434"
+    },
+    {
+      "suite": "oracle5",
+      "records": 24,
+      "before": "reports\\oracle5-batch42.json",
+      "after": "reports\\oracle5-batch43.json",
+      "before_sha": "7079ba531cc1b34696d7ff0fac94284bd8fe3b8cb3c787f6add5b4cd1ef23a09",
+      "after_sha": "199cafa81653e36ad75b57d2fa03c583a20ef5dda876612f81c4a6abc9808f26"
+    },
+    {
+      "suite": "oracle5-holdout",
+      "records": 24,
+      "before": "reports\\oracle5-holdout-batch42.json",
+      "after": "reports\\oracle5-holdout-batch43.json",
+      "before_sha": "e64eb3c6d863add24ee296f4b6fdf7563b59743ed60e0daf19cdec48146eb831",
+      "after_sha": "bea9d757611acc6495e241e6e1935b90904358d8954f7ddb61ed1229037d5ab2"
+    },
+    {
+      "suite": "overlap",
+      "records": 30,
+      "before": "reports\\overlap-batch42.json",
+      "after": "reports\\overlap-batch43.json",
+      "before_sha": "5ab7430be6d1b1415fd443ba26258f70a60f82212ed5299f180851e5075afec1",
+      "after_sha": "b21fcb22de9d5b123f6d441cc95455efae6bf0f38901b45b1e4f3da2e225195b"
+    },
+    {
+      "suite": "overlap-holdout",
+      "records": 30,
+      "before": "reports\\overlap-holdout-batch42.json",
+      "after": "reports\\overlap-holdout-batch43.json",
+      "before_sha": "493513684cecc5e179d79b63c083f0ae904c6ba5d5a187706fcc642a4c5354e1",
+      "after_sha": "24c65e5f1411bd539d01e4e08141d5d7915c19bd24a2b41dbc15ac54df866f71"
+    },
+    {
+      "suite": "resource-quality",
+      "records": 18,
+      "before": "reports\\resource-quality-batch42.json",
+      "after": "reports\\resource-quality-batch43.json",
+      "before_sha": "1f2adf33c04126df86d1ab8a537c9a921871f151ad042bcf0082abc7adf06231",
+      "after_sha": "2777fd37a16c5e0c389bdc60cc4abcf268372103b8f988e7544d614410c3ae60"
+    },
+    {
+      "suite": "resource-quality-holdout",
+      "records": 18,
+      "before": "reports\\resource-quality-holdout-batch42.json",
+      "after": "reports\\resource-quality-holdout-batch43.json",
+      "before_sha": "53a6344d94f4b103b1417e73d8a1606632cfaeafc3d14ce14431527cb8d85da4",
+      "after_sha": "d3c005fbafa5b8cf88b4247c207ecc8690234dc9294b9f74785a0ca341d19914"
+    },
+    {
+      "suite": "weighted-overlap",
+      "records": 30,
+      "before": "reports\\weighted-overlap-batch42.json",
+      "after": "reports\\weighted-overlap-batch43.json",
+      "before_sha": "b0b72e96c0392c079f7454b097e48b1f9c501147fa018c12f24ca74aaf19a186",
+      "after_sha": "6922da3abc5827752e208276dbbff2caabd9db3e2640781ee06bb28579d783e1"
+    },
+    {
+      "suite": "weighted-overlap-holdout",
+      "records": 30,
+      "before": "reports\\weighted-overlap-holdout-batch42.json",
+      "after": "reports\\weighted-overlap-holdout-batch43.json",
+      "before_sha": "69313953dfe3838463af26dca775105c66de768b3e272f99bf0a056c11345b55",
+      "after_sha": "95da37a08d2d264f9e0458fe7b44848c677199702d70ed8a6d91fabdb168ebbc"
+    },
+    {
+      "suite": "oracle6",
+      "records": 12,
+      "before": "reports\\oracle6-batch42.json",
+      "after": "reports\\oracle6-batch43.json",
+      "before_sha": "b3882c349c24f182f1966e2ee5f87ebdeed797842ecf9bd179799004f39f218f",
+      "after_sha": "b2b77de977154cdce98abb6576b79aa0e59ffc8c8f5e5d5c80d89ca211188a9b"
+    },
+    {
+      "suite": "oracle6-holdout",
+      "records": 12,
+      "before": "reports\\oracle6-holdout-batch42.json",
+      "after": "reports\\oracle6-holdout-batch43.json",
+      "before_sha": "98b35074f04d8f2a519b511c23bfc4fdad16a89e11054df112fe14f9713539df",
+      "after_sha": "d1d00c1471983e19a569609e9a72f5e66ef01d2745edd467ef158bb86c048c1b"
+    },
+    {
+      "suite": "irregular-small",
+      "records": 12,
+      "before": "reports\\irregular-small-batch42.json",
+      "after": "reports\\irregular-small-batch43.json",
+      "before_sha": "73dc0c92bb80e6cb5a56bbeadd73bfb93862e82966556a69dcbfc32e9a6aa3dc",
+      "after_sha": "56501c4aca2b637b125d4ac60ebb4b93325b5558c1b08dbc1342171f6dfcad65"
+    },
+    {
+      "suite": "irregular-small-holdout",
+      "records": 12,
+      "before": "reports\\irregular-small-holdout-batch42.json",
+      "after": "reports\\irregular-small-holdout-batch43.json",
+      "before_sha": "1129cf88af35eb8a9fe60982fa31a5442607e9effde25b5942c295130c2a026b",
+      "after_sha": "229a867315c6e91275691a347e41414e5161ef85be2979a7266f8ecb0f1f0445"
+    },
+    {
+      "suite": "corepacking",
+      "records": 18,
+      "before": "reports\\corepacking-batch42.json",
+      "after": "reports\\corepacking-batch43.json",
+      "before_sha": "c123d2d954379b50f4d532a04848ba7131a65246219a63d4de9410f668c22939",
+      "after_sha": "edbef17645ecff1dd0706a73ee21d827b4d7629ee7bcc3c308e743d198e2a494"
+    },
+    {
+      "suite": "corepacking-holdout",
+      "records": 18,
+      "before": "reports\\corepacking-holdout-batch42.json",
+      "after": "reports\\corepacking-holdout-batch43.json",
+      "before_sha": "ac34fed7238b843c373258f8170b579cc8ba4a66661fa5b268371476d65322b0",
+      "after_sha": "0790c567d773b45107d7c41a688b244203ed7f1393c7186bae6cf33476455bad"
+    },
+    {
+      "suite": "wait-overlap",
+      "records": 18,
+      "before": "reports\\wait-overlap-batch42.json",
+      "after": "reports\\wait-overlap-batch43.json",
+      "before_sha": "a9e943e4f9c78c62ed3ccddb143039c80ab96942f912728bc201a528f1ae2744",
+      "after_sha": "21c97c5a162655955125d945a0cfb06f532996ac8ba34659b4084d98fa842884"
+    },
+    {
+      "suite": "wait-overlap-holdout",
+      "records": 18,
+      "before": "reports\\wait-overlap-holdout-batch42.json",
+      "after": "reports\\wait-overlap-holdout-batch43.json",
+      "before_sha": "41a1e4f52e1ad559e6ae93a17a24401b6bddc0f3c4c3e3c38c89ea11d1c18a4b",
+      "after_sha": "561d1ce6df9957a05482199d2c39b3799bb30fffe07d886fe7427d1dbdb0606b"
+    },
+    {
+      "suite": "certificate-controls",
+      "records": 12,
+      "before": "reports\\certificate-controls-batch42.json",
+      "after": "reports\\certificate-controls-batch43.json",
+      "before_sha": "9c64a7578b71c82469ffdf937366838ad3cd53a1b03ca5b9510f922ffa7fd99e",
+      "after_sha": "4e4273878b56a2e985a7804363ffb65f080c50a19176bced7086411207527542"
+    },
+    {
+      "suite": "dense",
+      "records": 6,
+      "before": "reports\\dense-batch42.json",
+      "after": "reports\\dense-batch43.json",
+      "before_sha": "79ecee2c7459fc46256648c448fad1280f80d63d49599d3a627f4fe8bc5b6329",
+      "after_sha": "5a4ecefc4cd9c7ba4d5afa28d011731c0c32653f5d81867e1a45239503dc7f27"
+    },
+    {
+      "suite": "dense-holdout",
+      "records": 6,
+      "before": "reports\\dense-holdout-batch42.json",
+      "after": "reports\\dense-holdout-batch43.json",
+      "before_sha": "4094000221d0aa40cf5535df33211f1c1b5fcfc75e69afeffe30f8f0abe15455",
+      "after_sha": "52a566d56df7d9e1763ff2c8edff6fef709f58598bddb26dae5a233fb1b0258d"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791779974.250138,
+  "static_freeze_sha256": "1524ccf81fb17c29bc656cf3d7bc3eb4cecf2a8f005ed14a99924bf8af09c823",
+  "frozen_files": 13,
+  "independent_full_manual_plans": 12,
+  "legal_plans": 7,
+  "invalid_plans": 5,
+  "strict_prefix_failures": 2,
+  "planned_gold": 160,
+  "authorization": "Implement isolated R56 source-only one charged original-input causal j-before-p restart plus160 predeclared full-original gold and literal charge boundary freeze; rootreview source/gold/fee before compile or solver. Start from exactR51, not R55 repair. No63 expansion/default/TeX changes.",
+  "scope": "Full original-node physical counterexamples and necessary-bound causal rationale accepted. Unfinished-not-ready target scan, acyclic voluntary ordering with unchanged original degrees/users/lifetimes, single restart under shared2M/16M, full fee accounting required. Actual new algorithm recovery/performance remains unproven."
+}

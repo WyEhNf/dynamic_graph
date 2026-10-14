@@ -1,0 +1,26 @@
+test_contract_hashes_match_all30_without_reference_access (tests.test_candidate_gate.CandidateGateTests.test_contract_hashes_match_all30_without_reference_access) ... ok
+test_no_reasoning_draft_is_selected (tests.test_candidate_gate.CandidateGateTests.test_no_reasoning_draft_is_selected) ... ok
+test_real_public_failure_repair_and_unchanged_snapshot (tests.test_candidate_gate.CandidateGateTests.test_real_public_failure_repair_and_unchanged_snapshot) ... ok
+test_truncation_missing_output_exhaustion_and_strict_checker (tests.test_candidate_gate.CandidateGateTests.test_truncation_missing_output_exhaustion_and_strict_checker) ... ok
+test_batch_screen_reduces_exact_recounts_without_budget_leak (tests.test_governance.GovernanceTests.test_batch_screen_reduces_exact_recounts_without_budget_leak) ... ok
+test_different_kinds_and_source_identity_are_preserved (tests.test_governance.GovernanceTests.test_different_kinds_and_source_identity_are_preserved) ... ok
+test_duplicate_ids_rejected (tests.test_governance.GovernanceTests.test_duplicate_ids_rejected) ... ok
+test_exact_duplicates_and_tool_error (tests.test_governance.GovernanceTests.test_exact_duplicates_and_tool_error) ... ok
+test_file_extensions_are_not_relevance_signals (tests.test_governance.GovernanceTests.test_file_extensions_are_not_relevance_signals) ... ok
+test_generic_task_words_do_not_fill_with_unrelated_code (tests.test_governance.GovernanceTests.test_generic_task_words_do_not_fill_with_unrelated_code) ... ok
+test_identifiers_match_concepts_with_dependencies (tests.test_governance.GovernanceTests.test_identifiers_match_concepts_with_dependencies) ... ok
+test_missing_model_content_cannot_fake_ttft (tests.test_governance.GovernanceTests.test_missing_model_content_cannot_fake_ttft) ... ok
+test_order_sensitive_counter_is_checked_in_output_order (tests.test_governance.GovernanceTests.test_order_sensitive_counter_is_checked_in_output_order) ... ok
+test_oversized_pins_fail_instead_of_silent_truncation (tests.test_governance.GovernanceTests.test_oversized_pins_fail_instead_of_silent_truncation) ... ok
+test_pins_preserved_and_budget_accounted (tests.test_governance.GovernanceTests.test_pins_preserved_and_budget_accounted) ... ok
+test_request_can_omit_diagnostic_input_count_but_budget_stays_exact (tests.test_governance.GovernanceTests.test_request_can_omit_diagnostic_input_count_but_budget_stays_exact) ... ok
+test_screening_keeps_atomic_dependency_cycles (tests.test_governance.GovernanceTests.test_screening_keeps_atomic_dependency_cycles) ... ok
+test_unicode_budget_and_empty (tests.test_governance.GovernanceTests.test_unicode_budget_and_empty) ... ok
+test_identity_and_mutation_are_source_hints_without_execution (tests.test_contract_audit.TestPublicContractHints.test_identity_and_mutation_are_source_hints_without_execution) ... ok
+test_missing_calls_and_required_exports_are_reported (tests.test_contract_audit.TestPublicContractHints.test_missing_calls_and_required_exports_are_reported) ... ok
+test_syntax_and_exception_hints_do_not_claim_correctness (tests.test_contract_audit.TestPublicContractHints.test_syntax_and_exception_hints_do_not_claim_correctness) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 3.479s
+
+OK

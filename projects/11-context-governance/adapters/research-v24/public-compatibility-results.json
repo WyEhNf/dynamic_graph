@@ -1,0 +1,16 @@
+{
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "wall_seconds": 13.448857100040186,
+  "adapter_imports": [
+    "F:\\Hackathon\\projects\\11-context-governance\\adapters\\research-v24\\context_governance\\public_examples.py",
+    "F:\\Hackathon\\projects\\11-context-governance\\adapters\\research-v24\\context_governance\\local_model.py"
+  ],
+  "scope": "Frozen literal-v17 and public-contract-v22 CPU compatibility tests, loaded against v24; no GPU/model calls.",
+  "frozen_test_sha256": {
+    "adapters\\research-v22\\test_public_contract.py": "4f5564b2c758ecdc816b31f3866217ebeaf7df878accf9f7a64f625cb71d0936",
+    "tests\\test_public_examples.py": "1f8233570bda93b1c1e982369e210c9728f69a74f03ccf4a20f1536c532aeedc"
+  }
+}

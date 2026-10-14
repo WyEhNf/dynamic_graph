@@ -1,0 +1,179 @@
+{
+  "suite": "data\\parallel-oracle-holdout.json",
+  "suite_sha256": "758d2acaae26368b2f9ce2bfc9ed803a1e8914181813d4aa2b61ccaed2a2bc14",
+  "baseline_exe_sha256": "09a5e612a8e1cacd2ac466b2d6332cbf7b5000c7eb03807ec484f271e8377e03",
+  "current_exe_sha256": "b6a992524f2043aa03cabab29686a3b103cb866e3466ee399443d7cde73c991b",
+  "current_solution_sha256": "df6bec285795bd9265f52c8fb02384c5dc01c295e66c6c09713bf30b3f92c0b8",
+  "baseline_solution_sha256": "da8cb1a7a36dbd883be1b3bdb35734667f1b39301750a403016499a7f847ab64",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-oracle-holdout-batch8-1-before.json",
+        "exit_code": 1,
+        "wall_seconds": 0.13455309998244047,
+        "peak_working_set_bytes": 6115328
+      },
+      "after": {
+        "report": "reports\\paired-oracle-holdout-batch8-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.13299340003868565,
+        "peak_working_set_bytes": 6266880
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 21,
+          "failed": 3
+        },
+        "after": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "common_cases": 21,
+        "common_solve_us_before": 794,
+        "common_solve_us_after": 19068,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 2,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "parallel_oracle_n4_seed20271019",
+          "parallel_oracle_n4_seed20271021",
+          "parallel_oracle_n4_seed20271031"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 8769,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 82.5,
+            "max_us": 231
+          },
+          {
+            "n": 4,
+            "median_us": 845.0,
+            "max_us": 4419
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-oracle-holdout-batch8-2-before.json",
+        "exit_code": 1,
+        "wall_seconds": 0.13856890000170097,
+        "peak_working_set_bytes": 6111232
+      },
+      "after": {
+        "report": "reports\\paired-oracle-holdout-batch8-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.14291599998250604,
+        "peak_working_set_bytes": 6275072
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 21,
+          "failed": 3
+        },
+        "after": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "common_cases": 21,
+        "common_solve_us_before": 741,
+        "common_solve_us_after": 19281,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 2,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "parallel_oracle_n4_seed20271019",
+          "parallel_oracle_n4_seed20271021",
+          "parallel_oracle_n4_seed20271031"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 8769,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 82.5,
+            "max_us": 421
+          },
+          {
+            "n": 4,
+            "median_us": 868.0,
+            "max_us": 4641
+          }
+        ]
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-oracle-holdout-batch8-3-before.json",
+        "exit_code": 1,
+        "wall_seconds": 0.1566537000471726,
+        "peak_working_set_bytes": 6107136
+      },
+      "after": {
+        "report": "reports\\paired-oracle-holdout-batch8-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 0.14507919998141006,
+        "peak_working_set_bytes": 6270976
+      },
+      "comparison": {
+        "before": {
+          "total": 24,
+          "passed": 21,
+          "failed": 3
+        },
+        "after": {
+          "total": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "common_cases": 21,
+        "common_solve_us_before": 782,
+        "common_solve_us_after": 18799,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 2,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [
+          "parallel_oracle_n4_seed20271019",
+          "parallel_oracle_n4_seed20271021",
+          "parallel_oracle_n4_seed20271031"
+        ],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 8769,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 82.5,
+            "max_us": 232
+          },
+          {
+            "n": 4,
+            "median_us": 858.0,
+            "max_us": 4418
+          }
+        ]
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch7\\solution.cpp",
+  "median_common_solve_us_before": 782,
+  "median_common_solve_us_after": 19068,
+  "median_wall_seconds_before": 0.13856890000170097,
+  "median_wall_seconds_after": 0.14291599998250604,
+  "maximum_cli_working_set_bytes": 6275072,
+  "timing_scope": "solve_us: ScheduleCvGraph only; wall/working set: full CLI including JSON, witnesses and validation"
+}

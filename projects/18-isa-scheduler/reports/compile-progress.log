@@ -1,0 +1,137 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./reports/project18-research.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/ctexart.cls
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg)
+(e:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+(e:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.def))
+Document Class: ctexart 2022/07/14 v2.5.10 Chinese adapter for class article (C
+TEX)
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/ctexpatch.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/base/fix-cm.sty
+(e:/texlive/2025/texmf-dist/tex/latex/base/ts1enc.def))
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexopts.cfg)
+(e:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(e:/texlive/2025/texmf-dist/tex/latex/base/size11.clo))
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+(e:/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(e:/texlive/2025/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty
+(e:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(e:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(e:/texlive/2025/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg)))
+(e:/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+(e:/texlive/2025/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg))
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.d
+ef (e:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg))
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def))
+(e:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctex.cfg)
+(e:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+(e:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+(e:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty)))
+(e:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(e:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+(e:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(e:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(e:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(e:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(e:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/tools/longtable.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/tools/array.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
+(e:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(e:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(e:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(e:/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/hyperref/nameref.sty
+(e:/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(e:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(e:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(e:/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(e:/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def)
+(e:/texlive/2025/texmf-dist/tex/latex/url/url.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty
+(e:/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(e:/texlive/2025/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(e:/texlive/2025/texmf-dist/tex/latex/hyperref/hxetex.def
+(e:/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(e:/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(e:/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(e:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(reports/project18-research.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(e:/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
+(e:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(e:/texlive/2025/texmf-dist/tex/latex/graphics-def/xetex.def)
+(e:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(reports/project18-research.out) (reports/project18-research.out)
+(e:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(e:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd)
+[1]
+[2]
+[3]
+[4]
+[5]
+Underfull \hbox (badness 1210) in paragraph at lines 128--129
+\TU/FandolSong-Regular(0)/m/n/10.95 降 至 \TU/lmr/m/n/10.95 53803 |\TU/FandolSong
+-Regular(0)/m/n/10.95 （减 少 \TU/lmr/m/n/10.95 15.1%\TU/FandolSong-Regular(0)/m/n
+/10.95 ） ，| \TU/lmr/m/n/10.95 24 \TU/FandolSong-Regular(0)/m/n/10.95 改 善、| \TU/
+lmr/m/n/10.95 230 \TU/FandolSong-Regular(0)/m/n/10.95 持 平、|  无 质 量 退 化，|  新 增 \
+TU/lmr/m/n/10.95 8 \TU/FandolSong-Regular(0)/m/n/10.95 个 输 出；|  整 体 中 位
+
+Underfull \hbox (badness 2990) in paragraph at lines 128--129
+\TU/FandolSong-Regular(0)/m/n/10.95 延 迟 约 \TU/lmr/m/n/10.95 54 ms\TU/FandolSong
+-Regular(0)/m/n/10.95 、|  同 输 入 加 速 中 位 约 \TU/lmr/m/n/10.95 1.00\TU/FandolSong-
+Regular(0)/m/n/10.95 ，|  说 明 这 是 质 量 收 益 而 非 普 遍 时 间 收 益。|  记 录 位 于
+
+[6]
+Underfull \hbox (badness 1087) in paragraph at lines 145--146
+[]\TU/lmtt/m/n/10.95 scripts/research.ps1 -Count 10000 -Samples 1 -Round milest
+one-v03 \TU/FandolSong-Regular(0)/m/n/10.95 已 实 际 运 行 成
+
+[7]
+[8]
+[9]
+[10]
+[11]
+[12]
+[13]
+[14]
+[15]
+[16]
+[17]
+[18]
+[19]
+Underfull \hbox (badness 1275) in paragraph at lines 359--360
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$[][]\
+TU/lmr/m/n/10.95 . \TU/FandolSong-Regular(0)/m/n/10.95 作 者 组 原 文：|
+
+[20]
+[21] (reports/project18-research.aux)
+
+Package rerunfilecheck Warning: File `project18-research.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+Output written on reports/project18-research.pdf (21 pages).
+Transcript written on reports/project18-research.log.

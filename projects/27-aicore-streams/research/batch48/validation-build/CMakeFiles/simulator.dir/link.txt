@@ -1,0 +1,2 @@
+E:\mingw64\bin\ar.exe qc libsimulator.a "CMakeFiles/simulator.dir/F_/Hackathon/projects/27-aicore-streams/src/simulator.cpp.obj"
+E:\mingw64\bin\ranlib.exe libsimulator.a

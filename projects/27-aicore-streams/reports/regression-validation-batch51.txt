@@ -1,0 +1,27 @@
+cases=153 passed=153 failed=0
+cases=143 passed=143 failed=0
+cases=143 passed=143 failed=0
+cases=72 passed=72 failed=0
+cases=72 passed=72 failed=0
+cases=24 passed=24 failed=0
+cases=24 passed=24 failed=0
+cases=24 passed=24 failed=0
+cases=24 passed=24 failed=0
+cases=30 passed=30 failed=0
+cases=30 passed=30 failed=0
+cases=18 passed=18 failed=0
+cases=18 passed=18 failed=0
+cases=30 passed=30 failed=0
+cases=30 passed=30 failed=0
+cases=12 passed=12 failed=0
+cases=12 passed=12 failed=0
+cases=12 passed=12 failed=0
+cases=12 passed=12 failed=0
+cases=18 passed=18 failed=0
+cases=18 passed=18 failed=0
+cases=18 passed=18 failed=0
+cases=18 passed=18 failed=0
+cases=12 passed=12 failed=0
+cases=6 passed=6 failed=0
+cases=6 passed=6 failed=0
+979 case-records passed; no quality regression; 77.952s

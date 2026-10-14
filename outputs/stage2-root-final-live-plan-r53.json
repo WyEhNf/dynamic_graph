@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791729383.3378875,
+  "static_freeze_sha256": "faccf1787e4703174775dd849004ebd2b8c442b3b2d5dc194100bbaabe14f72c",
+  "gold_declaration_sha256": "1b3c2e743582819881e0a913ff351d37a212a1391123773ef4a62f8b6035f269",
+  "manual_original_templates": 4,
+  "manual_topological_cut_orders_replayed": 12,
+  "manual_controls": [
+    {
+      "name": "three_competing_legal_cuts",
+      "final_live": [
+        120,
+        80,
+        120
+      ],
+      "minimum_legal_cut_peak": [
+        170,
+        120,
+        150
+      ],
+      "legal": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "dominated_cut_invalid_at_prefix_but_whole_graph_feasible",
+      "final_live": [
+        120,
+        80,
+        120
+      ],
+      "minimum_legal_cut_peak": [
+        null,
+        120,
+        null
+      ],
+      "legal": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "name": "equal_final_better_peak",
+      "final_live": [
+        40,
+        40
+      ],
+      "minimum_legal_cut_peak": [
+        130,
+        90
+      ],
+      "legal": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "shared_completed_parent_with_external_remaining_direct_user",
+      "final_live": [
+        40
+      ],
+      "minimum_legal_cut_peak": [
+        80
+      ],
+      "legal": [
+        true
+      ]
+    }
+  ],
+  "predeclared_controls": 176,
+  "complete176controls_executed": false,
+  "candidate_compiled": false,
+  "default_changed": false,
+  "design": "Exact H(D union C) is order-independent before terminal sink clear. Distinct original-D parent release plus C external/sink born outputs agrees on manual original DAGs. Strictly larger F than a current actually legal incumbent can never improve (F,peak); equal must remain. All extra work charged, so finite-budget results require regression validation.",
+  "authorized_next_scope": "Isolated single final-live filter, frozen charged-operation table and176 full-original controls; R52same12 functional cases after gold. No remaining63/full250/performance/default until actual small acceptance reviewed.",
+  "scope": "Frozen13 references and unchanged R51/old user-open TeX verified. Four manual original templates independently replayed, including invalid cuts inside feasible whole graph, equal F better peak and external held output. This accepts design/next small verification, not all176 safety tests, new recovery, universal feasibility or speedup."
+}

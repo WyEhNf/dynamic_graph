@@ -1,0 +1,446 @@
+{
+  "suite": "data\\research-holdout-final.json",
+  "suite_sha256": "79508782a115b618b1491b54a8a95edf0f67b039adf28bb4873d53d0d39e16ea",
+  "baseline_exe_sha256": "45be8acab39a255fe248dc1a949329d503c38e6987996109aa66cb82e6b86c46",
+  "current_exe_sha256": "5899132d4897e185f0d2197ec8ad9269cde454a469b29cebddbc1e6c0adf1cda",
+  "current_solution_sha256": "4c5b2c6a32b72331b0fbbf6065ae5623911e7f85660699c3ee9958a7075ff7b8",
+  "baseline_solution_sha256": "ef3797e37fe6c776aff134efbaf86dc07237bb358a21b3dac752b935359533ff",
+  "runs": [
+    {
+      "repetition": 1,
+      "before": {
+        "report": "reports\\paired-gated-main-batch23-1-before.json",
+        "exit_code": 0,
+        "wall_seconds": 5.1929021999822,
+        "peak_working_set_bytes": 425074688
+      },
+      "after": {
+        "report": "reports\\paired-gated-main-batch23-1-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.645696700026747,
+        "peak_working_set_bytes": 425156608
+      },
+      "comparison": {
+        "before": {
+          "total": 143,
+          "passed": 143,
+          "failed": 0
+        },
+        "after": {
+          "total": 143,
+          "passed": 143,
+          "failed": 0
+        },
+        "common_cases": 143,
+        "common_solve_us_before": 2698767,
+        "common_solve_us_after": 2728553,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 4239,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 35.0,
+            "max_us": 51
+          },
+          {
+            "n": 6,
+            "median_us": 609,
+            "max_us": 609
+          },
+          {
+            "n": 8,
+            "median_us": 22.5,
+            "max_us": 37
+          },
+          {
+            "n": 12,
+            "median_us": 51.5,
+            "max_us": 218
+          },
+          {
+            "n": 16,
+            "median_us": 134.0,
+            "max_us": 630
+          },
+          {
+            "n": 18,
+            "median_us": 1506,
+            "max_us": 1506
+          },
+          {
+            "n": 32,
+            "median_us": 1185,
+            "max_us": 2120
+          },
+          {
+            "n": 64,
+            "median_us": 3789,
+            "max_us": 5894
+          },
+          {
+            "n": 96,
+            "median_us": 1357,
+            "max_us": 1357
+          },
+          {
+            "n": 128,
+            "median_us": 10214,
+            "max_us": 17302
+          },
+          {
+            "n": 256,
+            "median_us": 19121,
+            "max_us": 28353
+          },
+          {
+            "n": 512,
+            "median_us": 29658,
+            "max_us": 69549
+          },
+          {
+            "n": 768,
+            "median_us": 4737,
+            "max_us": 4737
+          },
+          {
+            "n": 1024,
+            "median_us": 21033,
+            "max_us": 46691
+          },
+          {
+            "n": 2048,
+            "median_us": 47926,
+            "max_us": 152506
+          },
+          {
+            "n": 3072,
+            "median_us": 17095,
+            "max_us": 17095
+          },
+          {
+            "n": 4096,
+            "median_us": 34526.5,
+            "max_us": 53552
+          },
+          {
+            "n": 9216,
+            "median_us": 55008,
+            "max_us": 55008
+          },
+          {
+            "n": 10000,
+            "median_us": 90904.0,
+            "max_us": 141655
+          }
+        ],
+        "common_thread_cpu_measured_cases": 143,
+        "common_thread_cpu_us_before": 2656250,
+        "common_thread_cpu_us_after": 2625000
+      }
+    },
+    {
+      "repetition": 2,
+      "before": {
+        "report": "reports\\paired-gated-main-batch23-2-before.json",
+        "exit_code": 0,
+        "wall_seconds": 4.383252099971287,
+        "peak_working_set_bytes": 425287680
+      },
+      "after": {
+        "report": "reports\\paired-gated-main-batch23-2-after.json",
+        "exit_code": 0,
+        "wall_seconds": 5.121927300002426,
+        "peak_working_set_bytes": 425107456
+      },
+      "comparison": {
+        "before": {
+          "total": 143,
+          "passed": 143,
+          "failed": 0
+        },
+        "after": {
+          "total": 143,
+          "passed": 143,
+          "failed": 0
+        },
+        "common_cases": 143,
+        "common_solve_us_before": 2681820,
+        "common_solve_us_after": 2657190,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 4239,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 36.5,
+            "max_us": 55
+          },
+          {
+            "n": 6,
+            "median_us": 608,
+            "max_us": 608
+          },
+          {
+            "n": 8,
+            "median_us": 22.5,
+            "max_us": 37
+          },
+          {
+            "n": 12,
+            "median_us": 51.0,
+            "max_us": 212
+          },
+          {
+            "n": 16,
+            "median_us": 137.5,
+            "max_us": 658
+          },
+          {
+            "n": 18,
+            "median_us": 967,
+            "max_us": 967
+          },
+          {
+            "n": 32,
+            "median_us": 1250,
+            "max_us": 2370
+          },
+          {
+            "n": 64,
+            "median_us": 3913,
+            "max_us": 6170
+          },
+          {
+            "n": 96,
+            "median_us": 1306,
+            "max_us": 1306
+          },
+          {
+            "n": 128,
+            "median_us": 10405,
+            "max_us": 17607
+          },
+          {
+            "n": 256,
+            "median_us": 18897,
+            "max_us": 28628
+          },
+          {
+            "n": 512,
+            "median_us": 29704,
+            "max_us": 66316
+          },
+          {
+            "n": 768,
+            "median_us": 4418,
+            "max_us": 4418
+          },
+          {
+            "n": 1024,
+            "median_us": 20204,
+            "max_us": 46005
+          },
+          {
+            "n": 2048,
+            "median_us": 45354,
+            "max_us": 144631
+          },
+          {
+            "n": 3072,
+            "median_us": 15557,
+            "max_us": 15557
+          },
+          {
+            "n": 4096,
+            "median_us": 33729.0,
+            "max_us": 53049
+          },
+          {
+            "n": 9216,
+            "median_us": 55234,
+            "max_us": 55234
+          },
+          {
+            "n": 10000,
+            "median_us": 90647.5,
+            "max_us": 144418
+          }
+        ],
+        "common_thread_cpu_measured_cases": 143,
+        "common_thread_cpu_us_before": 2625000,
+        "common_thread_cpu_us_after": 2750000
+      }
+    },
+    {
+      "repetition": 3,
+      "before": {
+        "report": "reports\\paired-gated-main-batch23-3-before.json",
+        "exit_code": 0,
+        "wall_seconds": 4.4320518000167795,
+        "peak_working_set_bytes": 425279488
+      },
+      "after": {
+        "report": "reports\\paired-gated-main-batch23-3-after.json",
+        "exit_code": 0,
+        "wall_seconds": 4.4085571999894455,
+        "peak_working_set_bytes": 425345024
+      },
+      "comparison": {
+        "before": {
+          "total": 143,
+          "passed": 143,
+          "failed": 0
+        },
+        "after": {
+          "total": 143,
+          "passed": 143,
+          "failed": 0
+        },
+        "common_cases": 143,
+        "common_solve_us_before": 2682432,
+        "common_solve_us_after": 2732585,
+        "improved_T": 0,
+        "regressed_T": 0,
+        "improved_peak_at_equal_T": 0,
+        "regressed_peak_at_equal_T": 0,
+        "recovered": [],
+        "lost": [],
+        "model_disagreements": 0,
+        "duplicates": 4239,
+        "scales": [
+          {
+            "n": 3,
+            "median_us": 35.0,
+            "max_us": 51
+          },
+          {
+            "n": 6,
+            "median_us": 611,
+            "max_us": 611
+          },
+          {
+            "n": 8,
+            "median_us": 23.0,
+            "max_us": 38
+          },
+          {
+            "n": 12,
+            "median_us": 52.5,
+            "max_us": 208
+          },
+          {
+            "n": 16,
+            "median_us": 137.0,
+            "max_us": 628
+          },
+          {
+            "n": 18,
+            "median_us": 1191,
+            "max_us": 1191
+          },
+          {
+            "n": 32,
+            "median_us": 1183,
+            "max_us": 2119
+          },
+          {
+            "n": 64,
+            "median_us": 3861,
+            "max_us": 6001
+          },
+          {
+            "n": 96,
+            "median_us": 1371,
+            "max_us": 1371
+          },
+          {
+            "n": 128,
+            "median_us": 10175,
+            "max_us": 16789
+          },
+          {
+            "n": 256,
+            "median_us": 19121,
+            "max_us": 28255
+          },
+          {
+            "n": 512,
+            "median_us": 31225,
+            "max_us": 73650
+          },
+          {
+            "n": 768,
+            "median_us": 4692,
+            "max_us": 4692
+          },
+          {
+            "n": 1024,
+            "median_us": 20280,
+            "max_us": 47705
+          },
+          {
+            "n": 2048,
+            "median_us": 47093,
+            "max_us": 151726
+          },
+          {
+            "n": 3072,
+            "median_us": 15621,
+            "max_us": 15621
+          },
+          {
+            "n": 4096,
+            "median_us": 34891.5,
+            "max_us": 56521
+          },
+          {
+            "n": 9216,
+            "median_us": 53614,
+            "max_us": 53614
+          },
+          {
+            "n": 10000,
+            "median_us": 91168.0,
+            "max_us": 146444
+          }
+        ],
+        "common_thread_cpu_measured_cases": 143,
+        "common_thread_cpu_us_before": 2703125,
+        "common_thread_cpu_us_after": 2718750
+      }
+    }
+  ],
+  "baseline_solution_path": "research\\batch22-instrumented\\solution.cpp",
+  "median_common_solve_us_before": 2682432,
+  "median_common_solve_us_after": 2728553,
+  "median_wall_seconds_before": 4.4320518000167795,
+  "median_wall_seconds_after": 4.645696700026747,
+  "maximum_cli_working_set_bytes": 425345024,
+  "timing_scope": "solve_us: ScheduleCvGraph elapsed wall time, includes OS preemption; thread CPU: Win32 user+kernel time, quantized; wall/working set: full CLI including JSON, witnesses and validation",
+  "exploratory_failures_allowed": false,
+  "median_common_thread_cpu_us_before": 2656250,
+  "median_common_thread_cpu_us_after": 2718750,
+  "current_harness_source_sha256": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+  "baseline_build_provenance": {
+    "scope": "frozen batch22 submission plus identical current local thread-CPU instrumented harness",
+    "compiler": "GCC15.2.0 Release O3 DNDEBUG",
+    "sha256": {
+      "research/batch22-instrumented/solution.cpp": "ef3797e37fe6c776aff134efbaf86dc07237bb358a21b3dac752b935359533ff",
+      "research/batch22-instrumented/aicore_bench.exe": "45be8acab39a255fe248dc1a949329d503c38e6987996109aa66cb82e6b86c46",
+      "src/benchmark.cpp": "eef94f0a2520df79b41744815aa96318d23bdfb8e6faf69ef9ffd65371c833d5",
+      "src/simulator.cpp": "e0934aa4fa379544eb2f8b07ed54a527e8c0b5ef5ab8d281f00c1ad4c7760df8",
+      "research/batch22-instrumented-build/CMakeCache.txt": "c15357a6dd9ce6d774b987824d6079cece8d5c91dcae5c8ab74c971d71f61031"
+    }
+  }
+}

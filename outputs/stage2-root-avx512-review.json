@@ -1,0 +1,110 @@
+{
+  "reviewed_unix": 1791704789.2596445,
+  "passed": true,
+  "actual_small_output_files": 240,
+  "snapshot_files": 36,
+  "performance_records": 60,
+  "negative_pairs": 11,
+  "summaries": [
+    {
+      "n": 6145,
+      "tile": 96,
+      "ratio_of_medians": 0.906972234678172,
+      "median_paired_ratio": 0.9540668026517083,
+      "losses": 2,
+      "paired_ratios": [
+        1.149462255289449,
+        0.9540668026517083,
+        0.9095154229137323,
+        0.7598151963402625,
+        1.01647619163041
+      ]
+    },
+    {
+      "n": 6145,
+      "tile": 128,
+      "ratio_of_medians": 1.2275456058572762,
+      "median_paired_ratio": 1.1597492248925128,
+      "losses": 4,
+      "paired_ratios": [
+        0.78752836236101,
+        1.1127713244022386,
+        1.2443013424505531,
+        1.1597492248925128,
+        1.2630874022317746
+      ]
+    },
+    {
+      "n": 8193,
+      "tile": 96,
+      "ratio_of_medians": 0.939110271384404,
+      "median_paired_ratio": 0.9592257055996265,
+      "losses": 1,
+      "paired_ratios": [
+        0.8153094344412409,
+        0.9617256383831444,
+        0.9592257055996265,
+        1.0471589946061277,
+        0.8607675756992671
+      ]
+    },
+    {
+      "n": 8193,
+      "tile": 128,
+      "ratio_of_medians": 0.9590259381095164,
+      "median_paired_ratio": 0.9636458909493174,
+      "losses": 1,
+      "paired_ratios": [
+        0.9636458909493174,
+        0.9334992585316091,
+        0.9700133815334838,
+        0.9271235251625332,
+        1.025613265057303
+      ]
+    },
+    {
+      "n": 10000,
+      "tile": 96,
+      "ratio_of_medians": 0.998572016219075,
+      "median_paired_ratio": 0.9963389551624846,
+      "losses": 2,
+      "paired_ratios": [
+        0.9421598035030134,
+        1.507264834283405,
+        0.9220430409619599,
+        0.9963389551624846,
+        1.0472852871062284
+      ]
+    },
+    {
+      "n": 10000,
+      "tile": 128,
+      "ratio_of_medians": 0.990755757379176,
+      "median_paired_ratio": 0.9667705530733739,
+      "losses": 1,
+      "paired_ratios": [
+        0.96372164974176,
+        0.9667705530733739,
+        1.0813010785703554,
+        0.996524205084448,
+        0.9584656870586623
+      ]
+    }
+  ],
+  "native": {
+    "passed": true,
+    "gate_rejections": 11,
+    "ieee754_goldens": 16,
+    "guard_page_cases": 1400
+  },
+  "evidence": {
+    "final-manifest.json": "b46fd6aceeeb23bef0d407e7fc8eec1b70e1ba1f4edc2c893b106d51d3ec7b2a",
+    "candidate-manifest.json": "2e7d0e3bbd76e232a6312b7dff17e6bbb3112ec7a994507818673fcdfc6529a6",
+    "candidate-source/snapshot-manifest.json": "52d337293a865649c3fcfbe7090a17d6b4fdd9cec53fa1818dde16c580cb224b",
+    "correctness/report.json": "f991fc0f3ecb4f28edcd266da4fadd99e25f6a8d32b35bd83b5af049e9d98832",
+    "performance/run-plan-v2.json": "06885391858af14b75b3d352eee527131c18532d342917d79249fbca83d0694b",
+    "performance/performance.json": "57afd9a417fbe02be7d6acfee4d8b7c013e4b25c41b4473cd14eb1d4c79e6650"
+  },
+  "scope": "Root reads all240 saved native outputs and actual C reference files including headers; compares full bytes, verifies frozen source/executable evidence, recorded feature gates and CTest terminal log, and independently recomputes every60-trial paired statistic. Large dense original C input/output files independently hashed once; every trial recorded exact hashes and byte comparisons inspected, no repeat execution claimed.",
+  "interpretation": "Optional candidate only:6145/B128 median22.75 percent slower,11/30 pairs regress,10000 median gains below1 percent and one50.73 percent tail regression. Default4f73/AUTO unchanged; no official or universal performance claim."
+}

@@ -1,0 +1,13 @@
+name,n,pass,valid,deadline,T,peak,solve_us,candidates,feasible_candidates,models_equal,duplicate_candidates,attempts,beam_expansions,beam_width,error
+"irregular_consumers_local_k6_ret0_seed20261619",35,1,1,608222,608222,1167,3042,122,2,1,10,132,1336,8,""
+"irregular_consumers_local_k6_ret1_seed20261620",39,1,1,661955,661955,1552,15179,119,1,1,6,125,18566,32,""
+"irregular_consumers_dense_k6_ret0_seed20261629",37,1,1,653857,394512,1651,2762,116,3,1,16,132,1421,8,""
+"irregular_consumers_dense_k6_ret1_seed20261630",40,1,1,687902,687902,1163,11158,109,1,1,16,125,13856,32,""
+"irregular_consumers_global_k6_ret0_seed20261639",39,1,1,783581,783581,1679,3212,117,1,1,8,125,1199,8,""
+"irregular_consumers_global_k6_ret1_seed20261640",38,1,1,636585,636585,1117,2797,118,1,1,7,125,749,8,""
+"irregular_consumers_local_k8_ret0_seed20261819",46,1,1,628875,597714,1385,3368,122,3,1,10,132,1865,8,""
+"irregular_consumers_local_k8_ret1_seed20261820",48,1,1,801514,801514,1102,10897,111,1,1,14,125,13805,32,""
+"irregular_consumers_dense_k8_ret0_seed20261829",43,1,1,786924,786924,1489,3287,117,1,1,10,127,1713,8,""
+"irregular_consumers_dense_k8_ret1_seed20261830",49,1,1,917672,917672,1766,4253,115,1,1,10,125,1420,8,""
+"irregular_consumers_global_k8_ret0_seed20261839",49,1,1,700350,700350,1524,4189,115,1,1,10,125,1513,8,""
+"irregular_consumers_global_k8_ret1_seed20261840",47,1,1,1120227,1120227,2019,3601,115,1,1,10,125,1093,8,""

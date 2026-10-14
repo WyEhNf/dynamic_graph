@@ -1,0 +1,12 @@
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/solution.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/simulator.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/candidate_search.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/aicore_demo.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/aicore_bench.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/aicore_oracle.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/simulator_tests.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/model_tests.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/assignment_tests.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/test.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/edit_cache.dir
+F:/Hackathon/projects/27-aicore-streams/research/batch22-instrumented-build/CMakeFiles/rebuild_cache.dir

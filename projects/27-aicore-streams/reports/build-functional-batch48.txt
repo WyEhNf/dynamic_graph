@@ -1,0 +1,18 @@
+In file included from research/batch48/test_group_template.cpp:1:
+research/batch48/solution.cpp: In function 'std::vector<std::pair<std::vector<int>, long long int> > aicore_detail::direct_consumer_groups(const Graph&, const WorkspaceProjection&, I&, I, bool&)':
+research/batch48/solution.cpp:798:8: error: 'map' is not a member of 'std'
+  798 |   std::map<std::vector<int>,I> grouped;
+      |        ^~~
+research/batch48/solution.cpp:9:1: note: 'std::map' is defined in header '<map>'; this is probably fixable by adding '#include <map>'
+    8 | #include <stdexcept>
+  +++ |+#include <map>
+    9 | #include <tuple>
+research/batch48/solution.cpp:798:28: error: expected primary-expression before ',' token
+  798 |   std::map<std::vector<int>,I> grouped;
+      |                            ^
+research/batch48/solution.cpp:798:30: error: expected primary-expression before '>' token
+  798 |   std::map<std::vector<int>,I> grouped;
+      |                              ^
+research/batch48/solution.cpp:798:32: error: 'grouped' was not declared in this scope
+  798 |   std::map<std::vector<int>,I> grouped;
+      |                                ^~~~~~~

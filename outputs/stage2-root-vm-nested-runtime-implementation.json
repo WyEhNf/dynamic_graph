@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "reviewed_unix": 1791776263.040921,
+  "implementation_manifest_sha256": "43f1fe36fa2a0605e47a8de04035d3a2dfe6cc5a9020c52ab915fc94b365a399",
+  "mirror_files": 178,
+  "changed_baseline_files": [
+    "CMakeLists.txt",
+    "include/cholesky/runtime.hpp",
+    "src/main.cpp",
+    "src/runtime.cpp"
+  ],
+  "diff_hunks": {
+    "CMakeLists.txt": 2,
+    "include/cholesky/runtime.hpp": 1,
+    "src/main.cpp": 3,
+    "src/runtime.cpp": 2
+  },
+  "new_header_sha256": "1955d364a3b097c05e3972ec29fb86c1e9fbed5622294e1b40bcba7894f3bf9d",
+  "planned_selector_observations": 190,
+  "planned_all_C": 624,
+  "planned_all_errors": 56,
+  "planned_all_CLI": 10,
+  "authorization": "Four isolated matching-ABI configure/builds then contracts phase only. Preserve actual failure/raw evidence before repairs. Root audit contracts before complete functional/CTest/UBSan phases.",
+  "scope": "Root reviewed four diffs, stage dispatch/remaining250k/native bypass, twelve selector families/auxiliary boundaries and runner full-byte/C lineage. No build or candidate execution accepted yet. Current fixedMAX counter limitation is historical; components reject sentinelMAX internally. Ordinary/default/N10000/performance unchanged."
+}

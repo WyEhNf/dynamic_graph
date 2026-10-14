@@ -1,0 +1,878 @@
+A Sound and Complete Algorithm for Code Generation
+              in Distance-Based ISA
+                     Shu Sugita                                           Toru Koizumi                                     Ryota Shioya
+            The University of Tokyo                                The University of Tokyo                           The University of Tokyo
+                 Tokyo, Japan                                           Tokyo, Japan                                       Tokyo, Japan
+           sugita@mtl.t.u-tokyo.ac.jp                            koizumi@mtl.t.u-tokyo.ac.jp                         shioya@ci.i.u-tokyo.ac.jp
+
+                                             Hidetsugu Irie                                         Shuichi Sakai
+                                        The University of Tokyo                                The University of Tokyo
+                                             Tokyo, Japan                                           Tokyo, Japan
+                                        irie@mtl.t.u-tokyo.ac.jp                              sakai@mtl.t.u-tokyo.ac.jp
+
+Abstract                                                                                  ACM Reference Format:
+The single-thread performance of a processor core is es-                                  Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi
+                                                                                          Sakai. 2023. A Sound and Complete Algorithm for Code Generation
+sential even in the multicore era. However, increasing the
+                                                                                          in Distance-Based ISA. In Proceedings of the 32nd ACM SIGPLAN
+processing width of a core to improve the single-thread                                   International Conference on Compiler Construction (CC ’23), Febru-
+performance leads to a super-linear increase in power con-                                ary 25–26, 2023, Montréal, QC, Canada. ACM, New York, NY, USA,
+sumption. To overcome this power consumption issue, an                                    12 pages. https://doi.org/10.1145/3578360.3580263
+instruction set architecture for general-purpose processors,
+called STRAIGHT, has been proposed. STRAIGHT adopts
+a distance-based ISA, in which source operands are speci-                                 1    Introduction
+fied by the distance between instructions. In STRAIGHT, it                                The single-thread performance for executing sequential por-
+is necessary to satisfy constraints on the distance used as                               tions of a program is a crucial factor for a processor core,
+operands to generate executable code. However, it is not yet                              even in the multicore era [19, 21]. This is because the speedup
+clear how to generate code that satisfies these constraints in                            from a parallel execution is limited by sequential portions
+the general case. In this paper, we propose three compiling                               of the program, as Amdahl’s law suggests. As a result, mod-
+techniques for STRAIGHT code generation and prove that                                    ern processors extract more instruction-level parallelism to
+our techniques can reliably generate code that satisfies the                              improve their single-thread performance by increasing the
+distance constraints. We implemented the proposed method                                  processing width of a core and the size of the scheduling
+on a compiler and evaluated benchmark programs compiled                                   window [12, 31].
+with it through simulation. The evaluation results showed                                    However, increasing the processing width can lead to a
+that the proposed method works in all cases, including con-                               super-linear increase in power consumption. One of the units
+ditions where the number of registers is small and existing                               that cause such an increase is a renaming unit. This unit has
+methods fail to generate code.                                                            a table called a register map table (RMT) to remove false de-
+                                                                                          pendencies between instructions. The RMT needs the circuit
+CCS Concepts: • Software and its engineering → Com-                                       area and power consumption in proportion to the square of
+pilers; • Computer systems organization → Superscalar                                     the processing width. Thus, the RMT causes the super-linear
+architectures.                                                                            increase in circuit area and power consumption [32, 33].
+Keywords: compiler, code generation, instruction set archi-                                  To address this power consumption issue, an instruction
+tecture, instruction-level parallelism                                                    set architecture (ISA) that does not require register renaming,
+                                                                                          called STRAIGHT, has been proposed [23]. STRAIGHT has
+Permission to make digital or hard copies of all or part of this work for                 a register file like a ring buffer in which the results of each
+personal or classroom use is granted without fee provided that copies                     instruction are sequentially written. Each instruction refers
+are not made or distributed for profit or commercial advantage and that
+copies bear this notice and the full citation on the first page. Copyrights               to the source operands by the distance between instructions,
+for components of this work owned by others than the author(s) must                       as shown in Figure 1. This value used to specify operands
+be honored. Abstracting with credit is permitted. To copy otherwise, or                   is called reference distance or simply distance. Owing to this
+republish, to post on servers or to redistribute to lists, requires prior specific        instruction format, STRAIGHT has no false dependencies
+permission and/or a fee. Request permissions from permissions@acm.org.                    even without register renaming. As a result, STRAIGHT
+CC ’23, February 25–26, 2023, Montréal, QC, Canada
+                                                                                          processors do not require a renaming unit, which increases
+© 2023 Copyright held by the owner/author(s). Publication rights licensed
+to ACM.                                                                                   power consumption super-linearly with processing width,
+ACM ISBN 979-8-4007-0088-0/23/02. . . $15.00                                              thus allowing for larger processing width than conventional
+https://doi.org/10.1145/3578360.3580263                                                   RISC processors [28].
+
+
+
+                                                                                     73
+CC ’23, February 25–26, 2023, Montréal, QC, Canada                       Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi Sakai
+
+
+                Phys. Registers
+                                    Instructions                          2     STRAIGHT Architecture
+                 (Ring Buffer)
+                                                                          2.1   STRAIGHT Instruction Set Architecture
+                       1            addi   [0], 1                        STRAIGHT is an ISA that specifies the source operands by
+                       ⁝             ⁝                                   the distance between instructions, not by the logical register
+                        8           add    [1], [2]
+                                                                         numbers [22, 23]. In STRAIGHT, each instruction specifies
+                                                                         its source operand by pointing to the producer instruction,
+                       13           add    [1], [2]
+                       21           add    [1], [2]
+                                                                         as “use the result of the 𝑛-th previous instruction.” This value
+                                                                         𝑛 used to specify an operand is called distance. The distance
+                       ⁝             ⁝
+                                                                         must be less than an upper limit specified in the ISA specifi-
+                                                                         cation. This upper limit is called maximum reference distance,
+Figure 1. Register usage and assembly codes in STRAIGHT                  which is an architecture-specific parameter of STRAIGHT.
+architecture. In assembly representation, square brackets                   Utilizing the maximum reference distance, STRAIGHT
+are used to indicate inter-instruction distances ([0] is zero            removes register renaming, which causes a super-linear in-
+register). Each destination register is allocated consecutively          crease in power consumption with a processing width of
+as a ring buffer.                                                        a processor core. Due to the constraint on the maximum
+                                                                         reference distance, registers are no longer referenced after
+                                                                         a certain time in STRAIGHT. STRAIGHT has a ring buffer,
+                                                                         where the result of instructions are written sequentially to
+   STRAIGHT compilers must generate code that satisfies
+                                                                         these unreferenced registers (Figure 1). Since STRAIGHT as-
+distance-related constraints, but an algorithm that can gen-
+                                                                         sures to overwrite only out-of-life registers, it does not cause
+erate such codes in general cases is not yet clear. Since
+                                                                         any false dependencies between instructions. The position of
+STRAIGHT uses the distance to specify source operands,
+                                                                         the source operand on the ring buffer can be determined by
+STRAIGHT code has two distance constraints: 1) The ref-
+                                                                         simply adding the distance to its head point, eliminating the
+erence distance is statically determined regardless of the
+                                                                         complex logic required for conventional register renaming.
+execution path. 2) The reference distance must be less than
+                                                                            The instruction representation of STRAIGHT is similar
+an upper limit specified in the ISA specification. Existing
+                                                                         to the static single-assignment (SSA) form [5, 16, 30] in that
+STRAIGHT compilers resolve these constraints by using an
+                                                                         there is no overwriting. The SSA form is a program repre-
+ad hoc algorithm on the premise that there are sufficient reg-
+                                                                         sentation in which all variables are assigned precisely once.
+isters [23, 26]. However, we found that without this premise,
+                                                                         Because this representation is compatible with the write-
+these compilers cannot generate executable code that cor-
+                                                                         once manner of register usage in STRAIGHT, STRAIGHT
+rectly satisfies the constraints.
+                                                                         compilers [4, 23, 26] uses the SSA form as an intermediate
+   In this paper, we propose a code generation algorithm for
+                                                                         representation.
+STRAIGHT that resolves the distance constraints in the gen-
+eral case. Our proposed algorithm consists of the following               2.2   Distance Constraints in Code Generation
+three processes. (1) The first is a novel spilling technique. Our
+                                                                          In STRAIGHT, it is necessary to use different code generation
+technique appropriately limits the number of live variables
+                                                                          techniques than in conventional RISCs due to the distance-
+and ensures that the subsequent processes can generate code
+                                                                          related constraints. Conventional RISCs use a logical register
+that satisfies the distance constraints without additional spill
+                                                                          number to specify the source operands. On the other hand,
+code. (2) The second is a novel technique in SSA destruction,
+                                                                          STRAIGHT uses a distance between instructions, which is
+which converts a program from an intermediate representa-
+                                                                          a relative value. This value can be easily changed when
+tion to a distance-based form. Our SSA destruction technique
+                                                                          inserting or relocating instructions to satisfy the constraint.
+reliably and efficiently replaces 𝜙-functions with move in-
+                                                                          For this reason, it is challenging to determine the placement
+structions by combining existing methods. (3) The third is a
+                                                                          of each instruction individually.
+novel technique in move insertion, which resolves the dis-
+                                                                             A STRAIGHT compiler needs to generate machine codes
+tance constraints. This process generally generates codes
+                                                                          to satisfy the following two distance constraints:
+that satisfy distance constraints with fewer move instruc-
+tions.                                                                        1. The source operands of each instruction must exist at
+   We implemented the proposed algorithm on an existing                          the same distance for all execution paths.
+STRAIGHT compiler [4] and evaluated benchmark programs                        2. The distance of each source operand must be no longer
+compiled with it through simulation. The evaluation results                      than the maximum reference distance.
+show that the proposed method can generate code even un-                     To resolve these distance constraints, a STRAIGHT com-
+der conditions that the existing compiler cannot. Moreover,               piler inserts move instructions to copy variables and nop in-
+the results show that our techniques reduce the number of                 structions to adjust distances. These instructions, which are
+move instructions for satisfying the distance constraints.                not directly related to the execution of the program, usually
+
+
+
+                                                                    74
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA                     CC ’23, February 25–26, 2023, Montréal, QC, Canada
+
+
+do not affect performance. However, an excessive insertion                 3.1   Spill Code Generation
+of them may have a negative impact. Therefore, a STRAIGHT                  Spill code generation is the process of spilling variables so
+compiler aims to convert programs to the STRAIGHT form                     that all live variables can be assigned to available registers [8,
+with as few additional instructions as possible. We describe               10, 13]. In this process, an excessive insertion of spill codes
+existing methods for resolving distance constraints in Sec-                diminishes the execution speed. Thus, spill code generation
+tion 3.                                                                    aims to minimize the execution of spill codes while ensuring
+                                                                           that all live variables can be assigned to available registers
+2.3     Distance-Based Calling Convention                                  without further spilling.
+STRAIGHT has distance-based calling conventions. In con-                       However, minimizing the number of spill codes is a chal-
+ventional RISCs, arguments and return values are passed                    lenging task for a STRAIGHT compiler. This is because the
+between functions by placing them on specific logical regis-               condition in which all live variables can be assigned is more
+ters. However, STRAIGHT cannot use similar conventions                     intricate in STRAIGHT than in conventional RISCs. In con-
+due to the lack of named general-purpose registers.                        ventional RISCs, the number of allocatable variables corre-
+   STRAIGHT uses a relative distance from a function call                  sponds exactly to the number of logical registers because
+and return (jal and ret) to pass arguments and return val-                 it is sufficient for each variable to exist in one register. On
+ues. Concretely, STRAIGHT uses a calling convention where                  the contrary, in STRAIGHT, the number of allocatable vari-
+the previous instruction of a function call produces the first             ables does not always correspond to the maximum reference
+argument, the second previous instruction produces the sec-                distance. This is for two reasons: (1) A single value often ex-
+ond argument, and so on. The producers of return values are                ists simultaneously at multiple referable distances to satisfy
+also placed similarly to those of arguments.                               the distance constraints. (2) A store instruction consumes a
+   Saving contexts across a function call also needs a distance-           register and increases other reference distances. Thus, more
+based convention for STRAIGHT. Since a distance across a                   registers can be consumed than the number of live variables
+function call is generally undetermined, it is impossible to               at each program point. As a result, we cannot easily check
+reference a variable across a function call by distance. Con-              whether a program needs spill code even if the number of
+sequently, all general-purpose registers in STRAIGHT are                   variables is less than that of referable registers at every pro-
+caller-preserved. However, the lack of callee-saved regis-                 gram point. In fact, we found that the existing STRAIGHT
+ters leads to performance degradation in frequent calls of                 compiler [4] did not spill; thus, it failed to compile a program
+leaf procedures. For this reason, a distance-based callee-save             when it needed spill code to resolve the distance constraints.
+convention is proposed [26]. This method adds additional
+arguments and returns values to each function, which are
+                                                                           3.2   SSA Destruction
+used as callee-saved values.
+                                                                           SSA destruction is the process of converting a program
+                                                                           from the SSA form to an executable form by eliminating
+3      Challenges of SSA-Based Compiler for                                𝜙-functions [9, 18]. The 𝜙-function is a statement used to
+       STRAIGHT                                                            merge different variables of the predecessor blocks. Since 𝜙-
+In constructing a compiler for STRAIGHT ISA, there are the                 functions are not implemented as machine code, a compiler
+following three challenges:                                                needs to replace them with move instructions during SSA
+                                                                           destruction.
+      1. Because the condition under which all variables can
+                                                                              In STRAIGHT, 𝜙-functions are used as markers to merge
+         be assigned to available registers without spilling is
+                                                                           references, whose distances differ with the execution path.
+         more complex than in conventional RISC, there is no
+                                                                           A conventional RISC compiler eliminates 𝜙-functions by as-
+         clear policy for the insertion of spill code.
+                                                                           signing different variables to the same register. In contrast,
+      2. There is no efficient and certain technique for match-
+                                                                           a STRAIGHT compiler eliminates 𝜙-functions by placing
+         ing reference distances of different execution paths
+                                                                           the variables at the same distance from the join block. The
+         within the maximum reference distance.
+                                                                           reference distance may differ for different execution paths,
+      3. Even when the condition that a program can be trans-
+                                                                           even when referencing the same variable. For this reason,
+         lated into STRAIGHT code without further spilling is
+                                                                           the STRAIGHT compiler adds 𝜙-functions for all live vari-
+         met, it is difficult to keep all the reference distances
+                                                                           ables to each join block before code generation as shown in
+         within the maximum reference distance.
+                                                                           Figure 2 (a).
+   These challenges are related to each of the three compiling                Distance fixing [23] is a naïve method of SSA destruction
+processes in STRAIGHT: spill code generation, SSA destruc-                 in STRAIGHT. This method eliminates 𝜙-functions to copy
+tion, and move insertion. This section summarizes existing                 live variables in a common order at the end of each pre-
+compiler techniques and their limitations that we found for                decessor block (Figure 2 (b)). The region where these copy
+each process.                                                              instructions exist is called a fixed region, where the positions
+
+
+
+                                                                     75
+CC ’23, February 25–26, 2023, Montréal, QC, Canada                              Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi Sakai
+
+
+                         %1 = ...                                    %1 = ...                                                    %a = ...
+                         br   ...                                    br ...                                                      br ...
+
+                                                     .if                        .else                          .if                           .else
+        .if                         .else
+                                                     %2 = ...
+        %2 = ...                                     (3 instructions)                %4 = ...                   %2 = ...
+                                    %4 = ...
+        (3 instructions)                             %3 = (use %2)                   %5 = (use %4)              (3 instructions)                 (4 x nop)
+                                    %5 = (use %4)
+        %3 = (use %2)                                %a = move %1                    %a = move %1               %c = (use %2)                    %c = ...
+        j    .join                                   %b = move %2                    %b = move %2               %b = move %2                     %b = (use %c)
+                                                     %c = move %3                    %c = move %3               j    .join                       nop
+                                                     j    .join                      nop
+                 .join
+                                                             .join                                                       .join
+                     %a = phi(%1, %1)                                   (%a → [4])                                                 (%a → [9])
+                     %b = phi(%2, %5)                                   (%b → [3])                                                 (%b → [2])
+                     %c = phi(%3, %4)                                   (%c → [2])                                                 (%c → [3])
+
+                   (a) SSA program                     (b) Result by the naïve method                          (c) Result by the reordering method
+
+ Figure 2. SSA destruction in STRAIGHT. In this figure, square brackets are used to indicate distances from the join point.
+
+of instructions are fixed in subsequent processes. Thus, this                     pred block           adjusting block
+
+process ensures that each variable can be referenced by a                            A   B    C Jmp    B3 A5 C4
+                                                                                                                                 infinite loop
+static distance regardless of an execution path.                                                       A4 B4 A2 C5
+   Because the distance fixing inserts many redundant in-
+                                                                                                       C2 A5 B5 A2 C4
+structions, an optimizing technique by reordering instruc-                        (a) naïve solution
+tions is proposed [26]. This technique is hereafter called                                             A4 C3 A2 B6 A2 C4                         instruction in the fixed region
+
+the reordering method. The reordering method determines                                                B3 A5 C4 A2 B4 A2 C4                 Xn instruction with
+                                                                                                                                               result X and reference distance n
+the positions of inserting move instructions to consider de-
+pendencies between variables. It minimizes the number of                          (b) optimal solution A4 B4 C4 B2 A4 C3                    Xn reference that exceeds
+                                                                                                                                               the maximum reference distance
+move instructions by solving a feedback arc set problem [35].
+Meanwhile, it has a disadvantage that the maximum ref-                           Figure 3. Example of move insertion where the maximum
+erence distance constraint may not be met because each                           reference distance is 4. (a) a naïve solution that causes an
+instruction is adjusted to a distant position by inserting nop                   infinite loop (b) an optimal solution that results in 3 move
+instructions (Figure 2 (c)).                                                     instructions
+   However, these two existing methods do not balance cer-
+tainty and efficiency. The naïve method can reliably translate
+from SSA form but requires many redundant move instruc-
+                                                                                     However, the distance bounding may insert many redun-
+tions. On the contrary, the reordering method is more ef-
+                                                                                 dant instructions. Moreover, we found that it does not work
+ficient but less certain since it cannot generate executable
+                                                                                 in the worst cases, as shown in Figure 3. The inserted move in-
+code in case the reference distance of a 𝜙-function exceeds
+                                                                                 struction extends the distance of references across it. Hence,
+the maximum reference distance.
+                                                                                 it is challenging to satisfy the constraint on the maximum
+                                                                                 reference distance for all instructions in an ad hoc manner.
+3.3   Move Insertion
+Move insertion is the process of splitting a live range of each                  4        Proposed Method
+variable [15]. In STRAIGHT, instructions that can reference
+                                                                                 4.1         Overview
+a variable are limited to be within a maximum reference
+distance from that variable. Thus, splitting a wide live range                   To address the challenges described in Section 3, we propose
+is directly related to the maximum reference distance con-                       a novel compiler algorithm comprising of the following three
+straint. For this reason, move insertion is an essential process                 techniques:
+in STRAIGHT to generate executable code.                                                 1. Spilling technique that ensures that there exists a way
+   Distance bounding [23] is the only move insertion tech-                                  to insert moves to generate executable codes.
+nique that has ever been proposed. This method inserts move                              2. SSA destruction technique that minimizes the number
+instructions to split distances in the following way:                                       of move instructions at various maximum reference
+Step 1) Find a reference whose distance exceeds the maxi-                                   distances
+        mum reference distance. If not found, end the pro-                               3. Move insertion technique that ensures to resolve the
+        cess.                                                                               maximum reference distance constraint after applying
+Step 2) Add a move instruction at the maximum possible dis-                                 our spilling technique
+        tance from the consumer for relaying the reference                       These processes are executed in the compilation flow shown
+        found in Step 1. Then, go back to Step 1.                                in Algorithm 1.
+
+
+
+                                                                           76
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA                        CC ’23, February 25–26, 2023, Montréal, QC, Canada
+
+
+ Algorithm 1: Proposed Compilation Flow                                         • The maximum reference distance is denoted by 𝑙.
+     Definition : 𝑓 is a function in SSA form                                   • The two terms variable and place are used as follows.
+                  𝑙 is max referable length                                       – A variable represents the unique value in an SSA-
+     Require    : 𝑓 has no loop (for simplicity).                                   form program.
+                                                                                  – A place represents the unique position of a register
+ 1 Function StraightCodeGen(𝑓 , 𝑙):
+ 2    SpillCodeGen(𝑓 , 𝑙)                       ▶ Section 4.2                       occupied by an instruction in a distance-based form.
+ 3    foreach join point 𝒑 in the execution order of 𝑓 do                       • The sequence of results of instructions within the max-
+ 4        SSADestruction(𝑝, 𝑙)                  ▶ Section 4.3                     imum reference distance is called a context.
+ 5        foreach unfixed path 𝒖 before 𝑝 do                                      – The value located at the oldest place within a context
+ 6            MoveInsertion(𝑢, 𝑙)               ▶ Section 4.4                       is designated as oldest value.
+ 7            𝑢.setFixed()                                                        – Within a context, a value that is not subsequently
+                                                                                    referenced is called a dead value, and the place of a
+ 8       foreach unfixed path 𝒖 do                                                  dead value is called a dead place1 .
+ 9           MoveInsertion(𝑢, 𝑙)              // for calling conv.              • A program is said to be assignable if it can be trans-
+10 Function MoveInsertion(𝑢, 𝑙):                                                  lated into STRAIGHT form by inserting only move
+11    RelayingVariable(𝑢, 𝑙)                        ▶ Section 4.4.1               instructions.
+12    SortingVariable(𝑢, 𝑙)                         ▶ Section 4.4.2           To make a program assignable, it must satisfy the follow-
+                                                                           ing two properties:
+                                                                               1. At each program point, all live variables are still refer-
+   This division of the compilation processes in STRAIGHT                         able when the next instruction is executed.
+is general to distance-based ISAs, not specific to STRAIGHT                    2. At each join point, the place of each live value can be
+ISA. This is for the following two reasons:                                       matched in every predecessor block.
+    1. Since inserting spill code affects other reference dis-             To show the conditions to satisfy the above properties, we
+       tances, it is difficult to perform spilling simultaneously          first prove Lemma 1.
+       with the other two processes.
+                                                                           Lemma 1. If at least one dead place exists in the context,
+    2. The maximum reference distance constraint can only
+                                                                           live values can be arbitrarily reordered by inserting only move
+       be resolved once the reference distance is statically
+                                                                           instructions.
+       determined by SSA destruction.
+In the case of a distance-based ISA where store instructions               Proof. With a dead place 𝑒, any two live values 𝑥, 𝑦 can be
+do not affect other reference distances, the spilling process              swapped with 2𝑙 move instructions in the following process.
+could be executed concurrently with the other processes.                       1. Let 𝑥 be the older value among 𝑥 and 𝑦.
+However, such a distance-based ISA requires a more complex                     2. Insert first 𝑙 move instructions:
+hardware implementation than STRAIGHT ISA.                                        • If 𝑒 is the oldest place, insert a move instruction
+   Our proposed algorithm uses SSA form as the compiler                             to copy 𝑥. The result of the inserted instruction is
+representation because this representation is compatible                            denoted by 𝑥𝑒 .
+with the write-once manner of register usage in STRAIGHT.                         • Otherwise, insert move instructions to copy the value
+Our techniques can be applied to STRAIGHT compilers that                            at the oldest place.
+use other compiler representations, but a process of conver-                   3. Insert last 𝑙 move instructions:
+sion to a single-assignment representation is additionally                        • If 𝑥 is located at the oldest place, insert a move in-
+required for code generation.                                                       struction to copy 𝑦.
+                                                                                  • If 𝑦 is located at the oldest place, insert a move in-
+4.2     Spill Code Generation                                                       struction to copy 𝑥𝑒 .
+The existing STRAIGHT compilers cannot generate code                              • Otherwise, insert move instructions to copy the value
+when its input program cannot satisfy the distance con-                             at the oldest place.
+straints without spill codes. In such cases, the compiler needs            Repeating this swap procedure enables reordering live values
+to spill variables to satisfy the constraints.                             in an arbitrary order.                                       □
+   To deal with this situation, we propose a spilling technique
+for STRAIGHT to satisfy the distance constraints. First, we                  From Lemma 1, we obtain Theorem 2, which shows the
+consider a condition for satisfying the distance constraints               sufficient condition to make a program assignable.
+without spill codes. Then, we propose a spilling technique                 1 Note that the dead place is not always synonymous with the place of a
+to minimize spill codes using the condition that we obtain.                dead variable. This is because when a live variable has multiple occurrences
+   Before a detailed explanation, we introduce some terms                  within a context, only the most recent value will be referenced by subsequent
+and notations that help to describe our method.                            instructions.
+
+
+
+
+                                                                      77
+CC ’23, February 25–26, 2023, Montréal, QC, Canada                     Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi Sakai
+
+
+Theorem 2. A program is assignable if the number of live                the number of move instructions by applying the reordering
+variables is less than 𝑙 at any program point.                          method as much as possible.
+Proof. When the number of live variables is less than 𝑙 at              4.4   Move Insertion
+every program point, at least one dead place exists in context.
+                                                                       STRAIGHT compiler inserts move instructions to satisfy dis-
+Hence, using Lemma 1, we can show the following:
+                                                                       tance constraints. However, existing methods are ad hoc and
+   1. All live variables are still referable when the next in-         thus insert many redundant move instructions. Furthermore,
+      struction is executed by reordering the context so that          code generation fails in the worst case due to a failure to
+      the oldest place is a dead place.                                satisfy the constraints. This is because adding move instruc-
+   2. The position of each live value can be matched in every          tions to resolve the constraint may prevent satisfying the
+      predecessor block by reordering the corresponding                constraint as a whole by extending the distance of other
+      variables in a common order.                                     references.
+However, a program with at most 𝑛 live variables is not al-               Our proposed method generates efficient code in the gen-
+ways assignable. When there are only 𝑛 𝜙-functions at a join           eral case through two processes: relaying variables and sort-
+block, the predecessors of the join block are not assignable           ing variables. This two-phase method is based on our obser-
+because a jump instruction occupies a register.             □          vation that the purpose of move insertion can be divided
+                                                                       into two:
+   Using Theorem 2, we can show that spill code generation
+of distance-based ISA can be implemented with conventional                 1. For relaying variables that cannot be referenced di-
+allocation techniques [10, 13, 18, 29, 34] by limiting the num-               rectly due to their long live range.
+ber of live variables to 𝑙 − 1 at any program point. Although              2. For sorting variables to a specific order that is deter-
+inserting a load/store instruction might increase the refer-                  mined by the result of SSA destruction or calling con-
+ence distance of following instructions, it does not affect the               ventions.
+condition of Theorem 2 because the place occupied by that              We describe the method of relaying variables in Section 4.4.1
+instruction becomes dead immediately after its execution.              and sorting variables in Section 4.4.2.
+
+4.3   SSA Destruction                                                   4.4.1 Relaying Variables. Relaying variables is the pro-
+                                                                        cess of inserting move instructions to relay a variable with a
+Two SSA destruction methods are proposed for STRAIGHT
+                                                                        long live range due to the constraint on the maximum refer-
+compilers, as described in Section 3.2. However, there is no
+                                                                        ence distance. The insert position of such relay instructions
+method that balances certainty and code quality. The naïve
+                                                                        should be as far from the producer as possible. This is be-
+method can reliably eliminate 𝜙-functions but often inserts
+                                                                        cause the live range can be covered with fewer instructions
+redundant move instructions. The reordering method in-
+                                                                        if the reference distance of relaying instructions is longer.
+serts fewer move instructions but does not reliably generate
+                                                                            Our proposed method inserts move instructions so that
+STRAIGHT codes.
+                                                                        the variable is always relayed at the maximum distance. The
+   Our proposed technique is a technique that combines two
+                                                                        detailed algorithm for relaying variables is as follows.
+existing methods by incrementally changing which method
+to use for each 𝜙-function. This technique provides reliable                 • For each instruction 𝐼 in execution order
+and efficient SSA destruction for any conditions of maximum                   1. Insert a move instruction of the oldest variable im-
+reference distance.                                                              mediately before 𝐼 until the oldest variable is dead.
+   Our technique decides which of the existing methods to                     2. Fix the position of the instruction 𝐼 .
+apply for each 𝜙-function in the following way:                         Since each inserted move instruction always targets the old-
+Step 1) Let 𝑅 be the set of all 𝜙-functions and let 𝑆 be an             est variable, it references at the maximum reference distance.
+         empty set.                                                     Therefore, this method is optimal in the number of additional
+Step 2) Apply the reordering method to 𝑅 and the naïve                  instructions to relay variables.
+         method to 𝑆.                                                  4.4.2 Sorting Variables. Sorting variables is the process
+Step 3) If there are no 𝜙-functions whose reference distance           of inserting move instructions so that live variables match a
+         exceeds the maximum reference distance, end the               specific order at the end of the path. This order is defined by
+         process.                                                      the result of SSA destruction or calling conventions. In this
+Step 4) Otherwise, remove the 𝜙-function that has the most             case, it is sometimes more efficient to insert move instruc-
+         distant references from 𝑅 and add it to 𝑆. After that,        tions whose reference distance is not the maximum reference
+         restore the order of instructions and go to Step 2.           distance. For this reason, the existing method often inserts
+Even in the worst case, this algorithm ensures obtaining the           many redundant instructions.
+same result as the naïve method. Thus, the certainty of SSA               We design an algorithm that can reliably sort variables
+destruction is guaranteed. Moreover, our method can reduce             with an optimal number of instructions in the general case.
+
+
+
+                                                                  78
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA                               CC ’23, February 25–26, 2023, Montréal, QC, Canada
+
+
+Before going into detail, we first set up the problem to solve.                   Algorithm 2: Move insertion for sorting variable
+We introduce the following definitions:                                               Definition : 𝑢 is the path to insert move instructions
+    • The integer 𝑛 denotes the number of variables to sort.                                       𝑙 is the max referable length
+       – The 𝑖-th variable is denoted by 𝑣𝑖 .                                    1 Function SortingVariable(𝑢, 𝑙):
+    • Define the position of variables 𝜏 before sorting as                       2    𝜏 ← the position of variables before sorting
+       follows.                                                                  3    𝜋 ← the position of variables after sorting
+       – Let 𝑎 1, . . . , 𝑎𝑙 be the context before sorting.                      4    𝑑 ∗ ← minimum non-negative integer 𝑑 satisfied
+       – Define 𝜏 by setting 𝜏 (𝑖) = arg max 𝑗 {𝑣𝑖 = 𝑎 𝑗 }2 .                           𝑓 (𝜏, 𝜋, 𝑑) ≤ 𝑑
+    • Define the position of variables 𝜋 after sorting as fol-                   5    RecursiveInsertion(𝑢, 𝜏, 𝜋, 𝑑 ∗ )
+       lows.                                                                     6    Function RecursiveInsertion(𝑢, 𝜏, 𝜋, 𝑑 ∗ ):
+       – Let 𝑏 1, . . . , 𝑏𝑚 be the sequence of variables to be sat-             7       if 𝑑 ∗ > 0 nthen
+          isfied after sorting, where 𝑛 ≤ 𝑚 < 𝑙.                                                          𝜋 (𝑖 ) −𝜏 (𝑖 )+𝑑 ∗ +𝑙       𝜋 (𝑖 )+𝑑 ∗ −1
+                                                                                                        l        m l                                  mo
+                                                                                  8            𝑆← 𝑖                               ≠                        (≠ ∅)
+       – Define 𝜋 by setting 𝜋 (𝑖) = arg min 𝑗 {𝑣𝑖 = 𝑏 𝑗 }3 .                                                       𝑙                       𝑙
+                                                                                  9            𝑗 ← arg min𝑖 ∈𝑆 {𝜏 (𝑖)}
+   First, we consider a lower bound on the number of move                        10            Insert a move of 𝑥 𝑗 after the end of 𝑢
+instructions required for sorting. When a consumer refers                        11            Update the context 𝜏 to 𝜏 ′ by
+to a producer at a distance x, at least ⌈𝑥/𝑙⌉ − 1 move in-                                                
+                                                                                                             𝑙                  (𝑖 = 𝑗)
+                                                                                                   ′
+                                                                                                 𝜏 (𝑖) ←
+structions are required between them. Now, suppose that                                                      𝜏 (𝑖) − 1 (> 1) (𝑖 ≠ 𝑗)
+sorting is completed by insertion of 𝑑 move instructions.                        12            RecursiveInsertion(𝑢, 𝜏 ′, 𝜋, 𝑑 ∗ − 1)
+Thus, the distance between the producer and the consumer
+of 𝑥𝑖 is 𝜋 (𝑖) − 𝜏 (𝑖) + 𝑙 + 𝑑. Let 𝑓 (𝜏, 𝜋, 𝑑) be the summation of
+the minimum number of required move instructions for all
+variables:                                                                       Proof. Suppose that there does not exist an 𝑖 satisfying equa-
+                                ∑︁  𝜋 (𝑖) − 𝜏 (𝑖) + 𝑑                          tion 3. Hence,
+                𝑓 (𝜏, 𝜋, 𝑑) =                            .       (1)                                        ∑︁  𝜋 (𝑖) + 𝑑 ∗ − 1    
+                                             𝑙
+                                  𝑖                                                        𝑓 (𝜏, 𝜋, 𝑑 ∗ ) =                         −1 .    (4)
+If 𝑓 (𝜏, 𝜋, 𝑑) > 𝑑, sorting by inserting 𝑑 move instructions                                                 𝑖
+                                                                                                                         𝑙
+is obviously impossible. Now, we call 𝑑 ∗ the smallest non-                         Now, define 𝑟 by 𝑟 = 𝑑 ∗ mod 𝑙. In the case where 𝑟 = 0,
+negative integer 𝑑 satisfying 𝑓 (𝜏, 𝜋, 𝑑) ≤ 𝑑. The integer 𝑑 ∗ is                𝑓 (𝜏, 𝜋, 𝑑 ∗ ) < 𝑑 ∗ . This contradicts the result of Lemma 3.
+a lower bound for the number of move instructions required                          Next, consider the case in which 𝑟 ≠ 0. Let 𝑇 be the set
+for sorting.
+                                                                                                              𝜋 (𝑖) + 𝑑 ∗ − 1
+                                                                                                                              ∗ 
+   Algorithm 2 shows our proposed algorithm for sorting                                                                          𝑑
+                                                                                                  𝑇 = 𝑖                        ≠       .        (5)
+variables with 𝑑 ∗ move instructions. To show that this algo-                                                        𝑙            𝑙
+rithm always works, we prove Theorem 6 through Lemmas                            Then, by using |𝑇 | < 𝑟 ≤ 𝑑 ∗ , we see that
+3, 4, and 5.
+                                                                                                     𝑓 (𝜏, 𝜋, |𝑇 |) ≤ 𝑓 (𝜏, 𝜋, 𝑟 ) = |𝑇 |.                         (6)
+Lemma 3. Let 𝑑 ∗ be the minimum non-negative integer 𝑑
+satisfying 𝑓 (𝜏, 𝜋, 𝑑) ≤ 𝑑. Then                                                 This contradicts that 𝑑 ∗ is the minimum non-negative integer
+                                                                                 𝑑 satisfying 𝑓 (𝜏, 𝜋, 𝑑) ≤ 𝑑.                                                      □
+                          𝑓 (𝜏, 𝜋, 𝑑 ∗ ) = 𝑑 ∗ .                     (2)
+                                                                                 Lemma 5. In Algorithm 2, RecursiveInsertion(𝑢, 𝜏, 𝜋, 𝑑 ∗ )
+Proof. Let 𝑔(𝑑) = 𝑓 (𝜏, 𝜋, 𝑑) − 𝑑. 𝑔(𝑑) has three properties:
+                                                                                 is always called with the condition that 𝑑 ∗ is the minimum
+   1. 𝑔(0) ≥ 0.                                                                  non-negative integer 𝑑 satisfying 𝑓 (𝜏, 𝜋, 𝑑) ≤ 𝑑.
+   2. For any non-negative integer 𝑑, 𝑔(𝑑 +𝑙) −𝑔(𝑑) = 𝑛−𝑙 <
+      0.                                                                         Proof. It clearly satisfies the condition when it is first called;
+   3. For any non-negative integer 𝑑, 𝑔(𝑑 + 1) − 𝑔(𝑑) = −1                       thus, we prove that 𝑑 ∗ − 1 is the minimum non-negative
+      if 𝑔(𝑑 + 1) − 𝑔(𝑑) < 0.                                                    integer 𝑑 satisfying 𝑓 (𝜏 ′, 𝜋, 𝑑) ≤ 𝑑 in a recursive call.
+Using these properties, we can obtain the conclusion.         □                     Consider the difference of 𝑓 (𝜏, 𝜋, 𝑑 ∗ ) and 𝑓 (𝜏 ′, 𝜋, 𝑑 ∗ − 1).
+                                                                                 Since 𝑗 ∈ 𝑆 (lines 8–9 in Algorithm 2),
+Lemma 4. If 𝑑 ∗ > 0, then there exists an 𝑖 in {1, 2, . . . , 𝑛}
+such that                                                                             𝑓 (𝜏, 𝜋, 𝑑 ∗ ) − 𝑓 (𝜏 ′, 𝜋, 𝑑 ∗ − 1)
+            𝜋 (𝑖) − 𝜏 (𝑖) + 𝑙 + 𝑑 ∗     𝜋 (𝑖) + 𝑑 ∗ − 1
+                                                     
+                                                                                                   𝜋 ( 𝑗) − 𝜏 ( 𝑗) + 𝑑 ∗ + 𝑙     𝜋 ( 𝑗) + 𝑑 ∗ − 𝑙
+                                                                                                                                               
+                                     ≠                    .   (3)                            =                                −                     = 1. (7)
+                       𝑙                       𝑙                                                               𝑙                         𝑙
+2 Choose the largest index because it is optimal to reference the closest
+
+instruction among those that have the same variable.
+                                                                                 Combining this with 𝑓 (𝜏, 𝜋, 𝑑 ∗ ) ≤ 𝑑 ∗ , we have 𝑓 (𝜏 ′, 𝜋, 𝑑 ∗ −
+3 Choose the smallest index because the later instructions can copy from         1) ≤ 𝑑 ∗ − 1. Therefore, 𝑑 ∗ − 1 is clearly the minimum non-
+the preceded instruction that produces the same variable.                        negative integer that satisfies the condition.                    □
+
+
+
+                                                                            79
+CC ’23, February 25–26, 2023, Montréal, QC, Canada                                   Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi Sakai
+
+
+Theorem 6. Algorithm 2 is (1) sound, (2) complete, and (3) op-                        distance where the proposed method can compile each bench-
+timal for the number of inserted move instructions.                                   mark. This line is used similarly in the other figures.
+                                                                                         We obtained the execution results under all the conditions
+Proof. (1) The termination condition of the recursive call                            that each benchmark can be theoretically compiled. Our
+𝑑 ∗ = 0 means that no additional instructions are required for                        proposed method inserts only the minimum amount of spill
+sorting. Therefore, the result of this algorithm satisfies the                        codes required to generate code. That is to say, an increase
+constraint on the maximum reference distance. (2) Lemma 4                             in load or store instructions indicates that it is the result
+and 5 together show that this algorithm always works. (3)                             under a condition that the existing compiler cannot compile.
+This sorting algorithm is optimal for the number of instruc-                          Hence, the proposed method can generate code even under
+tions since 𝑑 ∗ is the tight lower bound.                    □                        conditions that the existing methods cannot.
+                                                                                         We can see in this figure that the peak of the line about
+5      Evaluation                                                                     move instructions is not at the shortest maximum reference
+5.1     Methodology                                                                   distance. The more spills, the fewer variables have a live
+We implemented the three proposed compiler techniques                                 range across a join point. This results in a decrease in move
+on the existing compiler [4]. First, we evaluated that our                            instructions caused by SSA destruction. For this reason, the
+proposed spilling technique allows our compiler to generate                           peak point is not always an endpoint.
+executable code in all cases by measuring the change in the
+                                                                                     5.2.2 Reduction Rate of Move Instructions by Our
+number of instructions. Then, we evaluated each of the other
+                                                                                     Proposed SSA Destruction. Figure 5 shows the reduction
+proposed techniques by measuring the following values.
+                                                                                     rate in move instructions when using our proposed SSA
+      1. Reduction rate of move instructions by our proposed                         destruction compared to when using the naïve SSA destruc-
+         SSA destruction                                                             tion. Our proposed method did not fail in SSA destruction,
+      2. Reduction rate of move instructions by our proposed                         and we obtained the result with various maximum reference
+         move insertion                                                              distances.
+   The evaluation was performed by measuring the num-                                   In the evaluation of this paper, the upper limit of the max-
+ber of instructions required to execute benchmark programs                           imum reference distance was set to 127 due to the limitation
+compiled with our compiler through simulations. The bench-                           of the instruction word length. However, Figure 5 implies
+mark programs used for the evaluation were CoreMark [1],                             that the performance may be further improved by using a
+401.bzip2 from SPEC CPU 2006 [20], and 605.mcf_s, 619.lbm_s,                         larger value to the maximum reference distance because an
+657.xz_s from SPEC CPU 2017 [11]. These benchmarks are                               increasing trend was seen even at around 127 for 657.xz_s.
+the same as those used in [26] and all written in C language.                           For all benchmarks except CoreMark, as the maximum ref-
+   We used a STRAIGHT simulation environment [4] avail-                              erence distance increased, the reduction rate of the executed
+able on GitHub for the simulations. This environment in-                             move instructions decreased in some portions. As the maxi-
+cludes a basic compiler, a C library, and a simulator for                            mum reference distance increases, the reduction rate seems
+STRAIGHT. The basic compiler is a STRAIGHT compiler im-                              to continue to increase because the number of 𝜙-functions to
+plementation on the version 12 of LLVM [27]. The C library is                        which the reordering method can be applied increases. How-
+a STRAIGHT port of musl libc [2], which is a lightweight libc                        ever, the evaluation result implies that is not always true.
+implementation. The simulator is based on a cycle-accurate                           This can be explained by the fact that changes in the order
+simulator, Onikiri2 [3].                                                             of instructions by the reordering at a join point method may
+                                                                                     adversely affect the efficiency in SSA destruction at other
+5.2     Results                                                                      join points.
+5.2.1 Change in Number of Instructions for Differ-                                      For 619.lbm_s, our proposed method could not reduce the
+ent Maximum Reference Distances. Figure 4 shows the                                  number of executed move instructions. This was due to the
+change in the number of executed instructions for the maxi-                          characteristics of 619.lbm_s. The function mainly executed
+mum reference distance when using the proposed method.                               in this benchmark, LBM_performStreamCollideTRT, has a
+This figure plots the total number of instructions and the                           large number of instructions within each basic block. For this
+number of move/load/store instructions which varies mainly                           reason, the reordering method failed to adjust the position of
+with the maximum reference distance. The vertical dashed                             each 𝜙-function to within the maximum reference distance.
+lines indicate the lower bound4 on the maximum reference                             Thus, the result obtained by our proposed method was the
+                                                                                     same as those obtained by the naïve method and did not
+4 In the calling convention we used, a function can be compiled if the number        reduce the number of move instructions.
+of maximum reference distances is greater than the number of its arguments
+by at least one. This is because the stack pointer has to be updated immedi-
+ately after the function call while keeping the values of the arguments and           reference distance conditions by modifying the calling convention, but that
+the return address. It is possible to generate code under shorter maximum             is beyond the scope of this paper.
+
+
+
+
+                                                                                80
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA                                                                                                                                                                                                                 CC ’23, February 25–26, 2023, Montréal, QC, Canada
+
+
+                                           ×107                                                                                                                                     ×1010                                                                                                                                          ×1011
+                                                                                                                                                                                                                                                                                                                             1.2
+   Number of executed instructions
+
+
+
+
+                                                                                                                                              Number of executed instructions
+
+
+
+
+                                                                                                                                                                                                                                                                                           Number of executed instructions
+                                                                                                                                                                                6
+                                     1.5                                                                                        all                                                                                                                                        all                                                                                                 all
+                                                                                                                                move                                                                                                                                       move                                              1.0                                               move
+                                                                                                                                load                                                                                                                                       load                                                                                                load
+                                                                                                                                store                                           4                                                                                          store                                             0.8                                               store
+                                     1.0
+                                                                                                                                                                                                                                                                                                                             0.6
+
+                                     0.5                                                                                                                                        2                                                                                                                                            0.4
+
+                                                                                                                                                                                                                                                                                                                             0.2
+
+                                     0.0                                                                                                                                        0                                                                                                                                            0.0
+                                           0          25        50        75        100                                                 127                                         0        25         50        75         100                                                   127                                             0       25        50        75        100           127
+                                                           Maximum reference distance                                                                                                              Maximum reference distance                                                                                                                   Maximum reference distance
+                                                            (a) CoreMark                                                                                                                             (b) 401.bzip2                                                                                                                                (c) 605.mcf_s
+                                                                                                                      11                                                                                                                                             10
+                                                                                                                ×10                                                                                                                                            ×10
+                                                                        Number of executed instructions
+
+
+
+
+                                                                                                                                                                                                                      Number of executed instructions
+                                                                                                                                                                                                   all                                                  1.25                                                                                    all
+                                                                                                          1.5
+                                                                                                                                                                                                   move                                                                                                                                         move
+                                                                                                                                                                                                   load                                                 1.00                                                                                    load
+                                                                                                                                                                                                   store                                                                                                                                        store
+                                                                                                          1.0
+                                                                                                                                                                                                                                                        0.75
+
+                                                                                                                                                                                                                                                        0.50
+                                                                                                          0.5
+                                                                                                                                                                                                                                                        0.25
+
+                                                                                                          0.0                                                                                                                                           0.00
+                                                                                                                0          25        50        75        100                                               127                                                 0          25         50       75        100                                             127
+                                                                                                                                Maximum reference distance                                                                                                                     Maximum reference distance
+                                                                                                                                  (d) 619.lbm_s                                                                                                                                  (e) 657.xz_s
+
+Figure 4. Number of executed move/load/store instructions for each benchmark. In this figure, the vertical dashed line indicates
+the lower bound on the maximum reference distance where the proposed algorithms can compile each benchmark. The shaded
+portion in each figure indicates conditions where the existing method could not generate code without additional spills.
+
+
+                                      40.0%
+                                                                                                                                                                                                                                                        of the ad hoc approach and demonstrates the effectiveness
+                                                                                                                                                                                        657.xz s
+                                                                                                                                                                                                                                                        of the proposed algorithm.
+                                      30.0%                                                                                                                                                                                                                Except for some conditions of 619.lbm_s, the number of
+    Reduction rate
+
+
+
+
+                                                                                                                                                                                                                                                        move instructions in the proposed method was fewer than
+                                      20.0%                                                                                                                                             605.mcf s                                                       that in the naïve method. Particularly, in CoreMark, the
+                                                                                                                                                                                        401.bzip2
+                                                                                                                                                                                                                                                        number of move instructions was reduced by up to 12.5%.
+                                      10.0%                                                                                                                                                                                                             CoreMark is a benchmark in which load/store instructions
+                                                                                                                                                                                        CoreMark                                                        increased significantly as the maximum reference distance
+                                                                                                                                                                                        619.lbm s
+                                           0.0%                                                                                                                                                                                                         decreased. In such a case, the number of live variables at each
+                                                  0                 50               100                                                                                                                                                                program point is almost the same as the number of the max-
+                                                              Maximum reference distance
+                                                                                                                                                                                                                                                        imum reference distance; thus, it is difficult to resolve the
+Figure 5. Reduction rate in move instructions when using                                                                                                                                                                                                distance constraints in the existing method. Hence, the re-
+our proposed SSA destruction compared with when using                                                                                                                                                                                                   duction of the move instruction in our proposed method had
+the naïve SSA destruction.                                                                                                                                                                                                                              a significant effect on CoreMark. Additionally, this property
+                                                                                                                                                                                                                                                        of a large increase in load/store of CoreMark is also common
+5.2.3 Reduction Rate of Move Instructions by Our                                                                                                                                                                                                        to 401.bzip2. Thus, it is expected that 401.bzip2 could also
+Proposed Move Insertion. Figure 6 shows the reduction                                                                                                                                                                                                   have a significant effect, although there are no data because
+rate in executed move instructions when comparing the                                                                                                                                                                                                   it could not be compiled with the existing method.
+naïve and proposed move insertion methods. In this compar-                                                                                                                                                                                                 For 619.lbm_s, we observed some conditions in which the
+ison, the SSA destruction method was unified to the naïve                                                                                                                                                                                               proposed method executed more move instructions than the
+one to compare only the efficiency of move insertion. The                                                                                                                                                                                               naïve method. Since the proposed method divides the process
+hatched areas in this figure indicate the conditions where                                                                                                                                                                                              into two steps and optimally inserts move instructions in
+the naïve move insertion could not generate executable code.                                                                                                                                                                                            each step, it does not always achieve the overall optimal
+The naïve method of move insertion can lead to an infinite                                                                                                                                                                                              result. However, the increase in the number of instructions
+loop. For this reason, if compilation did not finish after a                                                                                                                                                                                            from existing methods is very small, if any.
+certain time, we concluded that the naïve method could not
+compile a program.                                                                                                                                                                                                                                      6          Related Works
+   For 401.bzip2 and 657.xz_s, the naïve move insertion failed                                                                                                                                                                                          Our proposed method determines the position of instruc-
+to generate code under some conditions with shorter maxi-                                                                                                                                                                                               tions after spilling. This is similar to conventional regis-
+mum reference distances. This result shows the limitations                                                                                                                                                                                              ter allocation techniques that completely decouple spilling
+
+
+
+                                                                                                                                                                                                                 81
+CC ’23, February 25–26, 2023, Montréal, QC, Canada                                                                                               Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi Sakai
+
+
+                     12.5%
+                                                                                                                                                                                                        4.00%
+                     10.0%
+                                                                                                              10.0%
+    Reduction rate
+
+
+
+
+                                                                                             Reduction rate
+
+
+
+
+                                                                                                                                                                                       Reduction rate
+                                                                                                                                                                                                        3.00%
+                      7.5%
+                                                                                                                                                                                                        2.00%
+                      5.0%                                                                                     5.0%
+
+                      2.5%                                                                                                                                                                              1.00%
+
+                      0.0%                                                                                     0.0%                                                                                     0.00%
+                             0   20     40     60      80      100                  120                               0   20     40     60      80      100                   120                               0   20     40     60      80      100   120
+                                      Maximum reference distance                                                               Maximum reference distance                                                                Maximum reference distance
+                                      (a) CoreMark                                                                             (b) 401.bzip2                                                                             (c) 605.mcf_s
+                                                                                                                                                            5.0%
+                                                                   3.0%
+                                                                                                                                                            4.0%
+                                                                   2.0%
+                                                 Reduction rate
+
+
+
+
+                                                                                                                                           Reduction rate
+                                                                                                                                                            3.0%
+                                                                   1.0%
+                                                                                                                                                            2.0%
+                                                                   0.0%
+                                                                                                                                                            1.0%
+                                                                  −1.0%
+                                                                                                                                                            0.0%
+                                                                          0   20     40     60      80      100                 120                                0   20     40     60       80     100                  120
+                                                                                   Maximum reference distance                                                               Maximum reference distance
+                                                                                   (d) 619.lbm_s                                                                             (e) 657.xz_s
+
+Figure 6. Reduction rate in move instructions when using our proposed move insertion compared to when using the naïve
+move insertion. In this figure, hatched areas indicate the conditions where the naïve move insertion could not satisfy the
+distance constraints.
+
+and register assignment [7, 14, 25]. In conventional RISCs,                                                                                                In this paper, we proposed three compiling techniques
+some methods of register allocation that perform spilling                                                                                               for STRAIGHT code generation. We proved that these tech-
+and register assignment in the same framework are also                                                                                                  niques generate executable code under the theoretical short-
+proposed [13, 17]. On the contrary, such methods are not                                                                                                est condition of the maximum reference distance where a
+suitable for STRAIGHT. This is because inserting spill codes                                                                                            benchmark can be compiled. The first was about spill code
+affects the distance of source operands of other instructions,                                                                                          generation. This method limits the number of live variables
+reducing the efficiency of move insertion.                                                                                                              so that the distance constraint can be satisfied with a min-
+   The instruction representation of STRAIGHT has been                                                                                                  imum number of spill codes. The second was about SSA
+pointed out to have similarities with functional program-                                                                                               destruction. This method reliably and efficiently converts
+ming [26]. This is from the same observation as for the                                                                                                 programs to the instruction format of STRAIGHT. The third
+SSA form [6, 24], which has the same write-once manner as                                                                                               was about move insertion. This method resolves the distance
+STRAIGHT. Consequently, methods used in functional pro-                                                                                                 constraint by inserting the optimal number of move instruc-
+gramming may be useful for code generation and compiler                                                                                                 tions for each of the two types of move instructions.
+optimization in STRAIGHT. For instance, the callee-save                                                                                                    We implemented our proposed algorithm on an existing
+convention in STRAIGHT [26] uses the same approach as                                                                                                   STRAIGHT compiler. We compiled and evaluated benchmark
+the continuation-passing style [7].                                                                                                                     programs with our compiler under various conditions of
+                                                                                                                                                        maximum reference distance. The evaluation results showed
+                                                                                                                                                        that the proposed method could generate code even under
+                                                                                                                                                        conditions that existing methods could not. Moreover, our
+7                Conclusion                                                                                                                             method reduced the number of move instructions for satis-
+STRAIGHT is an instruction set architecture that uses the                                                                                               fying the distance constraints. The proposed method allows
+distance between instructions to specify the source operands.                                                                                           compilation at various maximum reference distances and
+Owing to this unique instruction format, STRAIGHT has                                                                                                   evaluation of STRAIGHT processors in various configura-
+no false dependencies between instructions and thus does                                                                                                tions. Consequently, our result is a significant step forward
+not require register renaming, which can cause a signifi-                                                                                               for the future design of processors based on STRAIGHT ISA.
+cant increase in power consumption. However, a STRAIGHT
+compiler must generate code that satisfies distance-related                                                                                                 Acknowledgments
+constraints. Existing methods attempt to satisfy these con-                                                                                             This work was partially supported by Premo Inc., JST SPRING
+straints in an ad hoc manner and thus may fail to generate                                                                                              Grant Number JPMJSP2108, and JSPS KAKENHI Grant Num-
+executable code.                                                                                                                                        bers JP19H04077, JP20H04153, JP20J22752.
+
+
+
+                                                                                                                                      82
+A Sound and Complete Algorithm for Code Generation in Distance-Based ISA                                CC ’23, February 25–26, 2023, Montréal, QC, Canada
+
+
+References                                                                               115320
+ [1] 2022. CoreMark. The embedded microprocessor benchmark consor-                  [17] Lal George and Andrew W. Appel. 1996. Iterated Register Coalescing.
+     tium benchmark suite. http://www.coremark.org.                                      ACM Trans. Program. Lang. Syst. 18, 3 (may 1996), 300–324. https:
+ [2] 2022. musl libc. https://musl.libc.org/                                             //doi.org/10.1145/229542.229546
+ [3] 2022. Onikiri2. https://github.com/onikiri/onikiri2                            [18] Sebastian Hack, Daniel Grund, and Gerhard Goos. 2006. Register
+ [4] 2022. straight-dev/env. https://github.com/straight-dev/env/                        Allocation for Programs in SSA-Form. In Proceedings of the 15th Inter-
+ [5] Bowen Alpern, Mark N. Wegman, and F. Kenneth Zadeck. 1988.                          national Conference on Compiler Construction (Vienna, Austria) (CC’06).
+     Detecting Equality of Variables in Programs. In Proceedings of the                  Springer-Verlag, Berlin, Heidelberg, 247–262. https://doi.org/10.1007/
+     15th ACM SIGPLAN-SIGACT Symposium on Principles of Program-                         11688839_20
+     ming Languages (San Diego, California, USA) (POPL’88). Associa-                [19] John L. Hennessy and David A. Patterson. 2019. A New Golden Age
+     tion for Computing Machinery, New York, NY, USA, 1–11. https:                       for Computer Architecture. Commun. ACM 62, 2 (jan 2019), 48–60.
+     //doi.org/10.1145/73560.73561                                                       https://doi.org/10.1145/3282307
+ [6] Andrew W. Appel. 1998. SSA is Functional Programming. SIGPLAN                  [20] John L. Henning. 2006. SPEC CPU2006 Benchmark Descriptions.
+     Not. 33, 4 (apr 1998), 17–20. https://doi.org/10.1145/278283.278285                 SIGARCH Comput. Archit. News 34, 4 (sep 2006), 1–17. https://doi.org/
+ [7] Andrew W. Appel and Zhong Shao. 1992. Callee-Save Registers in                      10.1145/1186736.1186737
+     Continuation-Passing Style. Lisp Symb. Comput. 5, 3 (sep 1992), 191–           [21] Mark D. Hill and Michael R. Marty. 2008. Amdahl’s Law in the Multi-
+     221. https://doi.org/10.1007/BF01807505                                             core Era. Computer 41, 07 (jul 2008), 33–38. https://doi.org/10.1109/
+ [8] David Bernstein, Martin C. Golumbic, Yishay Mansour, Ron Y. Pinter,                 MC.2008.209
+     Dina Q. Goldin, Hugo Krawczyk, and Itai Nahshon. 1989. Spill Code              [22] Hidetsugu Irie, Daisuke Fujiwara, Kazuki Majima, and Tsutomu Yoshi-
+     Minimization Techniques for Optimizing Compliers. In Proceedings of                 naga. 2012. STRAIGHT: Realizing a Lightweight Large Instruction
+     the ACM SIGPLAN 1989 Conference on Programming Language Design                      Window by Using Eventually Consistent Distributed Registers. In
+     and Implementation (Portland, Oregon, USA) (PLDI’89). Association                   Proceedings of the 2012 Third International Conference on Network-
+     for Computing Machinery, New York, NY, USA, 258–263. https://doi.                   ing and Computing (ICNC’12). IEEE Computer Society, USA, 336–342.
+     org/10.1145/73141.74841                                                             https://doi.org/10.1109/ICNC.2012.66
+ [9] Preston Briggs, Keith D. Cooper, Timothy J. Harvey, and L. Taylor              [23] Hidetsugu Irie, Toru Koizumi, Akifumi Fukuda, Seiya Akaki, Satoshi
+     Simpson. 1998. Practical improvements to the construction and de-                   Nakae, Yutaro Bessho, Ryota Shioya, Takahiro Notsu, Katsuhiro Yoda,
+     struction of static single assignment form. Software: Practice and                  Teruo Ishihara, and Shuichi Sakai. 2018. STRAIGHT: Hazardless
+     Experience 28, 8 (1998), 859–881. https://doi.org/10.1002/(SICI)1097-               Processor Architecture without Register Renaming. In 2018 51st An-
+     024X(19980710)28:8<859::AID-SPE188>3.0.CO;2-8                                       nual IEEE/ACM International Symposium on Microarchitecture (MI-
+[10] Preston Briggs, Keith D. Cooper, and Linda Torczon. 1994. Improve-                  CRO) (Fukuoka, Japan). IEEE Press, 121–133. https://doi.org/10.1109/
+     ments to Graph Coloring Register Allocation. ACM Trans. Program.                    MICRO.2018.00019
+     Lang. Syst. 16, 3 (may 1994), 428–455. https://doi.org/10.1145/177492.         [24] Richard A. Kelsey. 1995. A Correspondence between Continuation
+     177575                                                                              Passing Style and Static Single Assignment Form. SIGPLAN Not. 30, 3
+[11] James Bucek, Klaus-Dieter Lange, and Jóakim v. Kistowski. 2018. SPEC                (mar 1995), 13–22. https://doi.org/10.1145/202530.202532
+     CPU2017: Next-Generation Compute Benchmark. In Companion of the                [25] David Ryan Koes and Seth Copen Goldstein. 2009. Register Allocation
+     2018 ACM/SPEC International Conference on Performance Engineering                   Deconstructed. In Proceedings of Th 12th International Workshop on
+     (Berlin, Germany) (ICPE ’18). Association for Computing Machinery,                  Software and Compilers for Embedded Systems (Nice, France) (SCOPES
+     New York, NY, USA, 41–42. https://doi.org/10.1145/3185768.3185771                   ’09). Association for Computing Machinery, New York, NY, USA, 210–
+[12] Thomas Burd, Wilson Li, James Pistole, Srividhya Venkataraman,                      30. https://doi.org/10.1145/1543820.1543824
+     Michael McCabe, Timothy Johnson, James Vinh, Thomas Yiu, Mark                  [26] Toru Koizumi, Shu Sugita, Ryota Shioya, Junichiro Kadomoto, Hidet-
+     Wasio, Hon-Hin Wong, Daryl Lieu, Jonathan White, Benjamin Munger,                   sugu Irie, and Shuichi Sakai. 2021. Compiling and Optimizing Real-
+     Joshua Lindner, Javin Olson, Steven Bakke, Jeshuah Sniderman, Carson                world Programs for STRAIGHT ISA. In 2021 IEEE 39th International
+     Henrion, Russell Schreiber, Eric Busta, Brett Johnson, Tim Jackson,                 Conference on Computer Design (ICCD). IEEE Computer Society, Los
+     Aron Miller, Ryan Miller, Matthew Pickett, Aaron Horiuchi, Josef Dvo-               Alamitos, CA, USA, 400–408. https://doi.org/10.1109/ICCD53106.2021.
+     rak, Sabeesh Balagangadharan, Sajeesh Ammikkallingal, and Pankaj                    00070
+     Kumar. 2022. Zen3: The AMD 2nd-Generation 7nm x86-64 Micropro-                 [27] Chris Lattner and Vikram Adve. 2004. LLVM: a compilation framework
+     cessor Core. In 2022 IEEE International Solid-State Circuits Conference             for lifelong program analysis & transformation. In International Sympo-
+     (ISSCC), Vol. 65. 1–3. https://doi.org/10.1109/ISSCC42614.2022.9731678              sium on Code Generation and Optimization, 2004. CGO 2004. IEEE Com-
+[13] Gregory J. Chaitin, Marc A. Auslander, Ashok K. Chandra, John Cocke,                puter Society, USA, 75–86. https://doi.org/10.1109/CGO.2004.1281665
+     Martin E. Hopkins, and Peter W. Markstein. 1981. Register allocation           [28] Satoshi Mitsuno, Junichiro Kadomoto, Toru Koizumi, Ryota Shioya,
+     via coloring. Computer Languages 6, 1 (1981), 47–57. https://doi.org/               Hidetsugu Irie, and Shuichi Sakai. 2020. A High-Performance Out-
+     10.1016/0096-0551(81)90048-5                                                        of-Order Soft Processor Without Register Renaming. In 2020 30th
+[14] Quentin Colombet, Florian Brandner, and Alain Darte. 2015. Studying                 International Conference on Field-Programmable Logic and Applications
+     optimal spilling in the light of SSA. ACM Transactions on Architecture              (FPL). IEEE Computer Society, Los Alamitos, CA, USA, 73–78. https:
+     and Code Optimization (TACO) 11, 4, Article 47 (jan 2015), 26 pages.                //doi.org/10.1109/FPL50879.2020.00022
+     https://doi.org/10.1145/2685392                                                [29] Massimiliano Poletto and Vivek Sarkar. 1999. Linear Scan Register
+[15] Keith D. Cooper and L. Taylor Simpson. 1998. Live Range Splitting in                Allocation. ACM Trans. Program. Lang. Syst. 21, 5 (sep 1999), 895–913.
+     a Graph Coloring Register Allocator. In Proceedings of the 7th Interna-             https://doi.org/10.1145/330249.330250
+     tional Conference on Compiler Construction (CC’98). Springer-Verlag,           [30] Barry K. Rosen, Mark N. Wegman, and F. Kenneth Zadeck. 1988. Global
+     Berlin, Heidelberg, 174–187. https://doi.org/10.1007/BFb0026430                     Value Numbers and Redundant Computations. In Proceedings of the
+[16] Ron Cytron, Jeanne Ferrante, Barry K. Rosen, Mark N. Wegman, and                    15th ACM SIGPLAN-SIGACT Symposium on Principles of Programming
+     F. Kenneth Zadeck. 1991. Efficiently Computing Static Single Assign-                Languages (San Diego, California, USA) (POPL’88). Association for
+     ment Form and the Control Dependence Graph. ACM Trans. Program.                     Computing Machinery, New York, NY, USA, 12–27. https://doi.org/
+     Lang. Syst. 13, 4 (oct 1991), 451–490. https://doi.org/10.1145/115372.              10.1145/73560.73562
+
+
+
+
+                                                                               83
+CC ’23, February 25–26, 2023, Montréal, QC, Canada                                Shu Sugita, Toru Koizumi, Ryota Shioya, Hidetsugu Irie, and Shuichi Sakai
+
+
+[31] Efraim Rotem, Adi Yoaz, Lihu Rappoport, Stephen J. Robinson,                       on Microarchitecture (MICRO’43). IEEE Computer Society, USA, 301–
+     Julius Yuli Mandelblat, Arik Gihon, Eliezer Weissmann, Rajshree                    312. https://doi.org/10.1109/MICRO.2010.43
+     Chabukswar, Vadim Basin, Russell Fenger, Monica Gupta, and Ah-                [34] Christian Wimmer and Michael Franz. 2010. Linear Scan Register
+     mad Yasin. 2022. Intel Alder Lake CPU Architectures. IEEE Micro 42,                Allocation on SSA Form. In Proceedings of the 8th Annual IEEE/ACM In-
+     3 (2022), 13–19. https://doi.org/10.1109/MM.2022.3164338                           ternational Symposium on Code Generation and Optimization (Toronto,
+[32] Ryota Shioya and Hideki Ando. 2014. Energy efficiency improvement                  Ontario, Canada) (CGO’10). Association for Computing Machinery,
+     of renamed trace cache through the reduction of dependent path                     New York, NY, USA, 170–179. https://doi.org/10.1145/1772954.1772979
+     length. In 2014 32nd IEEE International Conference on Computer Design         [35] D. H. Younger. 1963. Minimum Feedback Arc Sets for a Directed
+     (ICCD). IEEE Computer Society, Los Alamitos, CA, USA, 416–423.                     Graph. IEEE Transactions on Circuit Theory 10, 2 (June 1963), 238–245.
+     https://doi.org/10.1109/ICCD.2014.6974714                                          https://doi.org/10.1109/TCT.1963.1082116
+[33] Ryota Shioya, Kazuo Horio, Masahiro Goshima, and Shuichi Sakai.
+     2010. Register Cache System Not for Latency Reduction Purpose. In             Received 2022-11-10; accepted 2022-12-19
+     Proceedings of the 2010 43rd Annual IEEE/ACM International Symposium
+
+
+
+
+                                                                             84
+
