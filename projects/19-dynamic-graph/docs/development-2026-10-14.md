@@ -51,4 +51,34 @@ ctest --test-dir G:/Hackathon-stage2-artifacts/project19/rebuild --output-on-fai
 
 本轮原始证据目录为 `G:/Hackathon-stage2-artifacts/project19/20261014-development/`；紧凑证据包与机器记录保存至 `reports/project19-development-evidence-2026-10-14.zip` 和 `reports/project19-development-validation-2026-10-14.json`，包含源码/协议/元数据/测试报告/构建出处，不含数GB矩阵与旧二进制。本轮使用用户提供的官方页面截图，不声称已取得官方测试包、完整官方分块源码或鲲鹏硬件成绩。
 
-此前19页探索PDF及其证据包继续保留为S33历史快照，没有将它们的旧数字改写成本轮S34结果。下一步最重要的是拿到正式C/helper契约，在鲲鹏ARM64上完成构建、保持运算顺序的向量/布局优化和同环境性能验收。
+此前19页探索PDF及其证据包继续保留为S33历史快照，没有将它们的旧数字改写成本轮S34结果。下一步应优先核对正式C/helper契约，在当前已经明确的任务范围内提高编码、源码覆盖和同环境性能。题面图示标注鲲鹏，但正文没有明确要求必须在鲲鹏测试；此前将其列为必做后续任务的表述过强，现予纠正。其他架构适配只在具体提交环境明确后纳入。
+
+## 补充：当前版本与优秀库/任务运行时的比较
+
+2026-10-14补做当前已安装S34与OpenBLAS 0.3.30的同机对照，避免将较早的OpenBLAS时间与较晚的1.217秒直接相除。实际CPU为Ryzen 9 8945HX，Windows 11，32GB内存。每类5组AB/BA交替新进程，要求16线程；band原生路径仍实际串行，库报告实际设置16，具体利用率由算法决定。30个进程全部保留，无warmup、无样本删除、未绑定CPU/隔离热状态。输入和原C参考在运行前完整核对SHA，每次原生输出又核对完整文件SHA，共15份全C比较通过。代码和库版本没有在本轮性能测试期间改变。
+
+| 输入 | 当前完整compute / ms | 当前数学kernel / ms | OpenBLAS纯factor / ms | OpenBLAS包装 / ms |
+|---|---:|---:|---:|---:|
+| 普通dense4099 | 79.859 | 60.549 | 98.755 | 117.727 |
+| 普通dense10000 | 1009.320 | 895.748 | 735.228 | 824.166 |
+| band7-10000 | 55.075 | 1.851 | 0.432 | 94.885 |
+
+表格各列是5次中位数。原生compute含有限值/结构扫描、任务图、工作区、数学和导出，排除矩阵文件IO与Metadata读取。OpenBLAS包装含NumPy全有限检查、band打包/解包（适用时）与完整上三角+0整理，排除矩阵文件读取与数值比较；纯factor只计LAPACKE数学调用。dense使用DPOTRF，band使用专门DPBTRF，不能用dense DPOTRF时间冒充带状库性能。DPBTRF调用者直接给KD7，而我们的自动结构路径先认证实际数据；库包装未计认证全部带外零的成本。即使包装项类似，也不是完全相同的API/错误合同。
+
+配对比值的中位数进一步表明：dense4099我们比库pure factor快17.71%、比库包装快30.97%，5/5对均快；dense10000我们比库pure factor慢37.28%、比库包装慢22.47%，5/5对均慢。N10000数学kernel的中位数是库factor的1.218倍，约慢21.8%；以N³/3计，完整compute等效330.3GFLOP/s，纯kernel约372.1GFLOP/s，库factor约453.4GFLOP/s。这说明目前在这个成熟库版本的性能量级内，但大矩阵仍有清晰差距，不能称为业界最优。
+
+band端到端包装配对中位我们快41.96%，然而数学kernel中位1.851/0.432≈4.28倍。端到端优势主要来自完整矩阵处理和包装差异，不能据此称带状数学内核超过LAPACK。本轮band主时间在全矩阵扫描与整理，而不是不到2ms的分解。
+
+数值合同分开核对：我们的15份输出全部与独立原C完整文件一致；库dense4099/dense10000/band7下三角位模式不一致数分别为5,711,215/35,086,498/42,091，相对factor误差约1.25e−16/1.22e−16/8.75e−17。OpenBLAS数学结果数值准确，这些差异来自不同浮点计算路径，不表示库算错；按我们当前原C逐字节合同，它不能直接替代原生路径。没有将bit差异折算为官方隐藏评测一定失败，正式helper/比较规则仍需以正式包为准。
+
+公开优秀成果也需要按任务范围比较：
+
+- [LAPACK DPOTRF](https://www.netlib.org/lapack/explore-html/d2/d09/group__potrf_ga84e90859b02139934b166e579dd211d4.html)使用Level3 BLAS分块因子分解；它提供数学库接口，不承担本题从C源码生成完整Metadata的工作。当前实测OpenBLAS配置为ILP64、DYNAMIC_ARCH、SkylakeX、MAX_THREADS24，实际要求16；只代表这个安装构建，未测试其他OpenBLAS target、oneMKL或所有优秀实现。
+- [PLASMA](https://icl.bitbucket.io/plasma/)和[PaRSEC](https://icl.utk.edu/parsec/overview/)是更接近本题任务图/调度部分的成熟参考。PaRSEC使用符号JDF，在运行时按参数计算依赖，不展开整张DAG，并有局部队列、拓扑感知work stealing和分布式能力。我们已有参数化Metadata/严格Cholesky证明，但默认原生仍保存任务状态，C子集覆盖和通用运行时能力有限；尚无同机对照可给它们排时间名次。
+- [Cholesky-Bench 2026原论文](https://arxiv.org/html/2606.11937v1)在双路EPYC7742、128物理核比较OpenMP/HPX八种组织，20次FP64取中位、任务内部单线程BLAS。论文报告最优tile下HPX异步任务比OpenMP对应实现快约26%，no-op实验估计任务成本约2μs与7.6μs。这些是其固定平台/栈间结果，不能把该百分比直接套到我们的16核主机，更不能据此宣称本项目超过HPX/PLASMA。
+
+Metadata方面，当前完整朴素图1512B、自设分块2040B，相对本项目默认减少39.50%/41.56%，属于有效的内部改进。其他框架的JDF、生成代码、任务接口与本格式边界不同，没有同语义/同字段/同成本口径的公开排行榜；目前没有证据称本项目Metadata达到业界最优。
+
+总体评价：这是针对赛题源码语义的有效且有竞争力的实现，在中等dense与完整布局band包装上有优势，大dense完整计算比实测OpenBLAS包装约慢22%，且保持更严格的原C字节合同。它仍是范围明确的专用源码分析器和单机运行时，通用性与规模扩展未达到成熟框架。接下来应优先攻普通dense内核与工作区成本、band完整矩阵扫描/整理，并扩展真实Cholesky源码覆盖；不要通过放宽字节合同来制造分数上的性能优势。
+
+本次报告为 `reports/project19-current-industry-comparison-2026-10-14.json`，原始样本和命令在 `G:/Hackathon-stage2-artifacts/project19/20261014-industry-current/`。既有PDF/ZIP冻结保留，以上补充和硬件要求纠正不回写旧证据。
